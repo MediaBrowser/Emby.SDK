@@ -17,7 +17,7 @@ import TextSectionInfo from './TextSectionInfo';
 /**
 * The ContentSection model module.
 * @module model/ContentSection
-* @version 4.9.4.1
+* @version 4.10.0.1
 */
 export default class ContentSection {
     /**
@@ -47,6 +47,9 @@ export default class ContentSection {
             if (data.hasOwnProperty('Name')) {
                 obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
             }
+            if (data.hasOwnProperty('CustomName')) {
+                obj['CustomName'] = ApiClient.convertToType(data['CustomName'], 'String');
+            }
             if (data.hasOwnProperty('Subtitle')) {
                 obj['Subtitle'] = ApiClient.convertToType(data['Subtitle'], 'String');
             }
@@ -62,8 +65,14 @@ export default class ContentSection {
             if (data.hasOwnProperty('ViewType')) {
                 obj['ViewType'] = ApiClient.convertToType(data['ViewType'], 'String');
             }
+            if (data.hasOwnProperty('ImageType')) {
+                obj['ImageType'] = ApiClient.convertToType(data['ImageType'], 'String');
+            }
             if (data.hasOwnProperty('Monitor')) {
                 obj['Monitor'] = ApiClient.convertToType(data['Monitor'], ['String']);
+            }
+            if (data.hasOwnProperty('ExcludedFolders')) {
+                obj['ExcludedFolders'] = ApiClient.convertToType(data['ExcludedFolders'], ['String']);
             }
             if (data.hasOwnProperty('CardSizeOffset')) {
                 obj['CardSizeOffset'] = ApiClient.convertToType(data['CardSizeOffset'], 'Number');
@@ -73,6 +82,9 @@ export default class ContentSection {
             }
             if (data.hasOwnProperty('ParentItem')) {
                 obj['ParentItem'] = BaseItemDto.constructFromObject(data['ParentItem']);
+            }
+            if (data.hasOwnProperty('ParentId')) {
+                obj['ParentId'] = ApiClient.convertToType(data['ParentId'], 'String');
             }
             if (data.hasOwnProperty('TextInfo')) {
                 obj['TextInfo'] = TextSectionInfo.constructFromObject(data['TextInfo']);
@@ -95,6 +107,10 @@ export default class ContentSection {
     */
     'Name' = undefined;
     /**
+    * @member {String} CustomName
+    */
+    'CustomName' = undefined;
+    /**
     * @member {String} Subtitle
     */
     'Subtitle' = undefined;
@@ -115,9 +131,17 @@ export default class ContentSection {
     */
     'ViewType' = undefined;
     /**
+    * @member {String} ImageType
+    */
+    'ImageType' = undefined;
+    /**
     * @member {Array.<String>} Monitor
     */
     'Monitor' = undefined;
+    /**
+    * @member {Array.<String>} ExcludedFolders
+    */
+    'ExcludedFolders' = undefined;
     /**
     * @member {Number} CardSizeOffset
     */
@@ -130,6 +154,10 @@ export default class ContentSection {
     * @member {module:model/BaseItemDto} ParentItem
     */
     'ParentItem' = undefined;
+    /**
+    * @member {String} ParentId
+    */
+    'ParentId' = undefined;
     /**
     * @member {module:model/TextSectionInfo} TextInfo
     */

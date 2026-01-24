@@ -25,6 +25,9 @@ public struct RemoteSearchResult: Codable {
     public var premiereDate: Date?
     public var startDate: Date?
     public var endDate: Date?
+    public var personType: PersonType?
+    public var role: String?
+    public var type: String?
     public var imageUrl: String?
     public var searchProviderName: String?
     public var gameSystem: String?
@@ -33,7 +36,7 @@ public struct RemoteSearchResult: Codable {
     public var albumArtist: RemoteSearchResult?
     public var artists: [RemoteSearchResult]?
 
-    public init(name: String? = nil, originalTitle: String? = nil, providerIds: ProviderIdDictionary? = nil, productionYear: Int? = nil, indexNumber: Int? = nil, indexNumberEnd: Int? = nil, parentIndexNumber: Int? = nil, sortIndexNumber: Int? = nil, sortParentIndexNumber: Int? = nil, premiereDate: Date? = nil, startDate: Date? = nil, endDate: Date? = nil, imageUrl: String? = nil, searchProviderName: String? = nil, gameSystem: String? = nil, overview: String? = nil, disambiguationComment: String? = nil, albumArtist: RemoteSearchResult? = nil, artists: [RemoteSearchResult]? = nil) {
+    public init(name: String? = nil, originalTitle: String? = nil, providerIds: ProviderIdDictionary? = nil, productionYear: Int? = nil, indexNumber: Int? = nil, indexNumberEnd: Int? = nil, parentIndexNumber: Int? = nil, sortIndexNumber: Int? = nil, sortParentIndexNumber: Int? = nil, premiereDate: Date? = nil, startDate: Date? = nil, endDate: Date? = nil, personType: PersonType? = nil, role: String? = nil, type: String? = nil, imageUrl: String? = nil, searchProviderName: String? = nil, gameSystem: String? = nil, overview: String? = nil, disambiguationComment: String? = nil, albumArtist: RemoteSearchResult? = nil, artists: [RemoteSearchResult]? = nil) {
         self.name = name
         self.originalTitle = originalTitle
         self.providerIds = providerIds
@@ -46,6 +49,9 @@ public struct RemoteSearchResult: Codable {
         self.premiereDate = premiereDate
         self.startDate = startDate
         self.endDate = endDate
+        self.personType = personType
+        self.role = role
+        self.type = type
         self.imageUrl = imageUrl
         self.searchProviderName = searchProviderName
         self.gameSystem = gameSystem
@@ -68,6 +74,9 @@ public struct RemoteSearchResult: Codable {
         case premiereDate = "PremiereDate"
         case startDate = "StartDate"
         case endDate = "EndDate"
+        case personType = "PersonType"
+        case role = "Role"
+        case type = "Type"
         case imageUrl = "ImageUrl"
         case searchProviderName = "SearchProviderName"
         case gameSystem = "GameSystem"

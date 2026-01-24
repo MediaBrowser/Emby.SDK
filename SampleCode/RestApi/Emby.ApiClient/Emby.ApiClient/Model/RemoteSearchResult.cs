@@ -99,6 +99,24 @@ namespace Emby.ApiClient.Model
         public DateTimeOffset? EndDate { get; set; }
 
         /// <summary>
+        /// Gets or Sets PersonType
+        /// </summary>
+        /// <value>The PersonType.</value>
+        public PersonType PersonType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Role
+        /// </summary>
+        /// <value>The Role.</value>
+        public string Role { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        /// <value>The Type.</value>
+        public string Type { get; set; }
+
+        /// <summary>
         /// Gets or Sets ImageUrl
         /// </summary>
         /// <value>The ImageUrl.</value>
@@ -160,6 +178,9 @@ namespace Emby.ApiClient.Model
             sb.Append("  PremiereDate: ").Append(PremiereDate).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            sb.Append("  PersonType: ").Append(PersonType).Append("\n");
+            sb.Append("  Role: ").Append(Role).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  SearchProviderName: ").Append(SearchProviderName).Append("\n");
             sb.Append("  GameSystem: ").Append(GameSystem).Append("\n");
@@ -253,6 +274,21 @@ namespace Emby.ApiClient.Model
                     this.EndDate.Equals(input.EndDate))
                 ) && 
                 (
+                    this.PersonType == input.PersonType ||
+                    (this.PersonType != null &&
+                    this.PersonType.Equals(input.PersonType))
+                ) && 
+                (
+                    this.Role == input.Role ||
+                    (this.Role != null &&
+                    this.Role.Equals(input.Role))
+                ) && 
+                (
+                    this.Type == input.Type ||
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
+                ) && 
+                (
                     this.ImageUrl == input.ImageUrl ||
                     (this.ImageUrl != null &&
                     this.ImageUrl.Equals(input.ImageUrl))
@@ -323,6 +359,12 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.StartDate.GetHashCode();
                 if (this.EndDate != null)
                     hashCode = hashCode * 59 + this.EndDate.GetHashCode();
+                if (this.PersonType != null)
+                    hashCode = hashCode * 59 + this.PersonType.GetHashCode();
+                if (this.Role != null)
+                    hashCode = hashCode * 59 + this.Role.GetHashCode();
+                if (this.Type != null)
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.ImageUrl != null)
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.SearchProviderName != null)

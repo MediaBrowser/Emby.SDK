@@ -2,12 +2,12 @@
 // Copyright © 2022 - softworkz for Emby LLC. All rights reserved.
 // </copyright>
 
-namespace EmbyPluginSimpleUi.Services
-{
-    using MediaBrowser.Controller.Net;
-    using MediaBrowser.Model.Entities;
-    using MediaBrowser.Model.Services;
+using MediaBrowser.Controller.Net;
+using MediaBrowser.Model.Entities;
+using MediaBrowser.Model.Services;
 
+namespace EmbyPluginSimpleUiTemplate.Services
+{
     [Route("/MyApi/{Id}/Data", "GET", Summary = "Gets data for an item")]
     [Authenticated(Roles = "Admin")]
     public class GetSomeData : IReturn<VirtualFolderInfo>

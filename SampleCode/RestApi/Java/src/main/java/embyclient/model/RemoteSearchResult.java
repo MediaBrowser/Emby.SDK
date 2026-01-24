@@ -12,6 +12,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import embyclient.model.PersonType;
 import embyclient.model.ProviderIdDictionary;
 import embyclient.model.RemoteSearchResult;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -60,6 +61,15 @@ public class RemoteSearchResult {
 
   @SerializedName("EndDate")
   private OffsetDateTime endDate = null;
+
+  @SerializedName("PersonType")
+  private PersonType personType = null;
+
+  @SerializedName("Role")
+  private String role = null;
+
+  @SerializedName("Type")
+  private String type = null;
 
   @SerializedName("ImageUrl")
   private String imageUrl = null;
@@ -298,6 +308,60 @@ public class RemoteSearchResult {
     this.endDate = endDate;
   }
 
+  public RemoteSearchResult personType(PersonType personType) {
+    this.personType = personType;
+    return this;
+  }
+
+   /**
+   * Get personType
+   * @return personType
+  **/
+  @Schema(description = "")
+  public PersonType getPersonType() {
+    return personType;
+  }
+
+  public void setPersonType(PersonType personType) {
+    this.personType = personType;
+  }
+
+  public RemoteSearchResult role(String role) {
+    this.role = role;
+    return this;
+  }
+
+   /**
+   * Get role
+   * @return role
+  **/
+  @Schema(description = "")
+  public String getRole() {
+    return role;
+  }
+
+  public void setRole(String role) {
+    this.role = role;
+  }
+
+  public RemoteSearchResult type(String type) {
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * Get type
+   * @return type
+  **/
+  @Schema(description = "")
+  public String getType() {
+    return type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
+
   public RemoteSearchResult imageUrl(String imageUrl) {
     this.imageUrl = imageUrl;
     return this;
@@ -454,6 +518,9 @@ public class RemoteSearchResult {
         Objects.equals(this.premiereDate, remoteSearchResult.premiereDate) &&
         Objects.equals(this.startDate, remoteSearchResult.startDate) &&
         Objects.equals(this.endDate, remoteSearchResult.endDate) &&
+        Objects.equals(this.personType, remoteSearchResult.personType) &&
+        Objects.equals(this.role, remoteSearchResult.role) &&
+        Objects.equals(this.type, remoteSearchResult.type) &&
         Objects.equals(this.imageUrl, remoteSearchResult.imageUrl) &&
         Objects.equals(this.searchProviderName, remoteSearchResult.searchProviderName) &&
         Objects.equals(this.gameSystem, remoteSearchResult.gameSystem) &&
@@ -465,7 +532,7 @@ public class RemoteSearchResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, originalTitle, providerIds, productionYear, indexNumber, indexNumberEnd, parentIndexNumber, sortIndexNumber, sortParentIndexNumber, premiereDate, startDate, endDate, imageUrl, searchProviderName, gameSystem, overview, disambiguationComment, albumArtist, artists);
+    return Objects.hash(name, originalTitle, providerIds, productionYear, indexNumber, indexNumberEnd, parentIndexNumber, sortIndexNumber, sortParentIndexNumber, premiereDate, startDate, endDate, personType, role, type, imageUrl, searchProviderName, gameSystem, overview, disambiguationComment, albumArtist, artists);
   }
 
 
@@ -486,6 +553,9 @@ public class RemoteSearchResult {
     sb.append("    premiereDate: ").append(toIndentedString(premiereDate)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
+    sb.append("    personType: ").append(toIndentedString(personType)).append("\n");
+    sb.append("    role: ").append(toIndentedString(role)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
     sb.append("    searchProviderName: ").append(toIndentedString(searchProviderName)).append("\n");
     sb.append("    gameSystem: ").append(toIndentedString(gameSystem)).append("\n");

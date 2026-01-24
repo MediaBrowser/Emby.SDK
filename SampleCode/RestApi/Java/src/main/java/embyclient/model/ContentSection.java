@@ -28,6 +28,9 @@ public class ContentSection {
   @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("CustomName")
+  private String customName = null;
+
   @SerializedName("Subtitle")
   private String subtitle = null;
 
@@ -43,8 +46,14 @@ public class ContentSection {
   @SerializedName("ViewType")
   private String viewType = null;
 
+  @SerializedName("ImageType")
+  private String imageType = null;
+
   @SerializedName("Monitor")
   private List<String> monitor = null;
+
+  @SerializedName("ExcludedFolders")
+  private List<String> excludedFolders = null;
 
   @SerializedName("CardSizeOffset")
   private Integer cardSizeOffset = null;
@@ -54,6 +63,9 @@ public class ContentSection {
 
   @SerializedName("ParentItem")
   private BaseItemDto parentItem = null;
+
+  @SerializedName("ParentId")
+  private String parentId = null;
 
   @SerializedName("TextInfo")
   private TextSectionInfo textInfo = null;
@@ -83,6 +95,24 @@ public class ContentSection {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public ContentSection customName(String customName) {
+    this.customName = customName;
+    return this;
+  }
+
+   /**
+   * Get customName
+   * @return customName
+  **/
+  @Schema(description = "")
+  public String getCustomName() {
+    return customName;
+  }
+
+  public void setCustomName(String customName) {
+    this.customName = customName;
   }
 
   public ContentSection subtitle(String subtitle) {
@@ -175,6 +205,24 @@ public class ContentSection {
     this.viewType = viewType;
   }
 
+  public ContentSection imageType(String imageType) {
+    this.imageType = imageType;
+    return this;
+  }
+
+   /**
+   * Get imageType
+   * @return imageType
+  **/
+  @Schema(description = "")
+  public String getImageType() {
+    return imageType;
+  }
+
+  public void setImageType(String imageType) {
+    this.imageType = imageType;
+  }
+
   public ContentSection monitor(List<String> monitor) {
     this.monitor = monitor;
     return this;
@@ -199,6 +247,32 @@ public class ContentSection {
 
   public void setMonitor(List<String> monitor) {
     this.monitor = monitor;
+  }
+
+  public ContentSection excludedFolders(List<String> excludedFolders) {
+    this.excludedFolders = excludedFolders;
+    return this;
+  }
+
+  public ContentSection addExcludedFoldersItem(String excludedFoldersItem) {
+    if (this.excludedFolders == null) {
+      this.excludedFolders = new ArrayList<>();
+    }
+    this.excludedFolders.add(excludedFoldersItem);
+    return this;
+  }
+
+   /**
+   * Get excludedFolders
+   * @return excludedFolders
+  **/
+  @Schema(description = "")
+  public List<String> getExcludedFolders() {
+    return excludedFolders;
+  }
+
+  public void setExcludedFolders(List<String> excludedFolders) {
+    this.excludedFolders = excludedFolders;
   }
 
   public ContentSection cardSizeOffset(Integer cardSizeOffset) {
@@ -253,6 +327,24 @@ public class ContentSection {
 
   public void setParentItem(BaseItemDto parentItem) {
     this.parentItem = parentItem;
+  }
+
+  public ContentSection parentId(String parentId) {
+    this.parentId = parentId;
+    return this;
+  }
+
+   /**
+   * Get parentId
+   * @return parentId
+  **/
+  @Schema(description = "")
+  public String getParentId() {
+    return parentId;
+  }
+
+  public void setParentId(String parentId) {
+    this.parentId = parentId;
   }
 
   public ContentSection textInfo(TextSectionInfo textInfo) {
@@ -338,15 +430,19 @@ public class ContentSection {
     }
     ContentSection contentSection = (ContentSection) o;
     return Objects.equals(this.name, contentSection.name) &&
+        Objects.equals(this.customName, contentSection.customName) &&
         Objects.equals(this.subtitle, contentSection.subtitle) &&
         Objects.equals(this.id, contentSection.id) &&
         Objects.equals(this.sectionType, contentSection.sectionType) &&
         Objects.equals(this.collectionType, contentSection.collectionType) &&
         Objects.equals(this.viewType, contentSection.viewType) &&
+        Objects.equals(this.imageType, contentSection.imageType) &&
         Objects.equals(this.monitor, contentSection.monitor) &&
+        Objects.equals(this.excludedFolders, contentSection.excludedFolders) &&
         Objects.equals(this.cardSizeOffset, contentSection.cardSizeOffset) &&
         Objects.equals(this.scrollDirection, contentSection.scrollDirection) &&
         Objects.equals(this.parentItem, contentSection.parentItem) &&
+        Objects.equals(this.parentId, contentSection.parentId) &&
         Objects.equals(this.textInfo, contentSection.textInfo) &&
         Objects.equals(this.premiumFeature, contentSection.premiumFeature) &&
         Objects.equals(this.premiumMessage, contentSection.premiumMessage) &&
@@ -355,7 +451,7 @@ public class ContentSection {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, subtitle, id, sectionType, collectionType, viewType, monitor, cardSizeOffset, scrollDirection, parentItem, textInfo, premiumFeature, premiumMessage, refreshInterval);
+    return Objects.hash(name, customName, subtitle, id, sectionType, collectionType, viewType, imageType, monitor, excludedFolders, cardSizeOffset, scrollDirection, parentItem, parentId, textInfo, premiumFeature, premiumMessage, refreshInterval);
   }
 
 
@@ -365,15 +461,19 @@ public class ContentSection {
     sb.append("class ContentSection {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    customName: ").append(toIndentedString(customName)).append("\n");
     sb.append("    subtitle: ").append(toIndentedString(subtitle)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    sectionType: ").append(toIndentedString(sectionType)).append("\n");
     sb.append("    collectionType: ").append(toIndentedString(collectionType)).append("\n");
     sb.append("    viewType: ").append(toIndentedString(viewType)).append("\n");
+    sb.append("    imageType: ").append(toIndentedString(imageType)).append("\n");
     sb.append("    monitor: ").append(toIndentedString(monitor)).append("\n");
+    sb.append("    excludedFolders: ").append(toIndentedString(excludedFolders)).append("\n");
     sb.append("    cardSizeOffset: ").append(toIndentedString(cardSizeOffset)).append("\n");
     sb.append("    scrollDirection: ").append(toIndentedString(scrollDirection)).append("\n");
     sb.append("    parentItem: ").append(toIndentedString(parentItem)).append("\n");
+    sb.append("    parentId: ").append(toIndentedString(parentId)).append("\n");
     sb.append("    textInfo: ").append(toIndentedString(textInfo)).append("\n");
     sb.append("    premiumFeature: ").append(toIndentedString(premiumFeature)).append("\n");
     sb.append("    premiumMessage: ").append(toIndentedString(premiumMessage)).append("\n");

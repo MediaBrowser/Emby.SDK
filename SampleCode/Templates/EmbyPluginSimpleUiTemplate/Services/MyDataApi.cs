@@ -2,16 +2,16 @@
 // Copyright © 2022 - softworkz for Emby LLC. All rights reserved.
 // </copyright>
 
-namespace EmbyPluginSimpleUi.Services
-{
-    using System.Threading.Tasks;
-    using EmbyPluginSimpleUi.Common;
-    using MediaBrowser.Common;
-    using MediaBrowser.Controller.Base;
-    using MediaBrowser.Controller.Net;
-    using MediaBrowser.Model.Entities;
-    using MediaBrowser.Model.Services;
+using System.Threading.Tasks;
+using EmbyPluginSimpleUiTemplate.Common;
+using MediaBrowser.Common;
+using MediaBrowser.Controller.Base;
+using MediaBrowser.Controller.Net;
+using MediaBrowser.Model.Entities;
+using MediaBrowser.Model.Services;
 
+namespace EmbyPluginSimpleUiTemplate.Services
+{
     [Authenticated]
     public class MyDataApi : CommonBase, IService
     {

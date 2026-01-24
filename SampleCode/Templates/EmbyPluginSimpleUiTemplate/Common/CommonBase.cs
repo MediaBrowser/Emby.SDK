@@ -1,12 +1,10 @@
-﻿namespace EmbyPluginSimpleUi.Common
-{
-    using System.Linq;
-    using EmbyPluginSimpleUI;
-    using MediaBrowser.Common;
-    using MediaBrowser.Controller.Base;
-    using MediaBrowser.Model.Logging;
-    using MediaBrowser.Model.System;
+﻿using System.Linq;
+using MediaBrowser.Common;
+using MediaBrowser.Controller.Base;
+using MediaBrowser.Model.System;
 
+namespace EmbyPluginSimpleUiTemplate.Common
+{
     public abstract class CommonBase : CommonBaseCore
     {
         private MyPlugin myPlugin;

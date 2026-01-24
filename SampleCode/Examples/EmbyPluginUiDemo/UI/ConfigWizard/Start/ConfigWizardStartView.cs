@@ -17,7 +17,6 @@ namespace EmbyPluginUiDemo.UI.ConfigWizard.Start
         {
             this.wizardManager = wizardManager;
             this.ContentData = new ConfigWizardStartUI();
-            this.PluginId = pluginId;
         }
 
         public ConfigWizardStartUI ConfigWizardStartUI => this.ContentData as ConfigWizardStartUI;

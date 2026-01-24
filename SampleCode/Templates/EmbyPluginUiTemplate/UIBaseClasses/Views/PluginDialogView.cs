@@ -1,0 +1,32 @@
+﻿using System;
+using System.Threading.Tasks;
+using MediaBrowser.Model.Plugins.UI.Views;
+
+namespace EmbyPluginUiTemplate.UIBaseClasses.Views
+{
+    internal abstract class PluginDialogView : PluginViewBase, IPluginDialogView
+    {
+        protected PluginDialogView(string pluginId)
+        : base(pluginId)
+        {
+            this.AllowCancel = true;
+            this.AllowOk = true;
+        }
+
+        public bool AllowCancel { get; set; }
+
+        public bool AllowOk { get; set; }
+
+        public virtual bool ShowDialogFullScreen { get; } = false;
+
+        public virtual Task OnCancelCommand()
+        {
+            return Task.CompletedTask;
+        }
+
+        public virtual Task OnOkCommand(string providerId, string commandId, string data)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

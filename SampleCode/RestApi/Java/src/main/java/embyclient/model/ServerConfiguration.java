@@ -50,6 +50,9 @@ public class ServerConfiguration {
   @SerializedName("CertificatePassword")
   private String certificatePassword = null;
 
+  @SerializedName("BannerText")
+  private String bannerText = null;
+
   @SerializedName("IsPortAuthorized")
   private Boolean isPortAuthorized = null;
 
@@ -58,6 +61,9 @@ public class ServerConfiguration {
 
   @SerializedName("EnableRemoteAccess")
   private Boolean enableRemoteAccess = null;
+
+  @SerializedName("ValidateImageTags")
+  private Boolean validateImageTags = null;
 
   @SerializedName("LogAllQueryTimes")
   private Boolean logAllQueryTimes = null;
@@ -377,6 +383,24 @@ public class ServerConfiguration {
     this.certificatePassword = certificatePassword;
   }
 
+  public ServerConfiguration bannerText(String bannerText) {
+    this.bannerText = bannerText;
+    return this;
+  }
+
+   /**
+   * Get bannerText
+   * @return bannerText
+  **/
+  @Schema(description = "")
+  public String getBannerText() {
+    return bannerText;
+  }
+
+  public void setBannerText(String bannerText) {
+    this.bannerText = bannerText;
+  }
+
   public ServerConfiguration isPortAuthorized(Boolean isPortAuthorized) {
     this.isPortAuthorized = isPortAuthorized;
     return this;
@@ -429,6 +453,24 @@ public class ServerConfiguration {
 
   public void setEnableRemoteAccess(Boolean enableRemoteAccess) {
     this.enableRemoteAccess = enableRemoteAccess;
+  }
+
+  public ServerConfiguration validateImageTags(Boolean validateImageTags) {
+    this.validateImageTags = validateImageTags;
+    return this;
+  }
+
+   /**
+   * Get validateImageTags
+   * @return validateImageTags
+  **/
+  @Schema(description = "")
+  public Boolean isValidateImageTags() {
+    return validateImageTags;
+  }
+
+  public void setValidateImageTags(Boolean validateImageTags) {
+    this.validateImageTags = validateImageTags;
   }
 
   public ServerConfiguration logAllQueryTimes(Boolean logAllQueryTimes) {
@@ -1541,9 +1583,11 @@ public class ServerConfiguration {
         Objects.equals(this.enableHttps, serverConfiguration.enableHttps) &&
         Objects.equals(this.certificatePath, serverConfiguration.certificatePath) &&
         Objects.equals(this.certificatePassword, serverConfiguration.certificatePassword) &&
+        Objects.equals(this.bannerText, serverConfiguration.bannerText) &&
         Objects.equals(this.isPortAuthorized, serverConfiguration.isPortAuthorized) &&
         Objects.equals(this.autoRunWebApp, serverConfiguration.autoRunWebApp) &&
         Objects.equals(this.enableRemoteAccess, serverConfiguration.enableRemoteAccess) &&
+        Objects.equals(this.validateImageTags, serverConfiguration.validateImageTags) &&
         Objects.equals(this.logAllQueryTimes, serverConfiguration.logAllQueryTimes) &&
         Objects.equals(this.disableOutgoingIPv6, serverConfiguration.disableOutgoingIPv6) &&
         Objects.equals(this.enableCaseSensitiveItemIds, serverConfiguration.enableCaseSensitiveItemIds) &&
@@ -1606,7 +1650,7 @@ public class ServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, disableOutgoingIPv6, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelaySeconds, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, imageExtractorUpgraded1, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, maxLibraryDatabaseConnections, maxAuthDbConnections, maxOtherDbConnections, disableAsyncIO, migratedToUserItemShares8, migratedLibraryOptionsToDb, allowLegacyLocalNetworkPassword, enableSavedMetadataForPeople, tvChannelsRefreshed, proxyHeaderMode, isInMaintenanceMode, maintenanceModeMessage, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, bannerText, isPortAuthorized, autoRunWebApp, enableRemoteAccess, validateImageTags, logAllQueryTimes, disableOutgoingIPv6, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelaySeconds, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, imageExtractorUpgraded1, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, maxLibraryDatabaseConnections, maxAuthDbConnections, maxOtherDbConnections, disableAsyncIO, migratedToUserItemShares8, migratedLibraryOptionsToDb, allowLegacyLocalNetworkPassword, enableSavedMetadataForPeople, tvChannelsRefreshed, proxyHeaderMode, isInMaintenanceMode, maintenanceModeMessage, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1623,9 +1667,11 @@ public class ServerConfiguration {
     sb.append("    enableHttps: ").append(toIndentedString(enableHttps)).append("\n");
     sb.append("    certificatePath: ").append(toIndentedString(certificatePath)).append("\n");
     sb.append("    certificatePassword: ").append(toIndentedString(certificatePassword)).append("\n");
+    sb.append("    bannerText: ").append(toIndentedString(bannerText)).append("\n");
     sb.append("    isPortAuthorized: ").append(toIndentedString(isPortAuthorized)).append("\n");
     sb.append("    autoRunWebApp: ").append(toIndentedString(autoRunWebApp)).append("\n");
     sb.append("    enableRemoteAccess: ").append(toIndentedString(enableRemoteAccess)).append("\n");
+    sb.append("    validateImageTags: ").append(toIndentedString(validateImageTags)).append("\n");
     sb.append("    logAllQueryTimes: ").append(toIndentedString(logAllQueryTimes)).append("\n");
     sb.append("    disableOutgoingIPv6: ").append(toIndentedString(disableOutgoingIPv6)).append("\n");
     sb.append("    enableCaseSensitiveItemIds: ").append(toIndentedString(enableCaseSensitiveItemIds)).append("\n");

@@ -54,7 +54,5 @@ namespace EmbyFileBrowser.Common
                 return this.plugin;
             }
         }
-
-        protected override ResourceManager ResourceManager => PassThroughResourceManager;
     }
 }

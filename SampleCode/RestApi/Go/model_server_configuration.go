@@ -23,10 +23,12 @@ type ServerConfiguration struct {
 	// The value pointing to the file system where the ssl certiifcate is located..
 	CertificatePath string `json:"CertificatePath,omitempty"`
 	CertificatePassword string `json:"CertificatePassword,omitempty"`
+	BannerText string `json:"BannerText,omitempty"`
 	// A value indicating whether this instance is port authorized.
 	IsPortAuthorized bool `json:"IsPortAuthorized,omitempty"`
 	AutoRunWebApp bool `json:"AutoRunWebApp,omitempty"`
 	EnableRemoteAccess bool `json:"EnableRemoteAccess,omitempty"`
+	ValidateImageTags bool `json:"ValidateImageTags,omitempty"`
 	LogAllQueryTimes bool `json:"LogAllQueryTimes,omitempty"`
 	DisableOutgoingIPv6 bool `json:"DisableOutgoingIPv6,omitempty"`
 	// A value indicating whether \\[enable case sensitive item ids\\].

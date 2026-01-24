@@ -1,11 +1,11 @@
-﻿namespace EmbySimplePlugin
-{
-    using System;
-    using System.IO;
-    using MediaBrowser.Common.Plugins;
-    using MediaBrowser.Model.Drawing;
-    using MediaBrowser.Model.Logging;
+﻿using System;
+using System.IO;
+using MediaBrowser.Common.Plugins;
+using MediaBrowser.Model.Drawing;
+using MediaBrowser.Model.Logging;
 
+namespace EmbyPluginMinimalTemplate
+{
     /// <summary>
     /// The plugin.
     /// </summary>

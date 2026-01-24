@@ -1456,6 +1456,150 @@ open class PersonsServiceAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Gets credits for a person
+
+     - parameter _id: (path) The person id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getPersonsByIdCredits(_id: String, completion: @escaping ((_ data: [UserLibraryCreditsList]?,_ error: Error?) -> Void)) {
+        getPersonsByIdCreditsWithRequestBuilder(_id: _id).execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     Gets credits for a person
+     - GET /Persons/{Id}/Credits
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - examples: [{contentType=application/json, example=[ {
+  "PersonType" : "Actor",
+  "Items" : [ {
+    "IndexNumberEnd" : 1,
+    "GameSystem" : "GameSystem",
+    "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+    "SortParentIndexNumber" : 2,
+    "ImageUrl" : "ImageUrl",
+    "PersonType" : "Actor",
+    "Overview" : "Overview",
+    "ParentIndexNumber" : 5,
+    "DisambiguationComment" : "DisambiguationComment",
+    "EndDate" : "2000-01-23T04:56:07.000+00:00",
+    "Name" : "Name",
+    "StartDate" : "2000-01-23T04:56:07.000+00:00",
+    "Role" : "Role",
+    "ProductionYear" : 0,
+    "Type" : "Type",
+    "OriginalTitle" : "OriginalTitle",
+    "IndexNumber" : 6,
+    "SortIndexNumber" : 5,
+    "SearchProviderName" : "SearchProviderName",
+    "ProviderIds" : {
+      "key" : "ProviderIds"
+    },
+    "Artists" : [ null, null ]
+  }, {
+    "IndexNumberEnd" : 1,
+    "GameSystem" : "GameSystem",
+    "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+    "SortParentIndexNumber" : 2,
+    "ImageUrl" : "ImageUrl",
+    "PersonType" : "Actor",
+    "Overview" : "Overview",
+    "ParentIndexNumber" : 5,
+    "DisambiguationComment" : "DisambiguationComment",
+    "EndDate" : "2000-01-23T04:56:07.000+00:00",
+    "Name" : "Name",
+    "StartDate" : "2000-01-23T04:56:07.000+00:00",
+    "Role" : "Role",
+    "ProductionYear" : 0,
+    "Type" : "Type",
+    "OriginalTitle" : "OriginalTitle",
+    "IndexNumber" : 6,
+    "SortIndexNumber" : 5,
+    "SearchProviderName" : "SearchProviderName",
+    "ProviderIds" : {
+      "key" : "ProviderIds"
+    },
+    "Artists" : [ null, null ]
+  } ]
+}, {
+  "PersonType" : "Actor",
+  "Items" : [ {
+    "IndexNumberEnd" : 1,
+    "GameSystem" : "GameSystem",
+    "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+    "SortParentIndexNumber" : 2,
+    "ImageUrl" : "ImageUrl",
+    "PersonType" : "Actor",
+    "Overview" : "Overview",
+    "ParentIndexNumber" : 5,
+    "DisambiguationComment" : "DisambiguationComment",
+    "EndDate" : "2000-01-23T04:56:07.000+00:00",
+    "Name" : "Name",
+    "StartDate" : "2000-01-23T04:56:07.000+00:00",
+    "Role" : "Role",
+    "ProductionYear" : 0,
+    "Type" : "Type",
+    "OriginalTitle" : "OriginalTitle",
+    "IndexNumber" : 6,
+    "SortIndexNumber" : 5,
+    "SearchProviderName" : "SearchProviderName",
+    "ProviderIds" : {
+      "key" : "ProviderIds"
+    },
+    "Artists" : [ null, null ]
+  }, {
+    "IndexNumberEnd" : 1,
+    "GameSystem" : "GameSystem",
+    "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+    "SortParentIndexNumber" : 2,
+    "ImageUrl" : "ImageUrl",
+    "PersonType" : "Actor",
+    "Overview" : "Overview",
+    "ParentIndexNumber" : 5,
+    "DisambiguationComment" : "DisambiguationComment",
+    "EndDate" : "2000-01-23T04:56:07.000+00:00",
+    "Name" : "Name",
+    "StartDate" : "2000-01-23T04:56:07.000+00:00",
+    "Role" : "Role",
+    "ProductionYear" : 0,
+    "Type" : "Type",
+    "OriginalTitle" : "OriginalTitle",
+    "IndexNumber" : 6,
+    "SortIndexNumber" : 5,
+    "SearchProviderName" : "SearchProviderName",
+    "ProviderIds" : {
+      "key" : "ProviderIds"
+    },
+    "Artists" : [ null, null ]
+  } ]
+} ]}]
+     - parameter _id: (path) The person id 
+
+     - returns: RequestBuilder<[UserLibraryCreditsList]> 
+     */
+    open class func getPersonsByIdCreditsWithRequestBuilder(_id: String) -> RequestBuilder<[UserLibraryCreditsList]> {
+        var path = "/Persons/{Id}/Credits"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = EmbyClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<[UserLibraryCreditsList]>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
      Gets a person, by name
 
      - parameter name: (path) The person name 

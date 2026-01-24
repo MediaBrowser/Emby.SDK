@@ -12,11 +12,12 @@
 import ApiClient from "../ApiClient";
 import BaseItemDto from '../model/BaseItemDto';
 import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
+import UserLibraryCreditsList from '../model/UserLibraryCreditsList';
 
 /**
 * PersonsService service.
 * @module api/PersonsServiceApi
-* @version 4.9.4.1
+* @version 4.10.0.1
 */
 export default class PersonsServiceApi {
 
@@ -171,6 +172,49 @@ export default class PersonsServiceApi {
      */
     getPersons() {
       return this.getPersonsWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Gets credits for a person
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/UserLibraryCreditsList>} and HTTP response
+     */
+    getPersonsByIdCreditsWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+        'Id': Id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = [UserLibraryCreditsList];
+
+      return this.apiClient.callApi(
+        '/Persons/{Id}/Credits', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Gets credits for a person
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/UserLibraryCreditsList>}
+     */
+    getPersonsByIdCredits() {
+      return this.getPersonsByIdCreditsWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

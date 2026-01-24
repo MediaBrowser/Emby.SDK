@@ -24,7 +24,6 @@ namespace EmbyPluginUiDemo.UI.ConfigWizard.TypeSelection
         {
             this.wizardManager = wizardManager;
             this.ContentData = new ConfigWizardTypeSelectionUI();
-            this.PluginId = pluginId;
             this.itemTypeSelection = new ItemTypeSelection();
             this.ConfigWizardTypeSelectionUI.SetSelectOptions(this.itemTypeSelection);
             this.usedItemTypes = new List<DemoItemType>();

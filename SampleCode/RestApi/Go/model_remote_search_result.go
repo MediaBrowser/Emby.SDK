@@ -24,6 +24,9 @@ type RemoteSearchResult struct {
 	PremiereDate time.Time `json:"PremiereDate,omitempty"`
 	StartDate time.Time `json:"StartDate,omitempty"`
 	EndDate time.Time `json:"EndDate,omitempty"`
+	PersonType *PersonType `json:"PersonType,omitempty"`
+	Role string `json:"Role,omitempty"`
+	Type_ string `json:"Type,omitempty"`
 	ImageUrl string `json:"ImageUrl,omitempty"`
 	SearchProviderName string `json:"SearchProviderName,omitempty"`
 	GameSystem string `json:"GameSystem,omitempty"`

@@ -12,11 +12,13 @@
 import ApiClient from "../ApiClient";
 import ContentSection from '../model/ContentSection';
 import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
+import UserLibraryDeleteHomeSections from '../model/UserLibraryDeleteHomeSections';
+import UserLibraryMoveHomeSections from '../model/UserLibraryMoveHomeSections';
 
 /**
 * ContentService service.
 * @module api/ContentServiceApi
-* @version 4.9.4.1
+* @version 4.10.0.1
 */
 export default class ContentServiceApi {
 
@@ -211,6 +213,129 @@ export default class ContentServiceApi {
      */
     getUsersByUseridSectionsBySectionidItems() {
       return this.getUsersByUseridSectionsBySectionidItemsWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    postUsersByUseridHomesectionsWithHttpInfo() {
+      let postBody = body;
+
+      let pathParams = {
+        'UserId': UserId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{UserId}/HomeSections', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    postUsersByUseridHomesections() {
+      return this.postUsersByUseridHomesectionsWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    postUsersByUseridHomesectionsDeleteWithHttpInfo() {
+      let postBody = body;
+
+      let pathParams = {
+        'UserId': UserId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{UserId}/HomeSections/Delete', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    postUsersByUseridHomesectionsDelete() {
+      return this.postUsersByUseridHomesectionsDeleteWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    postUsersByUseridHomesectionsMoveWithHttpInfo() {
+      let postBody = body;
+
+      let pathParams = {
+        'UserId': UserId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{UserId}/HomeSections/Move', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    postUsersByUseridHomesectionsMove() {
+      return this.postUsersByUseridHomesectionsMoveWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

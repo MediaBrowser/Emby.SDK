@@ -2,6 +2,8 @@
 // Copyright © 2022 - Emby LLC. All rights reserved.
 // </copyright>
 
+using System.Threading;
+
 namespace EmbyPluginUiDemo.UI.Lists
 {
     using System;
@@ -164,11 +166,11 @@ namespace EmbyPluginUiDemo.UI.Lists
 
         private void CreateNestedList(ILibraryManager libraryManager, IItemRepository itemRepository)
         {
-            var people = itemRepository.GetPeople(new InternalItemsQuery { Limit = 2000, IncludeLiveTVView = false }).Items;
+            var people = itemRepository.GetPeople(new InternalItemsQuery { Limit = 2000, IncludeLiveTVView = false }, CancellationToken.None).Items;
 
             for (int i = 0; i < 2; i++)
             {
-                foreach (var (person, _) in people)
+                foreach (var person in people)
                 {
                     if (this.LibraryItemsList.Count > 5)
                     {

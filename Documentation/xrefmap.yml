@@ -23540,6 +23540,15 @@ references:
 - uid: emby.restapi/getPersons/operationlistitem
   name: getPersons
   href: reference/RestAPI/PersonsService.html#emby_restapi_getPersons_operationlistitem
+- uid: emby.restapi/getPersonsByIdCredits
+  name: getPersonsByIdCredits
+  href: reference/RestAPI/PersonsService/getPersonsByIdCredits.html
+- uid: emby.restapi/getPersonsByIdCredits/operation
+  name: getPersonsByIdCredits
+  href: reference/RestAPI/PersonsService/getPersonsByIdCredits.html#emby_restapi_getPersonsByIdCredits_operation
+- uid: emby.restapi/getPersonsByIdCredits/operationlistitem
+  name: getPersonsByIdCredits
+  href: reference/RestAPI/PersonsService.html#emby_restapi_getPersonsByIdCredits_operationlistitem
 - uid: emby.restapi/getPersonsByName
   name: getPersonsByName
   href: reference/RestAPI/PersonsService/getPersonsByName.html
@@ -26258,6 +26267,33 @@ references:
 - uid: emby.restapi/postUsersByUseridFavoriteitemsByIdDelete/operationlistitem
   name: postUsersByUseridFavoriteitemsByIdDelete
   href: reference/RestAPI/UserLibraryService.html#emby_restapi_postUsersByUseridFavoriteitemsByIdDelete_operationlistitem
+- uid: emby.restapi/postUsersByUseridHomesections
+  name: postUsersByUseridHomesections
+  href: reference/RestAPI/ContentService/postUsersByUseridHomesections.html
+- uid: emby.restapi/postUsersByUseridHomesections/operation
+  name: postUsersByUseridHomesections
+  href: reference/RestAPI/ContentService/postUsersByUseridHomesections.html#emby_restapi_postUsersByUseridHomesections_operation
+- uid: emby.restapi/postUsersByUseridHomesections/operationlistitem
+  name: postUsersByUseridHomesections
+  href: reference/RestAPI/ContentService.html#emby_restapi_postUsersByUseridHomesections_operationlistitem
+- uid: emby.restapi/postUsersByUseridHomesectionsDelete
+  name: postUsersByUseridHomesectionsDelete
+  href: reference/RestAPI/ContentService/postUsersByUseridHomesectionsDelete.html
+- uid: emby.restapi/postUsersByUseridHomesectionsDelete/operation
+  name: postUsersByUseridHomesectionsDelete
+  href: reference/RestAPI/ContentService/postUsersByUseridHomesectionsDelete.html#emby_restapi_postUsersByUseridHomesectionsDelete_operation
+- uid: emby.restapi/postUsersByUseridHomesectionsDelete/operationlistitem
+  name: postUsersByUseridHomesectionsDelete
+  href: reference/RestAPI/ContentService.html#emby_restapi_postUsersByUseridHomesectionsDelete_operationlistitem
+- uid: emby.restapi/postUsersByUseridHomesectionsMove
+  name: postUsersByUseridHomesectionsMove
+  href: reference/RestAPI/ContentService/postUsersByUseridHomesectionsMove.html
+- uid: emby.restapi/postUsersByUseridHomesectionsMove/operation
+  name: postUsersByUseridHomesectionsMove
+  href: reference/RestAPI/ContentService/postUsersByUseridHomesectionsMove.html#emby_restapi_postUsersByUseridHomesectionsMove_operation
+- uid: emby.restapi/postUsersByUseridHomesectionsMove/operationlistitem
+  name: postUsersByUseridHomesectionsMove
+  href: reference/RestAPI/ContentService.html#emby_restapi_postUsersByUseridHomesectionsMove_operationlistitem
 - uid: emby.restapi/postUsersByUseridItemsByIdHidefromresume
   name: postUsersByUseridItemsByIdHidefromresume
   href: reference/RestAPI/UserLibraryService/postUsersByUseridItemsByIdHidefromresume.html
@@ -60834,6 +60870,12 @@ references:
   commentId: M:MediaBrowser.Controller.Dto.IDtoService.GetBaseItemDto(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Controller.Entities.User)
   fullName: MediaBrowser.Controller.Dto.IDtoService.GetBaseItemDto(MediaBrowser.Controller.Entities.BaseItem, MediaBrowser.Controller.Dto.DtoOptions, MediaBrowser.Controller.Entities.User)
   nameWithType: IDtoService.GetBaseItemDto(BaseItem, DtoOptions, User)
+- uid: MediaBrowser.Controller.Dto.IDtoService.GetBaseItemDto(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Controller.Entities.User,System.Threading.CancellationToken)
+  name: GetBaseItemDto(BaseItem, DtoOptions, User, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Dto.IDtoService.html#MediaBrowser_Controller_Dto_IDtoService_GetBaseItemDto_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Controller_Entities_User_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Dto.IDtoService.GetBaseItemDto(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Controller.Entities.User,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Dto.IDtoService.GetBaseItemDto(MediaBrowser.Controller.Entities.BaseItem, MediaBrowser.Controller.Dto.DtoOptions, MediaBrowser.Controller.Entities.User, System.Threading.CancellationToken)
+  nameWithType: IDtoService.GetBaseItemDto(BaseItem, DtoOptions, User, CancellationToken)
 - uid: MediaBrowser.Controller.Dto.IDtoService.GetBaseItemDto*
   name: GetBaseItemDto
   href: reference/pluginapi/MediaBrowser.Controller.Dto.IDtoService.html#MediaBrowser_Controller_Dto_IDtoService_GetBaseItemDto_
@@ -60850,6 +60892,15 @@ references:
   fullName.vb: MediaBrowser.Controller.Dto.IDtoService.GetBaseItemDtos(MediaBrowser.Controller.Entities.BaseItem(), MediaBrowser.Controller.Dto.DtoOptions, MediaBrowser.Controller.Entities.User)
   nameWithType: IDtoService.GetBaseItemDtos(BaseItem[], DtoOptions, User)
   nameWithType.vb: IDtoService.GetBaseItemDtos(BaseItem(), DtoOptions, User)
+- uid: MediaBrowser.Controller.Dto.IDtoService.GetBaseItemDtos(MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Controller.Entities.User,System.Threading.CancellationToken)
+  name: GetBaseItemDtos(BaseItem[], DtoOptions, User, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Dto.IDtoService.html#MediaBrowser_Controller_Dto_IDtoService_GetBaseItemDtos_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Controller_Entities_User_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Dto.IDtoService.GetBaseItemDtos(MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Controller.Entities.User,System.Threading.CancellationToken)
+  name.vb: GetBaseItemDtos(BaseItem(), DtoOptions, User, CancellationToken)
+  fullName: MediaBrowser.Controller.Dto.IDtoService.GetBaseItemDtos(MediaBrowser.Controller.Entities.BaseItem[], MediaBrowser.Controller.Dto.DtoOptions, MediaBrowser.Controller.Entities.User, System.Threading.CancellationToken)
+  fullName.vb: MediaBrowser.Controller.Dto.IDtoService.GetBaseItemDtos(MediaBrowser.Controller.Entities.BaseItem(), MediaBrowser.Controller.Dto.DtoOptions, MediaBrowser.Controller.Entities.User, System.Threading.CancellationToken)
+  nameWithType: IDtoService.GetBaseItemDtos(BaseItem[], DtoOptions, User, CancellationToken)
+  nameWithType.vb: IDtoService.GetBaseItemDtos(BaseItem(), DtoOptions, User, CancellationToken)
 - uid: MediaBrowser.Controller.Dto.IDtoService.GetBaseItemDtos*
   name: GetBaseItemDtos
   href: reference/pluginapi/MediaBrowser.Controller.Dto.IDtoService.html#MediaBrowser_Controller_Dto_IDtoService_GetBaseItemDtos_
@@ -62859,6 +62910,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.Audio.MusicGenre.GetItemIdList
   nameWithType: MusicGenre.GetItemIdList
+- uid: MediaBrowser.Controller.Entities.Audio.MusicGenre.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  name: GetItems(InternalItemsQuery, IDataContext, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicGenre.html#MediaBrowser_Controller_Entities_Audio_MusicGenre_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_MediaBrowser_Model_Data_IDataContext_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Entities.Audio.MusicGenre.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Entities.Audio.MusicGenre.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery, MediaBrowser.Model.Data.IDataContext, System.Threading.CancellationToken)
+  nameWithType: MusicGenre.GetItems(InternalItemsQuery, IDataContext, CancellationToken)
 - uid: MediaBrowser.Controller.Entities.Audio.MusicGenre.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Threading.CancellationToken)
   name: GetItems(InternalItemsQuery, CancellationToken)
   href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicGenre.html#MediaBrowser_Controller_Entities_Audio_MusicGenre_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Threading_CancellationToken_
@@ -69623,6 +69680,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.GameGenre.GetItemIdList
   nameWithType: GameGenre.GetItemIdList
+- uid: MediaBrowser.Controller.Entities.GameGenre.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  name: GetItems(InternalItemsQuery, IDataContext, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.GameGenre.html#MediaBrowser_Controller_Entities_GameGenre_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_MediaBrowser_Model_Data_IDataContext_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Entities.GameGenre.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Entities.GameGenre.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery, MediaBrowser.Model.Data.IDataContext, System.Threading.CancellationToken)
+  nameWithType: GameGenre.GetItems(InternalItemsQuery, IDataContext, CancellationToken)
 - uid: MediaBrowser.Controller.Entities.GameGenre.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Threading.CancellationToken)
   name: GetItems(InternalItemsQuery, CancellationToken)
   href: reference/pluginapi/MediaBrowser.Controller.Entities.GameGenre.html#MediaBrowser_Controller_Entities_GameGenre_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Threading_CancellationToken_
@@ -70062,6 +70125,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.Genre.GetItemIdList
   nameWithType: Genre.GetItemIdList
+- uid: MediaBrowser.Controller.Entities.Genre.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  name: GetItems(InternalItemsQuery, IDataContext, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Genre.html#MediaBrowser_Controller_Entities_Genre_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_MediaBrowser_Model_Data_IDataContext_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Entities.Genre.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Entities.Genre.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery, MediaBrowser.Model.Data.IDataContext, System.Threading.CancellationToken)
+  nameWithType: Genre.GetItems(InternalItemsQuery, IDataContext, CancellationToken)
 - uid: MediaBrowser.Controller.Entities.Genre.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Threading.CancellationToken)
   name: GetItems(InternalItemsQuery, CancellationToken)
   href: reference/pluginapi/MediaBrowser.Controller.Entities.Genre.html#MediaBrowser_Controller_Entities_Genre_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Threading_CancellationToken_
@@ -70316,6 +70385,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.IHasFolderGrouping.GetItemIdList
   nameWithType: IHasFolderGrouping.GetItemIdList
+- uid: MediaBrowser.Controller.Entities.IHasFolderGrouping.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  name: GetItems(InternalItemsQuery, IDataContext, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.IHasFolderGrouping.html#MediaBrowser_Controller_Entities_IHasFolderGrouping_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_MediaBrowser_Model_Data_IDataContext_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Entities.IHasFolderGrouping.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Entities.IHasFolderGrouping.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery, MediaBrowser.Model.Data.IDataContext, System.Threading.CancellationToken)
+  nameWithType: IHasFolderGrouping.GetItems(InternalItemsQuery, IDataContext, CancellationToken)
 - uid: MediaBrowser.Controller.Entities.IHasFolderGrouping.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Threading.CancellationToken)
   name: GetItems(InternalItemsQuery, CancellationToken)
   href: reference/pluginapi/MediaBrowser.Controller.Entities.IHasFolderGrouping.html#MediaBrowser_Controller_Entities_IHasFolderGrouping_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Threading_CancellationToken_
@@ -71405,6 +71480,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeTags
   nameWithType: InternalItemsQuery.ExcludeTags
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViews
+  name: ExcludeUserViews
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_ExcludeUserViews
+  commentId: P:MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViews
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViews
+  nameWithType: InternalItemsQuery.ExcludeUserViews
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViews*
+  name: ExcludeUserViews
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_ExcludeUserViews_
+  commentId: Overload:MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViews
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViews
+  nameWithType: InternalItemsQuery.ExcludeUserViews
 - uid: MediaBrowser.Controller.Entities.InternalItemsQuery.ExtendedVideoTypes
   name: ExtendedVideoTypes
   href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_ExtendedVideoTypes
@@ -74556,6 +74644,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.Person.GetItemIdList
   nameWithType: Person.GetItemIdList
+- uid: MediaBrowser.Controller.Entities.Person.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  name: GetItems(InternalItemsQuery, IDataContext, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Person.html#MediaBrowser_Controller_Entities_Person_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_MediaBrowser_Model_Data_IDataContext_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Entities.Person.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Entities.Person.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery, MediaBrowser.Model.Data.IDataContext, System.Threading.CancellationToken)
+  nameWithType: Person.GetItems(InternalItemsQuery, IDataContext, CancellationToken)
 - uid: MediaBrowser.Controller.Entities.Person.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Threading.CancellationToken)
   name: GetItems(InternalItemsQuery, CancellationToken)
   href: reference/pluginapi/MediaBrowser.Controller.Entities.Person.html#MediaBrowser_Controller_Entities_Person_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Threading_CancellationToken_
@@ -75336,6 +75430,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.Studio.GetItemIdList
   nameWithType: Studio.GetItemIdList
+- uid: MediaBrowser.Controller.Entities.Studio.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  name: GetItems(InternalItemsQuery, IDataContext, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Studio.html#MediaBrowser_Controller_Entities_Studio_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_MediaBrowser_Model_Data_IDataContext_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Entities.Studio.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Entities.Studio.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery, MediaBrowser.Model.Data.IDataContext, System.Threading.CancellationToken)
+  nameWithType: Studio.GetItems(InternalItemsQuery, IDataContext, CancellationToken)
 - uid: MediaBrowser.Controller.Entities.Studio.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Threading.CancellationToken)
   name: GetItems(InternalItemsQuery, CancellationToken)
   href: reference/pluginapi/MediaBrowser.Controller.Entities.Studio.html#MediaBrowser_Controller_Entities_Studio_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Threading_CancellationToken_
@@ -75533,6 +75633,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.Tag.GetItemIdList
   nameWithType: Tag.GetItemIdList
+- uid: MediaBrowser.Controller.Entities.Tag.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  name: GetItems(InternalItemsQuery, IDataContext, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Tag.html#MediaBrowser_Controller_Entities_Tag_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_MediaBrowser_Model_Data_IDataContext_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Entities.Tag.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Entities.Tag.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery, MediaBrowser.Model.Data.IDataContext, System.Threading.CancellationToken)
+  nameWithType: Tag.GetItems(InternalItemsQuery, IDataContext, CancellationToken)
 - uid: MediaBrowser.Controller.Entities.Tag.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Threading.CancellationToken)
   name: GetItems(InternalItemsQuery, CancellationToken)
   href: reference/pluginapi/MediaBrowser.Controller.Entities.Tag.html#MediaBrowser_Controller_Entities_Tag_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Threading_CancellationToken_
@@ -82635,6 +82741,19 @@ references:
   commentId: T:MediaBrowser.Controller.Library.IUserManager
   fullName: MediaBrowser.Controller.Library.IUserManager
   nameWithType: IUserManager
+- uid: MediaBrowser.Controller.Library.IUserManager.AddHomeSection(System.Int64,MediaBrowser.Model.Entities.ContentSection,System.Threading.CancellationToken)
+  name: AddHomeSection(Int64, ContentSection, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_AddHomeSection_System_Int64_MediaBrowser_Model_Entities_ContentSection_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Library.IUserManager.AddHomeSection(System.Int64,MediaBrowser.Model.Entities.ContentSection,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Library.IUserManager.AddHomeSection(System.Int64, MediaBrowser.Model.Entities.ContentSection, System.Threading.CancellationToken)
+  nameWithType: IUserManager.AddHomeSection(Int64, ContentSection, CancellationToken)
+- uid: MediaBrowser.Controller.Library.IUserManager.AddHomeSection*
+  name: AddHomeSection
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_AddHomeSection_
+  commentId: Overload:MediaBrowser.Controller.Library.IUserManager.AddHomeSection
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.IUserManager.AddHomeSection
+  nameWithType: IUserManager.AddHomeSection
 - uid: MediaBrowser.Controller.Library.IUserManager.AddParts(System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Authentication.IAuthenticationProvider},System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Configuration.IUserConfigurationFactory})
   name: AddParts(IEnumerable<IAuthenticationProvider>, IEnumerable<IUserConfigurationFactory>)
   href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_AddParts_System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Authentication_IAuthenticationProvider__System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Configuration_IUserConfigurationFactory__
@@ -82699,6 +82818,22 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.IUserManager.CreateUser
   nameWithType: IUserManager.CreateUser
+- uid: MediaBrowser.Controller.Library.IUserManager.DeleteHomeSections(System.Int64,System.String[],System.Threading.CancellationToken)
+  name: DeleteHomeSections(Int64, String[], CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_DeleteHomeSections_System_Int64_System_String___System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Library.IUserManager.DeleteHomeSections(System.Int64,System.String[],System.Threading.CancellationToken)
+  name.vb: DeleteHomeSections(Int64, String(), CancellationToken)
+  fullName: MediaBrowser.Controller.Library.IUserManager.DeleteHomeSections(System.Int64, System.String[], System.Threading.CancellationToken)
+  fullName.vb: MediaBrowser.Controller.Library.IUserManager.DeleteHomeSections(System.Int64, System.String(), System.Threading.CancellationToken)
+  nameWithType: IUserManager.DeleteHomeSections(Int64, String[], CancellationToken)
+  nameWithType.vb: IUserManager.DeleteHomeSections(Int64, String(), CancellationToken)
+- uid: MediaBrowser.Controller.Library.IUserManager.DeleteHomeSections*
+  name: DeleteHomeSections
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_DeleteHomeSections_
+  commentId: Overload:MediaBrowser.Controller.Library.IUserManager.DeleteHomeSections
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.IUserManager.DeleteHomeSections
+  nameWithType: IUserManager.DeleteHomeSections
 - uid: MediaBrowser.Controller.Library.IUserManager.DeleteUser(MediaBrowser.Controller.Entities.User)
   name: DeleteUser(User)
   href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_DeleteUser_MediaBrowser_Controller_Entities_User_
@@ -83100,6 +83235,22 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.IUserManager.MakeValidUsername
   nameWithType: IUserManager.MakeValidUsername
+- uid: MediaBrowser.Controller.Library.IUserManager.MoveHomeSections(System.Int64,System.String[],System.Int32,System.Threading.CancellationToken)
+  name: MoveHomeSections(Int64, String[], Int32, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_MoveHomeSections_System_Int64_System_String___System_Int32_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Library.IUserManager.MoveHomeSections(System.Int64,System.String[],System.Int32,System.Threading.CancellationToken)
+  name.vb: MoveHomeSections(Int64, String(), Int32, CancellationToken)
+  fullName: MediaBrowser.Controller.Library.IUserManager.MoveHomeSections(System.Int64, System.String[], System.Int32, System.Threading.CancellationToken)
+  fullName.vb: MediaBrowser.Controller.Library.IUserManager.MoveHomeSections(System.Int64, System.String(), System.Int32, System.Threading.CancellationToken)
+  nameWithType: IUserManager.MoveHomeSections(Int64, String[], Int32, CancellationToken)
+  nameWithType.vb: IUserManager.MoveHomeSections(Int64, String(), Int32, CancellationToken)
+- uid: MediaBrowser.Controller.Library.IUserManager.MoveHomeSections*
+  name: MoveHomeSections
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_MoveHomeSections_
+  commentId: Overload:MediaBrowser.Controller.Library.IUserManager.MoveHomeSections
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.IUserManager.MoveHomeSections
+  nameWithType: IUserManager.MoveHomeSections
 - uid: MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin(System.String)
   name: RedeemPasswordResetPin(String)
   href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_System_String_
@@ -83219,6 +83370,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.IUserManager.UpdateConfiguration
   nameWithType: IUserManager.UpdateConfiguration
+- uid: MediaBrowser.Controller.Library.IUserManager.UpdateHomeSection(System.Int64,MediaBrowser.Model.Entities.ContentSection,System.Threading.CancellationToken)
+  name: UpdateHomeSection(Int64, ContentSection, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_UpdateHomeSection_System_Int64_MediaBrowser_Model_Entities_ContentSection_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Library.IUserManager.UpdateHomeSection(System.Int64,MediaBrowser.Model.Entities.ContentSection,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Library.IUserManager.UpdateHomeSection(System.Int64, MediaBrowser.Model.Entities.ContentSection, System.Threading.CancellationToken)
+  nameWithType: IUserManager.UpdateHomeSection(Int64, ContentSection, CancellationToken)
+- uid: MediaBrowser.Controller.Library.IUserManager.UpdateHomeSection*
+  name: UpdateHomeSection
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_UpdateHomeSection_
+  commentId: Overload:MediaBrowser.Controller.Library.IUserManager.UpdateHomeSection
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.IUserManager.UpdateHomeSection
+  nameWithType: IUserManager.UpdateHomeSection
 - uid: MediaBrowser.Controller.Library.IUserManager.UpdatePartialUserSettings(System.Int64,System.Collections.Generic.Dictionary{System.String,System.String})
   name: UpdatePartialUserSettings(Int64, Dictionary<String, String>)
   href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_UpdatePartialUserSettings_System_Int64_System_Collections_Generic_Dictionary_System_String_System_String__
@@ -87164,6 +87328,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.LiveTv.LiveTVSeries.GetItemIdList
   nameWithType: LiveTVSeries.GetItemIdList
+- uid: MediaBrowser.Controller.LiveTv.LiveTVSeries.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  name: GetItems(InternalItemsQuery, IDataContext, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LiveTVSeries.html#MediaBrowser_Controller_LiveTv_LiveTVSeries_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_MediaBrowser_Model_Data_IDataContext_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.LiveTv.LiveTVSeries.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.LiveTv.LiveTVSeries.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery, MediaBrowser.Model.Data.IDataContext, System.Threading.CancellationToken)
+  nameWithType: LiveTVSeries.GetItems(InternalItemsQuery, IDataContext, CancellationToken)
 - uid: MediaBrowser.Controller.LiveTv.LiveTVSeries.GetItems(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Threading.CancellationToken)
   name: GetItems(InternalItemsQuery, CancellationToken)
   href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LiveTVSeries.html#MediaBrowser_Controller_LiveTv_LiveTVSeries_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Threading_CancellationToken_
@@ -92365,6 +92535,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Net.AuthenticatedAttribute.AllowLocalOnly
   nameWithType: AuthenticatedAttribute.AllowLocalOnly
+- uid: MediaBrowser.Controller.Net.AuthenticatedAttribute.AllowNullThrowIfInvalid
+  name: AllowNullThrowIfInvalid
+  href: reference/pluginapi/MediaBrowser.Controller.Net.AuthenticatedAttribute.html#MediaBrowser_Controller_Net_AuthenticatedAttribute_AllowNullThrowIfInvalid
+  commentId: P:MediaBrowser.Controller.Net.AuthenticatedAttribute.AllowNullThrowIfInvalid
+  fullName: MediaBrowser.Controller.Net.AuthenticatedAttribute.AllowNullThrowIfInvalid
+  nameWithType: AuthenticatedAttribute.AllowNullThrowIfInvalid
+- uid: MediaBrowser.Controller.Net.AuthenticatedAttribute.AllowNullThrowIfInvalid*
+  name: AllowNullThrowIfInvalid
+  href: reference/pluginapi/MediaBrowser.Controller.Net.AuthenticatedAttribute.html#MediaBrowser_Controller_Net_AuthenticatedAttribute_AllowNullThrowIfInvalid_
+  commentId: Overload:MediaBrowser.Controller.Net.AuthenticatedAttribute.AllowNullThrowIfInvalid
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.AuthenticatedAttribute.AllowNullThrowIfInvalid
+  nameWithType: AuthenticatedAttribute.AllowNullThrowIfInvalid
 - uid: MediaBrowser.Controller.Net.AuthenticatedAttribute.AuthService
   name: AuthService
   href: reference/pluginapi/MediaBrowser.Controller.Net.AuthenticatedAttribute.html#MediaBrowser_Controller_Net_AuthenticatedAttribute_AuthService
@@ -92820,6 +93003,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Net.IAuthenticationAttributes.AllowLocalOnly
   nameWithType: IAuthenticationAttributes.AllowLocalOnly
+- uid: MediaBrowser.Controller.Net.IAuthenticationAttributes.AllowNullThrowIfInvalid
+  name: AllowNullThrowIfInvalid
+  href: reference/pluginapi/MediaBrowser.Controller.Net.IAuthenticationAttributes.html#MediaBrowser_Controller_Net_IAuthenticationAttributes_AllowNullThrowIfInvalid
+  commentId: P:MediaBrowser.Controller.Net.IAuthenticationAttributes.AllowNullThrowIfInvalid
+  fullName: MediaBrowser.Controller.Net.IAuthenticationAttributes.AllowNullThrowIfInvalid
+  nameWithType: IAuthenticationAttributes.AllowNullThrowIfInvalid
+- uid: MediaBrowser.Controller.Net.IAuthenticationAttributes.AllowNullThrowIfInvalid*
+  name: AllowNullThrowIfInvalid
+  href: reference/pluginapi/MediaBrowser.Controller.Net.IAuthenticationAttributes.html#MediaBrowser_Controller_Net_IAuthenticationAttributes_AllowNullThrowIfInvalid_
+  commentId: Overload:MediaBrowser.Controller.Net.IAuthenticationAttributes.AllowNullThrowIfInvalid
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.IAuthenticationAttributes.AllowNullThrowIfInvalid
+  nameWithType: IAuthenticationAttributes.AllowNullThrowIfInvalid
 - uid: MediaBrowser.Controller.Net.IAuthenticationAttributes.GetFeatureIds
   name: GetFeatureIds()
   href: reference/pluginapi/MediaBrowser.Controller.Net.IAuthenticationAttributes.html#MediaBrowser_Controller_Net_IAuthenticationAttributes_GetFeatureIds
@@ -98662,6 +98858,25 @@ references:
   fullName.vb: MediaBrowser.Controller.Providers.IMultipleLocalMetadataProvider(Of TItemType).GetMultipleMetadata
   nameWithType: IMultipleLocalMetadataProvider<TItemType>.GetMultipleMetadata
   nameWithType.vb: IMultipleLocalMetadataProvider(Of TItemType).GetMultipleMetadata
+- uid: MediaBrowser.Controller.Providers.IPersonMetadataProvider
+  name: IPersonMetadataProvider
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.IPersonMetadataProvider.html
+  commentId: T:MediaBrowser.Controller.Providers.IPersonMetadataProvider
+  fullName: MediaBrowser.Controller.Providers.IPersonMetadataProvider
+  nameWithType: IPersonMetadataProvider
+- uid: MediaBrowser.Controller.Providers.IPersonMetadataProvider.GetCredits(MediaBrowser.Controller.Providers.PersonLookupInfo,System.Threading.CancellationToken)
+  name: GetCredits(PersonLookupInfo, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.IPersonMetadataProvider.html#MediaBrowser_Controller_Providers_IPersonMetadataProvider_GetCredits_MediaBrowser_Controller_Providers_PersonLookupInfo_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Providers.IPersonMetadataProvider.GetCredits(MediaBrowser.Controller.Providers.PersonLookupInfo,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Providers.IPersonMetadataProvider.GetCredits(MediaBrowser.Controller.Providers.PersonLookupInfo, System.Threading.CancellationToken)
+  nameWithType: IPersonMetadataProvider.GetCredits(PersonLookupInfo, CancellationToken)
+- uid: MediaBrowser.Controller.Providers.IPersonMetadataProvider.GetCredits*
+  name: GetCredits
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.IPersonMetadataProvider.html#MediaBrowser_Controller_Providers_IPersonMetadataProvider_GetCredits_
+  commentId: Overload:MediaBrowser.Controller.Providers.IPersonMetadataProvider.GetCredits
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Providers.IPersonMetadataProvider.GetCredits
+  nameWithType: IPersonMetadataProvider.GetCredits
 - uid: MediaBrowser.Controller.Providers.IPreRefreshProvider
   name: IPreRefreshProvider
   href: reference/pluginapi/MediaBrowser.Controller.Providers.IPreRefreshProvider.html
@@ -98774,6 +98989,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Providers.IProviderManager.GetAvailableRemoteImages
   nameWithType: IProviderManager.GetAvailableRemoteImages
+- uid: MediaBrowser.Controller.Providers.IProviderManager.GetCredits(MediaBrowser.Controller.Entities.Person,System.Threading.CancellationToken)
+  name: GetCredits(Person, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.IProviderManager.html#MediaBrowser_Controller_Providers_IProviderManager_GetCredits_MediaBrowser_Controller_Entities_Person_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Providers.IProviderManager.GetCredits(MediaBrowser.Controller.Entities.Person,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Providers.IProviderManager.GetCredits(MediaBrowser.Controller.Entities.Person, System.Threading.CancellationToken)
+  nameWithType: IProviderManager.GetCredits(Person, CancellationToken)
+- uid: MediaBrowser.Controller.Providers.IProviderManager.GetCredits*
+  name: GetCredits
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.IProviderManager.html#MediaBrowser_Controller_Providers_IProviderManager_GetCredits_
+  commentId: Overload:MediaBrowser.Controller.Providers.IProviderManager.GetCredits
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Providers.IProviderManager.GetCredits
+  nameWithType: IProviderManager.GetCredits
 - uid: MediaBrowser.Controller.Providers.IProviderManager.GetDefaultLibraryOptions(System.String)
   name: GetDefaultLibraryOptions(String)
   href: reference/pluginapi/MediaBrowser.Controller.Providers.IProviderManager.html#MediaBrowser_Controller_Providers_IProviderManager_GetDefaultLibraryOptions_System_String_
@@ -108356,6 +108584,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Configuration.ServerConfiguration.AutoRunWebApp
   nameWithType: ServerConfiguration.AutoRunWebApp
+- uid: MediaBrowser.Model.Configuration.ServerConfiguration.BannerText
+  name: BannerText
+  href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_BannerText
+  commentId: P:MediaBrowser.Model.Configuration.ServerConfiguration.BannerText
+  fullName: MediaBrowser.Model.Configuration.ServerConfiguration.BannerText
+  nameWithType: ServerConfiguration.BannerText
+- uid: MediaBrowser.Model.Configuration.ServerConfiguration.BannerText*
+  name: BannerText
+  href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_BannerText_
+  commentId: Overload:MediaBrowser.Model.Configuration.ServerConfiguration.BannerText
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Configuration.ServerConfiguration.BannerText
+  nameWithType: ServerConfiguration.BannerText
 - uid: MediaBrowser.Model.Configuration.ServerConfiguration.CertificatePassword
   name: CertificatePassword
   href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_CertificatePassword
@@ -109135,6 +109376,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Configuration.ServerConfiguration.VacuumDatabaseOnStartup
   nameWithType: ServerConfiguration.VacuumDatabaseOnStartup
+- uid: MediaBrowser.Model.Configuration.ServerConfiguration.ValidateImageTags
+  name: ValidateImageTags
+  href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_ValidateImageTags
+  commentId: P:MediaBrowser.Model.Configuration.ServerConfiguration.ValidateImageTags
+  fullName: MediaBrowser.Model.Configuration.ServerConfiguration.ValidateImageTags
+  nameWithType: ServerConfiguration.ValidateImageTags
+- uid: MediaBrowser.Model.Configuration.ServerConfiguration.ValidateImageTags*
+  name: ValidateImageTags
+  href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_ValidateImageTags_
+  commentId: Overload:MediaBrowser.Model.Configuration.ServerConfiguration.ValidateImageTags
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Configuration.ServerConfiguration.ValidateImageTags
+  nameWithType: ServerConfiguration.ValidateImageTags
 - uid: MediaBrowser.Model.Configuration.ServerConfiguration.WanDdns
   name: WanDdns
   href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_WanDdns
@@ -119760,6 +120014,32 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Entities.ContentSection.CollectionType
   nameWithType: ContentSection.CollectionType
+- uid: MediaBrowser.Model.Entities.ContentSection.CustomName
+  name: CustomName
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_CustomName
+  commentId: P:MediaBrowser.Model.Entities.ContentSection.CustomName
+  fullName: MediaBrowser.Model.Entities.ContentSection.CustomName
+  nameWithType: ContentSection.CustomName
+- uid: MediaBrowser.Model.Entities.ContentSection.CustomName*
+  name: CustomName
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_CustomName_
+  commentId: Overload:MediaBrowser.Model.Entities.ContentSection.CustomName
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ContentSection.CustomName
+  nameWithType: ContentSection.CustomName
+- uid: MediaBrowser.Model.Entities.ContentSection.ExcludedFolders
+  name: ExcludedFolders
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_ExcludedFolders
+  commentId: P:MediaBrowser.Model.Entities.ContentSection.ExcludedFolders
+  fullName: MediaBrowser.Model.Entities.ContentSection.ExcludedFolders
+  nameWithType: ContentSection.ExcludedFolders
+- uid: MediaBrowser.Model.Entities.ContentSection.ExcludedFolders*
+  name: ExcludedFolders
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_ExcludedFolders_
+  commentId: Overload:MediaBrowser.Model.Entities.ContentSection.ExcludedFolders
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ContentSection.ExcludedFolders
+  nameWithType: ContentSection.ExcludedFolders
 - uid: MediaBrowser.Model.Entities.ContentSection.Id
   name: Id
   href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_Id
@@ -119773,6 +120053,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Entities.ContentSection.Id
   nameWithType: ContentSection.Id
+- uid: MediaBrowser.Model.Entities.ContentSection.ImageType
+  name: ImageType
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_ImageType
+  commentId: P:MediaBrowser.Model.Entities.ContentSection.ImageType
+  fullName: MediaBrowser.Model.Entities.ContentSection.ImageType
+  nameWithType: ContentSection.ImageType
+- uid: MediaBrowser.Model.Entities.ContentSection.ImageType*
+  name: ImageType
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_ImageType_
+  commentId: Overload:MediaBrowser.Model.Entities.ContentSection.ImageType
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ContentSection.ImageType
+  nameWithType: ContentSection.ImageType
 - uid: MediaBrowser.Model.Entities.ContentSection.Monitor
   name: Monitor
   href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_Monitor
@@ -119799,6 +120092,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Entities.ContentSection.Name
   nameWithType: ContentSection.Name
+- uid: MediaBrowser.Model.Entities.ContentSection.ParentId
+  name: ParentId
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_ParentId
+  commentId: P:MediaBrowser.Model.Entities.ContentSection.ParentId
+  fullName: MediaBrowser.Model.Entities.ContentSection.ParentId
+  nameWithType: ContentSection.ParentId
+- uid: MediaBrowser.Model.Entities.ContentSection.ParentId*
+  name: ParentId
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_ParentId_
+  commentId: Overload:MediaBrowser.Model.Entities.ContentSection.ParentId
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ContentSection.ParentId
+  nameWithType: ContentSection.ParentId
 - uid: MediaBrowser.Model.Entities.ContentSection.ParentItem
   name: ParentItem
   href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_ParentItem
@@ -133194,6 +133500,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Providers.RemoteSearchResult.ParentIndexNumber
   nameWithType: RemoteSearchResult.ParentIndexNumber
+- uid: MediaBrowser.Model.Providers.RemoteSearchResult.PersonType
+  name: PersonType
+  href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteSearchResult.html#MediaBrowser_Model_Providers_RemoteSearchResult_PersonType
+  commentId: P:MediaBrowser.Model.Providers.RemoteSearchResult.PersonType
+  fullName: MediaBrowser.Model.Providers.RemoteSearchResult.PersonType
+  nameWithType: RemoteSearchResult.PersonType
+- uid: MediaBrowser.Model.Providers.RemoteSearchResult.PersonType*
+  name: PersonType
+  href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteSearchResult.html#MediaBrowser_Model_Providers_RemoteSearchResult_PersonType_
+  commentId: Overload:MediaBrowser.Model.Providers.RemoteSearchResult.PersonType
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Providers.RemoteSearchResult.PersonType
+  nameWithType: RemoteSearchResult.PersonType
 - uid: MediaBrowser.Model.Providers.RemoteSearchResult.PremiereDate
   name: PremiereDate
   href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteSearchResult.html#MediaBrowser_Model_Providers_RemoteSearchResult_PremiereDate
@@ -133233,6 +133552,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Providers.RemoteSearchResult.ProviderIds
   nameWithType: RemoteSearchResult.ProviderIds
+- uid: MediaBrowser.Model.Providers.RemoteSearchResult.Role
+  name: Role
+  href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteSearchResult.html#MediaBrowser_Model_Providers_RemoteSearchResult_Role
+  commentId: P:MediaBrowser.Model.Providers.RemoteSearchResult.Role
+  fullName: MediaBrowser.Model.Providers.RemoteSearchResult.Role
+  nameWithType: RemoteSearchResult.Role
+- uid: MediaBrowser.Model.Providers.RemoteSearchResult.Role*
+  name: Role
+  href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteSearchResult.html#MediaBrowser_Model_Providers_RemoteSearchResult_Role_
+  commentId: Overload:MediaBrowser.Model.Providers.RemoteSearchResult.Role
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Providers.RemoteSearchResult.Role
+  nameWithType: RemoteSearchResult.Role
 - uid: MediaBrowser.Model.Providers.RemoteSearchResult.SearchProviderName
   name: SearchProviderName
   href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteSearchResult.html#MediaBrowser_Model_Providers_RemoteSearchResult_SearchProviderName
@@ -133285,6 +133617,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Providers.RemoteSearchResult.StartDate
   nameWithType: RemoteSearchResult.StartDate
+- uid: MediaBrowser.Model.Providers.RemoteSearchResult.Type
+  name: Type
+  href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteSearchResult.html#MediaBrowser_Model_Providers_RemoteSearchResult_Type
+  commentId: P:MediaBrowser.Model.Providers.RemoteSearchResult.Type
+  fullName: MediaBrowser.Model.Providers.RemoteSearchResult.Type
+  nameWithType: RemoteSearchResult.Type
+- uid: MediaBrowser.Model.Providers.RemoteSearchResult.Type*
+  name: Type
+  href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteSearchResult.html#MediaBrowser_Model_Providers_RemoteSearchResult_Type_
+  commentId: Overload:MediaBrowser.Model.Providers.RemoteSearchResult.Type
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Providers.RemoteSearchResult.Type
+  nameWithType: RemoteSearchResult.Type
 - uid: MediaBrowser.Model.Providers.RemoteSubtitleInfo
   name: RemoteSubtitleInfo
   href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteSubtitleInfo.html
@@ -134951,6 +135296,32 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Querying.NextUpQuery.EnableTotalRecordCount
   nameWithType: NextUpQuery.EnableTotalRecordCount
+- uid: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIdStrings
+  name: ExcludeUserViewIdStrings
+  href: reference/pluginapi/MediaBrowser.Model.Querying.NextUpQuery.html#MediaBrowser_Model_Querying_NextUpQuery_ExcludeUserViewIdStrings
+  commentId: P:MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIdStrings
+  fullName: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIdStrings
+  nameWithType: NextUpQuery.ExcludeUserViewIdStrings
+- uid: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIdStrings*
+  name: ExcludeUserViewIdStrings
+  href: reference/pluginapi/MediaBrowser.Model.Querying.NextUpQuery.html#MediaBrowser_Model_Querying_NextUpQuery_ExcludeUserViewIdStrings_
+  commentId: Overload:MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIdStrings
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIdStrings
+  nameWithType: NextUpQuery.ExcludeUserViewIdStrings
+- uid: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViews
+  name: ExcludeUserViews
+  href: reference/pluginapi/MediaBrowser.Model.Querying.NextUpQuery.html#MediaBrowser_Model_Querying_NextUpQuery_ExcludeUserViews
+  commentId: P:MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViews
+  fullName: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViews
+  nameWithType: NextUpQuery.ExcludeUserViews
+- uid: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViews*
+  name: ExcludeUserViews
+  href: reference/pluginapi/MediaBrowser.Model.Querying.NextUpQuery.html#MediaBrowser_Model_Querying_NextUpQuery_ExcludeUserViews_
+  commentId: Overload:MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViews
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViews
+  nameWithType: NextUpQuery.ExcludeUserViews
 - uid: MediaBrowser.Model.Querying.NextUpQuery.Fields
   name: Fields
   href: reference/pluginapi/MediaBrowser.Model.Querying.NextUpQuery.html#MediaBrowser_Model_Querying_NextUpQuery_Fields

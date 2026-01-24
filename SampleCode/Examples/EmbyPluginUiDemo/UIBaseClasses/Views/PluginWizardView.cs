@@ -9,7 +9,6 @@
         protected PluginWizardView(string pluginId)
         : base(pluginId)
         {
-            this.PluginId = pluginId;
             this.AllowCancel = true;
             this.AllowNext = true;
         }

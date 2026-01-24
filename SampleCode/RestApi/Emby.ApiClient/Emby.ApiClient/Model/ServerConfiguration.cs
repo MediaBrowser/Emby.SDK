@@ -75,6 +75,12 @@ namespace Emby.ApiClient.Model
         public string CertificatePassword { get; set; }
 
         /// <summary>
+        /// Gets or Sets BannerText
+        /// </summary>
+        /// <value>The BannerText.</value>
+        public string BannerText { get; set; }
+
+        /// <summary>
         /// A value indicating whether this instance is port authorized.
         /// </summary>
         /// <value>The IsPortAuthorized.</value>
@@ -91,6 +97,12 @@ namespace Emby.ApiClient.Model
         /// </summary>
         /// <value>The EnableRemoteAccess.</value>
         public bool? EnableRemoteAccess { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ValidateImageTags
+        /// </summary>
+        /// <value>The ValidateImageTags.</value>
+        public bool? ValidateImageTags { get; set; }
 
         /// <summary>
         /// Gets or Sets LogAllQueryTimes
@@ -456,9 +468,11 @@ namespace Emby.ApiClient.Model
             sb.Append("  EnableHttps: ").Append(EnableHttps).Append("\n");
             sb.Append("  CertificatePath: ").Append(CertificatePath).Append("\n");
             sb.Append("  CertificatePassword: ").Append(CertificatePassword).Append("\n");
+            sb.Append("  BannerText: ").Append(BannerText).Append("\n");
             sb.Append("  IsPortAuthorized: ").Append(IsPortAuthorized).Append("\n");
             sb.Append("  AutoRunWebApp: ").Append(AutoRunWebApp).Append("\n");
             sb.Append("  EnableRemoteAccess: ").Append(EnableRemoteAccess).Append("\n");
+            sb.Append("  ValidateImageTags: ").Append(ValidateImageTags).Append("\n");
             sb.Append("  LogAllQueryTimes: ").Append(LogAllQueryTimes).Append("\n");
             sb.Append("  DisableOutgoingIPv6: ").Append(DisableOutgoingIPv6).Append("\n");
             sb.Append("  EnableCaseSensitiveItemIds: ").Append(EnableCaseSensitiveItemIds).Append("\n");
@@ -583,6 +597,11 @@ namespace Emby.ApiClient.Model
                     this.CertificatePassword.Equals(input.CertificatePassword))
                 ) && 
                 (
+                    this.BannerText == input.BannerText ||
+                    (this.BannerText != null &&
+                    this.BannerText.Equals(input.BannerText))
+                ) && 
+                (
                     this.IsPortAuthorized == input.IsPortAuthorized ||
                     (this.IsPortAuthorized != null &&
                     this.IsPortAuthorized.Equals(input.IsPortAuthorized))
@@ -596,6 +615,11 @@ namespace Emby.ApiClient.Model
                     this.EnableRemoteAccess == input.EnableRemoteAccess ||
                     (this.EnableRemoteAccess != null &&
                     this.EnableRemoteAccess.Equals(input.EnableRemoteAccess))
+                ) && 
+                (
+                    this.ValidateImageTags == input.ValidateImageTags ||
+                    (this.ValidateImageTags != null &&
+                    this.ValidateImageTags.Equals(input.ValidateImageTags))
                 ) && 
                 (
                     this.LogAllQueryTimes == input.LogAllQueryTimes ||
@@ -920,12 +944,16 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.CertificatePath.GetHashCode();
                 if (this.CertificatePassword != null)
                     hashCode = hashCode * 59 + this.CertificatePassword.GetHashCode();
+                if (this.BannerText != null)
+                    hashCode = hashCode * 59 + this.BannerText.GetHashCode();
                 if (this.IsPortAuthorized != null)
                     hashCode = hashCode * 59 + this.IsPortAuthorized.GetHashCode();
                 if (this.AutoRunWebApp != null)
                     hashCode = hashCode * 59 + this.AutoRunWebApp.GetHashCode();
                 if (this.EnableRemoteAccess != null)
                     hashCode = hashCode * 59 + this.EnableRemoteAccess.GetHashCode();
+                if (this.ValidateImageTags != null)
+                    hashCode = hashCode * 59 + this.ValidateImageTags.GetHashCode();
                 if (this.LogAllQueryTimes != null)
                     hashCode = hashCode * 59 + this.LogAllQueryTimes.GetHashCode();
                 if (this.DisableOutgoingIPv6 != null)

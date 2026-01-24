@@ -258,6 +258,75 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
         /// <returns>ApiResponse of QueryResultBaseItemDto</returns>
         ApiResponse<QueryResultBaseItemDto> GetUsersByUseridSectionsBySectionidItemsWithHttpInfo (string sectionId, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, bool? isSpecialSeason, string adjacentTo, string startItemId, int? minIndexNumber, DateTimeOffset? minStartDate, DateTimeOffset? maxStartDate, DateTimeOffset? minEndDate, DateTimeOffset? maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, DateTimeOffset? minPremiereDate, DateTimeOffset? minDateLastSaved, DateTimeOffset? minDateLastSavedForUser, DateTimeOffset? maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContentSection: </param>
+        /// <param name="userId">User Id</param>
+        /// <returns></returns>
+        void PostUsersByUseridHomesections (ContentSection body, string userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContentSection: </param>
+        /// <param name="userId">User Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostUsersByUseridHomesectionsWithHttpInfo (ContentSection body, string userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">DeleteHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns></returns>
+        void PostUsersByUseridHomesectionsDelete (UserLibraryDeleteHomeSections body, string userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">DeleteHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostUsersByUseridHomesectionsDeleteWithHttpInfo (UserLibraryDeleteHomeSections body, string userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">MoveHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns></returns>
+        void PostUsersByUseridHomesectionsMove (UserLibraryMoveHomeSections body, string userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">MoveHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostUsersByUseridHomesectionsMoveWithHttpInfo (UserLibraryMoveHomeSections body, string userId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -500,6 +569,75 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultBaseItemDto)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetUsersByUseridSectionsBySectionidItemsAsyncWithHttpInfo (string sectionId, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, bool? isSpecialSeason, string adjacentTo, string startItemId, int? minIndexNumber, DateTimeOffset? minStartDate, DateTimeOffset? maxStartDate, DateTimeOffset? minEndDate, DateTimeOffset? maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, DateTimeOffset? minPremiereDate, DateTimeOffset? minDateLastSaved, DateTimeOffset? minDateLastSavedForUser, DateTimeOffset? maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContentSection: </param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostUsersByUseridHomesectionsAsync (ContentSection body, string userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContentSection: </param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridHomesectionsAsyncWithHttpInfo (ContentSection body, string userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">DeleteHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostUsersByUseridHomesectionsDeleteAsync (UserLibraryDeleteHomeSections body, string userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">DeleteHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridHomesectionsDeleteAsyncWithHttpInfo (UserLibraryDeleteHomeSections body, string userId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">MoveHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostUsersByUseridHomesectionsMoveAsync (UserLibraryMoveHomeSections body, string userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">MoveHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridHomesectionsMoveAsyncWithHttpInfo (UserLibraryMoveHomeSections body, string userId);
         #endregion Asynchronous Operations
     }
 
@@ -1519,6 +1657,543 @@ namespace EmbyClient.Dotnet.Api
             return new ApiResponse<QueryResultBaseItemDto>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (QueryResultBaseItemDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultBaseItemDto)));
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContentSection: </param>
+        /// <param name="userId">User Id</param>
+        /// <returns></returns>
+        public void PostUsersByUseridHomesections (ContentSection body, string userId)
+        {
+             PostUsersByUseridHomesectionsWithHttpInfo(body, userId);
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContentSection: </param>
+        /// <param name="userId">User Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostUsersByUseridHomesectionsWithHttpInfo (ContentSection body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentServiceApi->PostUsersByUseridHomesections");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ContentServiceApi->PostUsersByUseridHomesections");
+
+            var localVarPath = "/Users/{UserId}/HomeSections";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByUseridHomesections", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContentSection: </param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostUsersByUseridHomesectionsAsync (ContentSection body, string userId)
+        {
+             await PostUsersByUseridHomesectionsAsyncWithHttpInfo(body, userId);
+
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContentSection: </param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridHomesectionsAsyncWithHttpInfo (ContentSection body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentServiceApi->PostUsersByUseridHomesections");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ContentServiceApi->PostUsersByUseridHomesections");
+
+            var localVarPath = "/Users/{UserId}/HomeSections";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByUseridHomesections", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">DeleteHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns></returns>
+        public void PostUsersByUseridHomesectionsDelete (UserLibraryDeleteHomeSections body, string userId)
+        {
+             PostUsersByUseridHomesectionsDeleteWithHttpInfo(body, userId);
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">DeleteHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostUsersByUseridHomesectionsDeleteWithHttpInfo (UserLibraryDeleteHomeSections body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentServiceApi->PostUsersByUseridHomesectionsDelete");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ContentServiceApi->PostUsersByUseridHomesectionsDelete");
+
+            var localVarPath = "/Users/{UserId}/HomeSections/Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByUseridHomesectionsDelete", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">DeleteHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostUsersByUseridHomesectionsDeleteAsync (UserLibraryDeleteHomeSections body, string userId)
+        {
+             await PostUsersByUseridHomesectionsDeleteAsyncWithHttpInfo(body, userId);
+
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">DeleteHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridHomesectionsDeleteAsyncWithHttpInfo (UserLibraryDeleteHomeSections body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentServiceApi->PostUsersByUseridHomesectionsDelete");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ContentServiceApi->PostUsersByUseridHomesectionsDelete");
+
+            var localVarPath = "/Users/{UserId}/HomeSections/Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByUseridHomesectionsDelete", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">MoveHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns></returns>
+        public void PostUsersByUseridHomesectionsMove (UserLibraryMoveHomeSections body, string userId)
+        {
+             PostUsersByUseridHomesectionsMoveWithHttpInfo(body, userId);
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">MoveHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostUsersByUseridHomesectionsMoveWithHttpInfo (UserLibraryMoveHomeSections body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentServiceApi->PostUsersByUseridHomesectionsMove");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ContentServiceApi->PostUsersByUseridHomesectionsMove");
+
+            var localVarPath = "/Users/{UserId}/HomeSections/Move";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByUseridHomesectionsMove", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">MoveHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostUsersByUseridHomesectionsMoveAsync (UserLibraryMoveHomeSections body, string userId)
+        {
+             await PostUsersByUseridHomesectionsMoveAsyncWithHttpInfo(body, userId);
+
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">MoveHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridHomesectionsMoveAsyncWithHttpInfo (UserLibraryMoveHomeSections body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentServiceApi->PostUsersByUseridHomesectionsMove");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ContentServiceApi->PostUsersByUseridHomesectionsMove");
+
+            var localVarPath = "/Users/{UserId}/HomeSections/Move";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByUseridHomesectionsMove", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
         }
 
     }

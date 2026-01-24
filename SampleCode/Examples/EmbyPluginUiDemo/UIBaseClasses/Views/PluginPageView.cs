@@ -9,7 +9,6 @@
         protected PluginPageView(string pluginId)
         : base(pluginId)
         {
-            this.PluginId = pluginId;
         }
 
         public bool ShowSave { get; set; } = true;

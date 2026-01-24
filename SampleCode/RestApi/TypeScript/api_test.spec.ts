@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.4.1
+ * OpenAPI spec version: 4.10.0.1
  * 
  *
  * NOTE: This file is auto generated.
@@ -798,6 +798,21 @@ describe("ContentServiceApi", () => {
     const NameStartsWith: string = "NameStartsWith_example"
     const NameLessThan: string = "NameLessThan_example"
     return expect(instance.getUsersByUseridSectionsBySectionidItems(SectionId, UserId, ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, {})).resolves.toBe(null)
+  })
+  test("postUsersByUseridHomesections", () => {
+    const body: api.ContentSection = undefined
+    const UserId: string = "UserId_example"
+    return expect(instance.postUsersByUseridHomesections(body, UserId, {})).resolves.toBe(null)
+  })
+  test("postUsersByUseridHomesectionsDelete", () => {
+    const body: api.UserLibraryDeleteHomeSections = undefined
+    const UserId: string = "UserId_example"
+    return expect(instance.postUsersByUseridHomesectionsDelete(body, UserId, {})).resolves.toBe(null)
+  })
+  test("postUsersByUseridHomesectionsMove", () => {
+    const body: api.UserLibraryMoveHomeSections = undefined
+    const UserId: string = "UserId_example"
+    return expect(instance.postUsersByUseridHomesectionsMove(body, UserId, {})).resolves.toBe(null)
   })
 })
 
@@ -6408,6 +6423,10 @@ describe("PersonsServiceApi", () => {
     const NameStartsWith: string = "NameStartsWith_example"
     const NameLessThan: string = "NameLessThan_example"
     return expect(instance.getPersons(ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, {})).resolves.toBe(null)
+  })
+  test("getPersonsByIdCredits", () => {
+    const Id: string = "Id_example"
+    return expect(instance.getPersonsByIdCredits(Id, {})).resolves.toBe(null)
   })
   test("getPersonsByName", () => {
     const Name: string = "Name_example"

@@ -1,14 +1,13 @@
-﻿namespace EmbyPluginSimpleUI
+﻿using System;
+using System.IO;
+using MediaBrowser.Common;
+using MediaBrowser.Common.Plugins;
+using MediaBrowser.Controller.Plugins;
+using MediaBrowser.Model.Drawing;
+using MediaBrowser.Model.Logging;
+
+namespace EmbyPluginSimpleUiTemplate
 {
-    using System;
-    using System.IO;
-
-    using MediaBrowser.Common;
-    using MediaBrowser.Common.Plugins;
-    using MediaBrowser.Controller.Plugins;
-    using MediaBrowser.Model.Drawing;
-    using MediaBrowser.Model.Logging;
-
     /// <summary>
     /// The plugin.
     /// </summary>

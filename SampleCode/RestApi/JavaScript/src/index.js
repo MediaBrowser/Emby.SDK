@@ -329,7 +329,10 @@ import UserDto from './model/UserDto';
 import UserItemDataDto from './model/UserItemDataDto';
 import UserItemShareLevel from './model/UserItemShareLevel';
 import UserLibraryAddTags from './model/UserLibraryAddTags';
+import UserLibraryCreditsList from './model/UserLibraryCreditsList';
+import UserLibraryDeleteHomeSections from './model/UserLibraryDeleteHomeSections';
 import UserLibraryLeaveSharedItems from './model/UserLibraryLeaveSharedItems';
+import UserLibraryMoveHomeSections from './model/UserLibraryMoveHomeSections';
 import UserLibraryOfficialRatingItem from './model/UserLibraryOfficialRatingItem';
 import UserLibraryRemoveTags from './model/UserLibraryRemoveTags';
 import UserLibraryTagItem from './model/UserLibraryTagItem';
@@ -443,7 +446,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.9.4.1
+* @version 4.10.0.1
 */
 export {
     /**
@@ -2367,10 +2370,28 @@ export {
     UserLibraryAddTags,
 
     /**
+     * The UserLibraryCreditsList model constructor.
+     * @property {module:model/UserLibraryCreditsList}
+     */
+    UserLibraryCreditsList,
+
+    /**
+     * The UserLibraryDeleteHomeSections model constructor.
+     * @property {module:model/UserLibraryDeleteHomeSections}
+     */
+    UserLibraryDeleteHomeSections,
+
+    /**
      * The UserLibraryLeaveSharedItems model constructor.
      * @property {module:model/UserLibraryLeaveSharedItems}
      */
     UserLibraryLeaveSharedItems,
+
+    /**
+     * The UserLibraryMoveHomeSections model constructor.
+     * @property {module:model/UserLibraryMoveHomeSections}
+     */
+    UserLibraryMoveHomeSections,
 
     /**
      * The UserLibraryOfficialRatingItem model constructor.

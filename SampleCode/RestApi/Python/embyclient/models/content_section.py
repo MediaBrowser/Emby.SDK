@@ -23,15 +23,19 @@ class ContentSection(object):
     """
     swagger_types = {
         'name': 'str',
+        'custom_name': 'str',
         'subtitle': 'str',
         'id': 'str',
         'section_type': 'str',
         'collection_type': 'str',
         'view_type': 'str',
+        'image_type': 'str',
         'monitor': 'list[str]',
+        'excluded_folders': 'list[str]',
         'card_size_offset': 'int',
         'scroll_direction': 'ScrollDirection',
         'parent_item': 'BaseItemDto',
+        'parent_id': 'str',
         'text_info': 'TextSectionInfo',
         'premium_feature': 'str',
         'premium_message': 'str',
@@ -40,33 +44,41 @@ class ContentSection(object):
 
     attribute_map = {
         'name': 'Name',
+        'custom_name': 'CustomName',
         'subtitle': 'Subtitle',
         'id': 'Id',
         'section_type': 'SectionType',
         'collection_type': 'CollectionType',
         'view_type': 'ViewType',
+        'image_type': 'ImageType',
         'monitor': 'Monitor',
+        'excluded_folders': 'ExcludedFolders',
         'card_size_offset': 'CardSizeOffset',
         'scroll_direction': 'ScrollDirection',
         'parent_item': 'ParentItem',
+        'parent_id': 'ParentId',
         'text_info': 'TextInfo',
         'premium_feature': 'PremiumFeature',
         'premium_message': 'PremiumMessage',
         'refresh_interval': 'RefreshInterval'
     }
 
-    def __init__(self, name=None, subtitle=None, id=None, section_type=None, collection_type=None, view_type=None, monitor=None, card_size_offset=None, scroll_direction=None, parent_item=None, text_info=None, premium_feature=None, premium_message=None, refresh_interval=None):  # noqa: E501
+    def __init__(self, name=None, custom_name=None, subtitle=None, id=None, section_type=None, collection_type=None, view_type=None, image_type=None, monitor=None, excluded_folders=None, card_size_offset=None, scroll_direction=None, parent_item=None, parent_id=None, text_info=None, premium_feature=None, premium_message=None, refresh_interval=None):  # noqa: E501
         """ContentSection - a model defined in Swagger"""  # noqa: E501
         self._name = None
+        self._custom_name = None
         self._subtitle = None
         self._id = None
         self._section_type = None
         self._collection_type = None
         self._view_type = None
+        self._image_type = None
         self._monitor = None
+        self._excluded_folders = None
         self._card_size_offset = None
         self._scroll_direction = None
         self._parent_item = None
+        self._parent_id = None
         self._text_info = None
         self._premium_feature = None
         self._premium_message = None
@@ -74,6 +86,8 @@ class ContentSection(object):
         self.discriminator = None
         if name is not None:
             self.name = name
+        if custom_name is not None:
+            self.custom_name = custom_name
         if subtitle is not None:
             self.subtitle = subtitle
         if id is not None:
@@ -84,14 +98,20 @@ class ContentSection(object):
             self.collection_type = collection_type
         if view_type is not None:
             self.view_type = view_type
+        if image_type is not None:
+            self.image_type = image_type
         if monitor is not None:
             self.monitor = monitor
+        if excluded_folders is not None:
+            self.excluded_folders = excluded_folders
         if card_size_offset is not None:
             self.card_size_offset = card_size_offset
         if scroll_direction is not None:
             self.scroll_direction = scroll_direction
         if parent_item is not None:
             self.parent_item = parent_item
+        if parent_id is not None:
+            self.parent_id = parent_id
         if text_info is not None:
             self.text_info = text_info
         if premium_feature is not None:
@@ -121,6 +141,27 @@ class ContentSection(object):
         """
 
         self._name = name
+
+    @property
+    def custom_name(self):
+        """Gets the custom_name of this ContentSection.  # noqa: E501
+
+
+        :return: The custom_name of this ContentSection.  # noqa: E501
+        :rtype: str
+        """
+        return self._custom_name
+
+    @custom_name.setter
+    def custom_name(self, custom_name):
+        """Sets the custom_name of this ContentSection.
+
+
+        :param custom_name: The custom_name of this ContentSection.  # noqa: E501
+        :type: str
+        """
+
+        self._custom_name = custom_name
 
     @property
     def subtitle(self):
@@ -228,6 +269,27 @@ class ContentSection(object):
         self._view_type = view_type
 
     @property
+    def image_type(self):
+        """Gets the image_type of this ContentSection.  # noqa: E501
+
+
+        :return: The image_type of this ContentSection.  # noqa: E501
+        :rtype: str
+        """
+        return self._image_type
+
+    @image_type.setter
+    def image_type(self, image_type):
+        """Sets the image_type of this ContentSection.
+
+
+        :param image_type: The image_type of this ContentSection.  # noqa: E501
+        :type: str
+        """
+
+        self._image_type = image_type
+
+    @property
     def monitor(self):
         """Gets the monitor of this ContentSection.  # noqa: E501
 
@@ -247,6 +309,27 @@ class ContentSection(object):
         """
 
         self._monitor = monitor
+
+    @property
+    def excluded_folders(self):
+        """Gets the excluded_folders of this ContentSection.  # noqa: E501
+
+
+        :return: The excluded_folders of this ContentSection.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._excluded_folders
+
+    @excluded_folders.setter
+    def excluded_folders(self, excluded_folders):
+        """Sets the excluded_folders of this ContentSection.
+
+
+        :param excluded_folders: The excluded_folders of this ContentSection.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._excluded_folders = excluded_folders
 
     @property
     def card_size_offset(self):
@@ -310,6 +393,27 @@ class ContentSection(object):
         """
 
         self._parent_item = parent_item
+
+    @property
+    def parent_id(self):
+        """Gets the parent_id of this ContentSection.  # noqa: E501
+
+
+        :return: The parent_id of this ContentSection.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_id
+
+    @parent_id.setter
+    def parent_id(self, parent_id):
+        """Sets the parent_id of this ContentSection.
+
+
+        :param parent_id: The parent_id of this ContentSection.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_id = parent_id
 
     @property
     def text_info(self):

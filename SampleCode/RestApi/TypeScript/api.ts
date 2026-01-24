@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.4.1
+ * OpenAPI spec version: 4.10.0.1
  * 
  *
  * NOTE: This file is auto generated.
@@ -2979,6 +2979,12 @@ export interface ContentSection {
      * @type {string}
      * @memberof ContentSection
      */
+    CustomName?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ContentSection
+     */
     Subtitle?: string;
     /**
      * 
@@ -3006,10 +3012,22 @@ export interface ContentSection {
     ViewType?: string;
     /**
      * 
+     * @type {string}
+     * @memberof ContentSection
+     */
+    ImageType?: string;
+    /**
+     * 
      * @type {Array<string>}
      * @memberof ContentSection
      */
     Monitor?: Array<string>;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ContentSection
+     */
+    ExcludedFolders?: Array<string>;
     /**
      * 
      * @type {number}
@@ -3028,6 +3046,12 @@ export interface ContentSection {
      * @memberof ContentSection
      */
     ParentItem?: BaseItemDto;
+    /**
+     * 
+     * @type {string}
+     * @memberof ContentSection
+     */
+    ParentId?: string;
     /**
      * 
      * @type {TextSectionInfo}
@@ -11023,6 +11047,24 @@ export interface RemoteSearchResult {
     EndDate?: Date;
     /**
      * 
+     * @type {PersonType}
+     * @memberof RemoteSearchResult
+     */
+    PersonType?: PersonType;
+    /**
+     * 
+     * @type {string}
+     * @memberof RemoteSearchResult
+     */
+    Role?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof RemoteSearchResult
+     */
+    Type?: string;
+    /**
+     * 
      * @type {string}
      * @memberof RemoteSearchResult
      */
@@ -11534,6 +11576,12 @@ export interface ServerConfiguration {
      */
     CertificatePassword?: string;
     /**
+     * 
+     * @type {string}
+     * @memberof ServerConfiguration
+     */
+    BannerText?: string;
+    /**
      * A value indicating whether this instance is port authorized.
      * @type {boolean}
      * @memberof ServerConfiguration
@@ -11551,6 +11599,12 @@ export interface ServerConfiguration {
      * @memberof ServerConfiguration
      */
     EnableRemoteAccess?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ServerConfiguration
+     */
+    ValidateImageTags?: boolean;
     /**
      * 
      * @type {boolean}
@@ -14746,6 +14800,38 @@ export interface UserLibraryAddTags {
 /**
  * 
  * @export
+ * @interface UserLibraryCreditsList
+ */
+export interface UserLibraryCreditsList {
+    /**
+     * 
+     * @type {PersonType}
+     * @memberof UserLibraryCreditsList
+     */
+    PersonType?: PersonType;
+    /**
+     * 
+     * @type {Array<RemoteSearchResult>}
+     * @memberof UserLibraryCreditsList
+     */
+    Items?: Array<RemoteSearchResult>;
+}
+/**
+ * 
+ * @export
+ * @interface UserLibraryDeleteHomeSections
+ */
+export interface UserLibraryDeleteHomeSections {
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof UserLibraryDeleteHomeSections
+     */
+    Ids?: Array<string>;
+}
+/**
+ * 
+ * @export
  * @interface UserLibraryLeaveSharedItems
  */
 export interface UserLibraryLeaveSharedItems {
@@ -14761,6 +14847,25 @@ export interface UserLibraryLeaveSharedItems {
      * @memberof UserLibraryLeaveSharedItems
      */
     UserId?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UserLibraryMoveHomeSections
+ */
+export interface UserLibraryMoveHomeSections {
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof UserLibraryMoveHomeSections
+     */
+    Ids?: Array<string>;
+    /**
+     * 
+     * @type {number}
+     * @memberof UserLibraryMoveHomeSections
+     */
+    NewIndex?: number;
 }
 /**
  * 
@@ -23164,6 +23269,147 @@ export const ContentServiceApiFetchParamCreator = function (configuration?: Conf
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Requires authentication as user
+         * @param {ContentSection} body ContentSection: 
+         * @param {string} UserId User Id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postUsersByUseridHomesections(body: ContentSection, UserId: string, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postUsersByUseridHomesections.');
+            }
+            // verify required parameter 'UserId' is not null or undefined
+            if (UserId === null || UserId === undefined) {
+                throw new RequiredError('UserId','Required parameter UserId was null or undefined when calling postUsersByUseridHomesections.');
+            }
+            const localVarPath = `/Users/{UserId}/HomeSections`
+                .replace(`{${"UserId"}}`, encodeURIComponent(String(UserId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"ContentSection" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as user
+         * @param {UserLibraryDeleteHomeSections} body DeleteHomeSections
+         * @param {string} UserId User Id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postUsersByUseridHomesectionsDelete(body: UserLibraryDeleteHomeSections, UserId: string, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postUsersByUseridHomesectionsDelete.');
+            }
+            // verify required parameter 'UserId' is not null or undefined
+            if (UserId === null || UserId === undefined) {
+                throw new RequiredError('UserId','Required parameter UserId was null or undefined when calling postUsersByUseridHomesectionsDelete.');
+            }
+            const localVarPath = `/Users/{UserId}/HomeSections/Delete`
+                .replace(`{${"UserId"}}`, encodeURIComponent(String(UserId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"UserLibraryDeleteHomeSections" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as user
+         * @param {UserLibraryMoveHomeSections} body MoveHomeSections
+         * @param {string} UserId User Id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postUsersByUseridHomesectionsMove(body: UserLibraryMoveHomeSections, UserId: string, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postUsersByUseridHomesectionsMove.');
+            }
+            // verify required parameter 'UserId' is not null or undefined
+            if (UserId === null || UserId === undefined) {
+                throw new RequiredError('UserId','Required parameter UserId was null or undefined when calling postUsersByUseridHomesectionsMove.');
+            }
+            const localVarPath = `/Users/{UserId}/HomeSections/Move`
+                .replace(`{${"UserId"}}`, encodeURIComponent(String(UserId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"UserLibraryMoveHomeSections" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -23308,6 +23554,63 @@ export const ContentServiceApiFp = function(configuration?: Configuration) {
                 });
             };
         },
+        /**
+         * Requires authentication as user
+         * @param {ContentSection} body ContentSection: 
+         * @param {string} UserId User Id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postUsersByUseridHomesections(body: ContentSection, UserId: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = ContentServiceApiFetchParamCreator(configuration).postUsersByUseridHomesections(body, UserId, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as user
+         * @param {UserLibraryDeleteHomeSections} body DeleteHomeSections
+         * @param {string} UserId User Id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postUsersByUseridHomesectionsDelete(body: UserLibraryDeleteHomeSections, UserId: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = ContentServiceApiFetchParamCreator(configuration).postUsersByUseridHomesectionsDelete(body, UserId, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as user
+         * @param {UserLibraryMoveHomeSections} body MoveHomeSections
+         * @param {string} UserId User Id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postUsersByUseridHomesectionsMove(body: UserLibraryMoveHomeSections, UserId: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = ContentServiceApiFetchParamCreator(configuration).postUsersByUseridHomesectionsMove(body, UserId, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
     }
 };
 
@@ -23433,6 +23736,36 @@ export const ContentServiceApiFactory = function (configuration?: Configuration,
          */
         getUsersByUseridSectionsBySectionidItems(SectionId: string, UserId: string, ArtistType?: string, MaxOfficialRating?: string, HasThemeSong?: boolean, HasThemeVideo?: boolean, HasSubtitles?: boolean, HasSpecialFeature?: boolean, HasTrailer?: boolean, IsSpecialSeason?: boolean, AdjacentTo?: string, StartItemId?: string, MinIndexNumber?: number, MinStartDate?: Date, MaxStartDate?: Date, MinEndDate?: Date, MaxEndDate?: Date, MinPlayers?: number, MaxPlayers?: number, ParentIndexNumber?: number, HasParentalRating?: boolean, IsHD?: boolean, IsUnaired?: boolean, MinCommunityRating?: number, MinCriticRating?: number, AiredDuringSeason?: number, MinPremiereDate?: Date, MinDateLastSaved?: Date, MinDateLastSavedForUser?: Date, MaxPremiereDate?: Date, HasOverview?: boolean, HasImdbId?: boolean, HasTmdbId?: boolean, HasTvdbId?: boolean, ExcludeItemIds?: string, StartIndex?: number, Limit?: number, Recursive?: boolean, SearchTerm?: string, SortOrder?: string, ParentId?: string, Fields?: string, ExcludeItemTypes?: string, IncludeItemTypes?: string, AnyProviderIdEquals?: string, Filters?: string, IsFavorite?: boolean, IsMovie?: boolean, IsSeries?: boolean, IsFolder?: boolean, IsNews?: boolean, IsKids?: boolean, IsSports?: boolean, IsNew?: boolean, IsPremiere?: boolean, IsNewOrPremiere?: boolean, IsRepeat?: boolean, ProjectToMedia?: boolean, MediaTypes?: string, ImageTypes?: string, SortBy?: string, IsPlayed?: boolean, Genres?: string, OfficialRatings?: string, Tags?: string, ExcludeTags?: string, Years?: string, EnableImages?: boolean, EnableUserData?: boolean, ImageTypeLimit?: number, EnableImageTypes?: string, Person?: string, PersonIds?: string, PersonTypes?: string, Studios?: string, StudioIds?: string, Artists?: string, ArtistIds?: string, Albums?: string, Ids?: string, VideoTypes?: string, Containers?: string, AudioCodecs?: string, AudioLayouts?: string, VideoCodecs?: string, ExtendedVideoTypes?: string, SubtitleCodecs?: string, Path?: string, MinOfficialRating?: string, IsLocked?: boolean, IsPlaceHolder?: boolean, HasOfficialRating?: boolean, GroupItemsIntoCollections?: boolean, Is3D?: boolean, SeriesStatus?: string, NameStartsWithOrGreater?: string, ArtistStartsWithOrGreater?: string, AlbumArtistStartsWithOrGreater?: string, NameStartsWith?: string, NameLessThan?: string, options?: any) {
             return ContentServiceApiFp(configuration).getUsersByUseridSectionsBySectionidItems(SectionId, UserId, ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as user
+         * @param {ContentSection} body ContentSection: 
+         * @param {string} UserId User Id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postUsersByUseridHomesections(body: ContentSection, UserId: string, options?: any) {
+            return ContentServiceApiFp(configuration).postUsersByUseridHomesections(body, UserId, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as user
+         * @param {UserLibraryDeleteHomeSections} body DeleteHomeSections
+         * @param {string} UserId User Id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postUsersByUseridHomesectionsDelete(body: UserLibraryDeleteHomeSections, UserId: string, options?: any) {
+            return ContentServiceApiFp(configuration).postUsersByUseridHomesectionsDelete(body, UserId, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as user
+         * @param {UserLibraryMoveHomeSections} body MoveHomeSections
+         * @param {string} UserId User Id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postUsersByUseridHomesectionsMove(body: UserLibraryMoveHomeSections, UserId: string, options?: any) {
+            return ContentServiceApiFp(configuration).postUsersByUseridHomesectionsMove(body, UserId, options)(fetch, basePath);
         },
     };
 };
@@ -23563,6 +23896,42 @@ export class ContentServiceApi extends BaseAPI {
      */
     public getUsersByUseridSectionsBySectionidItems(SectionId: string, UserId: string, ArtistType?: string, MaxOfficialRating?: string, HasThemeSong?: boolean, HasThemeVideo?: boolean, HasSubtitles?: boolean, HasSpecialFeature?: boolean, HasTrailer?: boolean, IsSpecialSeason?: boolean, AdjacentTo?: string, StartItemId?: string, MinIndexNumber?: number, MinStartDate?: Date, MaxStartDate?: Date, MinEndDate?: Date, MaxEndDate?: Date, MinPlayers?: number, MaxPlayers?: number, ParentIndexNumber?: number, HasParentalRating?: boolean, IsHD?: boolean, IsUnaired?: boolean, MinCommunityRating?: number, MinCriticRating?: number, AiredDuringSeason?: number, MinPremiereDate?: Date, MinDateLastSaved?: Date, MinDateLastSavedForUser?: Date, MaxPremiereDate?: Date, HasOverview?: boolean, HasImdbId?: boolean, HasTmdbId?: boolean, HasTvdbId?: boolean, ExcludeItemIds?: string, StartIndex?: number, Limit?: number, Recursive?: boolean, SearchTerm?: string, SortOrder?: string, ParentId?: string, Fields?: string, ExcludeItemTypes?: string, IncludeItemTypes?: string, AnyProviderIdEquals?: string, Filters?: string, IsFavorite?: boolean, IsMovie?: boolean, IsSeries?: boolean, IsFolder?: boolean, IsNews?: boolean, IsKids?: boolean, IsSports?: boolean, IsNew?: boolean, IsPremiere?: boolean, IsNewOrPremiere?: boolean, IsRepeat?: boolean, ProjectToMedia?: boolean, MediaTypes?: string, ImageTypes?: string, SortBy?: string, IsPlayed?: boolean, Genres?: string, OfficialRatings?: string, Tags?: string, ExcludeTags?: string, Years?: string, EnableImages?: boolean, EnableUserData?: boolean, ImageTypeLimit?: number, EnableImageTypes?: string, Person?: string, PersonIds?: string, PersonTypes?: string, Studios?: string, StudioIds?: string, Artists?: string, ArtistIds?: string, Albums?: string, Ids?: string, VideoTypes?: string, Containers?: string, AudioCodecs?: string, AudioLayouts?: string, VideoCodecs?: string, ExtendedVideoTypes?: string, SubtitleCodecs?: string, Path?: string, MinOfficialRating?: string, IsLocked?: boolean, IsPlaceHolder?: boolean, HasOfficialRating?: boolean, GroupItemsIntoCollections?: boolean, Is3D?: boolean, SeriesStatus?: string, NameStartsWithOrGreater?: string, ArtistStartsWithOrGreater?: string, AlbumArtistStartsWithOrGreater?: string, NameStartsWith?: string, NameLessThan?: string, options?: any) {
         return ContentServiceApiFp(this.configuration).getUsersByUseridSectionsBySectionidItems(SectionId, UserId, ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as user
+     * @param {ContentSection} body ContentSection: 
+     * @param {string} UserId User Id
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ContentServiceApi
+     */
+    public postUsersByUseridHomesections(body: ContentSection, UserId: string, options?: any) {
+        return ContentServiceApiFp(this.configuration).postUsersByUseridHomesections(body, UserId, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as user
+     * @param {UserLibraryDeleteHomeSections} body DeleteHomeSections
+     * @param {string} UserId User Id
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ContentServiceApi
+     */
+    public postUsersByUseridHomesectionsDelete(body: UserLibraryDeleteHomeSections, UserId: string, options?: any) {
+        return ContentServiceApiFp(this.configuration).postUsersByUseridHomesectionsDelete(body, UserId, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as user
+     * @param {UserLibraryMoveHomeSections} body MoveHomeSections
+     * @param {string} UserId User Id
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ContentServiceApi
+     */
+    public postUsersByUseridHomesectionsMove(body: UserLibraryMoveHomeSections, UserId: string, options?: any) {
+        return ContentServiceApiFp(this.configuration).postUsersByUseridHomesectionsMove(body, UserId, options)(this.fetch, this.basePath);
     }
 
 }
@@ -81198,6 +81567,45 @@ export const PersonsServiceApiFetchParamCreator = function (configuration?: Conf
         },
         /**
          * Requires authentication as user
+         * @summary Gets credits for a person
+         * @param {string} Id The person id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPersonsByIdCredits(Id: string, options: any = {}): FetchArgs {
+            // verify required parameter 'Id' is not null or undefined
+            if (Id === null || Id === undefined) {
+                throw new RequiredError('Id','Required parameter Id was null or undefined when calling getPersonsByIdCredits.');
+            }
+            const localVarPath = `/Persons/{Id}/Credits`
+                .replace(`{${"Id"}}`, encodeURIComponent(String(Id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as user
          * @summary Gets a person, by name
          * @param {string} Name The person name
          * @param {string} [UserId] Optional. Filter by user id, and attach user data
@@ -81368,6 +81776,25 @@ export const PersonsServiceApiFp = function(configuration?: Configuration) {
         },
         /**
          * Requires authentication as user
+         * @summary Gets credits for a person
+         * @param {string} Id The person id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPersonsByIdCredits(Id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Array<UserLibraryCreditsList>> {
+            const localVarFetchArgs = PersonsServiceApiFetchParamCreator(configuration).getPersonsByIdCredits(Id, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as user
          * @summary Gets a person, by name
          * @param {string} Name The person name
          * @param {string} [UserId] Optional. Filter by user id, and attach user data
@@ -81505,6 +81932,16 @@ export const PersonsServiceApiFactory = function (configuration?: Configuration,
         },
         /**
          * Requires authentication as user
+         * @summary Gets credits for a person
+         * @param {string} Id The person id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPersonsByIdCredits(Id: string, options?: any) {
+            return PersonsServiceApiFp(configuration).getPersonsByIdCredits(Id, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as user
          * @summary Gets a person, by name
          * @param {string} Name The person name
          * @param {string} [UserId] Optional. Filter by user id, and attach user data
@@ -81632,6 +82069,18 @@ export class PersonsServiceApi extends BaseAPI {
      */
     public getPersons(ArtistType?: string, MaxOfficialRating?: string, HasThemeSong?: boolean, HasThemeVideo?: boolean, HasSubtitles?: boolean, HasSpecialFeature?: boolean, HasTrailer?: boolean, IsSpecialSeason?: boolean, AdjacentTo?: string, StartItemId?: string, MinIndexNumber?: number, MinStartDate?: Date, MaxStartDate?: Date, MinEndDate?: Date, MaxEndDate?: Date, MinPlayers?: number, MaxPlayers?: number, ParentIndexNumber?: number, HasParentalRating?: boolean, IsHD?: boolean, IsUnaired?: boolean, MinCommunityRating?: number, MinCriticRating?: number, AiredDuringSeason?: number, MinPremiereDate?: Date, MinDateLastSaved?: Date, MinDateLastSavedForUser?: Date, MaxPremiereDate?: Date, HasOverview?: boolean, HasImdbId?: boolean, HasTmdbId?: boolean, HasTvdbId?: boolean, ExcludeItemIds?: string, StartIndex?: number, Limit?: number, Recursive?: boolean, SearchTerm?: string, SortOrder?: string, ParentId?: string, Fields?: string, ExcludeItemTypes?: string, IncludeItemTypes?: string, AnyProviderIdEquals?: string, Filters?: string, IsFavorite?: boolean, IsMovie?: boolean, IsSeries?: boolean, IsFolder?: boolean, IsNews?: boolean, IsKids?: boolean, IsSports?: boolean, IsNew?: boolean, IsPremiere?: boolean, IsNewOrPremiere?: boolean, IsRepeat?: boolean, ProjectToMedia?: boolean, MediaTypes?: string, ImageTypes?: string, SortBy?: string, IsPlayed?: boolean, Genres?: string, OfficialRatings?: string, Tags?: string, ExcludeTags?: string, Years?: string, EnableImages?: boolean, EnableUserData?: boolean, ImageTypeLimit?: number, EnableImageTypes?: string, Person?: string, PersonIds?: string, PersonTypes?: string, Studios?: string, StudioIds?: string, Artists?: string, ArtistIds?: string, Albums?: string, Ids?: string, VideoTypes?: string, Containers?: string, AudioCodecs?: string, AudioLayouts?: string, VideoCodecs?: string, ExtendedVideoTypes?: string, SubtitleCodecs?: string, Path?: string, UserId?: string, MinOfficialRating?: string, IsLocked?: boolean, IsPlaceHolder?: boolean, HasOfficialRating?: boolean, GroupItemsIntoCollections?: boolean, Is3D?: boolean, SeriesStatus?: string, NameStartsWithOrGreater?: string, ArtistStartsWithOrGreater?: string, AlbumArtistStartsWithOrGreater?: string, NameStartsWith?: string, NameLessThan?: string, options?: any) {
         return PersonsServiceApiFp(this.configuration).getPersons(ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as user
+     * @summary Gets credits for a person
+     * @param {string} Id The person id
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PersonsServiceApi
+     */
+    public getPersonsByIdCredits(Id: string, options?: any) {
+        return PersonsServiceApiFp(this.configuration).getPersonsByIdCredits(Id, options)(this.fetch, this.basePath);
     }
 
     /**

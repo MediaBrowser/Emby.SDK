@@ -10,12 +10,13 @@
  */
 
 import ApiClient from '../ApiClient';
+import PersonType from './PersonType';
 import ProviderIdDictionary from './ProviderIdDictionary';
 
 /**
 * The RemoteSearchResult model module.
 * @module model/RemoteSearchResult
-* @version 4.9.4.1
+* @version 4.10.0.1
 */
 export default class RemoteSearchResult {
     /**
@@ -77,6 +78,15 @@ export default class RemoteSearchResult {
             }
             if (data.hasOwnProperty('EndDate')) {
                 obj['EndDate'] = ApiClient.convertToType(data['EndDate'], 'Date');
+            }
+            if (data.hasOwnProperty('PersonType')) {
+                obj['PersonType'] = PersonType.constructFromObject(data['PersonType']);
+            }
+            if (data.hasOwnProperty('Role')) {
+                obj['Role'] = ApiClient.convertToType(data['Role'], 'String');
+            }
+            if (data.hasOwnProperty('Type')) {
+                obj['Type'] = ApiClient.convertToType(data['Type'], 'String');
             }
             if (data.hasOwnProperty('ImageUrl')) {
                 obj['ImageUrl'] = ApiClient.convertToType(data['ImageUrl'], 'String');
@@ -153,6 +163,18 @@ export default class RemoteSearchResult {
     * @member {Date} EndDate
     */
     'EndDate' = undefined;
+    /**
+    * @member {module:model/PersonType} PersonType
+    */
+    'PersonType' = undefined;
+    /**
+    * @member {String} Role
+    */
+    'Role' = undefined;
+    /**
+    * @member {String} Type
+    */
+    'Type' = undefined;
     /**
     * @member {String} ImageUrl
     */

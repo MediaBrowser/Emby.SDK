@@ -22,7 +22,7 @@
 
         public virtual string SubCaption => this.ContentData.EditorDescription;
 
-        public string PluginId { get; protected set; }
+        public string PluginId { get; }
 
         public IEditableObject ContentData
         {

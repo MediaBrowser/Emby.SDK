@@ -196,6 +196,43 @@ User[] Users { get; }</code></pre>
   </h3>
   
   
+  <a id="MediaBrowser_Controller_Library_IUserManager_AddHomeSection_" data-uid="MediaBrowser.Controller.Library.IUserManager.AddHomeSection*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_AddHomeSection_System_Int64_MediaBrowser_Model_Entities_ContentSection_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IUserManager.AddHomeSection(System.Int64,MediaBrowser.Model.Entities.ContentSection,System.Threading.CancellationToken)">AddHomeSection(Int64, ContentSection, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddHomeSection(long userId, ContentSection section, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.ContentSection.html">ContentSection</a></td>
+        <td><span class="parametername">section</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Library_IUserManager_AddParts_" data-uid="MediaBrowser.Controller.Library.IUserManager.AddParts*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_AddParts_System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Authentication_IAuthenticationProvider__System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Configuration_IUserConfigurationFactory__" data-uid="MediaBrowser.Controller.Library.IUserManager.AddParts(System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Authentication.IAuthenticationProvider},System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Configuration.IUserConfigurationFactory})">AddParts(IEnumerable&lt;IAuthenticationProvider&gt;, IEnumerable&lt;IUserConfigurationFactory&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -451,6 +488,43 @@ User[] Users { get; }</code></pre>
       </tr>
       <tr>
         <td><span class="xref">System.ArgumentException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_DeleteHomeSections_" data-uid="MediaBrowser.Controller.Library.IUserManager.DeleteHomeSections*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_DeleteHomeSections_System_Int64_System_String___System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IUserManager.DeleteHomeSections(System.Int64,System.String[],System.Threading.CancellationToken)">DeleteHomeSections(Int64, String[], CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DeleteHomeSections(long userId, string[] sectionIds, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">sectionIds</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2159,6 +2233,48 @@ User[] Users { get; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Library_IUserManager_MoveHomeSections_" data-uid="MediaBrowser.Controller.Library.IUserManager.MoveHomeSections*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_MoveHomeSections_System_Int64_System_String___System_Int32_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IUserManager.MoveHomeSections(System.Int64,System.String[],System.Int32,System.Threading.CancellationToken)">MoveHomeSections(Int64, String[], Int32, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void MoveHomeSections(long userId, string[] ids, int newIndex, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">ids</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">newIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_" data-uid="MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin(System.String)">RedeemPasswordResetPin(String)</h4>
   <div class="markdown level1 summary"></div>
@@ -2595,6 +2711,43 @@ User[] Users { get; }</code></pre>
         <td><span class="parametername">newConfiguration</span></td>
         <td><p>The new configuration.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_UpdateHomeSection_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateHomeSection*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_UpdateHomeSection_System_Int64_MediaBrowser_Model_Entities_ContentSection_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateHomeSection(System.Int64,MediaBrowser.Model.Entities.ContentSection,System.Threading.CancellationToken)">UpdateHomeSection(Int64, ContentSection, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UpdateHomeSection(long userId, ContentSection section, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.ContentSection.html">ContentSection</a></td>
+        <td><span class="parametername">section</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

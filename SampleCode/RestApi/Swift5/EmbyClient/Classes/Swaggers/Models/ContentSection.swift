@@ -12,31 +12,39 @@ import Foundation
 public struct ContentSection: Codable {
 
     public var name: String?
+    public var customName: String?
     public var subtitle: String?
     public var _id: String?
     public var sectionType: String?
     public var collectionType: String?
     public var viewType: String?
+    public var imageType: String?
     public var monitor: [String]?
+    public var excludedFolders: [String]?
     public var cardSizeOffset: Int?
     public var scrollDirection: ScrollDirection?
     public var parentItem: BaseItemDto?
+    public var parentId: String?
     public var textInfo: TextSectionInfo?
     public var premiumFeature: String?
     public var premiumMessage: String?
     public var refreshInterval: Int?
 
-    public init(name: String? = nil, subtitle: String? = nil, _id: String? = nil, sectionType: String? = nil, collectionType: String? = nil, viewType: String? = nil, monitor: [String]? = nil, cardSizeOffset: Int? = nil, scrollDirection: ScrollDirection? = nil, parentItem: BaseItemDto? = nil, textInfo: TextSectionInfo? = nil, premiumFeature: String? = nil, premiumMessage: String? = nil, refreshInterval: Int? = nil) {
+    public init(name: String? = nil, customName: String? = nil, subtitle: String? = nil, _id: String? = nil, sectionType: String? = nil, collectionType: String? = nil, viewType: String? = nil, imageType: String? = nil, monitor: [String]? = nil, excludedFolders: [String]? = nil, cardSizeOffset: Int? = nil, scrollDirection: ScrollDirection? = nil, parentItem: BaseItemDto? = nil, parentId: String? = nil, textInfo: TextSectionInfo? = nil, premiumFeature: String? = nil, premiumMessage: String? = nil, refreshInterval: Int? = nil) {
         self.name = name
+        self.customName = customName
         self.subtitle = subtitle
         self._id = _id
         self.sectionType = sectionType
         self.collectionType = collectionType
         self.viewType = viewType
+        self.imageType = imageType
         self.monitor = monitor
+        self.excludedFolders = excludedFolders
         self.cardSizeOffset = cardSizeOffset
         self.scrollDirection = scrollDirection
         self.parentItem = parentItem
+        self.parentId = parentId
         self.textInfo = textInfo
         self.premiumFeature = premiumFeature
         self.premiumMessage = premiumMessage
@@ -45,15 +53,19 @@ public struct ContentSection: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case name = "Name"
+        case customName = "CustomName"
         case subtitle = "Subtitle"
         case _id = "Id"
         case sectionType = "SectionType"
         case collectionType = "CollectionType"
         case viewType = "ViewType"
+        case imageType = "ImageType"
         case monitor = "Monitor"
+        case excludedFolders = "ExcludedFolders"
         case cardSizeOffset = "CardSizeOffset"
         case scrollDirection = "ScrollDirection"
         case parentItem = "ParentItem"
+        case parentId = "ParentId"
         case textInfo = "TextInfo"
         case premiumFeature = "PremiumFeature"
         case premiumMessage = "PremiumMessage"

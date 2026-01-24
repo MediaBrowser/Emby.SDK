@@ -8,15 +8,19 @@ package embyclient
 
 type ContentSection struct {
 	Name string `json:"Name,omitempty"`
+	CustomName string `json:"CustomName,omitempty"`
 	Subtitle string `json:"Subtitle,omitempty"`
 	Id string `json:"Id,omitempty"`
 	SectionType string `json:"SectionType,omitempty"`
 	CollectionType string `json:"CollectionType,omitempty"`
 	ViewType string `json:"ViewType,omitempty"`
+	ImageType string `json:"ImageType,omitempty"`
 	Monitor []string `json:"Monitor,omitempty"`
+	ExcludedFolders []string `json:"ExcludedFolders,omitempty"`
 	CardSizeOffset int32 `json:"CardSizeOffset,omitempty"`
 	ScrollDirection *ScrollDirection `json:"ScrollDirection,omitempty"`
 	ParentItem *BaseItemDto `json:"ParentItem,omitempty"`
+	ParentId string `json:"ParentId,omitempty"`
 	TextInfo *TextSectionInfo `json:"TextInfo,omitempty"`
 	PremiumFeature string `json:"PremiumFeature,omitempty"`
 	PremiumMessage string `json:"PremiumMessage,omitempty"`

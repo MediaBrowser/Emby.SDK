@@ -696,5 +696,125 @@ namespace Emby.ApiClient.Api
             return localVarResponse;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="body">ContentSection: </param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostUsersByUseridHomesections (ContentSection body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new ApiException("Missing required parameter 'body' when calling ContentServiceApi->PostUsersByUseridHomesections");
+            }
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+            {
+                throw new ApiException("Missing required parameter 'userId' when calling ContentServiceApi->PostUsersByUseridHomesections");
+            }
+            
+            var request = new RestRequest("/Users/{UserId}/HomeSections", Method.Post);
+
+            if (userId != null)
+            {
+                request.AddParameter("UserId", this.ApiClient.ParameterToString(userId), ParameterType.UrlSegment);
+            }
+
+            if (body != null)
+            {
+                request.AddJsonBody(body);
+            }
+            
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="body">DeleteHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostUsersByUseridHomesectionsDelete (UserLibraryDeleteHomeSections body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new ApiException("Missing required parameter 'body' when calling ContentServiceApi->PostUsersByUseridHomesectionsDelete");
+            }
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+            {
+                throw new ApiException("Missing required parameter 'userId' when calling ContentServiceApi->PostUsersByUseridHomesectionsDelete");
+            }
+            
+            var request = new RestRequest("/Users/{UserId}/HomeSections/Delete", Method.Post);
+
+            if (userId != null)
+            {
+                request.AddParameter("UserId", this.ApiClient.ParameterToString(userId), ParameterType.UrlSegment);
+            }
+
+            if (body != null)
+            {
+                request.AddJsonBody(body);
+            }
+            
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="body">MoveHomeSections</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostUsersByUseridHomesectionsMove (UserLibraryMoveHomeSections body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new ApiException("Missing required parameter 'body' when calling ContentServiceApi->PostUsersByUseridHomesectionsMove");
+            }
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+            {
+                throw new ApiException("Missing required parameter 'userId' when calling ContentServiceApi->PostUsersByUseridHomesectionsMove");
+            }
+            
+            var request = new RestRequest("/Users/{UserId}/HomeSections/Move", Method.Post);
+
+            if (userId != null)
+            {
+                request.AddParameter("UserId", this.ApiClient.ParameterToString(userId), ParameterType.UrlSegment);
+            }
+
+            if (body != null)
+            {
+                request.AddJsonBody(body);
+            }
+            
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
     }
 }

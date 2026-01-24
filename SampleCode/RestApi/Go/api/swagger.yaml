@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.4.1
+  version: 4.10.0.1
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -57823,6 +57823,52 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+  /Persons/{Id}/Credits:
+    summary: Gets credits for a person
+    get:
+      tags:
+      - PersonsService
+      summary: Gets credits for a person
+      description: Requires authentication as user
+      operationId: getPersonsByIdCredits
+      parameters:
+      - name: Id
+        in: path
+        description: The person id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "Operation successful. Returning a CreditsList[] object."
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserLibrary.CreditsList'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserLibrary.CreditsList'
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Playlists/{Id}/AddToPlaylistInfo:
     summary: Gets add to playlist info
     get:
@@ -66331,6 +66377,47 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+    post:
+      tags:
+      - ContentService
+      description: Requires authentication as user
+      operationId: postUsersByUseridHomesections
+      parameters:
+      - name: UserId
+        in: path
+        description: User Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: "ContentSection: "
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ContentSection'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/ContentSection'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Users/{UserId}/Items:
     summary: Gets items based on a query.
     get:
@@ -74600,6 +74687,90 @@ paths:
             schema:
               type: string
               format: binary
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+  /Users/{UserId}/HomeSections/Delete:
+    post:
+      tags:
+      - ContentService
+      description: Requires authentication as user
+      operationId: postUsersByUseridHomesectionsDelete
+      parameters:
+      - name: UserId
+        in: path
+        description: User Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: DeleteHomeSections
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLibrary.DeleteHomeSections'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/UserLibrary.DeleteHomeSections'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+  /Users/{UserId}/HomeSections/Move:
+    post:
+      tags:
+      - ContentService
+      description: Requires authentication as user
+      operationId: postUsersByUseridHomesectionsMove
+      parameters:
+      - name: UserId
+        in: path
+        description: User Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: MoveHomeSections
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLibrary.MoveHomeSections'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/UserLibrary.MoveHomeSections'
         required: true
       responses:
         "200":
@@ -102903,12 +103074,16 @@ components:
             is located..
         CertificatePassword:
           type: string
+        BannerText:
+          type: string
         IsPortAuthorized:
           type: boolean
           description: A value indicating whether this instance is port authorized.
         AutoRunWebApp:
           type: boolean
         EnableRemoteAccess:
+          type: boolean
+        ValidateImageTags:
           type: boolean
         LogAllQueryTimes:
           type: boolean
@@ -103115,6 +103290,7 @@ components:
         EnablePeopleLetterSubFolders: true
         DisableAsyncIO: true
         PreferredDetectedRemoteAddressFamily: Unspecified
+        BannerText: BannerText
         MigratedToUserItemShares8: true
         MigratedLibraryOptionsToDb: true
         SimultaneousStreamLimit: 9
@@ -103139,6 +103315,7 @@ components:
         MetadataPath: MetadataPath
         IsRemoteIPFilterBlacklist: true
         MaintenanceModeMessage: MaintenanceModeMessage
+        ValidateImageTags: true
         DatabaseAnalysisLimit: 2
         PreferredMetadataLanguage: PreferredMetadataLanguage
         PublicHttpsPort: 6
@@ -106628,6 +106805,12 @@ components:
           type: string
           format: date-time
           nullable: true
+        PersonType:
+          $ref: '#/components/schemas/PersonType'
+        Role:
+          type: string
+        Type:
+          type: string
         ImageUrl:
           type: string
         SearchProviderName:
@@ -106650,6 +106833,7 @@ components:
         PremiereDate: 2000-01-23T04:56:07.000+00:00
         SortParentIndexNumber: 2
         ImageUrl: ImageUrl
+        PersonType: Actor
         Overview: Overview
         ParentIndexNumber: 5
         DisambiguationComment: DisambiguationComment
@@ -106657,7 +106841,9 @@ components:
         AlbumArtist: null
         Name: Name
         StartDate: 2000-01-23T04:56:07.000+00:00
+        Role: Role
         ProductionYear: 0
+        Type: Type
         OriginalTitle: OriginalTitle
         IndexNumber: 6
         SortIndexNumber: 5
@@ -110921,6 +111107,69 @@ components:
         - UserIds
         - UserIds
       x-internal-ref-name: Emby.Notifications.UserNotificationInfo
+    UserLibrary.CreditsList:
+      type: object
+      properties:
+        PersonType:
+          $ref: '#/components/schemas/PersonType'
+        Items:
+          type: array
+          items:
+            $ref: '#/components/schemas/RemoteSearchResult'
+      example:
+        PersonType: Actor
+        Items:
+        - IndexNumberEnd: 1
+          GameSystem: GameSystem
+          PremiereDate: 2000-01-23T04:56:07.000+00:00
+          SortParentIndexNumber: 2
+          ImageUrl: ImageUrl
+          PersonType: Actor
+          Overview: Overview
+          ParentIndexNumber: 5
+          DisambiguationComment: DisambiguationComment
+          EndDate: 2000-01-23T04:56:07.000+00:00
+          AlbumArtist: null
+          Name: Name
+          StartDate: 2000-01-23T04:56:07.000+00:00
+          Role: Role
+          ProductionYear: 0
+          Type: Type
+          OriginalTitle: OriginalTitle
+          IndexNumber: 6
+          SortIndexNumber: 5
+          SearchProviderName: SearchProviderName
+          ProviderIds:
+            key: ProviderIds
+          Artists:
+          - null
+          - null
+        - IndexNumberEnd: 1
+          GameSystem: GameSystem
+          PremiereDate: 2000-01-23T04:56:07.000+00:00
+          SortParentIndexNumber: 2
+          ImageUrl: ImageUrl
+          PersonType: Actor
+          Overview: Overview
+          ParentIndexNumber: 5
+          DisambiguationComment: DisambiguationComment
+          EndDate: 2000-01-23T04:56:07.000+00:00
+          AlbumArtist: null
+          Name: Name
+          StartDate: 2000-01-23T04:56:07.000+00:00
+          Role: Role
+          ProductionYear: 0
+          Type: Type
+          OriginalTitle: OriginalTitle
+          IndexNumber: 6
+          SortIndexNumber: 5
+          SearchProviderName: SearchProviderName
+          ProviderIds:
+            key: ProviderIds
+          Artists:
+          - null
+          - null
+      x-internal-ref-name: Emby.Api.UserLibrary.CreditsList
     Playlists.AddToPlaylistInfo:
       type: object
       properties:
@@ -112010,6 +112259,8 @@ components:
       properties:
         Name:
           type: string
+        CustomName:
+          type: string
         Subtitle:
           type: string
         Id:
@@ -112020,7 +112271,13 @@ components:
           type: string
         ViewType:
           type: string
+        ImageType:
+          type: string
         Monitor:
+          type: array
+          items:
+            type: string
+        ExcludedFolders:
           type: array
           items:
             type: string
@@ -112031,6 +112288,8 @@ components:
           $ref: '#/components/schemas/ScrollDirection'
         ParentItem:
           $ref: '#/components/schemas/BaseItemDto'
+        ParentId:
+          type: string
         TextInfo:
           $ref: '#/components/schemas/TextSectionInfo'
         PremiumFeature:
@@ -112043,6 +112302,7 @@ components:
           nullable: true
       example:
         CardSizeOffset: 0
+        ParentId: ParentId
         PremiumFeature: PremiumFeature
         ScrollDirection: Horizontal
         ParentItem:
@@ -112619,11 +112879,13 @@ components:
           DateModified: 2000-01-23T04:56:07.000+00:00
           Altitude: 7.933506881737151
         Name: Name
+        ImageType: ImageType
         Subtitle: Subtitle
         SectionType: SectionType
         Monitor:
         - Monitor
         - Monitor
+        CustomName: CustomName
         CollectionType: CollectionType
         TextInfo:
           Text: Text
@@ -112632,6 +112894,9 @@ components:
           Name: Name
         PremiumMessage: PremiumMessage
         RefreshInterval: 6
+        ExcludedFolders:
+        - ExcludedFolders
+        - ExcludedFolders
         Id: Id
         ViewType: ViewType
       x-internal-ref-name: MediaBrowser.Model.Entities.ContentSection
@@ -112767,6 +113032,25 @@ components:
         Items:
         - Items
         - Items
+    UserLibrary.DeleteHomeSections:
+      type: object
+      properties:
+        Ids:
+          type: array
+          items:
+            type: string
+      x-internal-ref-name: Emby.Api.UserLibrary.DeleteHomeSections
+    UserLibrary.MoveHomeSections:
+      type: object
+      properties:
+        Ids:
+          type: array
+          items:
+            type: string
+        NewIndex:
+          type: integer
+          format: int32
+      x-internal-ref-name: Emby.Api.UserLibrary.MoveHomeSections
     Connect.UserLinkResult:
       type: object
       properties:

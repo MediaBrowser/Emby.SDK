@@ -18,7 +18,7 @@ import ProxyHeaderMode from './ProxyHeaderMode';
 /**
 * The ServerConfiguration model module.
 * @module model/ServerConfiguration
-* @version 4.9.4.1
+* @version 4.10.0.1
 */
 export default class ServerConfiguration {
     /**
@@ -70,6 +70,9 @@ export default class ServerConfiguration {
             if (data.hasOwnProperty('CertificatePassword')) {
                 obj['CertificatePassword'] = ApiClient.convertToType(data['CertificatePassword'], 'String');
             }
+            if (data.hasOwnProperty('BannerText')) {
+                obj['BannerText'] = ApiClient.convertToType(data['BannerText'], 'String');
+            }
             if (data.hasOwnProperty('IsPortAuthorized')) {
                 obj['IsPortAuthorized'] = ApiClient.convertToType(data['IsPortAuthorized'], 'Boolean');
             }
@@ -78,6 +81,9 @@ export default class ServerConfiguration {
             }
             if (data.hasOwnProperty('EnableRemoteAccess')) {
                 obj['EnableRemoteAccess'] = ApiClient.convertToType(data['EnableRemoteAccess'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ValidateImageTags')) {
+                obj['ValidateImageTags'] = ApiClient.convertToType(data['ValidateImageTags'], 'Boolean');
             }
             if (data.hasOwnProperty('LogAllQueryTimes')) {
                 obj['LogAllQueryTimes'] = ApiClient.convertToType(data['LogAllQueryTimes'], 'Boolean');
@@ -297,6 +303,10 @@ export default class ServerConfiguration {
     */
     'CertificatePassword' = undefined;
     /**
+    * @member {String} BannerText
+    */
+    'BannerText' = undefined;
+    /**
     * A value indicating whether this instance is port authorized.
     * @member {Boolean} IsPortAuthorized
     */
@@ -309,6 +319,10 @@ export default class ServerConfiguration {
     * @member {Boolean} EnableRemoteAccess
     */
     'EnableRemoteAccess' = undefined;
+    /**
+    * @member {Boolean} ValidateImageTags
+    */
+    'ValidateImageTags' = undefined;
     /**
     * @member {Boolean} LogAllQueryTimes
     */

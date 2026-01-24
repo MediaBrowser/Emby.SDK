@@ -33,6 +33,7 @@ open class ContentServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example=[ {
   "CardSizeOffset" : 0,
+  "ParentId" : "ParentId",
   "PremiumFeature" : "PremiumFeature",
   "ScrollDirection" : "Horizontal",
   "ParentItem" : {
@@ -588,9 +589,11 @@ open class ContentServiceAPI {
     "Altitude" : 7.933506881737151
   },
   "Name" : "Name",
+  "ImageType" : "ImageType",
   "Subtitle" : "Subtitle",
   "SectionType" : "SectionType",
   "Monitor" : [ "Monitor", "Monitor" ],
+  "CustomName" : "CustomName",
   "CollectionType" : "CollectionType",
   "TextInfo" : {
     "Text" : "Text",
@@ -600,10 +603,12 @@ open class ContentServiceAPI {
   },
   "PremiumMessage" : "PremiumMessage",
   "RefreshInterval" : 6,
+  "ExcludedFolders" : [ "ExcludedFolders", "ExcludedFolders" ],
   "Id" : "Id",
   "ViewType" : "ViewType"
 }, {
   "CardSizeOffset" : 0,
+  "ParentId" : "ParentId",
   "PremiumFeature" : "PremiumFeature",
   "ScrollDirection" : "Horizontal",
   "ParentItem" : {
@@ -1159,9 +1164,11 @@ open class ContentServiceAPI {
     "Altitude" : 7.933506881737151
   },
   "Name" : "Name",
+  "ImageType" : "ImageType",
   "Subtitle" : "Subtitle",
   "SectionType" : "SectionType",
   "Monitor" : [ "Monitor", "Monitor" ],
+  "CustomName" : "CustomName",
   "CollectionType" : "CollectionType",
   "TextInfo" : {
     "Text" : "Text",
@@ -1171,6 +1178,7 @@ open class ContentServiceAPI {
   },
   "PremiumMessage" : "PremiumMessage",
   "RefreshInterval" : 6,
+  "ExcludedFolders" : [ "ExcludedFolders", "ExcludedFolders" ],
   "Id" : "Id",
   "ViewType" : "ViewType"
 } ]}]
@@ -2641,5 +2649,140 @@ open class ContentServiceAPI {
         let requestBuilder: RequestBuilder<QueryResultBaseItemDto>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+
+     - parameter body: (body) ContentSection:  
+     - parameter userId: (path) User Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersByUseridHomesections(body: ContentSection, userId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postUsersByUseridHomesectionsWithRequestBuilder(body: body, userId: userId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     - POST /Users/{UserId}/HomeSections
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) ContentSection:  
+     - parameter userId: (path) User Id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postUsersByUseridHomesectionsWithRequestBuilder(body: ContentSection, userId: String) -> RequestBuilder<Void> {
+        var path = "/Users/{UserId}/HomeSections"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UserId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = EmbyClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = EmbyClientAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+    /**
+
+     - parameter body: (body) DeleteHomeSections 
+     - parameter userId: (path) User Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersByUseridHomesectionsDelete(body: UserLibraryDeleteHomeSections, userId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postUsersByUseridHomesectionsDeleteWithRequestBuilder(body: body, userId: userId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     - POST /Users/{UserId}/HomeSections/Delete
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) DeleteHomeSections 
+     - parameter userId: (path) User Id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postUsersByUseridHomesectionsDeleteWithRequestBuilder(body: UserLibraryDeleteHomeSections, userId: String) -> RequestBuilder<Void> {
+        var path = "/Users/{UserId}/HomeSections/Delete"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UserId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = EmbyClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = EmbyClientAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+    /**
+
+     - parameter body: (body) MoveHomeSections 
+     - parameter userId: (path) User Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersByUseridHomesectionsMove(body: UserLibraryMoveHomeSections, userId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postUsersByUseridHomesectionsMoveWithRequestBuilder(body: body, userId: userId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     - POST /Users/{UserId}/HomeSections/Move
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) MoveHomeSections 
+     - parameter userId: (path) User Id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postUsersByUseridHomesectionsMoveWithRequestBuilder(body: UserLibraryMoveHomeSections, userId: String) -> RequestBuilder<Void> {
+        var path = "/Users/{UserId}/HomeSections/Move"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UserId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = EmbyClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = EmbyClientAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 }

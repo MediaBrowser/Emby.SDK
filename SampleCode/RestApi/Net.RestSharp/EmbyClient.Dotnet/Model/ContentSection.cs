@@ -27,31 +27,39 @@ namespace EmbyClient.Dotnet.Model
         /// Initializes a new instance of the <see cref="ContentSection" /> class.
         /// </summary>
         /// <param name="name">name.</param>
+        /// <param name="customName">customName.</param>
         /// <param name="subtitle">subtitle.</param>
         /// <param name="id">id.</param>
         /// <param name="sectionType">sectionType.</param>
         /// <param name="collectionType">collectionType.</param>
         /// <param name="viewType">viewType.</param>
+        /// <param name="imageType">imageType.</param>
         /// <param name="monitor">monitor.</param>
+        /// <param name="excludedFolders">excludedFolders.</param>
         /// <param name="cardSizeOffset">cardSizeOffset.</param>
         /// <param name="scrollDirection">scrollDirection.</param>
         /// <param name="parentItem">parentItem.</param>
+        /// <param name="parentId">parentId.</param>
         /// <param name="textInfo">textInfo.</param>
         /// <param name="premiumFeature">premiumFeature.</param>
         /// <param name="premiumMessage">premiumMessage.</param>
         /// <param name="refreshInterval">refreshInterval.</param>
-        public ContentSection(string name = default(string), string subtitle = default(string), string id = default(string), string sectionType = default(string), string collectionType = default(string), string viewType = default(string), List<string> monitor = default(List<string>), int? cardSizeOffset = default(int?), ScrollDirection scrollDirection = default(ScrollDirection), BaseItemDto parentItem = default(BaseItemDto), TextSectionInfo textInfo = default(TextSectionInfo), string premiumFeature = default(string), string premiumMessage = default(string), int? refreshInterval = default(int?))
+        public ContentSection(string name = default(string), string customName = default(string), string subtitle = default(string), string id = default(string), string sectionType = default(string), string collectionType = default(string), string viewType = default(string), string imageType = default(string), List<string> monitor = default(List<string>), List<string> excludedFolders = default(List<string>), int? cardSizeOffset = default(int?), ScrollDirection scrollDirection = default(ScrollDirection), BaseItemDto parentItem = default(BaseItemDto), string parentId = default(string), TextSectionInfo textInfo = default(TextSectionInfo), string premiumFeature = default(string), string premiumMessage = default(string), int? refreshInterval = default(int?))
         {
             this.Name = name;
+            this.CustomName = customName;
             this.Subtitle = subtitle;
             this.Id = id;
             this.SectionType = sectionType;
             this.CollectionType = collectionType;
             this.ViewType = viewType;
+            this.ImageType = imageType;
             this.Monitor = monitor;
+            this.ExcludedFolders = excludedFolders;
             this.CardSizeOffset = cardSizeOffset;
             this.ScrollDirection = scrollDirection;
             this.ParentItem = parentItem;
+            this.ParentId = parentId;
             this.TextInfo = textInfo;
             this.PremiumFeature = premiumFeature;
             this.PremiumMessage = premiumMessage;
@@ -63,6 +71,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CustomName
+        /// </summary>
+        [DataMember(Name="CustomName", EmitDefaultValue=false)]
+        public string CustomName { get; set; }
 
         /// <summary>
         /// Gets or Sets Subtitle
@@ -95,10 +109,22 @@ namespace EmbyClient.Dotnet.Model
         public string ViewType { get; set; }
 
         /// <summary>
+        /// Gets or Sets ImageType
+        /// </summary>
+        [DataMember(Name="ImageType", EmitDefaultValue=false)]
+        public string ImageType { get; set; }
+
+        /// <summary>
         /// Gets or Sets Monitor
         /// </summary>
         [DataMember(Name="Monitor", EmitDefaultValue=false)]
         public List<string> Monitor { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ExcludedFolders
+        /// </summary>
+        [DataMember(Name="ExcludedFolders", EmitDefaultValue=false)]
+        public List<string> ExcludedFolders { get; set; }
 
         /// <summary>
         /// Gets or Sets CardSizeOffset
@@ -117,6 +143,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="ParentItem", EmitDefaultValue=false)]
         public BaseItemDto ParentItem { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ParentId
+        /// </summary>
+        [DataMember(Name="ParentId", EmitDefaultValue=false)]
+        public string ParentId { get; set; }
 
         /// <summary>
         /// Gets or Sets TextInfo
@@ -151,15 +183,19 @@ namespace EmbyClient.Dotnet.Model
             var sb = new StringBuilder();
             sb.Append("class ContentSection {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  CustomName: ").Append(CustomName).Append("\n");
             sb.Append("  Subtitle: ").Append(Subtitle).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  SectionType: ").Append(SectionType).Append("\n");
             sb.Append("  CollectionType: ").Append(CollectionType).Append("\n");
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
+            sb.Append("  ImageType: ").Append(ImageType).Append("\n");
             sb.Append("  Monitor: ").Append(Monitor).Append("\n");
+            sb.Append("  ExcludedFolders: ").Append(ExcludedFolders).Append("\n");
             sb.Append("  CardSizeOffset: ").Append(CardSizeOffset).Append("\n");
             sb.Append("  ScrollDirection: ").Append(ScrollDirection).Append("\n");
             sb.Append("  ParentItem: ").Append(ParentItem).Append("\n");
+            sb.Append("  ParentId: ").Append(ParentId).Append("\n");
             sb.Append("  TextInfo: ").Append(TextInfo).Append("\n");
             sb.Append("  PremiumFeature: ").Append(PremiumFeature).Append("\n");
             sb.Append("  PremiumMessage: ").Append(PremiumMessage).Append("\n");
@@ -204,6 +240,11 @@ namespace EmbyClient.Dotnet.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
+                    this.CustomName == input.CustomName ||
+                    (this.CustomName != null &&
+                    this.CustomName.Equals(input.CustomName))
+                ) && 
+                (
                     this.Subtitle == input.Subtitle ||
                     (this.Subtitle != null &&
                     this.Subtitle.Equals(input.Subtitle))
@@ -229,10 +270,21 @@ namespace EmbyClient.Dotnet.Model
                     this.ViewType.Equals(input.ViewType))
                 ) && 
                 (
+                    this.ImageType == input.ImageType ||
+                    (this.ImageType != null &&
+                    this.ImageType.Equals(input.ImageType))
+                ) && 
+                (
                     this.Monitor == input.Monitor ||
                     this.Monitor != null &&
                     input.Monitor != null &&
                     this.Monitor.SequenceEqual(input.Monitor)
+                ) && 
+                (
+                    this.ExcludedFolders == input.ExcludedFolders ||
+                    this.ExcludedFolders != null &&
+                    input.ExcludedFolders != null &&
+                    this.ExcludedFolders.SequenceEqual(input.ExcludedFolders)
                 ) && 
                 (
                     this.CardSizeOffset == input.CardSizeOffset ||
@@ -248,6 +300,11 @@ namespace EmbyClient.Dotnet.Model
                     this.ParentItem == input.ParentItem ||
                     (this.ParentItem != null &&
                     this.ParentItem.Equals(input.ParentItem))
+                ) && 
+                (
+                    this.ParentId == input.ParentId ||
+                    (this.ParentId != null &&
+                    this.ParentId.Equals(input.ParentId))
                 ) && 
                 (
                     this.TextInfo == input.TextInfo ||
@@ -282,6 +339,8 @@ namespace EmbyClient.Dotnet.Model
                 int hashCode = 41;
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.CustomName != null)
+                    hashCode = hashCode * 59 + this.CustomName.GetHashCode();
                 if (this.Subtitle != null)
                     hashCode = hashCode * 59 + this.Subtitle.GetHashCode();
                 if (this.Id != null)
@@ -292,14 +351,20 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.CollectionType.GetHashCode();
                 if (this.ViewType != null)
                     hashCode = hashCode * 59 + this.ViewType.GetHashCode();
+                if (this.ImageType != null)
+                    hashCode = hashCode * 59 + this.ImageType.GetHashCode();
                 if (this.Monitor != null)
                     hashCode = hashCode * 59 + this.Monitor.GetHashCode();
+                if (this.ExcludedFolders != null)
+                    hashCode = hashCode * 59 + this.ExcludedFolders.GetHashCode();
                 if (this.CardSizeOffset != null)
                     hashCode = hashCode * 59 + this.CardSizeOffset.GetHashCode();
                 if (this.ScrollDirection != null)
                     hashCode = hashCode * 59 + this.ScrollDirection.GetHashCode();
                 if (this.ParentItem != null)
                     hashCode = hashCode * 59 + this.ParentItem.GetHashCode();
+                if (this.ParentId != null)
+                    hashCode = hashCode * 59 + this.ParentId.GetHashCode();
                 if (this.TextInfo != null)
                     hashCode = hashCode * 59 + this.TextInfo.GetHashCode();
                 if (this.PremiumFeature != null)

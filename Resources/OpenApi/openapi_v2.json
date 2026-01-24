@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.4.1"
+    "version": "4.10.0.1"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -47247,6 +47247,65 @@
       },
       "x-summary": "Joins a party"
     },
+    "/Persons/{Id}/Credits": {
+      "get": {
+        "tags": [
+          "PersonsService"
+        ],
+        "summary": "Gets credits for a person",
+        "description": "Requires authentication as user",
+        "operationId": "getPersonsByIdCredits",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "The person id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a CreditsList[] object.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UserLibrary.CreditsList"
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets credits for a person"
+    },
     "/Playlists/{Id}/AddToPlaylistInfo": {
       "get": {
         "tags": [
@@ -54404,6 +54463,64 @@
                 "$ref": "#/definitions/ContentSection"
               }
             }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "post": {
+        "tags": [
+          "ContentService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "postUsersByUseridHomesections",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UserId",
+            "description": "User Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "ContentSection: ",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ContentSection"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
           },
           "400": {
             "$ref": "#/responses/400"
@@ -62374,6 +62491,126 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets a typed user setting"
+    },
+    "/Users/{UserId}/HomeSections/Delete": {
+      "post": {
+        "tags": [
+          "ContentService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "postUsersByUseridHomesectionsDelete",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UserId",
+            "description": "User Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "DeleteHomeSections",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserLibrary.DeleteHomeSections"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Users/{UserId}/HomeSections/Move": {
+      "post": {
+        "tags": [
+          "ContentService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "postUsersByUseridHomesectionsMove",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UserId",
+            "description": "User Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "MoveHomeSections",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserLibrary.MoveHomeSections"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
     },
     "/Users/{UserId}/Items/Resume": {
       "get": {
@@ -77768,6 +78005,9 @@
         "CertificatePassword": {
           "type": "string"
         },
+        "BannerText": {
+          "type": "string"
+        },
         "IsPortAuthorized": {
           "description": "A value indicating whether this instance is port authorized.",
           "type": "boolean"
@@ -77776,6 +78016,9 @@
           "type": "boolean"
         },
         "EnableRemoteAccess": {
+          "type": "boolean"
+        },
+        "ValidateImageTags": {
           "type": "boolean"
         },
         "LogAllQueryTimes": {
@@ -79996,6 +80239,15 @@
           "format": "date-time",
           "type": "string"
         },
+        "PersonType": {
+          "$ref": "#/definitions/PersonType"
+        },
+        "Role": {
+          "type": "string"
+        },
+        "Type": {
+          "type": "string"
+        },
         "ImageUrl": {
           "type": "string"
         },
@@ -81434,6 +81686,21 @@
       },
       "x-internal-ref-name": "Emby.Notifications.UserNotificationInfo"
     },
+    "UserLibrary.CreditsList": {
+      "type": "object",
+      "properties": {
+        "PersonType": {
+          "$ref": "#/definitions/PersonType"
+        },
+        "Items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RemoteSearchResult"
+          }
+        }
+      },
+      "x-internal-ref-name": "Emby.Api.UserLibrary.CreditsList"
+    },
     "Playlists.AddToPlaylistInfo": {
       "type": "object",
       "properties": {
@@ -82004,6 +82271,9 @@
         "Name": {
           "type": "string"
         },
+        "CustomName": {
+          "type": "string"
+        },
         "Subtitle": {
           "type": "string"
         },
@@ -82019,7 +82289,16 @@
         "ViewType": {
           "type": "string"
         },
+        "ImageType": {
+          "type": "string"
+        },
         "Monitor": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ExcludedFolders": {
           "type": "array",
           "items": {
             "type": "string"
@@ -82034,6 +82313,9 @@
         },
         "ParentItem": {
           "$ref": "#/definitions/BaseItemDto"
+        },
+        "ParentId": {
+          "type": "string"
         },
         "TextInfo": {
           "$ref": "#/definitions/TextSectionInfo"
@@ -82212,6 +82494,34 @@
           "type": "integer"
         }
       }
+    },
+    "UserLibrary.DeleteHomeSections": {
+      "type": "object",
+      "properties": {
+        "Ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "x-internal-ref-name": "Emby.Api.UserLibrary.DeleteHomeSections"
+    },
+    "UserLibrary.MoveHomeSections": {
+      "type": "object",
+      "properties": {
+        "Ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "NewIndex": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "x-internal-ref-name": "Emby.Api.UserLibrary.MoveHomeSections"
     },
     "Connect.UserLinkResult": {
       "type": "object",

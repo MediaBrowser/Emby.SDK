@@ -30,9 +30,11 @@ class ServerConfiguration(object):
         'enable_https': 'bool',
         'certificate_path': 'str',
         'certificate_password': 'str',
+        'banner_text': 'str',
         'is_port_authorized': 'bool',
         'auto_run_web_app': 'bool',
         'enable_remote_access': 'bool',
+        'validate_image_tags': 'bool',
         'log_all_query_times': 'bool',
         'disable_outgoing_ipv6': 'bool',
         'enable_case_sensitive_item_ids': 'bool',
@@ -102,9 +104,11 @@ class ServerConfiguration(object):
         'enable_https': 'EnableHttps',
         'certificate_path': 'CertificatePath',
         'certificate_password': 'CertificatePassword',
+        'banner_text': 'BannerText',
         'is_port_authorized': 'IsPortAuthorized',
         'auto_run_web_app': 'AutoRunWebApp',
         'enable_remote_access': 'EnableRemoteAccess',
+        'validate_image_tags': 'ValidateImageTags',
         'log_all_query_times': 'LogAllQueryTimes',
         'disable_outgoing_ipv6': 'DisableOutgoingIPv6',
         'enable_case_sensitive_item_ids': 'EnableCaseSensitiveItemIds',
@@ -165,7 +169,7 @@ class ServerConfiguration(object):
         'cache_path': 'CachePath'
     }
 
-    def __init__(self, enable_upn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, log_all_query_times=None, disable_outgoing_ipv6=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay_seconds=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, preferred_detected_remote_address_family=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, playlists_upgraded_to_m3_u=None, image_extractor_upgraded1=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, max_library_database_connections=None, max_auth_db_connections=None, max_other_db_connections=None, disable_async_io=None, migrated_to_user_item_shares8=None, migrated_library_options_to_db=None, allow_legacy_local_network_password=None, enable_saved_metadata_for_people=None, tv_channels_refreshed=None, proxy_header_mode=None, is_in_maintenance_mode=None, maintenance_mode_message=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
+    def __init__(self, enable_upn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, banner_text=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, validate_image_tags=None, log_all_query_times=None, disable_outgoing_ipv6=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay_seconds=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, preferred_detected_remote_address_family=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, playlists_upgraded_to_m3_u=None, image_extractor_upgraded1=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, max_library_database_connections=None, max_auth_db_connections=None, max_other_db_connections=None, disable_async_io=None, migrated_to_user_item_shares8=None, migrated_library_options_to_db=None, allow_legacy_local_network_password=None, enable_saved_metadata_for_people=None, tv_channels_refreshed=None, proxy_header_mode=None, is_in_maintenance_mode=None, maintenance_mode_message=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
         """ServerConfiguration - a model defined in Swagger"""  # noqa: E501
         self._enable_upn_p = None
         self._public_port = None
@@ -175,9 +179,11 @@ class ServerConfiguration(object):
         self._enable_https = None
         self._certificate_path = None
         self._certificate_password = None
+        self._banner_text = None
         self._is_port_authorized = None
         self._auto_run_web_app = None
         self._enable_remote_access = None
+        self._validate_image_tags = None
         self._log_all_query_times = None
         self._disable_outgoing_ipv6 = None
         self._enable_case_sensitive_item_ids = None
@@ -253,12 +259,16 @@ class ServerConfiguration(object):
             self.certificate_path = certificate_path
         if certificate_password is not None:
             self.certificate_password = certificate_password
+        if banner_text is not None:
+            self.banner_text = banner_text
         if is_port_authorized is not None:
             self.is_port_authorized = is_port_authorized
         if auto_run_web_app is not None:
             self.auto_run_web_app = auto_run_web_app
         if enable_remote_access is not None:
             self.enable_remote_access = enable_remote_access
+        if validate_image_tags is not None:
+            self.validate_image_tags = validate_image_tags
         if log_all_query_times is not None:
             self.log_all_query_times = log_all_query_times
         if disable_outgoing_ipv6 is not None:
@@ -559,6 +569,27 @@ class ServerConfiguration(object):
         self._certificate_password = certificate_password
 
     @property
+    def banner_text(self):
+        """Gets the banner_text of this ServerConfiguration.  # noqa: E501
+
+
+        :return: The banner_text of this ServerConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._banner_text
+
+    @banner_text.setter
+    def banner_text(self, banner_text):
+        """Sets the banner_text of this ServerConfiguration.
+
+
+        :param banner_text: The banner_text of this ServerConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._banner_text = banner_text
+
+    @property
     def is_port_authorized(self):
         """Gets the is_port_authorized of this ServerConfiguration.  # noqa: E501
 
@@ -622,6 +653,27 @@ class ServerConfiguration(object):
         """
 
         self._enable_remote_access = enable_remote_access
+
+    @property
+    def validate_image_tags(self):
+        """Gets the validate_image_tags of this ServerConfiguration.  # noqa: E501
+
+
+        :return: The validate_image_tags of this ServerConfiguration.  # noqa: E501
+        :rtype: bool
+        """
+        return self._validate_image_tags
+
+    @validate_image_tags.setter
+    def validate_image_tags(self, validate_image_tags):
+        """Sets the validate_image_tags of this ServerConfiguration.
+
+
+        :param validate_image_tags: The validate_image_tags of this ServerConfiguration.  # noqa: E501
+        :type: bool
+        """
+
+        self._validate_image_tags = validate_image_tags
 
     @property
     def log_all_query_times(self):

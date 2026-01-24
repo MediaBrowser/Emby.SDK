@@ -15,7 +15,7 @@ import MediaPathInfo from './MediaPathInfo';
 /**
 * The LibraryUpdateMediaPath model module.
 * @module model/LibraryUpdateMediaPath
-* @version 4.9.4.1
+* @version 4.10.0.1
 */
 export default class LibraryUpdateMediaPath {
     /**
