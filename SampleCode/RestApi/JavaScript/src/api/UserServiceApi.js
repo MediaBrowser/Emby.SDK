@@ -13,6 +13,7 @@ import ApiClient from "../ApiClient";
 import AuthenticateUser from '../model/AuthenticateUser';
 import AuthenticateUserByName from '../model/AuthenticateUserByName';
 import AuthenticationAuthenticationResult from '../model/AuthenticationAuthenticationResult';
+import CopyData from '../model/CopyData';
 import CreateUserByName from '../model/CreateUserByName';
 import ForgotPassword from '../model/ForgotPassword';
 import ForgotPasswordPin from '../model/ForgotPasswordPin';
@@ -28,7 +29,7 @@ import UserPolicy from '../model/UserPolicy';
 /**
 * UserService service.
 * @module api/UserServiceApi
-* @version 4.10.0.1
+* @version 4.10.0.2
 */
 export default class UserServiceApi {
 
@@ -796,6 +797,49 @@ export default class UserServiceApi {
      */
     postUsersByIdTrackselectionsByTracktypeDelete() {
       return this.postUsersByIdTrackselectionsByTracktypeDeleteWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Copies data from one user to another
+     * Requires authentication as administrator
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    postUsersByUseridCopydataWithHttpInfo() {
+      let postBody = body;
+
+      let pathParams = {
+        'UserId': UserId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{UserId}/CopyData', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Copies data from one user to another
+     * Requires authentication as administrator
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    postUsersByUseridCopydata() {
+      return this.postUsersByUseridCopydataWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

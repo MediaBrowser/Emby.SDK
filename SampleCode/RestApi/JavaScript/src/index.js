@@ -61,6 +61,7 @@ import ConnectUserLinkResult from './model/ConnectUserLinkResult';
 import ConnectUserLinkType from './model/ConnectUserLinkType';
 import ContainerProfile from './model/ContainerProfile';
 import ContentSection from './model/ContentSection';
+import CopyData from './model/CopyData';
 import CreateUserByName from './model/CreateUserByName';
 import DayOfWeek from './model/DayOfWeek';
 import DefaultDirectoryBrowserInfo from './model/DefaultDirectoryBrowserInfo';
@@ -446,7 +447,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.10.0.1
+* @version 4.10.0.2
 */
 export {
     /**
@@ -760,6 +761,12 @@ export {
      * @property {module:model/ContentSection}
      */
     ContentSection,
+
+    /**
+     * The CopyData model constructor.
+     * @property {module:model/CopyData}
+     */
+    CopyData,
 
     /**
      * The CreateUserByName model constructor.

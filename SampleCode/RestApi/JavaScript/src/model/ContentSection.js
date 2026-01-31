@@ -17,7 +17,7 @@ import TextSectionInfo from './TextSectionInfo';
 /**
 * The ContentSection model module.
 * @module model/ContentSection
-* @version 4.10.0.1
+* @version 4.10.0.2
 */
 export default class ContentSection {
     /**
@@ -98,6 +98,12 @@ export default class ContentSection {
             if (data.hasOwnProperty('RefreshInterval')) {
                 obj['RefreshInterval'] = ApiClient.convertToType(data['RefreshInterval'], 'Number');
             }
+            if (data.hasOwnProperty('SortBy')) {
+                obj['SortBy'] = ApiClient.convertToType(data['SortBy'], 'String');
+            }
+            if (data.hasOwnProperty('SortOrder')) {
+                obj['SortOrder'] = ApiClient.convertToType(data['SortOrder'], 'String');
+            }
         }
         return obj;
     }
@@ -174,6 +180,14 @@ export default class ContentSection {
     * @member {Number} RefreshInterval
     */
     'RefreshInterval' = undefined;
+    /**
+    * @member {String} SortBy
+    */
+    'SortBy' = undefined;
+    /**
+    * @member {String} SortOrder
+    */
+    'SortOrder' = undefined;
 
 
 

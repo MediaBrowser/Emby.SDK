@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.1
+ * OpenAPI spec version: 4.10.0.2
  * 
  *
  * NOTE: This file is auto generated.
@@ -3076,6 +3076,43 @@ export interface ContentSection {
      * @memberof ContentSection
      */
     RefreshInterval?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof ContentSection
+     */
+    SortBy?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ContentSection
+     */
+    SortOrder?: string;
+}
+/**
+ * 
+ * @export
+ * @interface CopyData
+ */
+export interface CopyData {
+    /**
+     * 
+     * @type {string}
+     * @memberof CopyData
+     */
+    UserId?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof CopyData
+     */
+    ToUserIds?: Array<string>;
+    /**
+     * 
+     * @type {Array<LibraryUserCopyOptions>}
+     * @memberof CopyData
+     */
+    CopyOptions?: Array<LibraryUserCopyOptions>;
 }
 /**
  * 
@@ -11984,6 +12021,12 @@ export interface SessionPartyInfo {
      * @memberof SessionPartyInfo
      */
     Users?: Array<EntitiesUser>;
+    /**
+     * 
+     * @type {SessionSessionInfo}
+     * @memberof SessionPartyInfo
+     */
+    MasterSession?: SessionSessionInfo;
 }
 /**
  * 
@@ -113635,6 +113678,54 @@ export const UserServiceApiFetchParamCreator = function (configuration?: Configu
             };
         },
         /**
+         * Requires authentication as administrator
+         * @summary Copies data from one user to another
+         * @param {CopyData} body CopyData
+         * @param {string} UserId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postUsersByUseridCopydata(body: CopyData, UserId: string, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postUsersByUseridCopydata.');
+            }
+            // verify required parameter 'UserId' is not null or undefined
+            if (UserId === null || UserId === undefined) {
+                throw new RequiredError('UserId','Required parameter UserId was null or undefined when calling postUsersByUseridCopydata.');
+            }
+            const localVarPath = `/Users/{UserId}/CopyData`
+                .replace(`{${"UserId"}}`, encodeURIComponent(String(UserId)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CopyData" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Requires authentication as user
          * @summary Updates a typed user setting
          * @param {Object} body Binary stream
@@ -114171,6 +114262,26 @@ export const UserServiceApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Requires authentication as administrator
+         * @summary Copies data from one user to another
+         * @param {CopyData} body CopyData
+         * @param {string} UserId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postUsersByUseridCopydata(body: CopyData, UserId: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = UserServiceApiFetchParamCreator(configuration).postUsersByUseridCopydata(body, UserId, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
          * Requires authentication as user
          * @summary Updates a typed user setting
          * @param {Object} body Binary stream
@@ -114452,6 +114563,17 @@ export const UserServiceApiFactory = function (configuration?: Configuration, fe
             return UserServiceApiFp(configuration).postUsersByIdTrackselectionsByTracktypeDelete(Id, TrackType, options)(fetch, basePath);
         },
         /**
+         * Requires authentication as administrator
+         * @summary Copies data from one user to another
+         * @param {CopyData} body CopyData
+         * @param {string} UserId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postUsersByUseridCopydata(body: CopyData, UserId: string, options?: any) {
+            return UserServiceApiFp(configuration).postUsersByUseridCopydata(body, UserId, options)(fetch, basePath);
+        },
+        /**
          * Requires authentication as user
          * @summary Updates a typed user setting
          * @param {Object} body Binary stream
@@ -114729,6 +114851,19 @@ export class UserServiceApi extends BaseAPI {
      */
     public postUsersByIdTrackselectionsByTracktypeDelete(Id: string, TrackType: string, options?: any) {
         return UserServiceApiFp(this.configuration).postUsersByIdTrackselectionsByTracktypeDelete(Id, TrackType, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Copies data from one user to another
+     * @param {CopyData} body CopyData
+     * @param {string} UserId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserServiceApi
+     */
+    public postUsersByUseridCopydata(body: CopyData, UserId: string, options?: any) {
+        return UserServiceApiFp(this.configuration).postUsersByUseridCopydata(body, UserId, options)(this.fetch, this.basePath);
     }
 
     /**

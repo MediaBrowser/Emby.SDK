@@ -8,6 +8,7 @@ package embyclient.api;
 import embyclient.model.AuthenticateUser;
 import embyclient.model.AuthenticateUserByName;
 import embyclient.model.AuthenticationAuthenticationResult;
+import embyclient.model.CopyData;
 import embyclient.model.CreateUserByName;
 import embyclient.model.ForgotPassword;
 import embyclient.model.ForgotPasswordPin;
@@ -313,6 +314,22 @@ public class UserServiceApiTest {
         String id = null;
         String trackType = null;
         api.postUsersByIdTrackselectionsByTracktypeDelete(id, trackType);
+
+        // TODO: test validations
+    }
+    /**
+     * Copies data from one user to another
+     *
+     * Requires authentication as administrator
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersByUseridCopydataTest() throws Exception {
+        CopyData body = null;
+        String userId = null;
+        api.postUsersByUseridCopydata(body, userId);
 
         // TODO: test validations
     }

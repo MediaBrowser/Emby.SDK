@@ -79,6 +79,12 @@ public class ContentSection {
   @SerializedName("RefreshInterval")
   private Integer refreshInterval = null;
 
+  @SerializedName("SortBy")
+  private String sortBy = null;
+
+  @SerializedName("SortOrder")
+  private String sortOrder = null;
+
   public ContentSection name(String name) {
     this.name = name;
     return this;
@@ -419,6 +425,42 @@ public class ContentSection {
     this.refreshInterval = refreshInterval;
   }
 
+  public ContentSection sortBy(String sortBy) {
+    this.sortBy = sortBy;
+    return this;
+  }
+
+   /**
+   * Get sortBy
+   * @return sortBy
+  **/
+  @Schema(description = "")
+  public String getSortBy() {
+    return sortBy;
+  }
+
+  public void setSortBy(String sortBy) {
+    this.sortBy = sortBy;
+  }
+
+  public ContentSection sortOrder(String sortOrder) {
+    this.sortOrder = sortOrder;
+    return this;
+  }
+
+   /**
+   * Get sortOrder
+   * @return sortOrder
+  **/
+  @Schema(description = "")
+  public String getSortOrder() {
+    return sortOrder;
+  }
+
+  public void setSortOrder(String sortOrder) {
+    this.sortOrder = sortOrder;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -446,12 +488,14 @@ public class ContentSection {
         Objects.equals(this.textInfo, contentSection.textInfo) &&
         Objects.equals(this.premiumFeature, contentSection.premiumFeature) &&
         Objects.equals(this.premiumMessage, contentSection.premiumMessage) &&
-        Objects.equals(this.refreshInterval, contentSection.refreshInterval);
+        Objects.equals(this.refreshInterval, contentSection.refreshInterval) &&
+        Objects.equals(this.sortBy, contentSection.sortBy) &&
+        Objects.equals(this.sortOrder, contentSection.sortOrder);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, customName, subtitle, id, sectionType, collectionType, viewType, imageType, monitor, excludedFolders, cardSizeOffset, scrollDirection, parentItem, parentId, textInfo, premiumFeature, premiumMessage, refreshInterval);
+    return Objects.hash(name, customName, subtitle, id, sectionType, collectionType, viewType, imageType, monitor, excludedFolders, cardSizeOffset, scrollDirection, parentItem, parentId, textInfo, premiumFeature, premiumMessage, refreshInterval, sortBy, sortOrder);
   }
 
 
@@ -478,6 +522,8 @@ public class ContentSection {
     sb.append("    premiumFeature: ").append(toIndentedString(premiumFeature)).append("\n");
     sb.append("    premiumMessage: ").append(toIndentedString(premiumMessage)).append("\n");
     sb.append("    refreshInterval: ").append(toIndentedString(refreshInterval)).append("\n");
+    sb.append("    sortBy: ").append(toIndentedString(sortBy)).append("\n");
+    sb.append("    sortOrder: ").append(toIndentedString(sortOrder)).append("\n");
     sb.append("}");
     return sb.toString();
   }

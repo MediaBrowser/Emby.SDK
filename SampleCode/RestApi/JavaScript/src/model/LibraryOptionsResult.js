@@ -17,7 +17,7 @@ import LibraryTypeOptions from './LibraryTypeOptions';
 /**
 * The LibraryOptionsResult model module.
 * @module model/LibraryOptionsResult
-* @version 4.10.0.1
+* @version 4.10.0.2
 */
 export default class LibraryOptionsResult {
     /**

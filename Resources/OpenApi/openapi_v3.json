@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.1"
+    "version": "4.10.0.2"
   },
   "servers": [
     {
@@ -80826,6 +80826,73 @@
         "x-RequiredAuthentication": "Requires authentication as administrator"
       }
     },
+    "/Users/{UserId}/CopyData": {
+      "summary": "Copies data from one user to another",
+      "post": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Copies data from one user to another",
+        "description": "Requires authentication as administrator",
+        "operationId": "postUsersByUseridCopydata",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "CopyData",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CopyData"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/CopyData"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      }
+    },
     "/Users/{UserId}/HomeSections": {
       "get": {
         "tags": [
@@ -105801,6 +105868,9 @@
             "items": {
               "$ref": "#/components/schemas/Entities.User"
             }
+          },
+          "MasterSession": {
+            "$ref": "#/components/schemas/Session.SessionInfo"
           }
         },
         "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyInfo"
@@ -114790,6 +114860,27 @@
         },
         "x-internal-ref-name": "MediaBrowser.Model.Users.PinRedeemResult"
       },
+      "CopyData": {
+        "type": "object",
+        "properties": {
+          "UserId": {
+            "type": "string"
+          },
+          "ToUserIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "CopyOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Library.UserCopyOptions"
+            }
+          }
+        },
+        "x-internal-ref-name": "Emby.Api.CopyData"
+      },
       "ContentSection": {
         "type": "object",
         "properties": {
@@ -114855,6 +114946,12 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
+          },
+          "SortBy": {
+            "type": "string"
+          },
+          "SortOrder": {
+            "type": "string"
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Entities.ContentSection"

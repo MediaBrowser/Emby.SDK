@@ -697,6 +697,46 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Copies data from one user to another
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <param name="body">CopyData</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostUsersByUseridCopydata (CopyData body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new ApiException("Missing required parameter 'body' when calling UserServiceApi->PostUsersByUseridCopydata");
+            }
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+            {
+                throw new ApiException("Missing required parameter 'userId' when calling UserServiceApi->PostUsersByUseridCopydata");
+            }
+            
+            var request = new RestRequest("/Users/{UserId}/CopyData", Method.Post);
+
+            if (userId != null)
+            {
+                request.AddParameter("UserId", this.ApiClient.ParameterToString(userId), ParameterType.UrlSegment);
+            }
+
+            if (body != null)
+            {
+                request.AddJsonBody(body);
+            }
+            
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Updates a typed user setting
         /// </summary>
         /// <remarks>

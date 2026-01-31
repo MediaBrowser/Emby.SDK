@@ -26249,6 +26249,15 @@ references:
 - uid: emby.restapi/postUsersByIdTrackselectionsByTracktypeDelete/operationlistitem
   name: postUsersByIdTrackselectionsByTracktypeDelete
   href: reference/RestAPI/UserService.html#emby_restapi_postUsersByIdTrackselectionsByTracktypeDelete_operationlistitem
+- uid: emby.restapi/postUsersByUseridCopydata
+  name: postUsersByUseridCopydata
+  href: reference/RestAPI/UserService/postUsersByUseridCopydata.html
+- uid: emby.restapi/postUsersByUseridCopydata/operation
+  name: postUsersByUseridCopydata
+  href: reference/RestAPI/UserService/postUsersByUseridCopydata.html#emby_restapi_postUsersByUseridCopydata_operation
+- uid: emby.restapi/postUsersByUseridCopydata/operationlistitem
+  name: postUsersByUseridCopydata
+  href: reference/RestAPI/UserService.html#emby_restapi_postUsersByUseridCopydata_operationlistitem
 - uid: emby.restapi/postUsersByUseridFavoriteitemsById
   name: postUsersByUseridFavoriteitemsById
   href: reference/RestAPI/UserLibraryService/postUsersByUseridFavoriteitemsById.html
@@ -82796,6 +82805,22 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.IUserManager.ChangePassword
   nameWithType: IUserManager.ChangePassword
+- uid: MediaBrowser.Controller.Library.IUserManager.CopyData(MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Library.UserCopyOptions[])
+  name: CopyData(User, User, UserCopyOptions[])
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_CopyData_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Library_UserCopyOptions___
+  commentId: M:MediaBrowser.Controller.Library.IUserManager.CopyData(MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Library.UserCopyOptions[])
+  name.vb: CopyData(User, User, UserCopyOptions())
+  fullName: MediaBrowser.Controller.Library.IUserManager.CopyData(MediaBrowser.Controller.Entities.User, MediaBrowser.Controller.Entities.User, MediaBrowser.Controller.Library.UserCopyOptions[])
+  fullName.vb: MediaBrowser.Controller.Library.IUserManager.CopyData(MediaBrowser.Controller.Entities.User, MediaBrowser.Controller.Entities.User, MediaBrowser.Controller.Library.UserCopyOptions())
+  nameWithType: IUserManager.CopyData(User, User, UserCopyOptions[])
+  nameWithType.vb: IUserManager.CopyData(User, User, UserCopyOptions())
+- uid: MediaBrowser.Controller.Library.IUserManager.CopyData*
+  name: CopyData
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_CopyData_
+  commentId: Overload:MediaBrowser.Controller.Library.IUserManager.CopyData
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.IUserManager.CopyData
+  nameWithType: IUserManager.CopyData
 - uid: MediaBrowser.Controller.Library.IUserManager.CreateUser(System.String,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Library.UserCopyOptions[])
   name: CreateUser(String, User, UserCopyOptions[])
   href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_CreateUser_System_String_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Library_UserCopyOptions___
@@ -103165,6 +103190,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.PartyInfo.Id
   nameWithType: PartyInfo.Id
+- uid: MediaBrowser.Controller.Session.PartyInfo.MasterSession
+  name: MasterSession
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_MasterSession
+  commentId: P:MediaBrowser.Controller.Session.PartyInfo.MasterSession
+  fullName: MediaBrowser.Controller.Session.PartyInfo.MasterSession
+  nameWithType: PartyInfo.MasterSession
+- uid: MediaBrowser.Controller.Session.PartyInfo.MasterSession*
+  name: MasterSession
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_MasterSession_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyInfo.MasterSession
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyInfo.MasterSession
+  nameWithType: PartyInfo.MasterSession
 - uid: MediaBrowser.Controller.Session.PartyInfo.Name
   name: Name
   href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Name
@@ -120183,6 +120221,32 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Entities.ContentSection.SectionType
   nameWithType: ContentSection.SectionType
+- uid: MediaBrowser.Model.Entities.ContentSection.SortBy
+  name: SortBy
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_SortBy
+  commentId: P:MediaBrowser.Model.Entities.ContentSection.SortBy
+  fullName: MediaBrowser.Model.Entities.ContentSection.SortBy
+  nameWithType: ContentSection.SortBy
+- uid: MediaBrowser.Model.Entities.ContentSection.SortBy*
+  name: SortBy
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_SortBy_
+  commentId: Overload:MediaBrowser.Model.Entities.ContentSection.SortBy
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ContentSection.SortBy
+  nameWithType: ContentSection.SortBy
+- uid: MediaBrowser.Model.Entities.ContentSection.SortOrder
+  name: SortOrder
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_SortOrder
+  commentId: P:MediaBrowser.Model.Entities.ContentSection.SortOrder
+  fullName: MediaBrowser.Model.Entities.ContentSection.SortOrder
+  nameWithType: ContentSection.SortOrder
+- uid: MediaBrowser.Model.Entities.ContentSection.SortOrder*
+  name: SortOrder
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_SortOrder_
+  commentId: Overload:MediaBrowser.Model.Entities.ContentSection.SortOrder
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ContentSection.SortOrder
+  nameWithType: ContentSection.SortOrder
 - uid: MediaBrowser.Model.Entities.ContentSection.Subtitle
   name: Subtitle
   href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_Subtitle

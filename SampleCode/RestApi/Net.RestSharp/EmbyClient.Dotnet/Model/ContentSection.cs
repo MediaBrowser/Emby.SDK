@@ -44,7 +44,9 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="premiumFeature">premiumFeature.</param>
         /// <param name="premiumMessage">premiumMessage.</param>
         /// <param name="refreshInterval">refreshInterval.</param>
-        public ContentSection(string name = default(string), string customName = default(string), string subtitle = default(string), string id = default(string), string sectionType = default(string), string collectionType = default(string), string viewType = default(string), string imageType = default(string), List<string> monitor = default(List<string>), List<string> excludedFolders = default(List<string>), int? cardSizeOffset = default(int?), ScrollDirection scrollDirection = default(ScrollDirection), BaseItemDto parentItem = default(BaseItemDto), string parentId = default(string), TextSectionInfo textInfo = default(TextSectionInfo), string premiumFeature = default(string), string premiumMessage = default(string), int? refreshInterval = default(int?))
+        /// <param name="sortBy">sortBy.</param>
+        /// <param name="sortOrder">sortOrder.</param>
+        public ContentSection(string name = default(string), string customName = default(string), string subtitle = default(string), string id = default(string), string sectionType = default(string), string collectionType = default(string), string viewType = default(string), string imageType = default(string), List<string> monitor = default(List<string>), List<string> excludedFolders = default(List<string>), int? cardSizeOffset = default(int?), ScrollDirection scrollDirection = default(ScrollDirection), BaseItemDto parentItem = default(BaseItemDto), string parentId = default(string), TextSectionInfo textInfo = default(TextSectionInfo), string premiumFeature = default(string), string premiumMessage = default(string), int? refreshInterval = default(int?), string sortBy = default(string), string sortOrder = default(string))
         {
             this.Name = name;
             this.CustomName = customName;
@@ -64,6 +66,8 @@ namespace EmbyClient.Dotnet.Model
             this.PremiumFeature = premiumFeature;
             this.PremiumMessage = premiumMessage;
             this.RefreshInterval = refreshInterval;
+            this.SortBy = sortBy;
+            this.SortOrder = sortOrder;
         }
         
         /// <summary>
@@ -175,6 +179,18 @@ namespace EmbyClient.Dotnet.Model
         public int? RefreshInterval { get; set; }
 
         /// <summary>
+        /// Gets or Sets SortBy
+        /// </summary>
+        [DataMember(Name="SortBy", EmitDefaultValue=false)]
+        public string SortBy { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SortOrder
+        /// </summary>
+        [DataMember(Name="SortOrder", EmitDefaultValue=false)]
+        public string SortOrder { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -200,6 +216,8 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  PremiumFeature: ").Append(PremiumFeature).Append("\n");
             sb.Append("  PremiumMessage: ").Append(PremiumMessage).Append("\n");
             sb.Append("  RefreshInterval: ").Append(RefreshInterval).Append("\n");
+            sb.Append("  SortBy: ").Append(SortBy).Append("\n");
+            sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -325,6 +343,16 @@ namespace EmbyClient.Dotnet.Model
                     this.RefreshInterval == input.RefreshInterval ||
                     (this.RefreshInterval != null &&
                     this.RefreshInterval.Equals(input.RefreshInterval))
+                ) && 
+                (
+                    this.SortBy == input.SortBy ||
+                    (this.SortBy != null &&
+                    this.SortBy.Equals(input.SortBy))
+                ) && 
+                (
+                    this.SortOrder == input.SortOrder ||
+                    (this.SortOrder != null &&
+                    this.SortOrder.Equals(input.SortOrder))
                 );
         }
 
@@ -373,6 +401,10 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.PremiumMessage.GetHashCode();
                 if (this.RefreshInterval != null)
                     hashCode = hashCode * 59 + this.RefreshInterval.GetHashCode();
+                if (this.SortBy != null)
+                    hashCode = hashCode * 59 + this.SortBy.GetHashCode();
+                if (this.SortOrder != null)
+                    hashCode = hashCode * 59 + this.SortOrder.GetHashCode();
                 return hashCode;
             }
         }

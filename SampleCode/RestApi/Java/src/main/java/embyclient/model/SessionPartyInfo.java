@@ -36,6 +36,9 @@ public class SessionPartyInfo {
   @SerializedName("Users")
   private List<EntitiesUser> users = null;
 
+  @SerializedName("MasterSession")
+  private SessionSessionInfo masterSession = null;
+
   public SessionPartyInfo id(String id) {
     this.id = id;
     return this;
@@ -124,6 +127,24 @@ public class SessionPartyInfo {
     this.users = users;
   }
 
+  public SessionPartyInfo masterSession(SessionSessionInfo masterSession) {
+    this.masterSession = masterSession;
+    return this;
+  }
+
+   /**
+   * Get masterSession
+   * @return masterSession
+  **/
+  @Schema(description = "")
+  public SessionSessionInfo getMasterSession() {
+    return masterSession;
+  }
+
+  public void setMasterSession(SessionSessionInfo masterSession) {
+    this.masterSession = masterSession;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -137,12 +158,13 @@ public class SessionPartyInfo {
     return Objects.equals(this.id, sessionPartyInfo.id) &&
         Objects.equals(this.name, sessionPartyInfo.name) &&
         Objects.equals(this.sessions, sessionPartyInfo.sessions) &&
-        Objects.equals(this.users, sessionPartyInfo.users);
+        Objects.equals(this.users, sessionPartyInfo.users) &&
+        Objects.equals(this.masterSession, sessionPartyInfo.masterSession);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, sessions, users);
+    return Objects.hash(id, name, sessions, users, masterSession);
   }
 
 
@@ -155,6 +177,7 @@ public class SessionPartyInfo {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    sessions: ").append(toIndentedString(sessions)).append("\n");
     sb.append("    users: ").append(toIndentedString(users)).append("\n");
+    sb.append("    masterSession: ").append(toIndentedString(masterSession)).append("\n");
     sb.append("}");
     return sb.toString();
   }

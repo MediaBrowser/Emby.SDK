@@ -36,6 +36,8 @@ open class ContentServiceAPI {
   "ParentId" : "ParentId",
   "PremiumFeature" : "PremiumFeature",
   "ScrollDirection" : "Horizontal",
+  "SortBy" : "SortBy",
+  "SortOrder" : "SortOrder",
   "ParentItem" : {
     "SeasonName" : "SeasonName",
     "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
@@ -611,6 +613,8 @@ open class ContentServiceAPI {
   "ParentId" : "ParentId",
   "PremiumFeature" : "PremiumFeature",
   "ScrollDirection" : "Horizontal",
+  "SortBy" : "SortBy",
+  "SortOrder" : "SortOrder",
   "ParentItem" : {
     "SeasonName" : "SeasonName",
     "PremiereDate" : "2000-01-23T04:56:07.000+00:00",

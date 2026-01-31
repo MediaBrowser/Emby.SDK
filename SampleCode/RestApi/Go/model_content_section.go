@@ -25,4 +25,6 @@ type ContentSection struct {
 	PremiumFeature string `json:"PremiumFeature,omitempty"`
 	PremiumMessage string `json:"PremiumMessage,omitempty"`
 	RefreshInterval int32 `json:"RefreshInterval,omitempty"`
+	SortBy string `json:"SortBy,omitempty"`
+	SortOrder string `json:"SortOrder,omitempty"`
 }

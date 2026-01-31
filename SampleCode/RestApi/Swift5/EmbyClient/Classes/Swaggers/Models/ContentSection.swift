@@ -29,8 +29,10 @@ public struct ContentSection: Codable {
     public var premiumFeature: String?
     public var premiumMessage: String?
     public var refreshInterval: Int?
+    public var sortBy: String?
+    public var sortOrder: String?
 
-    public init(name: String? = nil, customName: String? = nil, subtitle: String? = nil, _id: String? = nil, sectionType: String? = nil, collectionType: String? = nil, viewType: String? = nil, imageType: String? = nil, monitor: [String]? = nil, excludedFolders: [String]? = nil, cardSizeOffset: Int? = nil, scrollDirection: ScrollDirection? = nil, parentItem: BaseItemDto? = nil, parentId: String? = nil, textInfo: TextSectionInfo? = nil, premiumFeature: String? = nil, premiumMessage: String? = nil, refreshInterval: Int? = nil) {
+    public init(name: String? = nil, customName: String? = nil, subtitle: String? = nil, _id: String? = nil, sectionType: String? = nil, collectionType: String? = nil, viewType: String? = nil, imageType: String? = nil, monitor: [String]? = nil, excludedFolders: [String]? = nil, cardSizeOffset: Int? = nil, scrollDirection: ScrollDirection? = nil, parentItem: BaseItemDto? = nil, parentId: String? = nil, textInfo: TextSectionInfo? = nil, premiumFeature: String? = nil, premiumMessage: String? = nil, refreshInterval: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil) {
         self.name = name
         self.customName = customName
         self.subtitle = subtitle
@@ -49,6 +51,8 @@ public struct ContentSection: Codable {
         self.premiumFeature = premiumFeature
         self.premiumMessage = premiumMessage
         self.refreshInterval = refreshInterval
+        self.sortBy = sortBy
+        self.sortOrder = sortOrder
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -70,6 +74,8 @@ public struct ContentSection: Codable {
         case premiumFeature = "PremiumFeature"
         case premiumMessage = "PremiumMessage"
         case refreshInterval = "RefreshInterval"
+        case sortBy = "SortBy"
+        case sortOrder = "SortOrder"
     }
 
 }

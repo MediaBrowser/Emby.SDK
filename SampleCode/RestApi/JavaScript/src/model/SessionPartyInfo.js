@@ -16,7 +16,7 @@ import SessionSessionInfo from './SessionSessionInfo';
 /**
 * The SessionPartyInfo model module.
 * @module model/SessionPartyInfo
-* @version 4.10.0.1
+* @version 4.10.0.2
 */
 export default class SessionPartyInfo {
     /**
@@ -55,6 +55,9 @@ export default class SessionPartyInfo {
             if (data.hasOwnProperty('Users')) {
                 obj['Users'] = ApiClient.convertToType(data['Users'], [EntitiesUser]);
             }
+            if (data.hasOwnProperty('MasterSession')) {
+                obj['MasterSession'] = SessionSessionInfo.constructFromObject(data['MasterSession']);
+            }
         }
         return obj;
     }
@@ -75,6 +78,10 @@ export default class SessionPartyInfo {
     * @member {Array.<module:model/EntitiesUser>} Users
     */
     'Users' = undefined;
+    /**
+    * @member {module:model/SessionSessionInfo} MasterSession
+    */
+    'MasterSession' = undefined;
 
 
 

@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.10.0.1
+  version: 4.10.0.2
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -66333,6 +66333,49 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as administrator
+  /Users/{UserId}/CopyData:
+    summary: Copies data from one user to another
+    post:
+      tags:
+      - UserService
+      summary: Copies data from one user to another
+      description: Requires authentication as administrator
+      operationId: postUsersByUseridCopydata
+      parameters:
+      - name: UserId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: CopyData
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CopyData'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/CopyData'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as administrator
   /Users/{UserId}/HomeSections:
     get:
       tags:
@@ -89381,6 +89424,7 @@ components:
             EasyPassword: EasyPassword
             Password: Password
           Name: Name
+          MasterSession: null
       x-internal-ref-name: MediaBrowser.Controller.Session.PartyInfoResult
     Session.PartyInfo:
       type: object
@@ -89397,6 +89441,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Entities.User'
+        MasterSession:
+          $ref: '#/components/schemas/Session.SessionInfo'
       example:
         Sessions:
         - PlaylistLength: 3
@@ -91224,6 +91270,7 @@ components:
           EasyPassword: EasyPassword
           Password: Password
         Name: Name
+        MasterSession: null
       x-internal-ref-name: MediaBrowser.Controller.Session.PartyInfo
     Session.SessionInfo:
       type: object
@@ -112254,6 +112301,20 @@ components:
         - UsersReset
         Success: true
       x-internal-ref-name: MediaBrowser.Model.Users.PinRedeemResult
+    CopyData:
+      type: object
+      properties:
+        UserId:
+          type: string
+        ToUserIds:
+          type: array
+          items:
+            type: string
+        CopyOptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Library.UserCopyOptions'
+      x-internal-ref-name: Emby.Api.CopyData
     ContentSection:
       type: object
       properties:
@@ -112300,11 +112361,17 @@ components:
           type: integer
           format: int32
           nullable: true
+        SortBy:
+          type: string
+        SortOrder:
+          type: string
       example:
         CardSizeOffset: 0
         ParentId: ParentId
         PremiumFeature: PremiumFeature
         ScrollDirection: Horizontal
+        SortBy: SortBy
+        SortOrder: SortOrder
         ParentItem:
           SeasonName: SeasonName
           PremiereDate: 2000-01-23T04:56:07.000+00:00

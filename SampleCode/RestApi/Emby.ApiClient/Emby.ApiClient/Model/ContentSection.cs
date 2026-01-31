@@ -135,6 +135,18 @@ namespace Emby.ApiClient.Model
         public int? RefreshInterval { get; set; }
 
         /// <summary>
+        /// Gets or Sets SortBy
+        /// </summary>
+        /// <value>The SortBy.</value>
+        public string SortBy { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SortOrder
+        /// </summary>
+        /// <value>The SortOrder.</value>
+        public string SortOrder { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -160,6 +172,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  PremiumFeature: ").Append(PremiumFeature).Append("\n");
             sb.Append("  PremiumMessage: ").Append(PremiumMessage).Append("\n");
             sb.Append("  RefreshInterval: ").Append(RefreshInterval).Append("\n");
+            sb.Append("  SortBy: ").Append(SortBy).Append("\n");
+            sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -276,6 +290,16 @@ namespace Emby.ApiClient.Model
                     this.RefreshInterval == input.RefreshInterval ||
                     (this.RefreshInterval != null &&
                     this.RefreshInterval.Equals(input.RefreshInterval))
+                ) && 
+                (
+                    this.SortBy == input.SortBy ||
+                    (this.SortBy != null &&
+                    this.SortBy.Equals(input.SortBy))
+                ) && 
+                (
+                    this.SortOrder == input.SortOrder ||
+                    (this.SortOrder != null &&
+                    this.SortOrder.Equals(input.SortOrder))
                 );
         }
 
@@ -324,6 +348,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.PremiumMessage.GetHashCode();
                 if (this.RefreshInterval != null)
                     hashCode = hashCode * 59 + this.RefreshInterval.GetHashCode();
+                if (this.SortBy != null)
+                    hashCode = hashCode * 59 + this.SortBy.GetHashCode();
+                if (this.SortOrder != null)
+                    hashCode = hashCode * 59 + this.SortOrder.GetHashCode();
                 return hashCode;
             }
         }

@@ -25,22 +25,25 @@ class SessionPartyInfo(object):
         'id': 'str',
         'name': 'str',
         'sessions': 'list[SessionSessionInfo]',
-        'users': 'list[EntitiesUser]'
+        'users': 'list[EntitiesUser]',
+        'master_session': 'SessionSessionInfo'
     }
 
     attribute_map = {
         'id': 'Id',
         'name': 'Name',
         'sessions': 'Sessions',
-        'users': 'Users'
+        'users': 'Users',
+        'master_session': 'MasterSession'
     }
 
-    def __init__(self, id=None, name=None, sessions=None, users=None):  # noqa: E501
+    def __init__(self, id=None, name=None, sessions=None, users=None, master_session=None):  # noqa: E501
         """SessionPartyInfo - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
         self._sessions = None
         self._users = None
+        self._master_session = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -50,6 +53,8 @@ class SessionPartyInfo(object):
             self.sessions = sessions
         if users is not None:
             self.users = users
+        if master_session is not None:
+            self.master_session = master_session
 
     @property
     def id(self):
@@ -134,6 +139,27 @@ class SessionPartyInfo(object):
         """
 
         self._users = users
+
+    @property
+    def master_session(self):
+        """Gets the master_session of this SessionPartyInfo.  # noqa: E501
+
+
+        :return: The master_session of this SessionPartyInfo.  # noqa: E501
+        :rtype: SessionSessionInfo
+        """
+        return self._master_session
+
+    @master_session.setter
+    def master_session(self, master_session):
+        """Sets the master_session of this SessionPartyInfo.
+
+
+        :param master_session: The master_session of this SessionPartyInfo.  # noqa: E501
+        :type: SessionSessionInfo
+        """
+
+        self._master_session = master_session
 
     def to_dict(self):
         """Returns the model properties as a dict"""

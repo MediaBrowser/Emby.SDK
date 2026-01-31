@@ -51,6 +51,12 @@ namespace Emby.ApiClient.Model
         public List<EntitiesUser> Users { get; set; }
 
         /// <summary>
+        /// Gets or Sets MasterSession
+        /// </summary>
+        /// <value>The MasterSession.</value>
+        public SessionSessionInfo MasterSession { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -62,6 +68,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             sb.Append("  Users: ").Append(Users).Append("\n");
+            sb.Append("  MasterSession: ").Append(MasterSession).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,6 +115,11 @@ namespace Emby.ApiClient.Model
                     this.Users != null &&
                     input.Users != null &&
                     this.Users.SequenceEqual(input.Users)
+                ) && 
+                (
+                    this.MasterSession == input.MasterSession ||
+                    (this.MasterSession != null &&
+                    this.MasterSession.Equals(input.MasterSession))
                 );
         }
 
@@ -128,6 +140,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Sessions.GetHashCode();
                 if (this.Users != null)
                     hashCode = hashCode * 59 + this.Users.GetHashCode();
+                if (this.MasterSession != null)
+                    hashCode = hashCode * 59 + this.MasterSession.GetHashCode();
                 return hashCode;
             }
         }

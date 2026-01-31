@@ -39,7 +39,9 @@ class ContentSection(object):
         'text_info': 'TextSectionInfo',
         'premium_feature': 'str',
         'premium_message': 'str',
-        'refresh_interval': 'int'
+        'refresh_interval': 'int',
+        'sort_by': 'str',
+        'sort_order': 'str'
     }
 
     attribute_map = {
@@ -60,10 +62,12 @@ class ContentSection(object):
         'text_info': 'TextInfo',
         'premium_feature': 'PremiumFeature',
         'premium_message': 'PremiumMessage',
-        'refresh_interval': 'RefreshInterval'
+        'refresh_interval': 'RefreshInterval',
+        'sort_by': 'SortBy',
+        'sort_order': 'SortOrder'
     }
 
-    def __init__(self, name=None, custom_name=None, subtitle=None, id=None, section_type=None, collection_type=None, view_type=None, image_type=None, monitor=None, excluded_folders=None, card_size_offset=None, scroll_direction=None, parent_item=None, parent_id=None, text_info=None, premium_feature=None, premium_message=None, refresh_interval=None):  # noqa: E501
+    def __init__(self, name=None, custom_name=None, subtitle=None, id=None, section_type=None, collection_type=None, view_type=None, image_type=None, monitor=None, excluded_folders=None, card_size_offset=None, scroll_direction=None, parent_item=None, parent_id=None, text_info=None, premium_feature=None, premium_message=None, refresh_interval=None, sort_by=None, sort_order=None):  # noqa: E501
         """ContentSection - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._custom_name = None
@@ -83,6 +87,8 @@ class ContentSection(object):
         self._premium_feature = None
         self._premium_message = None
         self._refresh_interval = None
+        self._sort_by = None
+        self._sort_order = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -120,6 +126,10 @@ class ContentSection(object):
             self.premium_message = premium_message
         if refresh_interval is not None:
             self.refresh_interval = refresh_interval
+        if sort_by is not None:
+            self.sort_by = sort_by
+        if sort_order is not None:
+            self.sort_order = sort_order
 
     @property
     def name(self):
@@ -498,6 +508,48 @@ class ContentSection(object):
         """
 
         self._refresh_interval = refresh_interval
+
+    @property
+    def sort_by(self):
+        """Gets the sort_by of this ContentSection.  # noqa: E501
+
+
+        :return: The sort_by of this ContentSection.  # noqa: E501
+        :rtype: str
+        """
+        return self._sort_by
+
+    @sort_by.setter
+    def sort_by(self, sort_by):
+        """Sets the sort_by of this ContentSection.
+
+
+        :param sort_by: The sort_by of this ContentSection.  # noqa: E501
+        :type: str
+        """
+
+        self._sort_by = sort_by
+
+    @property
+    def sort_order(self):
+        """Gets the sort_order of this ContentSection.  # noqa: E501
+
+
+        :return: The sort_order of this ContentSection.  # noqa: E501
+        :rtype: str
+        """
+        return self._sort_order
+
+    @sort_order.setter
+    def sort_order(self, sort_order):
+        """Sets the sort_order of this ContentSection.
+
+
+        :param sort_order: The sort_order of this ContentSection.  # noqa: E501
+        :type: str
+        """
+
+        self._sort_order = sort_order
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -54432,6 +54432,67 @@
       },
       "x-summary": "Updates a user policy"
     },
+    "/Users/{UserId}/CopyData": {
+      "post": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Copies data from one user to another",
+        "description": "Requires authentication as administrator",
+        "operationId": "postUsersByUseridCopydata",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UserId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "CopyData",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CopyData"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Copies data from one user to another"
+    },
     "/Users/{UserId}/HomeSections": {
       "get": {
         "tags": [
@@ -73448,6 +73509,9 @@
           "items": {
             "$ref": "#/definitions/Entities.User"
           }
+        },
+        "MasterSession": {
+          "$ref": "#/definitions/Session.SessionInfo"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyInfo"
@@ -82263,6 +82327,27 @@
       },
       "x-internal-ref-name": "MediaBrowser.Model.Users.PinRedeemResult"
     },
+    "CopyData": {
+      "type": "object",
+      "properties": {
+        "UserId": {
+          "type": "string"
+        },
+        "ToUserIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "CopyOptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Library.UserCopyOptions"
+          }
+        }
+      },
+      "x-internal-ref-name": "Emby.Api.CopyData"
+    },
     "ContentSection": {
       "type": "object",
       "properties": {
@@ -82327,6 +82412,12 @@
         "RefreshInterval": {
           "format": "int32",
           "type": "integer"
+        },
+        "SortBy": {
+          "type": "string"
+        },
+        "SortOrder": {
+          "type": "string"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Entities.ContentSection"
