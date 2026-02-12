@@ -35,6 +35,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="viewType">viewType.</param>
         /// <param name="imageType">imageType.</param>
         /// <param name="monitor">monitor.</param>
+        /// <param name="itemTypes">itemTypes.</param>
         /// <param name="excludedFolders">excludedFolders.</param>
         /// <param name="cardSizeOffset">cardSizeOffset.</param>
         /// <param name="scrollDirection">scrollDirection.</param>
@@ -46,7 +47,9 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="refreshInterval">refreshInterval.</param>
         /// <param name="sortBy">sortBy.</param>
         /// <param name="sortOrder">sortOrder.</param>
-        public ContentSection(string name = default(string), string customName = default(string), string subtitle = default(string), string id = default(string), string sectionType = default(string), string collectionType = default(string), string viewType = default(string), string imageType = default(string), List<string> monitor = default(List<string>), List<string> excludedFolders = default(List<string>), int? cardSizeOffset = default(int?), ScrollDirection scrollDirection = default(ScrollDirection), BaseItemDto parentItem = default(BaseItemDto), string parentId = default(string), TextSectionInfo textInfo = default(TextSectionInfo), string premiumFeature = default(string), string premiumMessage = default(string), int? refreshInterval = default(int?), string sortBy = default(string), string sortOrder = default(string))
+        /// <param name="includeNextUpInResume">includeNextUpInResume.</param>
+        /// <param name="query">query.</param>
+        public ContentSection(string name = default(string), string customName = default(string), string subtitle = default(string), string id = default(string), string sectionType = default(string), string collectionType = default(string), string viewType = default(string), string imageType = default(string), List<string> monitor = default(List<string>), List<string> itemTypes = default(List<string>), List<string> excludedFolders = default(List<string>), int? cardSizeOffset = default(int?), ScrollDirection scrollDirection = default(ScrollDirection), BaseItemDto parentItem = default(BaseItemDto), string parentId = default(string), TextSectionInfo textInfo = default(TextSectionInfo), string premiumFeature = default(string), string premiumMessage = default(string), int? refreshInterval = default(int?), string sortBy = default(string), string sortOrder = default(string), bool? includeNextUpInResume = default(bool?), ItemsQuery query = default(ItemsQuery))
         {
             this.Name = name;
             this.CustomName = customName;
@@ -57,6 +60,7 @@ namespace EmbyClient.Dotnet.Model
             this.ViewType = viewType;
             this.ImageType = imageType;
             this.Monitor = monitor;
+            this.ItemTypes = itemTypes;
             this.ExcludedFolders = excludedFolders;
             this.CardSizeOffset = cardSizeOffset;
             this.ScrollDirection = scrollDirection;
@@ -68,6 +72,8 @@ namespace EmbyClient.Dotnet.Model
             this.RefreshInterval = refreshInterval;
             this.SortBy = sortBy;
             this.SortOrder = sortOrder;
+            this.IncludeNextUpInResume = includeNextUpInResume;
+            this.Query = query;
         }
         
         /// <summary>
@@ -123,6 +129,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="Monitor", EmitDefaultValue=false)]
         public List<string> Monitor { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ItemTypes
+        /// </summary>
+        [DataMember(Name="ItemTypes", EmitDefaultValue=false)]
+        public List<string> ItemTypes { get; set; }
 
         /// <summary>
         /// Gets or Sets ExcludedFolders
@@ -191,6 +203,18 @@ namespace EmbyClient.Dotnet.Model
         public string SortOrder { get; set; }
 
         /// <summary>
+        /// Gets or Sets IncludeNextUpInResume
+        /// </summary>
+        [DataMember(Name="IncludeNextUpInResume", EmitDefaultValue=false)]
+        public bool? IncludeNextUpInResume { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Query
+        /// </summary>
+        [DataMember(Name="Query", EmitDefaultValue=false)]
+        public ItemsQuery Query { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -207,6 +231,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
             sb.Append("  ImageType: ").Append(ImageType).Append("\n");
             sb.Append("  Monitor: ").Append(Monitor).Append("\n");
+            sb.Append("  ItemTypes: ").Append(ItemTypes).Append("\n");
             sb.Append("  ExcludedFolders: ").Append(ExcludedFolders).Append("\n");
             sb.Append("  CardSizeOffset: ").Append(CardSizeOffset).Append("\n");
             sb.Append("  ScrollDirection: ").Append(ScrollDirection).Append("\n");
@@ -218,6 +243,8 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  RefreshInterval: ").Append(RefreshInterval).Append("\n");
             sb.Append("  SortBy: ").Append(SortBy).Append("\n");
             sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
+            sb.Append("  IncludeNextUpInResume: ").Append(IncludeNextUpInResume).Append("\n");
+            sb.Append("  Query: ").Append(Query).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -299,6 +326,12 @@ namespace EmbyClient.Dotnet.Model
                     this.Monitor.SequenceEqual(input.Monitor)
                 ) && 
                 (
+                    this.ItemTypes == input.ItemTypes ||
+                    this.ItemTypes != null &&
+                    input.ItemTypes != null &&
+                    this.ItemTypes.SequenceEqual(input.ItemTypes)
+                ) && 
+                (
                     this.ExcludedFolders == input.ExcludedFolders ||
                     this.ExcludedFolders != null &&
                     input.ExcludedFolders != null &&
@@ -353,6 +386,16 @@ namespace EmbyClient.Dotnet.Model
                     this.SortOrder == input.SortOrder ||
                     (this.SortOrder != null &&
                     this.SortOrder.Equals(input.SortOrder))
+                ) && 
+                (
+                    this.IncludeNextUpInResume == input.IncludeNextUpInResume ||
+                    (this.IncludeNextUpInResume != null &&
+                    this.IncludeNextUpInResume.Equals(input.IncludeNextUpInResume))
+                ) && 
+                (
+                    this.Query == input.Query ||
+                    (this.Query != null &&
+                    this.Query.Equals(input.Query))
                 );
         }
 
@@ -383,6 +426,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.ImageType.GetHashCode();
                 if (this.Monitor != null)
                     hashCode = hashCode * 59 + this.Monitor.GetHashCode();
+                if (this.ItemTypes != null)
+                    hashCode = hashCode * 59 + this.ItemTypes.GetHashCode();
                 if (this.ExcludedFolders != null)
                     hashCode = hashCode * 59 + this.ExcludedFolders.GetHashCode();
                 if (this.CardSizeOffset != null)
@@ -405,6 +450,10 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.SortBy.GetHashCode();
                 if (this.SortOrder != null)
                     hashCode = hashCode * 59 + this.SortOrder.GetHashCode();
+                if (this.IncludeNextUpInResume != null)
+                    hashCode = hashCode * 59 + this.IncludeNextUpInResume.GetHashCode();
+                if (this.Query != null)
+                    hashCode = hashCode * 59 + this.Query.GetHashCode();
                 return hashCode;
             }
         }

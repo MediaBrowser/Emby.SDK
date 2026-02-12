@@ -15,7 +15,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The LinkedItemInfo model module.
 * @module model/LinkedItemInfo
-* @version 4.10.0.2
+* @version 4.10.0.3
 */
 export default class LinkedItemInfo {
     /**

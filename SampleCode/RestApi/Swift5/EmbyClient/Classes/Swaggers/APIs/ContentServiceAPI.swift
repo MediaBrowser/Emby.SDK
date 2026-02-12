@@ -36,6 +36,13 @@ open class ContentServiceAPI {
   "ParentId" : "ParentId",
   "PremiumFeature" : "PremiumFeature",
   "ScrollDirection" : "Horizontal",
+  "Query" : {
+    "StudioIds" : [ "StudioIds", "StudioIds" ],
+    "TagIds" : [ "TagIds", "TagIds" ],
+    "CollectionTypes" : [ "CollectionTypes", "CollectionTypes" ],
+    "GenreIds" : [ "GenreIds", "GenreIds" ],
+    "IsFavorite" : true
+  },
   "SortBy" : "SortBy",
   "SortOrder" : "SortOrder",
   "ParentItem" : {
@@ -495,6 +502,7 @@ open class ContentServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"
@@ -593,6 +601,7 @@ open class ContentServiceAPI {
   "Name" : "Name",
   "ImageType" : "ImageType",
   "Subtitle" : "Subtitle",
+  "IncludeNextUpInResume" : true,
   "SectionType" : "SectionType",
   "Monitor" : [ "Monitor", "Monitor" ],
   "CustomName" : "CustomName",
@@ -607,12 +616,20 @@ open class ContentServiceAPI {
   "RefreshInterval" : 6,
   "ExcludedFolders" : [ "ExcludedFolders", "ExcludedFolders" ],
   "Id" : "Id",
+  "ItemTypes" : [ "ItemTypes", "ItemTypes" ],
   "ViewType" : "ViewType"
 }, {
   "CardSizeOffset" : 0,
   "ParentId" : "ParentId",
   "PremiumFeature" : "PremiumFeature",
   "ScrollDirection" : "Horizontal",
+  "Query" : {
+    "StudioIds" : [ "StudioIds", "StudioIds" ],
+    "TagIds" : [ "TagIds", "TagIds" ],
+    "CollectionTypes" : [ "CollectionTypes", "CollectionTypes" ],
+    "GenreIds" : [ "GenreIds", "GenreIds" ],
+    "IsFavorite" : true
+  },
   "SortBy" : "SortBy",
   "SortOrder" : "SortOrder",
   "ParentItem" : {
@@ -1072,6 +1089,7 @@ open class ContentServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"
@@ -1170,6 +1188,7 @@ open class ContentServiceAPI {
   "Name" : "Name",
   "ImageType" : "ImageType",
   "Subtitle" : "Subtitle",
+  "IncludeNextUpInResume" : true,
   "SectionType" : "SectionType",
   "Monitor" : [ "Monitor", "Monitor" ],
   "CustomName" : "CustomName",
@@ -1184,6 +1203,7 @@ open class ContentServiceAPI {
   "RefreshInterval" : 6,
   "ExcludedFolders" : [ "ExcludedFolders", "ExcludedFolders" ],
   "Id" : "Id",
+  "ItemTypes" : [ "ItemTypes", "ItemTypes" ],
   "ViewType" : "ViewType"
 } ]}]
      - parameter userId: (path) User Id 
@@ -1783,6 +1803,7 @@ open class ContentServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"
@@ -2334,6 +2355,7 @@ open class ContentServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"

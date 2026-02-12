@@ -11,13 +11,14 @@
 
 import ApiClient from '../ApiClient';
 import BaseItemDto from './BaseItemDto';
+import ItemsQuery from './ItemsQuery';
 import ScrollDirection from './ScrollDirection';
 import TextSectionInfo from './TextSectionInfo';
 
 /**
 * The ContentSection model module.
 * @module model/ContentSection
-* @version 4.10.0.2
+* @version 4.10.0.3
 */
 export default class ContentSection {
     /**
@@ -71,6 +72,9 @@ export default class ContentSection {
             if (data.hasOwnProperty('Monitor')) {
                 obj['Monitor'] = ApiClient.convertToType(data['Monitor'], ['String']);
             }
+            if (data.hasOwnProperty('ItemTypes')) {
+                obj['ItemTypes'] = ApiClient.convertToType(data['ItemTypes'], ['String']);
+            }
             if (data.hasOwnProperty('ExcludedFolders')) {
                 obj['ExcludedFolders'] = ApiClient.convertToType(data['ExcludedFolders'], ['String']);
             }
@@ -103,6 +107,12 @@ export default class ContentSection {
             }
             if (data.hasOwnProperty('SortOrder')) {
                 obj['SortOrder'] = ApiClient.convertToType(data['SortOrder'], 'String');
+            }
+            if (data.hasOwnProperty('IncludeNextUpInResume')) {
+                obj['IncludeNextUpInResume'] = ApiClient.convertToType(data['IncludeNextUpInResume'], 'Boolean');
+            }
+            if (data.hasOwnProperty('Query')) {
+                obj['Query'] = ItemsQuery.constructFromObject(data['Query']);
             }
         }
         return obj;
@@ -144,6 +154,10 @@ export default class ContentSection {
     * @member {Array.<String>} Monitor
     */
     'Monitor' = undefined;
+    /**
+    * @member {Array.<String>} ItemTypes
+    */
+    'ItemTypes' = undefined;
     /**
     * @member {Array.<String>} ExcludedFolders
     */
@@ -188,6 +202,14 @@ export default class ContentSection {
     * @member {String} SortOrder
     */
     'SortOrder' = undefined;
+    /**
+    * @member {Boolean} IncludeNextUpInResume
+    */
+    'IncludeNextUpInResume' = undefined;
+    /**
+    * @member {module:model/ItemsQuery} Query
+    */
+    'Query' = undefined;
 
 
 

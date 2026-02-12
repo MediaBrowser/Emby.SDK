@@ -120,6 +120,7 @@ import ItemCounts from './model/ItemCounts';
 import ItemFileInfo from './model/ItemFileInfo';
 import ItemFileType from './model/ItemFileType';
 import ItemLookupInfo from './model/ItemLookupInfo';
+import ItemsQuery from './model/ItemsQuery';
 import LevelInformation from './model/LevelInformation';
 import LibraryAddMediaPath from './model/LibraryAddMediaPath';
 import LibraryAddVirtualFolder from './model/LibraryAddVirtualFolder';
@@ -447,7 +448,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.10.0.2
+* @version 4.10.0.3
 */
 export {
     /**
@@ -1115,6 +1116,12 @@ export {
      * @property {module:model/ItemLookupInfo}
      */
     ItemLookupInfo,
+
+    /**
+     * The ItemsQuery model constructor.
+     * @property {module:model/ItemsQuery}
+     */
+    ItemsQuery,
 
     /**
      * The LevelInformation model constructor.

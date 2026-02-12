@@ -941,6 +941,7 @@ open class TvShowsServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"
@@ -1492,6 +1493,7 @@ open class TvShowsServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"
@@ -2640,6 +2642,7 @@ open class TvShowsServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"
@@ -3191,6 +3194,7 @@ open class TvShowsServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"

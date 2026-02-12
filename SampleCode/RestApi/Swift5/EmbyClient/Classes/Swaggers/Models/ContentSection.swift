@@ -20,6 +20,7 @@ public struct ContentSection: Codable {
     public var viewType: String?
     public var imageType: String?
     public var monitor: [String]?
+    public var itemTypes: [String]?
     public var excludedFolders: [String]?
     public var cardSizeOffset: Int?
     public var scrollDirection: ScrollDirection?
@@ -31,8 +32,10 @@ public struct ContentSection: Codable {
     public var refreshInterval: Int?
     public var sortBy: String?
     public var sortOrder: String?
+    public var includeNextUpInResume: Bool?
+    public var query: ItemsQuery?
 
-    public init(name: String? = nil, customName: String? = nil, subtitle: String? = nil, _id: String? = nil, sectionType: String? = nil, collectionType: String? = nil, viewType: String? = nil, imageType: String? = nil, monitor: [String]? = nil, excludedFolders: [String]? = nil, cardSizeOffset: Int? = nil, scrollDirection: ScrollDirection? = nil, parentItem: BaseItemDto? = nil, parentId: String? = nil, textInfo: TextSectionInfo? = nil, premiumFeature: String? = nil, premiumMessage: String? = nil, refreshInterval: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil) {
+    public init(name: String? = nil, customName: String? = nil, subtitle: String? = nil, _id: String? = nil, sectionType: String? = nil, collectionType: String? = nil, viewType: String? = nil, imageType: String? = nil, monitor: [String]? = nil, itemTypes: [String]? = nil, excludedFolders: [String]? = nil, cardSizeOffset: Int? = nil, scrollDirection: ScrollDirection? = nil, parentItem: BaseItemDto? = nil, parentId: String? = nil, textInfo: TextSectionInfo? = nil, premiumFeature: String? = nil, premiumMessage: String? = nil, refreshInterval: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, includeNextUpInResume: Bool? = nil, query: ItemsQuery? = nil) {
         self.name = name
         self.customName = customName
         self.subtitle = subtitle
@@ -42,6 +45,7 @@ public struct ContentSection: Codable {
         self.viewType = viewType
         self.imageType = imageType
         self.monitor = monitor
+        self.itemTypes = itemTypes
         self.excludedFolders = excludedFolders
         self.cardSizeOffset = cardSizeOffset
         self.scrollDirection = scrollDirection
@@ -53,6 +57,8 @@ public struct ContentSection: Codable {
         self.refreshInterval = refreshInterval
         self.sortBy = sortBy
         self.sortOrder = sortOrder
+        self.includeNextUpInResume = includeNextUpInResume
+        self.query = query
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -65,6 +71,7 @@ public struct ContentSection: Codable {
         case viewType = "ViewType"
         case imageType = "ImageType"
         case monitor = "Monitor"
+        case itemTypes = "ItemTypes"
         case excludedFolders = "ExcludedFolders"
         case cardSizeOffset = "CardSizeOffset"
         case scrollDirection = "ScrollDirection"
@@ -76,6 +83,8 @@ public struct ContentSection: Codable {
         case refreshInterval = "RefreshInterval"
         case sortBy = "SortBy"
         case sortOrder = "SortOrder"
+        case includeNextUpInResume = "IncludeNextUpInResume"
+        case query = "Query"
     }
 
 }

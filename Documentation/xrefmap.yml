@@ -62993,6 +62993,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.Audio.MusicGenre.SupportsAncestors
   nameWithType: MusicGenre.SupportsAncestors
+- uid: MediaBrowser.Controller.Entities.Audio.MusicGenre.SupportsCollections
+  name: SupportsCollections
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicGenre.html#MediaBrowser_Controller_Entities_Audio_MusicGenre_SupportsCollections
+  commentId: P:MediaBrowser.Controller.Entities.Audio.MusicGenre.SupportsCollections
+  fullName: MediaBrowser.Controller.Entities.Audio.MusicGenre.SupportsCollections
+  nameWithType: MusicGenre.SupportsCollections
+- uid: MediaBrowser.Controller.Entities.Audio.MusicGenre.SupportsCollections*
+  name: SupportsCollections
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicGenre.html#MediaBrowser_Controller_Entities_Audio_MusicGenre_SupportsCollections_
+  commentId: Overload:MediaBrowser.Controller.Entities.Audio.MusicGenre.SupportsCollections
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.Audio.MusicGenre.SupportsCollections
+  nameWithType: MusicGenre.SupportsCollections
 - uid: MediaBrowser.Controller.Entities.Audio.MusicGenre.SupportsExternalTransfer
   name: SupportsExternalTransfer
   href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicGenre.html#MediaBrowser_Controller_Entities_Audio_MusicGenre_SupportsExternalTransfer
@@ -69750,6 +69763,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.GameGenre.SupportsAncestors
   nameWithType: GameGenre.SupportsAncestors
+- uid: MediaBrowser.Controller.Entities.GameGenre.SupportsCollections
+  name: SupportsCollections
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.GameGenre.html#MediaBrowser_Controller_Entities_GameGenre_SupportsCollections
+  commentId: P:MediaBrowser.Controller.Entities.GameGenre.SupportsCollections
+  fullName: MediaBrowser.Controller.Entities.GameGenre.SupportsCollections
+  nameWithType: GameGenre.SupportsCollections
+- uid: MediaBrowser.Controller.Entities.GameGenre.SupportsCollections*
+  name: SupportsCollections
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.GameGenre.html#MediaBrowser_Controller_Entities_GameGenre_SupportsCollections_
+  commentId: Overload:MediaBrowser.Controller.Entities.GameGenre.SupportsCollections
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.GameGenre.SupportsCollections
+  nameWithType: GameGenre.SupportsCollections
 - uid: MediaBrowser.Controller.Entities.GameGenre.SupportsPeople
   name: SupportsPeople
   href: reference/pluginapi/MediaBrowser.Controller.Entities.GameGenre.html#MediaBrowser_Controller_Entities_GameGenre_SupportsPeople
@@ -70208,6 +70234,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.Genre.SupportsAncestors
   nameWithType: Genre.SupportsAncestors
+- uid: MediaBrowser.Controller.Entities.Genre.SupportsCollections
+  name: SupportsCollections
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Genre.html#MediaBrowser_Controller_Entities_Genre_SupportsCollections
+  commentId: P:MediaBrowser.Controller.Entities.Genre.SupportsCollections
+  fullName: MediaBrowser.Controller.Entities.Genre.SupportsCollections
+  nameWithType: Genre.SupportsCollections
+- uid: MediaBrowser.Controller.Entities.Genre.SupportsCollections*
+  name: SupportsCollections
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Genre.html#MediaBrowser_Controller_Entities_Genre_SupportsCollections_
+  commentId: Overload:MediaBrowser.Controller.Entities.Genre.SupportsCollections
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.Genre.SupportsCollections
+  nameWithType: Genre.SupportsCollections
 - uid: MediaBrowser.Controller.Entities.Genre.SupportsExternalTransfer
   name: SupportsExternalTransfer
   href: reference/pluginapi/MediaBrowser.Controller.Entities.Genre.html#MediaBrowser_Controller_Entities_Genre_SupportsExternalTransfer
@@ -71489,19 +71528,32 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeTags
   nameWithType: InternalItemsQuery.ExcludeTags
-- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViews
-  name: ExcludeUserViews
-  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_ExcludeUserViews
-  commentId: P:MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViews
-  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViews
-  nameWithType: InternalItemsQuery.ExcludeUserViews
-- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViews*
-  name: ExcludeUserViews
-  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_ExcludeUserViews_
-  commentId: Overload:MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViews
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViewIds
+  name: ExcludeUserViewIds
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_ExcludeUserViewIds
+  commentId: P:MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViewIds
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViewIds
+  nameWithType: InternalItemsQuery.ExcludeUserViewIds
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViewIds*
+  name: ExcludeUserViewIds
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_ExcludeUserViewIds_
+  commentId: Overload:MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViewIds
   isSpec: "True"
-  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViews
-  nameWithType: InternalItemsQuery.ExcludeUserViews
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViewIds
+  nameWithType: InternalItemsQuery.ExcludeUserViewIds
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViewIdStrings
+  name: ExcludeUserViewIdStrings
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_ExcludeUserViewIdStrings
+  commentId: P:MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViewIdStrings
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViewIdStrings
+  nameWithType: InternalItemsQuery.ExcludeUserViewIdStrings
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViewIdStrings*
+  name: ExcludeUserViewIdStrings
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_ExcludeUserViewIdStrings_
+  commentId: Overload:MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViewIdStrings
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.ExcludeUserViewIdStrings
+  nameWithType: InternalItemsQuery.ExcludeUserViewIdStrings
 - uid: MediaBrowser.Controller.Entities.InternalItemsQuery.ExtendedVideoTypes
   name: ExtendedVideoTypes
   href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_ExtendedVideoTypes
@@ -75513,6 +75565,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.Studio.SupportsAncestors
   nameWithType: Studio.SupportsAncestors
+- uid: MediaBrowser.Controller.Entities.Studio.SupportsCollections
+  name: SupportsCollections
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Studio.html#MediaBrowser_Controller_Entities_Studio_SupportsCollections
+  commentId: P:MediaBrowser.Controller.Entities.Studio.SupportsCollections
+  fullName: MediaBrowser.Controller.Entities.Studio.SupportsCollections
+  nameWithType: Studio.SupportsCollections
+- uid: MediaBrowser.Controller.Entities.Studio.SupportsCollections*
+  name: SupportsCollections
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Studio.html#MediaBrowser_Controller_Entities_Studio_SupportsCollections_
+  commentId: Overload:MediaBrowser.Controller.Entities.Studio.SupportsCollections
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.Studio.SupportsCollections
+  nameWithType: Studio.SupportsCollections
 - uid: MediaBrowser.Controller.Entities.Studio.SupportsPeople
   name: SupportsPeople
   href: reference/pluginapi/MediaBrowser.Controller.Entities.Studio.html#MediaBrowser_Controller_Entities_Studio_SupportsPeople
@@ -115690,6 +115755,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Dto.BaseItemDto.ChildCount
   nameWithType: BaseItemDto.ChildCount
+- uid: MediaBrowser.Model.Dto.BaseItemDto.Collections
+  name: Collections
+  href: reference/pluginapi/MediaBrowser.Model.Dto.BaseItemDto.html#MediaBrowser_Model_Dto_BaseItemDto_Collections
+  commentId: P:MediaBrowser.Model.Dto.BaseItemDto.Collections
+  fullName: MediaBrowser.Model.Dto.BaseItemDto.Collections
+  nameWithType: BaseItemDto.Collections
+- uid: MediaBrowser.Model.Dto.BaseItemDto.Collections*
+  name: Collections
+  href: reference/pluginapi/MediaBrowser.Model.Dto.BaseItemDto.html#MediaBrowser_Model_Dto_BaseItemDto_Collections_
+  commentId: Overload:MediaBrowser.Model.Dto.BaseItemDto.Collections
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Dto.BaseItemDto.Collections
+  nameWithType: BaseItemDto.Collections
 - uid: MediaBrowser.Model.Dto.BaseItemDto.CollectionType
   name: CollectionType
   href: reference/pluginapi/MediaBrowser.Model.Dto.BaseItemDto.html#MediaBrowser_Model_Dto_BaseItemDto_CollectionType
@@ -120104,6 +120182,32 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Entities.ContentSection.ImageType
   nameWithType: ContentSection.ImageType
+- uid: MediaBrowser.Model.Entities.ContentSection.IncludeNextUpInResume
+  name: IncludeNextUpInResume
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_IncludeNextUpInResume
+  commentId: P:MediaBrowser.Model.Entities.ContentSection.IncludeNextUpInResume
+  fullName: MediaBrowser.Model.Entities.ContentSection.IncludeNextUpInResume
+  nameWithType: ContentSection.IncludeNextUpInResume
+- uid: MediaBrowser.Model.Entities.ContentSection.IncludeNextUpInResume*
+  name: IncludeNextUpInResume
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_IncludeNextUpInResume_
+  commentId: Overload:MediaBrowser.Model.Entities.ContentSection.IncludeNextUpInResume
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ContentSection.IncludeNextUpInResume
+  nameWithType: ContentSection.IncludeNextUpInResume
+- uid: MediaBrowser.Model.Entities.ContentSection.ItemTypes
+  name: ItemTypes
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_ItemTypes
+  commentId: P:MediaBrowser.Model.Entities.ContentSection.ItemTypes
+  fullName: MediaBrowser.Model.Entities.ContentSection.ItemTypes
+  nameWithType: ContentSection.ItemTypes
+- uid: MediaBrowser.Model.Entities.ContentSection.ItemTypes*
+  name: ItemTypes
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_ItemTypes_
+  commentId: Overload:MediaBrowser.Model.Entities.ContentSection.ItemTypes
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ContentSection.ItemTypes
+  nameWithType: ContentSection.ItemTypes
 - uid: MediaBrowser.Model.Entities.ContentSection.Monitor
   name: Monitor
   href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_Monitor
@@ -120182,6 +120286,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Entities.ContentSection.PremiumMessage
   nameWithType: ContentSection.PremiumMessage
+- uid: MediaBrowser.Model.Entities.ContentSection.Query
+  name: Query
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_Query
+  commentId: P:MediaBrowser.Model.Entities.ContentSection.Query
+  fullName: MediaBrowser.Model.Entities.ContentSection.Query
+  nameWithType: ContentSection.Query
+- uid: MediaBrowser.Model.Entities.ContentSection.Query*
+  name: Query
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_Query_
+  commentId: Overload:MediaBrowser.Model.Entities.ContentSection.Query
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ContentSection.Query
+  nameWithType: ContentSection.Query
 - uid: MediaBrowser.Model.Entities.ContentSection.RefreshInterval
   name: RefreshInterval
   href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_RefreshInterval
@@ -120623,6 +120740,77 @@ references:
   commentId: F:MediaBrowser.Model.Entities.ImageType.Thumbnail
   fullName: MediaBrowser.Model.Entities.ImageType.Thumbnail
   nameWithType: ImageType.Thumbnail
+- uid: MediaBrowser.Model.Entities.ItemsQuery
+  name: ItemsQuery
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html
+  commentId: T:MediaBrowser.Model.Entities.ItemsQuery
+  fullName: MediaBrowser.Model.Entities.ItemsQuery
+  nameWithType: ItemsQuery
+- uid: MediaBrowser.Model.Entities.ItemsQuery.CollectionTypes
+  name: CollectionTypes
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_CollectionTypes
+  commentId: P:MediaBrowser.Model.Entities.ItemsQuery.CollectionTypes
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.CollectionTypes
+  nameWithType: ItemsQuery.CollectionTypes
+- uid: MediaBrowser.Model.Entities.ItemsQuery.CollectionTypes*
+  name: CollectionTypes
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_CollectionTypes_
+  commentId: Overload:MediaBrowser.Model.Entities.ItemsQuery.CollectionTypes
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.CollectionTypes
+  nameWithType: ItemsQuery.CollectionTypes
+- uid: MediaBrowser.Model.Entities.ItemsQuery.GenreIds
+  name: GenreIds
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_GenreIds
+  commentId: P:MediaBrowser.Model.Entities.ItemsQuery.GenreIds
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.GenreIds
+  nameWithType: ItemsQuery.GenreIds
+- uid: MediaBrowser.Model.Entities.ItemsQuery.GenreIds*
+  name: GenreIds
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_GenreIds_
+  commentId: Overload:MediaBrowser.Model.Entities.ItemsQuery.GenreIds
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.GenreIds
+  nameWithType: ItemsQuery.GenreIds
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsFavorite
+  name: IsFavorite
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsFavorite
+  commentId: P:MediaBrowser.Model.Entities.ItemsQuery.IsFavorite
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsFavorite
+  nameWithType: ItemsQuery.IsFavorite
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsFavorite*
+  name: IsFavorite
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsFavorite_
+  commentId: Overload:MediaBrowser.Model.Entities.ItemsQuery.IsFavorite
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsFavorite
+  nameWithType: ItemsQuery.IsFavorite
+- uid: MediaBrowser.Model.Entities.ItemsQuery.StudioIds
+  name: StudioIds
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_StudioIds
+  commentId: P:MediaBrowser.Model.Entities.ItemsQuery.StudioIds
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.StudioIds
+  nameWithType: ItemsQuery.StudioIds
+- uid: MediaBrowser.Model.Entities.ItemsQuery.StudioIds*
+  name: StudioIds
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_StudioIds_
+  commentId: Overload:MediaBrowser.Model.Entities.ItemsQuery.StudioIds
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.StudioIds
+  nameWithType: ItemsQuery.StudioIds
+- uid: MediaBrowser.Model.Entities.ItemsQuery.TagIds
+  name: TagIds
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_TagIds
+  commentId: P:MediaBrowser.Model.Entities.ItemsQuery.TagIds
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.TagIds
+  nameWithType: ItemsQuery.TagIds
+- uid: MediaBrowser.Model.Entities.ItemsQuery.TagIds*
+  name: TagIds
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_TagIds_
+  commentId: Overload:MediaBrowser.Model.Entities.ItemsQuery.TagIds
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.TagIds
+  nameWithType: ItemsQuery.TagIds
 - uid: MediaBrowser.Model.Entities.LibraryUpdateInfo
   name: LibraryUpdateInfo
   href: reference/pluginapi/MediaBrowser.Model.Entities.LibraryUpdateInfo.html
@@ -126445,6 +126633,45 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Library.UserViewQuery.AllowDynamicChildren
   nameWithType: UserViewQuery.AllowDynamicChildren
+- uid: MediaBrowser.Model.Library.UserViewQuery.CollectionTypes
+  name: CollectionTypes
+  href: reference/pluginapi/MediaBrowser.Model.Library.UserViewQuery.html#MediaBrowser_Model_Library_UserViewQuery_CollectionTypes
+  commentId: P:MediaBrowser.Model.Library.UserViewQuery.CollectionTypes
+  fullName: MediaBrowser.Model.Library.UserViewQuery.CollectionTypes
+  nameWithType: UserViewQuery.CollectionTypes
+- uid: MediaBrowser.Model.Library.UserViewQuery.CollectionTypes*
+  name: CollectionTypes
+  href: reference/pluginapi/MediaBrowser.Model.Library.UserViewQuery.html#MediaBrowser_Model_Library_UserViewQuery_CollectionTypes_
+  commentId: Overload:MediaBrowser.Model.Library.UserViewQuery.CollectionTypes
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Library.UserViewQuery.CollectionTypes
+  nameWithType: UserViewQuery.CollectionTypes
+- uid: MediaBrowser.Model.Library.UserViewQuery.ExcludeUserViewIds
+  name: ExcludeUserViewIds
+  href: reference/pluginapi/MediaBrowser.Model.Library.UserViewQuery.html#MediaBrowser_Model_Library_UserViewQuery_ExcludeUserViewIds
+  commentId: P:MediaBrowser.Model.Library.UserViewQuery.ExcludeUserViewIds
+  fullName: MediaBrowser.Model.Library.UserViewQuery.ExcludeUserViewIds
+  nameWithType: UserViewQuery.ExcludeUserViewIds
+- uid: MediaBrowser.Model.Library.UserViewQuery.ExcludeUserViewIds*
+  name: ExcludeUserViewIds
+  href: reference/pluginapi/MediaBrowser.Model.Library.UserViewQuery.html#MediaBrowser_Model_Library_UserViewQuery_ExcludeUserViewIds_
+  commentId: Overload:MediaBrowser.Model.Library.UserViewQuery.ExcludeUserViewIds
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Library.UserViewQuery.ExcludeUserViewIds
+  nameWithType: UserViewQuery.ExcludeUserViewIds
+- uid: MediaBrowser.Model.Library.UserViewQuery.ExcludeUserViewIdStrings
+  name: ExcludeUserViewIdStrings
+  href: reference/pluginapi/MediaBrowser.Model.Library.UserViewQuery.html#MediaBrowser_Model_Library_UserViewQuery_ExcludeUserViewIdStrings
+  commentId: P:MediaBrowser.Model.Library.UserViewQuery.ExcludeUserViewIdStrings
+  fullName: MediaBrowser.Model.Library.UserViewQuery.ExcludeUserViewIdStrings
+  nameWithType: UserViewQuery.ExcludeUserViewIdStrings
+- uid: MediaBrowser.Model.Library.UserViewQuery.ExcludeUserViewIdStrings*
+  name: ExcludeUserViewIdStrings
+  href: reference/pluginapi/MediaBrowser.Model.Library.UserViewQuery.html#MediaBrowser_Model_Library_UserViewQuery_ExcludeUserViewIdStrings_
+  commentId: Overload:MediaBrowser.Model.Library.UserViewQuery.ExcludeUserViewIdStrings
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Library.UserViewQuery.ExcludeUserViewIdStrings
+  nameWithType: UserViewQuery.ExcludeUserViewIdStrings
 - uid: MediaBrowser.Model.Library.UserViewQuery.IncludeExternalContent
   name: IncludeExternalContent
   href: reference/pluginapi/MediaBrowser.Model.Library.UserViewQuery.html#MediaBrowser_Model_Library_UserViewQuery_IncludeExternalContent
@@ -134150,6 +134377,12 @@ references:
   commentId: F:MediaBrowser.Model.Querying.ItemFields.CollectionName
   fullName: MediaBrowser.Model.Querying.ItemFields.CollectionName
   nameWithType: ItemFields.CollectionName
+- uid: MediaBrowser.Model.Querying.ItemFields.Collections
+  name: Collections
+  href: reference/pluginapi/MediaBrowser.Model.Querying.ItemFields.html#MediaBrowser_Model_Querying_ItemFields_Collections
+  commentId: F:MediaBrowser.Model.Querying.ItemFields.Collections
+  fullName: MediaBrowser.Model.Querying.ItemFields.Collections
+  nameWithType: ItemFields.Collections
 - uid: MediaBrowser.Model.Querying.ItemFields.CommunityRating
   name: CommunityRating
   href: reference/pluginapi/MediaBrowser.Model.Querying.ItemFields.html#MediaBrowser_Model_Querying_ItemFields_CommunityRating
@@ -135360,6 +135593,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Querying.NextUpQuery.EnableTotalRecordCount
   nameWithType: NextUpQuery.EnableTotalRecordCount
+- uid: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIds
+  name: ExcludeUserViewIds
+  href: reference/pluginapi/MediaBrowser.Model.Querying.NextUpQuery.html#MediaBrowser_Model_Querying_NextUpQuery_ExcludeUserViewIds
+  commentId: P:MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIds
+  fullName: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIds
+  nameWithType: NextUpQuery.ExcludeUserViewIds
+- uid: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIds*
+  name: ExcludeUserViewIds
+  href: reference/pluginapi/MediaBrowser.Model.Querying.NextUpQuery.html#MediaBrowser_Model_Querying_NextUpQuery_ExcludeUserViewIds_
+  commentId: Overload:MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIds
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIds
+  nameWithType: NextUpQuery.ExcludeUserViewIds
 - uid: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIdStrings
   name: ExcludeUserViewIdStrings
   href: reference/pluginapi/MediaBrowser.Model.Querying.NextUpQuery.html#MediaBrowser_Model_Querying_NextUpQuery_ExcludeUserViewIdStrings
@@ -135373,19 +135619,6 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViewIdStrings
   nameWithType: NextUpQuery.ExcludeUserViewIdStrings
-- uid: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViews
-  name: ExcludeUserViews
-  href: reference/pluginapi/MediaBrowser.Model.Querying.NextUpQuery.html#MediaBrowser_Model_Querying_NextUpQuery_ExcludeUserViews
-  commentId: P:MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViews
-  fullName: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViews
-  nameWithType: NextUpQuery.ExcludeUserViews
-- uid: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViews*
-  name: ExcludeUserViews
-  href: reference/pluginapi/MediaBrowser.Model.Querying.NextUpQuery.html#MediaBrowser_Model_Querying_NextUpQuery_ExcludeUserViews_
-  commentId: Overload:MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViews
-  isSpec: "True"
-  fullName: MediaBrowser.Model.Querying.NextUpQuery.ExcludeUserViews
-  nameWithType: NextUpQuery.ExcludeUserViews
 - uid: MediaBrowser.Model.Querying.NextUpQuery.Fields
   name: Fields
   href: reference/pluginapi/MediaBrowser.Model.Querying.NextUpQuery.html#MediaBrowser_Model_Querying_NextUpQuery_Fields

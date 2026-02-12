@@ -31,7 +31,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The BaseItemDto model module.
 * @module model/BaseItemDto
-* @version 4.10.0.2
+* @version 4.10.0.3
 */
 export default class BaseItemDto {
     /**
@@ -268,6 +268,9 @@ export default class BaseItemDto {
             }
             if (data.hasOwnProperty('TagItems')) {
                 obj['TagItems'] = ApiClient.convertToType(data['TagItems'], [NameLongIdPair]);
+            }
+            if (data.hasOwnProperty('Collections')) {
+                obj['Collections'] = ApiClient.convertToType(data['Collections'], [NameLongIdPair]);
             }
             if (data.hasOwnProperty('ParentLogoItemId')) {
                 obj['ParentLogoItemId'] = ApiClient.convertToType(data['ParentLogoItemId'], 'String');
@@ -860,6 +863,10 @@ export default class BaseItemDto {
     * @member {Array.<module:model/NameLongIdPair>} TagItems
     */
     'TagItems' = undefined;
+    /**
+    * @member {Array.<module:model/NameLongIdPair>} Collections
+    */
+    'Collections' = undefined;
     /**
     * If the item does not have a logo, this will hold the Id of the Parent that has one.
     * @member {String} ParentLogoItemId

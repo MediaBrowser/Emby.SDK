@@ -18,7 +18,7 @@ import ParentalRating from '../model/ParentalRating';
 /**
 * LocalizationService service.
 * @module api/LocalizationServiceApi
-* @version 4.10.0.2
+* @version 4.10.0.3
 */
 export default class LocalizationServiceApi {
 

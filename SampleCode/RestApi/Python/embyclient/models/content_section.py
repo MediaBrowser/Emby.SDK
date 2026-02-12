@@ -31,6 +31,7 @@ class ContentSection(object):
         'view_type': 'str',
         'image_type': 'str',
         'monitor': 'list[str]',
+        'item_types': 'list[str]',
         'excluded_folders': 'list[str]',
         'card_size_offset': 'int',
         'scroll_direction': 'ScrollDirection',
@@ -41,7 +42,9 @@ class ContentSection(object):
         'premium_message': 'str',
         'refresh_interval': 'int',
         'sort_by': 'str',
-        'sort_order': 'str'
+        'sort_order': 'str',
+        'include_next_up_in_resume': 'bool',
+        'query': 'ItemsQuery'
     }
 
     attribute_map = {
@@ -54,6 +57,7 @@ class ContentSection(object):
         'view_type': 'ViewType',
         'image_type': 'ImageType',
         'monitor': 'Monitor',
+        'item_types': 'ItemTypes',
         'excluded_folders': 'ExcludedFolders',
         'card_size_offset': 'CardSizeOffset',
         'scroll_direction': 'ScrollDirection',
@@ -64,10 +68,12 @@ class ContentSection(object):
         'premium_message': 'PremiumMessage',
         'refresh_interval': 'RefreshInterval',
         'sort_by': 'SortBy',
-        'sort_order': 'SortOrder'
+        'sort_order': 'SortOrder',
+        'include_next_up_in_resume': 'IncludeNextUpInResume',
+        'query': 'Query'
     }
 
-    def __init__(self, name=None, custom_name=None, subtitle=None, id=None, section_type=None, collection_type=None, view_type=None, image_type=None, monitor=None, excluded_folders=None, card_size_offset=None, scroll_direction=None, parent_item=None, parent_id=None, text_info=None, premium_feature=None, premium_message=None, refresh_interval=None, sort_by=None, sort_order=None):  # noqa: E501
+    def __init__(self, name=None, custom_name=None, subtitle=None, id=None, section_type=None, collection_type=None, view_type=None, image_type=None, monitor=None, item_types=None, excluded_folders=None, card_size_offset=None, scroll_direction=None, parent_item=None, parent_id=None, text_info=None, premium_feature=None, premium_message=None, refresh_interval=None, sort_by=None, sort_order=None, include_next_up_in_resume=None, query=None):  # noqa: E501
         """ContentSection - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._custom_name = None
@@ -78,6 +84,7 @@ class ContentSection(object):
         self._view_type = None
         self._image_type = None
         self._monitor = None
+        self._item_types = None
         self._excluded_folders = None
         self._card_size_offset = None
         self._scroll_direction = None
@@ -89,6 +96,8 @@ class ContentSection(object):
         self._refresh_interval = None
         self._sort_by = None
         self._sort_order = None
+        self._include_next_up_in_resume = None
+        self._query = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -108,6 +117,8 @@ class ContentSection(object):
             self.image_type = image_type
         if monitor is not None:
             self.monitor = monitor
+        if item_types is not None:
+            self.item_types = item_types
         if excluded_folders is not None:
             self.excluded_folders = excluded_folders
         if card_size_offset is not None:
@@ -130,6 +141,10 @@ class ContentSection(object):
             self.sort_by = sort_by
         if sort_order is not None:
             self.sort_order = sort_order
+        if include_next_up_in_resume is not None:
+            self.include_next_up_in_resume = include_next_up_in_resume
+        if query is not None:
+            self.query = query
 
     @property
     def name(self):
@@ -319,6 +334,27 @@ class ContentSection(object):
         """
 
         self._monitor = monitor
+
+    @property
+    def item_types(self):
+        """Gets the item_types of this ContentSection.  # noqa: E501
+
+
+        :return: The item_types of this ContentSection.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._item_types
+
+    @item_types.setter
+    def item_types(self, item_types):
+        """Sets the item_types of this ContentSection.
+
+
+        :param item_types: The item_types of this ContentSection.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._item_types = item_types
 
     @property
     def excluded_folders(self):
@@ -550,6 +586,48 @@ class ContentSection(object):
         """
 
         self._sort_order = sort_order
+
+    @property
+    def include_next_up_in_resume(self):
+        """Gets the include_next_up_in_resume of this ContentSection.  # noqa: E501
+
+
+        :return: The include_next_up_in_resume of this ContentSection.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_next_up_in_resume
+
+    @include_next_up_in_resume.setter
+    def include_next_up_in_resume(self, include_next_up_in_resume):
+        """Sets the include_next_up_in_resume of this ContentSection.
+
+
+        :param include_next_up_in_resume: The include_next_up_in_resume of this ContentSection.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_next_up_in_resume = include_next_up_in_resume
+
+    @property
+    def query(self):
+        """Gets the query of this ContentSection.  # noqa: E501
+
+
+        :return: The query of this ContentSection.  # noqa: E501
+        :rtype: ItemsQuery
+        """
+        return self._query
+
+    @query.setter
+    def query(self, query):
+        """Sets the query of this ContentSection.
+
+
+        :param query: The query of this ContentSection.  # noqa: E501
+        :type: ItemsQuery
+        """
+
+        self._query = query
 
     def to_dict(self):
         """Returns the model properties as a dict"""

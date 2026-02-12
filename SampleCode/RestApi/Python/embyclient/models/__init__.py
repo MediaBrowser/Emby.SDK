@@ -118,6 +118,7 @@ from embyclient.models.item_counts import ItemCounts
 from embyclient.models.item_file_info import ItemFileInfo
 from embyclient.models.item_file_type import ItemFileType
 from embyclient.models.item_lookup_info import ItemLookupInfo
+from embyclient.models.items_query import ItemsQuery
 from embyclient.models.level_information import LevelInformation
 from embyclient.models.library_add_media_path import LibraryAddMediaPath
 from embyclient.models.library_add_virtual_folder import LibraryAddVirtualFolder

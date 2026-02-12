@@ -16,6 +16,7 @@ type ContentSection struct {
 	ViewType string `json:"ViewType,omitempty"`
 	ImageType string `json:"ImageType,omitempty"`
 	Monitor []string `json:"Monitor,omitempty"`
+	ItemTypes []string `json:"ItemTypes,omitempty"`
 	ExcludedFolders []string `json:"ExcludedFolders,omitempty"`
 	CardSizeOffset int32 `json:"CardSizeOffset,omitempty"`
 	ScrollDirection *ScrollDirection `json:"ScrollDirection,omitempty"`
@@ -27,4 +28,6 @@ type ContentSection struct {
 	RefreshInterval int32 `json:"RefreshInterval,omitempty"`
 	SortBy string `json:"SortBy,omitempty"`
 	SortOrder string `json:"SortOrder,omitempty"`
+	IncludeNextUpInResume bool `json:"IncludeNextUpInResume,omitempty"`
+	Query *ItemsQuery `json:"Query,omitempty"`
 }

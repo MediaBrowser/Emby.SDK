@@ -13,6 +13,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import embyclient.model.BaseItemDto;
+import embyclient.model.ItemsQuery;
 import embyclient.model.ScrollDirection;
 import embyclient.model.TextSectionInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -52,6 +53,9 @@ public class ContentSection {
   @SerializedName("Monitor")
   private List<String> monitor = null;
 
+  @SerializedName("ItemTypes")
+  private List<String> itemTypes = null;
+
   @SerializedName("ExcludedFolders")
   private List<String> excludedFolders = null;
 
@@ -84,6 +88,12 @@ public class ContentSection {
 
   @SerializedName("SortOrder")
   private String sortOrder = null;
+
+  @SerializedName("IncludeNextUpInResume")
+  private Boolean includeNextUpInResume = null;
+
+  @SerializedName("Query")
+  private ItemsQuery query = null;
 
   public ContentSection name(String name) {
     this.name = name;
@@ -253,6 +263,32 @@ public class ContentSection {
 
   public void setMonitor(List<String> monitor) {
     this.monitor = monitor;
+  }
+
+  public ContentSection itemTypes(List<String> itemTypes) {
+    this.itemTypes = itemTypes;
+    return this;
+  }
+
+  public ContentSection addItemTypesItem(String itemTypesItem) {
+    if (this.itemTypes == null) {
+      this.itemTypes = new ArrayList<>();
+    }
+    this.itemTypes.add(itemTypesItem);
+    return this;
+  }
+
+   /**
+   * Get itemTypes
+   * @return itemTypes
+  **/
+  @Schema(description = "")
+  public List<String> getItemTypes() {
+    return itemTypes;
+  }
+
+  public void setItemTypes(List<String> itemTypes) {
+    this.itemTypes = itemTypes;
   }
 
   public ContentSection excludedFolders(List<String> excludedFolders) {
@@ -461,6 +497,42 @@ public class ContentSection {
     this.sortOrder = sortOrder;
   }
 
+  public ContentSection includeNextUpInResume(Boolean includeNextUpInResume) {
+    this.includeNextUpInResume = includeNextUpInResume;
+    return this;
+  }
+
+   /**
+   * Get includeNextUpInResume
+   * @return includeNextUpInResume
+  **/
+  @Schema(description = "")
+  public Boolean isIncludeNextUpInResume() {
+    return includeNextUpInResume;
+  }
+
+  public void setIncludeNextUpInResume(Boolean includeNextUpInResume) {
+    this.includeNextUpInResume = includeNextUpInResume;
+  }
+
+  public ContentSection query(ItemsQuery query) {
+    this.query = query;
+    return this;
+  }
+
+   /**
+   * Get query
+   * @return query
+  **/
+  @Schema(description = "")
+  public ItemsQuery getQuery() {
+    return query;
+  }
+
+  public void setQuery(ItemsQuery query) {
+    this.query = query;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -480,6 +552,7 @@ public class ContentSection {
         Objects.equals(this.viewType, contentSection.viewType) &&
         Objects.equals(this.imageType, contentSection.imageType) &&
         Objects.equals(this.monitor, contentSection.monitor) &&
+        Objects.equals(this.itemTypes, contentSection.itemTypes) &&
         Objects.equals(this.excludedFolders, contentSection.excludedFolders) &&
         Objects.equals(this.cardSizeOffset, contentSection.cardSizeOffset) &&
         Objects.equals(this.scrollDirection, contentSection.scrollDirection) &&
@@ -490,12 +563,14 @@ public class ContentSection {
         Objects.equals(this.premiumMessage, contentSection.premiumMessage) &&
         Objects.equals(this.refreshInterval, contentSection.refreshInterval) &&
         Objects.equals(this.sortBy, contentSection.sortBy) &&
-        Objects.equals(this.sortOrder, contentSection.sortOrder);
+        Objects.equals(this.sortOrder, contentSection.sortOrder) &&
+        Objects.equals(this.includeNextUpInResume, contentSection.includeNextUpInResume) &&
+        Objects.equals(this.query, contentSection.query);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, customName, subtitle, id, sectionType, collectionType, viewType, imageType, monitor, excludedFolders, cardSizeOffset, scrollDirection, parentItem, parentId, textInfo, premiumFeature, premiumMessage, refreshInterval, sortBy, sortOrder);
+    return Objects.hash(name, customName, subtitle, id, sectionType, collectionType, viewType, imageType, monitor, itemTypes, excludedFolders, cardSizeOffset, scrollDirection, parentItem, parentId, textInfo, premiumFeature, premiumMessage, refreshInterval, sortBy, sortOrder, includeNextUpInResume, query);
   }
 
 
@@ -513,6 +588,7 @@ public class ContentSection {
     sb.append("    viewType: ").append(toIndentedString(viewType)).append("\n");
     sb.append("    imageType: ").append(toIndentedString(imageType)).append("\n");
     sb.append("    monitor: ").append(toIndentedString(monitor)).append("\n");
+    sb.append("    itemTypes: ").append(toIndentedString(itemTypes)).append("\n");
     sb.append("    excludedFolders: ").append(toIndentedString(excludedFolders)).append("\n");
     sb.append("    cardSizeOffset: ").append(toIndentedString(cardSizeOffset)).append("\n");
     sb.append("    scrollDirection: ").append(toIndentedString(scrollDirection)).append("\n");
@@ -524,6 +600,8 @@ public class ContentSection {
     sb.append("    refreshInterval: ").append(toIndentedString(refreshInterval)).append("\n");
     sb.append("    sortBy: ").append(toIndentedString(sortBy)).append("\n");
     sb.append("    sortOrder: ").append(toIndentedString(sortOrder)).append("\n");
+    sb.append("    includeNextUpInResume: ").append(toIndentedString(includeNextUpInResume)).append("\n");
+    sb.append("    query: ").append(toIndentedString(query)).append("\n");
     sb.append("}");
     return sb.toString();
   }

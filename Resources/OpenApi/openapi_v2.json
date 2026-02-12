@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.2"
+    "version": "4.10.0.3"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -71972,6 +71972,12 @@
             "$ref": "#/definitions/NameLongIdPair"
           }
         },
+        "Collections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NameLongIdPair"
+          }
+        },
         "ParentLogoItemId": {
           "description": "If the item does not have a logo, this will hold the Id of the Parent that has one.",
           "type": "string"
@@ -82383,6 +82389,12 @@
             "type": "string"
           }
         },
+        "ItemTypes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "ExcludedFolders": {
           "type": "array",
           "items": {
@@ -82420,6 +82432,12 @@
         },
         "SortOrder": {
           "type": "string"
+        },
+        "IncludeNextUpInResume": {
+          "type": "boolean"
+        },
+        "Query": {
+          "$ref": "#/definitions/ItemsQuery"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Entities.ContentSection"
@@ -82458,6 +82476,39 @@
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Notifications.NotificationLevel"
+    },
+    "ItemsQuery": {
+      "type": "object",
+      "properties": {
+        "StudioIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "TagIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "GenreIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "CollectionTypes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "IsFavorite": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.Entities.ItemsQuery"
     },
     "UserLibrary.AddTags": {
       "type": "object",

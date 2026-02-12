@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.10.0.2
+  version: 4.10.0.3
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -84440,6 +84440,9 @@ components:
           LockedFields:
           - Cast
           - Cast
+          Collections:
+          - null
+          - null
           Disabled: true
           ProviderIds:
             key: ProviderIds
@@ -85012,6 +85015,9 @@ components:
           LockedFields:
           - Cast
           - Cast
+          Collections:
+          - null
+          - null
           Disabled: true
           ProviderIds:
             key: ProviderIds
@@ -85346,6 +85352,10 @@ components:
           items:
             $ref: '#/components/schemas/NameLongIdPair'
         TagItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/NameLongIdPair'
+        Collections:
           type: array
           items:
             $ref: '#/components/schemas/NameLongIdPair'
@@ -86154,6 +86164,9 @@ components:
         LockedFields:
         - Cast
         - Cast
+        Collections:
+        - null
+        - null
         Disabled: true
         ProviderIds:
           key: ProviderIds
@@ -88096,6 +88109,9 @@ components:
               LockedFields:
               - Cast
               - Cast
+              Collections:
+              - null
+              - null
               Disabled: true
               ProviderIds:
                 key: ProviderIds
@@ -88967,6 +88983,9 @@ components:
               LockedFields:
               - Cast
               - Cast
+              Collections:
+              - null
+              - null
               Disabled: true
               ProviderIds:
                 key: ProviderIds
@@ -89942,6 +89961,9 @@ components:
             LockedFields:
             - Cast
             - Cast
+            Collections:
+            - null
+            - null
             Disabled: true
             ProviderIds:
               key: ProviderIds
@@ -90813,6 +90835,9 @@ components:
             LockedFields:
             - Cast
             - Cast
+            Collections:
+            - null
+            - null
             Disabled: true
             ProviderIds:
               key: ProviderIds
@@ -91849,6 +91874,9 @@ components:
           LockedFields:
           - Cast
           - Cast
+          Collections:
+          - null
+          - null
           Disabled: true
           ProviderIds:
             key: ProviderIds
@@ -96363,6 +96391,9 @@ components:
             LockedFields:
             - Cast
             - Cast
+            Collections:
+            - null
+            - null
             Disabled: true
             ProviderIds:
               key: ProviderIds
@@ -96939,6 +96970,9 @@ components:
             LockedFields:
             - Cast
             - Cast
+            Collections:
+            - null
+            - null
             Disabled: true
             ProviderIds:
               key: ProviderIds
@@ -97525,6 +97559,9 @@ components:
           LockedFields:
           - Cast
           - Cast
+          Collections:
+          - null
+          - null
           Disabled: true
           ProviderIds:
             key: ProviderIds
@@ -98265,6 +98302,9 @@ components:
             LockedFields:
             - Cast
             - Cast
+            Collections:
+            - null
+            - null
             Disabled: true
             ProviderIds:
               key: ProviderIds
@@ -98865,6 +98905,9 @@ components:
             LockedFields:
             - Cast
             - Cast
+            Collections:
+            - null
+            - null
             Disabled: true
             ProviderIds:
               key: ProviderIds
@@ -99549,6 +99592,9 @@ components:
           LockedFields:
           - Cast
           - Cast
+          Collections:
+          - null
+          - null
           Disabled: true
           ProviderIds:
             key: ProviderIds
@@ -100700,6 +100746,9 @@ components:
           LockedFields:
           - Cast
           - Cast
+          Collections:
+          - null
+          - null
           Disabled: true
           ProviderIds:
             key: ProviderIds
@@ -101272,6 +101321,9 @@ components:
           LockedFields:
           - Cast
           - Cast
+          Collections:
+          - null
+          - null
           Disabled: true
           ProviderIds:
             key: ProviderIds
@@ -105244,6 +105296,9 @@ components:
             LockedFields:
             - Cast
             - Cast
+            Collections:
+            - null
+            - null
             Disabled: true
             ProviderIds:
               key: ProviderIds
@@ -108108,6 +108163,9 @@ components:
             LockedFields:
             - Cast
             - Cast
+            Collections:
+            - null
+            - null
             Disabled: true
             ProviderIds:
               key: ProviderIds
@@ -108680,6 +108738,9 @@ components:
             LockedFields:
             - Cast
             - Cast
+            Collections:
+            - null
+            - null
             Disabled: true
             ProviderIds:
               key: ProviderIds
@@ -109274,6 +109335,9 @@ components:
           LockedFields:
           - Cast
           - Cast
+          Collections:
+          - null
+          - null
           Disabled: true
           ProviderIds:
             key: ProviderIds
@@ -109846,6 +109910,9 @@ components:
           LockedFields:
           - Cast
           - Cast
+          Collections:
+          - null
+          - null
           Disabled: true
           ProviderIds:
             key: ProviderIds
@@ -111973,6 +112040,9 @@ components:
           LockedFields:
           - Cast
           - Cast
+          Collections:
+          - null
+          - null
           Disabled: true
           ProviderIds:
             key: ProviderIds
@@ -112338,6 +112408,10 @@ components:
           type: array
           items:
             type: string
+        ItemTypes:
+          type: array
+          items:
+            type: string
         ExcludedFolders:
           type: array
           items:
@@ -112365,11 +112439,29 @@ components:
           type: string
         SortOrder:
           type: string
+        IncludeNextUpInResume:
+          type: boolean
+        Query:
+          $ref: '#/components/schemas/ItemsQuery'
       example:
         CardSizeOffset: 0
         ParentId: ParentId
         PremiumFeature: PremiumFeature
         ScrollDirection: Horizontal
+        Query:
+          StudioIds:
+          - StudioIds
+          - StudioIds
+          TagIds:
+          - TagIds
+          - TagIds
+          CollectionTypes:
+          - CollectionTypes
+          - CollectionTypes
+          GenreIds:
+          - GenreIds
+          - GenreIds
+          IsFavorite: true
         SortBy: SortBy
         SortOrder: SortOrder
         ParentItem:
@@ -112849,6 +112941,9 @@ components:
           LockedFields:
           - Cast
           - Cast
+          Collections:
+          - null
+          - null
           Disabled: true
           ProviderIds:
             key: ProviderIds
@@ -112948,6 +113043,7 @@ components:
         Name: Name
         ImageType: ImageType
         Subtitle: Subtitle
+        IncludeNextUpInResume: true
         SectionType: SectionType
         Monitor:
         - Monitor
@@ -112965,6 +113061,9 @@ components:
         - ExcludedFolders
         - ExcludedFolders
         Id: Id
+        ItemTypes:
+        - ItemTypes
+        - ItemTypes
         ViewType: ViewType
       x-internal-ref-name: MediaBrowser.Model.Entities.ContentSection
     ScrollDirection:
@@ -112997,6 +113096,43 @@ components:
       - Warning
       - Error
       x-internal-ref-name: MediaBrowser.Model.Notifications.NotificationLevel
+    ItemsQuery:
+      type: object
+      properties:
+        StudioIds:
+          type: array
+          items:
+            type: string
+        TagIds:
+          type: array
+          items:
+            type: string
+        GenreIds:
+          type: array
+          items:
+            type: string
+        CollectionTypes:
+          type: array
+          items:
+            type: string
+        IsFavorite:
+          type: boolean
+          nullable: true
+      example:
+        StudioIds:
+        - StudioIds
+        - StudioIds
+        TagIds:
+        - TagIds
+        - TagIds
+        CollectionTypes:
+        - CollectionTypes
+        - CollectionTypes
+        GenreIds:
+        - GenreIds
+        - GenreIds
+        IsFavorite: true
+      x-internal-ref-name: MediaBrowser.Model.Entities.ItemsQuery
     UserLibrary.AddTags:
       type: object
       properties:

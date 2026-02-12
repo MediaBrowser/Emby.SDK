@@ -81,6 +81,12 @@ namespace Emby.ApiClient.Model
         public List<string> Monitor { get; set; }
 
         /// <summary>
+        /// Gets or Sets ItemTypes
+        /// </summary>
+        /// <value>The ItemTypes.</value>
+        public List<string> ItemTypes { get; set; }
+
+        /// <summary>
         /// Gets or Sets ExcludedFolders
         /// </summary>
         /// <value>The ExcludedFolders.</value>
@@ -147,6 +153,18 @@ namespace Emby.ApiClient.Model
         public string SortOrder { get; set; }
 
         /// <summary>
+        /// Gets or Sets IncludeNextUpInResume
+        /// </summary>
+        /// <value>The IncludeNextUpInResume.</value>
+        public bool? IncludeNextUpInResume { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Query
+        /// </summary>
+        /// <value>The Query.</value>
+        public ItemsQuery Query { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -163,6 +181,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
             sb.Append("  ImageType: ").Append(ImageType).Append("\n");
             sb.Append("  Monitor: ").Append(Monitor).Append("\n");
+            sb.Append("  ItemTypes: ").Append(ItemTypes).Append("\n");
             sb.Append("  ExcludedFolders: ").Append(ExcludedFolders).Append("\n");
             sb.Append("  CardSizeOffset: ").Append(CardSizeOffset).Append("\n");
             sb.Append("  ScrollDirection: ").Append(ScrollDirection).Append("\n");
@@ -174,6 +193,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  RefreshInterval: ").Append(RefreshInterval).Append("\n");
             sb.Append("  SortBy: ").Append(SortBy).Append("\n");
             sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
+            sb.Append("  IncludeNextUpInResume: ").Append(IncludeNextUpInResume).Append("\n");
+            sb.Append("  Query: ").Append(Query).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -246,6 +267,12 @@ namespace Emby.ApiClient.Model
                     this.Monitor.SequenceEqual(input.Monitor)
                 ) && 
                 (
+                    this.ItemTypes == input.ItemTypes ||
+                    this.ItemTypes != null &&
+                    input.ItemTypes != null &&
+                    this.ItemTypes.SequenceEqual(input.ItemTypes)
+                ) && 
+                (
                     this.ExcludedFolders == input.ExcludedFolders ||
                     this.ExcludedFolders != null &&
                     input.ExcludedFolders != null &&
@@ -300,6 +327,16 @@ namespace Emby.ApiClient.Model
                     this.SortOrder == input.SortOrder ||
                     (this.SortOrder != null &&
                     this.SortOrder.Equals(input.SortOrder))
+                ) && 
+                (
+                    this.IncludeNextUpInResume == input.IncludeNextUpInResume ||
+                    (this.IncludeNextUpInResume != null &&
+                    this.IncludeNextUpInResume.Equals(input.IncludeNextUpInResume))
+                ) && 
+                (
+                    this.Query == input.Query ||
+                    (this.Query != null &&
+                    this.Query.Equals(input.Query))
                 );
         }
 
@@ -330,6 +367,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.ImageType.GetHashCode();
                 if (this.Monitor != null)
                     hashCode = hashCode * 59 + this.Monitor.GetHashCode();
+                if (this.ItemTypes != null)
+                    hashCode = hashCode * 59 + this.ItemTypes.GetHashCode();
                 if (this.ExcludedFolders != null)
                     hashCode = hashCode * 59 + this.ExcludedFolders.GetHashCode();
                 if (this.CardSizeOffset != null)
@@ -352,6 +391,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.SortBy.GetHashCode();
                 if (this.SortOrder != null)
                     hashCode = hashCode * 59 + this.SortOrder.GetHashCode();
+                if (this.IncludeNextUpInResume != null)
+                    hashCode = hashCode * 59 + this.IncludeNextUpInResume.GetHashCode();
+                if (this.Query != null)
+                    hashCode = hashCode * 59 + this.Query.GetHashCode();
                 return hashCode;
             }
         }

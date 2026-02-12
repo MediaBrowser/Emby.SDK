@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.2
+ * OpenAPI spec version: 4.10.0.3
  * 
  *
  * NOTE: This file is auto generated.
@@ -1465,6 +1465,12 @@ export interface BaseItemDto {
      * @memberof BaseItemDto
      */
     TagItems?: Array<NameLongIdPair>;
+    /**
+     * 
+     * @type {Array<NameLongIdPair>}
+     * @memberof BaseItemDto
+     */
+    Collections?: Array<NameLongIdPair>;
     /**
      * If the item does not have a logo, this will hold the Id of the Parent that has one.
      * @type {string}
@@ -3027,6 +3033,12 @@ export interface ContentSection {
      * @type {Array<string>}
      * @memberof ContentSection
      */
+    ItemTypes?: Array<string>;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ContentSection
+     */
     ExcludedFolders?: Array<string>;
     /**
      * 
@@ -3088,6 +3100,18 @@ export interface ContentSection {
      * @memberof ContentSection
      */
     SortOrder?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ContentSection
+     */
+    IncludeNextUpInResume?: boolean;
+    /**
+     * 
+     * @type {ItemsQuery}
+     * @memberof ContentSection
+     */
+    Query?: ItemsQuery;
 }
 /**
  * 
@@ -5216,6 +5240,43 @@ export interface ItemLookupInfo {
      * @memberof ItemLookupInfo
      */
     EnableAdultMetadata?: boolean;
+}
+/**
+ * 
+ * @export
+ * @interface ItemsQuery
+ */
+export interface ItemsQuery {
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ItemsQuery
+     */
+    StudioIds?: Array<string>;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ItemsQuery
+     */
+    TagIds?: Array<string>;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ItemsQuery
+     */
+    GenreIds?: Array<string>;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ItemsQuery
+     */
+    CollectionTypes?: Array<string>;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ItemsQuery
+     */
+    IsFavorite?: boolean;
 }
 /**
  * Class for unified presentation of all information associated with a specific codec level.  

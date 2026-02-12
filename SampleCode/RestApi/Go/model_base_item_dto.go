@@ -115,6 +115,7 @@ type BaseItemDto struct {
 	Studios []NameLongIdPair `json:"Studios,omitempty"`
 	GenreItems []NameLongIdPair `json:"GenreItems,omitempty"`
 	TagItems []NameLongIdPair `json:"TagItems,omitempty"`
+	Collections []NameLongIdPair `json:"Collections,omitempty"`
 	// If the item does not have a logo, this will hold the Id of the Parent that has one.
 	ParentLogoItemId string `json:"ParentLogoItemId,omitempty"`
 	// If the item does not have any backdrops, this will hold the Id of the Parent that has one.

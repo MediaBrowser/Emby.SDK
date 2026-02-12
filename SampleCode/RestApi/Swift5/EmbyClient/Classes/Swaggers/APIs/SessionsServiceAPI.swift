@@ -689,6 +689,7 @@ open class SessionsServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"
@@ -1540,6 +1541,7 @@ open class SessionsServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"
@@ -2423,6 +2425,7 @@ open class SessionsServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"
@@ -2974,6 +2977,7 @@ open class SessionsServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"
