@@ -18,7 +18,7 @@ import TextSectionInfo from './TextSectionInfo';
 /**
 * The ContentSection model module.
 * @module model/ContentSection
-* @version 4.10.0.3
+* @version 4.10.0.4
 */
 export default class ContentSection {
     /**
@@ -68,6 +68,9 @@ export default class ContentSection {
             }
             if (data.hasOwnProperty('ImageType')) {
                 obj['ImageType'] = ApiClient.convertToType(data['ImageType'], 'String');
+            }
+            if (data.hasOwnProperty('DisplayMode')) {
+                obj['DisplayMode'] = ApiClient.convertToType(data['DisplayMode'], 'String');
             }
             if (data.hasOwnProperty('Monitor')) {
                 obj['Monitor'] = ApiClient.convertToType(data['Monitor'], ['String']);
@@ -150,6 +153,10 @@ export default class ContentSection {
     * @member {String} ImageType
     */
     'ImageType' = undefined;
+    /**
+    * @member {String} DisplayMode
+    */
+    'DisplayMode' = undefined;
     /**
     * @member {Array.<String>} Monitor
     */

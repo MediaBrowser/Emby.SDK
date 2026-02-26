@@ -11565,6 +11565,7 @@
   "MediaBrowser.Model.Entities.ContentSection.CardSizeOffset": "MediaBrowser.Model.Entities.ContentSection.yml",
   "MediaBrowser.Model.Entities.ContentSection.CollectionType": "MediaBrowser.Model.Entities.ContentSection.yml",
   "MediaBrowser.Model.Entities.ContentSection.CustomName": "MediaBrowser.Model.Entities.ContentSection.yml",
+  "MediaBrowser.Model.Entities.ContentSection.DisplayMode": "MediaBrowser.Model.Entities.ContentSection.yml",
   "MediaBrowser.Model.Entities.ContentSection.ExcludedFolders": "MediaBrowser.Model.Entities.ContentSection.yml",
   "MediaBrowser.Model.Entities.ContentSection.Id": "MediaBrowser.Model.Entities.ContentSection.yml",
   "MediaBrowser.Model.Entities.ContentSection.ImageType": "MediaBrowser.Model.Entities.ContentSection.yml",

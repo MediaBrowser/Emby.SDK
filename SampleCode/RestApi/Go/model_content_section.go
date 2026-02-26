@@ -15,6 +15,7 @@ type ContentSection struct {
 	CollectionType string `json:"CollectionType,omitempty"`
 	ViewType string `json:"ViewType,omitempty"`
 	ImageType string `json:"ImageType,omitempty"`
+	DisplayMode string `json:"DisplayMode,omitempty"`
 	Monitor []string `json:"Monitor,omitempty"`
 	ItemTypes []string `json:"ItemTypes,omitempty"`
 	ExcludedFolders []string `json:"ExcludedFolders,omitempty"`

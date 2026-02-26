@@ -30,6 +30,7 @@ class ContentSection(object):
         'collection_type': 'str',
         'view_type': 'str',
         'image_type': 'str',
+        'display_mode': 'str',
         'monitor': 'list[str]',
         'item_types': 'list[str]',
         'excluded_folders': 'list[str]',
@@ -56,6 +57,7 @@ class ContentSection(object):
         'collection_type': 'CollectionType',
         'view_type': 'ViewType',
         'image_type': 'ImageType',
+        'display_mode': 'DisplayMode',
         'monitor': 'Monitor',
         'item_types': 'ItemTypes',
         'excluded_folders': 'ExcludedFolders',
@@ -73,7 +75,7 @@ class ContentSection(object):
         'query': 'Query'
     }
 
-    def __init__(self, name=None, custom_name=None, subtitle=None, id=None, section_type=None, collection_type=None, view_type=None, image_type=None, monitor=None, item_types=None, excluded_folders=None, card_size_offset=None, scroll_direction=None, parent_item=None, parent_id=None, text_info=None, premium_feature=None, premium_message=None, refresh_interval=None, sort_by=None, sort_order=None, include_next_up_in_resume=None, query=None):  # noqa: E501
+    def __init__(self, name=None, custom_name=None, subtitle=None, id=None, section_type=None, collection_type=None, view_type=None, image_type=None, display_mode=None, monitor=None, item_types=None, excluded_folders=None, card_size_offset=None, scroll_direction=None, parent_item=None, parent_id=None, text_info=None, premium_feature=None, premium_message=None, refresh_interval=None, sort_by=None, sort_order=None, include_next_up_in_resume=None, query=None):  # noqa: E501
         """ContentSection - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._custom_name = None
@@ -83,6 +85,7 @@ class ContentSection(object):
         self._collection_type = None
         self._view_type = None
         self._image_type = None
+        self._display_mode = None
         self._monitor = None
         self._item_types = None
         self._excluded_folders = None
@@ -115,6 +118,8 @@ class ContentSection(object):
             self.view_type = view_type
         if image_type is not None:
             self.image_type = image_type
+        if display_mode is not None:
+            self.display_mode = display_mode
         if monitor is not None:
             self.monitor = monitor
         if item_types is not None:
@@ -313,6 +318,27 @@ class ContentSection(object):
         """
 
         self._image_type = image_type
+
+    @property
+    def display_mode(self):
+        """Gets the display_mode of this ContentSection.  # noqa: E501
+
+
+        :return: The display_mode of this ContentSection.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_mode
+
+    @display_mode.setter
+    def display_mode(self, display_mode):
+        """Sets the display_mode of this ContentSection.
+
+
+        :param display_mode: The display_mode of this ContentSection.  # noqa: E501
+        :type: str
+        """
+
+        self._display_mode = display_mode
 
     @property
     def monitor(self):

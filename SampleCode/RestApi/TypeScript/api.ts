@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.3
+ * OpenAPI spec version: 4.10.0.4
  * 
  *
  * NOTE: This file is auto generated.
@@ -3022,6 +3022,12 @@ export interface ContentSection {
      * @memberof ContentSection
      */
     ImageType?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ContentSection
+     */
+    DisplayMode?: string;
     /**
      * 
      * @type {Array<string>}

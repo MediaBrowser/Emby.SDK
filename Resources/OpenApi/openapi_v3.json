@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.3"
+    "version": "4.10.0.4"
   },
   "servers": [
     {
@@ -114912,6 +114912,9 @@
             "type": "string"
           },
           "ImageType": {
+            "type": "string"
+          },
+          "DisplayMode": {
             "type": "string"
           },
           "Monitor": {

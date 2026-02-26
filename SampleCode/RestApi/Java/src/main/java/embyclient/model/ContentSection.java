@@ -50,6 +50,9 @@ public class ContentSection {
   @SerializedName("ImageType")
   private String imageType = null;
 
+  @SerializedName("DisplayMode")
+  private String displayMode = null;
+
   @SerializedName("Monitor")
   private List<String> monitor = null;
 
@@ -237,6 +240,24 @@ public class ContentSection {
 
   public void setImageType(String imageType) {
     this.imageType = imageType;
+  }
+
+  public ContentSection displayMode(String displayMode) {
+    this.displayMode = displayMode;
+    return this;
+  }
+
+   /**
+   * Get displayMode
+   * @return displayMode
+  **/
+  @Schema(description = "")
+  public String getDisplayMode() {
+    return displayMode;
+  }
+
+  public void setDisplayMode(String displayMode) {
+    this.displayMode = displayMode;
   }
 
   public ContentSection monitor(List<String> monitor) {
@@ -551,6 +572,7 @@ public class ContentSection {
         Objects.equals(this.collectionType, contentSection.collectionType) &&
         Objects.equals(this.viewType, contentSection.viewType) &&
         Objects.equals(this.imageType, contentSection.imageType) &&
+        Objects.equals(this.displayMode, contentSection.displayMode) &&
         Objects.equals(this.monitor, contentSection.monitor) &&
         Objects.equals(this.itemTypes, contentSection.itemTypes) &&
         Objects.equals(this.excludedFolders, contentSection.excludedFolders) &&
@@ -570,7 +592,7 @@ public class ContentSection {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, customName, subtitle, id, sectionType, collectionType, viewType, imageType, monitor, itemTypes, excludedFolders, cardSizeOffset, scrollDirection, parentItem, parentId, textInfo, premiumFeature, premiumMessage, refreshInterval, sortBy, sortOrder, includeNextUpInResume, query);
+    return Objects.hash(name, customName, subtitle, id, sectionType, collectionType, viewType, imageType, displayMode, monitor, itemTypes, excludedFolders, cardSizeOffset, scrollDirection, parentItem, parentId, textInfo, premiumFeature, premiumMessage, refreshInterval, sortBy, sortOrder, includeNextUpInResume, query);
   }
 
 
@@ -587,6 +609,7 @@ public class ContentSection {
     sb.append("    collectionType: ").append(toIndentedString(collectionType)).append("\n");
     sb.append("    viewType: ").append(toIndentedString(viewType)).append("\n");
     sb.append("    imageType: ").append(toIndentedString(imageType)).append("\n");
+    sb.append("    displayMode: ").append(toIndentedString(displayMode)).append("\n");
     sb.append("    monitor: ").append(toIndentedString(monitor)).append("\n");
     sb.append("    itemTypes: ").append(toIndentedString(itemTypes)).append("\n");
     sb.append("    excludedFolders: ").append(toIndentedString(excludedFolders)).append("\n");

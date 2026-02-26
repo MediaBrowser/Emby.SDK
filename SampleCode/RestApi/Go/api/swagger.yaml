@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.10.0.3
+  version: 4.10.0.4
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -112404,6 +112404,8 @@ components:
           type: string
         ImageType:
           type: string
+        DisplayMode:
+          type: string
         Monitor:
           type: array
           items:
@@ -113042,6 +113044,7 @@ components:
           Altitude: 7.933506881737151
         Name: Name
         ImageType: ImageType
+        DisplayMode: DisplayMode
         Subtitle: Subtitle
         IncludeNextUpInResume: true
         SectionType: SectionType

@@ -120143,6 +120143,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Entities.ContentSection.CustomName
   nameWithType: ContentSection.CustomName
+- uid: MediaBrowser.Model.Entities.ContentSection.DisplayMode
+  name: DisplayMode
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_DisplayMode
+  commentId: P:MediaBrowser.Model.Entities.ContentSection.DisplayMode
+  fullName: MediaBrowser.Model.Entities.ContentSection.DisplayMode
+  nameWithType: ContentSection.DisplayMode
+- uid: MediaBrowser.Model.Entities.ContentSection.DisplayMode*
+  name: DisplayMode
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_DisplayMode_
+  commentId: Overload:MediaBrowser.Model.Entities.ContentSection.DisplayMode
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ContentSection.DisplayMode
+  nameWithType: ContentSection.DisplayMode
 - uid: MediaBrowser.Model.Entities.ContentSection.ExcludedFolders
   name: ExcludedFolders
   href: reference/pluginapi/MediaBrowser.Model.Entities.ContentSection.html#MediaBrowser_Model_Entities_ContentSection_ExcludedFolders

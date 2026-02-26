@@ -19,6 +19,7 @@ public struct ContentSection: Codable {
     public var collectionType: String?
     public var viewType: String?
     public var imageType: String?
+    public var displayMode: String?
     public var monitor: [String]?
     public var itemTypes: [String]?
     public var excludedFolders: [String]?
@@ -35,7 +36,7 @@ public struct ContentSection: Codable {
     public var includeNextUpInResume: Bool?
     public var query: ItemsQuery?
 
-    public init(name: String? = nil, customName: String? = nil, subtitle: String? = nil, _id: String? = nil, sectionType: String? = nil, collectionType: String? = nil, viewType: String? = nil, imageType: String? = nil, monitor: [String]? = nil, itemTypes: [String]? = nil, excludedFolders: [String]? = nil, cardSizeOffset: Int? = nil, scrollDirection: ScrollDirection? = nil, parentItem: BaseItemDto? = nil, parentId: String? = nil, textInfo: TextSectionInfo? = nil, premiumFeature: String? = nil, premiumMessage: String? = nil, refreshInterval: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, includeNextUpInResume: Bool? = nil, query: ItemsQuery? = nil) {
+    public init(name: String? = nil, customName: String? = nil, subtitle: String? = nil, _id: String? = nil, sectionType: String? = nil, collectionType: String? = nil, viewType: String? = nil, imageType: String? = nil, displayMode: String? = nil, monitor: [String]? = nil, itemTypes: [String]? = nil, excludedFolders: [String]? = nil, cardSizeOffset: Int? = nil, scrollDirection: ScrollDirection? = nil, parentItem: BaseItemDto? = nil, parentId: String? = nil, textInfo: TextSectionInfo? = nil, premiumFeature: String? = nil, premiumMessage: String? = nil, refreshInterval: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, includeNextUpInResume: Bool? = nil, query: ItemsQuery? = nil) {
         self.name = name
         self.customName = customName
         self.subtitle = subtitle
@@ -44,6 +45,7 @@ public struct ContentSection: Codable {
         self.collectionType = collectionType
         self.viewType = viewType
         self.imageType = imageType
+        self.displayMode = displayMode
         self.monitor = monitor
         self.itemTypes = itemTypes
         self.excludedFolders = excludedFolders
@@ -70,6 +72,7 @@ public struct ContentSection: Codable {
         case collectionType = "CollectionType"
         case viewType = "ViewType"
         case imageType = "ImageType"
+        case displayMode = "DisplayMode"
         case monitor = "Monitor"
         case itemTypes = "ItemTypes"
         case excludedFolders = "ExcludedFolders"

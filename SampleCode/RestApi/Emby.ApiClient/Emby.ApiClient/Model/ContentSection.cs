@@ -75,6 +75,12 @@ namespace Emby.ApiClient.Model
         public string ImageType { get; set; }
 
         /// <summary>
+        /// Gets or Sets DisplayMode
+        /// </summary>
+        /// <value>The DisplayMode.</value>
+        public string DisplayMode { get; set; }
+
+        /// <summary>
         /// Gets or Sets Monitor
         /// </summary>
         /// <value>The Monitor.</value>
@@ -180,6 +186,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  CollectionType: ").Append(CollectionType).Append("\n");
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
             sb.Append("  ImageType: ").Append(ImageType).Append("\n");
+            sb.Append("  DisplayMode: ").Append(DisplayMode).Append("\n");
             sb.Append("  Monitor: ").Append(Monitor).Append("\n");
             sb.Append("  ItemTypes: ").Append(ItemTypes).Append("\n");
             sb.Append("  ExcludedFolders: ").Append(ExcludedFolders).Append("\n");
@@ -259,6 +266,11 @@ namespace Emby.ApiClient.Model
                     this.ImageType == input.ImageType ||
                     (this.ImageType != null &&
                     this.ImageType.Equals(input.ImageType))
+                ) && 
+                (
+                    this.DisplayMode == input.DisplayMode ||
+                    (this.DisplayMode != null &&
+                    this.DisplayMode.Equals(input.DisplayMode))
                 ) && 
                 (
                     this.Monitor == input.Monitor ||
@@ -365,6 +377,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.ViewType.GetHashCode();
                 if (this.ImageType != null)
                     hashCode = hashCode * 59 + this.ImageType.GetHashCode();
+                if (this.DisplayMode != null)
+                    hashCode = hashCode * 59 + this.DisplayMode.GetHashCode();
                 if (this.Monitor != null)
                     hashCode = hashCode * 59 + this.Monitor.GetHashCode();
                 if (this.ItemTypes != null)

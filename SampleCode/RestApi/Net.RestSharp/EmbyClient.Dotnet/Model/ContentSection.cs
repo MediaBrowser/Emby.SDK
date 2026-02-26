@@ -34,6 +34,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="collectionType">collectionType.</param>
         /// <param name="viewType">viewType.</param>
         /// <param name="imageType">imageType.</param>
+        /// <param name="displayMode">displayMode.</param>
         /// <param name="monitor">monitor.</param>
         /// <param name="itemTypes">itemTypes.</param>
         /// <param name="excludedFolders">excludedFolders.</param>
@@ -49,7 +50,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="sortOrder">sortOrder.</param>
         /// <param name="includeNextUpInResume">includeNextUpInResume.</param>
         /// <param name="query">query.</param>
-        public ContentSection(string name = default(string), string customName = default(string), string subtitle = default(string), string id = default(string), string sectionType = default(string), string collectionType = default(string), string viewType = default(string), string imageType = default(string), List<string> monitor = default(List<string>), List<string> itemTypes = default(List<string>), List<string> excludedFolders = default(List<string>), int? cardSizeOffset = default(int?), ScrollDirection scrollDirection = default(ScrollDirection), BaseItemDto parentItem = default(BaseItemDto), string parentId = default(string), TextSectionInfo textInfo = default(TextSectionInfo), string premiumFeature = default(string), string premiumMessage = default(string), int? refreshInterval = default(int?), string sortBy = default(string), string sortOrder = default(string), bool? includeNextUpInResume = default(bool?), ItemsQuery query = default(ItemsQuery))
+        public ContentSection(string name = default(string), string customName = default(string), string subtitle = default(string), string id = default(string), string sectionType = default(string), string collectionType = default(string), string viewType = default(string), string imageType = default(string), string displayMode = default(string), List<string> monitor = default(List<string>), List<string> itemTypes = default(List<string>), List<string> excludedFolders = default(List<string>), int? cardSizeOffset = default(int?), ScrollDirection scrollDirection = default(ScrollDirection), BaseItemDto parentItem = default(BaseItemDto), string parentId = default(string), TextSectionInfo textInfo = default(TextSectionInfo), string premiumFeature = default(string), string premiumMessage = default(string), int? refreshInterval = default(int?), string sortBy = default(string), string sortOrder = default(string), bool? includeNextUpInResume = default(bool?), ItemsQuery query = default(ItemsQuery))
         {
             this.Name = name;
             this.CustomName = customName;
@@ -59,6 +60,7 @@ namespace EmbyClient.Dotnet.Model
             this.CollectionType = collectionType;
             this.ViewType = viewType;
             this.ImageType = imageType;
+            this.DisplayMode = displayMode;
             this.Monitor = monitor;
             this.ItemTypes = itemTypes;
             this.ExcludedFolders = excludedFolders;
@@ -123,6 +125,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="ImageType", EmitDefaultValue=false)]
         public string ImageType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DisplayMode
+        /// </summary>
+        [DataMember(Name="DisplayMode", EmitDefaultValue=false)]
+        public string DisplayMode { get; set; }
 
         /// <summary>
         /// Gets or Sets Monitor
@@ -230,6 +238,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  CollectionType: ").Append(CollectionType).Append("\n");
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
             sb.Append("  ImageType: ").Append(ImageType).Append("\n");
+            sb.Append("  DisplayMode: ").Append(DisplayMode).Append("\n");
             sb.Append("  Monitor: ").Append(Monitor).Append("\n");
             sb.Append("  ItemTypes: ").Append(ItemTypes).Append("\n");
             sb.Append("  ExcludedFolders: ").Append(ExcludedFolders).Append("\n");
@@ -318,6 +327,11 @@ namespace EmbyClient.Dotnet.Model
                     this.ImageType == input.ImageType ||
                     (this.ImageType != null &&
                     this.ImageType.Equals(input.ImageType))
+                ) && 
+                (
+                    this.DisplayMode == input.DisplayMode ||
+                    (this.DisplayMode != null &&
+                    this.DisplayMode.Equals(input.DisplayMode))
                 ) && 
                 (
                     this.Monitor == input.Monitor ||
@@ -424,6 +438,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.ViewType.GetHashCode();
                 if (this.ImageType != null)
                     hashCode = hashCode * 59 + this.ImageType.GetHashCode();
+                if (this.DisplayMode != null)
+                    hashCode = hashCode * 59 + this.DisplayMode.GetHashCode();
                 if (this.Monitor != null)
                     hashCode = hashCode * 59 + this.Monitor.GetHashCode();
                 if (this.ItemTypes != null)

@@ -82381,6 +82381,9 @@
         "ImageType": {
           "type": "string"
         },
+        "DisplayMode": {
+          "type": "string"
+        },
         "Monitor": {
           "type": "array",
           "items": {
