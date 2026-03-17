@@ -337,6 +337,7 @@ import UserLibraryLeaveSharedItems from './model/UserLibraryLeaveSharedItems';
 import UserLibraryMoveHomeSections from './model/UserLibraryMoveHomeSections';
 import UserLibraryOfficialRatingItem from './model/UserLibraryOfficialRatingItem';
 import UserLibraryRemoveTags from './model/UserLibraryRemoveTags';
+import UserLibraryReportItemsSearched from './model/UserLibraryReportItemsSearched';
 import UserLibraryTagItem from './model/UserLibraryTagItem';
 import UserLibraryUpdateUserItemAccess from './model/UserLibraryUpdateUserItemAccess';
 import UserNotificationInfo from './model/UserNotificationInfo';
@@ -448,7 +449,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.10.0.4
+* @version 4.10.0.6
 */
 export {
     /**
@@ -2418,6 +2419,12 @@ export {
      * @property {module:model/UserLibraryRemoveTags}
      */
     UserLibraryRemoveTags,
+
+    /**
+     * The UserLibraryReportItemsSearched model constructor.
+     * @property {module:model/UserLibraryReportItemsSearched}
+     */
+    UserLibraryReportItemsSearched,
 
     /**
      * The UserLibraryTagItem model constructor.

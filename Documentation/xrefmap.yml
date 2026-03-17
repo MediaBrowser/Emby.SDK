@@ -26384,6 +26384,15 @@ references:
 - uid: emby.restapi/postUsersByUseridPlayingitemsByIdProgress/operationlistitem
   name: postUsersByUseridPlayingitemsByIdProgress
   href: reference/RestAPI/PlaystateService.html#emby_restapi_postUsersByUseridPlayingitemsByIdProgress_operationlistitem
+- uid: emby.restapi/postUsersByUseridSearcheditems
+  name: postUsersByUseridSearcheditems
+  href: reference/RestAPI/UserLibraryService/postUsersByUseridSearcheditems.html
+- uid: emby.restapi/postUsersByUseridSearcheditems/operation
+  name: postUsersByUseridSearcheditems
+  href: reference/RestAPI/UserLibraryService/postUsersByUseridSearcheditems.html#emby_restapi_postUsersByUseridSearcheditems_operation
+- uid: emby.restapi/postUsersByUseridSearcheditems/operationlistitem
+  name: postUsersByUseridSearcheditems
+  href: reference/RestAPI/UserLibraryService.html#emby_restapi_postUsersByUseridSearcheditems_operationlistitem
 - uid: emby.restapi/postUsersByUseridTypedsettingsByKey
   name: postUsersByUseridTypedsettingsByKey
   href: reference/RestAPI/UserService/postUsersByUseridTypedsettingsByKey.html
@@ -56795,6 +56804,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Api.BaseItemsRequest.VideoTypes
   nameWithType: BaseItemsRequest.VideoTypes
+- uid: MediaBrowser.Controller.Api.BaseItemsRequest.WasSearched
+  name: WasSearched
+  href: reference/pluginapi/MediaBrowser.Controller.Api.BaseItemsRequest.html#MediaBrowser_Controller_Api_BaseItemsRequest_WasSearched
+  commentId: P:MediaBrowser.Controller.Api.BaseItemsRequest.WasSearched
+  fullName: MediaBrowser.Controller.Api.BaseItemsRequest.WasSearched
+  nameWithType: BaseItemsRequest.WasSearched
+- uid: MediaBrowser.Controller.Api.BaseItemsRequest.WasSearched*
+  name: WasSearched
+  href: reference/pluginapi/MediaBrowser.Controller.Api.BaseItemsRequest.html#MediaBrowser_Controller_Api_BaseItemsRequest_WasSearched_
+  commentId: Overload:MediaBrowser.Controller.Api.BaseItemsRequest.WasSearched
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Api.BaseItemsRequest.WasSearched
+  nameWithType: BaseItemsRequest.WasSearched
 - uid: MediaBrowser.Controller.Api.BaseItemsRequest.Years
   name: Years
   href: reference/pluginapi/MediaBrowser.Controller.Api.BaseItemsRequest.html#MediaBrowser_Controller_Api_BaseItemsRequest_Years
@@ -73933,6 +73955,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.VideoCodecs
   nameWithType: InternalItemsQuery.VideoCodecs
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.WasSearched
+  name: WasSearched
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_WasSearched
+  commentId: P:MediaBrowser.Controller.Entities.InternalItemsQuery.WasSearched
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.WasSearched
+  nameWithType: InternalItemsQuery.WasSearched
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.WasSearched*
+  name: WasSearched
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_WasSearched_
+  commentId: Overload:MediaBrowser.Controller.Entities.InternalItemsQuery.WasSearched
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.WasSearched
+  nameWithType: InternalItemsQuery.WasSearched
 - uid: MediaBrowser.Controller.Entities.InternalItemsQuery.WithImportedCollectionMatchingProviderId
   name: WithImportedCollectionMatchingProviderId
   href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_WithImportedCollectionMatchingProviderId
@@ -77846,6 +77881,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.UserItemData.AudioStreamIndex
   nameWithType: UserItemData.AudioStreamIndex
+- uid: MediaBrowser.Controller.Entities.UserItemData.DateLastSearched
+  name: DateLastSearched
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.UserItemData.html#MediaBrowser_Controller_Entities_UserItemData_DateLastSearched
+  commentId: P:MediaBrowser.Controller.Entities.UserItemData.DateLastSearched
+  fullName: MediaBrowser.Controller.Entities.UserItemData.DateLastSearched
+  nameWithType: UserItemData.DateLastSearched
+- uid: MediaBrowser.Controller.Entities.UserItemData.DateLastSearched*
+  name: DateLastSearched
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.UserItemData.html#MediaBrowser_Controller_Entities_UserItemData_DateLastSearched_
+  commentId: Overload:MediaBrowser.Controller.Entities.UserItemData.DateLastSearched
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.UserItemData.DateLastSearched
+  nameWithType: UserItemData.DateLastSearched
 - uid: MediaBrowser.Controller.Entities.UserItemData.HideFromResume
   name: HideFromResume
   href: reference/pluginapi/MediaBrowser.Controller.Entities.UserItemData.html#MediaBrowser_Controller_Entities_UserItemData_HideFromResume
@@ -123272,6 +123320,12 @@ references:
   commentId: F:MediaBrowser.Model.Entities.UserDataSaveReason.PlaybackStart
   fullName: MediaBrowser.Model.Entities.UserDataSaveReason.PlaybackStart
   nameWithType: UserDataSaveReason.PlaybackStart
+- uid: MediaBrowser.Model.Entities.UserDataSaveReason.ReportSearched
+  name: ReportSearched
+  href: reference/pluginapi/MediaBrowser.Model.Entities.UserDataSaveReason.html#MediaBrowser_Model_Entities_UserDataSaveReason_ReportSearched
+  commentId: F:MediaBrowser.Model.Entities.UserDataSaveReason.ReportSearched
+  fullName: MediaBrowser.Model.Entities.UserDataSaveReason.ReportSearched
+  nameWithType: UserDataSaveReason.ReportSearched
 - uid: MediaBrowser.Model.Entities.UserDataSaveReason.TogglePlayed
   name: TogglePlayed
   href: reference/pluginapi/MediaBrowser.Model.Entities.UserDataSaveReason.html#MediaBrowser_Model_Entities_UserDataSaveReason_TogglePlayed
@@ -135020,6 +135074,12 @@ references:
   commentId: F:MediaBrowser.Model.Querying.ItemSortBy.DateLastSaved
   fullName: MediaBrowser.Model.Querying.ItemSortBy.DateLastSaved
   nameWithType: ItemSortBy.DateLastSaved
+- uid: MediaBrowser.Model.Querying.ItemSortBy.DateLastSearched
+  name: DateLastSearched
+  href: reference/pluginapi/MediaBrowser.Model.Querying.ItemSortBy.html#MediaBrowser_Model_Querying_ItemSortBy_DateLastSearched
+  commentId: F:MediaBrowser.Model.Querying.ItemSortBy.DateLastSearched
+  fullName: MediaBrowser.Model.Querying.ItemSortBy.DateLastSearched
+  nameWithType: ItemSortBy.DateLastSearched
 - uid: MediaBrowser.Model.Querying.ItemSortBy.DateModified
   name: DateModified
   href: reference/pluginapi/MediaBrowser.Model.Querying.ItemSortBy.html#MediaBrowser_Model_Querying_ItemSortBy_DateModified

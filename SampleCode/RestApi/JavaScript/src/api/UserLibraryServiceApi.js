@@ -14,12 +14,13 @@ import BaseItemDto from '../model/BaseItemDto';
 import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 import UserItemDataDto from '../model/UserItemDataDto';
 import UserLibraryLeaveSharedItems from '../model/UserLibraryLeaveSharedItems';
+import UserLibraryReportItemsSearched from '../model/UserLibraryReportItemsSearched';
 import UserLibraryUpdateUserItemAccess from '../model/UserLibraryUpdateUserItemAccess';
 
 /**
 * UserLibraryService service.
 * @module api/UserLibraryServiceApi
-* @version 4.10.0.4
+* @version 4.10.0.6
 */
 export default class UserLibraryServiceApi {
 
@@ -906,6 +907,49 @@ export default class UserLibraryServiceApi {
      */
     postUsersByUseridItemsByIdRatingDelete() {
       return this.postUsersByUseridItemsByIdRatingDeleteWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Marks an item as a favorite
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    postUsersByUseridSearcheditemsWithHttpInfo() {
+      let postBody = body;
+
+      let pathParams = {
+        'UserId': UserId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{UserId}/SearchedItems/', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Marks an item as a favorite
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    postUsersByUseridSearcheditems() {
+      return this.postUsersByUseridSearcheditemsWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

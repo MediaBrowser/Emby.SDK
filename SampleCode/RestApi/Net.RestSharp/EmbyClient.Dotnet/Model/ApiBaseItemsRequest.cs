@@ -32,6 +32,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="maxDateCreated">maxDateCreated.</param>
         /// <param name="enableTotalRecordCount">enableTotalRecordCount.</param>
         /// <param name="matchAnyWord">matchAnyWord.</param>
+        /// <param name="wasSearched">wasSearched.</param>
         /// <param name="isDuplicate">isDuplicate.</param>
         /// <param name="name">name.</param>
         /// <param name="recordingKeyword">recordingKeyword.</param>
@@ -65,7 +66,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="hasAired">hasAired.</param>
         /// <param name="collectionTypes">collectionTypes.</param>
         /// <param name="excludeSources">excludeSources.</param>
-        public ApiBaseItemsRequest(bool? isSpecialEpisode = default(bool?), bool? is4K = default(bool?), DateTimeOffset? minDateCreated = default(DateTimeOffset?), DateTimeOffset? maxDateCreated = default(DateTimeOffset?), bool? enableTotalRecordCount = default(bool?), bool? matchAnyWord = default(bool?), bool? isDuplicate = default(bool?), string name = default(string), string recordingKeyword = default(string), LiveTvKeywordType recordingKeywordType = default(LiveTvKeywordType), int? randomSeed = default(int?), string genreIds = default(string), string collectionIds = default(string), string tagIds = default(string), string excludeTagIds = default(string), List<PersonType> itemPersonTypes = default(List<PersonType>), string excludeArtistIds = default(string), string albumArtistIds = default(string), string composerArtistIds = default(string), string contributingArtistIds = default(string), string albumIds = default(string), string outerIds = default(string), string listItemIds = default(string), string audioLanguages = default(string), string subtitleLanguages = default(string), bool? canEditItems = default(bool?), LibraryItemLinkType groupItemsInto = default(LibraryItemLinkType), bool? isStandaloneSpecial = default(bool?), int? minWidth = default(int?), int? minHeight = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), bool? groupProgramsBySeries = default(bool?), bool? groupByPresentationUniqueKey = default(bool?), List<DayOfWeek> airDays = default(List<DayOfWeek>), bool? isAiring = default(bool?), bool? hasAired = default(bool?), string collectionTypes = default(string), List<string> excludeSources = default(List<string>))
+        public ApiBaseItemsRequest(bool? isSpecialEpisode = default(bool?), bool? is4K = default(bool?), DateTimeOffset? minDateCreated = default(DateTimeOffset?), DateTimeOffset? maxDateCreated = default(DateTimeOffset?), bool? enableTotalRecordCount = default(bool?), bool? matchAnyWord = default(bool?), bool? wasSearched = default(bool?), bool? isDuplicate = default(bool?), string name = default(string), string recordingKeyword = default(string), LiveTvKeywordType recordingKeywordType = default(LiveTvKeywordType), int? randomSeed = default(int?), string genreIds = default(string), string collectionIds = default(string), string tagIds = default(string), string excludeTagIds = default(string), List<PersonType> itemPersonTypes = default(List<PersonType>), string excludeArtistIds = default(string), string albumArtistIds = default(string), string composerArtistIds = default(string), string contributingArtistIds = default(string), string albumIds = default(string), string outerIds = default(string), string listItemIds = default(string), string audioLanguages = default(string), string subtitleLanguages = default(string), bool? canEditItems = default(bool?), LibraryItemLinkType groupItemsInto = default(LibraryItemLinkType), bool? isStandaloneSpecial = default(bool?), int? minWidth = default(int?), int? minHeight = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), bool? groupProgramsBySeries = default(bool?), bool? groupByPresentationUniqueKey = default(bool?), List<DayOfWeek> airDays = default(List<DayOfWeek>), bool? isAiring = default(bool?), bool? hasAired = default(bool?), string collectionTypes = default(string), List<string> excludeSources = default(List<string>))
         {
             this.IsSpecialEpisode = isSpecialEpisode;
             this.Is4K = is4K;
@@ -73,6 +74,7 @@ namespace EmbyClient.Dotnet.Model
             this.MaxDateCreated = maxDateCreated;
             this.EnableTotalRecordCount = enableTotalRecordCount;
             this.MatchAnyWord = matchAnyWord;
+            this.WasSearched = wasSearched;
             this.IsDuplicate = isDuplicate;
             this.Name = name;
             this.RecordingKeyword = recordingKeyword;
@@ -143,6 +145,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="MatchAnyWord", EmitDefaultValue=false)]
         public bool? MatchAnyWord { get; set; }
+
+        /// <summary>
+        /// Gets or Sets WasSearched
+        /// </summary>
+        [DataMember(Name="WasSearched", EmitDefaultValue=false)]
+        public bool? WasSearched { get; set; }
 
         /// <summary>
         /// Gets or Sets IsDuplicate
@@ -356,6 +364,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  MaxDateCreated: ").Append(MaxDateCreated).Append("\n");
             sb.Append("  EnableTotalRecordCount: ").Append(EnableTotalRecordCount).Append("\n");
             sb.Append("  MatchAnyWord: ").Append(MatchAnyWord).Append("\n");
+            sb.Append("  WasSearched: ").Append(WasSearched).Append("\n");
             sb.Append("  IsDuplicate: ").Append(IsDuplicate).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  RecordingKeyword: ").Append(RecordingKeyword).Append("\n");
@@ -452,6 +461,11 @@ namespace EmbyClient.Dotnet.Model
                     this.MatchAnyWord == input.MatchAnyWord ||
                     (this.MatchAnyWord != null &&
                     this.MatchAnyWord.Equals(input.MatchAnyWord))
+                ) && 
+                (
+                    this.WasSearched == input.WasSearched ||
+                    (this.WasSearched != null &&
+                    this.WasSearched.Equals(input.WasSearched))
                 ) && 
                 (
                     this.IsDuplicate == input.IsDuplicate ||
@@ -644,6 +658,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.EnableTotalRecordCount.GetHashCode();
                 if (this.MatchAnyWord != null)
                     hashCode = hashCode * 59 + this.MatchAnyWord.GetHashCode();
+                if (this.WasSearched != null)
+                    hashCode = hashCode * 59 + this.WasSearched.GetHashCode();
                 if (this.IsDuplicate != null)
                     hashCode = hashCode * 59 + this.IsDuplicate.GetHashCode();
                 if (this.Name != null)

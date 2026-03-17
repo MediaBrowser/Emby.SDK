@@ -18,7 +18,7 @@ import PersonType from './PersonType';
 /**
 * The ApiBaseItemsRequest model module.
 * @module model/ApiBaseItemsRequest
-* @version 4.10.0.4
+* @version 4.10.0.6
 */
 export default class ApiBaseItemsRequest {
     /**
@@ -62,6 +62,9 @@ export default class ApiBaseItemsRequest {
             }
             if (data.hasOwnProperty('MatchAnyWord')) {
                 obj['MatchAnyWord'] = ApiClient.convertToType(data['MatchAnyWord'], 'Boolean');
+            }
+            if (data.hasOwnProperty('WasSearched')) {
+                obj['WasSearched'] = ApiClient.convertToType(data['WasSearched'], 'Boolean');
             }
             if (data.hasOwnProperty('IsDuplicate')) {
                 obj['IsDuplicate'] = ApiClient.convertToType(data['IsDuplicate'], 'Boolean');
@@ -190,6 +193,10 @@ export default class ApiBaseItemsRequest {
     * @member {Boolean} MatchAnyWord
     */
     'MatchAnyWord' = undefined;
+    /**
+    * @member {Boolean} WasSearched
+    */
+    'WasSearched' = undefined;
     /**
     * @member {Boolean} IsDuplicate
     */

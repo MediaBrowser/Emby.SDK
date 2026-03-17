@@ -9,6 +9,7 @@ import embyclient.model.BaseItemDto;
 import embyclient.model.QueryResultBaseItemDto;
 import embyclient.model.UserItemDataDto;
 import embyclient.model.UserLibraryLeaveSharedItems;
+import embyclient.model.UserLibraryReportItemsSearched;
 import embyclient.model.UserLibraryUpdateUserItemAccess;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -356,6 +357,22 @@ public class UserLibraryServiceApiTest {
         String userId = null;
         String id = null;
         UserItemDataDto response = api.postUsersByUseridItemsByIdRatingDelete(userId, id);
+
+        // TODO: test validations
+    }
+    /**
+     * Marks an item as a favorite
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersByUseridSearcheditemsTest() throws Exception {
+        UserLibraryReportItemsSearched body = null;
+        String userId = null;
+        api.postUsersByUseridSearcheditems(body, userId);
 
         // TODO: test validations
     }

@@ -55275,6 +55275,68 @@
       },
       "x-summary": "Gets items based on a query."
     },
+    "/Users/{UserId}/SearchedItems/": {
+      "post": {
+        "tags": [
+          "UserLibraryService"
+        ],
+        "summary": "Marks an item as a favorite",
+        "description": "Requires authentication as user",
+        "operationId": "postUsersByUseridSearcheditems",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UserId",
+            "description": "User Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "ReportItemsSearched",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserLibrary.ReportItemsSearched"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Marks an item as a favorite"
+    },
     "/Users/{UserId}/Views": {
       "get": {
         "tags": [
@@ -76526,6 +76588,9 @@
         "MatchAnyWord": {
           "type": "boolean"
         },
+        "WasSearched": {
+          "type": "boolean"
+        },
         "IsDuplicate": {
           "type": "boolean"
         },
@@ -82510,6 +82575,15 @@
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Entities.ItemsQuery"
+    },
+    "UserLibrary.ReportItemsSearched": {
+      "type": "object",
+      "properties": {
+        "WasSearched": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "Emby.Api.UserLibrary.ReportItemsSearched"
     },
     "UserLibrary.AddTags": {
       "type": "object",

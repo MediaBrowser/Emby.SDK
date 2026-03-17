@@ -8286,4 +8286,51 @@ open class UserLibraryServiceAPI {
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
+    /**
+     Marks an item as a favorite
+
+     - parameter body: (body) ReportItemsSearched 
+     - parameter userId: (path) User Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersByUseridSearcheditems(body: UserLibraryReportItemsSearched, userId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postUsersByUseridSearcheditemsWithRequestBuilder(body: body, userId: userId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Marks an item as a favorite
+     - POST /Users/{UserId}/SearchedItems/
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) ReportItemsSearched 
+     - parameter userId: (path) User Id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postUsersByUseridSearcheditemsWithRequestBuilder(body: UserLibraryReportItemsSearched, userId: String) -> RequestBuilder<Void> {
+        var path = "/Users/{UserId}/SearchedItems/"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UserId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = EmbyClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = EmbyClientAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
 }

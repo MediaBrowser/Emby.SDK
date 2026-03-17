@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.4"
+    "version": "4.10.0.6"
   },
   "servers": [
     {
@@ -82112,6 +82112,74 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
+    "/Users/{UserId}/SearchedItems/": {
+      "summary": "Marks an item as a favorite",
+      "post": {
+        "tags": [
+          "UserLibraryService"
+        ],
+        "summary": "Marks an item as a favorite",
+        "description": "Requires authentication as user",
+        "operationId": "postUsersByUseridSearcheditems",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "description": "User Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ReportItemsSearched",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.ReportItemsSearched"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.ReportItemsSearched"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Users/{UserId}/Views": {
       "get": {
         "tags": [
@@ -108932,6 +109000,10 @@
           "MatchAnyWord": {
             "type": "boolean"
           },
+          "WasSearched": {
+            "type": "boolean",
+            "nullable": true
+          },
           "IsDuplicate": {
             "type": "boolean",
             "nullable": true
@@ -115045,6 +115117,15 @@
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Entities.ItemsQuery"
+      },
+      "UserLibrary.ReportItemsSearched": {
+        "type": "object",
+        "properties": {
+          "WasSearched": {
+            "type": "boolean"
+          }
+        },
+        "x-internal-ref-name": "Emby.Api.UserLibrary.ReportItemsSearched"
       },
       "UserLibrary.AddTags": {
         "type": "object",

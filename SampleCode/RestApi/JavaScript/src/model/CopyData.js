@@ -15,7 +15,7 @@ import LibraryUserCopyOptions from './LibraryUserCopyOptions';
 /**
 * The CopyData model module.
 * @module model/CopyData
-* @version 4.10.0.4
+* @version 4.10.0.6
 */
 export default class CopyData {
     /**

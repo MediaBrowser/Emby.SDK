@@ -16,7 +16,7 @@ import SleepTimerMode from './SleepTimerMode';
 /**
 * The ApiOnPlaybackProgress model module.
 * @module model/ApiOnPlaybackProgress
-* @version 4.10.0.4
+* @version 4.10.0.6
 */
 export default class ApiOnPlaybackProgress {
     /**

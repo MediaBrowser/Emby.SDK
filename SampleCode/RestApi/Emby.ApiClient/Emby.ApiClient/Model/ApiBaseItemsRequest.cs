@@ -63,6 +63,12 @@ namespace Emby.ApiClient.Model
         public bool? MatchAnyWord { get; set; }
 
         /// <summary>
+        /// Gets or Sets WasSearched
+        /// </summary>
+        /// <value>The WasSearched.</value>
+        public bool? WasSearched { get; set; }
+
+        /// <summary>
         /// Gets or Sets IsDuplicate
         /// </summary>
         /// <value>The IsDuplicate.</value>
@@ -274,6 +280,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  MaxDateCreated: ").Append(MaxDateCreated).Append("\n");
             sb.Append("  EnableTotalRecordCount: ").Append(EnableTotalRecordCount).Append("\n");
             sb.Append("  MatchAnyWord: ").Append(MatchAnyWord).Append("\n");
+            sb.Append("  WasSearched: ").Append(WasSearched).Append("\n");
             sb.Append("  IsDuplicate: ").Append(IsDuplicate).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  RecordingKeyword: ").Append(RecordingKeyword).Append("\n");
@@ -361,6 +368,11 @@ namespace Emby.ApiClient.Model
                     this.MatchAnyWord == input.MatchAnyWord ||
                     (this.MatchAnyWord != null &&
                     this.MatchAnyWord.Equals(input.MatchAnyWord))
+                ) && 
+                (
+                    this.WasSearched == input.WasSearched ||
+                    (this.WasSearched != null &&
+                    this.WasSearched.Equals(input.WasSearched))
                 ) && 
                 (
                     this.IsDuplicate == input.IsDuplicate ||
@@ -553,6 +565,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.EnableTotalRecordCount.GetHashCode();
                 if (this.MatchAnyWord != null)
                     hashCode = hashCode * 59 + this.MatchAnyWord.GetHashCode();
+                if (this.WasSearched != null)
+                    hashCode = hashCode * 59 + this.WasSearched.GetHashCode();
                 if (this.IsDuplicate != null)
                     hashCode = hashCode * 59 + this.IsDuplicate.GetHashCode();
                 if (this.Name != null)
