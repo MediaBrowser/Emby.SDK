@@ -37,10 +37,13 @@ open class ContentServiceAPI {
   "PremiumFeature" : "PremiumFeature",
   "ScrollDirection" : "Horizontal",
   "Query" : {
+    "IsResumable" : true,
     "StudioIds" : [ "StudioIds", "StudioIds" ],
     "TagIds" : [ "TagIds", "TagIds" ],
     "CollectionTypes" : [ "CollectionTypes", "CollectionTypes" ],
     "GenreIds" : [ "GenreIds", "GenreIds" ],
+    "IsPlayed" : true,
+    "IsUnplayed" : true,
     "IsFavorite" : true
   },
   "SortBy" : "SortBy",
@@ -625,10 +628,13 @@ open class ContentServiceAPI {
   "PremiumFeature" : "PremiumFeature",
   "ScrollDirection" : "Horizontal",
   "Query" : {
+    "IsResumable" : true,
     "StudioIds" : [ "StudioIds", "StudioIds" ],
     "TagIds" : [ "TagIds", "TagIds" ],
     "CollectionTypes" : [ "CollectionTypes", "CollectionTypes" ],
     "GenreIds" : [ "GenreIds", "GenreIds" ],
+    "IsPlayed" : true,
+    "IsUnplayed" : true,
     "IsFavorite" : true
   },
   "SortBy" : "SortBy",

@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.7
+ * OpenAPI spec version: 4.10.0.8
  * 
  *
  * NOTE: This file is auto generated.
@@ -5289,6 +5289,24 @@ export interface ItemsQuery {
      * @memberof ItemsQuery
      */
     IsFavorite?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ItemsQuery
+     */
+    IsPlayed?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ItemsQuery
+     */
+    IsUnplayed?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ItemsQuery
+     */
+    IsResumable?: boolean;
 }
 /**
  * Class for unified presentation of all information associated with a specific codec level.  

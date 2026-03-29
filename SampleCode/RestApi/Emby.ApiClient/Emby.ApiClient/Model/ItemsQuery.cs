@@ -57,6 +57,24 @@ namespace Emby.ApiClient.Model
         public bool? IsFavorite { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsPlayed
+        /// </summary>
+        /// <value>The IsPlayed.</value>
+        public bool? IsPlayed { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsUnplayed
+        /// </summary>
+        /// <value>The IsUnplayed.</value>
+        public bool? IsUnplayed { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsResumable
+        /// </summary>
+        /// <value>The IsResumable.</value>
+        public bool? IsResumable { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -69,6 +87,9 @@ namespace Emby.ApiClient.Model
             sb.Append("  GenreIds: ").Append(GenreIds).Append("\n");
             sb.Append("  CollectionTypes: ").Append(CollectionTypes).Append("\n");
             sb.Append("  IsFavorite: ").Append(IsFavorite).Append("\n");
+            sb.Append("  IsPlayed: ").Append(IsPlayed).Append("\n");
+            sb.Append("  IsUnplayed: ").Append(IsUnplayed).Append("\n");
+            sb.Append("  IsResumable: ").Append(IsResumable).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -122,6 +143,21 @@ namespace Emby.ApiClient.Model
                     this.IsFavorite == input.IsFavorite ||
                     (this.IsFavorite != null &&
                     this.IsFavorite.Equals(input.IsFavorite))
+                ) && 
+                (
+                    this.IsPlayed == input.IsPlayed ||
+                    (this.IsPlayed != null &&
+                    this.IsPlayed.Equals(input.IsPlayed))
+                ) && 
+                (
+                    this.IsUnplayed == input.IsUnplayed ||
+                    (this.IsUnplayed != null &&
+                    this.IsUnplayed.Equals(input.IsUnplayed))
+                ) && 
+                (
+                    this.IsResumable == input.IsResumable ||
+                    (this.IsResumable != null &&
+                    this.IsResumable.Equals(input.IsResumable))
                 );
         }
 
@@ -144,6 +180,12 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.CollectionTypes.GetHashCode();
                 if (this.IsFavorite != null)
                     hashCode = hashCode * 59 + this.IsFavorite.GetHashCode();
+                if (this.IsPlayed != null)
+                    hashCode = hashCode * 59 + this.IsPlayed.GetHashCode();
+                if (this.IsUnplayed != null)
+                    hashCode = hashCode * 59 + this.IsUnplayed.GetHashCode();
+                if (this.IsResumable != null)
+                    hashCode = hashCode * 59 + this.IsResumable.GetHashCode();
                 return hashCode;
             }
         }

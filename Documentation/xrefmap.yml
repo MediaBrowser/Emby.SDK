@@ -120846,6 +120846,45 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Entities.ItemsQuery.IsFavorite
   nameWithType: ItemsQuery.IsFavorite
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsPlayed
+  name: IsPlayed
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsPlayed
+  commentId: P:MediaBrowser.Model.Entities.ItemsQuery.IsPlayed
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsPlayed
+  nameWithType: ItemsQuery.IsPlayed
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsPlayed*
+  name: IsPlayed
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsPlayed_
+  commentId: Overload:MediaBrowser.Model.Entities.ItemsQuery.IsPlayed
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsPlayed
+  nameWithType: ItemsQuery.IsPlayed
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsResumable
+  name: IsResumable
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsResumable
+  commentId: P:MediaBrowser.Model.Entities.ItemsQuery.IsResumable
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsResumable
+  nameWithType: ItemsQuery.IsResumable
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsResumable*
+  name: IsResumable
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsResumable_
+  commentId: Overload:MediaBrowser.Model.Entities.ItemsQuery.IsResumable
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsResumable
+  nameWithType: ItemsQuery.IsResumable
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsUnplayed
+  name: IsUnplayed
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsUnplayed
+  commentId: P:MediaBrowser.Model.Entities.ItemsQuery.IsUnplayed
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsUnplayed
+  nameWithType: ItemsQuery.IsUnplayed
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsUnplayed*
+  name: IsUnplayed
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsUnplayed_
+  commentId: Overload:MediaBrowser.Model.Entities.ItemsQuery.IsUnplayed
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsUnplayed
+  nameWithType: ItemsQuery.IsUnplayed
 - uid: MediaBrowser.Model.Entities.ItemsQuery.StudioIds
   name: StudioIds
   href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_StudioIds

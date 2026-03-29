@@ -82572,6 +82572,15 @@
         },
         "IsFavorite": {
           "type": "boolean"
+        },
+        "IsPlayed": {
+          "type": "boolean"
+        },
+        "IsUnplayed": {
+          "type": "boolean"
+        },
+        "IsResumable": {
+          "type": "boolean"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Entities.ItemsQuery"

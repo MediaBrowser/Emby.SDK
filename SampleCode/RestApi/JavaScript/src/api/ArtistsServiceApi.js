@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ArtistsService service.
 * @module api/ArtistsServiceApi
-* @version 4.10.0.7
+* @version 4.10.0.8
 */
 export default class ArtistsServiceApi {
 

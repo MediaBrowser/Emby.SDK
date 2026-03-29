@@ -15,7 +15,7 @@ import SessionPartyInfoResult from '../model/SessionPartyInfoResult';
 /**
 * PartyService service.
 * @module api/PartyServiceApi
-* @version 4.10.0.7
+* @version 4.10.0.8
 */
 export default class PartyServiceApi {
 

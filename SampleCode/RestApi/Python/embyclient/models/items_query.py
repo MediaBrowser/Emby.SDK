@@ -26,7 +26,10 @@ class ItemsQuery(object):
         'tag_ids': 'list[str]',
         'genre_ids': 'list[str]',
         'collection_types': 'list[str]',
-        'is_favorite': 'bool'
+        'is_favorite': 'bool',
+        'is_played': 'bool',
+        'is_unplayed': 'bool',
+        'is_resumable': 'bool'
     }
 
     attribute_map = {
@@ -34,16 +37,22 @@ class ItemsQuery(object):
         'tag_ids': 'TagIds',
         'genre_ids': 'GenreIds',
         'collection_types': 'CollectionTypes',
-        'is_favorite': 'IsFavorite'
+        'is_favorite': 'IsFavorite',
+        'is_played': 'IsPlayed',
+        'is_unplayed': 'IsUnplayed',
+        'is_resumable': 'IsResumable'
     }
 
-    def __init__(self, studio_ids=None, tag_ids=None, genre_ids=None, collection_types=None, is_favorite=None):  # noqa: E501
+    def __init__(self, studio_ids=None, tag_ids=None, genre_ids=None, collection_types=None, is_favorite=None, is_played=None, is_unplayed=None, is_resumable=None):  # noqa: E501
         """ItemsQuery - a model defined in Swagger"""  # noqa: E501
         self._studio_ids = None
         self._tag_ids = None
         self._genre_ids = None
         self._collection_types = None
         self._is_favorite = None
+        self._is_played = None
+        self._is_unplayed = None
+        self._is_resumable = None
         self.discriminator = None
         if studio_ids is not None:
             self.studio_ids = studio_ids
@@ -55,6 +64,12 @@ class ItemsQuery(object):
             self.collection_types = collection_types
         if is_favorite is not None:
             self.is_favorite = is_favorite
+        if is_played is not None:
+            self.is_played = is_played
+        if is_unplayed is not None:
+            self.is_unplayed = is_unplayed
+        if is_resumable is not None:
+            self.is_resumable = is_resumable
 
     @property
     def studio_ids(self):
@@ -160,6 +175,69 @@ class ItemsQuery(object):
         """
 
         self._is_favorite = is_favorite
+
+    @property
+    def is_played(self):
+        """Gets the is_played of this ItemsQuery.  # noqa: E501
+
+
+        :return: The is_played of this ItemsQuery.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_played
+
+    @is_played.setter
+    def is_played(self, is_played):
+        """Sets the is_played of this ItemsQuery.
+
+
+        :param is_played: The is_played of this ItemsQuery.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_played = is_played
+
+    @property
+    def is_unplayed(self):
+        """Gets the is_unplayed of this ItemsQuery.  # noqa: E501
+
+
+        :return: The is_unplayed of this ItemsQuery.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_unplayed
+
+    @is_unplayed.setter
+    def is_unplayed(self, is_unplayed):
+        """Sets the is_unplayed of this ItemsQuery.
+
+
+        :param is_unplayed: The is_unplayed of this ItemsQuery.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_unplayed = is_unplayed
+
+    @property
+    def is_resumable(self):
+        """Gets the is_resumable of this ItemsQuery.  # noqa: E501
+
+
+        :return: The is_resumable of this ItemsQuery.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_resumable
+
+    @is_resumable.setter
+    def is_resumable(self, is_resumable):
+        """Sets the is_resumable of this ItemsQuery.
+
+
+        :param is_resumable: The is_resumable of this ItemsQuery.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_resumable = is_resumable
 
     def to_dict(self):
         """Returns the model properties as a dict"""

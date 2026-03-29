@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ItemsQuery model module.
 * @module model/ItemsQuery
-* @version 4.10.0.7
+* @version 4.10.0.8
 */
 export default class ItemsQuery {
     /**
@@ -56,6 +56,15 @@ export default class ItemsQuery {
             if (data.hasOwnProperty('IsFavorite')) {
                 obj['IsFavorite'] = ApiClient.convertToType(data['IsFavorite'], 'Boolean');
             }
+            if (data.hasOwnProperty('IsPlayed')) {
+                obj['IsPlayed'] = ApiClient.convertToType(data['IsPlayed'], 'Boolean');
+            }
+            if (data.hasOwnProperty('IsUnplayed')) {
+                obj['IsUnplayed'] = ApiClient.convertToType(data['IsUnplayed'], 'Boolean');
+            }
+            if (data.hasOwnProperty('IsResumable')) {
+                obj['IsResumable'] = ApiClient.convertToType(data['IsResumable'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -80,6 +89,18 @@ export default class ItemsQuery {
     * @member {Boolean} IsFavorite
     */
     'IsFavorite' = undefined;
+    /**
+    * @member {Boolean} IsPlayed
+    */
+    'IsPlayed' = undefined;
+    /**
+    * @member {Boolean} IsUnplayed
+    */
+    'IsUnplayed' = undefined;
+    /**
+    * @member {Boolean} IsResumable
+    */
+    'IsResumable' = undefined;
 
 
 

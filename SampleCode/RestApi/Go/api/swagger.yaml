@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.10.0.7
+  version: 4.10.0.8
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -112498,6 +112498,7 @@ components:
         PremiumFeature: PremiumFeature
         ScrollDirection: Horizontal
         Query:
+          IsResumable: true
           StudioIds:
           - StudioIds
           - StudioIds
@@ -112510,6 +112511,8 @@ components:
           GenreIds:
           - GenreIds
           - GenreIds
+          IsPlayed: true
+          IsUnplayed: true
           IsFavorite: true
         SortBy: SortBy
         SortOrder: SortOrder
@@ -113168,7 +113171,17 @@ components:
         IsFavorite:
           type: boolean
           nullable: true
+        IsPlayed:
+          type: boolean
+          nullable: true
+        IsUnplayed:
+          type: boolean
+          nullable: true
+        IsResumable:
+          type: boolean
+          nullable: true
       example:
+        IsResumable: true
         StudioIds:
         - StudioIds
         - StudioIds
@@ -113181,6 +113194,8 @@ components:
         GenreIds:
         - GenreIds
         - GenreIds
+        IsPlayed: true
+        IsUnplayed: true
         IsFavorite: true
       x-internal-ref-name: MediaBrowser.Model.Entities.ItemsQuery
     UserLibrary.ReportItemsSearched:

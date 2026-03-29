@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.7"
+    "version": "4.10.0.8"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -82573,6 +82573,15 @@
           }
         },
         "IsFavorite": {
+          "type": "boolean"
+        },
+        "IsPlayed": {
+          "type": "boolean"
+        },
+        "IsUnplayed": {
+          "type": "boolean"
+        },
+        "IsResumable": {
           "type": "boolean"
         }
       },
