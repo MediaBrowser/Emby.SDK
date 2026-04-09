@@ -82576,9 +82576,6 @@
         "IsPlayed": {
           "type": "boolean"
         },
-        "IsUnplayed": {
-          "type": "boolean"
-        },
         "IsResumable": {
           "type": "boolean"
         }

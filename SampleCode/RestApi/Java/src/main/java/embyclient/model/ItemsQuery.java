@@ -40,9 +40,6 @@ public class ItemsQuery {
   @SerializedName("IsPlayed")
   private Boolean isPlayed = null;
 
-  @SerializedName("IsUnplayed")
-  private Boolean isUnplayed = null;
-
   @SerializedName("IsResumable")
   private Boolean isResumable = null;
 
@@ -186,24 +183,6 @@ public class ItemsQuery {
     this.isPlayed = isPlayed;
   }
 
-  public ItemsQuery isUnplayed(Boolean isUnplayed) {
-    this.isUnplayed = isUnplayed;
-    return this;
-  }
-
-   /**
-   * Get isUnplayed
-   * @return isUnplayed
-  **/
-  @Schema(description = "")
-  public Boolean isIsUnplayed() {
-    return isUnplayed;
-  }
-
-  public void setIsUnplayed(Boolean isUnplayed) {
-    this.isUnplayed = isUnplayed;
-  }
-
   public ItemsQuery isResumable(Boolean isResumable) {
     this.isResumable = isResumable;
     return this;
@@ -238,13 +217,12 @@ public class ItemsQuery {
         Objects.equals(this.collectionTypes, itemsQuery.collectionTypes) &&
         Objects.equals(this.isFavorite, itemsQuery.isFavorite) &&
         Objects.equals(this.isPlayed, itemsQuery.isPlayed) &&
-        Objects.equals(this.isUnplayed, itemsQuery.isUnplayed) &&
         Objects.equals(this.isResumable, itemsQuery.isResumable);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(studioIds, tagIds, genreIds, collectionTypes, isFavorite, isPlayed, isUnplayed, isResumable);
+    return Objects.hash(studioIds, tagIds, genreIds, collectionTypes, isFavorite, isPlayed, isResumable);
   }
 
 
@@ -259,7 +237,6 @@ public class ItemsQuery {
     sb.append("    collectionTypes: ").append(toIndentedString(collectionTypes)).append("\n");
     sb.append("    isFavorite: ").append(toIndentedString(isFavorite)).append("\n");
     sb.append("    isPlayed: ").append(toIndentedString(isPlayed)).append("\n");
-    sb.append("    isUnplayed: ").append(toIndentedString(isUnplayed)).append("\n");
     sb.append("    isResumable: ").append(toIndentedString(isResumable)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.8
+ * OpenAPI spec version: 4.10.0.9
  * 
  *
  * NOTE: This file is auto generated.
@@ -5295,12 +5295,6 @@ export interface ItemsQuery {
      * @memberof ItemsQuery
      */
     IsPlayed?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ItemsQuery
-     */
-    IsUnplayed?: boolean;
     /**
      * 
      * @type {boolean}

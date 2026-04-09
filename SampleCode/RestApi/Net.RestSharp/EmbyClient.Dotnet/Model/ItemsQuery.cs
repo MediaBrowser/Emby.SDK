@@ -32,9 +32,8 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="collectionTypes">collectionTypes.</param>
         /// <param name="isFavorite">isFavorite.</param>
         /// <param name="isPlayed">isPlayed.</param>
-        /// <param name="isUnplayed">isUnplayed.</param>
         /// <param name="isResumable">isResumable.</param>
-        public ItemsQuery(List<string> studioIds = default(List<string>), List<string> tagIds = default(List<string>), List<string> genreIds = default(List<string>), List<string> collectionTypes = default(List<string>), bool? isFavorite = default(bool?), bool? isPlayed = default(bool?), bool? isUnplayed = default(bool?), bool? isResumable = default(bool?))
+        public ItemsQuery(List<string> studioIds = default(List<string>), List<string> tagIds = default(List<string>), List<string> genreIds = default(List<string>), List<string> collectionTypes = default(List<string>), bool? isFavorite = default(bool?), bool? isPlayed = default(bool?), bool? isResumable = default(bool?))
         {
             this.StudioIds = studioIds;
             this.TagIds = tagIds;
@@ -42,7 +41,6 @@ namespace EmbyClient.Dotnet.Model
             this.CollectionTypes = collectionTypes;
             this.IsFavorite = isFavorite;
             this.IsPlayed = isPlayed;
-            this.IsUnplayed = isUnplayed;
             this.IsResumable = isResumable;
         }
         
@@ -83,12 +81,6 @@ namespace EmbyClient.Dotnet.Model
         public bool? IsPlayed { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsUnplayed
-        /// </summary>
-        [DataMember(Name="IsUnplayed", EmitDefaultValue=false)]
-        public bool? IsUnplayed { get; set; }
-
-        /// <summary>
         /// Gets or Sets IsResumable
         /// </summary>
         [DataMember(Name="IsResumable", EmitDefaultValue=false)]
@@ -108,7 +100,6 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  CollectionTypes: ").Append(CollectionTypes).Append("\n");
             sb.Append("  IsFavorite: ").Append(IsFavorite).Append("\n");
             sb.Append("  IsPlayed: ").Append(IsPlayed).Append("\n");
-            sb.Append("  IsUnplayed: ").Append(IsUnplayed).Append("\n");
             sb.Append("  IsResumable: ").Append(IsResumable).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -179,11 +170,6 @@ namespace EmbyClient.Dotnet.Model
                     this.IsPlayed.Equals(input.IsPlayed))
                 ) && 
                 (
-                    this.IsUnplayed == input.IsUnplayed ||
-                    (this.IsUnplayed != null &&
-                    this.IsUnplayed.Equals(input.IsUnplayed))
-                ) && 
-                (
                     this.IsResumable == input.IsResumable ||
                     (this.IsResumable != null &&
                     this.IsResumable.Equals(input.IsResumable))
@@ -211,8 +197,6 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.IsFavorite.GetHashCode();
                 if (this.IsPlayed != null)
                     hashCode = hashCode * 59 + this.IsPlayed.GetHashCode();
-                if (this.IsUnplayed != null)
-                    hashCode = hashCode * 59 + this.IsUnplayed.GetHashCode();
                 if (this.IsResumable != null)
                     hashCode = hashCode * 59 + this.IsResumable.GetHashCode();
                 return hashCode;

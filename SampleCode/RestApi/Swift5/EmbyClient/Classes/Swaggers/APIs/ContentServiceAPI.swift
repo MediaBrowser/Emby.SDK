@@ -43,7 +43,6 @@ open class ContentServiceAPI {
     "CollectionTypes" : [ "CollectionTypes", "CollectionTypes" ],
     "GenreIds" : [ "GenreIds", "GenreIds" ],
     "IsPlayed" : true,
-    "IsUnplayed" : true,
     "IsFavorite" : true
   },
   "SortBy" : "SortBy",
@@ -634,7 +633,6 @@ open class ContentServiceAPI {
     "CollectionTypes" : [ "CollectionTypes", "CollectionTypes" ],
     "GenreIds" : [ "GenreIds", "GenreIds" ],
     "IsPlayed" : true,
-    "IsUnplayed" : true,
     "IsFavorite" : true
   },
   "SortBy" : "SortBy",

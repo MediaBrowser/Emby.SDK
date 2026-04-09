@@ -17,17 +17,15 @@ public struct ItemsQuery: Codable {
     public var collectionTypes: [String]?
     public var isFavorite: Bool?
     public var isPlayed: Bool?
-    public var isUnplayed: Bool?
     public var isResumable: Bool?
 
-    public init(studioIds: [String]? = nil, tagIds: [String]? = nil, genreIds: [String]? = nil, collectionTypes: [String]? = nil, isFavorite: Bool? = nil, isPlayed: Bool? = nil, isUnplayed: Bool? = nil, isResumable: Bool? = nil) {
+    public init(studioIds: [String]? = nil, tagIds: [String]? = nil, genreIds: [String]? = nil, collectionTypes: [String]? = nil, isFavorite: Bool? = nil, isPlayed: Bool? = nil, isResumable: Bool? = nil) {
         self.studioIds = studioIds
         self.tagIds = tagIds
         self.genreIds = genreIds
         self.collectionTypes = collectionTypes
         self.isFavorite = isFavorite
         self.isPlayed = isPlayed
-        self.isUnplayed = isUnplayed
         self.isResumable = isResumable
     }
 
@@ -38,7 +36,6 @@ public struct ItemsQuery: Codable {
         case collectionTypes = "CollectionTypes"
         case isFavorite = "IsFavorite"
         case isPlayed = "IsPlayed"
-        case isUnplayed = "IsUnplayed"
         case isResumable = "IsResumable"
     }
 

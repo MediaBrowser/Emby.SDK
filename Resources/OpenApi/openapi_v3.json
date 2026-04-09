@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.8"
+    "version": "4.10.0.9"
   },
   "servers": [
     {
@@ -115116,10 +115116,6 @@
             "nullable": true
           },
           "IsPlayed": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "IsUnplayed": {
             "type": "boolean",
             "nullable": true
           },

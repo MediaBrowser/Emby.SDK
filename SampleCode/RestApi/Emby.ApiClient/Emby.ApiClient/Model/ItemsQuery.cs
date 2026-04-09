@@ -63,12 +63,6 @@ namespace Emby.ApiClient.Model
         public bool? IsPlayed { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsUnplayed
-        /// </summary>
-        /// <value>The IsUnplayed.</value>
-        public bool? IsUnplayed { get; set; }
-
-        /// <summary>
         /// Gets or Sets IsResumable
         /// </summary>
         /// <value>The IsResumable.</value>
@@ -88,7 +82,6 @@ namespace Emby.ApiClient.Model
             sb.Append("  CollectionTypes: ").Append(CollectionTypes).Append("\n");
             sb.Append("  IsFavorite: ").Append(IsFavorite).Append("\n");
             sb.Append("  IsPlayed: ").Append(IsPlayed).Append("\n");
-            sb.Append("  IsUnplayed: ").Append(IsUnplayed).Append("\n");
             sb.Append("  IsResumable: ").Append(IsResumable).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -150,11 +143,6 @@ namespace Emby.ApiClient.Model
                     this.IsPlayed.Equals(input.IsPlayed))
                 ) && 
                 (
-                    this.IsUnplayed == input.IsUnplayed ||
-                    (this.IsUnplayed != null &&
-                    this.IsUnplayed.Equals(input.IsUnplayed))
-                ) && 
-                (
                     this.IsResumable == input.IsResumable ||
                     (this.IsResumable != null &&
                     this.IsResumable.Equals(input.IsResumable))
@@ -182,8 +170,6 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.IsFavorite.GetHashCode();
                 if (this.IsPlayed != null)
                     hashCode = hashCode * 59 + this.IsPlayed.GetHashCode();
-                if (this.IsUnplayed != null)
-                    hashCode = hashCode * 59 + this.IsUnplayed.GetHashCode();
                 if (this.IsResumable != null)
                     hashCode = hashCode * 59 + this.IsResumable.GetHashCode();
                 return hashCode;

@@ -28,7 +28,6 @@ class ItemsQuery(object):
         'collection_types': 'list[str]',
         'is_favorite': 'bool',
         'is_played': 'bool',
-        'is_unplayed': 'bool',
         'is_resumable': 'bool'
     }
 
@@ -39,11 +38,10 @@ class ItemsQuery(object):
         'collection_types': 'CollectionTypes',
         'is_favorite': 'IsFavorite',
         'is_played': 'IsPlayed',
-        'is_unplayed': 'IsUnplayed',
         'is_resumable': 'IsResumable'
     }
 
-    def __init__(self, studio_ids=None, tag_ids=None, genre_ids=None, collection_types=None, is_favorite=None, is_played=None, is_unplayed=None, is_resumable=None):  # noqa: E501
+    def __init__(self, studio_ids=None, tag_ids=None, genre_ids=None, collection_types=None, is_favorite=None, is_played=None, is_resumable=None):  # noqa: E501
         """ItemsQuery - a model defined in Swagger"""  # noqa: E501
         self._studio_ids = None
         self._tag_ids = None
@@ -51,7 +49,6 @@ class ItemsQuery(object):
         self._collection_types = None
         self._is_favorite = None
         self._is_played = None
-        self._is_unplayed = None
         self._is_resumable = None
         self.discriminator = None
         if studio_ids is not None:
@@ -66,8 +63,6 @@ class ItemsQuery(object):
             self.is_favorite = is_favorite
         if is_played is not None:
             self.is_played = is_played
-        if is_unplayed is not None:
-            self.is_unplayed = is_unplayed
         if is_resumable is not None:
             self.is_resumable = is_resumable
 
@@ -196,27 +191,6 @@ class ItemsQuery(object):
         """
 
         self._is_played = is_played
-
-    @property
-    def is_unplayed(self):
-        """Gets the is_unplayed of this ItemsQuery.  # noqa: E501
-
-
-        :return: The is_unplayed of this ItemsQuery.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_unplayed
-
-    @is_unplayed.setter
-    def is_unplayed(self, is_unplayed):
-        """Sets the is_unplayed of this ItemsQuery.
-
-
-        :param is_unplayed: The is_unplayed of this ItemsQuery.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_unplayed = is_unplayed
 
     @property
     def is_resumable(self):
