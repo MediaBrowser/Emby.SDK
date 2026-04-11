@@ -15,7 +15,7 @@ import PersonType from './PersonType';
 /**
 * The BaseItemPerson model module.
 * @module model/BaseItemPerson
-* @version 4.10.0.9
+* @version 4.10.0.10
 */
 export default class BaseItemPerson {
     /**
