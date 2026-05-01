@@ -15,7 +15,7 @@ import EnumsUICommandType from './EnumsUICommandType';
 /**
 * The UICommand model module.
 * @module model/UICommand
-* @version 4.10.0.10
+* @version 4.10.0.11
 */
 export default class UICommand {
     /**

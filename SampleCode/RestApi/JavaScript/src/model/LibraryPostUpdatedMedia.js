@@ -15,7 +15,7 @@ import LibraryMediaUpdateInfo from './LibraryMediaUpdateInfo';
 /**
 * The LibraryPostUpdatedMedia model module.
 * @module model/LibraryPostUpdatedMedia
-* @version 4.10.0.10
+* @version 4.10.0.11
 */
 export default class LibraryPostUpdatedMedia {
     /**

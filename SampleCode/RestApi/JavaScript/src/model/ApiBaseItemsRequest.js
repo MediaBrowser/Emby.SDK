@@ -18,7 +18,7 @@ import PersonType from './PersonType';
 /**
 * The ApiBaseItemsRequest model module.
 * @module model/ApiBaseItemsRequest
-* @version 4.10.0.10
+* @version 4.10.0.11
 */
 export default class ApiBaseItemsRequest {
     /**
