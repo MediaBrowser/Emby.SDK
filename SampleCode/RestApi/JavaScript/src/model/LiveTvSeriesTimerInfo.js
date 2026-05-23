@@ -19,7 +19,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The LiveTvSeriesTimerInfo model module.
 * @module model/LiveTvSeriesTimerInfo
-* @version 4.10.0.11
+* @version 4.10.0.12
 */
 export default class LiveTvSeriesTimerInfo {
     /**
@@ -48,9 +48,6 @@ export default class LiveTvSeriesTimerInfo {
             
             if (data.hasOwnProperty('Id')) {
                 obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
-            }
-            if (data.hasOwnProperty('ChannelId')) {
-                obj['ChannelId'] = ApiClient.convertToType(data['ChannelId'], 'String');
             }
             if (data.hasOwnProperty('ChannelIds')) {
                 obj['ChannelIds'] = ApiClient.convertToType(data['ChannelIds'], ['String']);
@@ -136,11 +133,6 @@ export default class LiveTvSeriesTimerInfo {
     * @member {String} Id
     */
     'Id' = undefined;
-    /**
-    * ChannelId of the recording.
-    * @member {String} ChannelId
-    */
-    'ChannelId' = undefined;
     /**
     * @member {Array.<String>} ChannelIds
     */

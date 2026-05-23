@@ -18,7 +18,7 @@ import TextSectionInfo from './TextSectionInfo';
 /**
 * The ContentSection model module.
 * @module model/ContentSection
-* @version 4.10.0.11
+* @version 4.10.0.12
 */
 export default class ContentSection {
     /**

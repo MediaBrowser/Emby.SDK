@@ -12,8 +12,6 @@ import (
 type LiveTvSeriesTimerInfo struct {
 	// Id of the recording.
 	Id string `json:"Id,omitempty"`
-	// ChannelId of the recording.
-	ChannelId string `json:"ChannelId,omitempty"`
 	ChannelIds []string `json:"ChannelIds,omitempty"`
 	ParentFolderId int64 `json:"ParentFolderId,omitempty"`
 	// The program identifier.

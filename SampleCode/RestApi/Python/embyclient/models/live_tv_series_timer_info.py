@@ -23,7 +23,6 @@ class LiveTvSeriesTimerInfo(object):
     """
     swagger_types = {
         'id': 'str',
-        'channel_id': 'str',
         'channel_ids': 'list[str]',
         'parent_folder_id': 'int',
         'program_id': 'str',
@@ -53,7 +52,6 @@ class LiveTvSeriesTimerInfo(object):
 
     attribute_map = {
         'id': 'Id',
-        'channel_id': 'ChannelId',
         'channel_ids': 'ChannelIds',
         'parent_folder_id': 'ParentFolderId',
         'program_id': 'ProgramId',
@@ -81,10 +79,9 @@ class LiveTvSeriesTimerInfo(object):
         'name': 'Name'
     }
 
-    def __init__(self, id=None, channel_id=None, channel_ids=None, parent_folder_id=None, program_id=None, service_name=None, overview=None, start_date=None, end_date=None, record_any_time=None, keep_up_to=None, keep_until=None, skip_episodes_in_library=None, match_existing_items_with_any_library=None, record_new_only=None, days=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, is_post_padding_required=None, series_id=None, provider_ids=None, max_recording_seconds=None, keywords=None, timer_type=None, name=None):  # noqa: E501
+    def __init__(self, id=None, channel_ids=None, parent_folder_id=None, program_id=None, service_name=None, overview=None, start_date=None, end_date=None, record_any_time=None, keep_up_to=None, keep_until=None, skip_episodes_in_library=None, match_existing_items_with_any_library=None, record_new_only=None, days=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, is_post_padding_required=None, series_id=None, provider_ids=None, max_recording_seconds=None, keywords=None, timer_type=None, name=None):  # noqa: E501
         """LiveTvSeriesTimerInfo - a model defined in Swagger"""  # noqa: E501
         self._id = None
-        self._channel_id = None
         self._channel_ids = None
         self._parent_folder_id = None
         self._program_id = None
@@ -113,8 +110,6 @@ class LiveTvSeriesTimerInfo(object):
         self.discriminator = None
         if id is not None:
             self.id = id
-        if channel_id is not None:
-            self.channel_id = channel_id
         if channel_ids is not None:
             self.channel_ids = channel_ids
         if parent_folder_id is not None:
@@ -188,29 +183,6 @@ class LiveTvSeriesTimerInfo(object):
         """
 
         self._id = id
-
-    @property
-    def channel_id(self):
-        """Gets the channel_id of this LiveTvSeriesTimerInfo.  # noqa: E501
-
-        ChannelId of the recording.  # noqa: E501
-
-        :return: The channel_id of this LiveTvSeriesTimerInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._channel_id
-
-    @channel_id.setter
-    def channel_id(self, channel_id):
-        """Sets the channel_id of this LiveTvSeriesTimerInfo.
-
-        ChannelId of the recording.  # noqa: E501
-
-        :param channel_id: The channel_id of this LiveTvSeriesTimerInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._channel_id = channel_id
 
     @property
     def channel_ids(self):

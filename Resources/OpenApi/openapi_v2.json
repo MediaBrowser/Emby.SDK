@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.11"
+    "version": "4.10.0.12"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -77086,10 +77086,6 @@
       "properties": {
         "Id": {
           "description": "Id of the recording.",
-          "type": "string"
-        },
-        "ChannelId": {
-          "description": "ChannelId of the recording.",
           "type": "string"
         },
         "ChannelIds": {

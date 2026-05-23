@@ -77086,10 +77086,6 @@
           "description": "Id of the recording.",
           "type": "string"
         },
-        "ChannelId": {
-          "description": "ChannelId of the recording.",
-          "type": "string"
-        },
         "ChannelIds": {
           "type": "array",
           "items": {

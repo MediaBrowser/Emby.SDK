@@ -88999,19 +88999,6 @@ references:
   commentId: T:MediaBrowser.Controller.LiveTv.SeriesTimerInfo
   fullName: MediaBrowser.Controller.LiveTv.SeriesTimerInfo
   nameWithType: SeriesTimerInfo
-- uid: MediaBrowser.Controller.LiveTv.SeriesTimerInfo.ChannelId
-  name: ChannelId
-  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.SeriesTimerInfo.html#MediaBrowser_Controller_LiveTv_SeriesTimerInfo_ChannelId
-  commentId: P:MediaBrowser.Controller.LiveTv.SeriesTimerInfo.ChannelId
-  fullName: MediaBrowser.Controller.LiveTv.SeriesTimerInfo.ChannelId
-  nameWithType: SeriesTimerInfo.ChannelId
-- uid: MediaBrowser.Controller.LiveTv.SeriesTimerInfo.ChannelId*
-  name: ChannelId
-  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.SeriesTimerInfo.html#MediaBrowser_Controller_LiveTv_SeriesTimerInfo_ChannelId_
-  commentId: Overload:MediaBrowser.Controller.LiveTv.SeriesTimerInfo.ChannelId
-  isSpec: "True"
-  fullName: MediaBrowser.Controller.LiveTv.SeriesTimerInfo.ChannelId
-  nameWithType: SeriesTimerInfo.ChannelId
 - uid: MediaBrowser.Controller.LiveTv.SeriesTimerInfo.ChannelIds
   name: ChannelIds
   href: reference/pluginapi/MediaBrowser.Controller.LiveTv.SeriesTimerInfo.html#MediaBrowser_Controller_LiveTv_SeriesTimerInfo_ChannelIds
@@ -126623,19 +126610,6 @@ references:
   commentId: T:MediaBrowser.Model.IO.StreamHandler
   fullName: MediaBrowser.Model.IO.StreamHandler
   nameWithType: StreamHandler
-- uid: MediaBrowser.Model.IO.StreamHandler.#ctor
-  name: StreamHandler()
-  href: reference/pluginapi/MediaBrowser.Model.IO.StreamHandler.html#MediaBrowser_Model_IO_StreamHandler__ctor
-  commentId: M:MediaBrowser.Model.IO.StreamHandler.#ctor
-  fullName: MediaBrowser.Model.IO.StreamHandler.StreamHandler()
-  nameWithType: StreamHandler.StreamHandler()
-- uid: MediaBrowser.Model.IO.StreamHandler.#ctor*
-  name: StreamHandler
-  href: reference/pluginapi/MediaBrowser.Model.IO.StreamHandler.html#MediaBrowser_Model_IO_StreamHandler__ctor_
-  commentId: Overload:MediaBrowser.Model.IO.StreamHandler.#ctor
-  isSpec: "True"
-  fullName: MediaBrowser.Model.IO.StreamHandler.StreamHandler
-  nameWithType: StreamHandler.StreamHandler
 - uid: MediaBrowser.Model.IO.StreamHandler.Dispose
   name: Dispose()
   href: reference/pluginapi/MediaBrowser.Model.IO.StreamHandler.html#MediaBrowser_Model_IO_StreamHandler_Dispose

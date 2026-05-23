@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.10.0.11
+  version: 4.10.0.12
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -100067,9 +100067,6 @@ components:
         Id:
           type: string
           description: Id of the recording.
-        ChannelId:
-          type: string
-          description: ChannelId of the recording.
         ChannelIds:
           type: array
           items:

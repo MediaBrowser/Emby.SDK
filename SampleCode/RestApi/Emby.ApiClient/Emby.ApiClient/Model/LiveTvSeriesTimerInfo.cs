@@ -33,12 +33,6 @@ namespace Emby.ApiClient.Model
         public string Id { get; set; }
 
         /// <summary>
-        /// ChannelId of the recording.
-        /// </summary>
-        /// <value>The ChannelId.</value>
-        public string ChannelId { get; set; }
-
-        /// <summary>
         /// Gets or Sets ChannelIds
         /// </summary>
         /// <value>The ChannelIds.</value>
@@ -197,7 +191,6 @@ namespace Emby.ApiClient.Model
             var sb = new StringBuilder();
             sb.Append("class LiveTvSeriesTimerInfo {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  ChannelId: ").Append(ChannelId).Append("\n");
             sb.Append("  ChannelIds: ").Append(ChannelIds).Append("\n");
             sb.Append("  ParentFolderId: ").Append(ParentFolderId).Append("\n");
             sb.Append("  ProgramId: ").Append(ProgramId).Append("\n");
@@ -252,11 +245,6 @@ namespace Emby.ApiClient.Model
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
-                ) && 
-                (
-                    this.ChannelId == input.ChannelId ||
-                    (this.ChannelId != null &&
-                    this.ChannelId.Equals(input.ChannelId))
                 ) && 
                 (
                     this.ChannelIds == input.ChannelIds ||
@@ -399,8 +387,6 @@ namespace Emby.ApiClient.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.ChannelId != null)
-                    hashCode = hashCode * 59 + this.ChannelId.GetHashCode();
                 if (this.ChannelIds != null)
                     hashCode = hashCode * 59 + this.ChannelIds.GetHashCode();
                 if (this.ParentFolderId != null)
