@@ -15,7 +15,7 @@ import UserItemShareLevel from './UserItemShareLevel';
 /**
 * The UserLibraryUpdateUserItemAccess model module.
 * @module model/UserLibraryUpdateUserItemAccess
-* @version 4.10.0.12
+* @version 4.10.0.13
 */
 export default class UserLibraryUpdateUserItemAccess {
     /**

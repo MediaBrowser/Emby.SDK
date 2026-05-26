@@ -16,7 +16,7 @@ import RemoteSearchResult from './RemoteSearchResult';
 /**
 * The UserLibraryCreditsList model module.
 * @module model/UserLibraryCreditsList
-* @version 4.10.0.12
+* @version 4.10.0.13
 */
 export default class UserLibraryCreditsList {
     /**
