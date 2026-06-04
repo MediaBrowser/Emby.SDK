@@ -16,7 +16,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The TrailerInfo model module.
 * @module model/TrailerInfo
-* @version 4.10.0.13
+* @version 4.10.0.14
 */
 export default class TrailerInfo {
     /**

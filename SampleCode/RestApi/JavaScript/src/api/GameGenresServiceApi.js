@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * GameGenresService service.
 * @module api/GameGenresServiceApi
-* @version 4.10.0.13
+* @version 4.10.0.14
 */
 export default class GameGenresServiceApi {
 
