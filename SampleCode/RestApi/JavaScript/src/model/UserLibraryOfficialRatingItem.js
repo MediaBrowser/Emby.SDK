@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The UserLibraryOfficialRatingItem model module.
 * @module model/UserLibraryOfficialRatingItem
-* @version 4.10.0.14
+* @version 4.10.0.15
 */
 export default class UserLibraryOfficialRatingItem {
     /**

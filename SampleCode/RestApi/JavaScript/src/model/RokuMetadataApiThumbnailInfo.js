@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The RokuMetadataApiThumbnailInfo model module.
 * @module model/RokuMetadataApiThumbnailInfo
-* @version 4.10.0.14
+* @version 4.10.0.15
 */
 export default class RokuMetadataApiThumbnailInfo {
     /**

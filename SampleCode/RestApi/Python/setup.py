@@ -11,7 +11,7 @@ with open("README.md", "r") as fh:
 
 
 NAME = "embyclient"
-VERSION = "4.10.0.14"
+VERSION = "4.10.0.15"
 
 
 REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
