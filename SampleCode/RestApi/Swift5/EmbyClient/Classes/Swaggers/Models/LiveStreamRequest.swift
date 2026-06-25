@@ -27,8 +27,9 @@ public struct LiveStreamRequest: Codable {
     public var allowVideoStreamCopy: Bool?
     public var allowInterlacedVideoStreamCopy: Bool?
     public var allowAudioStreamCopy: Bool?
+    public var consumerId: String?
 
-    public init(openToken: String? = nil, userId: String? = nil, playSessionId: String? = nil, maxStreamingBitrate: Int64? = nil, startTimeTicks: Int64? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, maxAudioChannels: Int? = nil, itemId: Int64? = nil, deviceProfile: DeviceProfile? = nil, enableDirectPlay: Bool? = nil, enableDirectStream: Bool? = nil, enableTranscoding: Bool? = nil, allowVideoStreamCopy: Bool? = nil, allowInterlacedVideoStreamCopy: Bool? = nil, allowAudioStreamCopy: Bool? = nil) {
+    public init(openToken: String? = nil, userId: String? = nil, playSessionId: String? = nil, maxStreamingBitrate: Int64? = nil, startTimeTicks: Int64? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, maxAudioChannels: Int? = nil, itemId: Int64? = nil, deviceProfile: DeviceProfile? = nil, enableDirectPlay: Bool? = nil, enableDirectStream: Bool? = nil, enableTranscoding: Bool? = nil, allowVideoStreamCopy: Bool? = nil, allowInterlacedVideoStreamCopy: Bool? = nil, allowAudioStreamCopy: Bool? = nil, consumerId: String? = nil) {
         self.openToken = openToken
         self.userId = userId
         self.playSessionId = playSessionId
@@ -45,6 +46,7 @@ public struct LiveStreamRequest: Codable {
         self.allowVideoStreamCopy = allowVideoStreamCopy
         self.allowInterlacedVideoStreamCopy = allowInterlacedVideoStreamCopy
         self.allowAudioStreamCopy = allowAudioStreamCopy
+        self.consumerId = consumerId
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -64,6 +66,7 @@ public struct LiveStreamRequest: Codable {
         case allowVideoStreamCopy = "AllowVideoStreamCopy"
         case allowInterlacedVideoStreamCopy = "AllowInterlacedVideoStreamCopy"
         case allowAudioStreamCopy = "AllowAudioStreamCopy"
+        case consumerId = "ConsumerId"
     }
 
 }

@@ -15,7 +15,7 @@ import DeviceProfile from './DeviceProfile';
 /**
 * The LiveStreamRequest model module.
 * @module model/LiveStreamRequest
-* @version 4.10.0.15
+* @version 4.10.0.16
 */
 export default class LiveStreamRequest {
     /**
@@ -90,6 +90,9 @@ export default class LiveStreamRequest {
             if (data.hasOwnProperty('AllowAudioStreamCopy')) {
                 obj['AllowAudioStreamCopy'] = ApiClient.convertToType(data['AllowAudioStreamCopy'], 'Boolean');
             }
+            if (data.hasOwnProperty('ConsumerId')) {
+                obj['ConsumerId'] = ApiClient.convertToType(data['ConsumerId'], 'String');
+            }
         }
         return obj;
     }
@@ -158,6 +161,10 @@ export default class LiveStreamRequest {
     * @member {Boolean} AllowAudioStreamCopy
     */
     'AllowAudioStreamCopy' = undefined;
+    /**
+    * @member {String} ConsumerId
+    */
+    'ConsumerId' = undefined;
 
 
 

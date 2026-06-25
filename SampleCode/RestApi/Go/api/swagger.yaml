@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.10.0.15
+  version: 4.10.0.16
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -26227,6 +26227,14 @@ paths:
       - name: LiveStreamId
         in: query
         description: LiveStreamId
+        required: true
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: PlaySessionId
+        in: query
+        description: PlaySessionId
         required: true
         style: form
         explode: false
@@ -95519,6 +95527,8 @@ components:
           type: boolean
         AllowAudioStreamCopy:
           type: boolean
+        ConsumerId:
+          type: string
       x-internal-ref-name: MediaBrowser.Model.MediaInfo.LiveStreamRequest
     DeviceProfile:
       type: object

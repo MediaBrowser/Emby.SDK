@@ -324,45 +324,47 @@ class MediaInfoServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_livestreams_close(self, live_stream_id, **kwargs):  # noqa: E501
+    def post_livestreams_close(self, live_stream_id, play_session_id, **kwargs):  # noqa: E501
         """Closes a media source  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_livestreams_close(live_stream_id, async_req=True)
+        >>> thread = api.post_livestreams_close(live_stream_id, play_session_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str live_stream_id: LiveStreamId (required)
+        :param str play_session_id: PlaySessionId (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_livestreams_close_with_http_info(live_stream_id, **kwargs)  # noqa: E501
+            return self.post_livestreams_close_with_http_info(live_stream_id, play_session_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_livestreams_close_with_http_info(live_stream_id, **kwargs)  # noqa: E501
+            (data) = self.post_livestreams_close_with_http_info(live_stream_id, play_session_id, **kwargs)  # noqa: E501
             return data
 
-    def post_livestreams_close_with_http_info(self, live_stream_id, **kwargs):  # noqa: E501
+    def post_livestreams_close_with_http_info(self, live_stream_id, play_session_id, **kwargs):  # noqa: E501
         """Closes a media source  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_livestreams_close_with_http_info(live_stream_id, async_req=True)
+        >>> thread = api.post_livestreams_close_with_http_info(live_stream_id, play_session_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str live_stream_id: LiveStreamId (required)
+        :param str play_session_id: PlaySessionId (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['live_stream_id']  # noqa: E501
+        all_params = ['live_stream_id', 'play_session_id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -381,6 +383,10 @@ class MediaInfoServiceApi(object):
         if ('live_stream_id' not in params or
                 params['live_stream_id'] is None):
             raise ValueError("Missing the required parameter `live_stream_id` when calling `post_livestreams_close`")  # noqa: E501
+        # verify the required parameter 'play_session_id' is set
+        if ('play_session_id' not in params or
+                params['play_session_id'] is None):
+            raise ValueError("Missing the required parameter `play_session_id` when calling `post_livestreams_close`")  # noqa: E501
 
         collection_formats = {}
 
@@ -389,6 +395,8 @@ class MediaInfoServiceApi(object):
         query_params = []
         if 'live_stream_id' in params:
             query_params.append(('LiveStreamId', params['live_stream_id']))  # noqa: E501
+        if 'play_session_id' in params:
+            query_params.append(('PlaySessionId', params['play_session_id']))  # noqa: E501
 
         header_params = {}
 

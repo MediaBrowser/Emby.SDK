@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.15"
+    "version": "4.10.0.16"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -20334,6 +20334,13 @@
             "in": "query",
             "name": "LiveStreamId",
             "description": "LiveStreamId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "PlaySessionId",
+            "description": "PlaySessionId",
             "required": true,
             "type": "string"
           }
@@ -76261,6 +76268,9 @@
         },
         "AllowAudioStreamCopy": {
           "type": "boolean"
+        },
+        "ConsumerId": {
+          "type": "string"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.MediaInfo.LiveStreamRequest"

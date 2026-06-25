@@ -69,6 +69,9 @@ public class LiveStreamRequest {
   @SerializedName("AllowAudioStreamCopy")
   private Boolean allowAudioStreamCopy = null;
 
+  @SerializedName("ConsumerId")
+  private String consumerId = null;
+
   public LiveStreamRequest openToken(String openToken) {
     this.openToken = openToken;
     return this;
@@ -357,6 +360,24 @@ public class LiveStreamRequest {
     this.allowAudioStreamCopy = allowAudioStreamCopy;
   }
 
+  public LiveStreamRequest consumerId(String consumerId) {
+    this.consumerId = consumerId;
+    return this;
+  }
+
+   /**
+   * Get consumerId
+   * @return consumerId
+  **/
+  @Schema(description = "")
+  public String getConsumerId() {
+    return consumerId;
+  }
+
+  public void setConsumerId(String consumerId) {
+    this.consumerId = consumerId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -382,12 +403,13 @@ public class LiveStreamRequest {
         Objects.equals(this.enableTranscoding, liveStreamRequest.enableTranscoding) &&
         Objects.equals(this.allowVideoStreamCopy, liveStreamRequest.allowVideoStreamCopy) &&
         Objects.equals(this.allowInterlacedVideoStreamCopy, liveStreamRequest.allowInterlacedVideoStreamCopy) &&
-        Objects.equals(this.allowAudioStreamCopy, liveStreamRequest.allowAudioStreamCopy);
+        Objects.equals(this.allowAudioStreamCopy, liveStreamRequest.allowAudioStreamCopy) &&
+        Objects.equals(this.consumerId, liveStreamRequest.consumerId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(openToken, userId, playSessionId, maxStreamingBitrate, startTimeTicks, audioStreamIndex, subtitleStreamIndex, maxAudioChannels, itemId, deviceProfile, enableDirectPlay, enableDirectStream, enableTranscoding, allowVideoStreamCopy, allowInterlacedVideoStreamCopy, allowAudioStreamCopy);
+    return Objects.hash(openToken, userId, playSessionId, maxStreamingBitrate, startTimeTicks, audioStreamIndex, subtitleStreamIndex, maxAudioChannels, itemId, deviceProfile, enableDirectPlay, enableDirectStream, enableTranscoding, allowVideoStreamCopy, allowInterlacedVideoStreamCopy, allowAudioStreamCopy, consumerId);
   }
 
 
@@ -412,6 +434,7 @@ public class LiveStreamRequest {
     sb.append("    allowVideoStreamCopy: ").append(toIndentedString(allowVideoStreamCopy)).append("\n");
     sb.append("    allowInterlacedVideoStreamCopy: ").append(toIndentedString(allowInterlacedVideoStreamCopy)).append("\n");
     sb.append("    allowAudioStreamCopy: ").append(toIndentedString(allowAudioStreamCopy)).append("\n");
+    sb.append("    consumerId: ").append(toIndentedString(consumerId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -73331,6 +73331,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.OrderBy
   nameWithType: InternalItemsQuery.OrderBy
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.OriginalInnerIncludeItemTypes
+  name: OriginalInnerIncludeItemTypes
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_OriginalInnerIncludeItemTypes
+  commentId: P:MediaBrowser.Controller.Entities.InternalItemsQuery.OriginalInnerIncludeItemTypes
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.OriginalInnerIncludeItemTypes
+  nameWithType: InternalItemsQuery.OriginalInnerIncludeItemTypes
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.OriginalInnerIncludeItemTypes*
+  name: OriginalInnerIncludeItemTypes
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_OriginalInnerIncludeItemTypes_
+  commentId: Overload:MediaBrowser.Controller.Entities.InternalItemsQuery.OriginalInnerIncludeItemTypes
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.OriginalInnerIncludeItemTypes
+  nameWithType: InternalItemsQuery.OriginalInnerIncludeItemTypes
 - uid: MediaBrowser.Controller.Entities.InternalItemsQuery.OuterItemIds
   name: OuterItemIds
   href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_OuterItemIds
@@ -81727,6 +81740,19 @@ references:
   commentId: T:MediaBrowser.Controller.Library.ILiveStream
   fullName: MediaBrowser.Controller.Library.ILiveStream
   nameWithType: ILiveStream
+- uid: MediaBrowser.Controller.Library.ILiveStream.AddConsumer(System.String)
+  name: AddConsumer(String)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.ILiveStream.html#MediaBrowser_Controller_Library_ILiveStream_AddConsumer_System_String_
+  commentId: M:MediaBrowser.Controller.Library.ILiveStream.AddConsumer(System.String)
+  fullName: MediaBrowser.Controller.Library.ILiveStream.AddConsumer(System.String)
+  nameWithType: ILiveStream.AddConsumer(String)
+- uid: MediaBrowser.Controller.Library.ILiveStream.AddConsumer*
+  name: AddConsumer
+  href: reference/pluginapi/MediaBrowser.Controller.Library.ILiveStream.html#MediaBrowser_Controller_Library_ILiveStream_AddConsumer_
+  commentId: Overload:MediaBrowser.Controller.Library.ILiveStream.AddConsumer
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.ILiveStream.AddConsumer
+  nameWithType: ILiveStream.AddConsumer
 - uid: MediaBrowser.Controller.Library.ILiveStream.Close
   name: Close()
   href: reference/pluginapi/MediaBrowser.Controller.Library.ILiveStream.html#MediaBrowser_Controller_Library_ILiveStream_Close
@@ -81840,6 +81866,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.ILiveStream.OriginalStreamId
   nameWithType: ILiveStream.OriginalStreamId
+- uid: MediaBrowser.Controller.Library.ILiveStream.RemoveConsumer(System.String)
+  name: RemoveConsumer(String)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.ILiveStream.html#MediaBrowser_Controller_Library_ILiveStream_RemoveConsumer_System_String_
+  commentId: M:MediaBrowser.Controller.Library.ILiveStream.RemoveConsumer(System.String)
+  fullName: MediaBrowser.Controller.Library.ILiveStream.RemoveConsumer(System.String)
+  nameWithType: ILiveStream.RemoveConsumer(String)
+- uid: MediaBrowser.Controller.Library.ILiveStream.RemoveConsumer*
+  name: RemoveConsumer
+  href: reference/pluginapi/MediaBrowser.Controller.Library.ILiveStream.html#MediaBrowser_Controller_Library_ILiveStream_RemoveConsumer_
+  commentId: Overload:MediaBrowser.Controller.Library.ILiveStream.RemoveConsumer
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.ILiveStream.RemoveConsumer
+  nameWithType: ILiveStream.RemoveConsumer
 - uid: MediaBrowser.Controller.Library.ILiveStream.SupportsCopyTo
   name: SupportsCopyTo
   href: reference/pluginapi/MediaBrowser.Controller.Library.ILiveStream.html#MediaBrowser_Controller_Library_ILiveStream_SupportsCopyTo
@@ -81927,12 +81966,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.IMediaSourceManager.AddParts
   nameWithType: IMediaSourceManager.AddParts
-- uid: MediaBrowser.Controller.Library.IMediaSourceManager.CloseLiveStream(System.String)
-  name: CloseLiveStream(String)
-  href: reference/pluginapi/MediaBrowser.Controller.Library.IMediaSourceManager.html#MediaBrowser_Controller_Library_IMediaSourceManager_CloseLiveStream_System_String_
-  commentId: M:MediaBrowser.Controller.Library.IMediaSourceManager.CloseLiveStream(System.String)
-  fullName: MediaBrowser.Controller.Library.IMediaSourceManager.CloseLiveStream(System.String)
-  nameWithType: IMediaSourceManager.CloseLiveStream(String)
+- uid: MediaBrowser.Controller.Library.IMediaSourceManager.CloseLiveStream(System.String,System.String)
+  name: CloseLiveStream(String, String)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IMediaSourceManager.html#MediaBrowser_Controller_Library_IMediaSourceManager_CloseLiveStream_System_String_System_String_
+  commentId: M:MediaBrowser.Controller.Library.IMediaSourceManager.CloseLiveStream(System.String,System.String)
+  fullName: MediaBrowser.Controller.Library.IMediaSourceManager.CloseLiveStream(System.String, System.String)
+  nameWithType: IMediaSourceManager.CloseLiveStream(String, String)
 - uid: MediaBrowser.Controller.Library.IMediaSourceManager.CloseLiveStream*
   name: CloseLiveStream
   href: reference/pluginapi/MediaBrowser.Controller.Library.IMediaSourceManager.html#MediaBrowser_Controller_Library_IMediaSourceManager_CloseLiveStream_
@@ -82200,15 +82239,15 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.IMediaSourceProvider.GetMediaSources
   nameWithType: IMediaSourceProvider.GetMediaSources
-- uid: MediaBrowser.Controller.Library.IMediaSourceProvider.OpenMediaSource(System.String,System.Collections.Generic.List{MediaBrowser.Controller.Library.ILiveStream},System.Threading.CancellationToken)
-  name: OpenMediaSource(String, List<ILiveStream>, CancellationToken)
-  href: reference/pluginapi/MediaBrowser.Controller.Library.IMediaSourceProvider.html#MediaBrowser_Controller_Library_IMediaSourceProvider_OpenMediaSource_System_String_System_Collections_Generic_List_MediaBrowser_Controller_Library_ILiveStream__System_Threading_CancellationToken_
-  commentId: M:MediaBrowser.Controller.Library.IMediaSourceProvider.OpenMediaSource(System.String,System.Collections.Generic.List{MediaBrowser.Controller.Library.ILiveStream},System.Threading.CancellationToken)
-  name.vb: OpenMediaSource(String, List(Of ILiveStream), CancellationToken)
-  fullName: MediaBrowser.Controller.Library.IMediaSourceProvider.OpenMediaSource(System.String, System.Collections.Generic.List<MediaBrowser.Controller.Library.ILiveStream>, System.Threading.CancellationToken)
-  fullName.vb: MediaBrowser.Controller.Library.IMediaSourceProvider.OpenMediaSource(System.String, System.Collections.Generic.List(Of MediaBrowser.Controller.Library.ILiveStream), System.Threading.CancellationToken)
-  nameWithType: IMediaSourceProvider.OpenMediaSource(String, List<ILiveStream>, CancellationToken)
-  nameWithType.vb: IMediaSourceProvider.OpenMediaSource(String, List(Of ILiveStream), CancellationToken)
+- uid: MediaBrowser.Controller.Library.IMediaSourceProvider.OpenMediaSource(System.String,System.String,System.Collections.Generic.List{MediaBrowser.Controller.Library.ILiveStream},System.Threading.CancellationToken)
+  name: OpenMediaSource(String, String, List<ILiveStream>, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IMediaSourceProvider.html#MediaBrowser_Controller_Library_IMediaSourceProvider_OpenMediaSource_System_String_System_String_System_Collections_Generic_List_MediaBrowser_Controller_Library_ILiveStream__System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Library.IMediaSourceProvider.OpenMediaSource(System.String,System.String,System.Collections.Generic.List{MediaBrowser.Controller.Library.ILiveStream},System.Threading.CancellationToken)
+  name.vb: OpenMediaSource(String, String, List(Of ILiveStream), CancellationToken)
+  fullName: MediaBrowser.Controller.Library.IMediaSourceProvider.OpenMediaSource(System.String, System.String, System.Collections.Generic.List<MediaBrowser.Controller.Library.ILiveStream>, System.Threading.CancellationToken)
+  fullName.vb: MediaBrowser.Controller.Library.IMediaSourceProvider.OpenMediaSource(System.String, System.String, System.Collections.Generic.List(Of MediaBrowser.Controller.Library.ILiveStream), System.Threading.CancellationToken)
+  nameWithType: IMediaSourceProvider.OpenMediaSource(String, String, List<ILiveStream>, CancellationToken)
+  nameWithType.vb: IMediaSourceProvider.OpenMediaSource(String, String, List(Of ILiveStream), CancellationToken)
 - uid: MediaBrowser.Controller.Library.IMediaSourceProvider.OpenMediaSource*
   name: OpenMediaSource
   href: reference/pluginapi/MediaBrowser.Controller.Library.IMediaSourceProvider.html#MediaBrowser_Controller_Library_IMediaSourceProvider_OpenMediaSource_
@@ -102846,6 +102885,18 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.ISessionManager.OnPlaybackStopped
   nameWithType: ISessionManager.OnPlaybackStopped
+- uid: MediaBrowser.Controller.Session.ISessionManager.PartyCreated
+  name: PartyCreated
+  href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_PartyCreated
+  commentId: E:MediaBrowser.Controller.Session.ISessionManager.PartyCreated
+  fullName: MediaBrowser.Controller.Session.ISessionManager.PartyCreated
+  nameWithType: ISessionManager.PartyCreated
+- uid: MediaBrowser.Controller.Session.ISessionManager.PartyDeleted
+  name: PartyDeleted
+  href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_PartyDeleted
+  commentId: E:MediaBrowser.Controller.Session.ISessionManager.PartyDeleted
+  fullName: MediaBrowser.Controller.Session.ISessionManager.PartyDeleted
+  nameWithType: ISessionManager.PartyDeleted
 - uid: MediaBrowser.Controller.Session.ISessionManager.PingSession(System.String,System.String)
   name: PingSession(String, String)
   href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_PingSession_System_String_System_String_
@@ -129864,6 +129915,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.MediaInfo.LiveStreamRequest.AudioStreamIndex
   nameWithType: LiveStreamRequest.AudioStreamIndex
+- uid: MediaBrowser.Model.MediaInfo.LiveStreamRequest.ConsumerId
+  name: ConsumerId
+  href: reference/pluginapi/MediaBrowser.Model.MediaInfo.LiveStreamRequest.html#MediaBrowser_Model_MediaInfo_LiveStreamRequest_ConsumerId
+  commentId: P:MediaBrowser.Model.MediaInfo.LiveStreamRequest.ConsumerId
+  fullName: MediaBrowser.Model.MediaInfo.LiveStreamRequest.ConsumerId
+  nameWithType: LiveStreamRequest.ConsumerId
+- uid: MediaBrowser.Model.MediaInfo.LiveStreamRequest.ConsumerId*
+  name: ConsumerId
+  href: reference/pluginapi/MediaBrowser.Model.MediaInfo.LiveStreamRequest.html#MediaBrowser_Model_MediaInfo_LiveStreamRequest_ConsumerId_
+  commentId: Overload:MediaBrowser.Model.MediaInfo.LiveStreamRequest.ConsumerId
+  isSpec: "True"
+  fullName: MediaBrowser.Model.MediaInfo.LiveStreamRequest.ConsumerId
+  nameWithType: LiveStreamRequest.ConsumerId
 - uid: MediaBrowser.Model.MediaInfo.LiveStreamRequest.DeviceProfile
   name: DeviceProfile
   href: reference/pluginapi/MediaBrowser.Model.MediaInfo.LiveStreamRequest.html#MediaBrowser_Model_MediaInfo_LiveStreamRequest_DeviceProfile

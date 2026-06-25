@@ -832,10 +832,11 @@ open class MediaInfoServiceAPI {
      Closes a media source
 
      - parameter liveStreamId: (query) LiveStreamId 
+     - parameter playSessionId: (query) PlaySessionId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLivestreamsClose(liveStreamId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        postLivestreamsCloseWithRequestBuilder(liveStreamId: liveStreamId).execute { (response, error) -> Void in
+    open class func postLivestreamsClose(liveStreamId: String, playSessionId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postLivestreamsCloseWithRequestBuilder(liveStreamId: liveStreamId, playSessionId: playSessionId).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -856,16 +857,18 @@ open class MediaInfoServiceAPI {
        - type: http
        - name: embyauth
      - parameter liveStreamId: (query) LiveStreamId 
+     - parameter playSessionId: (query) PlaySessionId 
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postLivestreamsCloseWithRequestBuilder(liveStreamId: String) -> RequestBuilder<Void> {
+    open class func postLivestreamsCloseWithRequestBuilder(liveStreamId: String, playSessionId: String) -> RequestBuilder<Void> {
         let path = "/LiveStreams/Close"
         let URLString = EmbyClientAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-                        "LiveStreamId": liveStreamId
+                        "LiveStreamId": liveStreamId, 
+                        "PlaySessionId": playSessionId
         ])
 
 

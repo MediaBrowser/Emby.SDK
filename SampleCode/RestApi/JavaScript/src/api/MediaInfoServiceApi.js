@@ -18,7 +18,7 @@ import PlaybackInfoResponse from '../model/PlaybackInfoResponse';
 /**
 * MediaInfoService service.
 * @module api/MediaInfoServiceApi
-* @version 4.10.0.15
+* @version 4.10.0.16
 */
 export default class MediaInfoServiceApi {
 
@@ -174,7 +174,8 @@ export default class MediaInfoServiceApi {
       let pathParams = {
       };
       let queryParams = {
-        'LiveStreamId': LiveStreamId
+        'LiveStreamId': LiveStreamId,
+        'PlaySessionId': PlaySessionId
       };
       let headerParams = {
       };

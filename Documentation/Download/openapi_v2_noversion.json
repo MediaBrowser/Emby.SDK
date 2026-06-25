@@ -20334,6 +20334,13 @@
             "description": "LiveStreamId",
             "required": true,
             "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "PlaySessionId",
+            "description": "PlaySessionId",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -76259,6 +76266,9 @@
         },
         "AllowAudioStreamCopy": {
           "type": "boolean"
+        },
+        "ConsumerId": {
+          "type": "string"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.MediaInfo.LiveStreamRequest"

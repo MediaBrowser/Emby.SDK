@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.15
+ * OpenAPI spec version: 4.10.0.16
  * 
  *
  * NOTE: This file is auto generated.
@@ -5957,7 +5957,8 @@ describe("MediaInfoServiceApi", () => {
   })
   test("postLivestreamsClose", () => {
     const LiveStreamId: string = "LiveStreamId_example"
-    return expect(instance.postLivestreamsClose(LiveStreamId, {})).resolves.toBe(null)
+    const PlaySessionId: string = "PlaySessionId_example"
+    return expect(instance.postLivestreamsClose(LiveStreamId, PlaySessionId, {})).resolves.toBe(null)
   })
   test("postLivestreamsMediainfo", () => {
     const LiveStreamId: string = "LiveStreamId_example"

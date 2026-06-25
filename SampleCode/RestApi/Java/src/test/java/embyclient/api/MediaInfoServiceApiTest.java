@@ -85,7 +85,8 @@ public class MediaInfoServiceApiTest {
     @Test
     public void postLivestreamsCloseTest() throws Exception {
         String liveStreamId = null;
-        api.postLivestreamsClose(liveStreamId);
+        String playSessionId = null;
+        api.postLivestreamsClose(liveStreamId, playSessionId);
 
         // TODO: test validations
     }

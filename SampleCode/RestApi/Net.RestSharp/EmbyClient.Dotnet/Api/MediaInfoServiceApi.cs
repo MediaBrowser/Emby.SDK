@@ -93,8 +93,9 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="liveStreamId">LiveStreamId</param>
+        /// <param name="playSessionId">PlaySessionId</param>
         /// <returns></returns>
-        void PostLivestreamsClose (string liveStreamId);
+        void PostLivestreamsClose (string liveStreamId, string playSessionId);
 
         /// <summary>
         /// Closes a media source
@@ -104,8 +105,9 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="liveStreamId">LiveStreamId</param>
+        /// <param name="playSessionId">PlaySessionId</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostLivestreamsCloseWithHttpInfo (string liveStreamId);
+        ApiResponse<Object> PostLivestreamsCloseWithHttpInfo (string liveStreamId, string playSessionId);
         /// <summary>
         /// Gets media info for a live stream
         /// </summary>
@@ -225,8 +227,9 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="liveStreamId">LiveStreamId</param>
+        /// <param name="playSessionId">PlaySessionId</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostLivestreamsCloseAsync (string liveStreamId);
+        System.Threading.Tasks.Task PostLivestreamsCloseAsync (string liveStreamId, string playSessionId);
 
         /// <summary>
         /// Closes a media source
@@ -236,8 +239,9 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="liveStreamId">LiveStreamId</param>
+        /// <param name="playSessionId">PlaySessionId</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostLivestreamsCloseAsyncWithHttpInfo (string liveStreamId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostLivestreamsCloseAsyncWithHttpInfo (string liveStreamId, string playSessionId);
         /// <summary>
         /// Gets media info for a live stream
         /// </summary>
@@ -897,10 +901,11 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="liveStreamId">LiveStreamId</param>
+        /// <param name="playSessionId">PlaySessionId</param>
         /// <returns></returns>
-        public void PostLivestreamsClose (string liveStreamId)
+        public void PostLivestreamsClose (string liveStreamId, string playSessionId)
         {
-             PostLivestreamsCloseWithHttpInfo(liveStreamId);
+             PostLivestreamsCloseWithHttpInfo(liveStreamId, playSessionId);
         }
 
         /// <summary>
@@ -908,12 +913,16 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="liveStreamId">LiveStreamId</param>
+        /// <param name="playSessionId">PlaySessionId</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostLivestreamsCloseWithHttpInfo (string liveStreamId)
+        public ApiResponse<Object> PostLivestreamsCloseWithHttpInfo (string liveStreamId, string playSessionId)
         {
             // verify the required parameter 'liveStreamId' is set
             if (liveStreamId == null)
                 throw new ApiException(400, "Missing required parameter 'liveStreamId' when calling MediaInfoServiceApi->PostLivestreamsClose");
+            // verify the required parameter 'playSessionId' is set
+            if (playSessionId == null)
+                throw new ApiException(400, "Missing required parameter 'playSessionId' when calling MediaInfoServiceApi->PostLivestreamsClose");
 
             var localVarPath = "/LiveStreams/Close";
             var localVarPathParams = new Dictionary<String, String>();
@@ -936,6 +945,7 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (liveStreamId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LiveStreamId", liveStreamId)); // query parameter
+            if (playSessionId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PlaySessionId", playSessionId)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -971,10 +981,11 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="liveStreamId">LiveStreamId</param>
+        /// <param name="playSessionId">PlaySessionId</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostLivestreamsCloseAsync (string liveStreamId)
+        public async System.Threading.Tasks.Task PostLivestreamsCloseAsync (string liveStreamId, string playSessionId)
         {
-             await PostLivestreamsCloseAsyncWithHttpInfo(liveStreamId);
+             await PostLivestreamsCloseAsyncWithHttpInfo(liveStreamId, playSessionId);
 
         }
 
@@ -983,12 +994,16 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="liveStreamId">LiveStreamId</param>
+        /// <param name="playSessionId">PlaySessionId</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostLivestreamsCloseAsyncWithHttpInfo (string liveStreamId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostLivestreamsCloseAsyncWithHttpInfo (string liveStreamId, string playSessionId)
         {
             // verify the required parameter 'liveStreamId' is set
             if (liveStreamId == null)
                 throw new ApiException(400, "Missing required parameter 'liveStreamId' when calling MediaInfoServiceApi->PostLivestreamsClose");
+            // verify the required parameter 'playSessionId' is set
+            if (playSessionId == null)
+                throw new ApiException(400, "Missing required parameter 'playSessionId' when calling MediaInfoServiceApi->PostLivestreamsClose");
 
             var localVarPath = "/LiveStreams/Close";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1011,6 +1026,7 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (liveStreamId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LiveStreamId", liveStreamId)); // query parameter
+            if (playSessionId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "PlaySessionId", playSessionId)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {

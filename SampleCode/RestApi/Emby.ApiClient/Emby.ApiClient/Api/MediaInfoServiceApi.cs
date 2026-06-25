@@ -155,8 +155,9 @@ namespace Emby.ApiClient.Api
         /// Requires authentication as user
         /// </remarks>
         /// <param name="liveStreamId">LiveStreamId</param>
+        /// <param name="playSessionId">PlaySessionId</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> PostLivestreamsClose (string liveStreamId)
+        public async Task<RestResponse<Object>> PostLivestreamsClose (string liveStreamId, string playSessionId)
         {
             // verify the required parameter 'liveStreamId' is set
             if (liveStreamId == null)
@@ -164,11 +165,22 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'liveStreamId' when calling MediaInfoServiceApi->PostLivestreamsClose");
             }
             
+            // verify the required parameter 'playSessionId' is set
+            if (playSessionId == null)
+            {
+                throw new ApiException("Missing required parameter 'playSessionId' when calling MediaInfoServiceApi->PostLivestreamsClose");
+            }
+            
             var request = new RestRequest("/LiveStreams/Close", Method.Post);
 
             if (liveStreamId != null)
             {
                 request.AddQueryParameter("LiveStreamId", this.ApiClient.ParameterToString(liveStreamId));
+            }
+
+            if (playSessionId != null)
+            {
+                request.AddQueryParameter("PlaySessionId", this.ApiClient.ParameterToString(playSessionId));
             }
 
             // make the HTTP request

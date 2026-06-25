@@ -442,12 +442,13 @@ public class MediaInfoServiceApi {
     /**
      * Build call for postLivestreamsClose
      * @param liveStreamId LiveStreamId (required)
+     * @param playSessionId PlaySessionId (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postLivestreamsCloseCall(String liveStreamId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postLivestreamsCloseCall(String liveStreamId, String playSessionId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -457,6 +458,8 @@ public class MediaInfoServiceApi {
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (liveStreamId != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("LiveStreamId", liveStreamId));
+        if (playSessionId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("PlaySessionId", playSessionId));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -491,13 +494,17 @@ public class MediaInfoServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postLivestreamsCloseValidateBeforeCall(String liveStreamId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postLivestreamsCloseValidateBeforeCall(String liveStreamId, String playSessionId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'liveStreamId' is set
         if (liveStreamId == null) {
             throw new ApiException("Missing the required parameter 'liveStreamId' when calling postLivestreamsClose(Async)");
         }
+        // verify the required parameter 'playSessionId' is set
+        if (playSessionId == null) {
+            throw new ApiException("Missing the required parameter 'playSessionId' when calling postLivestreamsClose(Async)");
+        }
         
-        com.squareup.okhttp.Call call = postLivestreamsCloseCall(liveStreamId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postLivestreamsCloseCall(liveStreamId, playSessionId, progressListener, progressRequestListener);
         return call;
 
         
@@ -510,21 +517,23 @@ public class MediaInfoServiceApi {
      * Closes a media source
      * Requires authentication as user
      * @param liveStreamId LiveStreamId (required)
+     * @param playSessionId PlaySessionId (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postLivestreamsClose(String liveStreamId) throws ApiException {
-        postLivestreamsCloseWithHttpInfo(liveStreamId);
+    public void postLivestreamsClose(String liveStreamId, String playSessionId) throws ApiException {
+        postLivestreamsCloseWithHttpInfo(liveStreamId, playSessionId);
     }
 
     /**
      * Closes a media source
      * Requires authentication as user
      * @param liveStreamId LiveStreamId (required)
+     * @param playSessionId PlaySessionId (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postLivestreamsCloseWithHttpInfo(String liveStreamId) throws ApiException {
-        com.squareup.okhttp.Call call = postLivestreamsCloseValidateBeforeCall(liveStreamId, null, null);
+    public ApiResponse<Void> postLivestreamsCloseWithHttpInfo(String liveStreamId, String playSessionId) throws ApiException {
+        com.squareup.okhttp.Call call = postLivestreamsCloseValidateBeforeCall(liveStreamId, playSessionId, null, null);
         return apiClient.execute(call);
     }
 
@@ -532,11 +541,12 @@ public class MediaInfoServiceApi {
      * Closes a media source (asynchronously)
      * Requires authentication as user
      * @param liveStreamId LiveStreamId (required)
+     * @param playSessionId PlaySessionId (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postLivestreamsCloseAsync(String liveStreamId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postLivestreamsCloseAsync(String liveStreamId, String playSessionId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -557,7 +567,7 @@ public class MediaInfoServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = postLivestreamsCloseValidateBeforeCall(liveStreamId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postLivestreamsCloseValidateBeforeCall(liveStreamId, playSessionId, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

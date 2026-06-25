@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.15
+ * OpenAPI spec version: 4.10.0.16
  * 
  *
  * NOTE: This file is auto generated.
@@ -6308,6 +6308,12 @@ export interface LiveStreamRequest {
      * @memberof LiveStreamRequest
      */
     AllowAudioStreamCopy?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof LiveStreamRequest
+     */
+    ConsumerId?: string;
 }
 /**
  * 
@@ -77224,13 +77230,18 @@ export const MediaInfoServiceApiFetchParamCreator = function (configuration?: Co
          * Requires authentication as user
          * @summary Closes a media source
          * @param {string} LiveStreamId LiveStreamId
+         * @param {string} PlaySessionId PlaySessionId
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postLivestreamsClose(LiveStreamId: string, options: any = {}): FetchArgs {
+        postLivestreamsClose(LiveStreamId: string, PlaySessionId: string, options: any = {}): FetchArgs {
             // verify required parameter 'LiveStreamId' is not null or undefined
             if (LiveStreamId === null || LiveStreamId === undefined) {
                 throw new RequiredError('LiveStreamId','Required parameter LiveStreamId was null or undefined when calling postLivestreamsClose.');
+            }
+            // verify required parameter 'PlaySessionId' is not null or undefined
+            if (PlaySessionId === null || PlaySessionId === undefined) {
+                throw new RequiredError('PlaySessionId','Required parameter PlaySessionId was null or undefined when calling postLivestreamsClose.');
             }
             const localVarPath = `/LiveStreams/Close`;
             const localVarUrlObj = url.parse(localVarPath, true);
@@ -77250,6 +77261,10 @@ export const MediaInfoServiceApiFetchParamCreator = function (configuration?: Co
 
             if (LiveStreamId !== undefined) {
                 localVarQueryParameter['LiveStreamId'] = LiveStreamId;
+            }
+
+            if (PlaySessionId !== undefined) {
+                localVarQueryParameter['PlaySessionId'] = PlaySessionId;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -77417,11 +77432,12 @@ export const MediaInfoServiceApiFp = function(configuration?: Configuration) {
          * Requires authentication as user
          * @summary Closes a media source
          * @param {string} LiveStreamId LiveStreamId
+         * @param {string} PlaySessionId PlaySessionId
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postLivestreamsClose(LiveStreamId: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
-            const localVarFetchArgs = MediaInfoServiceApiFetchParamCreator(configuration).postLivestreamsClose(LiveStreamId, options);
+        postLivestreamsClose(LiveStreamId: string, PlaySessionId: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = MediaInfoServiceApiFetchParamCreator(configuration).postLivestreamsClose(LiveStreamId, PlaySessionId, options);
             return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -77514,11 +77530,12 @@ export const MediaInfoServiceApiFactory = function (configuration?: Configuratio
          * Requires authentication as user
          * @summary Closes a media source
          * @param {string} LiveStreamId LiveStreamId
+         * @param {string} PlaySessionId PlaySessionId
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postLivestreamsClose(LiveStreamId: string, options?: any) {
-            return MediaInfoServiceApiFp(configuration).postLivestreamsClose(LiveStreamId, options)(fetch, basePath);
+        postLivestreamsClose(LiveStreamId: string, PlaySessionId: string, options?: any) {
+            return MediaInfoServiceApiFp(configuration).postLivestreamsClose(LiveStreamId, PlaySessionId, options)(fetch, basePath);
         },
         /**
          * Requires authentication as user
@@ -77591,12 +77608,13 @@ export class MediaInfoServiceApi extends BaseAPI {
      * Requires authentication as user
      * @summary Closes a media source
      * @param {string} LiveStreamId LiveStreamId
+     * @param {string} PlaySessionId PlaySessionId
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MediaInfoServiceApi
      */
-    public postLivestreamsClose(LiveStreamId: string, options?: any) {
-        return MediaInfoServiceApiFp(this.configuration).postLivestreamsClose(LiveStreamId, options)(this.fetch, this.basePath);
+    public postLivestreamsClose(LiveStreamId: string, PlaySessionId: string, options?: any) {
+        return MediaInfoServiceApiFp(this.configuration).postLivestreamsClose(LiveStreamId, PlaySessionId, options)(this.fetch, this.basePath);
     }
 
     /**
