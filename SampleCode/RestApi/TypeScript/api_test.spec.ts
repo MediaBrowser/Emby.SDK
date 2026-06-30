@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.16
+ * OpenAPI spec version: 4.10.0.17
  * 
  *
  * NOTE: This file is auto generated.
@@ -6305,6 +6305,9 @@ describe("PartyServiceApi", () => {
   test("getPartiesInfo", () => {
     return expect(instance.getPartiesInfo({})).resolves.toBe(null)
   })
+  test("getPartiesMessages", () => {
+    return expect(instance.getPartiesMessages({})).resolves.toBe(null)
+  })
   test("postParties", () => {
     return expect(instance.postParties({})).resolves.toBe(null)
   })
@@ -6314,6 +6317,10 @@ describe("PartyServiceApi", () => {
   })
   test("postPartiesLeave", () => {
     return expect(instance.postPartiesLeave({})).resolves.toBe(null)
+  })
+  test("postPartiesMessages", () => {
+    const body: api.SessionPartyMessage = undefined
+    return expect(instance.postPartiesMessages(body, {})).resolves.toBe(null)
   })
 })
 

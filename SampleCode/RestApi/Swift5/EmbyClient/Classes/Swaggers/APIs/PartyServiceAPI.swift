@@ -74,6 +74,13 @@ open class PartyServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "PartyInfo" : {
+    "Messages" : [ {
+      "Message" : "Message",
+      "DateTime" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "Message" : "Message",
+      "DateTime" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "Sessions" : [ {
       "PlaylistLength" : 3,
       "ApplicationVersion" : "ApplicationVersion",
@@ -158,6 +165,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -213,6 +221,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -327,6 +336,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -382,6 +392,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -781,6 +792,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -836,6 +848,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -1010,6 +1023,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -1065,6 +1079,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -1179,6 +1194,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -1234,6 +1250,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -1633,6 +1650,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -1688,6 +1706,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -1893,6 +1912,52 @@ open class PartyServiceAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Gets party messages
+
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getPartiesMessages(completion: @escaping ((_ data: QueryResultSessionPartyMessage?,_ error: Error?) -> Void)) {
+        getPartiesMessagesWithRequestBuilder().execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     Gets party messages
+     - GET /Parties/Messages
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - examples: [{contentType=application/json, example={
+  "TotalRecordCount" : 0,
+  "Items" : [ {
+    "Message" : "Message",
+    "DateTime" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "Message" : "Message",
+    "DateTime" : "2000-01-23T04:56:07.000+00:00"
+  } ]
+}}]
+
+     - returns: RequestBuilder<QueryResultSessionPartyMessage> 
+     */
+    open class func getPartiesMessagesWithRequestBuilder() -> RequestBuilder<QueryResultSessionPartyMessage> {
+        let path = "/Parties/Messages"
+        let URLString = EmbyClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<QueryResultSessionPartyMessage>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
      Creates a party
 
      - parameter completion: completion handler to receive the data and the error objects
@@ -1916,6 +1981,13 @@ open class PartyServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "PartyInfo" : {
+    "Messages" : [ {
+      "Message" : "Message",
+      "DateTime" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "Message" : "Message",
+      "DateTime" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "Sessions" : [ {
       "PlaylistLength" : 3,
       "ApplicationVersion" : "ApplicationVersion",
@@ -2000,6 +2072,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2055,6 +2128,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2169,6 +2243,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2224,6 +2299,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2623,6 +2699,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2678,6 +2755,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2852,6 +2930,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2907,6 +2986,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -3021,6 +3101,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -3076,6 +3157,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -3475,6 +3557,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -3530,6 +3613,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -3759,6 +3843,13 @@ open class PartyServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "PartyInfo" : {
+    "Messages" : [ {
+      "Message" : "Message",
+      "DateTime" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "Message" : "Message",
+      "DateTime" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "Sessions" : [ {
       "PlaylistLength" : 3,
       "ApplicationVersion" : "ApplicationVersion",
@@ -3843,6 +3934,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -3898,6 +3990,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4012,6 +4105,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4067,6 +4161,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4466,6 +4561,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4521,6 +4617,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4695,6 +4792,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4750,6 +4848,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4864,6 +4963,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4919,6 +5019,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -5318,6 +5419,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -5373,6 +5475,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -5620,5 +5723,47 @@ open class PartyServiceAPI {
         let requestBuilder: RequestBuilder<Void>.Type = EmbyClientAPI.requestBuilderFactory.getNonDecodableBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Posts a message to the party
+
+     - parameter body: (body) PartyMessage:  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postPartiesMessages(body: SessionPartyMessage, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postPartiesMessagesWithRequestBuilder(body: body).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Posts a message to the party
+     - POST /Parties/Messages
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) PartyMessage:  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postPartiesMessagesWithRequestBuilder(body: SessionPartyMessage) -> RequestBuilder<Void> {
+        let path = "/Parties/Messages"
+        let URLString = EmbyClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = EmbyClientAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 }

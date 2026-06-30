@@ -78,6 +78,7 @@ type MediaStream struct {
 	DeliveryMethod *SubtitleDeliveryMethod `json:"DeliveryMethod,omitempty"`
 	// The delivery URL.    Custom property set by the application.
 	DeliveryUrl string `json:"DeliveryUrl,omitempty"`
+	DeliveryFormat string `json:"DeliveryFormat,omitempty"`
 	// A value indicating whether this instance is external URL.    Custom property set by the application.
 	IsExternalUrl bool `json:"IsExternalUrl,omitempty"`
 	IsChunkedResponse bool `json:"IsChunkedResponse,omitempty"`

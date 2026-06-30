@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.16"
+    "version": "4.10.0.17"
   },
   "servers": [
     {
@@ -41174,6 +41174,111 @@
                 }
               }
             }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Parties/Messages": {
+      "summary": "Gets party messages",
+      "get": {
+        "tags": [
+          "PartyService"
+        ],
+        "summary": "Gets party messages",
+        "description": "Requires authentication as user",
+        "operationId": "getPartiesMessages",
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a QueryResult<PartyMessage> object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResult_Session.PartyMessage"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResult_Session.PartyMessage"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "post": {
+        "tags": [
+          "PartyService"
+        ],
+        "summary": "Posts a message to the party",
+        "description": "Requires authentication as user",
+        "operationId": "postPartiesMessages",
+        "requestBody": {
+          "description": "PartyMessage: ",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Session.PartyMessage"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Session.PartyMessage"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
           },
           "400": {
             "$ref": "#/components/responses/400"
@@ -105224,6 +105329,9 @@
             "type": "string",
             "description": "The delivery URL.\r\n\r\nCustom property set by the application."
           },
+          "DeliveryFormat": {
+            "type": "string"
+          },
           "IsExternalUrl": {
             "type": "boolean",
             "description": "A value indicating whether this instance is external URL.\r\n\r\nCustom property set by the application.",
@@ -105954,6 +106062,12 @@
               "$ref": "#/components/schemas/Entities.User"
             }
           },
+          "Messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Session.PartyMessage"
+            }
+          },
           "MasterSession": {
             "$ref": "#/components/schemas/Session.SessionInfo"
           }
@@ -106675,6 +106789,19 @@
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Dto.LinkedItemInfo"
+      },
+      "Session.PartyMessage": {
+        "type": "object",
+        "properties": {
+          "DateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Message": {
+            "type": "string"
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyMessage"
       },
       "Playlists.PlaylistCreationResult": {
         "type": "object",
@@ -109858,6 +109985,21 @@
           }
         },
         "x-internal-ref-name": "Emby.Notifications.Api.AddAdminNotification"
+      },
+      "QueryResult_Session.PartyMessage": {
+        "type": "object",
+        "properties": {
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Session.PartyMessage"
+            }
+          },
+          "TotalRecordCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
       },
       "PlaybackStartInfo": {
         "type": "object",

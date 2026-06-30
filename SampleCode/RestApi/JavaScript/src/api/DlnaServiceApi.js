@@ -15,7 +15,7 @@ import DlnaProfilesDlnaProfile from '../model/DlnaProfilesDlnaProfile';
 /**
 * DlnaService service.
 * @module api/DlnaServiceApi
-* @version 4.10.0.16
+* @version 4.10.0.17
 */
 export default class DlnaServiceApi {
 

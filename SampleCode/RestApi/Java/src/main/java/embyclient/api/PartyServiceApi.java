@@ -19,7 +19,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import embyclient.model.QueryResultSessionPartyMessage;
 import embyclient.model.SessionPartyInfoResult;
+import embyclient.model.SessionPartyMessage;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -271,6 +273,122 @@ public class PartyServiceApi {
 
         com.squareup.okhttp.Call call = getPartiesInfoValidateBeforeCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<SessionPartyInfoResult>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getPartiesMessages
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getPartiesMessagesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+        // create path and map variables
+        String localVarPath = "/Parties/Messages";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "application/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getPartiesMessagesValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        com.squareup.okhttp.Call call = getPartiesMessagesCall(progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Gets party messages
+     * Requires authentication as user
+     * @return QueryResultSessionPartyMessage
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public QueryResultSessionPartyMessage getPartiesMessages() throws ApiException {
+        ApiResponse<QueryResultSessionPartyMessage> resp = getPartiesMessagesWithHttpInfo();
+        return resp.getData();
+    }
+
+    /**
+     * Gets party messages
+     * Requires authentication as user
+     * @return ApiResponse&lt;QueryResultSessionPartyMessage&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<QueryResultSessionPartyMessage> getPartiesMessagesWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = getPartiesMessagesValidateBeforeCall(null, null);
+        Type localVarReturnType = new TypeToken<QueryResultSessionPartyMessage>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Gets party messages (asynchronously)
+     * Requires authentication as user
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getPartiesMessagesAsync(final ApiCallback<QueryResultSessionPartyMessage> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getPartiesMessagesValidateBeforeCall(progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<QueryResultSessionPartyMessage>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -624,6 +742,126 @@ public class PartyServiceApi {
         }
 
         com.squareup.okhttp.Call call = postPartiesLeaveValidateBeforeCall(progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for postPartiesMessages
+     * @param body PartyMessage:  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call postPartiesMessagesCall(SessionPartyMessage body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = body;
+        
+        // create path and map variables
+        String localVarPath = "/Parties/Messages";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "application/xml"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call postPartiesMessagesValidateBeforeCall(SessionPartyMessage body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling postPartiesMessages(Async)");
+        }
+        
+        com.squareup.okhttp.Call call = postPartiesMessagesCall(body, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Posts a message to the party
+     * Requires authentication as user
+     * @param body PartyMessage:  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void postPartiesMessages(SessionPartyMessage body) throws ApiException {
+        postPartiesMessagesWithHttpInfo(body);
+    }
+
+    /**
+     * Posts a message to the party
+     * Requires authentication as user
+     * @param body PartyMessage:  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> postPartiesMessagesWithHttpInfo(SessionPartyMessage body) throws ApiException {
+        com.squareup.okhttp.Call call = postPartiesMessagesValidateBeforeCall(body, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Posts a message to the party (asynchronously)
+     * Requires authentication as user
+     * @param body PartyMessage:  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call postPartiesMessagesAsync(SessionPartyMessage body, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = postPartiesMessagesValidateBeforeCall(body, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

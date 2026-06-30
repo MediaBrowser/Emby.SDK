@@ -27068,6 +27068,105 @@
       },
       "x-summary": "Gets info about the session's current party"
     },
+    "/Parties/Messages": {
+      "get": {
+        "tags": [
+          "PartyService"
+        ],
+        "summary": "Gets party messages",
+        "description": "Requires authentication as user",
+        "operationId": "getPartiesMessages",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a QueryResult<PartyMessage> object.",
+            "schema": {
+              "$ref": "#/definitions/QueryResult_Session.PartyMessage"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "post": {
+        "tags": [
+          "PartyService"
+        ],
+        "summary": "Posts a message to the party",
+        "description": "Requires authentication as user",
+        "operationId": "postPartiesMessages",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "PartyMessage: ",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Session.PartyMessage"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets party messages"
+    },
     "/Parties/Leave": {
       "post": {
         "tags": [
@@ -72868,6 +72967,9 @@
           "description": "The delivery URL.\r\n\r\nCustom property set by the application.",
           "type": "string"
         },
+        "DeliveryFormat": {
+          "type": "string"
+        },
         "IsExternalUrl": {
           "description": "A value indicating whether this instance is external URL.\r\n\r\nCustom property set by the application.",
           "type": "boolean"
@@ -73585,6 +73687,12 @@
             "$ref": "#/definitions/Entities.User"
           }
         },
+        "Messages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Session.PartyMessage"
+          }
+        },
         "MasterSession": {
           "$ref": "#/definitions/Session.SessionInfo"
         }
@@ -74282,6 +74390,19 @@
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Dto.LinkedItemInfo"
+    },
+    "Session.PartyMessage": {
+      "type": "object",
+      "properties": {
+        "DateTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "Message": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyMessage"
     },
     "Playlists.PlaylistCreationResult": {
       "type": "object",
@@ -77430,6 +77551,21 @@
         }
       },
       "x-internal-ref-name": "Emby.Notifications.Api.AddAdminNotification"
+    },
+    "QueryResult_Session.PartyMessage": {
+      "type": "object",
+      "properties": {
+        "Items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Session.PartyMessage"
+          }
+        },
+        "TotalRecordCount": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
     },
     "PlaybackStartInfo": {
       "description": "Class PlaybackStartInfo.\r\n",

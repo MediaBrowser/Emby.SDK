@@ -10,12 +10,14 @@
  */
 
 import ApiClient from "../ApiClient";
+import QueryResultSessionPartyMessage from '../model/QueryResultSessionPartyMessage';
 import SessionPartyInfoResult from '../model/SessionPartyInfoResult';
+import SessionPartyMessage from '../model/SessionPartyMessage';
 
 /**
 * PartyService service.
 * @module api/PartyServiceApi
-* @version 4.10.0.16
+* @version 4.10.0.17
 */
 export default class PartyServiceApi {
 
@@ -110,6 +112,48 @@ export default class PartyServiceApi {
      */
     getPartiesInfo() {
       return this.getPartiesInfoWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Gets party messages
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/QueryResultSessionPartyMessage} and HTTP response
+     */
+    getPartiesMessagesWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = QueryResultSessionPartyMessage;
+
+      return this.apiClient.callApi(
+        '/Parties/Messages', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Gets party messages
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/QueryResultSessionPartyMessage}
+     */
+    getPartiesMessages() {
+      return this.getPartiesMessagesWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -237,6 +281,48 @@ export default class PartyServiceApi {
      */
     postPartiesLeave() {
       return this.postPartiesLeaveWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Posts a message to the party
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    postPartiesMessagesWithHttpInfo() {
+      let postBody = body;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Parties/Messages', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Posts a message to the party
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    postPartiesMessages() {
+      return this.postPartiesMessagesWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

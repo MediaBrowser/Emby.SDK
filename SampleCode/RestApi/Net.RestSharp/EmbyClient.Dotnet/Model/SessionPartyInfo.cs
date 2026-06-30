@@ -30,13 +30,15 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="name">name.</param>
         /// <param name="sessions">sessions.</param>
         /// <param name="users">users.</param>
+        /// <param name="messages">messages.</param>
         /// <param name="masterSession">masterSession.</param>
-        public SessionPartyInfo(string id = default(string), string name = default(string), List<SessionSessionInfo> sessions = default(List<SessionSessionInfo>), List<EntitiesUser> users = default(List<EntitiesUser>), SessionSessionInfo masterSession = default(SessionSessionInfo))
+        public SessionPartyInfo(string id = default(string), string name = default(string), List<SessionSessionInfo> sessions = default(List<SessionSessionInfo>), List<EntitiesUser> users = default(List<EntitiesUser>), List<SessionPartyMessage> messages = default(List<SessionPartyMessage>), SessionSessionInfo masterSession = default(SessionSessionInfo))
         {
             this.Id = id;
             this.Name = name;
             this.Sessions = sessions;
             this.Users = users;
+            this.Messages = messages;
             this.MasterSession = masterSession;
         }
         
@@ -65,6 +67,12 @@ namespace EmbyClient.Dotnet.Model
         public List<EntitiesUser> Users { get; set; }
 
         /// <summary>
+        /// Gets or Sets Messages
+        /// </summary>
+        [DataMember(Name="Messages", EmitDefaultValue=false)]
+        public List<SessionPartyMessage> Messages { get; set; }
+
+        /// <summary>
         /// Gets or Sets MasterSession
         /// </summary>
         [DataMember(Name="MasterSession", EmitDefaultValue=false)]
@@ -82,6 +90,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             sb.Append("  Users: ").Append(Users).Append("\n");
+            sb.Append("  Messages: ").Append(Messages).Append("\n");
             sb.Append("  MasterSession: ").Append(MasterSession).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -140,6 +149,12 @@ namespace EmbyClient.Dotnet.Model
                     this.Users.SequenceEqual(input.Users)
                 ) && 
                 (
+                    this.Messages == input.Messages ||
+                    this.Messages != null &&
+                    input.Messages != null &&
+                    this.Messages.SequenceEqual(input.Messages)
+                ) && 
+                (
                     this.MasterSession == input.MasterSession ||
                     (this.MasterSession != null &&
                     this.MasterSession.Equals(input.MasterSession))
@@ -163,6 +178,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Sessions.GetHashCode();
                 if (this.Users != null)
                     hashCode = hashCode * 59 + this.Users.GetHashCode();
+                if (this.Messages != null)
+                    hashCode = hashCode * 59 + this.Messages.GetHashCode();
                 if (this.MasterSession != null)
                     hashCode = hashCode * 59 + this.MasterSession.GetHashCode();
                 return hashCode;

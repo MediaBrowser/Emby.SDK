@@ -15,7 +15,7 @@ import EditObjectContainer from '../model/EditObjectContainer';
 /**
 * SubtitleOptionsService service.
 * @module api/SubtitleOptionsServiceApi
-* @version 4.10.0.16
+* @version 4.10.0.17
 */
 export default class SubtitleOptionsServiceApi {
 

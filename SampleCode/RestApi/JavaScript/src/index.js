@@ -234,6 +234,7 @@ import QueryResultDevicesDeviceInfo from './model/QueryResultDevicesDeviceInfo';
 import QueryResultLiveTvSeriesTimerInfoDto from './model/QueryResultLiveTvSeriesTimerInfoDto';
 import QueryResultLiveTvTimerInfoDto from './model/QueryResultLiveTvTimerInfoDto';
 import QueryResultLogFile from './model/QueryResultLogFile';
+import QueryResultSessionPartyMessage from './model/QueryResultSessionPartyMessage';
 import QueryResultString from './model/QueryResultString';
 import QueryResultSyncJob from './model/QueryResultSyncJob';
 import QueryResultSyncJobItem from './model/QueryResultSyncJobItem';
@@ -274,6 +275,7 @@ import SeriesInfo from './model/SeriesInfo';
 import ServerConfiguration from './model/ServerConfiguration';
 import SessionPartyInfo from './model/SessionPartyInfo';
 import SessionPartyInfoResult from './model/SessionPartyInfoResult';
+import SessionPartyMessage from './model/SessionPartyMessage';
 import SessionSessionInfo from './model/SessionSessionInfo';
 import SessionUserInfo from './model/SessionUserInfo';
 import SleepTimerMode from './model/SleepTimerMode';
@@ -449,7 +451,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.10.0.16
+* @version 4.10.0.17
 */
 export {
     /**
@@ -1803,6 +1805,12 @@ export {
     QueryResultLogFile,
 
     /**
+     * The QueryResultSessionPartyMessage model constructor.
+     * @property {module:model/QueryResultSessionPartyMessage}
+     */
+    QueryResultSessionPartyMessage,
+
+    /**
      * The QueryResultString model constructor.
      * @property {module:model/QueryResultString}
      */
@@ -2041,6 +2049,12 @@ export {
      * @property {module:model/SessionPartyInfoResult}
      */
     SessionPartyInfoResult,
+
+    /**
+     * The SessionPartyMessage model constructor.
+     * @property {module:model/SessionPartyMessage}
+     */
+    SessionPartyMessage,
 
     /**
      * The SessionSessionInfo model constructor.

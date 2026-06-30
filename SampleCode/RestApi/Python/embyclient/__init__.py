@@ -307,6 +307,7 @@ from embyclient.models.query_result_devices_device_info import QueryResultDevice
 from embyclient.models.query_result_live_tv_series_timer_info_dto import QueryResultLiveTvSeriesTimerInfoDto
 from embyclient.models.query_result_live_tv_timer_info_dto import QueryResultLiveTvTimerInfoDto
 from embyclient.models.query_result_log_file import QueryResultLogFile
+from embyclient.models.query_result_session_party_message import QueryResultSessionPartyMessage
 from embyclient.models.query_result_string import QueryResultString
 from embyclient.models.query_result_sync_job import QueryResultSyncJob
 from embyclient.models.query_result_sync_job_item import QueryResultSyncJobItem
@@ -347,6 +348,7 @@ from embyclient.models.series_info import SeriesInfo
 from embyclient.models.server_configuration import ServerConfiguration
 from embyclient.models.session_party_info import SessionPartyInfo
 from embyclient.models.session_party_info_result import SessionPartyInfoResult
+from embyclient.models.session_party_message import SessionPartyMessage
 from embyclient.models.session_session_info import SessionSessionInfo
 from embyclient.models.session_user_info import SessionUserInfo
 from embyclient.models.sleep_timer_mode import SleepTimerMode

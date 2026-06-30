@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.10.0.16
+  version: 4.10.0.17
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -34411,6 +34411,72 @@ paths:
             application/xml:
               schema:
                 $ref: '#/components/schemas/Session.PartyInfoResult'
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+  /Parties/Messages:
+    summary: Gets party messages
+    get:
+      tags:
+      - PartyService
+      summary: Gets party messages
+      description: Requires authentication as user
+      operationId: getPartiesMessages
+      responses:
+        "200":
+          description: Operation successful. Returning a QueryResult<PartyMessage>
+            object.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryResult_Session.PartyMessage'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/QueryResult_Session.PartyMessage'
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+    post:
+      tags:
+      - PartyService
+      summary: Posts a message to the party
+      description: Requires authentication as user
+      operationId: postPartiesMessages
+      requestBody:
+        description: "PartyMessage: "
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Session.PartyMessage'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Session.PartyMessage'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -84079,6 +84145,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -84134,6 +84201,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -84249,6 +84317,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -84304,6 +84373,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -84654,6 +84724,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -84709,6 +84780,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -84824,6 +84896,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -84879,6 +84952,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -85803,6 +85877,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -85858,6 +85933,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -85973,6 +86049,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -86028,6 +86105,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -86514,6 +86592,7 @@ components:
           AverageFrameRate: 9.965781
           StreamStartTimeTicks: 7
           IsExternal: true
+          DeliveryFormat: DeliveryFormat
           Level: 8.762042012749001
           ExtendedVideoSubType: None
           Channels: 7
@@ -86569,6 +86648,7 @@ components:
           AverageFrameRate: 9.965781
           StreamStartTimeTicks: 7
           IsExternal: true
+          DeliveryFormat: DeliveryFormat
           Level: 8.762042012749001
           ExtendedVideoSubType: None
           Channels: 7
@@ -86903,6 +86983,8 @@ components:
         DeliveryUrl:
           type: string
           description: "The delivery URL.\r\n\r\nCustom property set by the application."
+        DeliveryFormat:
+          type: string
         IsExternalUrl:
           type: boolean
           description: "A value indicating whether this instance is external URL.\r\
@@ -86992,6 +87074,7 @@ components:
         AverageFrameRate: 9.965781
         StreamStartTimeTicks: 7
         IsExternal: true
+        DeliveryFormat: DeliveryFormat
         Level: 8.762042012749001
         ExtendedVideoSubType: None
         Channels: 7
@@ -87663,6 +87746,11 @@ components:
           $ref: '#/components/schemas/Session.PartyInfo'
       example:
         PartyInfo:
+          Messages:
+          - Message: Message
+            DateTime: 2000-01-23T04:56:07.000+00:00
+          - Message: Message
+            DateTime: 2000-01-23T04:56:07.000+00:00
           Sessions:
           - PlaylistLength: 3
             ApplicationVersion: ApplicationVersion
@@ -87748,6 +87836,7 @@ components:
                   AverageFrameRate: 9.965781
                   StreamStartTimeTicks: 7
                   IsExternal: true
+                  DeliveryFormat: DeliveryFormat
                   Level: 8.762042012749001
                   ExtendedVideoSubType: None
                   Channels: 7
@@ -87803,6 +87892,7 @@ components:
                   AverageFrameRate: 9.965781
                   StreamStartTimeTicks: 7
                   IsExternal: true
+                  DeliveryFormat: DeliveryFormat
                   Level: 8.762042012749001
                   ExtendedVideoSubType: None
                   Channels: 7
@@ -87918,6 +88008,7 @@ components:
                   AverageFrameRate: 9.965781
                   StreamStartTimeTicks: 7
                   IsExternal: true
+                  DeliveryFormat: DeliveryFormat
                   Level: 8.762042012749001
                   ExtendedVideoSubType: None
                   Channels: 7
@@ -87973,6 +88064,7 @@ components:
                   AverageFrameRate: 9.965781
                   StreamStartTimeTicks: 7
                   IsExternal: true
+                  DeliveryFormat: DeliveryFormat
                   Level: 8.762042012749001
                   ExtendedVideoSubType: None
                   Channels: 7
@@ -88392,6 +88484,7 @@ components:
                   AverageFrameRate: 9.965781
                   StreamStartTimeTicks: 7
                   IsExternal: true
+                  DeliveryFormat: DeliveryFormat
                   Level: 8.762042012749001
                   ExtendedVideoSubType: None
                   Channels: 7
@@ -88447,6 +88540,7 @@ components:
                   AverageFrameRate: 9.965781
                   StreamStartTimeTicks: 7
                   IsExternal: true
+                  DeliveryFormat: DeliveryFormat
                   Level: 8.762042012749001
                   ExtendedVideoSubType: None
                   Channels: 7
@@ -88622,6 +88716,7 @@ components:
                   AverageFrameRate: 9.965781
                   StreamStartTimeTicks: 7
                   IsExternal: true
+                  DeliveryFormat: DeliveryFormat
                   Level: 8.762042012749001
                   ExtendedVideoSubType: None
                   Channels: 7
@@ -88677,6 +88772,7 @@ components:
                   AverageFrameRate: 9.965781
                   StreamStartTimeTicks: 7
                   IsExternal: true
+                  DeliveryFormat: DeliveryFormat
                   Level: 8.762042012749001
                   ExtendedVideoSubType: None
                   Channels: 7
@@ -88792,6 +88888,7 @@ components:
                   AverageFrameRate: 9.965781
                   StreamStartTimeTicks: 7
                   IsExternal: true
+                  DeliveryFormat: DeliveryFormat
                   Level: 8.762042012749001
                   ExtendedVideoSubType: None
                   Channels: 7
@@ -88847,6 +88944,7 @@ components:
                   AverageFrameRate: 9.965781
                   StreamStartTimeTicks: 7
                   IsExternal: true
+                  DeliveryFormat: DeliveryFormat
                   Level: 8.762042012749001
                   ExtendedVideoSubType: None
                   Channels: 7
@@ -89266,6 +89364,7 @@ components:
                   AverageFrameRate: 9.965781
                   StreamStartTimeTicks: 7
                   IsExternal: true
+                  DeliveryFormat: DeliveryFormat
                   Level: 8.762042012749001
                   ExtendedVideoSubType: None
                   Channels: 7
@@ -89321,6 +89420,7 @@ components:
                   AverageFrameRate: 9.965781
                   StreamStartTimeTicks: 7
                   IsExternal: true
+                  DeliveryFormat: DeliveryFormat
                   Level: 8.762042012749001
                   ExtendedVideoSubType: None
                   Channels: 7
@@ -89512,9 +89612,18 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Entities.User'
+        Messages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Session.PartyMessage'
         MasterSession:
           $ref: '#/components/schemas/Session.SessionInfo'
       example:
+        Messages:
+        - Message: Message
+          DateTime: 2000-01-23T04:56:07.000+00:00
+        - Message: Message
+          DateTime: 2000-01-23T04:56:07.000+00:00
         Sessions:
         - PlaylistLength: 3
           ApplicationVersion: ApplicationVersion
@@ -89600,6 +89709,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -89655,6 +89765,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -89770,6 +89881,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -89825,6 +89937,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -90244,6 +90357,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -90299,6 +90413,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -90474,6 +90589,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -90529,6 +90645,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -90644,6 +90761,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -90699,6 +90817,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -91118,6 +91237,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -91173,6 +91293,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -91513,6 +91634,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -91568,6 +91690,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -91683,6 +91806,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -91738,6 +91862,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -92157,6 +92282,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -92212,6 +92338,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -92401,6 +92528,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -92456,6 +92584,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -93122,6 +93251,18 @@ components:
           key: ProviderIds
         Name: Name
       x-internal-ref-name: MediaBrowser.Model.Dto.LinkedItemInfo
+    Session.PartyMessage:
+      type: object
+      properties:
+        DateTime:
+          type: string
+          format: date-time
+        Message:
+          type: string
+      example:
+        Message: Message
+        DateTime: 2000-01-23T04:56:07.000+00:00
+      x-internal-ref-name: MediaBrowser.Controller.Session.PartyMessage
     Playlists.PlaylistCreationResult:
       type: object
       properties:
@@ -95621,6 +95762,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -95676,6 +95818,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -96032,6 +96175,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -96087,6 +96231,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -96202,6 +96347,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -96257,6 +96403,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -96611,6 +96758,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -96666,6 +96814,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -96781,6 +96930,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -96836,6 +96986,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -97200,6 +97351,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -97255,6 +97407,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -97370,6 +97523,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -97425,6 +97579,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -97946,6 +98101,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -98001,6 +98157,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -98116,6 +98273,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -98171,6 +98329,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -98549,6 +98708,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -98604,6 +98764,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -98719,6 +98880,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -98774,6 +98936,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -99236,6 +99399,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -99291,6 +99455,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -99406,6 +99571,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -99461,6 +99627,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -100387,6 +100554,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -100442,6 +100610,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -100557,6 +100726,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -100612,6 +100782,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -100962,6 +101133,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -101017,6 +101189,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -101132,6 +101305,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -101187,6 +101361,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -101532,6 +101707,23 @@ components:
         DisplayDateTime:
           type: boolean
       x-internal-ref-name: Emby.Notifications.Api.AddAdminNotification
+    QueryResult_Session.PartyMessage:
+      type: object
+      properties:
+        Items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Session.PartyMessage'
+        TotalRecordCount:
+          type: integer
+          format: int32
+      example:
+        TotalRecordCount: 0
+        Items:
+        - Message: Message
+          DateTime: 2000-01-23T04:56:07.000+00:00
+        - Message: Message
+          DateTime: 2000-01-23T04:56:07.000+00:00
     PlaybackStartInfo:
       type: object
       properties:
@@ -101940,6 +102132,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -101995,6 +102188,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -102136,6 +102330,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -102191,6 +102386,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -102377,6 +102573,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -102432,6 +102629,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -102655,6 +102853,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -102710,6 +102909,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -102851,6 +103051,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -102906,6 +103107,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -104937,6 +105139,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -104992,6 +105195,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -105107,6 +105311,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -105162,6 +105367,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -105581,6 +105787,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -105636,6 +105843,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -107804,6 +108012,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -107859,6 +108068,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -107974,6 +108184,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -108029,6 +108240,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -108379,6 +108591,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -108434,6 +108647,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -108549,6 +108763,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -108604,6 +108819,7 @@ components:
                 AverageFrameRate: 9.965781
                 StreamStartTimeTicks: 7
                 IsExternal: true
+                DeliveryFormat: DeliveryFormat
                 Level: 8.762042012749001
                 ExtendedVideoSubType: None
                 Channels: 7
@@ -108976,6 +109192,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -109031,6 +109248,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -109146,6 +109364,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -109201,6 +109420,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -109551,6 +109771,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -109606,6 +109827,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -109721,6 +109943,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -109776,6 +109999,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -110289,6 +110513,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -110344,6 +110569,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -110459,6 +110685,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -110514,6 +110741,7 @@ components:
             AverageFrameRate: 9.965781
             StreamStartTimeTicks: 7
             IsExternal: true
+            DeliveryFormat: DeliveryFormat
             Level: 8.762042012749001
             ExtendedVideoSubType: None
             Channels: 7
@@ -111681,6 +111909,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -111736,6 +111965,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -111851,6 +112081,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -111906,6 +112137,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -112586,6 +112818,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -112641,6 +112874,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -112756,6 +112990,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7
@@ -112811,6 +113046,7 @@ components:
               AverageFrameRate: 9.965781
               StreamStartTimeTicks: 7
               IsExternal: true
+              DeliveryFormat: DeliveryFormat
               Level: 8.762042012749001
               ExtendedVideoSubType: None
               Channels: 7

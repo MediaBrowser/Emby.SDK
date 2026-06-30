@@ -23531,6 +23531,15 @@ references:
 - uid: emby.restapi/getPartiesInfo/operationlistitem
   name: getPartiesInfo
   href: reference/RestAPI/PartyService.html#emby_restapi_getPartiesInfo_operationlistitem
+- uid: emby.restapi/getPartiesMessages
+  name: getPartiesMessages
+  href: reference/RestAPI/PartyService/getPartiesMessages.html
+- uid: emby.restapi/getPartiesMessages/operation
+  name: getPartiesMessages
+  href: reference/RestAPI/PartyService/getPartiesMessages.html#emby_restapi_getPartiesMessages_operation
+- uid: emby.restapi/getPartiesMessages/operationlistitem
+  name: getPartiesMessages
+  href: reference/RestAPI/PartyService.html#emby_restapi_getPartiesMessages_operationlistitem
 - uid: emby.restapi/getPersons
   name: getPersons
   href: reference/RestAPI/PersonsService/getPersons.html
@@ -25709,6 +25718,15 @@ references:
 - uid: emby.restapi/postPartiesLeave/operationlistitem
   name: postPartiesLeave
   href: reference/RestAPI/PartyService.html#emby_restapi_postPartiesLeave_operationlistitem
+- uid: emby.restapi/postPartiesMessages
+  name: postPartiesMessages
+  href: reference/RestAPI/PartyService/postPartiesMessages.html
+- uid: emby.restapi/postPartiesMessages/operation
+  name: postPartiesMessages
+  href: reference/RestAPI/PartyService/postPartiesMessages.html#emby_restapi_postPartiesMessages_operation
+- uid: emby.restapi/postPartiesMessages/operationlistitem
+  name: postPartiesMessages
+  href: reference/RestAPI/PartyService.html#emby_restapi_postPartiesMessages_operationlistitem
 - uid: emby.restapi/postPlaylists
   name: postPlaylists
   href: reference/RestAPI/PlaylistService/postPlaylists.html
@@ -102897,6 +102915,12 @@ references:
   commentId: E:MediaBrowser.Controller.Session.ISessionManager.PartyDeleted
   fullName: MediaBrowser.Controller.Session.ISessionManager.PartyDeleted
   nameWithType: ISessionManager.PartyDeleted
+- uid: MediaBrowser.Controller.Session.ISessionManager.PartyMessagePosted
+  name: PartyMessagePosted
+  href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_PartyMessagePosted
+  commentId: E:MediaBrowser.Controller.Session.ISessionManager.PartyMessagePosted
+  fullName: MediaBrowser.Controller.Session.ISessionManager.PartyMessagePosted
+  nameWithType: ISessionManager.PartyMessagePosted
 - uid: MediaBrowser.Controller.Session.ISessionManager.PingSession(System.String,System.String)
   name: PingSession(String, String)
   href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_PingSession_System_String_System_String_
@@ -102928,6 +102952,19 @@ references:
   commentId: E:MediaBrowser.Controller.Session.ISessionManager.PlaybackStopped
   fullName: MediaBrowser.Controller.Session.ISessionManager.PlaybackStopped
   nameWithType: ISessionManager.PlaybackStopped
+- uid: MediaBrowser.Controller.Session.ISessionManager.PostMessage(MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Controller.Session.PartyMessage)
+  name: PostMessage(SessionInfo, PartyMessage)
+  href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_PostMessage_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Controller_Session_PartyMessage_
+  commentId: M:MediaBrowser.Controller.Session.ISessionManager.PostMessage(MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Controller.Session.PartyMessage)
+  fullName: MediaBrowser.Controller.Session.ISessionManager.PostMessage(MediaBrowser.Controller.Session.SessionInfo, MediaBrowser.Controller.Session.PartyMessage)
+  nameWithType: ISessionManager.PostMessage(SessionInfo, PartyMessage)
+- uid: MediaBrowser.Controller.Session.ISessionManager.PostMessage*
+  name: PostMessage
+  href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_PostMessage_
+  commentId: Overload:MediaBrowser.Controller.Session.ISessionManager.PostMessage
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.ISessionManager.PostMessage
+  nameWithType: ISessionManager.PostMessage
 - uid: MediaBrowser.Controller.Session.ISessionManager.RegisterPlaySession(MediaBrowser.Model.Session.PlaybackStartInfo,MediaBrowser.Controller.Session.SessionInfo)
   name: RegisterPlaySession(PlaybackStartInfo, SessionInfo)
   href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_RegisterPlaySession_MediaBrowser_Model_Session_PlaybackStartInfo_MediaBrowser_Controller_Session_SessionInfo_
@@ -103296,6 +103333,19 @@ references:
   commentId: T:MediaBrowser.Controller.Session.PartyEventArgs
   fullName: MediaBrowser.Controller.Session.PartyEventArgs
   nameWithType: PartyEventArgs
+- uid: MediaBrowser.Controller.Session.PartyEventArgs.Message
+  name: Message
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyEventArgs.html#MediaBrowser_Controller_Session_PartyEventArgs_Message
+  commentId: P:MediaBrowser.Controller.Session.PartyEventArgs.Message
+  fullName: MediaBrowser.Controller.Session.PartyEventArgs.Message
+  nameWithType: PartyEventArgs.Message
+- uid: MediaBrowser.Controller.Session.PartyEventArgs.Message*
+  name: Message
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyEventArgs.html#MediaBrowser_Controller_Session_PartyEventArgs_Message_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyEventArgs.Message
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyEventArgs.Message
+  nameWithType: PartyEventArgs.Message
 - uid: MediaBrowser.Controller.Session.PartyEventArgs.PartyInfo
   name: PartyInfo
   href: reference/pluginapi/MediaBrowser.Controller.Session.PartyEventArgs.html#MediaBrowser_Controller_Session_PartyEventArgs_PartyInfo
@@ -103354,6 +103404,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.PartyInfo.MasterSession
   nameWithType: PartyInfo.MasterSession
+- uid: MediaBrowser.Controller.Session.PartyInfo.Messages
+  name: Messages
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Messages
+  commentId: P:MediaBrowser.Controller.Session.PartyInfo.Messages
+  fullName: MediaBrowser.Controller.Session.PartyInfo.Messages
+  nameWithType: PartyInfo.Messages
+- uid: MediaBrowser.Controller.Session.PartyInfo.Messages*
+  name: Messages
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Messages_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyInfo.Messages
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyInfo.Messages
+  nameWithType: PartyInfo.Messages
 - uid: MediaBrowser.Controller.Session.PartyInfo.Name
   name: Name
   href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Name
@@ -103470,6 +103533,38 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.PartyInfoResult.PartyInfo
   nameWithType: PartyInfoResult.PartyInfo
+- uid: MediaBrowser.Controller.Session.PartyMessage
+  name: PartyMessage
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html
+  commentId: T:MediaBrowser.Controller.Session.PartyMessage
+  fullName: MediaBrowser.Controller.Session.PartyMessage
+  nameWithType: PartyMessage
+- uid: MediaBrowser.Controller.Session.PartyMessage.DateTime
+  name: DateTime
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_DateTime
+  commentId: P:MediaBrowser.Controller.Session.PartyMessage.DateTime
+  fullName: MediaBrowser.Controller.Session.PartyMessage.DateTime
+  nameWithType: PartyMessage.DateTime
+- uid: MediaBrowser.Controller.Session.PartyMessage.DateTime*
+  name: DateTime
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_DateTime_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyMessage.DateTime
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyMessage.DateTime
+  nameWithType: PartyMessage.DateTime
+- uid: MediaBrowser.Controller.Session.PartyMessage.Message
+  name: Message
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_Message
+  commentId: P:MediaBrowser.Controller.Session.PartyMessage.Message
+  fullName: MediaBrowser.Controller.Session.PartyMessage.Message
+  nameWithType: PartyMessage.Message
+- uid: MediaBrowser.Controller.Session.PartyMessage.Message*
+  name: Message
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_Message_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyMessage.Message
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyMessage.Message
+  nameWithType: PartyMessage.Message
 - uid: MediaBrowser.Controller.Session.PartySessionInfo
   name: PartySessionInfo
   href: reference/pluginapi/MediaBrowser.Controller.Session.PartySessionInfo.html
@@ -121877,6 +121972,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Entities.MediaStream.Comment
   nameWithType: MediaStream.Comment
+- uid: MediaBrowser.Model.Entities.MediaStream.DeliveryFormat
+  name: DeliveryFormat
+  href: reference/pluginapi/MediaBrowser.Model.Entities.MediaStream.html#MediaBrowser_Model_Entities_MediaStream_DeliveryFormat
+  commentId: P:MediaBrowser.Model.Entities.MediaStream.DeliveryFormat
+  fullName: MediaBrowser.Model.Entities.MediaStream.DeliveryFormat
+  nameWithType: MediaStream.DeliveryFormat
+- uid: MediaBrowser.Model.Entities.MediaStream.DeliveryFormat*
+  name: DeliveryFormat
+  href: reference/pluginapi/MediaBrowser.Model.Entities.MediaStream.html#MediaBrowser_Model_Entities_MediaStream_DeliveryFormat_
+  commentId: Overload:MediaBrowser.Model.Entities.MediaStream.DeliveryFormat
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.MediaStream.DeliveryFormat
+  nameWithType: MediaStream.DeliveryFormat
 - uid: MediaBrowser.Model.Entities.MediaStream.DeliveryMethod
   name: DeliveryMethod
   href: reference/pluginapi/MediaBrowser.Model.Entities.MediaStream.html#MediaBrowser_Model_Entities_MediaStream_DeliveryMethod

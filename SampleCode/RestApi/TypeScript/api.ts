@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.16
+ * OpenAPI spec version: 4.10.0.17
  * 
  *
  * NOTE: This file is auto generated.
@@ -8027,6 +8027,12 @@ export interface MediaStream {
      */
     DeliveryUrl?: string;
     /**
+     * 
+     * @type {string}
+     * @memberof MediaStream
+     */
+    DeliveryFormat?: string;
+    /**
      * A value indicating whether this instance is external URL.    Custom property set by the application.
      * @type {boolean}
      * @memberof MediaStream
@@ -10419,6 +10425,25 @@ export interface QueryResultLogFile {
 /**
  * 
  * @export
+ * @interface QueryResultSessionPartyMessage
+ */
+export interface QueryResultSessionPartyMessage {
+    /**
+     * 
+     * @type {Array<SessionPartyMessage>}
+     * @memberof QueryResultSessionPartyMessage
+     */
+    Items?: Array<SessionPartyMessage>;
+    /**
+     * 
+     * @type {number}
+     * @memberof QueryResultSessionPartyMessage
+     */
+    TotalRecordCount?: number;
+}
+/**
+ * 
+ * @export
  * @interface QueryResultString
  */
 export interface QueryResultString {
@@ -12108,6 +12133,12 @@ export interface SessionPartyInfo {
     Users?: Array<EntitiesUser>;
     /**
      * 
+     * @type {Array<SessionPartyMessage>}
+     * @memberof SessionPartyInfo
+     */
+    Messages?: Array<SessionPartyMessage>;
+    /**
+     * 
      * @type {SessionSessionInfo}
      * @memberof SessionPartyInfo
      */
@@ -12125,6 +12156,25 @@ export interface SessionPartyInfoResult {
      * @memberof SessionPartyInfoResult
      */
     PartyInfo?: SessionPartyInfo;
+}
+/**
+ * 
+ * @export
+ * @interface SessionPartyMessage
+ */
+export interface SessionPartyMessage {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SessionPartyMessage
+     */
+    DateTime?: Date;
+    /**
+     * 
+     * @type {string}
+     * @memberof SessionPartyMessage
+     */
+    Message?: string;
 }
 /**
  * Class SessionInfo  
@@ -80859,6 +80909,39 @@ export const PartyServiceApiFetchParamCreator = function (configuration?: Config
         },
         /**
          * Requires authentication as user
+         * @summary Gets party messages
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPartiesMessages(options: any = {}): FetchArgs {
+            const localVarPath = `/Parties/Messages`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as user
          * @summary Creates a party
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -80962,6 +81045,48 @@ export const PartyServiceApiFetchParamCreator = function (configuration?: Config
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Requires authentication as user
+         * @summary Posts a message to the party
+         * @param {SessionPartyMessage} body PartyMessage: 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postPartiesMessages(body: SessionPartyMessage, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postPartiesMessages.');
+            }
+            const localVarPath = `/Parties/Messages`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"SessionPartyMessage" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -80997,6 +81122,24 @@ export const PartyServiceApiFp = function(configuration?: Configuration) {
          */
         getPartiesInfo(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SessionPartyInfoResult> {
             const localVarFetchArgs = PartyServiceApiFetchParamCreator(configuration).getPartiesInfo(options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as user
+         * @summary Gets party messages
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPartiesMessages(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<QueryResultSessionPartyMessage> {
+            const localVarFetchArgs = PartyServiceApiFetchParamCreator(configuration).getPartiesMessages(options);
             return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -81062,6 +81205,25 @@ export const PartyServiceApiFp = function(configuration?: Configuration) {
                 });
             };
         },
+        /**
+         * Requires authentication as user
+         * @summary Posts a message to the party
+         * @param {SessionPartyMessage} body PartyMessage: 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postPartiesMessages(body: SessionPartyMessage, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = PartyServiceApiFetchParamCreator(configuration).postPartiesMessages(body, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
     }
 };
 
@@ -81091,6 +81253,15 @@ export const PartyServiceApiFactory = function (configuration?: Configuration, f
         },
         /**
          * Requires authentication as user
+         * @summary Gets party messages
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPartiesMessages(options?: any) {
+            return PartyServiceApiFp(configuration).getPartiesMessages(options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as user
          * @summary Creates a party
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -81116,6 +81287,16 @@ export const PartyServiceApiFactory = function (configuration?: Configuration, f
          */
         postPartiesLeave(options?: any) {
             return PartyServiceApiFp(configuration).postPartiesLeave(options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as user
+         * @summary Posts a message to the party
+         * @param {SessionPartyMessage} body PartyMessage: 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postPartiesMessages(body: SessionPartyMessage, options?: any) {
+            return PartyServiceApiFp(configuration).postPartiesMessages(body, options)(fetch, basePath);
         },
     };
 };
@@ -81151,6 +81332,17 @@ export class PartyServiceApi extends BaseAPI {
 
     /**
      * Requires authentication as user
+     * @summary Gets party messages
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PartyServiceApi
+     */
+    public getPartiesMessages(options?: any) {
+        return PartyServiceApiFp(this.configuration).getPartiesMessages(options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as user
      * @summary Creates a party
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -81181,6 +81373,18 @@ export class PartyServiceApi extends BaseAPI {
      */
     public postPartiesLeave(options?: any) {
         return PartyServiceApiFp(this.configuration).postPartiesLeave(options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as user
+     * @summary Posts a message to the party
+     * @param {SessionPartyMessage} body PartyMessage: 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PartyServiceApi
+     */
+    public postPartiesMessages(body: SessionPartyMessage, options?: any) {
+        return PartyServiceApiFp(this.configuration).postPartiesMessages(body, options)(this.fetch, this.basePath);
     }
 
 }
