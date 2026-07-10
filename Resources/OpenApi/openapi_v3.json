@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.17"
+    "version": "4.10.0.18"
   },
   "servers": [
     {
@@ -106793,6 +106793,10 @@
       "Session.PartyMessage": {
         "type": "object",
         "properties": {
+          "UserId": {
+            "type": "integer",
+            "format": "int64"
+          },
           "DateTime": {
             "type": "string",
             "format": "date-time"

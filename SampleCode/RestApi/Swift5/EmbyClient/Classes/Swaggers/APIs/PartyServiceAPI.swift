@@ -76,9 +76,11 @@ open class PartyServiceAPI {
   "PartyInfo" : {
     "Messages" : [ {
       "Message" : "Message",
+      "UserId" : 7,
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "Message" : "Message",
+      "UserId" : 7,
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     } ],
     "Sessions" : [ {
@@ -1937,9 +1939,11 @@ open class PartyServiceAPI {
   "TotalRecordCount" : 0,
   "Items" : [ {
     "Message" : "Message",
+    "UserId" : 7,
     "DateTime" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "Message" : "Message",
+    "UserId" : 7,
     "DateTime" : "2000-01-23T04:56:07.000+00:00"
   } ]
 }}]
@@ -1983,9 +1987,11 @@ open class PartyServiceAPI {
   "PartyInfo" : {
     "Messages" : [ {
       "Message" : "Message",
+      "UserId" : 7,
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "Message" : "Message",
+      "UserId" : 7,
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     } ],
     "Sessions" : [ {
@@ -3845,9 +3851,11 @@ open class PartyServiceAPI {
   "PartyInfo" : {
     "Messages" : [ {
       "Message" : "Message",
+      "UserId" : 7,
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "Message" : "Message",
+      "UserId" : 7,
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     } ],
     "Sessions" : [ {

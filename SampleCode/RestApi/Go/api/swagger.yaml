@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.10.0.17
+  version: 4.10.0.18
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -87748,8 +87748,10 @@ components:
         PartyInfo:
           Messages:
           - Message: Message
+            UserId: 7
             DateTime: 2000-01-23T04:56:07.000+00:00
           - Message: Message
+            UserId: 7
             DateTime: 2000-01-23T04:56:07.000+00:00
           Sessions:
           - PlaylistLength: 3
@@ -89621,8 +89623,10 @@ components:
       example:
         Messages:
         - Message: Message
+          UserId: 7
           DateTime: 2000-01-23T04:56:07.000+00:00
         - Message: Message
+          UserId: 7
           DateTime: 2000-01-23T04:56:07.000+00:00
         Sessions:
         - PlaylistLength: 3
@@ -93254,6 +93258,9 @@ components:
     Session.PartyMessage:
       type: object
       properties:
+        UserId:
+          type: integer
+          format: int64
         DateTime:
           type: string
           format: date-time
@@ -93261,6 +93268,7 @@ components:
           type: string
       example:
         Message: Message
+        UserId: 7
         DateTime: 2000-01-23T04:56:07.000+00:00
       x-internal-ref-name: MediaBrowser.Controller.Session.PartyMessage
     Playlists.PlaylistCreationResult:
@@ -101721,8 +101729,10 @@ components:
         TotalRecordCount: 0
         Items:
         - Message: Message
+          UserId: 7
           DateTime: 2000-01-23T04:56:07.000+00:00
         - Message: Message
+          UserId: 7
           DateTime: 2000-01-23T04:56:07.000+00:00
     PlaybackStartInfo:
       type: object

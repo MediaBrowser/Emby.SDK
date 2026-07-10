@@ -74394,6 +74394,10 @@
     "Session.PartyMessage": {
       "type": "object",
       "properties": {
+        "UserId": {
+          "format": "int64",
+          "type": "integer"
+        },
         "DateTime": {
           "format": "date-time",
           "type": "string"

@@ -15,7 +15,7 @@ import SessionPartyInfo from './SessionPartyInfo';
 /**
 * The SessionPartyInfoResult model module.
 * @module model/SessionPartyInfoResult
-* @version 4.10.0.17
+* @version 4.10.0.18
 */
 export default class SessionPartyInfoResult {
     /**

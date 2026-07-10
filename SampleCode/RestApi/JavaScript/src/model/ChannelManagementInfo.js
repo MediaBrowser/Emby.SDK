@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ChannelManagementInfo model module.
 * @module model/ChannelManagementInfo
-* @version 4.10.0.17
+* @version 4.10.0.18
 */
 export default class ChannelManagementInfo {
     /**

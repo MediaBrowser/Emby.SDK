@@ -22,24 +22,50 @@ class SessionPartyMessage(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'user_id': 'int',
         'date_time': 'datetime',
         'message': 'str'
     }
 
     attribute_map = {
+        'user_id': 'UserId',
         'date_time': 'DateTime',
         'message': 'Message'
     }
 
-    def __init__(self, date_time=None, message=None):  # noqa: E501
+    def __init__(self, user_id=None, date_time=None, message=None):  # noqa: E501
         """SessionPartyMessage - a model defined in Swagger"""  # noqa: E501
+        self._user_id = None
         self._date_time = None
         self._message = None
         self.discriminator = None
+        if user_id is not None:
+            self.user_id = user_id
         if date_time is not None:
             self.date_time = date_time
         if message is not None:
             self.message = message
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this SessionPartyMessage.  # noqa: E501
+
+
+        :return: The user_id of this SessionPartyMessage.  # noqa: E501
+        :rtype: int
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this SessionPartyMessage.
+
+
+        :param user_id: The user_id of this SessionPartyMessage.  # noqa: E501
+        :type: int
+        """
+
+        self._user_id = user_id
 
     @property
     def date_time(self):

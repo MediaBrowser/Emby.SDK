@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The UserItemDataDto model module.
 * @module model/UserItemDataDto
-* @version 4.10.0.17
+* @version 4.10.0.18
 */
 export default class UserItemDataDto {
     /**

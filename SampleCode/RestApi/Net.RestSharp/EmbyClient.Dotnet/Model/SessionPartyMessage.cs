@@ -26,14 +26,22 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SessionPartyMessage" /> class.
         /// </summary>
+        /// <param name="userId">userId.</param>
         /// <param name="dateTime">dateTime.</param>
         /// <param name="message">message.</param>
-        public SessionPartyMessage(DateTimeOffset? dateTime = default(DateTimeOffset?), string message = default(string))
+        public SessionPartyMessage(long? userId = default(long?), DateTimeOffset? dateTime = default(DateTimeOffset?), string message = default(string))
         {
+            this.UserId = userId;
             this.DateTime = dateTime;
             this.Message = message;
         }
         
+        /// <summary>
+        /// Gets or Sets UserId
+        /// </summary>
+        [DataMember(Name="UserId", EmitDefaultValue=false)]
+        public long? UserId { get; set; }
+
         /// <summary>
         /// Gets or Sets DateTime
         /// </summary>
@@ -54,6 +62,7 @@ namespace EmbyClient.Dotnet.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SessionPartyMessage {\n");
+            sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  DateTime: ").Append(DateTime).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("}\n");
@@ -91,6 +100,11 @@ namespace EmbyClient.Dotnet.Model
 
             return 
                 (
+                    this.UserId == input.UserId ||
+                    (this.UserId != null &&
+                    this.UserId.Equals(input.UserId))
+                ) && 
+                (
                     this.DateTime == input.DateTime ||
                     (this.DateTime != null &&
                     this.DateTime.Equals(input.DateTime))
@@ -111,6 +125,8 @@ namespace EmbyClient.Dotnet.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.UserId != null)
+                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
                 if (this.DateTime != null)
                     hashCode = hashCode * 59 + this.DateTime.GetHashCode();
                 if (this.Message != null)

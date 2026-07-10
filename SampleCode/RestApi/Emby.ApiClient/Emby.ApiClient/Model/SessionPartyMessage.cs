@@ -27,6 +27,12 @@ namespace Emby.ApiClient.Model
         }
         
         /// <summary>
+        /// Gets or Sets UserId
+        /// </summary>
+        /// <value>The UserId.</value>
+        public long? UserId { get; set; }
+
+        /// <summary>
         /// Gets or Sets DateTime
         /// </summary>
         /// <value>The DateTime.</value>
@@ -46,6 +52,7 @@ namespace Emby.ApiClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SessionPartyMessage {\n");
+            sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  DateTime: ").Append(DateTime).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("}\n");
@@ -74,6 +81,11 @@ namespace Emby.ApiClient.Model
 
             return 
                 (
+                    this.UserId == input.UserId ||
+                    (this.UserId != null &&
+                    this.UserId.Equals(input.UserId))
+                ) && 
+                (
                     this.DateTime == input.DateTime ||
                     (this.DateTime != null &&
                     this.DateTime.Equals(input.DateTime))
@@ -94,6 +106,8 @@ namespace Emby.ApiClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.UserId != null)
+                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
                 if (this.DateTime != null)
                     hashCode = hashCode * 59 + this.DateTime.GetHashCode();
                 if (this.Message != null)

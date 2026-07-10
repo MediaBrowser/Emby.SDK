@@ -77032,6 +77032,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.TV.Season.SupportsInheritedParentImages
   nameWithType: Season.SupportsInheritedParentImages
+- uid: MediaBrowser.Controller.Entities.TV.Season.SupportsLocalTrailers
+  name: SupportsLocalTrailers
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.TV.Season.html#MediaBrowser_Controller_Entities_TV_Season_SupportsLocalTrailers
+  commentId: P:MediaBrowser.Controller.Entities.TV.Season.SupportsLocalTrailers
+  fullName: MediaBrowser.Controller.Entities.TV.Season.SupportsLocalTrailers
+  nameWithType: Season.SupportsLocalTrailers
+- uid: MediaBrowser.Controller.Entities.TV.Season.SupportsLocalTrailers*
+  name: SupportsLocalTrailers
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.TV.Season.html#MediaBrowser_Controller_Entities_TV_Season_SupportsLocalTrailers_
+  commentId: Overload:MediaBrowser.Controller.Entities.TV.Season.SupportsLocalTrailers
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.TV.Season.SupportsLocalTrailers
+  nameWithType: Season.SupportsLocalTrailers
 - uid: MediaBrowser.Controller.Entities.TV.Season.SupportsPeople
   name: SupportsPeople
   href: reference/pluginapi/MediaBrowser.Controller.Entities.TV.Season.html#MediaBrowser_Controller_Entities_TV_Season_SupportsPeople
@@ -102524,6 +102537,38 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.AuthenticationRequest.Username
   nameWithType: AuthenticationRequest.Username
+- uid: MediaBrowser.Controller.Session.BasePartyMessage
+  name: BasePartyMessage
+  href: reference/pluginapi/MediaBrowser.Controller.Session.BasePartyMessage.html
+  commentId: T:MediaBrowser.Controller.Session.BasePartyMessage
+  fullName: MediaBrowser.Controller.Session.BasePartyMessage
+  nameWithType: BasePartyMessage
+- uid: MediaBrowser.Controller.Session.BasePartyMessage.DateTime
+  name: DateTime
+  href: reference/pluginapi/MediaBrowser.Controller.Session.BasePartyMessage.html#MediaBrowser_Controller_Session_BasePartyMessage_DateTime
+  commentId: P:MediaBrowser.Controller.Session.BasePartyMessage.DateTime
+  fullName: MediaBrowser.Controller.Session.BasePartyMessage.DateTime
+  nameWithType: BasePartyMessage.DateTime
+- uid: MediaBrowser.Controller.Session.BasePartyMessage.DateTime*
+  name: DateTime
+  href: reference/pluginapi/MediaBrowser.Controller.Session.BasePartyMessage.html#MediaBrowser_Controller_Session_BasePartyMessage_DateTime_
+  commentId: Overload:MediaBrowser.Controller.Session.BasePartyMessage.DateTime
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.BasePartyMessage.DateTime
+  nameWithType: BasePartyMessage.DateTime
+- uid: MediaBrowser.Controller.Session.BasePartyMessage.Message
+  name: Message
+  href: reference/pluginapi/MediaBrowser.Controller.Session.BasePartyMessage.html#MediaBrowser_Controller_Session_BasePartyMessage_Message
+  commentId: P:MediaBrowser.Controller.Session.BasePartyMessage.Message
+  fullName: MediaBrowser.Controller.Session.BasePartyMessage.Message
+  nameWithType: BasePartyMessage.Message
+- uid: MediaBrowser.Controller.Session.BasePartyMessage.Message*
+  name: Message
+  href: reference/pluginapi/MediaBrowser.Controller.Session.BasePartyMessage.html#MediaBrowser_Controller_Session_BasePartyMessage_Message_
+  commentId: Overload:MediaBrowser.Controller.Session.BasePartyMessage.Message
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.BasePartyMessage.Message
+  nameWithType: BasePartyMessage.Message
 - uid: MediaBrowser.Controller.Session.ISessionController
   name: ISessionController
   href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionController.html
@@ -103314,6 +103359,19 @@ references:
   commentId: E:MediaBrowser.Controller.Session.ISessionManager.SessionStarted
   fullName: MediaBrowser.Controller.Session.ISessionManager.SessionStarted
   nameWithType: ISessionManager.SessionStarted
+- uid: MediaBrowser.Controller.Session.ISessionManager.ToPartySessionInfo(MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Controller.Session.PartyInfo)
+  name: ToPartySessionInfo(SessionInfo, PartyInfo)
+  href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_ToPartySessionInfo_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Controller_Session_PartyInfo_
+  commentId: M:MediaBrowser.Controller.Session.ISessionManager.ToPartySessionInfo(MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Controller.Session.PartyInfo)
+  fullName: MediaBrowser.Controller.Session.ISessionManager.ToPartySessionInfo(MediaBrowser.Controller.Session.SessionInfo, MediaBrowser.Controller.Session.PartyInfo)
+  nameWithType: ISessionManager.ToPartySessionInfo(SessionInfo, PartyInfo)
+- uid: MediaBrowser.Controller.Session.ISessionManager.ToPartySessionInfo*
+  name: ToPartySessionInfo
+  href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_ToPartySessionInfo_
+  commentId: Overload:MediaBrowser.Controller.Session.ISessionManager.ToPartySessionInfo
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.ISessionManager.ToPartySessionInfo
+  nameWithType: ISessionManager.ToPartySessionInfo
 - uid: MediaBrowser.Controller.Session.ISessionManager.UpdateDeviceName(System.String,System.String)
   name: UpdateDeviceName(String, String)
   href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_UpdateDeviceName_System_String_System_String_
@@ -103501,19 +103559,6 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.PartyInfoDto.Sessions
   nameWithType: PartyInfoDto.Sessions
-- uid: MediaBrowser.Controller.Session.PartyInfoDto.Users
-  name: Users
-  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoDto.html#MediaBrowser_Controller_Session_PartyInfoDto_Users
-  commentId: P:MediaBrowser.Controller.Session.PartyInfoDto.Users
-  fullName: MediaBrowser.Controller.Session.PartyInfoDto.Users
-  nameWithType: PartyInfoDto.Users
-- uid: MediaBrowser.Controller.Session.PartyInfoDto.Users*
-  name: Users
-  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoDto.html#MediaBrowser_Controller_Session_PartyInfoDto_Users_
-  commentId: Overload:MediaBrowser.Controller.Session.PartyInfoDto.Users
-  isSpec: "True"
-  fullName: MediaBrowser.Controller.Session.PartyInfoDto.Users
-  nameWithType: PartyInfoDto.Users
 - uid: MediaBrowser.Controller.Session.PartyInfoResult
   name: PartyInfoResult
   href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoResult.html
@@ -103539,32 +103584,38 @@ references:
   commentId: T:MediaBrowser.Controller.Session.PartyMessage
   fullName: MediaBrowser.Controller.Session.PartyMessage
   nameWithType: PartyMessage
-- uid: MediaBrowser.Controller.Session.PartyMessage.DateTime
-  name: DateTime
-  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_DateTime
-  commentId: P:MediaBrowser.Controller.Session.PartyMessage.DateTime
-  fullName: MediaBrowser.Controller.Session.PartyMessage.DateTime
-  nameWithType: PartyMessage.DateTime
-- uid: MediaBrowser.Controller.Session.PartyMessage.DateTime*
-  name: DateTime
-  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_DateTime_
-  commentId: Overload:MediaBrowser.Controller.Session.PartyMessage.DateTime
+- uid: MediaBrowser.Controller.Session.PartyMessage.UserId
+  name: UserId
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_UserId
+  commentId: P:MediaBrowser.Controller.Session.PartyMessage.UserId
+  fullName: MediaBrowser.Controller.Session.PartyMessage.UserId
+  nameWithType: PartyMessage.UserId
+- uid: MediaBrowser.Controller.Session.PartyMessage.UserId*
+  name: UserId
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_UserId_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyMessage.UserId
   isSpec: "True"
-  fullName: MediaBrowser.Controller.Session.PartyMessage.DateTime
-  nameWithType: PartyMessage.DateTime
-- uid: MediaBrowser.Controller.Session.PartyMessage.Message
-  name: Message
-  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_Message
-  commentId: P:MediaBrowser.Controller.Session.PartyMessage.Message
-  fullName: MediaBrowser.Controller.Session.PartyMessage.Message
-  nameWithType: PartyMessage.Message
-- uid: MediaBrowser.Controller.Session.PartyMessage.Message*
-  name: Message
-  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_Message_
-  commentId: Overload:MediaBrowser.Controller.Session.PartyMessage.Message
+  fullName: MediaBrowser.Controller.Session.PartyMessage.UserId
+  nameWithType: PartyMessage.UserId
+- uid: MediaBrowser.Controller.Session.PartyMessageDto
+  name: PartyMessageDto
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessageDto.html
+  commentId: T:MediaBrowser.Controller.Session.PartyMessageDto
+  fullName: MediaBrowser.Controller.Session.PartyMessageDto
+  nameWithType: PartyMessageDto
+- uid: MediaBrowser.Controller.Session.PartyMessageDto.User
+  name: User
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessageDto.html#MediaBrowser_Controller_Session_PartyMessageDto_User
+  commentId: P:MediaBrowser.Controller.Session.PartyMessageDto.User
+  fullName: MediaBrowser.Controller.Session.PartyMessageDto.User
+  nameWithType: PartyMessageDto.User
+- uid: MediaBrowser.Controller.Session.PartyMessageDto.User*
+  name: User
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessageDto.html#MediaBrowser_Controller_Session_PartyMessageDto_User_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyMessageDto.User
   isSpec: "True"
-  fullName: MediaBrowser.Controller.Session.PartyMessage.Message
-  nameWithType: PartyMessage.Message
+  fullName: MediaBrowser.Controller.Session.PartyMessageDto.User
+  nameWithType: PartyMessageDto.User
 - uid: MediaBrowser.Controller.Session.PartySessionInfo
   name: PartySessionInfo
   href: reference/pluginapi/MediaBrowser.Controller.Session.PartySessionInfo.html
@@ -103584,6 +103635,32 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.PartySessionInfo.Id
   nameWithType: PartySessionInfo.Id
+- uid: MediaBrowser.Controller.Session.PartySessionInfo.IsHost
+  name: IsHost
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartySessionInfo.html#MediaBrowser_Controller_Session_PartySessionInfo_IsHost
+  commentId: P:MediaBrowser.Controller.Session.PartySessionInfo.IsHost
+  fullName: MediaBrowser.Controller.Session.PartySessionInfo.IsHost
+  nameWithType: PartySessionInfo.IsHost
+- uid: MediaBrowser.Controller.Session.PartySessionInfo.IsHost*
+  name: IsHost
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartySessionInfo.html#MediaBrowser_Controller_Session_PartySessionInfo_IsHost_
+  commentId: Overload:MediaBrowser.Controller.Session.PartySessionInfo.IsHost
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartySessionInfo.IsHost
+  nameWithType: PartySessionInfo.IsHost
+- uid: MediaBrowser.Controller.Session.PartySessionInfo.User
+  name: User
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartySessionInfo.html#MediaBrowser_Controller_Session_PartySessionInfo_User
+  commentId: P:MediaBrowser.Controller.Session.PartySessionInfo.User
+  fullName: MediaBrowser.Controller.Session.PartySessionInfo.User
+  nameWithType: PartySessionInfo.User
+- uid: MediaBrowser.Controller.Session.PartySessionInfo.User*
+  name: User
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartySessionInfo.html#MediaBrowser_Controller_Session_PartySessionInfo_User_
+  commentId: Overload:MediaBrowser.Controller.Session.PartySessionInfo.User
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartySessionInfo.User
+  nameWithType: PartySessionInfo.User
 - uid: MediaBrowser.Controller.Session.PlaySessionInfo
   name: PlaySessionInfo
   href: reference/pluginapi/MediaBrowser.Controller.Session.PlaySessionInfo.html
@@ -104311,6 +104388,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.SessionInfo.SupportsRemoteControl
   nameWithType: SessionInfo.SupportsRemoteControl
+- uid: MediaBrowser.Controller.Session.SessionInfo.ToPartySessionInfo(MediaBrowser.Controller.Session.PartyInfo)
+  name: ToPartySessionInfo(PartyInfo)
+  href: reference/pluginapi/MediaBrowser.Controller.Session.SessionInfo.html#MediaBrowser_Controller_Session_SessionInfo_ToPartySessionInfo_MediaBrowser_Controller_Session_PartyInfo_
+  commentId: M:MediaBrowser.Controller.Session.SessionInfo.ToPartySessionInfo(MediaBrowser.Controller.Session.PartyInfo)
+  fullName: MediaBrowser.Controller.Session.SessionInfo.ToPartySessionInfo(MediaBrowser.Controller.Session.PartyInfo)
+  nameWithType: SessionInfo.ToPartySessionInfo(PartyInfo)
+- uid: MediaBrowser.Controller.Session.SessionInfo.ToPartySessionInfo*
+  name: ToPartySessionInfo
+  href: reference/pluginapi/MediaBrowser.Controller.Session.SessionInfo.html#MediaBrowser_Controller_Session_SessionInfo_ToPartySessionInfo_
+  commentId: Overload:MediaBrowser.Controller.Session.SessionInfo.ToPartySessionInfo
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.SessionInfo.ToPartySessionInfo
+  nameWithType: SessionInfo.ToPartySessionInfo
 - uid: MediaBrowser.Controller.Session.SessionInfo.TranscodingInfo
   name: TranscodingInfo
   href: reference/pluginapi/MediaBrowser.Controller.Session.SessionInfo.html#MediaBrowser_Controller_Session_SessionInfo_TranscodingInfo

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The SessionPartyMessage model module.
 * @module model/SessionPartyMessage
-* @version 4.10.0.17
+* @version 4.10.0.18
 */
 export default class SessionPartyMessage {
     /**
@@ -41,6 +41,9 @@ export default class SessionPartyMessage {
             obj = obj || new SessionPartyMessage();
                         
             
+            if (data.hasOwnProperty('UserId')) {
+                obj['UserId'] = ApiClient.convertToType(data['UserId'], 'Number');
+            }
             if (data.hasOwnProperty('DateTime')) {
                 obj['DateTime'] = ApiClient.convertToType(data['DateTime'], 'Date');
             }
@@ -51,6 +54,10 @@ export default class SessionPartyMessage {
         return obj;
     }
 
+    /**
+    * @member {Number} UserId
+    */
+    'UserId' = undefined;
     /**
     * @member {Date} DateTime
     */
