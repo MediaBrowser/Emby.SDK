@@ -15,7 +15,7 @@ import QueryResultUserLibraryOfficialRatingItem from '../model/QueryResultUserLi
 /**
 * OfficialRatingService service.
 * @module api/OfficialRatingServiceApi
-* @version 4.10.0.18
+* @version 4.10.0.19
 */
 export default class OfficialRatingServiceApi {
 
