@@ -7921,7 +7921,7 @@
   "MediaBrowser.Controller.IServerApplicationHost.GetReleaseNotesVersions(System.Threading.CancellationToken)": "MediaBrowser.Controller.IServerApplicationHost.yml",
   "MediaBrowser.Controller.IServerApplicationHost.GetSystemInfo(System.Net.IPAddress,MediaBrowser.Controller.Net.AuthorizationInfo,System.Threading.CancellationToken)": "MediaBrowser.Controller.IServerApplicationHost.yml",
   "MediaBrowser.Controller.IServerApplicationHost.GetSystemInfo(System.Net.IPAddress,System.Threading.CancellationToken)": "MediaBrowser.Controller.IServerApplicationHost.yml",
-  "MediaBrowser.Controller.IServerApplicationHost.GetWakeOnLanInfo": "MediaBrowser.Controller.IServerApplicationHost.yml",
+  "MediaBrowser.Controller.IServerApplicationHost.GetWakeOnLanInfo(System.Threading.CancellationToken)": "MediaBrowser.Controller.IServerApplicationHost.yml",
   "MediaBrowser.Controller.IServerApplicationHost.HardwareAccelerationRequiresPremiere": "MediaBrowser.Controller.IServerApplicationHost.yml",
   "MediaBrowser.Controller.IServerApplicationHost.HasUpdateAvailable": "MediaBrowser.Controller.IServerApplicationHost.yml",
   "MediaBrowser.Controller.IServerApplicationHost.HasUpdateAvailableChanged": "MediaBrowser.Controller.IServerApplicationHost.yml",

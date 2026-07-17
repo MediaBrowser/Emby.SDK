@@ -17,7 +17,7 @@ import LinkedItemInfo from './LinkedItemInfo';
 /**
 * The EntitiesUser model module.
 * @module model/EntitiesUser
-* @version 4.10.0.19
+* @version 4.10.0.20
 */
 export default class EntitiesUser {
     /**

@@ -79437,12 +79437,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.IServerApplicationHost.GetSystemInfo
   nameWithType: IServerApplicationHost.GetSystemInfo
-- uid: MediaBrowser.Controller.IServerApplicationHost.GetWakeOnLanInfo
-  name: GetWakeOnLanInfo()
-  href: reference/pluginapi/MediaBrowser.Controller.IServerApplicationHost.html#MediaBrowser_Controller_IServerApplicationHost_GetWakeOnLanInfo
-  commentId: M:MediaBrowser.Controller.IServerApplicationHost.GetWakeOnLanInfo
-  fullName: MediaBrowser.Controller.IServerApplicationHost.GetWakeOnLanInfo()
-  nameWithType: IServerApplicationHost.GetWakeOnLanInfo()
+- uid: MediaBrowser.Controller.IServerApplicationHost.GetWakeOnLanInfo(System.Threading.CancellationToken)
+  name: GetWakeOnLanInfo(CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.IServerApplicationHost.html#MediaBrowser_Controller_IServerApplicationHost_GetWakeOnLanInfo_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.IServerApplicationHost.GetWakeOnLanInfo(System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.IServerApplicationHost.GetWakeOnLanInfo(System.Threading.CancellationToken)
+  nameWithType: IServerApplicationHost.GetWakeOnLanInfo(CancellationToken)
 - uid: MediaBrowser.Controller.IServerApplicationHost.GetWakeOnLanInfo*
   name: GetWakeOnLanInfo
   href: reference/pluginapi/MediaBrowser.Controller.IServerApplicationHost.html#MediaBrowser_Controller_IServerApplicationHost_GetWakeOnLanInfo_

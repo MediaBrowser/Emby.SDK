@@ -18,7 +18,7 @@ import UserLibraryRemoveTags from '../model/UserLibraryRemoveTags';
 /**
 * TagService service.
 * @module api/TagServiceApi
-* @version 4.10.0.19
+* @version 4.10.0.20
 */
 export default class TagServiceApi {
 
