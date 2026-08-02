@@ -86,8 +86,6 @@ import EditorsEditorBase from './model/EditorsEditorBase';
 import EditorsEditorButtonItem from './model/EditorsEditorButtonItem';
 import EditorsEditorRoot from './model/EditorsEditorRoot';
 import EncodingContext from './model/EncodingContext';
-import EntitiesItemImageInfo from './model/EntitiesItemImageInfo';
-import EntitiesUser from './model/EntitiesUser';
 import EnumsUICommandType from './model/EnumsUICommandType';
 import EnumsUIViewType from './model/EnumsUIViewType';
 import ExtendedVideoSubTypes from './model/ExtendedVideoSubTypes';
@@ -140,7 +138,6 @@ import LibraryTypeOptions from './model/LibraryTypeOptions';
 import LibraryUpdateLibraryOptions from './model/LibraryUpdateLibraryOptions';
 import LibraryUpdateMediaPath from './model/LibraryUpdateMediaPath';
 import LibraryUserCopyOptions from './model/LibraryUserCopyOptions';
-import LinkedItemInfo from './model/LinkedItemInfo';
 import LiveStreamRequest from './model/LiveStreamRequest';
 import LiveStreamResponse from './model/LiveStreamResponse';
 import LiveTvChannelType from './model/LiveTvChannelType';
@@ -451,7 +448,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.10.0.20
+* @version 4.10.0.22
 */
 export {
     /**
@@ -917,18 +914,6 @@ export {
     EncodingContext,
 
     /**
-     * The EntitiesItemImageInfo model constructor.
-     * @property {module:model/EntitiesItemImageInfo}
-     */
-    EntitiesItemImageInfo,
-
-    /**
-     * The EntitiesUser model constructor.
-     * @property {module:model/EntitiesUser}
-     */
-    EntitiesUser,
-
-    /**
      * The EnumsUICommandType model constructor.
      * @property {module:model/EnumsUICommandType}
      */
@@ -1239,12 +1224,6 @@ export {
      * @property {module:model/LibraryUserCopyOptions}
      */
     LibraryUserCopyOptions,
-
-    /**
-     * The LinkedItemInfo model constructor.
-     * @property {module:model/LinkedItemInfo}
-     */
-    LinkedItemInfo,
 
     /**
      * The LiveStreamRequest model constructor.

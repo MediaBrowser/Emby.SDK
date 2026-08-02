@@ -27,7 +27,7 @@ import UserAction from '../model/UserAction';
 /**
 * SyncService service.
 * @module api/SyncServiceApi
-* @version 4.10.0.20
+* @version 4.10.0.22
 */
 export default class SyncServiceApi {
 

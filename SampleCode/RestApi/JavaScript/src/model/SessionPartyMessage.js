@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The SessionPartyMessage model module.
 * @module model/SessionPartyMessage
-* @version 4.10.0.20
+* @version 4.10.0.22
 */
 export default class SessionPartyMessage {
     /**

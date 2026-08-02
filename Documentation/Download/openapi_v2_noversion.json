@@ -73681,12 +73681,6 @@
             "$ref": "#/definitions/Session.SessionInfo"
           }
         },
-        "Users": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Entities.User"
-          }
-        },
         "Messages": {
           "type": "array",
           "items": {
@@ -74229,168 +74223,6 @@
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Session.Transcoding.VpStepTypes"
     },
-    "Entities.User": {
-      "description": "Class User\r\n",
-      "type": "object",
-      "properties": {
-        "UsesIdForConfigurationPath": {
-          "description": "From now on all user paths will be Id\\-based. This is for backwards compatibility.",
-          "type": "boolean"
-        },
-        "Password": {
-          "description": "The password.",
-          "type": "string"
-        },
-        "EasyPassword": {
-          "type": "string"
-        },
-        "Salt": {
-          "type": "string"
-        },
-        "ConnectUserName": {
-          "type": "string"
-        },
-        "ConnectUserId": {
-          "type": "string"
-        },
-        "ConnectLinkType": {
-          "$ref": "#/definitions/Connect.UserLinkType"
-        },
-        "ConnectAccessKey": {
-          "type": "string"
-        },
-        "ImageInfos": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Entities.ItemImageInfo"
-          }
-        },
-        "Name": {
-          "description": "The name.",
-          "type": "string"
-        },
-        "LastLoginDate": {
-          "format": "date-time",
-          "description": "The last login date.",
-          "type": "string"
-        },
-        "LastActivityDate": {
-          "format": "date-time",
-          "description": "The last activity date.",
-          "type": "string"
-        },
-        "PlayedPercentage": {
-          "format": "double",
-          "type": "number"
-        },
-        "RecursiveChildCountEqualsChildCount": {
-          "type": "boolean"
-        },
-        "OriginalParsedName": {
-          "description": "Internal use only",
-          "type": "string"
-        },
-        "IsNameParsedFromFolder": {
-          "description": "Internal use only",
-          "type": "boolean"
-        },
-        "IdString": {
-          "type": "string"
-        },
-        "DateCreated": {
-          "format": "date-time",
-          "description": "The date created.",
-          "type": "string"
-        },
-        "ImportedCollections": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/LinkedItemInfo"
-          }
-        },
-        "ResolvedPresentationUniqueKey": {
-          "type": "string"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Controller.Entities.User"
-    },
-    "Connect.UserLinkType": {
-      "enum": [
-        "LinkedUser",
-        "Guest"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
-    },
-    "Entities.ItemImageInfo": {
-      "type": "object",
-      "properties": {
-        "Path": {
-          "description": "The path.",
-          "type": "string"
-        },
-        "Type": {
-          "$ref": "#/definitions/ImageType"
-        },
-        "Orientation": {
-          "$ref": "#/definitions/Drawing.ImageOrientation"
-        },
-        "DateModified": {
-          "format": "date-time",
-          "description": "The date modified.",
-          "type": "string"
-        },
-        "Width": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "Height": {
-          "format": "int32",
-          "type": "integer"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Controller.Entities.ItemImageInfo"
-    },
-    "ImageType": {
-      "description": "Enum ImageType\r\n",
-      "enum": [
-        "Primary",
-        "Art",
-        "Backdrop",
-        "Banner",
-        "Logo",
-        "Thumb",
-        "Disc",
-        "Box",
-        "Screenshot",
-        "Menu",
-        "Chapter",
-        "BoxRear",
-        "Thumbnail",
-        "LogoLight",
-        "LogoLightColor"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Entities.ImageType"
-    },
-    "LinkedItemInfo": {
-      "type": "object",
-      "properties": {
-        "ProviderIds": {
-          "$ref": "#/definitions/ProviderIdDictionary"
-        },
-        "Name": {
-          "description": "The name.",
-          "type": "string"
-        },
-        "Id": {
-          "format": "int64",
-          "description": "The identifier.",
-          "type": "integer"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.Dto.LinkedItemInfo"
-    },
     "Session.PartyMessage": {
       "type": "object",
       "properties": {
@@ -74606,6 +74438,28 @@
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Tasks.SystemEvent"
+    },
+    "ImageType": {
+      "description": "Enum ImageType\r\n",
+      "enum": [
+        "Primary",
+        "Art",
+        "Backdrop",
+        "Banner",
+        "Logo",
+        "Thumb",
+        "Disc",
+        "Box",
+        "Screenshot",
+        "Menu",
+        "Chapter",
+        "BoxRear",
+        "Thumbnail",
+        "LogoLight",
+        "LogoLightColor"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Entities.ImageType"
     },
     "NameValuePair": {
       "type": "object",
@@ -79043,6 +78897,14 @@
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Dto.UserDto"
+    },
+    "Connect.UserLinkType": {
+      "enum": [
+        "LinkedUser",
+        "Guest"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
     },
     "UserConfiguration": {
       "description": "Class UserConfiguration\r\n",

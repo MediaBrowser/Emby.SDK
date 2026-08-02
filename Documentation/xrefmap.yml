@@ -102960,6 +102960,12 @@ references:
   commentId: E:MediaBrowser.Controller.Session.ISessionManager.PartyDeleted
   fullName: MediaBrowser.Controller.Session.ISessionManager.PartyDeleted
   nameWithType: ISessionManager.PartyDeleted
+- uid: MediaBrowser.Controller.Session.ISessionManager.PartyHostChanged
+  name: PartyHostChanged
+  href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_PartyHostChanged
+  commentId: E:MediaBrowser.Controller.Session.ISessionManager.PartyHostChanged
+  fullName: MediaBrowser.Controller.Session.ISessionManager.PartyHostChanged
+  nameWithType: ISessionManager.PartyHostChanged
 - uid: MediaBrowser.Controller.Session.ISessionManager.PartyMessagePosted
   name: PartyMessagePosted
   href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_PartyMessagePosted
@@ -103501,19 +103507,6 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.PartyInfo.Sessions
   nameWithType: PartyInfo.Sessions
-- uid: MediaBrowser.Controller.Session.PartyInfo.Users
-  name: Users
-  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Users
-  commentId: P:MediaBrowser.Controller.Session.PartyInfo.Users
-  fullName: MediaBrowser.Controller.Session.PartyInfo.Users
-  nameWithType: PartyInfo.Users
-- uid: MediaBrowser.Controller.Session.PartyInfo.Users*
-  name: Users
-  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Users_
-  commentId: Overload:MediaBrowser.Controller.Session.PartyInfo.Users
-  isSpec: "True"
-  fullName: MediaBrowser.Controller.Session.PartyInfo.Users
-  nameWithType: PartyInfo.Users
 - uid: MediaBrowser.Controller.Session.PartyInfoDto
   name: PartyInfoDto
   href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoDto.html
@@ -136058,6 +136051,30 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Querying.NextUpQuery.UserId
   nameWithType: NextUpQuery.UserId
+- uid: MediaBrowser.Model.Querying.NullsPosition
+  name: NullsPosition
+  href: reference/pluginapi/MediaBrowser.Model.Querying.NullsPosition.html
+  commentId: T:MediaBrowser.Model.Querying.NullsPosition
+  fullName: MediaBrowser.Model.Querying.NullsPosition
+  nameWithType: NullsPosition
+- uid: MediaBrowser.Model.Querying.NullsPosition.Default
+  name: Default
+  href: reference/pluginapi/MediaBrowser.Model.Querying.NullsPosition.html#MediaBrowser_Model_Querying_NullsPosition_Default
+  commentId: F:MediaBrowser.Model.Querying.NullsPosition.Default
+  fullName: MediaBrowser.Model.Querying.NullsPosition.Default
+  nameWithType: NullsPosition.Default
+- uid: MediaBrowser.Model.Querying.NullsPosition.First
+  name: First
+  href: reference/pluginapi/MediaBrowser.Model.Querying.NullsPosition.html#MediaBrowser_Model_Querying_NullsPosition_First
+  commentId: F:MediaBrowser.Model.Querying.NullsPosition.First
+  fullName: MediaBrowser.Model.Querying.NullsPosition.First
+  nameWithType: NullsPosition.First
+- uid: MediaBrowser.Model.Querying.NullsPosition.Last
+  name: Last
+  href: reference/pluginapi/MediaBrowser.Model.Querying.NullsPosition.html#MediaBrowser_Model_Querying_NullsPosition_Last
+  commentId: F:MediaBrowser.Model.Querying.NullsPosition.Last
+  fullName: MediaBrowser.Model.Querying.NullsPosition.Last
+  nameWithType: NullsPosition.Last
 - uid: MediaBrowser.Model.Querying.QueryResult`1
   name: QueryResult<T>
   href: reference/pluginapi/MediaBrowser.Model.Querying.QueryResult-1.html
@@ -136067,23 +136084,6 @@ references:
   fullName.vb: MediaBrowser.Model.Querying.QueryResult(Of T)
   nameWithType: QueryResult<T>
   nameWithType.vb: QueryResult(Of T)
-- uid: MediaBrowser.Model.Querying.QueryResult`1.#ctor
-  name: QueryResult()
-  href: reference/pluginapi/MediaBrowser.Model.Querying.QueryResult-1.html#MediaBrowser_Model_Querying_QueryResult_1__ctor
-  commentId: M:MediaBrowser.Model.Querying.QueryResult`1.#ctor
-  fullName: MediaBrowser.Model.Querying.QueryResult<T>.QueryResult()
-  fullName.vb: MediaBrowser.Model.Querying.QueryResult(Of T).QueryResult()
-  nameWithType: QueryResult<T>.QueryResult()
-  nameWithType.vb: QueryResult(Of T).QueryResult()
-- uid: MediaBrowser.Model.Querying.QueryResult`1.#ctor*
-  name: QueryResult
-  href: reference/pluginapi/MediaBrowser.Model.Querying.QueryResult-1.html#MediaBrowser_Model_Querying_QueryResult_1__ctor_
-  commentId: Overload:MediaBrowser.Model.Querying.QueryResult`1.#ctor
-  isSpec: "True"
-  fullName: MediaBrowser.Model.Querying.QueryResult<T>.QueryResult
-  fullName.vb: MediaBrowser.Model.Querying.QueryResult(Of T).QueryResult
-  nameWithType: QueryResult<T>.QueryResult
-  nameWithType.vb: QueryResult(Of T).QueryResult
 - uid: MediaBrowser.Model.Querying.QueryResult`1.Items
   name: Items
   href: reference/pluginapi/MediaBrowser.Model.Querying.QueryResult-1.html#MediaBrowser_Model_Querying_QueryResult_1_Items

@@ -76,11 +76,11 @@ open class PartyServiceAPI {
   "PartyInfo" : {
     "Messages" : [ {
       "Message" : "Message",
-      "UserId" : 7,
+      "UserId" : 5,
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "Message" : "Message",
-      "UserId" : 7,
+      "UserId" : 5,
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     } ],
     "Sessions" : [ {
@@ -1801,101 +1801,6 @@ open class PartyServiceAPI {
       "DeviceName" : "DeviceName"
     } ],
     "Id" : "Id",
-    "Users" : [ {
-      "PlayedPercentage" : 3.353193347011243,
-      "RecursiveChildCountEqualsChildCount" : true,
-      "OriginalParsedName" : "OriginalParsedName",
-      "ConnectAccessKey" : "ConnectAccessKey",
-      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsNameParsedFromFolder" : true,
-      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "ImportedCollections" : [ {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      }, {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      } ],
-      "ConnectUserId" : "ConnectUserId",
-      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
-      "Name" : "Name",
-      "ImageInfos" : [ {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      }, {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      } ],
-      "UsesIdForConfigurationPath" : true,
-      "Salt" : "Salt",
-      "ConnectUserName" : "ConnectUserName",
-      "IdString" : "IdString",
-      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-      "ConnectLinkType" : "LinkedUser",
-      "EasyPassword" : "EasyPassword",
-      "Password" : "Password"
-    }, {
-      "PlayedPercentage" : 3.353193347011243,
-      "RecursiveChildCountEqualsChildCount" : true,
-      "OriginalParsedName" : "OriginalParsedName",
-      "ConnectAccessKey" : "ConnectAccessKey",
-      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsNameParsedFromFolder" : true,
-      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "ImportedCollections" : [ {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      }, {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      } ],
-      "ConnectUserId" : "ConnectUserId",
-      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
-      "Name" : "Name",
-      "ImageInfos" : [ {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      }, {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      } ],
-      "UsesIdForConfigurationPath" : true,
-      "Salt" : "Salt",
-      "ConnectUserName" : "ConnectUserName",
-      "IdString" : "IdString",
-      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-      "ConnectLinkType" : "LinkedUser",
-      "EasyPassword" : "EasyPassword",
-      "Password" : "Password"
-    } ],
     "Name" : "Name"
   }
 }}]
@@ -1939,11 +1844,11 @@ open class PartyServiceAPI {
   "TotalRecordCount" : 0,
   "Items" : [ {
     "Message" : "Message",
-    "UserId" : 7,
+    "UserId" : 5,
     "DateTime" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "Message" : "Message",
-    "UserId" : 7,
+    "UserId" : 5,
     "DateTime" : "2000-01-23T04:56:07.000+00:00"
   } ]
 }}]
@@ -1987,11 +1892,11 @@ open class PartyServiceAPI {
   "PartyInfo" : {
     "Messages" : [ {
       "Message" : "Message",
-      "UserId" : 7,
+      "UserId" : 5,
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "Message" : "Message",
-      "UserId" : 7,
+      "UserId" : 5,
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     } ],
     "Sessions" : [ {
@@ -3712,101 +3617,6 @@ open class PartyServiceAPI {
       "DeviceName" : "DeviceName"
     } ],
     "Id" : "Id",
-    "Users" : [ {
-      "PlayedPercentage" : 3.353193347011243,
-      "RecursiveChildCountEqualsChildCount" : true,
-      "OriginalParsedName" : "OriginalParsedName",
-      "ConnectAccessKey" : "ConnectAccessKey",
-      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsNameParsedFromFolder" : true,
-      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "ImportedCollections" : [ {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      }, {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      } ],
-      "ConnectUserId" : "ConnectUserId",
-      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
-      "Name" : "Name",
-      "ImageInfos" : [ {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      }, {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      } ],
-      "UsesIdForConfigurationPath" : true,
-      "Salt" : "Salt",
-      "ConnectUserName" : "ConnectUserName",
-      "IdString" : "IdString",
-      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-      "ConnectLinkType" : "LinkedUser",
-      "EasyPassword" : "EasyPassword",
-      "Password" : "Password"
-    }, {
-      "PlayedPercentage" : 3.353193347011243,
-      "RecursiveChildCountEqualsChildCount" : true,
-      "OriginalParsedName" : "OriginalParsedName",
-      "ConnectAccessKey" : "ConnectAccessKey",
-      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsNameParsedFromFolder" : true,
-      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "ImportedCollections" : [ {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      }, {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      } ],
-      "ConnectUserId" : "ConnectUserId",
-      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
-      "Name" : "Name",
-      "ImageInfos" : [ {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      }, {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      } ],
-      "UsesIdForConfigurationPath" : true,
-      "Salt" : "Salt",
-      "ConnectUserName" : "ConnectUserName",
-      "IdString" : "IdString",
-      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-      "ConnectLinkType" : "LinkedUser",
-      "EasyPassword" : "EasyPassword",
-      "Password" : "Password"
-    } ],
     "Name" : "Name"
   }
 }}]
@@ -3851,11 +3661,11 @@ open class PartyServiceAPI {
   "PartyInfo" : {
     "Messages" : [ {
       "Message" : "Message",
-      "UserId" : 7,
+      "UserId" : 5,
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "Message" : "Message",
-      "UserId" : 7,
+      "UserId" : 5,
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     } ],
     "Sessions" : [ {
@@ -5576,101 +5386,6 @@ open class PartyServiceAPI {
       "DeviceName" : "DeviceName"
     } ],
     "Id" : "Id",
-    "Users" : [ {
-      "PlayedPercentage" : 3.353193347011243,
-      "RecursiveChildCountEqualsChildCount" : true,
-      "OriginalParsedName" : "OriginalParsedName",
-      "ConnectAccessKey" : "ConnectAccessKey",
-      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsNameParsedFromFolder" : true,
-      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "ImportedCollections" : [ {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      }, {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      } ],
-      "ConnectUserId" : "ConnectUserId",
-      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
-      "Name" : "Name",
-      "ImageInfos" : [ {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      }, {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      } ],
-      "UsesIdForConfigurationPath" : true,
-      "Salt" : "Salt",
-      "ConnectUserName" : "ConnectUserName",
-      "IdString" : "IdString",
-      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-      "ConnectLinkType" : "LinkedUser",
-      "EasyPassword" : "EasyPassword",
-      "Password" : "Password"
-    }, {
-      "PlayedPercentage" : 3.353193347011243,
-      "RecursiveChildCountEqualsChildCount" : true,
-      "OriginalParsedName" : "OriginalParsedName",
-      "ConnectAccessKey" : "ConnectAccessKey",
-      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsNameParsedFromFolder" : true,
-      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "ImportedCollections" : [ {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      }, {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      } ],
-      "ConnectUserId" : "ConnectUserId",
-      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
-      "Name" : "Name",
-      "ImageInfos" : [ {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      }, {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      } ],
-      "UsesIdForConfigurationPath" : true,
-      "Salt" : "Salt",
-      "ConnectUserName" : "ConnectUserName",
-      "IdString" : "IdString",
-      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-      "ConnectLinkType" : "LinkedUser",
-      "EasyPassword" : "EasyPassword",
-      "Password" : "Password"
-    } ],
     "Name" : "Name"
   }
 }}]

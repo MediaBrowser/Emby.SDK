@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.10.0.20
+  version: 4.10.0.22
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -87748,10 +87748,10 @@ components:
         PartyInfo:
           Messages:
           - Message: Message
-            UserId: 7
+            UserId: 5
             DateTime: 2000-01-23T04:56:07.000+00:00
           - Message: Message
-            UserId: 7
+            UserId: 5
             DateTime: 2000-01-23T04:56:07.000+00:00
           Sessions:
           - PlaylistLength: 3
@@ -89515,87 +89515,6 @@ components:
               VolumeLevel: 6
             DeviceName: DeviceName
           Id: Id
-          Users:
-          - PlayedPercentage: 3.353193347011243
-            RecursiveChildCountEqualsChildCount: true
-            OriginalParsedName: OriginalParsedName
-            ConnectAccessKey: ConnectAccessKey
-            LastLoginDate: 2000-01-23T04:56:07.000+00:00
-            IsNameParsedFromFolder: true
-            DateCreated: 2000-01-23T04:56:07.000+00:00
-            ImportedCollections:
-            - Id: 3
-              ProviderIds:
-                key: ProviderIds
-              Name: Name
-            - Id: 3
-              ProviderIds:
-                key: ProviderIds
-              Name: Name
-            ConnectUserId: ConnectUserId
-            ResolvedPresentationUniqueKey: ResolvedPresentationUniqueKey
-            Name: Name
-            ImageInfos:
-            - Path: Path
-              Type: Primary
-              Height: 6
-              Orientation: TopLeft
-              Width: 5
-              DateModified: 2000-01-23T04:56:07.000+00:00
-            - Path: Path
-              Type: Primary
-              Height: 6
-              Orientation: TopLeft
-              Width: 5
-              DateModified: 2000-01-23T04:56:07.000+00:00
-            UsesIdForConfigurationPath: true
-            Salt: Salt
-            ConnectUserName: ConnectUserName
-            IdString: IdString
-            LastActivityDate: 2000-01-23T04:56:07.000+00:00
-            ConnectLinkType: LinkedUser
-            EasyPassword: EasyPassword
-            Password: Password
-          - PlayedPercentage: 3.353193347011243
-            RecursiveChildCountEqualsChildCount: true
-            OriginalParsedName: OriginalParsedName
-            ConnectAccessKey: ConnectAccessKey
-            LastLoginDate: 2000-01-23T04:56:07.000+00:00
-            IsNameParsedFromFolder: true
-            DateCreated: 2000-01-23T04:56:07.000+00:00
-            ImportedCollections:
-            - Id: 3
-              ProviderIds:
-                key: ProviderIds
-              Name: Name
-            - Id: 3
-              ProviderIds:
-                key: ProviderIds
-              Name: Name
-            ConnectUserId: ConnectUserId
-            ResolvedPresentationUniqueKey: ResolvedPresentationUniqueKey
-            Name: Name
-            ImageInfos:
-            - Path: Path
-              Type: Primary
-              Height: 6
-              Orientation: TopLeft
-              Width: 5
-              DateModified: 2000-01-23T04:56:07.000+00:00
-            - Path: Path
-              Type: Primary
-              Height: 6
-              Orientation: TopLeft
-              Width: 5
-              DateModified: 2000-01-23T04:56:07.000+00:00
-            UsesIdForConfigurationPath: true
-            Salt: Salt
-            ConnectUserName: ConnectUserName
-            IdString: IdString
-            LastActivityDate: 2000-01-23T04:56:07.000+00:00
-            ConnectLinkType: LinkedUser
-            EasyPassword: EasyPassword
-            Password: Password
           Name: Name
           MasterSession: null
       x-internal-ref-name: MediaBrowser.Controller.Session.PartyInfoResult
@@ -89610,10 +89529,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Session.SessionInfo'
-        Users:
-          type: array
-          items:
-            $ref: '#/components/schemas/Entities.User'
         Messages:
           type: array
           items:
@@ -89623,10 +89538,10 @@ components:
       example:
         Messages:
         - Message: Message
-          UserId: 7
+          UserId: 5
           DateTime: 2000-01-23T04:56:07.000+00:00
         - Message: Message
-          UserId: 7
+          UserId: 5
           DateTime: 2000-01-23T04:56:07.000+00:00
         Sessions:
         - PlaylistLength: 3
@@ -91390,87 +91305,6 @@ components:
             VolumeLevel: 6
           DeviceName: DeviceName
         Id: Id
-        Users:
-        - PlayedPercentage: 3.353193347011243
-          RecursiveChildCountEqualsChildCount: true
-          OriginalParsedName: OriginalParsedName
-          ConnectAccessKey: ConnectAccessKey
-          LastLoginDate: 2000-01-23T04:56:07.000+00:00
-          IsNameParsedFromFolder: true
-          DateCreated: 2000-01-23T04:56:07.000+00:00
-          ImportedCollections:
-          - Id: 3
-            ProviderIds:
-              key: ProviderIds
-            Name: Name
-          - Id: 3
-            ProviderIds:
-              key: ProviderIds
-            Name: Name
-          ConnectUserId: ConnectUserId
-          ResolvedPresentationUniqueKey: ResolvedPresentationUniqueKey
-          Name: Name
-          ImageInfos:
-          - Path: Path
-            Type: Primary
-            Height: 6
-            Orientation: TopLeft
-            Width: 5
-            DateModified: 2000-01-23T04:56:07.000+00:00
-          - Path: Path
-            Type: Primary
-            Height: 6
-            Orientation: TopLeft
-            Width: 5
-            DateModified: 2000-01-23T04:56:07.000+00:00
-          UsesIdForConfigurationPath: true
-          Salt: Salt
-          ConnectUserName: ConnectUserName
-          IdString: IdString
-          LastActivityDate: 2000-01-23T04:56:07.000+00:00
-          ConnectLinkType: LinkedUser
-          EasyPassword: EasyPassword
-          Password: Password
-        - PlayedPercentage: 3.353193347011243
-          RecursiveChildCountEqualsChildCount: true
-          OriginalParsedName: OriginalParsedName
-          ConnectAccessKey: ConnectAccessKey
-          LastLoginDate: 2000-01-23T04:56:07.000+00:00
-          IsNameParsedFromFolder: true
-          DateCreated: 2000-01-23T04:56:07.000+00:00
-          ImportedCollections:
-          - Id: 3
-            ProviderIds:
-              key: ProviderIds
-            Name: Name
-          - Id: 3
-            ProviderIds:
-              key: ProviderIds
-            Name: Name
-          ConnectUserId: ConnectUserId
-          ResolvedPresentationUniqueKey: ResolvedPresentationUniqueKey
-          Name: Name
-          ImageInfos:
-          - Path: Path
-            Type: Primary
-            Height: 6
-            Orientation: TopLeft
-            Width: 5
-            DateModified: 2000-01-23T04:56:07.000+00:00
-          - Path: Path
-            Type: Primary
-            Height: 6
-            Orientation: TopLeft
-            Width: 5
-            DateModified: 2000-01-23T04:56:07.000+00:00
-          UsesIdForConfigurationPath: true
-          Salt: Salt
-          ConnectUserName: ConnectUserName
-          IdString: IdString
-          LastActivityDate: 2000-01-23T04:56:07.000+00:00
-          ConnectLinkType: LinkedUser
-          EasyPassword: EasyPassword
-          Password: Password
         Name: Name
         MasterSession: null
       x-internal-ref-name: MediaBrowser.Controller.Session.PartyInfo
@@ -93077,184 +92911,6 @@ components:
       - ConnectTo
       - Rotate
       x-internal-ref-name: MediaBrowser.Model.Session.Transcoding.VpStepTypes
-    Entities.User:
-      type: object
-      properties:
-        UsesIdForConfigurationPath:
-          type: boolean
-          description: From now on all user paths will be Id\-based. This is for backwards
-            compatibility.
-        Password:
-          type: string
-          description: The password.
-        EasyPassword:
-          type: string
-        Salt:
-          type: string
-        ConnectUserName:
-          type: string
-        ConnectUserId:
-          type: string
-        ConnectLinkType:
-          $ref: '#/components/schemas/Connect.UserLinkType'
-        ConnectAccessKey:
-          type: string
-        ImageInfos:
-          type: array
-          items:
-            $ref: '#/components/schemas/Entities.ItemImageInfo'
-        Name:
-          type: string
-          description: The name.
-        LastLoginDate:
-          type: string
-          description: The last login date.
-          format: date-time
-          nullable: true
-        LastActivityDate:
-          type: string
-          description: The last activity date.
-          format: date-time
-          nullable: true
-        PlayedPercentage:
-          type: number
-          format: double
-          nullable: true
-        RecursiveChildCountEqualsChildCount:
-          type: boolean
-        OriginalParsedName:
-          type: string
-          description: Internal use only
-        IsNameParsedFromFolder:
-          type: boolean
-          description: Internal use only
-        IdString:
-          type: string
-        DateCreated:
-          type: string
-          description: The date created.
-          format: date-time
-        ImportedCollections:
-          type: array
-          items:
-            $ref: '#/components/schemas/LinkedItemInfo'
-        ResolvedPresentationUniqueKey:
-          type: string
-      description: "Class User\r\n"
-      example:
-        PlayedPercentage: 3.353193347011243
-        RecursiveChildCountEqualsChildCount: true
-        OriginalParsedName: OriginalParsedName
-        ConnectAccessKey: ConnectAccessKey
-        LastLoginDate: 2000-01-23T04:56:07.000+00:00
-        IsNameParsedFromFolder: true
-        DateCreated: 2000-01-23T04:56:07.000+00:00
-        ImportedCollections:
-        - Id: 3
-          ProviderIds:
-            key: ProviderIds
-          Name: Name
-        - Id: 3
-          ProviderIds:
-            key: ProviderIds
-          Name: Name
-        ConnectUserId: ConnectUserId
-        ResolvedPresentationUniqueKey: ResolvedPresentationUniqueKey
-        Name: Name
-        ImageInfos:
-        - Path: Path
-          Type: Primary
-          Height: 6
-          Orientation: TopLeft
-          Width: 5
-          DateModified: 2000-01-23T04:56:07.000+00:00
-        - Path: Path
-          Type: Primary
-          Height: 6
-          Orientation: TopLeft
-          Width: 5
-          DateModified: 2000-01-23T04:56:07.000+00:00
-        UsesIdForConfigurationPath: true
-        Salt: Salt
-        ConnectUserName: ConnectUserName
-        IdString: IdString
-        LastActivityDate: 2000-01-23T04:56:07.000+00:00
-        ConnectLinkType: LinkedUser
-        EasyPassword: EasyPassword
-        Password: Password
-      x-internal-ref-name: MediaBrowser.Controller.Entities.User
-    Connect.UserLinkType:
-      type: string
-      enum:
-      - LinkedUser
-      - Guest
-      x-internal-ref-name: MediaBrowser.Model.Connect.UserLinkType
-    Entities.ItemImageInfo:
-      type: object
-      properties:
-        Path:
-          type: string
-          description: The path.
-        Type:
-          $ref: '#/components/schemas/ImageType'
-        Orientation:
-          $ref: '#/components/schemas/Drawing.ImageOrientation'
-        DateModified:
-          type: string
-          description: The date modified.
-          format: date-time
-        Width:
-          type: integer
-          format: int32
-        Height:
-          type: integer
-          format: int32
-      example:
-        Path: Path
-        Type: Primary
-        Height: 6
-        Orientation: TopLeft
-        Width: 5
-        DateModified: 2000-01-23T04:56:07.000+00:00
-      x-internal-ref-name: MediaBrowser.Controller.Entities.ItemImageInfo
-    ImageType:
-      type: string
-      description: "Enum ImageType\r\n"
-      enum:
-      - Primary
-      - Art
-      - Backdrop
-      - Banner
-      - Logo
-      - Thumb
-      - Disc
-      - Box
-      - Screenshot
-      - Menu
-      - Chapter
-      - BoxRear
-      - Thumbnail
-      - LogoLight
-      - LogoLightColor
-      x-internal-ref-name: MediaBrowser.Model.Entities.ImageType
-    LinkedItemInfo:
-      type: object
-      properties:
-        ProviderIds:
-          $ref: '#/components/schemas/ProviderIdDictionary'
-        Name:
-          type: string
-          description: The name.
-        Id:
-          type: integer
-          description: The identifier.
-          format: int64
-      example:
-        Id: 3
-        ProviderIds:
-          key: ProviderIds
-        Name: Name
-      x-internal-ref-name: MediaBrowser.Model.Dto.LinkedItemInfo
     Session.PartyMessage:
       type: object
       properties:
@@ -93268,7 +92924,7 @@ components:
           type: string
       example:
         Message: Message
-        UserId: 7
+        UserId: 5
         DateTime: 2000-01-23T04:56:07.000+00:00
       x-internal-ref-name: MediaBrowser.Controller.Session.PartyMessage
     Playlists.PlaylistCreationResult:
@@ -93483,6 +93139,26 @@ components:
       - DisplayConfigurationChange
       - NetworkChange
       x-internal-ref-name: MediaBrowser.Model.Tasks.SystemEvent
+    ImageType:
+      type: string
+      description: "Enum ImageType\r\n"
+      enum:
+      - Primary
+      - Art
+      - Backdrop
+      - Banner
+      - Logo
+      - Thumb
+      - Disc
+      - Box
+      - Screenshot
+      - Menu
+      - Chapter
+      - BoxRear
+      - Thumbnail
+      - LogoLight
+      - LogoLightColor
+      x-internal-ref-name: MediaBrowser.Model.Entities.ImageType
     NameValuePair:
       type: object
       properties:
@@ -101729,10 +101405,10 @@ components:
         TotalRecordCount: 0
         Items:
         - Message: Message
-          UserId: 7
+          UserId: 5
           DateTime: 2000-01-23T04:56:07.000+00:00
         - Message: Message
-          UserId: 7
+          UserId: 5
           DateTime: 2000-01-23T04:56:07.000+00:00
     PlaybackStartInfo:
       type: object
@@ -104345,6 +104021,12 @@ components:
         Id: Id
         HasPassword: true
       x-internal-ref-name: MediaBrowser.Model.Dto.UserDto
+    Connect.UserLinkType:
+      type: string
+      enum:
+      - LinkedUser
+      - Guest
+      x-internal-ref-name: MediaBrowser.Model.Connect.UserLinkType
     UserConfiguration:
       type: object
       properties:

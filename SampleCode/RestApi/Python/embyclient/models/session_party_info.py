@@ -25,7 +25,6 @@ class SessionPartyInfo(object):
         'id': 'str',
         'name': 'str',
         'sessions': 'list[SessionSessionInfo]',
-        'users': 'list[EntitiesUser]',
         'messages': 'list[SessionPartyMessage]',
         'master_session': 'SessionSessionInfo'
     }
@@ -34,17 +33,15 @@ class SessionPartyInfo(object):
         'id': 'Id',
         'name': 'Name',
         'sessions': 'Sessions',
-        'users': 'Users',
         'messages': 'Messages',
         'master_session': 'MasterSession'
     }
 
-    def __init__(self, id=None, name=None, sessions=None, users=None, messages=None, master_session=None):  # noqa: E501
+    def __init__(self, id=None, name=None, sessions=None, messages=None, master_session=None):  # noqa: E501
         """SessionPartyInfo - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
         self._sessions = None
-        self._users = None
         self._messages = None
         self._master_session = None
         self.discriminator = None
@@ -54,8 +51,6 @@ class SessionPartyInfo(object):
             self.name = name
         if sessions is not None:
             self.sessions = sessions
-        if users is not None:
-            self.users = users
         if messages is not None:
             self.messages = messages
         if master_session is not None:
@@ -123,27 +118,6 @@ class SessionPartyInfo(object):
         """
 
         self._sessions = sessions
-
-    @property
-    def users(self):
-        """Gets the users of this SessionPartyInfo.  # noqa: E501
-
-
-        :return: The users of this SessionPartyInfo.  # noqa: E501
-        :rtype: list[EntitiesUser]
-        """
-        return self._users
-
-    @users.setter
-    def users(self, users):
-        """Sets the users of this SessionPartyInfo.
-
-
-        :param users: The users of this SessionPartyInfo.  # noqa: E501
-        :type: list[EntitiesUser]
-        """
-
-        self._users = users
 
     @property
     def messages(self):

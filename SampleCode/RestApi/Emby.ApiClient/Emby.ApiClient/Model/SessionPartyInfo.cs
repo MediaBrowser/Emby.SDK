@@ -45,12 +45,6 @@ namespace Emby.ApiClient.Model
         public List<SessionSessionInfo> Sessions { get; set; }
 
         /// <summary>
-        /// Gets or Sets Users
-        /// </summary>
-        /// <value>The Users.</value>
-        public List<EntitiesUser> Users { get; set; }
-
-        /// <summary>
         /// Gets or Sets Messages
         /// </summary>
         /// <value>The Messages.</value>
@@ -73,7 +67,6 @@ namespace Emby.ApiClient.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
-            sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
             sb.Append("  MasterSession: ").Append(MasterSession).Append("\n");
             sb.Append("}\n");
@@ -118,12 +111,6 @@ namespace Emby.ApiClient.Model
                     this.Sessions.SequenceEqual(input.Sessions)
                 ) && 
                 (
-                    this.Users == input.Users ||
-                    this.Users != null &&
-                    input.Users != null &&
-                    this.Users.SequenceEqual(input.Users)
-                ) && 
-                (
                     this.Messages == input.Messages ||
                     this.Messages != null &&
                     input.Messages != null &&
@@ -151,8 +138,6 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Sessions != null)
                     hashCode = hashCode * 59 + this.Sessions.GetHashCode();
-                if (this.Users != null)
-                    hashCode = hashCode * 59 + this.Users.GetHashCode();
                 if (this.Messages != null)
                     hashCode = hashCode * 59 + this.Messages.GetHashCode();
                 if (this.MasterSession != null)

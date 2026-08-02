@@ -12,7 +12,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import embyclient.model.EntitiesUser;
 import embyclient.model.SessionPartyMessage;
 import embyclient.model.SessionSessionInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -33,9 +32,6 @@ public class SessionPartyInfo {
 
   @SerializedName("Sessions")
   private List<SessionSessionInfo> sessions = null;
-
-  @SerializedName("Users")
-  private List<EntitiesUser> users = null;
 
   @SerializedName("Messages")
   private List<SessionPartyMessage> messages = null;
@@ -105,32 +101,6 @@ public class SessionPartyInfo {
     this.sessions = sessions;
   }
 
-  public SessionPartyInfo users(List<EntitiesUser> users) {
-    this.users = users;
-    return this;
-  }
-
-  public SessionPartyInfo addUsersItem(EntitiesUser usersItem) {
-    if (this.users == null) {
-      this.users = new ArrayList<>();
-    }
-    this.users.add(usersItem);
-    return this;
-  }
-
-   /**
-   * Get users
-   * @return users
-  **/
-  @Schema(description = "")
-  public List<EntitiesUser> getUsers() {
-    return users;
-  }
-
-  public void setUsers(List<EntitiesUser> users) {
-    this.users = users;
-  }
-
   public SessionPartyInfo messages(List<SessionPartyMessage> messages) {
     this.messages = messages;
     return this;
@@ -188,14 +158,13 @@ public class SessionPartyInfo {
     return Objects.equals(this.id, sessionPartyInfo.id) &&
         Objects.equals(this.name, sessionPartyInfo.name) &&
         Objects.equals(this.sessions, sessionPartyInfo.sessions) &&
-        Objects.equals(this.users, sessionPartyInfo.users) &&
         Objects.equals(this.messages, sessionPartyInfo.messages) &&
         Objects.equals(this.masterSession, sessionPartyInfo.masterSession);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, sessions, users, messages, masterSession);
+    return Objects.hash(id, name, sessions, messages, masterSession);
   }
 
 
@@ -207,7 +176,6 @@ public class SessionPartyInfo {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    sessions: ").append(toIndentedString(sessions)).append("\n");
-    sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("    messages: ").append(toIndentedString(messages)).append("\n");
     sb.append("    masterSession: ").append(toIndentedString(masterSession)).append("\n");
     sb.append("}");

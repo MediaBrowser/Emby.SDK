@@ -59,7 +59,7 @@ func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		BasePath:      "http://emby.media/emby",
 		DefaultHeader: make(map[string]string),
-		UserAgent:     "/4.10.0.20/go",
+		UserAgent:     "/4.10.0.22/go",
 	}
 	return cfg
 }

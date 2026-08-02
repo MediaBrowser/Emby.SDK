@@ -14,15 +14,13 @@ public struct SessionPartyInfo: Codable {
     public var _id: String?
     public var name: String?
     public var sessions: [SessionSessionInfo]?
-    public var users: [EntitiesUser]?
     public var messages: [SessionPartyMessage]?
     public var masterSession: SessionSessionInfo?
 
-    public init(_id: String? = nil, name: String? = nil, sessions: [SessionSessionInfo]? = nil, users: [EntitiesUser]? = nil, messages: [SessionPartyMessage]? = nil, masterSession: SessionSessionInfo? = nil) {
+    public init(_id: String? = nil, name: String? = nil, sessions: [SessionSessionInfo]? = nil, messages: [SessionPartyMessage]? = nil, masterSession: SessionSessionInfo? = nil) {
         self._id = _id
         self.name = name
         self.sessions = sessions
-        self.users = users
         self.messages = messages
         self.masterSession = masterSession
     }
@@ -31,7 +29,6 @@ public struct SessionPartyInfo: Codable {
         case _id = "Id"
         case name = "Name"
         case sessions = "Sessions"
-        case users = "Users"
         case messages = "Messages"
         case masterSession = "MasterSession"
     }

@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.20
+ * OpenAPI spec version: 4.10.0.22
  * 
  *
  * NOTE: This file is auto generated.
@@ -4190,176 +4190,6 @@ export enum EncodingContext {
 /**
  * 
  * @export
- * @interface EntitiesItemImageInfo
- */
-export interface EntitiesItemImageInfo {
-    /**
-     * The path.
-     * @type {string}
-     * @memberof EntitiesItemImageInfo
-     */
-    Path?: string;
-    /**
-     * 
-     * @type {ImageType}
-     * @memberof EntitiesItemImageInfo
-     */
-    Type?: ImageType;
-    /**
-     * 
-     * @type {DrawingImageOrientation}
-     * @memberof EntitiesItemImageInfo
-     */
-    Orientation?: DrawingImageOrientation;
-    /**
-     * The date modified.
-     * @type {Date}
-     * @memberof EntitiesItemImageInfo
-     */
-    DateModified?: Date;
-    /**
-     * 
-     * @type {number}
-     * @memberof EntitiesItemImageInfo
-     */
-    Width?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof EntitiesItemImageInfo
-     */
-    Height?: number;
-}
-/**
- * Class User  
- * @export
- * @interface EntitiesUser
- */
-export interface EntitiesUser {
-    /**
-     * From now on all user paths will be Id\\-based. This is for backwards compatibility.
-     * @type {boolean}
-     * @memberof EntitiesUser
-     */
-    UsesIdForConfigurationPath?: boolean;
-    /**
-     * The password.
-     * @type {string}
-     * @memberof EntitiesUser
-     */
-    Password?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof EntitiesUser
-     */
-    EasyPassword?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof EntitiesUser
-     */
-    Salt?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof EntitiesUser
-     */
-    ConnectUserName?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof EntitiesUser
-     */
-    ConnectUserId?: string;
-    /**
-     * 
-     * @type {ConnectUserLinkType}
-     * @memberof EntitiesUser
-     */
-    ConnectLinkType?: ConnectUserLinkType;
-    /**
-     * 
-     * @type {string}
-     * @memberof EntitiesUser
-     */
-    ConnectAccessKey?: string;
-    /**
-     * 
-     * @type {Array<EntitiesItemImageInfo>}
-     * @memberof EntitiesUser
-     */
-    ImageInfos?: Array<EntitiesItemImageInfo>;
-    /**
-     * The name.
-     * @type {string}
-     * @memberof EntitiesUser
-     */
-    Name?: string;
-    /**
-     * The last login date.
-     * @type {Date}
-     * @memberof EntitiesUser
-     */
-    LastLoginDate?: Date;
-    /**
-     * The last activity date.
-     * @type {Date}
-     * @memberof EntitiesUser
-     */
-    LastActivityDate?: Date;
-    /**
-     * 
-     * @type {number}
-     * @memberof EntitiesUser
-     */
-    PlayedPercentage?: number;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof EntitiesUser
-     */
-    RecursiveChildCountEqualsChildCount?: boolean;
-    /**
-     * Internal use only
-     * @type {string}
-     * @memberof EntitiesUser
-     */
-    OriginalParsedName?: string;
-    /**
-     * Internal use only
-     * @type {boolean}
-     * @memberof EntitiesUser
-     */
-    IsNameParsedFromFolder?: boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof EntitiesUser
-     */
-    IdString?: string;
-    /**
-     * The date created.
-     * @type {Date}
-     * @memberof EntitiesUser
-     */
-    DateCreated?: Date;
-    /**
-     * 
-     * @type {Array<LinkedItemInfo>}
-     * @memberof EntitiesUser
-     */
-    ImportedCollections?: Array<LinkedItemInfo>;
-    /**
-     * 
-     * @type {string}
-     * @memberof EntitiesUser
-     */
-    ResolvedPresentationUniqueKey?: string;
-}
-/**
- * 
- * @export
  * @enum {string}
  */
 export enum EnumsUICommandType {
@@ -6180,31 +6010,6 @@ export enum LibraryUserCopyOptions {
     UserPolicy = <any> 'UserPolicy',
     UserConfiguration = <any> 'UserConfiguration',
     UserData = <any> 'UserData'
-}
-/**
- * 
- * @export
- * @interface LinkedItemInfo
- */
-export interface LinkedItemInfo {
-    /**
-     * 
-     * @type {ProviderIdDictionary}
-     * @memberof LinkedItemInfo
-     */
-    ProviderIds?: ProviderIdDictionary;
-    /**
-     * The name.
-     * @type {string}
-     * @memberof LinkedItemInfo
-     */
-    Name?: string;
-    /**
-     * The identifier.
-     * @type {number}
-     * @memberof LinkedItemInfo
-     */
-    Id?: number;
 }
 /**
  * 
@@ -12125,12 +11930,6 @@ export interface SessionPartyInfo {
      * @memberof SessionPartyInfo
      */
     Sessions?: Array<SessionSessionInfo>;
-    /**
-     * 
-     * @type {Array<EntitiesUser>}
-     * @memberof SessionPartyInfo
-     */
-    Users?: Array<EntitiesUser>;
     /**
      * 
      * @type {Array<SessionPartyMessage>}
