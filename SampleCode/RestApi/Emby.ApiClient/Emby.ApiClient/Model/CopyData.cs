@@ -42,7 +42,7 @@ namespace Emby.ApiClient.Model
         /// Gets or Sets CopyOptions
         /// </summary>
         /// <value>The CopyOptions.</value>
-        public List<LibraryUserCopyOptions> CopyOptions { get; set; }
+        public List<string> CopyOptions { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

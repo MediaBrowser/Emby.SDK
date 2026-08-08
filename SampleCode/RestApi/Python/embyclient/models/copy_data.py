@@ -24,7 +24,7 @@ class CopyData(object):
     swagger_types = {
         'user_id': 'str',
         'to_user_ids': 'list[str]',
-        'copy_options': 'list[LibraryUserCopyOptions]'
+        'copy_options': 'list[str]'
     }
 
     attribute_map = {
@@ -94,7 +94,7 @@ class CopyData(object):
 
 
         :return: The copy_options of this CopyData.  # noqa: E501
-        :rtype: list[LibraryUserCopyOptions]
+        :rtype: list[str]
         """
         return self._copy_options
 
@@ -104,7 +104,7 @@ class CopyData(object):
 
 
         :param copy_options: The copy_options of this CopyData.  # noqa: E501
-        :type: list[LibraryUserCopyOptions]
+        :type: list[str]
         """
 
         self._copy_options = copy_options

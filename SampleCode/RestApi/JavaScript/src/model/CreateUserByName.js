@@ -10,12 +10,11 @@
  */
 
 import ApiClient from '../ApiClient';
-import LibraryUserCopyOptions from './LibraryUserCopyOptions';
 
 /**
 * The CreateUserByName model module.
 * @module model/CreateUserByName
-* @version 4.10.0.22
+* @version 4.10.0.23
 */
 export default class CreateUserByName {
     /**
@@ -49,7 +48,7 @@ export default class CreateUserByName {
                 obj['CopyFromUserId'] = ApiClient.convertToType(data['CopyFromUserId'], 'String');
             }
             if (data.hasOwnProperty('UserCopyOptions')) {
-                obj['UserCopyOptions'] = ApiClient.convertToType(data['UserCopyOptions'], [LibraryUserCopyOptions]);
+                obj['UserCopyOptions'] = ApiClient.convertToType(data['UserCopyOptions'], ['String']);
             }
         }
         return obj;
@@ -64,7 +63,7 @@ export default class CreateUserByName {
     */
     'CopyFromUserId' = undefined;
     /**
-    * @member {Array.<module:model/LibraryUserCopyOptions>} UserCopyOptions
+    * @member {Array.<String>} UserCopyOptions
     */
     'UserCopyOptions' = undefined;
 

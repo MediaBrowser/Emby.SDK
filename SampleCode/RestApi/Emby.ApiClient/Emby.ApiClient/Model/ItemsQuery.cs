@@ -69,6 +69,36 @@ namespace Emby.ApiClient.Model
         public bool? IsResumable { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsSports
+        /// </summary>
+        /// <value>The IsSports.</value>
+        public bool? IsSports { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsNews
+        /// </summary>
+        /// <value>The IsNews.</value>
+        public bool? IsNews { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsSeries
+        /// </summary>
+        /// <value>The IsSeries.</value>
+        public bool? IsSeries { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsMovie
+        /// </summary>
+        /// <value>The IsMovie.</value>
+        public bool? IsMovie { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsRepeat
+        /// </summary>
+        /// <value>The IsRepeat.</value>
+        public bool? IsRepeat { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -83,6 +113,11 @@ namespace Emby.ApiClient.Model
             sb.Append("  IsFavorite: ").Append(IsFavorite).Append("\n");
             sb.Append("  IsPlayed: ").Append(IsPlayed).Append("\n");
             sb.Append("  IsResumable: ").Append(IsResumable).Append("\n");
+            sb.Append("  IsSports: ").Append(IsSports).Append("\n");
+            sb.Append("  IsNews: ").Append(IsNews).Append("\n");
+            sb.Append("  IsSeries: ").Append(IsSeries).Append("\n");
+            sb.Append("  IsMovie: ").Append(IsMovie).Append("\n");
+            sb.Append("  IsRepeat: ").Append(IsRepeat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -146,6 +181,31 @@ namespace Emby.ApiClient.Model
                     this.IsResumable == input.IsResumable ||
                     (this.IsResumable != null &&
                     this.IsResumable.Equals(input.IsResumable))
+                ) && 
+                (
+                    this.IsSports == input.IsSports ||
+                    (this.IsSports != null &&
+                    this.IsSports.Equals(input.IsSports))
+                ) && 
+                (
+                    this.IsNews == input.IsNews ||
+                    (this.IsNews != null &&
+                    this.IsNews.Equals(input.IsNews))
+                ) && 
+                (
+                    this.IsSeries == input.IsSeries ||
+                    (this.IsSeries != null &&
+                    this.IsSeries.Equals(input.IsSeries))
+                ) && 
+                (
+                    this.IsMovie == input.IsMovie ||
+                    (this.IsMovie != null &&
+                    this.IsMovie.Equals(input.IsMovie))
+                ) && 
+                (
+                    this.IsRepeat == input.IsRepeat ||
+                    (this.IsRepeat != null &&
+                    this.IsRepeat.Equals(input.IsRepeat))
                 );
         }
 
@@ -172,6 +232,16 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.IsPlayed.GetHashCode();
                 if (this.IsResumable != null)
                     hashCode = hashCode * 59 + this.IsResumable.GetHashCode();
+                if (this.IsSports != null)
+                    hashCode = hashCode * 59 + this.IsSports.GetHashCode();
+                if (this.IsNews != null)
+                    hashCode = hashCode * 59 + this.IsNews.GetHashCode();
+                if (this.IsSeries != null)
+                    hashCode = hashCode * 59 + this.IsSeries.GetHashCode();
+                if (this.IsMovie != null)
+                    hashCode = hashCode * 59 + this.IsMovie.GetHashCode();
+                if (this.IsRepeat != null)
+                    hashCode = hashCode * 59 + this.IsRepeat.GetHashCode();
                 return hashCode;
             }
         }

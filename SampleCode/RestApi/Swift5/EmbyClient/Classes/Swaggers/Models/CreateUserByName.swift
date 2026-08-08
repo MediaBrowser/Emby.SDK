@@ -13,9 +13,9 @@ public struct CreateUserByName: Codable {
 
     public var name: String?
     public var copyFromUserId: String?
-    public var userCopyOptions: [LibraryUserCopyOptions]?
+    public var userCopyOptions: [String]?
 
-    public init(name: String? = nil, copyFromUserId: String? = nil, userCopyOptions: [LibraryUserCopyOptions]? = nil) {
+    public init(name: String? = nil, copyFromUserId: String? = nil, userCopyOptions: [String]? = nil) {
         self.name = name
         self.copyFromUserId = copyFromUserId
         self.userCopyOptions = userCopyOptions

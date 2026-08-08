@@ -33,7 +33,12 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="isFavorite">isFavorite.</param>
         /// <param name="isPlayed">isPlayed.</param>
         /// <param name="isResumable">isResumable.</param>
-        public ItemsQuery(List<string> studioIds = default(List<string>), List<string> tagIds = default(List<string>), List<string> genreIds = default(List<string>), List<string> collectionTypes = default(List<string>), bool? isFavorite = default(bool?), bool? isPlayed = default(bool?), bool? isResumable = default(bool?))
+        /// <param name="isSports">isSports.</param>
+        /// <param name="isNews">isNews.</param>
+        /// <param name="isSeries">isSeries.</param>
+        /// <param name="isMovie">isMovie.</param>
+        /// <param name="isRepeat">isRepeat.</param>
+        public ItemsQuery(List<string> studioIds = default(List<string>), List<string> tagIds = default(List<string>), List<string> genreIds = default(List<string>), List<string> collectionTypes = default(List<string>), bool? isFavorite = default(bool?), bool? isPlayed = default(bool?), bool? isResumable = default(bool?), bool? isSports = default(bool?), bool? isNews = default(bool?), bool? isSeries = default(bool?), bool? isMovie = default(bool?), bool? isRepeat = default(bool?))
         {
             this.StudioIds = studioIds;
             this.TagIds = tagIds;
@@ -42,6 +47,11 @@ namespace EmbyClient.Dotnet.Model
             this.IsFavorite = isFavorite;
             this.IsPlayed = isPlayed;
             this.IsResumable = isResumable;
+            this.IsSports = isSports;
+            this.IsNews = isNews;
+            this.IsSeries = isSeries;
+            this.IsMovie = isMovie;
+            this.IsRepeat = isRepeat;
         }
         
         /// <summary>
@@ -87,6 +97,36 @@ namespace EmbyClient.Dotnet.Model
         public bool? IsResumable { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsSports
+        /// </summary>
+        [DataMember(Name="IsSports", EmitDefaultValue=false)]
+        public bool? IsSports { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsNews
+        /// </summary>
+        [DataMember(Name="IsNews", EmitDefaultValue=false)]
+        public bool? IsNews { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsSeries
+        /// </summary>
+        [DataMember(Name="IsSeries", EmitDefaultValue=false)]
+        public bool? IsSeries { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsMovie
+        /// </summary>
+        [DataMember(Name="IsMovie", EmitDefaultValue=false)]
+        public bool? IsMovie { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsRepeat
+        /// </summary>
+        [DataMember(Name="IsRepeat", EmitDefaultValue=false)]
+        public bool? IsRepeat { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -101,6 +141,11 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  IsFavorite: ").Append(IsFavorite).Append("\n");
             sb.Append("  IsPlayed: ").Append(IsPlayed).Append("\n");
             sb.Append("  IsResumable: ").Append(IsResumable).Append("\n");
+            sb.Append("  IsSports: ").Append(IsSports).Append("\n");
+            sb.Append("  IsNews: ").Append(IsNews).Append("\n");
+            sb.Append("  IsSeries: ").Append(IsSeries).Append("\n");
+            sb.Append("  IsMovie: ").Append(IsMovie).Append("\n");
+            sb.Append("  IsRepeat: ").Append(IsRepeat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -173,6 +218,31 @@ namespace EmbyClient.Dotnet.Model
                     this.IsResumable == input.IsResumable ||
                     (this.IsResumable != null &&
                     this.IsResumable.Equals(input.IsResumable))
+                ) && 
+                (
+                    this.IsSports == input.IsSports ||
+                    (this.IsSports != null &&
+                    this.IsSports.Equals(input.IsSports))
+                ) && 
+                (
+                    this.IsNews == input.IsNews ||
+                    (this.IsNews != null &&
+                    this.IsNews.Equals(input.IsNews))
+                ) && 
+                (
+                    this.IsSeries == input.IsSeries ||
+                    (this.IsSeries != null &&
+                    this.IsSeries.Equals(input.IsSeries))
+                ) && 
+                (
+                    this.IsMovie == input.IsMovie ||
+                    (this.IsMovie != null &&
+                    this.IsMovie.Equals(input.IsMovie))
+                ) && 
+                (
+                    this.IsRepeat == input.IsRepeat ||
+                    (this.IsRepeat != null &&
+                    this.IsRepeat.Equals(input.IsRepeat))
                 );
         }
 
@@ -199,6 +269,16 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.IsPlayed.GetHashCode();
                 if (this.IsResumable != null)
                     hashCode = hashCode * 59 + this.IsResumable.GetHashCode();
+                if (this.IsSports != null)
+                    hashCode = hashCode * 59 + this.IsSports.GetHashCode();
+                if (this.IsNews != null)
+                    hashCode = hashCode * 59 + this.IsNews.GetHashCode();
+                if (this.IsSeries != null)
+                    hashCode = hashCode * 59 + this.IsSeries.GetHashCode();
+                if (this.IsMovie != null)
+                    hashCode = hashCode * 59 + this.IsMovie.GetHashCode();
+                if (this.IsRepeat != null)
+                    hashCode = hashCode * 59 + this.IsRepeat.GetHashCode();
                 return hashCode;
             }
         }

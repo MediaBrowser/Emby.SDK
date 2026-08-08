@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.22"
+    "version": "4.10.0.23"
   },
   "servers": [
     {
@@ -46228,6 +46228,58 @@
           }
         ],
         "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Users/CopyDataOptions": {
+      "summary": "Gets copy data options",
+      "get": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Gets copy data options",
+        "description": "Requires authentication as administrator",
+        "operationId": "getUsersCopydataoptions",
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a FullUserCopyDataOptions object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Library.FullUserCopyDataOptions"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Library.FullUserCopyDataOptions"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
       }
     },
     "/UserSettings/{UserId}": {
@@ -106064,6 +106116,9 @@
           },
           "MasterSession": {
             "$ref": "#/components/schemas/Session.SessionInfo"
+          },
+          "IsPlaying": {
+            "type": "boolean"
           }
         },
         "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyInfo"
@@ -111756,20 +111811,11 @@
           "UserCopyOptions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Library.UserCopyOptions"
+              "type": "string"
             }
           }
         },
         "x-internal-ref-name": "Emby.Api.CreateUserByName"
-      },
-      "Library.UserCopyOptions": {
-        "enum": [
-          "UserPolicy",
-          "UserConfiguration",
-          "UserData"
-        ],
-        "type": "string",
-        "x-internal-ref-name": "MediaBrowser.Controller.Library.UserCopyOptions"
       },
       "ForgotPassword": {
         "type": "object",
@@ -111806,6 +111852,18 @@
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Model.Users.ForgotPasswordAction"
+      },
+      "Library.FullUserCopyDataOptions": {
+        "type": "object",
+        "properties": {
+          "DataOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NameIdPair"
+            }
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Controller.Library.FullUserCopyDataOptions"
       },
       "Api.ConfigurationPageInfo": {
         "type": "object",
@@ -114968,7 +115026,7 @@
           "CopyOptions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Library.UserCopyOptions"
+              "type": "string"
             }
           }
         },
@@ -115135,6 +115193,26 @@
             "nullable": true
           },
           "IsResumable": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "IsSports": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "IsNews": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "IsSeries": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "IsMovie": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "IsRepeat": {
             "type": "boolean",
             "nullable": true
           }

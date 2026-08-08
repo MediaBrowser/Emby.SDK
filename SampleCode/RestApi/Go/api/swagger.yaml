@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.10.0.22
+  version: 4.10.0.23
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -38203,6 +38203,38 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+  /Users/CopyDataOptions:
+    summary: Gets copy data options
+    get:
+      tags:
+      - UserService
+      summary: Gets copy data options
+      description: Requires authentication as administrator
+      operationId: getUsersCopydataoptions
+      responses:
+        "200":
+          description: Operation successful. Returning a FullUserCopyDataOptions object.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Library.FullUserCopyDataOptions'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Library.FullUserCopyDataOptions'
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as administrator
   /UserSettings/{UserId}:
     summary: Gets user settings
     get:
@@ -89515,6 +89547,7 @@ components:
               VolumeLevel: 6
             DeviceName: DeviceName
           Id: Id
+          IsPlaying: true
           Name: Name
           MasterSession: null
       x-internal-ref-name: MediaBrowser.Controller.Session.PartyInfoResult
@@ -89535,6 +89568,8 @@ components:
             $ref: '#/components/schemas/Session.PartyMessage'
         MasterSession:
           $ref: '#/components/schemas/Session.SessionInfo'
+        IsPlaying:
+          type: boolean
       example:
         Messages:
         - Message: Message
@@ -91305,6 +91340,7 @@ components:
             VolumeLevel: 6
           DeviceName: DeviceName
         Id: Id
+        IsPlaying: true
         Name: Name
         MasterSession: null
       x-internal-ref-name: MediaBrowser.Controller.Session.PartyInfo
@@ -105638,15 +105674,8 @@ components:
         UserCopyOptions:
           type: array
           items:
-            $ref: '#/components/schemas/Library.UserCopyOptions'
+            type: string
       x-internal-ref-name: Emby.Api.CreateUserByName
-    Library.UserCopyOptions:
-      type: string
-      enum:
-      - UserPolicy
-      - UserConfiguration
-      - UserData
-      x-internal-ref-name: MediaBrowser.Controller.Library.UserCopyOptions
     ForgotPassword:
       type: object
       properties:
@@ -105677,6 +105706,20 @@ components:
       - ContactAdmin
       - PinCode
       x-internal-ref-name: MediaBrowser.Model.Users.ForgotPasswordAction
+    Library.FullUserCopyDataOptions:
+      type: object
+      properties:
+        DataOptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/NameIdPair'
+      example:
+        DataOptions:
+        - Id: Id
+          Name: Name
+        - Id: Id
+          Name: Name
+      x-internal-ref-name: MediaBrowser.Controller.Library.FullUserCopyDataOptions
     Api.ConfigurationPageInfo:
       type: object
       properties:
@@ -112361,7 +112404,7 @@ components:
         CopyOptions:
           type: array
           items:
-            $ref: '#/components/schemas/Library.UserCopyOptions'
+            type: string
       x-internal-ref-name: Emby.Api.CopyData
     ContentSection:
       type: object
@@ -112436,13 +112479,18 @@ components:
           TagIds:
           - TagIds
           - TagIds
+          IsMovie: true
           CollectionTypes:
           - CollectionTypes
           - CollectionTypes
           GenreIds:
           - GenreIds
           - GenreIds
+          IsNews: true
+          IsRepeat: true
           IsPlayed: true
+          IsSeries: true
+          IsSports: true
           IsFavorite: true
         SortBy: SortBy
         SortOrder: SortOrder
@@ -113111,6 +113159,21 @@ components:
         IsResumable:
           type: boolean
           nullable: true
+        IsSports:
+          type: boolean
+          nullable: true
+        IsNews:
+          type: boolean
+          nullable: true
+        IsSeries:
+          type: boolean
+          nullable: true
+        IsMovie:
+          type: boolean
+          nullable: true
+        IsRepeat:
+          type: boolean
+          nullable: true
       example:
         IsResumable: true
         StudioIds:
@@ -113119,13 +113182,18 @@ components:
         TagIds:
         - TagIds
         - TagIds
+        IsMovie: true
         CollectionTypes:
         - CollectionTypes
         - CollectionTypes
         GenreIds:
         - GenreIds
         - GenreIds
+        IsNews: true
+        IsRepeat: true
         IsPlayed: true
+        IsSeries: true
+        IsSports: true
         IsFavorite: true
       x-internal-ref-name: MediaBrowser.Model.Entities.ItemsQuery
     UserLibrary.ReportItemsSearched:

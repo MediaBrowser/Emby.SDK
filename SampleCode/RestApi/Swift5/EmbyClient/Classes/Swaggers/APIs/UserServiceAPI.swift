@@ -292,6 +292,51 @@ open class UserServiceAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Gets copy data options
+
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersCopydataoptions(completion: @escaping ((_ data: LibraryFullUserCopyDataOptions?,_ error: Error?) -> Void)) {
+        getUsersCopydataoptionsWithRequestBuilder().execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     Gets copy data options
+     - GET /Users/CopyDataOptions
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - examples: [{contentType=application/json, example={
+  "DataOptions" : [ {
+    "Id" : "Id",
+    "Name" : "Name"
+  }, {
+    "Id" : "Id",
+    "Name" : "Name"
+  } ]
+}}]
+
+     - returns: RequestBuilder<LibraryFullUserCopyDataOptions> 
+     */
+    open class func getUsersCopydataoptionsWithRequestBuilder() -> RequestBuilder<LibraryFullUserCopyDataOptions> {
+        let path = "/Users/CopyDataOptions"
+        let URLString = EmbyClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<LibraryFullUserCopyDataOptions>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
      Gets a list of users
 
      - parameter isHidden: (query) Optional filter by IsHidden&#x3D;true or false (optional)

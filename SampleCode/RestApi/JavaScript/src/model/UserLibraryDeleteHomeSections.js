@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The UserLibraryDeleteHomeSections model module.
 * @module model/UserLibraryDeleteHomeSections
-* @version 4.10.0.22
+* @version 4.10.0.23
 */
 export default class UserLibraryDeleteHomeSections {
     /**

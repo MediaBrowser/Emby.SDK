@@ -31,13 +31,15 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="sessions">sessions.</param>
         /// <param name="messages">messages.</param>
         /// <param name="masterSession">masterSession.</param>
-        public SessionPartyInfo(string id = default(string), string name = default(string), List<SessionSessionInfo> sessions = default(List<SessionSessionInfo>), List<SessionPartyMessage> messages = default(List<SessionPartyMessage>), SessionSessionInfo masterSession = default(SessionSessionInfo))
+        /// <param name="isPlaying">isPlaying.</param>
+        public SessionPartyInfo(string id = default(string), string name = default(string), List<SessionSessionInfo> sessions = default(List<SessionSessionInfo>), List<SessionPartyMessage> messages = default(List<SessionPartyMessage>), SessionSessionInfo masterSession = default(SessionSessionInfo), bool? isPlaying = default(bool?))
         {
             this.Id = id;
             this.Name = name;
             this.Sessions = sessions;
             this.Messages = messages;
             this.MasterSession = masterSession;
+            this.IsPlaying = isPlaying;
         }
         
         /// <summary>
@@ -71,6 +73,12 @@ namespace EmbyClient.Dotnet.Model
         public SessionSessionInfo MasterSession { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsPlaying
+        /// </summary>
+        [DataMember(Name="IsPlaying", EmitDefaultValue=false)]
+        public bool? IsPlaying { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -83,6 +91,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
             sb.Append("  MasterSession: ").Append(MasterSession).Append("\n");
+            sb.Append("  IsPlaying: ").Append(IsPlaying).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -143,6 +152,11 @@ namespace EmbyClient.Dotnet.Model
                     this.MasterSession == input.MasterSession ||
                     (this.MasterSession != null &&
                     this.MasterSession.Equals(input.MasterSession))
+                ) && 
+                (
+                    this.IsPlaying == input.IsPlaying ||
+                    (this.IsPlaying != null &&
+                    this.IsPlaying.Equals(input.IsPlaying))
                 );
         }
 
@@ -165,6 +179,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Messages.GetHashCode();
                 if (this.MasterSession != null)
                     hashCode = hashCode * 59 + this.MasterSession.GetHashCode();
+                if (this.IsPlaying != null)
+                    hashCode = hashCode * 59 + this.IsPlaying.GetHashCode();
                 return hashCode;
             }
         }

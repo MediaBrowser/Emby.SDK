@@ -24197,6 +24197,15 @@ references:
 - uid: emby.restapi/getUsersByUseridViews/operationlistitem
   name: getUsersByUseridViews
   href: reference/RestAPI/UserViewsService.html#emby_restapi_getUsersByUseridViews_operationlistitem
+- uid: emby.restapi/getUsersCopydataoptions
+  name: getUsersCopydataoptions
+  href: reference/RestAPI/UserService/getUsersCopydataoptions.html
+- uid: emby.restapi/getUsersCopydataoptions/operation
+  name: getUsersCopydataoptions
+  href: reference/RestAPI/UserService/getUsersCopydataoptions.html#emby_restapi_getUsersCopydataoptions_operation
+- uid: emby.restapi/getUsersCopydataoptions/operationlistitem
+  name: getUsersCopydataoptions
+  href: reference/RestAPI/UserService.html#emby_restapi_getUsersCopydataoptions_operationlistitem
 - uid: emby.restapi/getUsersettingsByUserid
   name: getUsersettingsByUserid
   href: reference/RestAPI/DisplayPreferencesService/getUsersettingsByUserid.html
@@ -79760,6 +79769,25 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.DeleteOptions.DeleteFromExternalProvider
   nameWithType: DeleteOptions.DeleteFromExternalProvider
+- uid: MediaBrowser.Controller.Library.FullUserCopyDataOptions
+  name: FullUserCopyDataOptions
+  href: reference/pluginapi/MediaBrowser.Controller.Library.FullUserCopyDataOptions.html
+  commentId: T:MediaBrowser.Controller.Library.FullUserCopyDataOptions
+  fullName: MediaBrowser.Controller.Library.FullUserCopyDataOptions
+  nameWithType: FullUserCopyDataOptions
+- uid: MediaBrowser.Controller.Library.FullUserCopyDataOptions.DataOptions
+  name: DataOptions
+  href: reference/pluginapi/MediaBrowser.Controller.Library.FullUserCopyDataOptions.html#MediaBrowser_Controller_Library_FullUserCopyDataOptions_DataOptions
+  commentId: P:MediaBrowser.Controller.Library.FullUserCopyDataOptions.DataOptions
+  fullName: MediaBrowser.Controller.Library.FullUserCopyDataOptions.DataOptions
+  nameWithType: FullUserCopyDataOptions.DataOptions
+- uid: MediaBrowser.Controller.Library.FullUserCopyDataOptions.DataOptions*
+  name: DataOptions
+  href: reference/pluginapi/MediaBrowser.Controller.Library.FullUserCopyDataOptions.html#MediaBrowser_Controller_Library_FullUserCopyDataOptions_DataOptions_
+  commentId: Overload:MediaBrowser.Controller.Library.FullUserCopyDataOptions.DataOptions
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.FullUserCopyDataOptions.DataOptions
+  nameWithType: FullUserCopyDataOptions.DataOptions
 - uid: MediaBrowser.Controller.Library.IConfigurableProvider
   name: IConfigurableProvider
   href: reference/pluginapi/MediaBrowser.Controller.Library.IConfigurableProvider.html
@@ -82988,15 +83016,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.IUserManager.ChangePassword
   nameWithType: IUserManager.ChangePassword
-- uid: MediaBrowser.Controller.Library.IUserManager.CopyData(MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Library.UserCopyOptions[])
-  name: CopyData(User, User, UserCopyOptions[])
-  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_CopyData_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Library_UserCopyOptions___
-  commentId: M:MediaBrowser.Controller.Library.IUserManager.CopyData(MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Library.UserCopyOptions[])
-  name.vb: CopyData(User, User, UserCopyOptions())
-  fullName: MediaBrowser.Controller.Library.IUserManager.CopyData(MediaBrowser.Controller.Entities.User, MediaBrowser.Controller.Entities.User, MediaBrowser.Controller.Library.UserCopyOptions[])
-  fullName.vb: MediaBrowser.Controller.Library.IUserManager.CopyData(MediaBrowser.Controller.Entities.User, MediaBrowser.Controller.Entities.User, MediaBrowser.Controller.Library.UserCopyOptions())
-  nameWithType: IUserManager.CopyData(User, User, UserCopyOptions[])
-  nameWithType.vb: IUserManager.CopyData(User, User, UserCopyOptions())
+- uid: MediaBrowser.Controller.Library.IUserManager.CopyData(MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Library.UserCopyDataOptions)
+  name: CopyData(User, User, UserCopyDataOptions)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_CopyData_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Library_UserCopyDataOptions_
+  commentId: M:MediaBrowser.Controller.Library.IUserManager.CopyData(MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Library.UserCopyDataOptions)
+  fullName: MediaBrowser.Controller.Library.IUserManager.CopyData(MediaBrowser.Controller.Entities.User, MediaBrowser.Controller.Entities.User, MediaBrowser.Controller.Library.UserCopyDataOptions)
+  nameWithType: IUserManager.CopyData(User, User, UserCopyDataOptions)
 - uid: MediaBrowser.Controller.Library.IUserManager.CopyData*
   name: CopyData
   href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_CopyData_
@@ -83004,15 +83029,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.IUserManager.CopyData
   nameWithType: IUserManager.CopyData
-- uid: MediaBrowser.Controller.Library.IUserManager.CreateUser(System.String,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Library.UserCopyOptions[])
-  name: CreateUser(String, User, UserCopyOptions[])
-  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_CreateUser_System_String_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Library_UserCopyOptions___
-  commentId: M:MediaBrowser.Controller.Library.IUserManager.CreateUser(System.String,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Library.UserCopyOptions[])
-  name.vb: CreateUser(String, User, UserCopyOptions())
-  fullName: MediaBrowser.Controller.Library.IUserManager.CreateUser(System.String, MediaBrowser.Controller.Entities.User, MediaBrowser.Controller.Library.UserCopyOptions[])
-  fullName.vb: MediaBrowser.Controller.Library.IUserManager.CreateUser(System.String, MediaBrowser.Controller.Entities.User, MediaBrowser.Controller.Library.UserCopyOptions())
-  nameWithType: IUserManager.CreateUser(String, User, UserCopyOptions[])
-  nameWithType.vb: IUserManager.CreateUser(String, User, UserCopyOptions())
+- uid: MediaBrowser.Controller.Library.IUserManager.CreateUser(System.String,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Library.UserCopyDataOptions)
+  name: CreateUser(String, User, UserCopyDataOptions)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_CreateUser_System_String_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Library_UserCopyDataOptions_
+  commentId: M:MediaBrowser.Controller.Library.IUserManager.CreateUser(System.String,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Library.UserCopyDataOptions)
+  fullName: MediaBrowser.Controller.Library.IUserManager.CreateUser(System.String, MediaBrowser.Controller.Entities.User, MediaBrowser.Controller.Library.UserCopyDataOptions)
+  nameWithType: IUserManager.CreateUser(String, User, UserCopyDataOptions)
 - uid: MediaBrowser.Controller.Library.IUserManager.CreateUser(System.String,MediaBrowser.Model.Users.UserPolicy)
   name: CreateUser(String, UserPolicy)
   href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_CreateUser_System_String_MediaBrowser_Model_Users_UserPolicy_
@@ -84274,30 +84296,25 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.WallClockStartTime
   nameWithType: SegmentedStreamSegmentInfo.WallClockStartTime
-- uid: MediaBrowser.Controller.Library.UserCopyOptions
-  name: UserCopyOptions
-  href: reference/pluginapi/MediaBrowser.Controller.Library.UserCopyOptions.html
-  commentId: T:MediaBrowser.Controller.Library.UserCopyOptions
-  fullName: MediaBrowser.Controller.Library.UserCopyOptions
-  nameWithType: UserCopyOptions
-- uid: MediaBrowser.Controller.Library.UserCopyOptions.UserConfiguration
-  name: UserConfiguration
-  href: reference/pluginapi/MediaBrowser.Controller.Library.UserCopyOptions.html#MediaBrowser_Controller_Library_UserCopyOptions_UserConfiguration
-  commentId: F:MediaBrowser.Controller.Library.UserCopyOptions.UserConfiguration
-  fullName: MediaBrowser.Controller.Library.UserCopyOptions.UserConfiguration
-  nameWithType: UserCopyOptions.UserConfiguration
-- uid: MediaBrowser.Controller.Library.UserCopyOptions.UserData
-  name: UserData
-  href: reference/pluginapi/MediaBrowser.Controller.Library.UserCopyOptions.html#MediaBrowser_Controller_Library_UserCopyOptions_UserData
-  commentId: F:MediaBrowser.Controller.Library.UserCopyOptions.UserData
-  fullName: MediaBrowser.Controller.Library.UserCopyOptions.UserData
-  nameWithType: UserCopyOptions.UserData
-- uid: MediaBrowser.Controller.Library.UserCopyOptions.UserPolicy
-  name: UserPolicy
-  href: reference/pluginapi/MediaBrowser.Controller.Library.UserCopyOptions.html#MediaBrowser_Controller_Library_UserCopyOptions_UserPolicy
-  commentId: F:MediaBrowser.Controller.Library.UserCopyOptions.UserPolicy
-  fullName: MediaBrowser.Controller.Library.UserCopyOptions.UserPolicy
-  nameWithType: UserCopyOptions.UserPolicy
+- uid: MediaBrowser.Controller.Library.UserCopyDataOptions
+  name: UserCopyDataOptions
+  href: reference/pluginapi/MediaBrowser.Controller.Library.UserCopyDataOptions.html
+  commentId: T:MediaBrowser.Controller.Library.UserCopyDataOptions
+  fullName: MediaBrowser.Controller.Library.UserCopyDataOptions
+  nameWithType: UserCopyDataOptions
+- uid: MediaBrowser.Controller.Library.UserCopyDataOptions.DataOptions
+  name: DataOptions
+  href: reference/pluginapi/MediaBrowser.Controller.Library.UserCopyDataOptions.html#MediaBrowser_Controller_Library_UserCopyDataOptions_DataOptions
+  commentId: P:MediaBrowser.Controller.Library.UserCopyDataOptions.DataOptions
+  fullName: MediaBrowser.Controller.Library.UserCopyDataOptions.DataOptions
+  nameWithType: UserCopyDataOptions.DataOptions
+- uid: MediaBrowser.Controller.Library.UserCopyDataOptions.DataOptions*
+  name: DataOptions
+  href: reference/pluginapi/MediaBrowser.Controller.Library.UserCopyDataOptions.html#MediaBrowser_Controller_Library_UserCopyDataOptions_DataOptions_
+  commentId: Overload:MediaBrowser.Controller.Library.UserCopyDataOptions.DataOptions
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.UserCopyDataOptions.DataOptions
+  nameWithType: UserCopyDataOptions.DataOptions
 - uid: MediaBrowser.Controller.Library.UserDataSaveEventArgs
   name: UserDataSaveEventArgs
   href: reference/pluginapi/MediaBrowser.Controller.Library.UserDataSaveEventArgs.html
@@ -103455,6 +103472,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.PartyInfo.Id
   nameWithType: PartyInfo.Id
+- uid: MediaBrowser.Controller.Session.PartyInfo.IsPlaying
+  name: IsPlaying
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_IsPlaying
+  commentId: P:MediaBrowser.Controller.Session.PartyInfo.IsPlaying
+  fullName: MediaBrowser.Controller.Session.PartyInfo.IsPlaying
+  nameWithType: PartyInfo.IsPlaying
+- uid: MediaBrowser.Controller.Session.PartyInfo.IsPlaying*
+  name: IsPlaying
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_IsPlaying_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyInfo.IsPlaying
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyInfo.IsPlaying
+  nameWithType: PartyInfo.IsPlaying
 - uid: MediaBrowser.Controller.Session.PartyInfo.MasterSession
   name: MasterSession
   href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_MasterSession
@@ -121062,6 +121092,32 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Entities.ItemsQuery.IsFavorite
   nameWithType: ItemsQuery.IsFavorite
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsMovie
+  name: IsMovie
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsMovie
+  commentId: P:MediaBrowser.Model.Entities.ItemsQuery.IsMovie
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsMovie
+  nameWithType: ItemsQuery.IsMovie
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsMovie*
+  name: IsMovie
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsMovie_
+  commentId: Overload:MediaBrowser.Model.Entities.ItemsQuery.IsMovie
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsMovie
+  nameWithType: ItemsQuery.IsMovie
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsNews
+  name: IsNews
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsNews
+  commentId: P:MediaBrowser.Model.Entities.ItemsQuery.IsNews
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsNews
+  nameWithType: ItemsQuery.IsNews
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsNews*
+  name: IsNews
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsNews_
+  commentId: Overload:MediaBrowser.Model.Entities.ItemsQuery.IsNews
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsNews
+  nameWithType: ItemsQuery.IsNews
 - uid: MediaBrowser.Model.Entities.ItemsQuery.IsPlayed
   name: IsPlayed
   href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsPlayed
@@ -121075,6 +121131,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Entities.ItemsQuery.IsPlayed
   nameWithType: ItemsQuery.IsPlayed
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsRepeat
+  name: IsRepeat
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsRepeat
+  commentId: P:MediaBrowser.Model.Entities.ItemsQuery.IsRepeat
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsRepeat
+  nameWithType: ItemsQuery.IsRepeat
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsRepeat*
+  name: IsRepeat
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsRepeat_
+  commentId: Overload:MediaBrowser.Model.Entities.ItemsQuery.IsRepeat
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsRepeat
+  nameWithType: ItemsQuery.IsRepeat
 - uid: MediaBrowser.Model.Entities.ItemsQuery.IsResumable
   name: IsResumable
   href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsResumable
@@ -121088,6 +121157,32 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Entities.ItemsQuery.IsResumable
   nameWithType: ItemsQuery.IsResumable
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsSeries
+  name: IsSeries
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsSeries
+  commentId: P:MediaBrowser.Model.Entities.ItemsQuery.IsSeries
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsSeries
+  nameWithType: ItemsQuery.IsSeries
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsSeries*
+  name: IsSeries
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsSeries_
+  commentId: Overload:MediaBrowser.Model.Entities.ItemsQuery.IsSeries
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsSeries
+  nameWithType: ItemsQuery.IsSeries
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsSports
+  name: IsSports
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsSports
+  commentId: P:MediaBrowser.Model.Entities.ItemsQuery.IsSports
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsSports
+  nameWithType: ItemsQuery.IsSports
+- uid: MediaBrowser.Model.Entities.ItemsQuery.IsSports*
+  name: IsSports
+  href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_IsSports_
+  commentId: Overload:MediaBrowser.Model.Entities.ItemsQuery.IsSports
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.ItemsQuery.IsSports
+  nameWithType: ItemsQuery.IsSports
 - uid: MediaBrowser.Model.Entities.ItemsQuery.StudioIds
   name: StudioIds
   href: reference/pluginapi/MediaBrowser.Model.Entities.ItemsQuery.html#MediaBrowser_Model_Entities_ItemsQuery_StudioIds

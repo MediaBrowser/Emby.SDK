@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.22"
+    "version": "4.10.0.23"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -30868,6 +30868,53 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Initiates the forgot password process for a local user"
+    },
+    "/Users/CopyDataOptions": {
+      "get": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Gets copy data options",
+        "description": "Requires authentication as administrator",
+        "operationId": "getUsersCopydataoptions",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a FullUserCopyDataOptions object.",
+            "schema": {
+              "$ref": "#/definitions/Library.FullUserCopyDataOptions"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Gets copy data options"
     },
     "/UserSettings/{UserId}": {
       "get": {
@@ -73691,6 +73738,9 @@
         },
         "MasterSession": {
           "$ref": "#/definitions/Session.SessionInfo"
+        },
+        "IsPlaying": {
+          "type": "boolean"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyInfo"
@@ -79301,20 +79351,11 @@
         "UserCopyOptions": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Library.UserCopyOptions"
+            "type": "string"
           }
         }
       },
       "x-internal-ref-name": "Emby.Api.CreateUserByName"
-    },
-    "Library.UserCopyOptions": {
-      "enum": [
-        "UserPolicy",
-        "UserConfiguration",
-        "UserData"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Controller.Library.UserCopyOptions"
     },
     "ForgotPassword": {
       "type": "object",
@@ -79350,6 +79391,18 @@
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Users.ForgotPasswordAction"
+    },
+    "Library.FullUserCopyDataOptions": {
+      "type": "object",
+      "properties": {
+        "DataOptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NameIdPair"
+          }
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Controller.Library.FullUserCopyDataOptions"
     },
     "Api.ConfigurationPageInfo": {
       "type": "object",
@@ -82423,7 +82476,7 @@
         "CopyOptions": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Library.UserCopyOptions"
+            "type": "string"
           }
         }
       },
@@ -82587,6 +82640,21 @@
           "type": "boolean"
         },
         "IsResumable": {
+          "type": "boolean"
+        },
+        "IsSports": {
+          "type": "boolean"
+        },
+        "IsNews": {
+          "type": "boolean"
+        },
+        "IsSeries": {
+          "type": "boolean"
+        },
+        "IsMovie": {
+          "type": "boolean"
+        },
+        "IsRepeat": {
           "type": "boolean"
         }
       },

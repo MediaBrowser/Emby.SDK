@@ -29,7 +29,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="userId">userId.</param>
         /// <param name="toUserIds">toUserIds.</param>
         /// <param name="copyOptions">copyOptions.</param>
-        public CopyData(string userId = default(string), List<string> toUserIds = default(List<string>), List<LibraryUserCopyOptions> copyOptions = default(List<LibraryUserCopyOptions>))
+        public CopyData(string userId = default(string), List<string> toUserIds = default(List<string>), List<string> copyOptions = default(List<string>))
         {
             this.UserId = userId;
             this.ToUserIds = toUserIds;
@@ -52,7 +52,7 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets CopyOptions
         /// </summary>
         [DataMember(Name="CopyOptions", EmitDefaultValue=false)]
-        public List<LibraryUserCopyOptions> CopyOptions { get; set; }
+        public List<string> CopyOptions { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

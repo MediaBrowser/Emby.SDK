@@ -196,6 +196,7 @@ from embyclient.models.level_information import LevelInformation
 from embyclient.models.library_add_media_path import LibraryAddMediaPath
 from embyclient.models.library_add_virtual_folder import LibraryAddVirtualFolder
 from embyclient.models.library_delete_info import LibraryDeleteInfo
+from embyclient.models.library_full_user_copy_data_options import LibraryFullUserCopyDataOptions
 from embyclient.models.library_item_link_type import LibraryItemLinkType
 from embyclient.models.library_media_folder import LibraryMediaFolder
 from embyclient.models.library_media_update_info import LibraryMediaUpdateInfo
@@ -210,7 +211,6 @@ from embyclient.models.library_sub_folder import LibrarySubFolder
 from embyclient.models.library_type_options import LibraryTypeOptions
 from embyclient.models.library_update_library_options import LibraryUpdateLibraryOptions
 from embyclient.models.library_update_media_path import LibraryUpdateMediaPath
-from embyclient.models.library_user_copy_options import LibraryUserCopyOptions
 from embyclient.models.live_stream_request import LiveStreamRequest
 from embyclient.models.live_stream_response import LiveStreamResponse
 from embyclient.models.live_tv_channel_type import LiveTvChannelType

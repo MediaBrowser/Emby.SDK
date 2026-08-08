@@ -18,8 +18,13 @@ public struct ItemsQuery: Codable {
     public var isFavorite: Bool?
     public var isPlayed: Bool?
     public var isResumable: Bool?
+    public var isSports: Bool?
+    public var isNews: Bool?
+    public var isSeries: Bool?
+    public var isMovie: Bool?
+    public var isRepeat: Bool?
 
-    public init(studioIds: [String]? = nil, tagIds: [String]? = nil, genreIds: [String]? = nil, collectionTypes: [String]? = nil, isFavorite: Bool? = nil, isPlayed: Bool? = nil, isResumable: Bool? = nil) {
+    public init(studioIds: [String]? = nil, tagIds: [String]? = nil, genreIds: [String]? = nil, collectionTypes: [String]? = nil, isFavorite: Bool? = nil, isPlayed: Bool? = nil, isResumable: Bool? = nil, isSports: Bool? = nil, isNews: Bool? = nil, isSeries: Bool? = nil, isMovie: Bool? = nil, isRepeat: Bool? = nil) {
         self.studioIds = studioIds
         self.tagIds = tagIds
         self.genreIds = genreIds
@@ -27,6 +32,11 @@ public struct ItemsQuery: Codable {
         self.isFavorite = isFavorite
         self.isPlayed = isPlayed
         self.isResumable = isResumable
+        self.isSports = isSports
+        self.isNews = isNews
+        self.isSeries = isSeries
+        self.isMovie = isMovie
+        self.isRepeat = isRepeat
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -37,6 +47,11 @@ public struct ItemsQuery: Codable {
         case isFavorite = "IsFavorite"
         case isPlayed = "IsPlayed"
         case isResumable = "IsResumable"
+        case isSports = "IsSports"
+        case isNews = "IsNews"
+        case isSeries = "IsSeries"
+        case isMovie = "IsMovie"
+        case isRepeat = "IsRepeat"
     }
 
 }

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ItemCounts model module.
 * @module model/ItemCounts
-* @version 4.10.0.22
+* @version 4.10.0.23
 */
 export default class ItemCounts {
     /**

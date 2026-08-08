@@ -13,6 +13,7 @@ import embyclient.model.CreateUserByName;
 import embyclient.model.ForgotPassword;
 import embyclient.model.ForgotPasswordPin;
 import embyclient.model.ForgotPasswordResult;
+import embyclient.model.LibraryFullUserCopyDataOptions;
 import embyclient.model.NameIdPair;
 import embyclient.model.PinRedeemResult;
 import embyclient.model.QueryResultUserDto;
@@ -97,6 +98,20 @@ public class UserServiceApiTest {
         String key = null;
         String userId = null;
         api.getUsersByUseridTypedsettingsByKey(key, userId);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets copy data options
+     *
+     * Requires authentication as administrator
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getUsersCopydataoptionsTest() throws Exception {
+        LibraryFullUserCopyDataOptions response = api.getUsersCopydataoptions();
 
         // TODO: test validations
     }

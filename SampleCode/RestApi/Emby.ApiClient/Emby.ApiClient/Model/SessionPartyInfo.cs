@@ -57,6 +57,12 @@ namespace Emby.ApiClient.Model
         public SessionSessionInfo MasterSession { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsPlaying
+        /// </summary>
+        /// <value>The IsPlaying.</value>
+        public bool? IsPlaying { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -69,6 +75,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
             sb.Append("  MasterSession: ").Append(MasterSession).Append("\n");
+            sb.Append("  IsPlaying: ").Append(IsPlaying).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -120,6 +127,11 @@ namespace Emby.ApiClient.Model
                     this.MasterSession == input.MasterSession ||
                     (this.MasterSession != null &&
                     this.MasterSession.Equals(input.MasterSession))
+                ) && 
+                (
+                    this.IsPlaying == input.IsPlaying ||
+                    (this.IsPlaying != null &&
+                    this.IsPlaying.Equals(input.IsPlaying))
                 );
         }
 
@@ -142,6 +154,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Messages.GetHashCode();
                 if (this.MasterSession != null)
                     hashCode = hashCode * 59 + this.MasterSession.GetHashCode();
+                if (this.IsPlaying != null)
+                    hashCode = hashCode * 59 + this.IsPlaying.GetHashCode();
                 return hashCode;
             }
         }

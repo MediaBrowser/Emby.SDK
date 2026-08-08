@@ -15,7 +15,7 @@ import SubtitleDeliveryMethod from '../model/SubtitleDeliveryMethod';
 /**
 * VideoService service.
 * @module api/VideoServiceApi
-* @version 4.10.0.22
+* @version 4.10.0.23
 */
 export default class VideoServiceApi {
 

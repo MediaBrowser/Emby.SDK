@@ -1801,6 +1801,7 @@ open class PartyServiceAPI {
       "DeviceName" : "DeviceName"
     } ],
     "Id" : "Id",
+    "IsPlaying" : true,
     "Name" : "Name"
   }
 }}]
@@ -3617,6 +3618,7 @@ open class PartyServiceAPI {
       "DeviceName" : "DeviceName"
     } ],
     "Id" : "Id",
+    "IsPlaying" : true,
     "Name" : "Name"
   }
 }}]
@@ -5386,6 +5388,7 @@ open class PartyServiceAPI {
       "DeviceName" : "DeviceName"
     } ],
     "Id" : "Id",
+    "IsPlaying" : true,
     "Name" : "Name"
   }
 }}]

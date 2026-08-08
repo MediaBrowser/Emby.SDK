@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ItemsQuery model module.
 * @module model/ItemsQuery
-* @version 4.10.0.22
+* @version 4.10.0.23
 */
 export default class ItemsQuery {
     /**
@@ -62,6 +62,21 @@ export default class ItemsQuery {
             if (data.hasOwnProperty('IsResumable')) {
                 obj['IsResumable'] = ApiClient.convertToType(data['IsResumable'], 'Boolean');
             }
+            if (data.hasOwnProperty('IsSports')) {
+                obj['IsSports'] = ApiClient.convertToType(data['IsSports'], 'Boolean');
+            }
+            if (data.hasOwnProperty('IsNews')) {
+                obj['IsNews'] = ApiClient.convertToType(data['IsNews'], 'Boolean');
+            }
+            if (data.hasOwnProperty('IsSeries')) {
+                obj['IsSeries'] = ApiClient.convertToType(data['IsSeries'], 'Boolean');
+            }
+            if (data.hasOwnProperty('IsMovie')) {
+                obj['IsMovie'] = ApiClient.convertToType(data['IsMovie'], 'Boolean');
+            }
+            if (data.hasOwnProperty('IsRepeat')) {
+                obj['IsRepeat'] = ApiClient.convertToType(data['IsRepeat'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -94,6 +109,26 @@ export default class ItemsQuery {
     * @member {Boolean} IsResumable
     */
     'IsResumable' = undefined;
+    /**
+    * @member {Boolean} IsSports
+    */
+    'IsSports' = undefined;
+    /**
+    * @member {Boolean} IsNews
+    */
+    'IsNews' = undefined;
+    /**
+    * @member {Boolean} IsSeries
+    */
+    'IsSeries' = undefined;
+    /**
+    * @member {Boolean} IsMovie
+    */
+    'IsMovie' = undefined;
+    /**
+    * @member {Boolean} IsRepeat
+    */
+    'IsRepeat' = undefined;
 
 
 

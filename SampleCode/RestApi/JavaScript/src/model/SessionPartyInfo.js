@@ -16,7 +16,7 @@ import SessionSessionInfo from './SessionSessionInfo';
 /**
 * The SessionPartyInfo model module.
 * @module model/SessionPartyInfo
-* @version 4.10.0.22
+* @version 4.10.0.23
 */
 export default class SessionPartyInfo {
     /**
@@ -58,6 +58,9 @@ export default class SessionPartyInfo {
             if (data.hasOwnProperty('MasterSession')) {
                 obj['MasterSession'] = SessionSessionInfo.constructFromObject(data['MasterSession']);
             }
+            if (data.hasOwnProperty('IsPlaying')) {
+                obj['IsPlaying'] = ApiClient.convertToType(data['IsPlaying'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -82,6 +85,10 @@ export default class SessionPartyInfo {
     * @member {module:model/SessionSessionInfo} MasterSession
     */
     'MasterSession' = undefined;
+    /**
+    * @member {Boolean} IsPlaying
+    */
+    'IsPlaying' = undefined;
 
 
 

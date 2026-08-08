@@ -39,6 +39,9 @@ public class SessionPartyInfo {
   @SerializedName("MasterSession")
   private SessionSessionInfo masterSession = null;
 
+  @SerializedName("IsPlaying")
+  private Boolean isPlaying = null;
+
   public SessionPartyInfo id(String id) {
     this.id = id;
     return this;
@@ -145,6 +148,24 @@ public class SessionPartyInfo {
     this.masterSession = masterSession;
   }
 
+  public SessionPartyInfo isPlaying(Boolean isPlaying) {
+    this.isPlaying = isPlaying;
+    return this;
+  }
+
+   /**
+   * Get isPlaying
+   * @return isPlaying
+  **/
+  @Schema(description = "")
+  public Boolean isIsPlaying() {
+    return isPlaying;
+  }
+
+  public void setIsPlaying(Boolean isPlaying) {
+    this.isPlaying = isPlaying;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -159,12 +180,13 @@ public class SessionPartyInfo {
         Objects.equals(this.name, sessionPartyInfo.name) &&
         Objects.equals(this.sessions, sessionPartyInfo.sessions) &&
         Objects.equals(this.messages, sessionPartyInfo.messages) &&
-        Objects.equals(this.masterSession, sessionPartyInfo.masterSession);
+        Objects.equals(this.masterSession, sessionPartyInfo.masterSession) &&
+        Objects.equals(this.isPlaying, sessionPartyInfo.isPlaying);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, sessions, messages, masterSession);
+    return Objects.hash(id, name, sessions, messages, masterSession, isPlaying);
   }
 
 
@@ -178,6 +200,7 @@ public class SessionPartyInfo {
     sb.append("    sessions: ").append(toIndentedString(sessions)).append("\n");
     sb.append("    messages: ").append(toIndentedString(messages)).append("\n");
     sb.append("    masterSession: ").append(toIndentedString(masterSession)).append("\n");
+    sb.append("    isPlaying: ").append(toIndentedString(isPlaying)).append("\n");
     sb.append("}");
     return sb.toString();
   }

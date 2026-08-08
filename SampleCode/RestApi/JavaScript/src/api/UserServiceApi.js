@@ -18,6 +18,7 @@ import CreateUserByName from '../model/CreateUserByName';
 import ForgotPassword from '../model/ForgotPassword';
 import ForgotPasswordPin from '../model/ForgotPasswordPin';
 import ForgotPasswordResult from '../model/ForgotPasswordResult';
+import LibraryFullUserCopyDataOptions from '../model/LibraryFullUserCopyDataOptions';
 import NameIdPair from '../model/NameIdPair';
 import PinRedeemResult from '../model/PinRedeemResult';
 import QueryResultUserDto from '../model/QueryResultUserDto';
@@ -29,7 +30,7 @@ import UserPolicy from '../model/UserPolicy';
 /**
 * UserService service.
 * @module api/UserServiceApi
-* @version 4.10.0.22
+* @version 4.10.0.23
 */
 export default class UserServiceApi {
 
@@ -214,6 +215,48 @@ export default class UserServiceApi {
      */
     getUsersByUseridTypedsettingsByKey() {
       return this.getUsersByUseridTypedsettingsByKeyWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Gets copy data options
+     * Requires authentication as administrator
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LibraryFullUserCopyDataOptions} and HTTP response
+     */
+    getUsersCopydataoptionsWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = LibraryFullUserCopyDataOptions;
+
+      return this.apiClient.callApi(
+        '/Users/CopyDataOptions', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Gets copy data options
+     * Requires authentication as administrator
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LibraryFullUserCopyDataOptions}
+     */
+    getUsersCopydataoptions() {
+      return this.getUsersCopydataoptionsWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

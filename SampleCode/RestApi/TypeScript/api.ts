@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.22
+ * OpenAPI spec version: 4.10.0.23
  * 
  *
  * NOTE: This file is auto generated.
@@ -3145,10 +3145,10 @@ export interface CopyData {
     ToUserIds?: Array<string>;
     /**
      * 
-     * @type {Array<LibraryUserCopyOptions>}
+     * @type {Array<string>}
      * @memberof CopyData
      */
-    CopyOptions?: Array<LibraryUserCopyOptions>;
+    CopyOptions?: Array<string>;
 }
 /**
  * 
@@ -3170,10 +3170,10 @@ export interface CreateUserByName {
     CopyFromUserId?: string;
     /**
      * 
-     * @type {Array<LibraryUserCopyOptions>}
+     * @type {Array<string>}
      * @memberof CreateUserByName
      */
-    UserCopyOptions?: Array<LibraryUserCopyOptions>;
+    UserCopyOptions?: Array<string>;
 }
 /**
  * 
@@ -5131,6 +5131,36 @@ export interface ItemsQuery {
      * @memberof ItemsQuery
      */
     IsResumable?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ItemsQuery
+     */
+    IsSports?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ItemsQuery
+     */
+    IsNews?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ItemsQuery
+     */
+    IsSeries?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ItemsQuery
+     */
+    IsMovie?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ItemsQuery
+     */
+    IsRepeat?: boolean;
 }
 /**
  * Class for unified presentation of all information associated with a specific codec level.  
@@ -5273,6 +5303,19 @@ export interface LibraryDeleteInfo {
      * @memberof LibraryDeleteInfo
      */
     Paths?: Array<string>;
+}
+/**
+ * 
+ * @export
+ * @interface LibraryFullUserCopyDataOptions
+ */
+export interface LibraryFullUserCopyDataOptions {
+    /**
+     * 
+     * @type {Array<NameIdPair>}
+     * @memberof LibraryFullUserCopyDataOptions
+     */
+    DataOptions?: Array<NameIdPair>;
 }
 /**
  * 
@@ -6000,16 +6043,6 @@ export interface LibraryUpdateMediaPath {
      * @memberof LibraryUpdateMediaPath
      */
     PathInfo?: MediaPathInfo;
-}
-/**
- * 
- * @export
- * @enum {string}
- */
-export enum LibraryUserCopyOptions {
-    UserPolicy = <any> 'UserPolicy',
-    UserConfiguration = <any> 'UserConfiguration',
-    UserData = <any> 'UserData'
 }
 /**
  * 
@@ -11942,6 +11975,12 @@ export interface SessionPartyInfo {
      * @memberof SessionPartyInfo
      */
     MasterSession?: SessionSessionInfo;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SessionPartyInfo
+     */
+    IsPlaying?: boolean;
 }
 /**
  * 
@@ -113244,6 +113283,39 @@ export const UserServiceApiFetchParamCreator = function (configuration?: Configu
             };
         },
         /**
+         * Requires authentication as administrator
+         * @summary Gets copy data options
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getUsersCopydataoptions(options: any = {}): FetchArgs {
+            const localVarPath = `/Users/CopyDataOptions`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Requires authentication as user
          * @summary Gets a list of users
          * @param {boolean} [IsHidden] Optional filter by IsHidden&#x3D;true or false
@@ -114204,6 +114276,24 @@ export const UserServiceApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Requires authentication as administrator
+         * @summary Gets copy data options
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getUsersCopydataoptions(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<LibraryFullUserCopyDataOptions> {
+            const localVarFetchArgs = UserServiceApiFetchParamCreator(configuration).getUsersCopydataoptions(options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
          * Requires authentication as user
          * @summary Gets a list of users
          * @param {boolean} [IsHidden] Optional filter by IsHidden&#x3D;true or false
@@ -114622,6 +114712,15 @@ export const UserServiceApiFactory = function (configuration?: Configuration, fe
             return UserServiceApiFp(configuration).getUsersByUseridTypedsettingsByKey(Key, UserId, options)(fetch, basePath);
         },
         /**
+         * Requires authentication as administrator
+         * @summary Gets copy data options
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getUsersCopydataoptions(options?: any) {
+            return UserServiceApiFp(configuration).getUsersCopydataoptions(options)(fetch, basePath);
+        },
+        /**
          * Requires authentication as user
          * @summary Gets a list of users
          * @param {boolean} [IsHidden] Optional filter by IsHidden&#x3D;true or false
@@ -114884,6 +114983,17 @@ export class UserServiceApi extends BaseAPI {
      */
     public getUsersByUseridTypedsettingsByKey(Key: string, UserId: string, options?: any) {
         return UserServiceApiFp(this.configuration).getUsersByUseridTypedsettingsByKey(Key, UserId, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Gets copy data options
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserServiceApi
+     */
+    public getUsersCopydataoptions(options?: any) {
+        return UserServiceApiFp(this.configuration).getUsersCopydataoptions(options)(this.fetch, this.basePath);
     }
 
     /**

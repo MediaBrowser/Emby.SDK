@@ -177,6 +177,22 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Gets copy data options
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <returns>Task of ApiResponse (LibraryFullUserCopyDataOptions)</returns>
+        public async Task<RestResponse<LibraryFullUserCopyDataOptions>> GetUsersCopydataoptions ()
+        {
+            var request = new RestRequest("/Users/CopyDataOptions", Method.Get);
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<LibraryFullUserCopyDataOptions>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Gets a list of users
         /// </summary>
         /// <remarks>

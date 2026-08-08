@@ -13,9 +13,9 @@ public struct CopyData: Codable {
 
     public var userId: String?
     public var toUserIds: [String]?
-    public var copyOptions: [LibraryUserCopyOptions]?
+    public var copyOptions: [String]?
 
-    public init(userId: String? = nil, toUserIds: [String]? = nil, copyOptions: [LibraryUserCopyOptions]? = nil) {
+    public init(userId: String? = nil, toUserIds: [String]? = nil, copyOptions: [String]? = nil) {
         self.userId = userId
         self.toUserIds = toUserIds
         self.copyOptions = copyOptions

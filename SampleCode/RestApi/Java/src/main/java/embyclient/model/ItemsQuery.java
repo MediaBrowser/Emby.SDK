@@ -43,6 +43,21 @@ public class ItemsQuery {
   @SerializedName("IsResumable")
   private Boolean isResumable = null;
 
+  @SerializedName("IsSports")
+  private Boolean isSports = null;
+
+  @SerializedName("IsNews")
+  private Boolean isNews = null;
+
+  @SerializedName("IsSeries")
+  private Boolean isSeries = null;
+
+  @SerializedName("IsMovie")
+  private Boolean isMovie = null;
+
+  @SerializedName("IsRepeat")
+  private Boolean isRepeat = null;
+
   public ItemsQuery studioIds(List<String> studioIds) {
     this.studioIds = studioIds;
     return this;
@@ -201,6 +216,96 @@ public class ItemsQuery {
     this.isResumable = isResumable;
   }
 
+  public ItemsQuery isSports(Boolean isSports) {
+    this.isSports = isSports;
+    return this;
+  }
+
+   /**
+   * Get isSports
+   * @return isSports
+  **/
+  @Schema(description = "")
+  public Boolean isIsSports() {
+    return isSports;
+  }
+
+  public void setIsSports(Boolean isSports) {
+    this.isSports = isSports;
+  }
+
+  public ItemsQuery isNews(Boolean isNews) {
+    this.isNews = isNews;
+    return this;
+  }
+
+   /**
+   * Get isNews
+   * @return isNews
+  **/
+  @Schema(description = "")
+  public Boolean isIsNews() {
+    return isNews;
+  }
+
+  public void setIsNews(Boolean isNews) {
+    this.isNews = isNews;
+  }
+
+  public ItemsQuery isSeries(Boolean isSeries) {
+    this.isSeries = isSeries;
+    return this;
+  }
+
+   /**
+   * Get isSeries
+   * @return isSeries
+  **/
+  @Schema(description = "")
+  public Boolean isIsSeries() {
+    return isSeries;
+  }
+
+  public void setIsSeries(Boolean isSeries) {
+    this.isSeries = isSeries;
+  }
+
+  public ItemsQuery isMovie(Boolean isMovie) {
+    this.isMovie = isMovie;
+    return this;
+  }
+
+   /**
+   * Get isMovie
+   * @return isMovie
+  **/
+  @Schema(description = "")
+  public Boolean isIsMovie() {
+    return isMovie;
+  }
+
+  public void setIsMovie(Boolean isMovie) {
+    this.isMovie = isMovie;
+  }
+
+  public ItemsQuery isRepeat(Boolean isRepeat) {
+    this.isRepeat = isRepeat;
+    return this;
+  }
+
+   /**
+   * Get isRepeat
+   * @return isRepeat
+  **/
+  @Schema(description = "")
+  public Boolean isIsRepeat() {
+    return isRepeat;
+  }
+
+  public void setIsRepeat(Boolean isRepeat) {
+    this.isRepeat = isRepeat;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -217,12 +322,17 @@ public class ItemsQuery {
         Objects.equals(this.collectionTypes, itemsQuery.collectionTypes) &&
         Objects.equals(this.isFavorite, itemsQuery.isFavorite) &&
         Objects.equals(this.isPlayed, itemsQuery.isPlayed) &&
-        Objects.equals(this.isResumable, itemsQuery.isResumable);
+        Objects.equals(this.isResumable, itemsQuery.isResumable) &&
+        Objects.equals(this.isSports, itemsQuery.isSports) &&
+        Objects.equals(this.isNews, itemsQuery.isNews) &&
+        Objects.equals(this.isSeries, itemsQuery.isSeries) &&
+        Objects.equals(this.isMovie, itemsQuery.isMovie) &&
+        Objects.equals(this.isRepeat, itemsQuery.isRepeat);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(studioIds, tagIds, genreIds, collectionTypes, isFavorite, isPlayed, isResumable);
+    return Objects.hash(studioIds, tagIds, genreIds, collectionTypes, isFavorite, isPlayed, isResumable, isSports, isNews, isSeries, isMovie, isRepeat);
   }
 
 
@@ -238,6 +348,11 @@ public class ItemsQuery {
     sb.append("    isFavorite: ").append(toIndentedString(isFavorite)).append("\n");
     sb.append("    isPlayed: ").append(toIndentedString(isPlayed)).append("\n");
     sb.append("    isResumable: ").append(toIndentedString(isResumable)).append("\n");
+    sb.append("    isSports: ").append(toIndentedString(isSports)).append("\n");
+    sb.append("    isNews: ").append(toIndentedString(isNews)).append("\n");
+    sb.append("    isSeries: ").append(toIndentedString(isSeries)).append("\n");
+    sb.append("    isMovie: ").append(toIndentedString(isMovie)).append("\n");
+    sb.append("    isRepeat: ").append(toIndentedString(isRepeat)).append("\n");
     sb.append("}");
     return sb.toString();
   }

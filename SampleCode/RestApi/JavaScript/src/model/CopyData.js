@@ -10,12 +10,11 @@
  */
 
 import ApiClient from '../ApiClient';
-import LibraryUserCopyOptions from './LibraryUserCopyOptions';
 
 /**
 * The CopyData model module.
 * @module model/CopyData
-* @version 4.10.0.22
+* @version 4.10.0.23
 */
 export default class CopyData {
     /**
@@ -49,7 +48,7 @@ export default class CopyData {
                 obj['ToUserIds'] = ApiClient.convertToType(data['ToUserIds'], ['String']);
             }
             if (data.hasOwnProperty('CopyOptions')) {
-                obj['CopyOptions'] = ApiClient.convertToType(data['CopyOptions'], [LibraryUserCopyOptions]);
+                obj['CopyOptions'] = ApiClient.convertToType(data['CopyOptions'], ['String']);
             }
         }
         return obj;
@@ -64,7 +63,7 @@ export default class CopyData {
     */
     'ToUserIds' = undefined;
     /**
-    * @member {Array.<module:model/LibraryUserCopyOptions>} CopyOptions
+    * @member {Array.<String>} CopyOptions
     */
     'CopyOptions' = undefined;
 

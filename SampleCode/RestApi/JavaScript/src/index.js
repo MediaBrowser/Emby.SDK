@@ -123,6 +123,7 @@ import LevelInformation from './model/LevelInformation';
 import LibraryAddMediaPath from './model/LibraryAddMediaPath';
 import LibraryAddVirtualFolder from './model/LibraryAddVirtualFolder';
 import LibraryDeleteInfo from './model/LibraryDeleteInfo';
+import LibraryFullUserCopyDataOptions from './model/LibraryFullUserCopyDataOptions';
 import LibraryItemLinkType from './model/LibraryItemLinkType';
 import LibraryMediaFolder from './model/LibraryMediaFolder';
 import LibraryMediaUpdateInfo from './model/LibraryMediaUpdateInfo';
@@ -137,7 +138,6 @@ import LibrarySubFolder from './model/LibrarySubFolder';
 import LibraryTypeOptions from './model/LibraryTypeOptions';
 import LibraryUpdateLibraryOptions from './model/LibraryUpdateLibraryOptions';
 import LibraryUpdateMediaPath from './model/LibraryUpdateMediaPath';
-import LibraryUserCopyOptions from './model/LibraryUserCopyOptions';
 import LiveStreamRequest from './model/LiveStreamRequest';
 import LiveStreamResponse from './model/LiveStreamResponse';
 import LiveTvChannelType from './model/LiveTvChannelType';
@@ -448,7 +448,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.10.0.22
+* @version 4.10.0.23
 */
 export {
     /**
@@ -1136,6 +1136,12 @@ export {
     LibraryDeleteInfo,
 
     /**
+     * The LibraryFullUserCopyDataOptions model constructor.
+     * @property {module:model/LibraryFullUserCopyDataOptions}
+     */
+    LibraryFullUserCopyDataOptions,
+
+    /**
      * The LibraryItemLinkType model constructor.
      * @property {module:model/LibraryItemLinkType}
      */
@@ -1218,12 +1224,6 @@ export {
      * @property {module:model/LibraryUpdateMediaPath}
      */
     LibraryUpdateMediaPath,
-
-    /**
-     * The LibraryUserCopyOptions model constructor.
-     * @property {module:model/LibraryUserCopyOptions}
-     */
-    LibraryUserCopyOptions,
 
     /**
      * The LiveStreamRequest model constructor.

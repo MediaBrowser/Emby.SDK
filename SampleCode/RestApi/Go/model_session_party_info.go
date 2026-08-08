@@ -12,4 +12,5 @@ type SessionPartyInfo struct {
 	Sessions []SessionSessionInfo `json:"Sessions,omitempty"`
 	Messages []SessionPartyMessage `json:"Messages,omitempty"`
 	MasterSession *SessionSessionInfo `json:"MasterSession,omitempty"`
+	IsPlaying bool `json:"IsPlaying,omitempty"`
 }

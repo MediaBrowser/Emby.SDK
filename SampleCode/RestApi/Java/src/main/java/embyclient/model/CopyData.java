@@ -12,7 +12,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import embyclient.model.LibraryUserCopyOptions;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ public class CopyData {
   private List<String> toUserIds = null;
 
   @SerializedName("CopyOptions")
-  private List<LibraryUserCopyOptions> copyOptions = null;
+  private List<String> copyOptions = null;
 
   public CopyData userId(String userId) {
     this.userId = userId;
@@ -76,12 +75,12 @@ public class CopyData {
     this.toUserIds = toUserIds;
   }
 
-  public CopyData copyOptions(List<LibraryUserCopyOptions> copyOptions) {
+  public CopyData copyOptions(List<String> copyOptions) {
     this.copyOptions = copyOptions;
     return this;
   }
 
-  public CopyData addCopyOptionsItem(LibraryUserCopyOptions copyOptionsItem) {
+  public CopyData addCopyOptionsItem(String copyOptionsItem) {
     if (this.copyOptions == null) {
       this.copyOptions = new ArrayList<>();
     }
@@ -94,11 +93,11 @@ public class CopyData {
    * @return copyOptions
   **/
   @Schema(description = "")
-  public List<LibraryUserCopyOptions> getCopyOptions() {
+  public List<String> getCopyOptions() {
     return copyOptions;
   }
 
-  public void setCopyOptions(List<LibraryUserCopyOptions> copyOptions) {
+  public void setCopyOptions(List<String> copyOptions) {
     this.copyOptions = copyOptions;
   }
 

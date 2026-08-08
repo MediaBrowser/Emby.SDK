@@ -14,4 +14,9 @@ type ItemsQuery struct {
 	IsFavorite bool `json:"IsFavorite,omitempty"`
 	IsPlayed bool `json:"IsPlayed,omitempty"`
 	IsResumable bool `json:"IsResumable,omitempty"`
+	IsSports bool `json:"IsSports,omitempty"`
+	IsNews bool `json:"IsNews,omitempty"`
+	IsSeries bool `json:"IsSeries,omitempty"`
+	IsMovie bool `json:"IsMovie,omitempty"`
+	IsRepeat bool `json:"IsRepeat,omitempty"`
 }

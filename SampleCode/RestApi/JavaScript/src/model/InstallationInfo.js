@@ -15,7 +15,7 @@ import PackageVersionClass from './PackageVersionClass';
 /**
 * The InstallationInfo model module.
 * @module model/InstallationInfo
-* @version 4.10.0.22
+* @version 4.10.0.23
 */
 export default class InstallationInfo {
     /**

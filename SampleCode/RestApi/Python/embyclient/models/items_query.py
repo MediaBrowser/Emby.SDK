@@ -28,7 +28,12 @@ class ItemsQuery(object):
         'collection_types': 'list[str]',
         'is_favorite': 'bool',
         'is_played': 'bool',
-        'is_resumable': 'bool'
+        'is_resumable': 'bool',
+        'is_sports': 'bool',
+        'is_news': 'bool',
+        'is_series': 'bool',
+        'is_movie': 'bool',
+        'is_repeat': 'bool'
     }
 
     attribute_map = {
@@ -38,10 +43,15 @@ class ItemsQuery(object):
         'collection_types': 'CollectionTypes',
         'is_favorite': 'IsFavorite',
         'is_played': 'IsPlayed',
-        'is_resumable': 'IsResumable'
+        'is_resumable': 'IsResumable',
+        'is_sports': 'IsSports',
+        'is_news': 'IsNews',
+        'is_series': 'IsSeries',
+        'is_movie': 'IsMovie',
+        'is_repeat': 'IsRepeat'
     }
 
-    def __init__(self, studio_ids=None, tag_ids=None, genre_ids=None, collection_types=None, is_favorite=None, is_played=None, is_resumable=None):  # noqa: E501
+    def __init__(self, studio_ids=None, tag_ids=None, genre_ids=None, collection_types=None, is_favorite=None, is_played=None, is_resumable=None, is_sports=None, is_news=None, is_series=None, is_movie=None, is_repeat=None):  # noqa: E501
         """ItemsQuery - a model defined in Swagger"""  # noqa: E501
         self._studio_ids = None
         self._tag_ids = None
@@ -50,6 +60,11 @@ class ItemsQuery(object):
         self._is_favorite = None
         self._is_played = None
         self._is_resumable = None
+        self._is_sports = None
+        self._is_news = None
+        self._is_series = None
+        self._is_movie = None
+        self._is_repeat = None
         self.discriminator = None
         if studio_ids is not None:
             self.studio_ids = studio_ids
@@ -65,6 +80,16 @@ class ItemsQuery(object):
             self.is_played = is_played
         if is_resumable is not None:
             self.is_resumable = is_resumable
+        if is_sports is not None:
+            self.is_sports = is_sports
+        if is_news is not None:
+            self.is_news = is_news
+        if is_series is not None:
+            self.is_series = is_series
+        if is_movie is not None:
+            self.is_movie = is_movie
+        if is_repeat is not None:
+            self.is_repeat = is_repeat
 
     @property
     def studio_ids(self):
@@ -212,6 +237,111 @@ class ItemsQuery(object):
         """
 
         self._is_resumable = is_resumable
+
+    @property
+    def is_sports(self):
+        """Gets the is_sports of this ItemsQuery.  # noqa: E501
+
+
+        :return: The is_sports of this ItemsQuery.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_sports
+
+    @is_sports.setter
+    def is_sports(self, is_sports):
+        """Sets the is_sports of this ItemsQuery.
+
+
+        :param is_sports: The is_sports of this ItemsQuery.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_sports = is_sports
+
+    @property
+    def is_news(self):
+        """Gets the is_news of this ItemsQuery.  # noqa: E501
+
+
+        :return: The is_news of this ItemsQuery.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_news
+
+    @is_news.setter
+    def is_news(self, is_news):
+        """Sets the is_news of this ItemsQuery.
+
+
+        :param is_news: The is_news of this ItemsQuery.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_news = is_news
+
+    @property
+    def is_series(self):
+        """Gets the is_series of this ItemsQuery.  # noqa: E501
+
+
+        :return: The is_series of this ItemsQuery.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_series
+
+    @is_series.setter
+    def is_series(self, is_series):
+        """Sets the is_series of this ItemsQuery.
+
+
+        :param is_series: The is_series of this ItemsQuery.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_series = is_series
+
+    @property
+    def is_movie(self):
+        """Gets the is_movie of this ItemsQuery.  # noqa: E501
+
+
+        :return: The is_movie of this ItemsQuery.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_movie
+
+    @is_movie.setter
+    def is_movie(self, is_movie):
+        """Sets the is_movie of this ItemsQuery.
+
+
+        :param is_movie: The is_movie of this ItemsQuery.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_movie = is_movie
+
+    @property
+    def is_repeat(self):
+        """Gets the is_repeat of this ItemsQuery.  # noqa: E501
+
+
+        :return: The is_repeat of this ItemsQuery.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_repeat
+
+    @is_repeat.setter
+    def is_repeat(self, is_repeat):
+        """Sets the is_repeat of this ItemsQuery.
+
+
+        :param is_repeat: The is_repeat of this ItemsQuery.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_repeat = is_repeat
 
     def to_dict(self):
         """Returns the model properties as a dict"""

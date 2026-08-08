@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.22
+ * OpenAPI spec version: 4.10.0.23
  * 
  *
  * NOTE: This file is auto generated.
@@ -9370,6 +9370,9 @@ describe("UserServiceApi", () => {
     const Key: string = "Key_example"
     const UserId: string = "UserId_example"
     return expect(instance.getUsersByUseridTypedsettingsByKey(Key, UserId, {})).resolves.toBe(null)
+  })
+  test("getUsersCopydataoptions", () => {
+    return expect(instance.getUsersCopydataoptions({})).resolves.toBe(null)
   })
   test("getUsersItemaccess", () => {
     const IsHidden: boolean = true

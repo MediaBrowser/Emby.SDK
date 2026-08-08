@@ -107,6 +107,25 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetUsersByUseridTypedsettingsByKeyWithHttpInfo (string key, string userId);
         /// <summary>
+        /// Gets copy data options
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>LibraryFullUserCopyDataOptions</returns>
+        LibraryFullUserCopyDataOptions GetUsersCopydataoptions ();
+
+        /// <summary>
+        /// Gets copy data options
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of LibraryFullUserCopyDataOptions</returns>
+        ApiResponse<LibraryFullUserCopyDataOptions> GetUsersCopydataoptionsWithHttpInfo ();
+        /// <summary>
         /// Gets a list of users
         /// </summary>
         /// <remarks>
@@ -624,6 +643,25 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="userId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo (string key, string userId);
+        /// <summary>
+        /// Gets copy data options
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of LibraryFullUserCopyDataOptions</returns>
+        System.Threading.Tasks.Task<LibraryFullUserCopyDataOptions> GetUsersCopydataoptionsAsync ();
+
+        /// <summary>
+        /// Gets copy data options
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (LibraryFullUserCopyDataOptions)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LibraryFullUserCopyDataOptions>> GetUsersCopydataoptionsAsyncWithHttpInfo ();
         /// <summary>
         /// Gets a list of users
         /// </summary>
@@ -1787,6 +1825,149 @@ namespace EmbyClient.Dotnet.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
+        }
+
+        /// <summary>
+        /// Gets copy data options Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>LibraryFullUserCopyDataOptions</returns>
+        public LibraryFullUserCopyDataOptions GetUsersCopydataoptions ()
+        {
+             ApiResponse<LibraryFullUserCopyDataOptions> localVarResponse = GetUsersCopydataoptionsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets copy data options Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of LibraryFullUserCopyDataOptions</returns>
+        public ApiResponse< LibraryFullUserCopyDataOptions > GetUsersCopydataoptionsWithHttpInfo ()
+        {
+
+            var localVarPath = "/Users/CopyDataOptions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUsersCopydataoptions", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LibraryFullUserCopyDataOptions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (LibraryFullUserCopyDataOptions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LibraryFullUserCopyDataOptions)));
+        }
+
+        /// <summary>
+        /// Gets copy data options Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of LibraryFullUserCopyDataOptions</returns>
+        public async System.Threading.Tasks.Task<LibraryFullUserCopyDataOptions> GetUsersCopydataoptionsAsync ()
+        {
+             ApiResponse<LibraryFullUserCopyDataOptions> localVarResponse = await GetUsersCopydataoptionsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets copy data options Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (LibraryFullUserCopyDataOptions)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LibraryFullUserCopyDataOptions>> GetUsersCopydataoptionsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/Users/CopyDataOptions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUsersCopydataoptions", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LibraryFullUserCopyDataOptions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (LibraryFullUserCopyDataOptions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LibraryFullUserCopyDataOptions)));
         }
 
         /// <summary>
