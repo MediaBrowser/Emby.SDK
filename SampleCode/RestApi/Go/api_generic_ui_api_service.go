@@ -23,7 +23,7 @@ var (
 type GenericUIApiServiceApiService service
 /*
 GenericUIApiServiceApiService Gets UI view data
-Requires authentication as user
+Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param pageId Id of the page controller
  * @param clientLocale Locale identifier of the client
@@ -123,7 +123,7 @@ func (a *GenericUIApiServiceApiService) GetUIView(ctx context.Context, pageId st
 }
 /*
 GenericUIApiServiceApiService Execute a command in the context of tv setup
-Requires authentication as user
+Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body RunUICommand
 @return UiViewInfo

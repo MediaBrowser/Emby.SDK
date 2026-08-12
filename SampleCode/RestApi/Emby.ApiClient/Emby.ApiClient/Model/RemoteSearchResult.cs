@@ -123,6 +123,12 @@ namespace Emby.ApiClient.Model
         public string ImageUrl { get; set; }
 
         /// <summary>
+        /// Gets or Sets ThumbnailUrl
+        /// </summary>
+        /// <value>The ThumbnailUrl.</value>
+        public string ThumbnailUrl { get; set; }
+
+        /// <summary>
         /// Gets or Sets SearchProviderName
         /// </summary>
         /// <value>The SearchProviderName.</value>
@@ -182,6 +188,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  Role: ").Append(Role).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
+            sb.Append("  ThumbnailUrl: ").Append(ThumbnailUrl).Append("\n");
             sb.Append("  SearchProviderName: ").Append(SearchProviderName).Append("\n");
             sb.Append("  GameSystem: ").Append(GameSystem).Append("\n");
             sb.Append("  Overview: ").Append(Overview).Append("\n");
@@ -294,6 +301,11 @@ namespace Emby.ApiClient.Model
                     this.ImageUrl.Equals(input.ImageUrl))
                 ) && 
                 (
+                    this.ThumbnailUrl == input.ThumbnailUrl ||
+                    (this.ThumbnailUrl != null &&
+                    this.ThumbnailUrl.Equals(input.ThumbnailUrl))
+                ) && 
+                (
                     this.SearchProviderName == input.SearchProviderName ||
                     (this.SearchProviderName != null &&
                     this.SearchProviderName.Equals(input.SearchProviderName))
@@ -367,6 +379,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.ImageUrl != null)
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
+                if (this.ThumbnailUrl != null)
+                    hashCode = hashCode * 59 + this.ThumbnailUrl.GetHashCode();
                 if (this.SearchProviderName != null)
                     hashCode = hashCode * 59 + this.SearchProviderName.GetHashCode();
                 if (this.GameSystem != null)

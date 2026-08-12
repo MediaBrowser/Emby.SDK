@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.23
+ * OpenAPI spec version: 4.10.0.24
  * 
  *
  * NOTE: This file is auto generated.
@@ -11059,6 +11059,12 @@ export interface RemoteSearchResult {
      * @type {string}
      * @memberof RemoteSearchResult
      */
+    ThumbnailUrl?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof RemoteSearchResult
+     */
     SearchProviderName?: string;
     /**
      * 
@@ -21483,6 +21489,1074 @@ export const CollectionServiceApiFetchParamCreator = function (configuration?: C
         },
         /**
          * Requires authentication as user
+         * @summary Gets a list of missing items
+         * @param {string} Id 
+         * @param {string} [ArtistType] Artist or AlbumArtist
+         * @param {string} [MaxOfficialRating] Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+         * @param {boolean} [HasThemeSong] Optional filter by items with theme songs.
+         * @param {boolean} [HasThemeVideo] Optional filter by items with theme videos.
+         * @param {boolean} [HasSubtitles] Optional filter by items with subtitles.
+         * @param {boolean} [HasSpecialFeature] Optional filter by items with special features.
+         * @param {boolean} [HasTrailer] Optional filter by items with trailers.
+         * @param {boolean} [IsSpecialSeason] Optional. Filter by special season.
+         * @param {string} [AdjacentTo] Optional. Return items that are siblings of a supplied item.
+         * @param {string} [StartItemId] Optional. Skip through the list until a given item is found.
+         * @param {number} [MinIndexNumber] Optional filter by minimum index number.
+         * @param {Date} [MinStartDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxStartDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinEndDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxEndDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {number} [MinPlayers] Optional filter by minimum number of game players.
+         * @param {number} [MaxPlayers] Optional filter by maximum number of game players.
+         * @param {number} [ParentIndexNumber] Optional filter by parent index number.
+         * @param {boolean} [HasParentalRating] Optional filter by items that have or do not have a parental rating
+         * @param {boolean} [IsHD] Optional filter by items that are HD or not.
+         * @param {boolean} [IsUnaired] Optional filter by items that are unaired episodes or not.
+         * @param {number} [MinCommunityRating] Optional filter by minimum community rating.
+         * @param {number} [MinCriticRating] Optional filter by minimum critic rating.
+         * @param {number} [AiredDuringSeason] Gets all episodes that aired during a season, including specials.
+         * @param {Date} [MinPremiereDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinDateLastSaved] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinDateLastSavedForUser] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxPremiereDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {boolean} [HasOverview] Optional filter by items that have an overview or not.
+         * @param {boolean} [HasImdbId] Optional filter by items that have an imdb id or not.
+         * @param {boolean} [HasTmdbId] Optional filter by items that have a tmdb id or not.
+         * @param {boolean} [HasTvdbId] Optional filter by items that have a tvdb id or not.
+         * @param {string} [ExcludeItemIds] Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.
+         * @param {number} [StartIndex] Optional. The record index to start at. All items with a lower index will be dropped from the results.
+         * @param {number} [Limit] Optional. The maximum number of records to return
+         * @param {boolean} [Recursive] When searching within folders, this determines whether or not the search will be recursive. true/false
+         * @param {string} [SearchTerm] Enter a search term to perform a search request
+         * @param {string} [SortOrder] Sort Order - Ascending,Descending
+         * @param {string} [ParentId] Specify this to localize the search to a specific item or folder. Omit to use the root
+         * @param {string} [Fields] Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines
+         * @param {string} [ExcludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+         * @param {string} [IncludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+         * @param {string} [AnyProviderIdEquals] Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form &#x27;prov.id&#x27;, e.g. &#x27;imdb.tt123456&#x27;. This allows multiple, comma delimeted value pairs.
+         * @param {string} [Filters] Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes
+         * @param {boolean} [IsFavorite] Optional filter by items that are marked as favorite, or not.
+         * @param {boolean} [IsMovie] Optional filter for movies.
+         * @param {boolean} [IsSeries] Optional filter for series.
+         * @param {boolean} [IsFolder] Optional filter for folders.
+         * @param {boolean} [IsNews] Optional filter for news.
+         * @param {boolean} [IsKids] Optional filter for kids.
+         * @param {boolean} [IsSports] Optional filter for sports.
+         * @param {boolean} [IsNew] Optional filter for IsNew.
+         * @param {boolean} [IsPremiere] Optional filter for IsPremiere.
+         * @param {boolean} [IsNewOrPremiere] Optional filter for IsNewOrPremiere.
+         * @param {boolean} [IsRepeat] Optional filter for IsRepeat.
+         * @param {boolean} [ProjectToMedia] ProjectToMedia
+         * @param {string} [MediaTypes] Optional filter by MediaType. Allows multiple, comma delimited.
+         * @param {string} [ImageTypes] Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
+         * @param {string} [SortBy] Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
+         * @param {boolean} [IsPlayed] Optional filter by items that are played, or not.
+         * @param {string} [Genres] Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
+         * @param {string} [OfficialRatings] Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
+         * @param {string} [Tags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+         * @param {string} [ExcludeTags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+         * @param {string} [Years] Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
+         * @param {boolean} [EnableImages] Optional, include image information in output
+         * @param {boolean} [EnableUserData] Optional, include user data
+         * @param {number} [ImageTypeLimit] Optional, the max number of images to return, per image type
+         * @param {string} [EnableImageTypes] Optional. The image types to include in the output.
+         * @param {string} [Person] Optional. If specified, results will be filtered to include only those containing the specified person.
+         * @param {string} [PersonIds] Optional. If specified, results will be filtered to include only those containing the specified person.
+         * @param {string} [PersonTypes] Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited
+         * @param {string} [Studios] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+         * @param {string} [StudioIds] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+         * @param {string} [Artists] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+         * @param {string} [ArtistIds] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+         * @param {string} [Albums] Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.
+         * @param {string} [Ids] Optional. If specific items are needed, specify a list of item id&#x27;s to retrieve. This allows multiple, comma delimited.
+         * @param {string} [VideoTypes] Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
+         * @param {string} [Containers] Optional filter by Container. Allows multiple, comma delimeted.
+         * @param {string} [AudioCodecs] Optional filter by AudioCodec. Allows multiple, comma delimeted.
+         * @param {string} [AudioLayouts] Optional filter by AudioLayout. Allows multiple, comma delimeted.
+         * @param {string} [VideoCodecs] Optional filter by VideoCodec. Allows multiple, comma delimeted.
+         * @param {string} [ExtendedVideoTypes] Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
+         * @param {string} [SubtitleCodecs] Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
+         * @param {string} [Path] Optional filter by Path.
+         * @param {string} [UserId] User Id
+         * @param {string} [MinOfficialRating] Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+         * @param {boolean} [IsLocked] Optional filter by items that are locked.
+         * @param {boolean} [IsPlaceHolder] Optional filter by items that are placeholders
+         * @param {boolean} [HasOfficialRating] Optional filter by items that have official ratings
+         * @param {boolean} [GroupItemsIntoCollections] Whether or not to hide items behind their boxsets.
+         * @param {boolean} [Is3D] Optional filter by items that are 3D, or not.
+         * @param {string} [SeriesStatus] Optional filter by Series Status. Allows multiple, comma delimeted.
+         * @param {string} [NameStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [ArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [AlbumArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [NameStartsWith] Optional filter by items whose name is sorted equally than a given input string.
+         * @param {string} [NameLessThan] Optional filter by items whose name is equally or lesser than a given input string.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getCollectionsByIdMissing(Id: string, ArtistType?: string, MaxOfficialRating?: string, HasThemeSong?: boolean, HasThemeVideo?: boolean, HasSubtitles?: boolean, HasSpecialFeature?: boolean, HasTrailer?: boolean, IsSpecialSeason?: boolean, AdjacentTo?: string, StartItemId?: string, MinIndexNumber?: number, MinStartDate?: Date, MaxStartDate?: Date, MinEndDate?: Date, MaxEndDate?: Date, MinPlayers?: number, MaxPlayers?: number, ParentIndexNumber?: number, HasParentalRating?: boolean, IsHD?: boolean, IsUnaired?: boolean, MinCommunityRating?: number, MinCriticRating?: number, AiredDuringSeason?: number, MinPremiereDate?: Date, MinDateLastSaved?: Date, MinDateLastSavedForUser?: Date, MaxPremiereDate?: Date, HasOverview?: boolean, HasImdbId?: boolean, HasTmdbId?: boolean, HasTvdbId?: boolean, ExcludeItemIds?: string, StartIndex?: number, Limit?: number, Recursive?: boolean, SearchTerm?: string, SortOrder?: string, ParentId?: string, Fields?: string, ExcludeItemTypes?: string, IncludeItemTypes?: string, AnyProviderIdEquals?: string, Filters?: string, IsFavorite?: boolean, IsMovie?: boolean, IsSeries?: boolean, IsFolder?: boolean, IsNews?: boolean, IsKids?: boolean, IsSports?: boolean, IsNew?: boolean, IsPremiere?: boolean, IsNewOrPremiere?: boolean, IsRepeat?: boolean, ProjectToMedia?: boolean, MediaTypes?: string, ImageTypes?: string, SortBy?: string, IsPlayed?: boolean, Genres?: string, OfficialRatings?: string, Tags?: string, ExcludeTags?: string, Years?: string, EnableImages?: boolean, EnableUserData?: boolean, ImageTypeLimit?: number, EnableImageTypes?: string, Person?: string, PersonIds?: string, PersonTypes?: string, Studios?: string, StudioIds?: string, Artists?: string, ArtistIds?: string, Albums?: string, Ids?: string, VideoTypes?: string, Containers?: string, AudioCodecs?: string, AudioLayouts?: string, VideoCodecs?: string, ExtendedVideoTypes?: string, SubtitleCodecs?: string, Path?: string, UserId?: string, MinOfficialRating?: string, IsLocked?: boolean, IsPlaceHolder?: boolean, HasOfficialRating?: boolean, GroupItemsIntoCollections?: boolean, Is3D?: boolean, SeriesStatus?: string, NameStartsWithOrGreater?: string, ArtistStartsWithOrGreater?: string, AlbumArtistStartsWithOrGreater?: string, NameStartsWith?: string, NameLessThan?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'Id' is not null or undefined
+            if (Id === null || Id === undefined) {
+                throw new RequiredError('Id','Required parameter Id was null or undefined when calling getCollectionsByIdMissing.');
+            }
+            const localVarPath = `/Collections/{Id}/Missing`
+                .replace(`{${"Id"}}`, encodeURIComponent(String(Id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            if (ArtistType !== undefined) {
+                localVarQueryParameter['ArtistType'] = ArtistType;
+            }
+
+            if (MaxOfficialRating !== undefined) {
+                localVarQueryParameter['MaxOfficialRating'] = MaxOfficialRating;
+            }
+
+            if (HasThemeSong !== undefined) {
+                localVarQueryParameter['HasThemeSong'] = HasThemeSong;
+            }
+
+            if (HasThemeVideo !== undefined) {
+                localVarQueryParameter['HasThemeVideo'] = HasThemeVideo;
+            }
+
+            if (HasSubtitles !== undefined) {
+                localVarQueryParameter['HasSubtitles'] = HasSubtitles;
+            }
+
+            if (HasSpecialFeature !== undefined) {
+                localVarQueryParameter['HasSpecialFeature'] = HasSpecialFeature;
+            }
+
+            if (HasTrailer !== undefined) {
+                localVarQueryParameter['HasTrailer'] = HasTrailer;
+            }
+
+            if (IsSpecialSeason !== undefined) {
+                localVarQueryParameter['IsSpecialSeason'] = IsSpecialSeason;
+            }
+
+            if (AdjacentTo !== undefined) {
+                localVarQueryParameter['AdjacentTo'] = AdjacentTo;
+            }
+
+            if (StartItemId !== undefined) {
+                localVarQueryParameter['StartItemId'] = StartItemId;
+            }
+
+            if (MinIndexNumber !== undefined) {
+                localVarQueryParameter['MinIndexNumber'] = MinIndexNumber;
+            }
+
+            if (MinStartDate !== undefined) {
+                localVarQueryParameter['MinStartDate'] = (MinStartDate as any).toISOString();
+            }
+
+            if (MaxStartDate !== undefined) {
+                localVarQueryParameter['MaxStartDate'] = (MaxStartDate as any).toISOString();
+            }
+
+            if (MinEndDate !== undefined) {
+                localVarQueryParameter['MinEndDate'] = (MinEndDate as any).toISOString();
+            }
+
+            if (MaxEndDate !== undefined) {
+                localVarQueryParameter['MaxEndDate'] = (MaxEndDate as any).toISOString();
+            }
+
+            if (MinPlayers !== undefined) {
+                localVarQueryParameter['MinPlayers'] = MinPlayers;
+            }
+
+            if (MaxPlayers !== undefined) {
+                localVarQueryParameter['MaxPlayers'] = MaxPlayers;
+            }
+
+            if (ParentIndexNumber !== undefined) {
+                localVarQueryParameter['ParentIndexNumber'] = ParentIndexNumber;
+            }
+
+            if (HasParentalRating !== undefined) {
+                localVarQueryParameter['HasParentalRating'] = HasParentalRating;
+            }
+
+            if (IsHD !== undefined) {
+                localVarQueryParameter['IsHD'] = IsHD;
+            }
+
+            if (IsUnaired !== undefined) {
+                localVarQueryParameter['IsUnaired'] = IsUnaired;
+            }
+
+            if (MinCommunityRating !== undefined) {
+                localVarQueryParameter['MinCommunityRating'] = MinCommunityRating;
+            }
+
+            if (MinCriticRating !== undefined) {
+                localVarQueryParameter['MinCriticRating'] = MinCriticRating;
+            }
+
+            if (AiredDuringSeason !== undefined) {
+                localVarQueryParameter['AiredDuringSeason'] = AiredDuringSeason;
+            }
+
+            if (MinPremiereDate !== undefined) {
+                localVarQueryParameter['MinPremiereDate'] = (MinPremiereDate as any).toISOString();
+            }
+
+            if (MinDateLastSaved !== undefined) {
+                localVarQueryParameter['MinDateLastSaved'] = (MinDateLastSaved as any).toISOString();
+            }
+
+            if (MinDateLastSavedForUser !== undefined) {
+                localVarQueryParameter['MinDateLastSavedForUser'] = (MinDateLastSavedForUser as any).toISOString();
+            }
+
+            if (MaxPremiereDate !== undefined) {
+                localVarQueryParameter['MaxPremiereDate'] = (MaxPremiereDate as any).toISOString();
+            }
+
+            if (HasOverview !== undefined) {
+                localVarQueryParameter['HasOverview'] = HasOverview;
+            }
+
+            if (HasImdbId !== undefined) {
+                localVarQueryParameter['HasImdbId'] = HasImdbId;
+            }
+
+            if (HasTmdbId !== undefined) {
+                localVarQueryParameter['HasTmdbId'] = HasTmdbId;
+            }
+
+            if (HasTvdbId !== undefined) {
+                localVarQueryParameter['HasTvdbId'] = HasTvdbId;
+            }
+
+            if (ExcludeItemIds !== undefined) {
+                localVarQueryParameter['ExcludeItemIds'] = ExcludeItemIds;
+            }
+
+            if (StartIndex !== undefined) {
+                localVarQueryParameter['StartIndex'] = StartIndex;
+            }
+
+            if (Limit !== undefined) {
+                localVarQueryParameter['Limit'] = Limit;
+            }
+
+            if (Recursive !== undefined) {
+                localVarQueryParameter['Recursive'] = Recursive;
+            }
+
+            if (SearchTerm !== undefined) {
+                localVarQueryParameter['SearchTerm'] = SearchTerm;
+            }
+
+            if (SortOrder !== undefined) {
+                localVarQueryParameter['SortOrder'] = SortOrder;
+            }
+
+            if (ParentId !== undefined) {
+                localVarQueryParameter['ParentId'] = ParentId;
+            }
+
+            if (Fields !== undefined) {
+                localVarQueryParameter['Fields'] = Fields;
+            }
+
+            if (ExcludeItemTypes !== undefined) {
+                localVarQueryParameter['ExcludeItemTypes'] = ExcludeItemTypes;
+            }
+
+            if (IncludeItemTypes !== undefined) {
+                localVarQueryParameter['IncludeItemTypes'] = IncludeItemTypes;
+            }
+
+            if (AnyProviderIdEquals !== undefined) {
+                localVarQueryParameter['AnyProviderIdEquals'] = AnyProviderIdEquals;
+            }
+
+            if (Filters !== undefined) {
+                localVarQueryParameter['Filters'] = Filters;
+            }
+
+            if (IsFavorite !== undefined) {
+                localVarQueryParameter['IsFavorite'] = IsFavorite;
+            }
+
+            if (IsMovie !== undefined) {
+                localVarQueryParameter['IsMovie'] = IsMovie;
+            }
+
+            if (IsSeries !== undefined) {
+                localVarQueryParameter['IsSeries'] = IsSeries;
+            }
+
+            if (IsFolder !== undefined) {
+                localVarQueryParameter['IsFolder'] = IsFolder;
+            }
+
+            if (IsNews !== undefined) {
+                localVarQueryParameter['IsNews'] = IsNews;
+            }
+
+            if (IsKids !== undefined) {
+                localVarQueryParameter['IsKids'] = IsKids;
+            }
+
+            if (IsSports !== undefined) {
+                localVarQueryParameter['IsSports'] = IsSports;
+            }
+
+            if (IsNew !== undefined) {
+                localVarQueryParameter['IsNew'] = IsNew;
+            }
+
+            if (IsPremiere !== undefined) {
+                localVarQueryParameter['IsPremiere'] = IsPremiere;
+            }
+
+            if (IsNewOrPremiere !== undefined) {
+                localVarQueryParameter['IsNewOrPremiere'] = IsNewOrPremiere;
+            }
+
+            if (IsRepeat !== undefined) {
+                localVarQueryParameter['IsRepeat'] = IsRepeat;
+            }
+
+            if (ProjectToMedia !== undefined) {
+                localVarQueryParameter['ProjectToMedia'] = ProjectToMedia;
+            }
+
+            if (MediaTypes !== undefined) {
+                localVarQueryParameter['MediaTypes'] = MediaTypes;
+            }
+
+            if (ImageTypes !== undefined) {
+                localVarQueryParameter['ImageTypes'] = ImageTypes;
+            }
+
+            if (SortBy !== undefined) {
+                localVarQueryParameter['SortBy'] = SortBy;
+            }
+
+            if (IsPlayed !== undefined) {
+                localVarQueryParameter['IsPlayed'] = IsPlayed;
+            }
+
+            if (Genres !== undefined) {
+                localVarQueryParameter['Genres'] = Genres;
+            }
+
+            if (OfficialRatings !== undefined) {
+                localVarQueryParameter['OfficialRatings'] = OfficialRatings;
+            }
+
+            if (Tags !== undefined) {
+                localVarQueryParameter['Tags'] = Tags;
+            }
+
+            if (ExcludeTags !== undefined) {
+                localVarQueryParameter['ExcludeTags'] = ExcludeTags;
+            }
+
+            if (Years !== undefined) {
+                localVarQueryParameter['Years'] = Years;
+            }
+
+            if (EnableImages !== undefined) {
+                localVarQueryParameter['EnableImages'] = EnableImages;
+            }
+
+            if (EnableUserData !== undefined) {
+                localVarQueryParameter['EnableUserData'] = EnableUserData;
+            }
+
+            if (ImageTypeLimit !== undefined) {
+                localVarQueryParameter['ImageTypeLimit'] = ImageTypeLimit;
+            }
+
+            if (EnableImageTypes !== undefined) {
+                localVarQueryParameter['EnableImageTypes'] = EnableImageTypes;
+            }
+
+            if (Person !== undefined) {
+                localVarQueryParameter['Person'] = Person;
+            }
+
+            if (PersonIds !== undefined) {
+                localVarQueryParameter['PersonIds'] = PersonIds;
+            }
+
+            if (PersonTypes !== undefined) {
+                localVarQueryParameter['PersonTypes'] = PersonTypes;
+            }
+
+            if (Studios !== undefined) {
+                localVarQueryParameter['Studios'] = Studios;
+            }
+
+            if (StudioIds !== undefined) {
+                localVarQueryParameter['StudioIds'] = StudioIds;
+            }
+
+            if (Artists !== undefined) {
+                localVarQueryParameter['Artists'] = Artists;
+            }
+
+            if (ArtistIds !== undefined) {
+                localVarQueryParameter['ArtistIds'] = ArtistIds;
+            }
+
+            if (Albums !== undefined) {
+                localVarQueryParameter['Albums'] = Albums;
+            }
+
+            if (Ids !== undefined) {
+                localVarQueryParameter['Ids'] = Ids;
+            }
+
+            if (VideoTypes !== undefined) {
+                localVarQueryParameter['VideoTypes'] = VideoTypes;
+            }
+
+            if (Containers !== undefined) {
+                localVarQueryParameter['Containers'] = Containers;
+            }
+
+            if (AudioCodecs !== undefined) {
+                localVarQueryParameter['AudioCodecs'] = AudioCodecs;
+            }
+
+            if (AudioLayouts !== undefined) {
+                localVarQueryParameter['AudioLayouts'] = AudioLayouts;
+            }
+
+            if (VideoCodecs !== undefined) {
+                localVarQueryParameter['VideoCodecs'] = VideoCodecs;
+            }
+
+            if (ExtendedVideoTypes !== undefined) {
+                localVarQueryParameter['ExtendedVideoTypes'] = ExtendedVideoTypes;
+            }
+
+            if (SubtitleCodecs !== undefined) {
+                localVarQueryParameter['SubtitleCodecs'] = SubtitleCodecs;
+            }
+
+            if (Path !== undefined) {
+                localVarQueryParameter['Path'] = Path;
+            }
+
+            if (UserId !== undefined) {
+                localVarQueryParameter['UserId'] = UserId;
+            }
+
+            if (MinOfficialRating !== undefined) {
+                localVarQueryParameter['MinOfficialRating'] = MinOfficialRating;
+            }
+
+            if (IsLocked !== undefined) {
+                localVarQueryParameter['IsLocked'] = IsLocked;
+            }
+
+            if (IsPlaceHolder !== undefined) {
+                localVarQueryParameter['IsPlaceHolder'] = IsPlaceHolder;
+            }
+
+            if (HasOfficialRating !== undefined) {
+                localVarQueryParameter['HasOfficialRating'] = HasOfficialRating;
+            }
+
+            if (GroupItemsIntoCollections !== undefined) {
+                localVarQueryParameter['GroupItemsIntoCollections'] = GroupItemsIntoCollections;
+            }
+
+            if (Is3D !== undefined) {
+                localVarQueryParameter['Is3D'] = Is3D;
+            }
+
+            if (SeriesStatus !== undefined) {
+                localVarQueryParameter['SeriesStatus'] = SeriesStatus;
+            }
+
+            if (NameStartsWithOrGreater !== undefined) {
+                localVarQueryParameter['NameStartsWithOrGreater'] = NameStartsWithOrGreater;
+            }
+
+            if (ArtistStartsWithOrGreater !== undefined) {
+                localVarQueryParameter['ArtistStartsWithOrGreater'] = ArtistStartsWithOrGreater;
+            }
+
+            if (AlbumArtistStartsWithOrGreater !== undefined) {
+                localVarQueryParameter['AlbumArtistStartsWithOrGreater'] = AlbumArtistStartsWithOrGreater;
+            }
+
+            if (NameStartsWith !== undefined) {
+                localVarQueryParameter['NameStartsWith'] = NameStartsWith;
+            }
+
+            if (NameLessThan !== undefined) {
+                localVarQueryParameter['NameLessThan'] = NameLessThan;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as user
+         * @summary Gets a list of missing items
+         * @param {string} Id 
+         * @param {string} [ArtistType] Artist or AlbumArtist
+         * @param {string} [MaxOfficialRating] Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+         * @param {boolean} [HasThemeSong] Optional filter by items with theme songs.
+         * @param {boolean} [HasThemeVideo] Optional filter by items with theme videos.
+         * @param {boolean} [HasSubtitles] Optional filter by items with subtitles.
+         * @param {boolean} [HasSpecialFeature] Optional filter by items with special features.
+         * @param {boolean} [HasTrailer] Optional filter by items with trailers.
+         * @param {boolean} [IsSpecialSeason] Optional. Filter by special season.
+         * @param {string} [AdjacentTo] Optional. Return items that are siblings of a supplied item.
+         * @param {string} [StartItemId] Optional. Skip through the list until a given item is found.
+         * @param {number} [MinIndexNumber] Optional filter by minimum index number.
+         * @param {Date} [MinStartDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxStartDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinEndDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxEndDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {number} [MinPlayers] Optional filter by minimum number of game players.
+         * @param {number} [MaxPlayers] Optional filter by maximum number of game players.
+         * @param {number} [ParentIndexNumber] Optional filter by parent index number.
+         * @param {boolean} [HasParentalRating] Optional filter by items that have or do not have a parental rating
+         * @param {boolean} [IsHD] Optional filter by items that are HD or not.
+         * @param {boolean} [IsUnaired] Optional filter by items that are unaired episodes or not.
+         * @param {number} [MinCommunityRating] Optional filter by minimum community rating.
+         * @param {number} [MinCriticRating] Optional filter by minimum critic rating.
+         * @param {number} [AiredDuringSeason] Gets all episodes that aired during a season, including specials.
+         * @param {Date} [MinPremiereDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinDateLastSaved] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinDateLastSavedForUser] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxPremiereDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {boolean} [HasOverview] Optional filter by items that have an overview or not.
+         * @param {boolean} [HasImdbId] Optional filter by items that have an imdb id or not.
+         * @param {boolean} [HasTmdbId] Optional filter by items that have a tmdb id or not.
+         * @param {boolean} [HasTvdbId] Optional filter by items that have a tvdb id or not.
+         * @param {string} [ExcludeItemIds] Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.
+         * @param {number} [StartIndex] Optional. The record index to start at. All items with a lower index will be dropped from the results.
+         * @param {number} [Limit] Optional. The maximum number of records to return
+         * @param {boolean} [Recursive] When searching within folders, this determines whether or not the search will be recursive. true/false
+         * @param {string} [SearchTerm] Enter a search term to perform a search request
+         * @param {string} [SortOrder] Sort Order - Ascending,Descending
+         * @param {string} [ParentId] Specify this to localize the search to a specific item or folder. Omit to use the root
+         * @param {string} [Fields] Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines
+         * @param {string} [ExcludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+         * @param {string} [IncludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+         * @param {string} [AnyProviderIdEquals] Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form &#x27;prov.id&#x27;, e.g. &#x27;imdb.tt123456&#x27;. This allows multiple, comma delimeted value pairs.
+         * @param {string} [Filters] Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes
+         * @param {boolean} [IsFavorite] Optional filter by items that are marked as favorite, or not.
+         * @param {boolean} [IsMovie] Optional filter for movies.
+         * @param {boolean} [IsSeries] Optional filter for series.
+         * @param {boolean} [IsFolder] Optional filter for folders.
+         * @param {boolean} [IsNews] Optional filter for news.
+         * @param {boolean} [IsKids] Optional filter for kids.
+         * @param {boolean} [IsSports] Optional filter for sports.
+         * @param {boolean} [IsNew] Optional filter for IsNew.
+         * @param {boolean} [IsPremiere] Optional filter for IsPremiere.
+         * @param {boolean} [IsNewOrPremiere] Optional filter for IsNewOrPremiere.
+         * @param {boolean} [IsRepeat] Optional filter for IsRepeat.
+         * @param {boolean} [ProjectToMedia] ProjectToMedia
+         * @param {string} [MediaTypes] Optional filter by MediaType. Allows multiple, comma delimited.
+         * @param {string} [ImageTypes] Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
+         * @param {string} [SortBy] Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
+         * @param {boolean} [IsPlayed] Optional filter by items that are played, or not.
+         * @param {string} [Genres] Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
+         * @param {string} [OfficialRatings] Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
+         * @param {string} [Tags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+         * @param {string} [ExcludeTags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+         * @param {string} [Years] Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
+         * @param {boolean} [EnableImages] Optional, include image information in output
+         * @param {boolean} [EnableUserData] Optional, include user data
+         * @param {number} [ImageTypeLimit] Optional, the max number of images to return, per image type
+         * @param {string} [EnableImageTypes] Optional. The image types to include in the output.
+         * @param {string} [Person] Optional. If specified, results will be filtered to include only those containing the specified person.
+         * @param {string} [PersonIds] Optional. If specified, results will be filtered to include only those containing the specified person.
+         * @param {string} [PersonTypes] Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited
+         * @param {string} [Studios] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+         * @param {string} [StudioIds] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+         * @param {string} [Artists] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+         * @param {string} [ArtistIds] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+         * @param {string} [Albums] Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.
+         * @param {string} [Ids] Optional. If specific items are needed, specify a list of item id&#x27;s to retrieve. This allows multiple, comma delimited.
+         * @param {string} [VideoTypes] Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
+         * @param {string} [Containers] Optional filter by Container. Allows multiple, comma delimeted.
+         * @param {string} [AudioCodecs] Optional filter by AudioCodec. Allows multiple, comma delimeted.
+         * @param {string} [AudioLayouts] Optional filter by AudioLayout. Allows multiple, comma delimeted.
+         * @param {string} [VideoCodecs] Optional filter by VideoCodec. Allows multiple, comma delimeted.
+         * @param {string} [ExtendedVideoTypes] Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
+         * @param {string} [SubtitleCodecs] Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
+         * @param {string} [Path] Optional filter by Path.
+         * @param {string} [UserId] User Id
+         * @param {string} [MinOfficialRating] Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+         * @param {boolean} [IsLocked] Optional filter by items that are locked.
+         * @param {boolean} [IsPlaceHolder] Optional filter by items that are placeholders
+         * @param {boolean} [HasOfficialRating] Optional filter by items that have official ratings
+         * @param {boolean} [GroupItemsIntoCollections] Whether or not to hide items behind their boxsets.
+         * @param {boolean} [Is3D] Optional filter by items that are 3D, or not.
+         * @param {string} [SeriesStatus] Optional filter by Series Status. Allows multiple, comma delimeted.
+         * @param {string} [NameStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [ArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [AlbumArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [NameStartsWith] Optional filter by items whose name is sorted equally than a given input string.
+         * @param {string} [NameLessThan] Optional filter by items whose name is equally or lesser than a given input string.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getCollectionsByIdProvideritems(Id: string, ArtistType?: string, MaxOfficialRating?: string, HasThemeSong?: boolean, HasThemeVideo?: boolean, HasSubtitles?: boolean, HasSpecialFeature?: boolean, HasTrailer?: boolean, IsSpecialSeason?: boolean, AdjacentTo?: string, StartItemId?: string, MinIndexNumber?: number, MinStartDate?: Date, MaxStartDate?: Date, MinEndDate?: Date, MaxEndDate?: Date, MinPlayers?: number, MaxPlayers?: number, ParentIndexNumber?: number, HasParentalRating?: boolean, IsHD?: boolean, IsUnaired?: boolean, MinCommunityRating?: number, MinCriticRating?: number, AiredDuringSeason?: number, MinPremiereDate?: Date, MinDateLastSaved?: Date, MinDateLastSavedForUser?: Date, MaxPremiereDate?: Date, HasOverview?: boolean, HasImdbId?: boolean, HasTmdbId?: boolean, HasTvdbId?: boolean, ExcludeItemIds?: string, StartIndex?: number, Limit?: number, Recursive?: boolean, SearchTerm?: string, SortOrder?: string, ParentId?: string, Fields?: string, ExcludeItemTypes?: string, IncludeItemTypes?: string, AnyProviderIdEquals?: string, Filters?: string, IsFavorite?: boolean, IsMovie?: boolean, IsSeries?: boolean, IsFolder?: boolean, IsNews?: boolean, IsKids?: boolean, IsSports?: boolean, IsNew?: boolean, IsPremiere?: boolean, IsNewOrPremiere?: boolean, IsRepeat?: boolean, ProjectToMedia?: boolean, MediaTypes?: string, ImageTypes?: string, SortBy?: string, IsPlayed?: boolean, Genres?: string, OfficialRatings?: string, Tags?: string, ExcludeTags?: string, Years?: string, EnableImages?: boolean, EnableUserData?: boolean, ImageTypeLimit?: number, EnableImageTypes?: string, Person?: string, PersonIds?: string, PersonTypes?: string, Studios?: string, StudioIds?: string, Artists?: string, ArtistIds?: string, Albums?: string, Ids?: string, VideoTypes?: string, Containers?: string, AudioCodecs?: string, AudioLayouts?: string, VideoCodecs?: string, ExtendedVideoTypes?: string, SubtitleCodecs?: string, Path?: string, UserId?: string, MinOfficialRating?: string, IsLocked?: boolean, IsPlaceHolder?: boolean, HasOfficialRating?: boolean, GroupItemsIntoCollections?: boolean, Is3D?: boolean, SeriesStatus?: string, NameStartsWithOrGreater?: string, ArtistStartsWithOrGreater?: string, AlbumArtistStartsWithOrGreater?: string, NameStartsWith?: string, NameLessThan?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'Id' is not null or undefined
+            if (Id === null || Id === undefined) {
+                throw new RequiredError('Id','Required parameter Id was null or undefined when calling getCollectionsByIdProvideritems.');
+            }
+            const localVarPath = `/Collections/{Id}/ProviderItems`
+                .replace(`{${"Id"}}`, encodeURIComponent(String(Id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            if (ArtistType !== undefined) {
+                localVarQueryParameter['ArtistType'] = ArtistType;
+            }
+
+            if (MaxOfficialRating !== undefined) {
+                localVarQueryParameter['MaxOfficialRating'] = MaxOfficialRating;
+            }
+
+            if (HasThemeSong !== undefined) {
+                localVarQueryParameter['HasThemeSong'] = HasThemeSong;
+            }
+
+            if (HasThemeVideo !== undefined) {
+                localVarQueryParameter['HasThemeVideo'] = HasThemeVideo;
+            }
+
+            if (HasSubtitles !== undefined) {
+                localVarQueryParameter['HasSubtitles'] = HasSubtitles;
+            }
+
+            if (HasSpecialFeature !== undefined) {
+                localVarQueryParameter['HasSpecialFeature'] = HasSpecialFeature;
+            }
+
+            if (HasTrailer !== undefined) {
+                localVarQueryParameter['HasTrailer'] = HasTrailer;
+            }
+
+            if (IsSpecialSeason !== undefined) {
+                localVarQueryParameter['IsSpecialSeason'] = IsSpecialSeason;
+            }
+
+            if (AdjacentTo !== undefined) {
+                localVarQueryParameter['AdjacentTo'] = AdjacentTo;
+            }
+
+            if (StartItemId !== undefined) {
+                localVarQueryParameter['StartItemId'] = StartItemId;
+            }
+
+            if (MinIndexNumber !== undefined) {
+                localVarQueryParameter['MinIndexNumber'] = MinIndexNumber;
+            }
+
+            if (MinStartDate !== undefined) {
+                localVarQueryParameter['MinStartDate'] = (MinStartDate as any).toISOString();
+            }
+
+            if (MaxStartDate !== undefined) {
+                localVarQueryParameter['MaxStartDate'] = (MaxStartDate as any).toISOString();
+            }
+
+            if (MinEndDate !== undefined) {
+                localVarQueryParameter['MinEndDate'] = (MinEndDate as any).toISOString();
+            }
+
+            if (MaxEndDate !== undefined) {
+                localVarQueryParameter['MaxEndDate'] = (MaxEndDate as any).toISOString();
+            }
+
+            if (MinPlayers !== undefined) {
+                localVarQueryParameter['MinPlayers'] = MinPlayers;
+            }
+
+            if (MaxPlayers !== undefined) {
+                localVarQueryParameter['MaxPlayers'] = MaxPlayers;
+            }
+
+            if (ParentIndexNumber !== undefined) {
+                localVarQueryParameter['ParentIndexNumber'] = ParentIndexNumber;
+            }
+
+            if (HasParentalRating !== undefined) {
+                localVarQueryParameter['HasParentalRating'] = HasParentalRating;
+            }
+
+            if (IsHD !== undefined) {
+                localVarQueryParameter['IsHD'] = IsHD;
+            }
+
+            if (IsUnaired !== undefined) {
+                localVarQueryParameter['IsUnaired'] = IsUnaired;
+            }
+
+            if (MinCommunityRating !== undefined) {
+                localVarQueryParameter['MinCommunityRating'] = MinCommunityRating;
+            }
+
+            if (MinCriticRating !== undefined) {
+                localVarQueryParameter['MinCriticRating'] = MinCriticRating;
+            }
+
+            if (AiredDuringSeason !== undefined) {
+                localVarQueryParameter['AiredDuringSeason'] = AiredDuringSeason;
+            }
+
+            if (MinPremiereDate !== undefined) {
+                localVarQueryParameter['MinPremiereDate'] = (MinPremiereDate as any).toISOString();
+            }
+
+            if (MinDateLastSaved !== undefined) {
+                localVarQueryParameter['MinDateLastSaved'] = (MinDateLastSaved as any).toISOString();
+            }
+
+            if (MinDateLastSavedForUser !== undefined) {
+                localVarQueryParameter['MinDateLastSavedForUser'] = (MinDateLastSavedForUser as any).toISOString();
+            }
+
+            if (MaxPremiereDate !== undefined) {
+                localVarQueryParameter['MaxPremiereDate'] = (MaxPremiereDate as any).toISOString();
+            }
+
+            if (HasOverview !== undefined) {
+                localVarQueryParameter['HasOverview'] = HasOverview;
+            }
+
+            if (HasImdbId !== undefined) {
+                localVarQueryParameter['HasImdbId'] = HasImdbId;
+            }
+
+            if (HasTmdbId !== undefined) {
+                localVarQueryParameter['HasTmdbId'] = HasTmdbId;
+            }
+
+            if (HasTvdbId !== undefined) {
+                localVarQueryParameter['HasTvdbId'] = HasTvdbId;
+            }
+
+            if (ExcludeItemIds !== undefined) {
+                localVarQueryParameter['ExcludeItemIds'] = ExcludeItemIds;
+            }
+
+            if (StartIndex !== undefined) {
+                localVarQueryParameter['StartIndex'] = StartIndex;
+            }
+
+            if (Limit !== undefined) {
+                localVarQueryParameter['Limit'] = Limit;
+            }
+
+            if (Recursive !== undefined) {
+                localVarQueryParameter['Recursive'] = Recursive;
+            }
+
+            if (SearchTerm !== undefined) {
+                localVarQueryParameter['SearchTerm'] = SearchTerm;
+            }
+
+            if (SortOrder !== undefined) {
+                localVarQueryParameter['SortOrder'] = SortOrder;
+            }
+
+            if (ParentId !== undefined) {
+                localVarQueryParameter['ParentId'] = ParentId;
+            }
+
+            if (Fields !== undefined) {
+                localVarQueryParameter['Fields'] = Fields;
+            }
+
+            if (ExcludeItemTypes !== undefined) {
+                localVarQueryParameter['ExcludeItemTypes'] = ExcludeItemTypes;
+            }
+
+            if (IncludeItemTypes !== undefined) {
+                localVarQueryParameter['IncludeItemTypes'] = IncludeItemTypes;
+            }
+
+            if (AnyProviderIdEquals !== undefined) {
+                localVarQueryParameter['AnyProviderIdEquals'] = AnyProviderIdEquals;
+            }
+
+            if (Filters !== undefined) {
+                localVarQueryParameter['Filters'] = Filters;
+            }
+
+            if (IsFavorite !== undefined) {
+                localVarQueryParameter['IsFavorite'] = IsFavorite;
+            }
+
+            if (IsMovie !== undefined) {
+                localVarQueryParameter['IsMovie'] = IsMovie;
+            }
+
+            if (IsSeries !== undefined) {
+                localVarQueryParameter['IsSeries'] = IsSeries;
+            }
+
+            if (IsFolder !== undefined) {
+                localVarQueryParameter['IsFolder'] = IsFolder;
+            }
+
+            if (IsNews !== undefined) {
+                localVarQueryParameter['IsNews'] = IsNews;
+            }
+
+            if (IsKids !== undefined) {
+                localVarQueryParameter['IsKids'] = IsKids;
+            }
+
+            if (IsSports !== undefined) {
+                localVarQueryParameter['IsSports'] = IsSports;
+            }
+
+            if (IsNew !== undefined) {
+                localVarQueryParameter['IsNew'] = IsNew;
+            }
+
+            if (IsPremiere !== undefined) {
+                localVarQueryParameter['IsPremiere'] = IsPremiere;
+            }
+
+            if (IsNewOrPremiere !== undefined) {
+                localVarQueryParameter['IsNewOrPremiere'] = IsNewOrPremiere;
+            }
+
+            if (IsRepeat !== undefined) {
+                localVarQueryParameter['IsRepeat'] = IsRepeat;
+            }
+
+            if (ProjectToMedia !== undefined) {
+                localVarQueryParameter['ProjectToMedia'] = ProjectToMedia;
+            }
+
+            if (MediaTypes !== undefined) {
+                localVarQueryParameter['MediaTypes'] = MediaTypes;
+            }
+
+            if (ImageTypes !== undefined) {
+                localVarQueryParameter['ImageTypes'] = ImageTypes;
+            }
+
+            if (SortBy !== undefined) {
+                localVarQueryParameter['SortBy'] = SortBy;
+            }
+
+            if (IsPlayed !== undefined) {
+                localVarQueryParameter['IsPlayed'] = IsPlayed;
+            }
+
+            if (Genres !== undefined) {
+                localVarQueryParameter['Genres'] = Genres;
+            }
+
+            if (OfficialRatings !== undefined) {
+                localVarQueryParameter['OfficialRatings'] = OfficialRatings;
+            }
+
+            if (Tags !== undefined) {
+                localVarQueryParameter['Tags'] = Tags;
+            }
+
+            if (ExcludeTags !== undefined) {
+                localVarQueryParameter['ExcludeTags'] = ExcludeTags;
+            }
+
+            if (Years !== undefined) {
+                localVarQueryParameter['Years'] = Years;
+            }
+
+            if (EnableImages !== undefined) {
+                localVarQueryParameter['EnableImages'] = EnableImages;
+            }
+
+            if (EnableUserData !== undefined) {
+                localVarQueryParameter['EnableUserData'] = EnableUserData;
+            }
+
+            if (ImageTypeLimit !== undefined) {
+                localVarQueryParameter['ImageTypeLimit'] = ImageTypeLimit;
+            }
+
+            if (EnableImageTypes !== undefined) {
+                localVarQueryParameter['EnableImageTypes'] = EnableImageTypes;
+            }
+
+            if (Person !== undefined) {
+                localVarQueryParameter['Person'] = Person;
+            }
+
+            if (PersonIds !== undefined) {
+                localVarQueryParameter['PersonIds'] = PersonIds;
+            }
+
+            if (PersonTypes !== undefined) {
+                localVarQueryParameter['PersonTypes'] = PersonTypes;
+            }
+
+            if (Studios !== undefined) {
+                localVarQueryParameter['Studios'] = Studios;
+            }
+
+            if (StudioIds !== undefined) {
+                localVarQueryParameter['StudioIds'] = StudioIds;
+            }
+
+            if (Artists !== undefined) {
+                localVarQueryParameter['Artists'] = Artists;
+            }
+
+            if (ArtistIds !== undefined) {
+                localVarQueryParameter['ArtistIds'] = ArtistIds;
+            }
+
+            if (Albums !== undefined) {
+                localVarQueryParameter['Albums'] = Albums;
+            }
+
+            if (Ids !== undefined) {
+                localVarQueryParameter['Ids'] = Ids;
+            }
+
+            if (VideoTypes !== undefined) {
+                localVarQueryParameter['VideoTypes'] = VideoTypes;
+            }
+
+            if (Containers !== undefined) {
+                localVarQueryParameter['Containers'] = Containers;
+            }
+
+            if (AudioCodecs !== undefined) {
+                localVarQueryParameter['AudioCodecs'] = AudioCodecs;
+            }
+
+            if (AudioLayouts !== undefined) {
+                localVarQueryParameter['AudioLayouts'] = AudioLayouts;
+            }
+
+            if (VideoCodecs !== undefined) {
+                localVarQueryParameter['VideoCodecs'] = VideoCodecs;
+            }
+
+            if (ExtendedVideoTypes !== undefined) {
+                localVarQueryParameter['ExtendedVideoTypes'] = ExtendedVideoTypes;
+            }
+
+            if (SubtitleCodecs !== undefined) {
+                localVarQueryParameter['SubtitleCodecs'] = SubtitleCodecs;
+            }
+
+            if (Path !== undefined) {
+                localVarQueryParameter['Path'] = Path;
+            }
+
+            if (UserId !== undefined) {
+                localVarQueryParameter['UserId'] = UserId;
+            }
+
+            if (MinOfficialRating !== undefined) {
+                localVarQueryParameter['MinOfficialRating'] = MinOfficialRating;
+            }
+
+            if (IsLocked !== undefined) {
+                localVarQueryParameter['IsLocked'] = IsLocked;
+            }
+
+            if (IsPlaceHolder !== undefined) {
+                localVarQueryParameter['IsPlaceHolder'] = IsPlaceHolder;
+            }
+
+            if (HasOfficialRating !== undefined) {
+                localVarQueryParameter['HasOfficialRating'] = HasOfficialRating;
+            }
+
+            if (GroupItemsIntoCollections !== undefined) {
+                localVarQueryParameter['GroupItemsIntoCollections'] = GroupItemsIntoCollections;
+            }
+
+            if (Is3D !== undefined) {
+                localVarQueryParameter['Is3D'] = Is3D;
+            }
+
+            if (SeriesStatus !== undefined) {
+                localVarQueryParameter['SeriesStatus'] = SeriesStatus;
+            }
+
+            if (NameStartsWithOrGreater !== undefined) {
+                localVarQueryParameter['NameStartsWithOrGreater'] = NameStartsWithOrGreater;
+            }
+
+            if (ArtistStartsWithOrGreater !== undefined) {
+                localVarQueryParameter['ArtistStartsWithOrGreater'] = ArtistStartsWithOrGreater;
+            }
+
+            if (AlbumArtistStartsWithOrGreater !== undefined) {
+                localVarQueryParameter['AlbumArtistStartsWithOrGreater'] = AlbumArtistStartsWithOrGreater;
+            }
+
+            if (NameStartsWith !== undefined) {
+                localVarQueryParameter['NameStartsWith'] = NameStartsWith;
+            }
+
+            if (NameLessThan !== undefined) {
+                localVarQueryParameter['NameLessThan'] = NameLessThan;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as user
          * @summary Creates a new collection
          * @param {boolean} [IsLocked] Whether or not to lock the new collection.
          * @param {string} [Name] The name of the new collection.
@@ -21661,6 +22735,242 @@ export const CollectionServiceApiFp = function(configuration?: Configuration) {
         },
         /**
          * Requires authentication as user
+         * @summary Gets a list of missing items
+         * @param {string} Id 
+         * @param {string} [ArtistType] Artist or AlbumArtist
+         * @param {string} [MaxOfficialRating] Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+         * @param {boolean} [HasThemeSong] Optional filter by items with theme songs.
+         * @param {boolean} [HasThemeVideo] Optional filter by items with theme videos.
+         * @param {boolean} [HasSubtitles] Optional filter by items with subtitles.
+         * @param {boolean} [HasSpecialFeature] Optional filter by items with special features.
+         * @param {boolean} [HasTrailer] Optional filter by items with trailers.
+         * @param {boolean} [IsSpecialSeason] Optional. Filter by special season.
+         * @param {string} [AdjacentTo] Optional. Return items that are siblings of a supplied item.
+         * @param {string} [StartItemId] Optional. Skip through the list until a given item is found.
+         * @param {number} [MinIndexNumber] Optional filter by minimum index number.
+         * @param {Date} [MinStartDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxStartDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinEndDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxEndDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {number} [MinPlayers] Optional filter by minimum number of game players.
+         * @param {number} [MaxPlayers] Optional filter by maximum number of game players.
+         * @param {number} [ParentIndexNumber] Optional filter by parent index number.
+         * @param {boolean} [HasParentalRating] Optional filter by items that have or do not have a parental rating
+         * @param {boolean} [IsHD] Optional filter by items that are HD or not.
+         * @param {boolean} [IsUnaired] Optional filter by items that are unaired episodes or not.
+         * @param {number} [MinCommunityRating] Optional filter by minimum community rating.
+         * @param {number} [MinCriticRating] Optional filter by minimum critic rating.
+         * @param {number} [AiredDuringSeason] Gets all episodes that aired during a season, including specials.
+         * @param {Date} [MinPremiereDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinDateLastSaved] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinDateLastSavedForUser] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxPremiereDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {boolean} [HasOverview] Optional filter by items that have an overview or not.
+         * @param {boolean} [HasImdbId] Optional filter by items that have an imdb id or not.
+         * @param {boolean} [HasTmdbId] Optional filter by items that have a tmdb id or not.
+         * @param {boolean} [HasTvdbId] Optional filter by items that have a tvdb id or not.
+         * @param {string} [ExcludeItemIds] Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.
+         * @param {number} [StartIndex] Optional. The record index to start at. All items with a lower index will be dropped from the results.
+         * @param {number} [Limit] Optional. The maximum number of records to return
+         * @param {boolean} [Recursive] When searching within folders, this determines whether or not the search will be recursive. true/false
+         * @param {string} [SearchTerm] Enter a search term to perform a search request
+         * @param {string} [SortOrder] Sort Order - Ascending,Descending
+         * @param {string} [ParentId] Specify this to localize the search to a specific item or folder. Omit to use the root
+         * @param {string} [Fields] Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines
+         * @param {string} [ExcludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+         * @param {string} [IncludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+         * @param {string} [AnyProviderIdEquals] Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form &#x27;prov.id&#x27;, e.g. &#x27;imdb.tt123456&#x27;. This allows multiple, comma delimeted value pairs.
+         * @param {string} [Filters] Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes
+         * @param {boolean} [IsFavorite] Optional filter by items that are marked as favorite, or not.
+         * @param {boolean} [IsMovie] Optional filter for movies.
+         * @param {boolean} [IsSeries] Optional filter for series.
+         * @param {boolean} [IsFolder] Optional filter for folders.
+         * @param {boolean} [IsNews] Optional filter for news.
+         * @param {boolean} [IsKids] Optional filter for kids.
+         * @param {boolean} [IsSports] Optional filter for sports.
+         * @param {boolean} [IsNew] Optional filter for IsNew.
+         * @param {boolean} [IsPremiere] Optional filter for IsPremiere.
+         * @param {boolean} [IsNewOrPremiere] Optional filter for IsNewOrPremiere.
+         * @param {boolean} [IsRepeat] Optional filter for IsRepeat.
+         * @param {boolean} [ProjectToMedia] ProjectToMedia
+         * @param {string} [MediaTypes] Optional filter by MediaType. Allows multiple, comma delimited.
+         * @param {string} [ImageTypes] Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
+         * @param {string} [SortBy] Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
+         * @param {boolean} [IsPlayed] Optional filter by items that are played, or not.
+         * @param {string} [Genres] Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
+         * @param {string} [OfficialRatings] Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
+         * @param {string} [Tags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+         * @param {string} [ExcludeTags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+         * @param {string} [Years] Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
+         * @param {boolean} [EnableImages] Optional, include image information in output
+         * @param {boolean} [EnableUserData] Optional, include user data
+         * @param {number} [ImageTypeLimit] Optional, the max number of images to return, per image type
+         * @param {string} [EnableImageTypes] Optional. The image types to include in the output.
+         * @param {string} [Person] Optional. If specified, results will be filtered to include only those containing the specified person.
+         * @param {string} [PersonIds] Optional. If specified, results will be filtered to include only those containing the specified person.
+         * @param {string} [PersonTypes] Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited
+         * @param {string} [Studios] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+         * @param {string} [StudioIds] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+         * @param {string} [Artists] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+         * @param {string} [ArtistIds] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+         * @param {string} [Albums] Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.
+         * @param {string} [Ids] Optional. If specific items are needed, specify a list of item id&#x27;s to retrieve. This allows multiple, comma delimited.
+         * @param {string} [VideoTypes] Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
+         * @param {string} [Containers] Optional filter by Container. Allows multiple, comma delimeted.
+         * @param {string} [AudioCodecs] Optional filter by AudioCodec. Allows multiple, comma delimeted.
+         * @param {string} [AudioLayouts] Optional filter by AudioLayout. Allows multiple, comma delimeted.
+         * @param {string} [VideoCodecs] Optional filter by VideoCodec. Allows multiple, comma delimeted.
+         * @param {string} [ExtendedVideoTypes] Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
+         * @param {string} [SubtitleCodecs] Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
+         * @param {string} [Path] Optional filter by Path.
+         * @param {string} [UserId] User Id
+         * @param {string} [MinOfficialRating] Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+         * @param {boolean} [IsLocked] Optional filter by items that are locked.
+         * @param {boolean} [IsPlaceHolder] Optional filter by items that are placeholders
+         * @param {boolean} [HasOfficialRating] Optional filter by items that have official ratings
+         * @param {boolean} [GroupItemsIntoCollections] Whether or not to hide items behind their boxsets.
+         * @param {boolean} [Is3D] Optional filter by items that are 3D, or not.
+         * @param {string} [SeriesStatus] Optional filter by Series Status. Allows multiple, comma delimeted.
+         * @param {string} [NameStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [ArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [AlbumArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [NameStartsWith] Optional filter by items whose name is sorted equally than a given input string.
+         * @param {string} [NameLessThan] Optional filter by items whose name is equally or lesser than a given input string.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getCollectionsByIdMissing(Id: string, ArtistType?: string, MaxOfficialRating?: string, HasThemeSong?: boolean, HasThemeVideo?: boolean, HasSubtitles?: boolean, HasSpecialFeature?: boolean, HasTrailer?: boolean, IsSpecialSeason?: boolean, AdjacentTo?: string, StartItemId?: string, MinIndexNumber?: number, MinStartDate?: Date, MaxStartDate?: Date, MinEndDate?: Date, MaxEndDate?: Date, MinPlayers?: number, MaxPlayers?: number, ParentIndexNumber?: number, HasParentalRating?: boolean, IsHD?: boolean, IsUnaired?: boolean, MinCommunityRating?: number, MinCriticRating?: number, AiredDuringSeason?: number, MinPremiereDate?: Date, MinDateLastSaved?: Date, MinDateLastSavedForUser?: Date, MaxPremiereDate?: Date, HasOverview?: boolean, HasImdbId?: boolean, HasTmdbId?: boolean, HasTvdbId?: boolean, ExcludeItemIds?: string, StartIndex?: number, Limit?: number, Recursive?: boolean, SearchTerm?: string, SortOrder?: string, ParentId?: string, Fields?: string, ExcludeItemTypes?: string, IncludeItemTypes?: string, AnyProviderIdEquals?: string, Filters?: string, IsFavorite?: boolean, IsMovie?: boolean, IsSeries?: boolean, IsFolder?: boolean, IsNews?: boolean, IsKids?: boolean, IsSports?: boolean, IsNew?: boolean, IsPremiere?: boolean, IsNewOrPremiere?: boolean, IsRepeat?: boolean, ProjectToMedia?: boolean, MediaTypes?: string, ImageTypes?: string, SortBy?: string, IsPlayed?: boolean, Genres?: string, OfficialRatings?: string, Tags?: string, ExcludeTags?: string, Years?: string, EnableImages?: boolean, EnableUserData?: boolean, ImageTypeLimit?: number, EnableImageTypes?: string, Person?: string, PersonIds?: string, PersonTypes?: string, Studios?: string, StudioIds?: string, Artists?: string, ArtistIds?: string, Albums?: string, Ids?: string, VideoTypes?: string, Containers?: string, AudioCodecs?: string, AudioLayouts?: string, VideoCodecs?: string, ExtendedVideoTypes?: string, SubtitleCodecs?: string, Path?: string, UserId?: string, MinOfficialRating?: string, IsLocked?: boolean, IsPlaceHolder?: boolean, HasOfficialRating?: boolean, GroupItemsIntoCollections?: boolean, Is3D?: boolean, SeriesStatus?: string, NameStartsWithOrGreater?: string, ArtistStartsWithOrGreater?: string, AlbumArtistStartsWithOrGreater?: string, NameStartsWith?: string, NameLessThan?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = CollectionServiceApiFetchParamCreator(configuration).getCollectionsByIdMissing(Id, ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as user
+         * @summary Gets a list of missing items
+         * @param {string} Id 
+         * @param {string} [ArtistType] Artist or AlbumArtist
+         * @param {string} [MaxOfficialRating] Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+         * @param {boolean} [HasThemeSong] Optional filter by items with theme songs.
+         * @param {boolean} [HasThemeVideo] Optional filter by items with theme videos.
+         * @param {boolean} [HasSubtitles] Optional filter by items with subtitles.
+         * @param {boolean} [HasSpecialFeature] Optional filter by items with special features.
+         * @param {boolean} [HasTrailer] Optional filter by items with trailers.
+         * @param {boolean} [IsSpecialSeason] Optional. Filter by special season.
+         * @param {string} [AdjacentTo] Optional. Return items that are siblings of a supplied item.
+         * @param {string} [StartItemId] Optional. Skip through the list until a given item is found.
+         * @param {number} [MinIndexNumber] Optional filter by minimum index number.
+         * @param {Date} [MinStartDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxStartDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinEndDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxEndDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {number} [MinPlayers] Optional filter by minimum number of game players.
+         * @param {number} [MaxPlayers] Optional filter by maximum number of game players.
+         * @param {number} [ParentIndexNumber] Optional filter by parent index number.
+         * @param {boolean} [HasParentalRating] Optional filter by items that have or do not have a parental rating
+         * @param {boolean} [IsHD] Optional filter by items that are HD or not.
+         * @param {boolean} [IsUnaired] Optional filter by items that are unaired episodes or not.
+         * @param {number} [MinCommunityRating] Optional filter by minimum community rating.
+         * @param {number} [MinCriticRating] Optional filter by minimum critic rating.
+         * @param {number} [AiredDuringSeason] Gets all episodes that aired during a season, including specials.
+         * @param {Date} [MinPremiereDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinDateLastSaved] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinDateLastSavedForUser] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxPremiereDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {boolean} [HasOverview] Optional filter by items that have an overview or not.
+         * @param {boolean} [HasImdbId] Optional filter by items that have an imdb id or not.
+         * @param {boolean} [HasTmdbId] Optional filter by items that have a tmdb id or not.
+         * @param {boolean} [HasTvdbId] Optional filter by items that have a tvdb id or not.
+         * @param {string} [ExcludeItemIds] Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.
+         * @param {number} [StartIndex] Optional. The record index to start at. All items with a lower index will be dropped from the results.
+         * @param {number} [Limit] Optional. The maximum number of records to return
+         * @param {boolean} [Recursive] When searching within folders, this determines whether or not the search will be recursive. true/false
+         * @param {string} [SearchTerm] Enter a search term to perform a search request
+         * @param {string} [SortOrder] Sort Order - Ascending,Descending
+         * @param {string} [ParentId] Specify this to localize the search to a specific item or folder. Omit to use the root
+         * @param {string} [Fields] Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines
+         * @param {string} [ExcludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+         * @param {string} [IncludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+         * @param {string} [AnyProviderIdEquals] Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form &#x27;prov.id&#x27;, e.g. &#x27;imdb.tt123456&#x27;. This allows multiple, comma delimeted value pairs.
+         * @param {string} [Filters] Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes
+         * @param {boolean} [IsFavorite] Optional filter by items that are marked as favorite, or not.
+         * @param {boolean} [IsMovie] Optional filter for movies.
+         * @param {boolean} [IsSeries] Optional filter for series.
+         * @param {boolean} [IsFolder] Optional filter for folders.
+         * @param {boolean} [IsNews] Optional filter for news.
+         * @param {boolean} [IsKids] Optional filter for kids.
+         * @param {boolean} [IsSports] Optional filter for sports.
+         * @param {boolean} [IsNew] Optional filter for IsNew.
+         * @param {boolean} [IsPremiere] Optional filter for IsPremiere.
+         * @param {boolean} [IsNewOrPremiere] Optional filter for IsNewOrPremiere.
+         * @param {boolean} [IsRepeat] Optional filter for IsRepeat.
+         * @param {boolean} [ProjectToMedia] ProjectToMedia
+         * @param {string} [MediaTypes] Optional filter by MediaType. Allows multiple, comma delimited.
+         * @param {string} [ImageTypes] Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
+         * @param {string} [SortBy] Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
+         * @param {boolean} [IsPlayed] Optional filter by items that are played, or not.
+         * @param {string} [Genres] Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
+         * @param {string} [OfficialRatings] Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
+         * @param {string} [Tags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+         * @param {string} [ExcludeTags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+         * @param {string} [Years] Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
+         * @param {boolean} [EnableImages] Optional, include image information in output
+         * @param {boolean} [EnableUserData] Optional, include user data
+         * @param {number} [ImageTypeLimit] Optional, the max number of images to return, per image type
+         * @param {string} [EnableImageTypes] Optional. The image types to include in the output.
+         * @param {string} [Person] Optional. If specified, results will be filtered to include only those containing the specified person.
+         * @param {string} [PersonIds] Optional. If specified, results will be filtered to include only those containing the specified person.
+         * @param {string} [PersonTypes] Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited
+         * @param {string} [Studios] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+         * @param {string} [StudioIds] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+         * @param {string} [Artists] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+         * @param {string} [ArtistIds] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+         * @param {string} [Albums] Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.
+         * @param {string} [Ids] Optional. If specific items are needed, specify a list of item id&#x27;s to retrieve. This allows multiple, comma delimited.
+         * @param {string} [VideoTypes] Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
+         * @param {string} [Containers] Optional filter by Container. Allows multiple, comma delimeted.
+         * @param {string} [AudioCodecs] Optional filter by AudioCodec. Allows multiple, comma delimeted.
+         * @param {string} [AudioLayouts] Optional filter by AudioLayout. Allows multiple, comma delimeted.
+         * @param {string} [VideoCodecs] Optional filter by VideoCodec. Allows multiple, comma delimeted.
+         * @param {string} [ExtendedVideoTypes] Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
+         * @param {string} [SubtitleCodecs] Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
+         * @param {string} [Path] Optional filter by Path.
+         * @param {string} [UserId] User Id
+         * @param {string} [MinOfficialRating] Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+         * @param {boolean} [IsLocked] Optional filter by items that are locked.
+         * @param {boolean} [IsPlaceHolder] Optional filter by items that are placeholders
+         * @param {boolean} [HasOfficialRating] Optional filter by items that have official ratings
+         * @param {boolean} [GroupItemsIntoCollections] Whether or not to hide items behind their boxsets.
+         * @param {boolean} [Is3D] Optional filter by items that are 3D, or not.
+         * @param {string} [SeriesStatus] Optional filter by Series Status. Allows multiple, comma delimeted.
+         * @param {string} [NameStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [ArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [AlbumArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [NameStartsWith] Optional filter by items whose name is sorted equally than a given input string.
+         * @param {string} [NameLessThan] Optional filter by items whose name is equally or lesser than a given input string.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getCollectionsByIdProvideritems(Id: string, ArtistType?: string, MaxOfficialRating?: string, HasThemeSong?: boolean, HasThemeVideo?: boolean, HasSubtitles?: boolean, HasSpecialFeature?: boolean, HasTrailer?: boolean, IsSpecialSeason?: boolean, AdjacentTo?: string, StartItemId?: string, MinIndexNumber?: number, MinStartDate?: Date, MaxStartDate?: Date, MinEndDate?: Date, MaxEndDate?: Date, MinPlayers?: number, MaxPlayers?: number, ParentIndexNumber?: number, HasParentalRating?: boolean, IsHD?: boolean, IsUnaired?: boolean, MinCommunityRating?: number, MinCriticRating?: number, AiredDuringSeason?: number, MinPremiereDate?: Date, MinDateLastSaved?: Date, MinDateLastSavedForUser?: Date, MaxPremiereDate?: Date, HasOverview?: boolean, HasImdbId?: boolean, HasTmdbId?: boolean, HasTvdbId?: boolean, ExcludeItemIds?: string, StartIndex?: number, Limit?: number, Recursive?: boolean, SearchTerm?: string, SortOrder?: string, ParentId?: string, Fields?: string, ExcludeItemTypes?: string, IncludeItemTypes?: string, AnyProviderIdEquals?: string, Filters?: string, IsFavorite?: boolean, IsMovie?: boolean, IsSeries?: boolean, IsFolder?: boolean, IsNews?: boolean, IsKids?: boolean, IsSports?: boolean, IsNew?: boolean, IsPremiere?: boolean, IsNewOrPremiere?: boolean, IsRepeat?: boolean, ProjectToMedia?: boolean, MediaTypes?: string, ImageTypes?: string, SortBy?: string, IsPlayed?: boolean, Genres?: string, OfficialRatings?: string, Tags?: string, ExcludeTags?: string, Years?: string, EnableImages?: boolean, EnableUserData?: boolean, ImageTypeLimit?: number, EnableImageTypes?: string, Person?: string, PersonIds?: string, PersonTypes?: string, Studios?: string, StudioIds?: string, Artists?: string, ArtistIds?: string, Albums?: string, Ids?: string, VideoTypes?: string, Containers?: string, AudioCodecs?: string, AudioLayouts?: string, VideoCodecs?: string, ExtendedVideoTypes?: string, SubtitleCodecs?: string, Path?: string, UserId?: string, MinOfficialRating?: string, IsLocked?: boolean, IsPlaceHolder?: boolean, HasOfficialRating?: boolean, GroupItemsIntoCollections?: boolean, Is3D?: boolean, SeriesStatus?: string, NameStartsWithOrGreater?: string, ArtistStartsWithOrGreater?: string, AlbumArtistStartsWithOrGreater?: string, NameStartsWith?: string, NameLessThan?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = CollectionServiceApiFetchParamCreator(configuration).getCollectionsByIdProvideritems(Id, ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as user
          * @summary Creates a new collection
          * @param {boolean} [IsLocked] Whether or not to lock the new collection.
          * @param {string} [Name] The name of the new collection.
@@ -21743,6 +23053,224 @@ export const CollectionServiceApiFactory = function (configuration?: Configurati
         },
         /**
          * Requires authentication as user
+         * @summary Gets a list of missing items
+         * @param {string} Id 
+         * @param {string} [ArtistType] Artist or AlbumArtist
+         * @param {string} [MaxOfficialRating] Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+         * @param {boolean} [HasThemeSong] Optional filter by items with theme songs.
+         * @param {boolean} [HasThemeVideo] Optional filter by items with theme videos.
+         * @param {boolean} [HasSubtitles] Optional filter by items with subtitles.
+         * @param {boolean} [HasSpecialFeature] Optional filter by items with special features.
+         * @param {boolean} [HasTrailer] Optional filter by items with trailers.
+         * @param {boolean} [IsSpecialSeason] Optional. Filter by special season.
+         * @param {string} [AdjacentTo] Optional. Return items that are siblings of a supplied item.
+         * @param {string} [StartItemId] Optional. Skip through the list until a given item is found.
+         * @param {number} [MinIndexNumber] Optional filter by minimum index number.
+         * @param {Date} [MinStartDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxStartDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinEndDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxEndDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {number} [MinPlayers] Optional filter by minimum number of game players.
+         * @param {number} [MaxPlayers] Optional filter by maximum number of game players.
+         * @param {number} [ParentIndexNumber] Optional filter by parent index number.
+         * @param {boolean} [HasParentalRating] Optional filter by items that have or do not have a parental rating
+         * @param {boolean} [IsHD] Optional filter by items that are HD or not.
+         * @param {boolean} [IsUnaired] Optional filter by items that are unaired episodes or not.
+         * @param {number} [MinCommunityRating] Optional filter by minimum community rating.
+         * @param {number} [MinCriticRating] Optional filter by minimum critic rating.
+         * @param {number} [AiredDuringSeason] Gets all episodes that aired during a season, including specials.
+         * @param {Date} [MinPremiereDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinDateLastSaved] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinDateLastSavedForUser] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxPremiereDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {boolean} [HasOverview] Optional filter by items that have an overview or not.
+         * @param {boolean} [HasImdbId] Optional filter by items that have an imdb id or not.
+         * @param {boolean} [HasTmdbId] Optional filter by items that have a tmdb id or not.
+         * @param {boolean} [HasTvdbId] Optional filter by items that have a tvdb id or not.
+         * @param {string} [ExcludeItemIds] Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.
+         * @param {number} [StartIndex] Optional. The record index to start at. All items with a lower index will be dropped from the results.
+         * @param {number} [Limit] Optional. The maximum number of records to return
+         * @param {boolean} [Recursive] When searching within folders, this determines whether or not the search will be recursive. true/false
+         * @param {string} [SearchTerm] Enter a search term to perform a search request
+         * @param {string} [SortOrder] Sort Order - Ascending,Descending
+         * @param {string} [ParentId] Specify this to localize the search to a specific item or folder. Omit to use the root
+         * @param {string} [Fields] Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines
+         * @param {string} [ExcludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+         * @param {string} [IncludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+         * @param {string} [AnyProviderIdEquals] Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form &#x27;prov.id&#x27;, e.g. &#x27;imdb.tt123456&#x27;. This allows multiple, comma delimeted value pairs.
+         * @param {string} [Filters] Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes
+         * @param {boolean} [IsFavorite] Optional filter by items that are marked as favorite, or not.
+         * @param {boolean} [IsMovie] Optional filter for movies.
+         * @param {boolean} [IsSeries] Optional filter for series.
+         * @param {boolean} [IsFolder] Optional filter for folders.
+         * @param {boolean} [IsNews] Optional filter for news.
+         * @param {boolean} [IsKids] Optional filter for kids.
+         * @param {boolean} [IsSports] Optional filter for sports.
+         * @param {boolean} [IsNew] Optional filter for IsNew.
+         * @param {boolean} [IsPremiere] Optional filter for IsPremiere.
+         * @param {boolean} [IsNewOrPremiere] Optional filter for IsNewOrPremiere.
+         * @param {boolean} [IsRepeat] Optional filter for IsRepeat.
+         * @param {boolean} [ProjectToMedia] ProjectToMedia
+         * @param {string} [MediaTypes] Optional filter by MediaType. Allows multiple, comma delimited.
+         * @param {string} [ImageTypes] Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
+         * @param {string} [SortBy] Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
+         * @param {boolean} [IsPlayed] Optional filter by items that are played, or not.
+         * @param {string} [Genres] Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
+         * @param {string} [OfficialRatings] Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
+         * @param {string} [Tags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+         * @param {string} [ExcludeTags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+         * @param {string} [Years] Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
+         * @param {boolean} [EnableImages] Optional, include image information in output
+         * @param {boolean} [EnableUserData] Optional, include user data
+         * @param {number} [ImageTypeLimit] Optional, the max number of images to return, per image type
+         * @param {string} [EnableImageTypes] Optional. The image types to include in the output.
+         * @param {string} [Person] Optional. If specified, results will be filtered to include only those containing the specified person.
+         * @param {string} [PersonIds] Optional. If specified, results will be filtered to include only those containing the specified person.
+         * @param {string} [PersonTypes] Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited
+         * @param {string} [Studios] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+         * @param {string} [StudioIds] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+         * @param {string} [Artists] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+         * @param {string} [ArtistIds] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+         * @param {string} [Albums] Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.
+         * @param {string} [Ids] Optional. If specific items are needed, specify a list of item id&#x27;s to retrieve. This allows multiple, comma delimited.
+         * @param {string} [VideoTypes] Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
+         * @param {string} [Containers] Optional filter by Container. Allows multiple, comma delimeted.
+         * @param {string} [AudioCodecs] Optional filter by AudioCodec. Allows multiple, comma delimeted.
+         * @param {string} [AudioLayouts] Optional filter by AudioLayout. Allows multiple, comma delimeted.
+         * @param {string} [VideoCodecs] Optional filter by VideoCodec. Allows multiple, comma delimeted.
+         * @param {string} [ExtendedVideoTypes] Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
+         * @param {string} [SubtitleCodecs] Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
+         * @param {string} [Path] Optional filter by Path.
+         * @param {string} [UserId] User Id
+         * @param {string} [MinOfficialRating] Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+         * @param {boolean} [IsLocked] Optional filter by items that are locked.
+         * @param {boolean} [IsPlaceHolder] Optional filter by items that are placeholders
+         * @param {boolean} [HasOfficialRating] Optional filter by items that have official ratings
+         * @param {boolean} [GroupItemsIntoCollections] Whether or not to hide items behind their boxsets.
+         * @param {boolean} [Is3D] Optional filter by items that are 3D, or not.
+         * @param {string} [SeriesStatus] Optional filter by Series Status. Allows multiple, comma delimeted.
+         * @param {string} [NameStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [ArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [AlbumArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [NameStartsWith] Optional filter by items whose name is sorted equally than a given input string.
+         * @param {string} [NameLessThan] Optional filter by items whose name is equally or lesser than a given input string.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getCollectionsByIdMissing(Id: string, ArtistType?: string, MaxOfficialRating?: string, HasThemeSong?: boolean, HasThemeVideo?: boolean, HasSubtitles?: boolean, HasSpecialFeature?: boolean, HasTrailer?: boolean, IsSpecialSeason?: boolean, AdjacentTo?: string, StartItemId?: string, MinIndexNumber?: number, MinStartDate?: Date, MaxStartDate?: Date, MinEndDate?: Date, MaxEndDate?: Date, MinPlayers?: number, MaxPlayers?: number, ParentIndexNumber?: number, HasParentalRating?: boolean, IsHD?: boolean, IsUnaired?: boolean, MinCommunityRating?: number, MinCriticRating?: number, AiredDuringSeason?: number, MinPremiereDate?: Date, MinDateLastSaved?: Date, MinDateLastSavedForUser?: Date, MaxPremiereDate?: Date, HasOverview?: boolean, HasImdbId?: boolean, HasTmdbId?: boolean, HasTvdbId?: boolean, ExcludeItemIds?: string, StartIndex?: number, Limit?: number, Recursive?: boolean, SearchTerm?: string, SortOrder?: string, ParentId?: string, Fields?: string, ExcludeItemTypes?: string, IncludeItemTypes?: string, AnyProviderIdEquals?: string, Filters?: string, IsFavorite?: boolean, IsMovie?: boolean, IsSeries?: boolean, IsFolder?: boolean, IsNews?: boolean, IsKids?: boolean, IsSports?: boolean, IsNew?: boolean, IsPremiere?: boolean, IsNewOrPremiere?: boolean, IsRepeat?: boolean, ProjectToMedia?: boolean, MediaTypes?: string, ImageTypes?: string, SortBy?: string, IsPlayed?: boolean, Genres?: string, OfficialRatings?: string, Tags?: string, ExcludeTags?: string, Years?: string, EnableImages?: boolean, EnableUserData?: boolean, ImageTypeLimit?: number, EnableImageTypes?: string, Person?: string, PersonIds?: string, PersonTypes?: string, Studios?: string, StudioIds?: string, Artists?: string, ArtistIds?: string, Albums?: string, Ids?: string, VideoTypes?: string, Containers?: string, AudioCodecs?: string, AudioLayouts?: string, VideoCodecs?: string, ExtendedVideoTypes?: string, SubtitleCodecs?: string, Path?: string, UserId?: string, MinOfficialRating?: string, IsLocked?: boolean, IsPlaceHolder?: boolean, HasOfficialRating?: boolean, GroupItemsIntoCollections?: boolean, Is3D?: boolean, SeriesStatus?: string, NameStartsWithOrGreater?: string, ArtistStartsWithOrGreater?: string, AlbumArtistStartsWithOrGreater?: string, NameStartsWith?: string, NameLessThan?: string, options?: any) {
+            return CollectionServiceApiFp(configuration).getCollectionsByIdMissing(Id, ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as user
+         * @summary Gets a list of missing items
+         * @param {string} Id 
+         * @param {string} [ArtistType] Artist or AlbumArtist
+         * @param {string} [MaxOfficialRating] Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+         * @param {boolean} [HasThemeSong] Optional filter by items with theme songs.
+         * @param {boolean} [HasThemeVideo] Optional filter by items with theme videos.
+         * @param {boolean} [HasSubtitles] Optional filter by items with subtitles.
+         * @param {boolean} [HasSpecialFeature] Optional filter by items with special features.
+         * @param {boolean} [HasTrailer] Optional filter by items with trailers.
+         * @param {boolean} [IsSpecialSeason] Optional. Filter by special season.
+         * @param {string} [AdjacentTo] Optional. Return items that are siblings of a supplied item.
+         * @param {string} [StartItemId] Optional. Skip through the list until a given item is found.
+         * @param {number} [MinIndexNumber] Optional filter by minimum index number.
+         * @param {Date} [MinStartDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxStartDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinEndDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxEndDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {number} [MinPlayers] Optional filter by minimum number of game players.
+         * @param {number} [MaxPlayers] Optional filter by maximum number of game players.
+         * @param {number} [ParentIndexNumber] Optional filter by parent index number.
+         * @param {boolean} [HasParentalRating] Optional filter by items that have or do not have a parental rating
+         * @param {boolean} [IsHD] Optional filter by items that are HD or not.
+         * @param {boolean} [IsUnaired] Optional filter by items that are unaired episodes or not.
+         * @param {number} [MinCommunityRating] Optional filter by minimum community rating.
+         * @param {number} [MinCriticRating] Optional filter by minimum critic rating.
+         * @param {number} [AiredDuringSeason] Gets all episodes that aired during a season, including specials.
+         * @param {Date} [MinPremiereDate] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinDateLastSaved] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MinDateLastSavedForUser] Optional. The minimum premiere date. Format &#x3D; ISO
+         * @param {Date} [MaxPremiereDate] Optional. The maximum premiere date. Format &#x3D; ISO
+         * @param {boolean} [HasOverview] Optional filter by items that have an overview or not.
+         * @param {boolean} [HasImdbId] Optional filter by items that have an imdb id or not.
+         * @param {boolean} [HasTmdbId] Optional filter by items that have a tmdb id or not.
+         * @param {boolean} [HasTvdbId] Optional filter by items that have a tvdb id or not.
+         * @param {string} [ExcludeItemIds] Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.
+         * @param {number} [StartIndex] Optional. The record index to start at. All items with a lower index will be dropped from the results.
+         * @param {number} [Limit] Optional. The maximum number of records to return
+         * @param {boolean} [Recursive] When searching within folders, this determines whether or not the search will be recursive. true/false
+         * @param {string} [SearchTerm] Enter a search term to perform a search request
+         * @param {string} [SortOrder] Sort Order - Ascending,Descending
+         * @param {string} [ParentId] Specify this to localize the search to a specific item or folder. Omit to use the root
+         * @param {string} [Fields] Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines
+         * @param {string} [ExcludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+         * @param {string} [IncludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+         * @param {string} [AnyProviderIdEquals] Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form &#x27;prov.id&#x27;, e.g. &#x27;imdb.tt123456&#x27;. This allows multiple, comma delimeted value pairs.
+         * @param {string} [Filters] Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes
+         * @param {boolean} [IsFavorite] Optional filter by items that are marked as favorite, or not.
+         * @param {boolean} [IsMovie] Optional filter for movies.
+         * @param {boolean} [IsSeries] Optional filter for series.
+         * @param {boolean} [IsFolder] Optional filter for folders.
+         * @param {boolean} [IsNews] Optional filter for news.
+         * @param {boolean} [IsKids] Optional filter for kids.
+         * @param {boolean} [IsSports] Optional filter for sports.
+         * @param {boolean} [IsNew] Optional filter for IsNew.
+         * @param {boolean} [IsPremiere] Optional filter for IsPremiere.
+         * @param {boolean} [IsNewOrPremiere] Optional filter for IsNewOrPremiere.
+         * @param {boolean} [IsRepeat] Optional filter for IsRepeat.
+         * @param {boolean} [ProjectToMedia] ProjectToMedia
+         * @param {string} [MediaTypes] Optional filter by MediaType. Allows multiple, comma delimited.
+         * @param {string} [ImageTypes] Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
+         * @param {string} [SortBy] Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
+         * @param {boolean} [IsPlayed] Optional filter by items that are played, or not.
+         * @param {string} [Genres] Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
+         * @param {string} [OfficialRatings] Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
+         * @param {string} [Tags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+         * @param {string} [ExcludeTags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+         * @param {string} [Years] Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
+         * @param {boolean} [EnableImages] Optional, include image information in output
+         * @param {boolean} [EnableUserData] Optional, include user data
+         * @param {number} [ImageTypeLimit] Optional, the max number of images to return, per image type
+         * @param {string} [EnableImageTypes] Optional. The image types to include in the output.
+         * @param {string} [Person] Optional. If specified, results will be filtered to include only those containing the specified person.
+         * @param {string} [PersonIds] Optional. If specified, results will be filtered to include only those containing the specified person.
+         * @param {string} [PersonTypes] Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited
+         * @param {string} [Studios] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+         * @param {string} [StudioIds] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+         * @param {string} [Artists] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+         * @param {string} [ArtistIds] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+         * @param {string} [Albums] Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.
+         * @param {string} [Ids] Optional. If specific items are needed, specify a list of item id&#x27;s to retrieve. This allows multiple, comma delimited.
+         * @param {string} [VideoTypes] Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
+         * @param {string} [Containers] Optional filter by Container. Allows multiple, comma delimeted.
+         * @param {string} [AudioCodecs] Optional filter by AudioCodec. Allows multiple, comma delimeted.
+         * @param {string} [AudioLayouts] Optional filter by AudioLayout. Allows multiple, comma delimeted.
+         * @param {string} [VideoCodecs] Optional filter by VideoCodec. Allows multiple, comma delimeted.
+         * @param {string} [ExtendedVideoTypes] Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
+         * @param {string} [SubtitleCodecs] Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
+         * @param {string} [Path] Optional filter by Path.
+         * @param {string} [UserId] User Id
+         * @param {string} [MinOfficialRating] Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+         * @param {boolean} [IsLocked] Optional filter by items that are locked.
+         * @param {boolean} [IsPlaceHolder] Optional filter by items that are placeholders
+         * @param {boolean} [HasOfficialRating] Optional filter by items that have official ratings
+         * @param {boolean} [GroupItemsIntoCollections] Whether or not to hide items behind their boxsets.
+         * @param {boolean} [Is3D] Optional filter by items that are 3D, or not.
+         * @param {string} [SeriesStatus] Optional filter by Series Status. Allows multiple, comma delimeted.
+         * @param {string} [NameStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [ArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [AlbumArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+         * @param {string} [NameStartsWith] Optional filter by items whose name is sorted equally than a given input string.
+         * @param {string} [NameLessThan] Optional filter by items whose name is equally or lesser than a given input string.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getCollectionsByIdProvideritems(Id: string, ArtistType?: string, MaxOfficialRating?: string, HasThemeSong?: boolean, HasThemeVideo?: boolean, HasSubtitles?: boolean, HasSpecialFeature?: boolean, HasTrailer?: boolean, IsSpecialSeason?: boolean, AdjacentTo?: string, StartItemId?: string, MinIndexNumber?: number, MinStartDate?: Date, MaxStartDate?: Date, MinEndDate?: Date, MaxEndDate?: Date, MinPlayers?: number, MaxPlayers?: number, ParentIndexNumber?: number, HasParentalRating?: boolean, IsHD?: boolean, IsUnaired?: boolean, MinCommunityRating?: number, MinCriticRating?: number, AiredDuringSeason?: number, MinPremiereDate?: Date, MinDateLastSaved?: Date, MinDateLastSavedForUser?: Date, MaxPremiereDate?: Date, HasOverview?: boolean, HasImdbId?: boolean, HasTmdbId?: boolean, HasTvdbId?: boolean, ExcludeItemIds?: string, StartIndex?: number, Limit?: number, Recursive?: boolean, SearchTerm?: string, SortOrder?: string, ParentId?: string, Fields?: string, ExcludeItemTypes?: string, IncludeItemTypes?: string, AnyProviderIdEquals?: string, Filters?: string, IsFavorite?: boolean, IsMovie?: boolean, IsSeries?: boolean, IsFolder?: boolean, IsNews?: boolean, IsKids?: boolean, IsSports?: boolean, IsNew?: boolean, IsPremiere?: boolean, IsNewOrPremiere?: boolean, IsRepeat?: boolean, ProjectToMedia?: boolean, MediaTypes?: string, ImageTypes?: string, SortBy?: string, IsPlayed?: boolean, Genres?: string, OfficialRatings?: string, Tags?: string, ExcludeTags?: string, Years?: string, EnableImages?: boolean, EnableUserData?: boolean, ImageTypeLimit?: number, EnableImageTypes?: string, Person?: string, PersonIds?: string, PersonTypes?: string, Studios?: string, StudioIds?: string, Artists?: string, ArtistIds?: string, Albums?: string, Ids?: string, VideoTypes?: string, Containers?: string, AudioCodecs?: string, AudioLayouts?: string, VideoCodecs?: string, ExtendedVideoTypes?: string, SubtitleCodecs?: string, Path?: string, UserId?: string, MinOfficialRating?: string, IsLocked?: boolean, IsPlaceHolder?: boolean, HasOfficialRating?: boolean, GroupItemsIntoCollections?: boolean, Is3D?: boolean, SeriesStatus?: string, NameStartsWithOrGreater?: string, ArtistStartsWithOrGreater?: string, AlbumArtistStartsWithOrGreater?: string, NameStartsWith?: string, NameLessThan?: string, options?: any) {
+            return CollectionServiceApiFp(configuration).getCollectionsByIdProvideritems(Id, ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as user
          * @summary Creates a new collection
          * @param {boolean} [IsLocked] Whether or not to lock the new collection.
          * @param {string} [Name] The name of the new collection.
@@ -21797,6 +23325,228 @@ export class CollectionServiceApi extends BaseAPI {
      */
     public deleteCollectionsByIdItems(Ids: string, Id: string, options?: any) {
         return CollectionServiceApiFp(this.configuration).deleteCollectionsByIdItems(Ids, Id, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as user
+     * @summary Gets a list of missing items
+     * @param {string} Id 
+     * @param {string} [ArtistType] Artist or AlbumArtist
+     * @param {string} [MaxOfficialRating] Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+     * @param {boolean} [HasThemeSong] Optional filter by items with theme songs.
+     * @param {boolean} [HasThemeVideo] Optional filter by items with theme videos.
+     * @param {boolean} [HasSubtitles] Optional filter by items with subtitles.
+     * @param {boolean} [HasSpecialFeature] Optional filter by items with special features.
+     * @param {boolean} [HasTrailer] Optional filter by items with trailers.
+     * @param {boolean} [IsSpecialSeason] Optional. Filter by special season.
+     * @param {string} [AdjacentTo] Optional. Return items that are siblings of a supplied item.
+     * @param {string} [StartItemId] Optional. Skip through the list until a given item is found.
+     * @param {number} [MinIndexNumber] Optional filter by minimum index number.
+     * @param {Date} [MinStartDate] Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param {Date} [MaxStartDate] Optional. The maximum premiere date. Format &#x3D; ISO
+     * @param {Date} [MinEndDate] Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param {Date} [MaxEndDate] Optional. The maximum premiere date. Format &#x3D; ISO
+     * @param {number} [MinPlayers] Optional filter by minimum number of game players.
+     * @param {number} [MaxPlayers] Optional filter by maximum number of game players.
+     * @param {number} [ParentIndexNumber] Optional filter by parent index number.
+     * @param {boolean} [HasParentalRating] Optional filter by items that have or do not have a parental rating
+     * @param {boolean} [IsHD] Optional filter by items that are HD or not.
+     * @param {boolean} [IsUnaired] Optional filter by items that are unaired episodes or not.
+     * @param {number} [MinCommunityRating] Optional filter by minimum community rating.
+     * @param {number} [MinCriticRating] Optional filter by minimum critic rating.
+     * @param {number} [AiredDuringSeason] Gets all episodes that aired during a season, including specials.
+     * @param {Date} [MinPremiereDate] Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param {Date} [MinDateLastSaved] Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param {Date} [MinDateLastSavedForUser] Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param {Date} [MaxPremiereDate] Optional. The maximum premiere date. Format &#x3D; ISO
+     * @param {boolean} [HasOverview] Optional filter by items that have an overview or not.
+     * @param {boolean} [HasImdbId] Optional filter by items that have an imdb id or not.
+     * @param {boolean} [HasTmdbId] Optional filter by items that have a tmdb id or not.
+     * @param {boolean} [HasTvdbId] Optional filter by items that have a tvdb id or not.
+     * @param {string} [ExcludeItemIds] Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.
+     * @param {number} [StartIndex] Optional. The record index to start at. All items with a lower index will be dropped from the results.
+     * @param {number} [Limit] Optional. The maximum number of records to return
+     * @param {boolean} [Recursive] When searching within folders, this determines whether or not the search will be recursive. true/false
+     * @param {string} [SearchTerm] Enter a search term to perform a search request
+     * @param {string} [SortOrder] Sort Order - Ascending,Descending
+     * @param {string} [ParentId] Specify this to localize the search to a specific item or folder. Omit to use the root
+     * @param {string} [Fields] Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines
+     * @param {string} [ExcludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+     * @param {string} [IncludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+     * @param {string} [AnyProviderIdEquals] Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form &#x27;prov.id&#x27;, e.g. &#x27;imdb.tt123456&#x27;. This allows multiple, comma delimeted value pairs.
+     * @param {string} [Filters] Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes
+     * @param {boolean} [IsFavorite] Optional filter by items that are marked as favorite, or not.
+     * @param {boolean} [IsMovie] Optional filter for movies.
+     * @param {boolean} [IsSeries] Optional filter for series.
+     * @param {boolean} [IsFolder] Optional filter for folders.
+     * @param {boolean} [IsNews] Optional filter for news.
+     * @param {boolean} [IsKids] Optional filter for kids.
+     * @param {boolean} [IsSports] Optional filter for sports.
+     * @param {boolean} [IsNew] Optional filter for IsNew.
+     * @param {boolean} [IsPremiere] Optional filter for IsPremiere.
+     * @param {boolean} [IsNewOrPremiere] Optional filter for IsNewOrPremiere.
+     * @param {boolean} [IsRepeat] Optional filter for IsRepeat.
+     * @param {boolean} [ProjectToMedia] ProjectToMedia
+     * @param {string} [MediaTypes] Optional filter by MediaType. Allows multiple, comma delimited.
+     * @param {string} [ImageTypes] Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
+     * @param {string} [SortBy] Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
+     * @param {boolean} [IsPlayed] Optional filter by items that are played, or not.
+     * @param {string} [Genres] Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
+     * @param {string} [OfficialRatings] Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
+     * @param {string} [Tags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param {string} [ExcludeTags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param {string} [Years] Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
+     * @param {boolean} [EnableImages] Optional, include image information in output
+     * @param {boolean} [EnableUserData] Optional, include user data
+     * @param {number} [ImageTypeLimit] Optional, the max number of images to return, per image type
+     * @param {string} [EnableImageTypes] Optional. The image types to include in the output.
+     * @param {string} [Person] Optional. If specified, results will be filtered to include only those containing the specified person.
+     * @param {string} [PersonIds] Optional. If specified, results will be filtered to include only those containing the specified person.
+     * @param {string} [PersonTypes] Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited
+     * @param {string} [Studios] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+     * @param {string} [StudioIds] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+     * @param {string} [Artists] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+     * @param {string} [ArtistIds] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+     * @param {string} [Albums] Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.
+     * @param {string} [Ids] Optional. If specific items are needed, specify a list of item id&#x27;s to retrieve. This allows multiple, comma delimited.
+     * @param {string} [VideoTypes] Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
+     * @param {string} [Containers] Optional filter by Container. Allows multiple, comma delimeted.
+     * @param {string} [AudioCodecs] Optional filter by AudioCodec. Allows multiple, comma delimeted.
+     * @param {string} [AudioLayouts] Optional filter by AudioLayout. Allows multiple, comma delimeted.
+     * @param {string} [VideoCodecs] Optional filter by VideoCodec. Allows multiple, comma delimeted.
+     * @param {string} [ExtendedVideoTypes] Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
+     * @param {string} [SubtitleCodecs] Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
+     * @param {string} [Path] Optional filter by Path.
+     * @param {string} [UserId] User Id
+     * @param {string} [MinOfficialRating] Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+     * @param {boolean} [IsLocked] Optional filter by items that are locked.
+     * @param {boolean} [IsPlaceHolder] Optional filter by items that are placeholders
+     * @param {boolean} [HasOfficialRating] Optional filter by items that have official ratings
+     * @param {boolean} [GroupItemsIntoCollections] Whether or not to hide items behind their boxsets.
+     * @param {boolean} [Is3D] Optional filter by items that are 3D, or not.
+     * @param {string} [SeriesStatus] Optional filter by Series Status. Allows multiple, comma delimeted.
+     * @param {string} [NameStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+     * @param {string} [ArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+     * @param {string} [AlbumArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+     * @param {string} [NameStartsWith] Optional filter by items whose name is sorted equally than a given input string.
+     * @param {string} [NameLessThan] Optional filter by items whose name is equally or lesser than a given input string.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CollectionServiceApi
+     */
+    public getCollectionsByIdMissing(Id: string, ArtistType?: string, MaxOfficialRating?: string, HasThemeSong?: boolean, HasThemeVideo?: boolean, HasSubtitles?: boolean, HasSpecialFeature?: boolean, HasTrailer?: boolean, IsSpecialSeason?: boolean, AdjacentTo?: string, StartItemId?: string, MinIndexNumber?: number, MinStartDate?: Date, MaxStartDate?: Date, MinEndDate?: Date, MaxEndDate?: Date, MinPlayers?: number, MaxPlayers?: number, ParentIndexNumber?: number, HasParentalRating?: boolean, IsHD?: boolean, IsUnaired?: boolean, MinCommunityRating?: number, MinCriticRating?: number, AiredDuringSeason?: number, MinPremiereDate?: Date, MinDateLastSaved?: Date, MinDateLastSavedForUser?: Date, MaxPremiereDate?: Date, HasOverview?: boolean, HasImdbId?: boolean, HasTmdbId?: boolean, HasTvdbId?: boolean, ExcludeItemIds?: string, StartIndex?: number, Limit?: number, Recursive?: boolean, SearchTerm?: string, SortOrder?: string, ParentId?: string, Fields?: string, ExcludeItemTypes?: string, IncludeItemTypes?: string, AnyProviderIdEquals?: string, Filters?: string, IsFavorite?: boolean, IsMovie?: boolean, IsSeries?: boolean, IsFolder?: boolean, IsNews?: boolean, IsKids?: boolean, IsSports?: boolean, IsNew?: boolean, IsPremiere?: boolean, IsNewOrPremiere?: boolean, IsRepeat?: boolean, ProjectToMedia?: boolean, MediaTypes?: string, ImageTypes?: string, SortBy?: string, IsPlayed?: boolean, Genres?: string, OfficialRatings?: string, Tags?: string, ExcludeTags?: string, Years?: string, EnableImages?: boolean, EnableUserData?: boolean, ImageTypeLimit?: number, EnableImageTypes?: string, Person?: string, PersonIds?: string, PersonTypes?: string, Studios?: string, StudioIds?: string, Artists?: string, ArtistIds?: string, Albums?: string, Ids?: string, VideoTypes?: string, Containers?: string, AudioCodecs?: string, AudioLayouts?: string, VideoCodecs?: string, ExtendedVideoTypes?: string, SubtitleCodecs?: string, Path?: string, UserId?: string, MinOfficialRating?: string, IsLocked?: boolean, IsPlaceHolder?: boolean, HasOfficialRating?: boolean, GroupItemsIntoCollections?: boolean, Is3D?: boolean, SeriesStatus?: string, NameStartsWithOrGreater?: string, ArtistStartsWithOrGreater?: string, AlbumArtistStartsWithOrGreater?: string, NameStartsWith?: string, NameLessThan?: string, options?: any) {
+        return CollectionServiceApiFp(this.configuration).getCollectionsByIdMissing(Id, ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as user
+     * @summary Gets a list of missing items
+     * @param {string} Id 
+     * @param {string} [ArtistType] Artist or AlbumArtist
+     * @param {string} [MaxOfficialRating] Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+     * @param {boolean} [HasThemeSong] Optional filter by items with theme songs.
+     * @param {boolean} [HasThemeVideo] Optional filter by items with theme videos.
+     * @param {boolean} [HasSubtitles] Optional filter by items with subtitles.
+     * @param {boolean} [HasSpecialFeature] Optional filter by items with special features.
+     * @param {boolean} [HasTrailer] Optional filter by items with trailers.
+     * @param {boolean} [IsSpecialSeason] Optional. Filter by special season.
+     * @param {string} [AdjacentTo] Optional. Return items that are siblings of a supplied item.
+     * @param {string} [StartItemId] Optional. Skip through the list until a given item is found.
+     * @param {number} [MinIndexNumber] Optional filter by minimum index number.
+     * @param {Date} [MinStartDate] Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param {Date} [MaxStartDate] Optional. The maximum premiere date. Format &#x3D; ISO
+     * @param {Date} [MinEndDate] Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param {Date} [MaxEndDate] Optional. The maximum premiere date. Format &#x3D; ISO
+     * @param {number} [MinPlayers] Optional filter by minimum number of game players.
+     * @param {number} [MaxPlayers] Optional filter by maximum number of game players.
+     * @param {number} [ParentIndexNumber] Optional filter by parent index number.
+     * @param {boolean} [HasParentalRating] Optional filter by items that have or do not have a parental rating
+     * @param {boolean} [IsHD] Optional filter by items that are HD or not.
+     * @param {boolean} [IsUnaired] Optional filter by items that are unaired episodes or not.
+     * @param {number} [MinCommunityRating] Optional filter by minimum community rating.
+     * @param {number} [MinCriticRating] Optional filter by minimum critic rating.
+     * @param {number} [AiredDuringSeason] Gets all episodes that aired during a season, including specials.
+     * @param {Date} [MinPremiereDate] Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param {Date} [MinDateLastSaved] Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param {Date} [MinDateLastSavedForUser] Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param {Date} [MaxPremiereDate] Optional. The maximum premiere date. Format &#x3D; ISO
+     * @param {boolean} [HasOverview] Optional filter by items that have an overview or not.
+     * @param {boolean} [HasImdbId] Optional filter by items that have an imdb id or not.
+     * @param {boolean} [HasTmdbId] Optional filter by items that have a tmdb id or not.
+     * @param {boolean} [HasTvdbId] Optional filter by items that have a tvdb id or not.
+     * @param {string} [ExcludeItemIds] Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.
+     * @param {number} [StartIndex] Optional. The record index to start at. All items with a lower index will be dropped from the results.
+     * @param {number} [Limit] Optional. The maximum number of records to return
+     * @param {boolean} [Recursive] When searching within folders, this determines whether or not the search will be recursive. true/false
+     * @param {string} [SearchTerm] Enter a search term to perform a search request
+     * @param {string} [SortOrder] Sort Order - Ascending,Descending
+     * @param {string} [ParentId] Specify this to localize the search to a specific item or folder. Omit to use the root
+     * @param {string} [Fields] Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines
+     * @param {string} [ExcludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+     * @param {string} [IncludeItemTypes] Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.
+     * @param {string} [AnyProviderIdEquals] Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form &#x27;prov.id&#x27;, e.g. &#x27;imdb.tt123456&#x27;. This allows multiple, comma delimeted value pairs.
+     * @param {string} [Filters] Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes
+     * @param {boolean} [IsFavorite] Optional filter by items that are marked as favorite, or not.
+     * @param {boolean} [IsMovie] Optional filter for movies.
+     * @param {boolean} [IsSeries] Optional filter for series.
+     * @param {boolean} [IsFolder] Optional filter for folders.
+     * @param {boolean} [IsNews] Optional filter for news.
+     * @param {boolean} [IsKids] Optional filter for kids.
+     * @param {boolean} [IsSports] Optional filter for sports.
+     * @param {boolean} [IsNew] Optional filter for IsNew.
+     * @param {boolean} [IsPremiere] Optional filter for IsPremiere.
+     * @param {boolean} [IsNewOrPremiere] Optional filter for IsNewOrPremiere.
+     * @param {boolean} [IsRepeat] Optional filter for IsRepeat.
+     * @param {boolean} [ProjectToMedia] ProjectToMedia
+     * @param {string} [MediaTypes] Optional filter by MediaType. Allows multiple, comma delimited.
+     * @param {string} [ImageTypes] Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
+     * @param {string} [SortBy] Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
+     * @param {boolean} [IsPlayed] Optional filter by items that are played, or not.
+     * @param {string} [Genres] Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
+     * @param {string} [OfficialRatings] Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
+     * @param {string} [Tags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param {string} [ExcludeTags] Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param {string} [Years] Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
+     * @param {boolean} [EnableImages] Optional, include image information in output
+     * @param {boolean} [EnableUserData] Optional, include user data
+     * @param {number} [ImageTypeLimit] Optional, the max number of images to return, per image type
+     * @param {string} [EnableImageTypes] Optional. The image types to include in the output.
+     * @param {string} [Person] Optional. If specified, results will be filtered to include only those containing the specified person.
+     * @param {string} [PersonIds] Optional. If specified, results will be filtered to include only those containing the specified person.
+     * @param {string} [PersonTypes] Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited
+     * @param {string} [Studios] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+     * @param {string} [StudioIds] Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.
+     * @param {string} [Artists] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+     * @param {string} [ArtistIds] Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.
+     * @param {string} [Albums] Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.
+     * @param {string} [Ids] Optional. If specific items are needed, specify a list of item id&#x27;s to retrieve. This allows multiple, comma delimited.
+     * @param {string} [VideoTypes] Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
+     * @param {string} [Containers] Optional filter by Container. Allows multiple, comma delimeted.
+     * @param {string} [AudioCodecs] Optional filter by AudioCodec. Allows multiple, comma delimeted.
+     * @param {string} [AudioLayouts] Optional filter by AudioLayout. Allows multiple, comma delimeted.
+     * @param {string} [VideoCodecs] Optional filter by VideoCodec. Allows multiple, comma delimeted.
+     * @param {string} [ExtendedVideoTypes] Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
+     * @param {string} [SubtitleCodecs] Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
+     * @param {string} [Path] Optional filter by Path.
+     * @param {string} [UserId] User Id
+     * @param {string} [MinOfficialRating] Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+     * @param {boolean} [IsLocked] Optional filter by items that are locked.
+     * @param {boolean} [IsPlaceHolder] Optional filter by items that are placeholders
+     * @param {boolean} [HasOfficialRating] Optional filter by items that have official ratings
+     * @param {boolean} [GroupItemsIntoCollections] Whether or not to hide items behind their boxsets.
+     * @param {boolean} [Is3D] Optional filter by items that are 3D, or not.
+     * @param {string} [SeriesStatus] Optional filter by Series Status. Allows multiple, comma delimeted.
+     * @param {string} [NameStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+     * @param {string} [ArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+     * @param {string} [AlbumArtistStartsWithOrGreater] Optional filter by items whose name is sorted equally or greater than a given input string.
+     * @param {string} [NameStartsWith] Optional filter by items whose name is sorted equally than a given input string.
+     * @param {string} [NameLessThan] Optional filter by items whose name is equally or lesser than a given input string.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CollectionServiceApi
+     */
+    public getCollectionsByIdProvideritems(Id: string, ArtistType?: string, MaxOfficialRating?: string, HasThemeSong?: boolean, HasThemeVideo?: boolean, HasSubtitles?: boolean, HasSpecialFeature?: boolean, HasTrailer?: boolean, IsSpecialSeason?: boolean, AdjacentTo?: string, StartItemId?: string, MinIndexNumber?: number, MinStartDate?: Date, MaxStartDate?: Date, MinEndDate?: Date, MaxEndDate?: Date, MinPlayers?: number, MaxPlayers?: number, ParentIndexNumber?: number, HasParentalRating?: boolean, IsHD?: boolean, IsUnaired?: boolean, MinCommunityRating?: number, MinCriticRating?: number, AiredDuringSeason?: number, MinPremiereDate?: Date, MinDateLastSaved?: Date, MinDateLastSavedForUser?: Date, MaxPremiereDate?: Date, HasOverview?: boolean, HasImdbId?: boolean, HasTmdbId?: boolean, HasTvdbId?: boolean, ExcludeItemIds?: string, StartIndex?: number, Limit?: number, Recursive?: boolean, SearchTerm?: string, SortOrder?: string, ParentId?: string, Fields?: string, ExcludeItemTypes?: string, IncludeItemTypes?: string, AnyProviderIdEquals?: string, Filters?: string, IsFavorite?: boolean, IsMovie?: boolean, IsSeries?: boolean, IsFolder?: boolean, IsNews?: boolean, IsKids?: boolean, IsSports?: boolean, IsNew?: boolean, IsPremiere?: boolean, IsNewOrPremiere?: boolean, IsRepeat?: boolean, ProjectToMedia?: boolean, MediaTypes?: string, ImageTypes?: string, SortBy?: string, IsPlayed?: boolean, Genres?: string, OfficialRatings?: string, Tags?: string, ExcludeTags?: string, Years?: string, EnableImages?: boolean, EnableUserData?: boolean, ImageTypeLimit?: number, EnableImageTypes?: string, Person?: string, PersonIds?: string, PersonTypes?: string, Studios?: string, StudioIds?: string, Artists?: string, ArtistIds?: string, Albums?: string, Ids?: string, VideoTypes?: string, Containers?: string, AudioCodecs?: string, AudioLayouts?: string, VideoCodecs?: string, ExtendedVideoTypes?: string, SubtitleCodecs?: string, Path?: string, UserId?: string, MinOfficialRating?: string, IsLocked?: boolean, IsPlaceHolder?: boolean, HasOfficialRating?: boolean, GroupItemsIntoCollections?: boolean, Is3D?: boolean, SeriesStatus?: string, NameStartsWithOrGreater?: string, ArtistStartsWithOrGreater?: string, AlbumArtistStartsWithOrGreater?: string, NameStartsWith?: string, NameLessThan?: string, options?: any) {
+        return CollectionServiceApiFp(this.configuration).getCollectionsByIdProvideritems(Id, ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, options)(this.fetch, this.basePath);
     }
 
     /**
@@ -31962,7 +33712,7 @@ export class GameGenresServiceApi extends BaseAPI {
 export const GenericUIApiServiceApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Requires authentication as user
+         * Requires authentication as administrator
          * @summary Gets UI view data
          * @param {string} PageId Id of the page controller
          * @param {string} ClientLocale Locale identifier of the client
@@ -32013,7 +33763,7 @@ export const GenericUIApiServiceApiFetchParamCreator = function (configuration?:
             };
         },
         /**
-         * Requires authentication as user
+         * Requires authentication as administrator
          * @summary Execute a command in the context of tv setup
          * @param {RunUICommand} body RunUICommand
          * @param {*} [options] Override http request option.
@@ -32064,7 +33814,7 @@ export const GenericUIApiServiceApiFetchParamCreator = function (configuration?:
 export const GenericUIApiServiceApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Requires authentication as user
+         * Requires authentication as administrator
          * @summary Gets UI view data
          * @param {string} PageId Id of the page controller
          * @param {string} ClientLocale Locale identifier of the client
@@ -32084,7 +33834,7 @@ export const GenericUIApiServiceApiFp = function(configuration?: Configuration) 
             };
         },
         /**
-         * Requires authentication as user
+         * Requires authentication as administrator
          * @summary Execute a command in the context of tv setup
          * @param {RunUICommand} body RunUICommand
          * @param {*} [options] Override http request option.
@@ -32112,7 +33862,7 @@ export const GenericUIApiServiceApiFp = function(configuration?: Configuration) 
 export const GenericUIApiServiceApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
     return {
         /**
-         * Requires authentication as user
+         * Requires authentication as administrator
          * @summary Gets UI view data
          * @param {string} PageId Id of the page controller
          * @param {string} ClientLocale Locale identifier of the client
@@ -32123,7 +33873,7 @@ export const GenericUIApiServiceApiFactory = function (configuration?: Configura
             return GenericUIApiServiceApiFp(configuration).getUIView(PageId, ClientLocale, options)(fetch, basePath);
         },
         /**
-         * Requires authentication as user
+         * Requires authentication as administrator
          * @summary Execute a command in the context of tv setup
          * @param {RunUICommand} body RunUICommand
          * @param {*} [options] Override http request option.
@@ -32143,7 +33893,7 @@ export const GenericUIApiServiceApiFactory = function (configuration?: Configura
  */
 export class GenericUIApiServiceApi extends BaseAPI {
     /**
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @summary Gets UI view data
      * @param {string} PageId Id of the page controller
      * @param {string} ClientLocale Locale identifier of the client
@@ -32156,7 +33906,7 @@ export class GenericUIApiServiceApi extends BaseAPI {
     }
 
     /**
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @summary Execute a command in the context of tv setup
      * @param {RunUICommand} body RunUICommand
      * @param {*} [options] Override http request option.

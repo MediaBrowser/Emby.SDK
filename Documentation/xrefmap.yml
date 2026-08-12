@@ -22244,6 +22244,24 @@ references:
 - uid: emby.restapi/getChannels/operationlistitem
   name: getChannels
   href: reference/RestAPI/ChannelService.html#emby_restapi_getChannels_operationlistitem
+- uid: emby.restapi/getCollectionsByIdMissing
+  name: getCollectionsByIdMissing
+  href: reference/RestAPI/CollectionService/getCollectionsByIdMissing.html
+- uid: emby.restapi/getCollectionsByIdMissing/operation
+  name: getCollectionsByIdMissing
+  href: reference/RestAPI/CollectionService/getCollectionsByIdMissing.html#emby_restapi_getCollectionsByIdMissing_operation
+- uid: emby.restapi/getCollectionsByIdMissing/operationlistitem
+  name: getCollectionsByIdMissing
+  href: reference/RestAPI/CollectionService.html#emby_restapi_getCollectionsByIdMissing_operationlistitem
+- uid: emby.restapi/getCollectionsByIdProvideritems
+  name: getCollectionsByIdProvideritems
+  href: reference/RestAPI/CollectionService/getCollectionsByIdProvideritems.html
+- uid: emby.restapi/getCollectionsByIdProvideritems/operation
+  name: getCollectionsByIdProvideritems
+  href: reference/RestAPI/CollectionService/getCollectionsByIdProvideritems.html#emby_restapi_getCollectionsByIdProvideritems_operation
+- uid: emby.restapi/getCollectionsByIdProvideritems/operationlistitem
+  name: getCollectionsByIdProvideritems
+  href: reference/RestAPI/CollectionService.html#emby_restapi_getCollectionsByIdProvideritems_operationlistitem
 - uid: emby.restapi/getConnectExchange
   name: getConnectExchange
   href: reference/RestAPI/ConnectService/getConnectExchange.html
@@ -68081,6 +68099,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.BoxSet.GetItemsInternal
   nameWithType: BoxSet.GetItemsInternal
+- uid: MediaBrowser.Controller.Entities.BoxSet.GetLookupInfo(MediaBrowser.Model.Configuration.LibraryOptions)
+  name: GetLookupInfo(LibraryOptions)
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BoxSet.html#MediaBrowser_Controller_Entities_BoxSet_GetLookupInfo_MediaBrowser_Model_Configuration_LibraryOptions_
+  commentId: M:MediaBrowser.Controller.Entities.BoxSet.GetLookupInfo(MediaBrowser.Model.Configuration.LibraryOptions)
+  fullName: MediaBrowser.Controller.Entities.BoxSet.GetLookupInfo(MediaBrowser.Model.Configuration.LibraryOptions)
+  nameWithType: BoxSet.GetLookupInfo(LibraryOptions)
+- uid: MediaBrowser.Controller.Entities.BoxSet.GetLookupInfo*
+  name: GetLookupInfo
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BoxSet.html#MediaBrowser_Controller_Entities_BoxSet_GetLookupInfo_
+  commentId: Overload:MediaBrowser.Controller.Entities.BoxSet.GetLookupInfo
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.BoxSet.GetLookupInfo
+  nameWithType: BoxSet.GetLookupInfo
 - uid: MediaBrowser.Controller.Entities.BoxSet.GetMediaContainingFolderPath(MediaBrowser.Model.Configuration.LibraryOptions,System.Threading.CancellationToken)
   name: GetMediaContainingFolderPath(LibraryOptions, CancellationToken)
   href: reference/pluginapi/MediaBrowser.Controller.Entities.BoxSet.html#MediaBrowser_Controller_Entities_BoxSet_GetMediaContainingFolderPath_MediaBrowser_Model_Configuration_LibraryOptions_System_Threading_CancellationToken_
@@ -97649,6 +97680,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Providers.BaseMetadataResult.SearchImageUrl
   nameWithType: BaseMetadataResult.SearchImageUrl
+- uid: MediaBrowser.Controller.Providers.BaseMetadataResult.ThumbnailUrl
+  name: ThumbnailUrl
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.BaseMetadataResult.html#MediaBrowser_Controller_Providers_BaseMetadataResult_ThumbnailUrl
+  commentId: P:MediaBrowser.Controller.Providers.BaseMetadataResult.ThumbnailUrl
+  fullName: MediaBrowser.Controller.Providers.BaseMetadataResult.ThumbnailUrl
+  nameWithType: BaseMetadataResult.ThumbnailUrl
+- uid: MediaBrowser.Controller.Providers.BaseMetadataResult.ThumbnailUrl*
+  name: ThumbnailUrl
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.BaseMetadataResult.html#MediaBrowser_Controller_Providers_BaseMetadataResult_ThumbnailUrl_
+  commentId: Overload:MediaBrowser.Controller.Providers.BaseMetadataResult.ThumbnailUrl
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Providers.BaseMetadataResult.ThumbnailUrl
+  nameWithType: BaseMetadataResult.ThumbnailUrl
 - uid: MediaBrowser.Controller.Providers.BaseMetadataResult.ToRemoteSearchResult(System.String)
   name: ToRemoteSearchResult(String)
   href: reference/pluginapi/MediaBrowser.Controller.Providers.BaseMetadataResult.html#MediaBrowser_Controller_Providers_BaseMetadataResult_ToRemoteSearchResult_System_String_
@@ -98204,6 +98248,25 @@ references:
   commentId: T:MediaBrowser.Controller.Providers.GameSystemInfo
   fullName: MediaBrowser.Controller.Providers.GameSystemInfo
   nameWithType: GameSystemInfo
+- uid: MediaBrowser.Controller.Providers.IBoxSetMetadataProvider
+  name: IBoxSetMetadataProvider
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.IBoxSetMetadataProvider.html
+  commentId: T:MediaBrowser.Controller.Providers.IBoxSetMetadataProvider
+  fullName: MediaBrowser.Controller.Providers.IBoxSetMetadataProvider
+  nameWithType: IBoxSetMetadataProvider
+- uid: MediaBrowser.Controller.Providers.IBoxSetMetadataProvider.GetAllItems(MediaBrowser.Controller.Providers.ItemLookupInfo,System.Threading.CancellationToken)
+  name: GetAllItems(ItemLookupInfo, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.IBoxSetMetadataProvider.html#MediaBrowser_Controller_Providers_IBoxSetMetadataProvider_GetAllItems_MediaBrowser_Controller_Providers_ItemLookupInfo_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Providers.IBoxSetMetadataProvider.GetAllItems(MediaBrowser.Controller.Providers.ItemLookupInfo,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Providers.IBoxSetMetadataProvider.GetAllItems(MediaBrowser.Controller.Providers.ItemLookupInfo, System.Threading.CancellationToken)
+  nameWithType: IBoxSetMetadataProvider.GetAllItems(ItemLookupInfo, CancellationToken)
+- uid: MediaBrowser.Controller.Providers.IBoxSetMetadataProvider.GetAllItems*
+  name: GetAllItems
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.IBoxSetMetadataProvider.html#MediaBrowser_Controller_Providers_IBoxSetMetadataProvider_GetAllItems_
+  commentId: Overload:MediaBrowser.Controller.Providers.IBoxSetMetadataProvider.GetAllItems
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Providers.IBoxSetMetadataProvider.GetAllItems
+  nameWithType: IBoxSetMetadataProvider.GetAllItems
 - uid: MediaBrowser.Controller.Providers.ICustomMetadataProvider
   name: ICustomMetadataProvider
   href: reference/pluginapi/MediaBrowser.Controller.Providers.ICustomMetadataProvider.html
@@ -99169,6 +99232,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Providers.IProviderManager.GetAllEpisodes
   nameWithType: IProviderManager.GetAllEpisodes
+- uid: MediaBrowser.Controller.Providers.IProviderManager.GetAllItems(MediaBrowser.Controller.Entities.BoxSet,MediaBrowser.Model.Configuration.LibraryOptions,System.Threading.CancellationToken)
+  name: GetAllItems(BoxSet, LibraryOptions, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.IProviderManager.html#MediaBrowser_Controller_Providers_IProviderManager_GetAllItems_MediaBrowser_Controller_Entities_BoxSet_MediaBrowser_Model_Configuration_LibraryOptions_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Providers.IProviderManager.GetAllItems(MediaBrowser.Controller.Entities.BoxSet,MediaBrowser.Model.Configuration.LibraryOptions,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Providers.IProviderManager.GetAllItems(MediaBrowser.Controller.Entities.BoxSet, MediaBrowser.Model.Configuration.LibraryOptions, System.Threading.CancellationToken)
+  nameWithType: IProviderManager.GetAllItems(BoxSet, LibraryOptions, CancellationToken)
+- uid: MediaBrowser.Controller.Providers.IProviderManager.GetAllItems*
+  name: GetAllItems
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.IProviderManager.html#MediaBrowser_Controller_Providers_IProviderManager_GetAllItems_
+  commentId: Overload:MediaBrowser.Controller.Providers.IProviderManager.GetAllItems
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Providers.IProviderManager.GetAllItems
+  nameWithType: IProviderManager.GetAllItems
 - uid: MediaBrowser.Controller.Providers.IProviderManager.GetAllMetadataPlugins
   name: GetAllMetadataPlugins()
   href: reference/pluginapi/MediaBrowser.Controller.Providers.IProviderManager.html#MediaBrowser_Controller_Providers_IProviderManager_GetAllMetadataPlugins
@@ -101000,6 +101076,22 @@ references:
   fullName.vb: MediaBrowser.Controller.Providers.RemoteSearchResultHelper.ToItem(Of T)(MediaBrowser.Model.Providers.RemoteSearchResult)
   nameWithType: RemoteSearchResultHelper.ToItem<T>(RemoteSearchResult)
   nameWithType.vb: RemoteSearchResultHelper.ToItem(Of T)(RemoteSearchResult)
+- uid: MediaBrowser.Controller.Providers.RemoteSearchResultHelper.ToMetadataResult*
+  name: ToMetadataResult
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.RemoteSearchResultHelper.html#MediaBrowser_Controller_Providers_RemoteSearchResultHelper_ToMetadataResult_
+  commentId: Overload:MediaBrowser.Controller.Providers.RemoteSearchResultHelper.ToMetadataResult
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Providers.RemoteSearchResultHelper.ToMetadataResult
+  nameWithType: RemoteSearchResultHelper.ToMetadataResult
+- uid: MediaBrowser.Controller.Providers.RemoteSearchResultHelper.ToMetadataResult``1(MediaBrowser.Model.Providers.RemoteSearchResult)
+  name: ToMetadataResult<T>(RemoteSearchResult)
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.RemoteSearchResultHelper.html#MediaBrowser_Controller_Providers_RemoteSearchResultHelper_ToMetadataResult__1_MediaBrowser_Model_Providers_RemoteSearchResult_
+  commentId: M:MediaBrowser.Controller.Providers.RemoteSearchResultHelper.ToMetadataResult``1(MediaBrowser.Model.Providers.RemoteSearchResult)
+  name.vb: ToMetadataResult(Of T)(RemoteSearchResult)
+  fullName: MediaBrowser.Controller.Providers.RemoteSearchResultHelper.ToMetadataResult<T>(MediaBrowser.Model.Providers.RemoteSearchResult)
+  fullName.vb: MediaBrowser.Controller.Providers.RemoteSearchResultHelper.ToMetadataResult(Of T)(MediaBrowser.Model.Providers.RemoteSearchResult)
+  nameWithType: RemoteSearchResultHelper.ToMetadataResult<T>(RemoteSearchResult)
+  nameWithType.vb: RemoteSearchResultHelper.ToMetadataResult(Of T)(RemoteSearchResult)
 - uid: MediaBrowser.Controller.Providers.SeasonInfo
   name: SeasonInfo
   href: reference/pluginapi/MediaBrowser.Controller.Providers.SeasonInfo.html
@@ -115503,6 +115595,44 @@ references:
   commentId: F:MediaBrowser.Model.Drawing.ImageFormat.Webp
   fullName: MediaBrowser.Model.Drawing.ImageFormat.Webp
   nameWithType: ImageFormat.Webp
+- uid: MediaBrowser.Model.Drawing.ImageFormatHelpers
+  name: ImageFormatHelpers
+  href: reference/pluginapi/MediaBrowser.Model.Drawing.ImageFormatHelpers.html
+  commentId: T:MediaBrowser.Model.Drawing.ImageFormatHelpers
+  fullName: MediaBrowser.Model.Drawing.ImageFormatHelpers
+  nameWithType: ImageFormatHelpers
+- uid: MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromExtension(System.String,System.Nullable{MediaBrowser.Model.Drawing.ImageFormat})
+  name: GetImageFormatFromExtension(String, Nullable<ImageFormat>)
+  href: reference/pluginapi/MediaBrowser.Model.Drawing.ImageFormatHelpers.html#MediaBrowser_Model_Drawing_ImageFormatHelpers_GetImageFormatFromExtension_System_String_System_Nullable_MediaBrowser_Model_Drawing_ImageFormat__
+  commentId: M:MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromExtension(System.String,System.Nullable{MediaBrowser.Model.Drawing.ImageFormat})
+  name.vb: GetImageFormatFromExtension(String, Nullable(Of ImageFormat))
+  fullName: MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromExtension(System.String, System.Nullable<MediaBrowser.Model.Drawing.ImageFormat>)
+  fullName.vb: MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromExtension(System.String, System.Nullable(Of MediaBrowser.Model.Drawing.ImageFormat))
+  nameWithType: ImageFormatHelpers.GetImageFormatFromExtension(String, Nullable<ImageFormat>)
+  nameWithType.vb: ImageFormatHelpers.GetImageFormatFromExtension(String, Nullable(Of ImageFormat))
+- uid: MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromExtension*
+  name: GetImageFormatFromExtension
+  href: reference/pluginapi/MediaBrowser.Model.Drawing.ImageFormatHelpers.html#MediaBrowser_Model_Drawing_ImageFormatHelpers_GetImageFormatFromExtension_
+  commentId: Overload:MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromExtension
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromExtension
+  nameWithType: ImageFormatHelpers.GetImageFormatFromExtension
+- uid: MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromMimeType(System.String,System.Nullable{MediaBrowser.Model.Drawing.ImageFormat})
+  name: GetImageFormatFromMimeType(String, Nullable<ImageFormat>)
+  href: reference/pluginapi/MediaBrowser.Model.Drawing.ImageFormatHelpers.html#MediaBrowser_Model_Drawing_ImageFormatHelpers_GetImageFormatFromMimeType_System_String_System_Nullable_MediaBrowser_Model_Drawing_ImageFormat__
+  commentId: M:MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromMimeType(System.String,System.Nullable{MediaBrowser.Model.Drawing.ImageFormat})
+  name.vb: GetImageFormatFromMimeType(String, Nullable(Of ImageFormat))
+  fullName: MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromMimeType(System.String, System.Nullable<MediaBrowser.Model.Drawing.ImageFormat>)
+  fullName.vb: MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromMimeType(System.String, System.Nullable(Of MediaBrowser.Model.Drawing.ImageFormat))
+  nameWithType: ImageFormatHelpers.GetImageFormatFromMimeType(String, Nullable<ImageFormat>)
+  nameWithType.vb: ImageFormatHelpers.GetImageFormatFromMimeType(String, Nullable(Of ImageFormat))
+- uid: MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromMimeType*
+  name: GetImageFormatFromMimeType
+  href: reference/pluginapi/MediaBrowser.Model.Drawing.ImageFormatHelpers.html#MediaBrowser_Model_Drawing_ImageFormatHelpers_GetImageFormatFromMimeType_
+  commentId: Overload:MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromMimeType
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromMimeType
+  nameWithType: ImageFormatHelpers.GetImageFormatFromMimeType
 - uid: MediaBrowser.Model.Drawing.ImageOrientation
   name: ImageOrientation
   href: reference/pluginapi/MediaBrowser.Model.Drawing.ImageOrientation.html
@@ -126070,6 +126200,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.IO.IFileSystem.IsPathFile
   nameWithType: IFileSystem.IsPathFile
+- uid: MediaBrowser.Model.IO.IFileSystem.IsPathFullyQualified(System.String)
+  name: IsPathFullyQualified(String)
+  href: reference/pluginapi/MediaBrowser.Model.IO.IFileSystem.html#MediaBrowser_Model_IO_IFileSystem_IsPathFullyQualified_System_String_
+  commentId: M:MediaBrowser.Model.IO.IFileSystem.IsPathFullyQualified(System.String)
+  fullName: MediaBrowser.Model.IO.IFileSystem.IsPathFullyQualified(System.String)
+  nameWithType: IFileSystem.IsPathFullyQualified(String)
+- uid: MediaBrowser.Model.IO.IFileSystem.IsPathFullyQualified*
+  name: IsPathFullyQualified
+  href: reference/pluginapi/MediaBrowser.Model.IO.IFileSystem.html#MediaBrowser_Model_IO_IFileSystem_IsPathFullyQualified_
+  commentId: Overload:MediaBrowser.Model.IO.IFileSystem.IsPathFullyQualified
+  isSpec: "True"
+  fullName: MediaBrowser.Model.IO.IFileSystem.IsPathFullyQualified
+  nameWithType: IFileSystem.IsPathFullyQualified
 - uid: MediaBrowser.Model.IO.IFileSystem.IsRootPath(System.ReadOnlySpan{System.Char})
   name: IsRootPath(ReadOnlySpan<Char>)
   href: reference/pluginapi/MediaBrowser.Model.IO.IFileSystem.html#MediaBrowser_Model_IO_IFileSystem_IsRootPath_System_ReadOnlySpan_System_Char__
@@ -134325,6 +134468,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Providers.RemoteSearchResult.StartDate
   nameWithType: RemoteSearchResult.StartDate
+- uid: MediaBrowser.Model.Providers.RemoteSearchResult.ThumbnailUrl
+  name: ThumbnailUrl
+  href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteSearchResult.html#MediaBrowser_Model_Providers_RemoteSearchResult_ThumbnailUrl
+  commentId: P:MediaBrowser.Model.Providers.RemoteSearchResult.ThumbnailUrl
+  fullName: MediaBrowser.Model.Providers.RemoteSearchResult.ThumbnailUrl
+  nameWithType: RemoteSearchResult.ThumbnailUrl
+- uid: MediaBrowser.Model.Providers.RemoteSearchResult.ThumbnailUrl*
+  name: ThumbnailUrl
+  href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteSearchResult.html#MediaBrowser_Model_Providers_RemoteSearchResult_ThumbnailUrl_
+  commentId: Overload:MediaBrowser.Model.Providers.RemoteSearchResult.ThumbnailUrl
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Providers.RemoteSearchResult.ThumbnailUrl
+  nameWithType: RemoteSearchResult.ThumbnailUrl
 - uid: MediaBrowser.Model.Providers.RemoteSearchResult.Type
   name: Type
   href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteSearchResult.html#MediaBrowser_Model_Providers_RemoteSearchResult_Type

@@ -28,6 +28,7 @@ type RemoteSearchResult struct {
 	Role string `json:"Role,omitempty"`
 	Type_ string `json:"Type,omitempty"`
 	ImageUrl string `json:"ImageUrl,omitempty"`
+	ThumbnailUrl string `json:"ThumbnailUrl,omitempty"`
 	SearchProviderName string `json:"SearchProviderName,omitempty"`
 	GameSystem string `json:"GameSystem,omitempty"`
 	Overview string `json:"Overview,omitempty"`

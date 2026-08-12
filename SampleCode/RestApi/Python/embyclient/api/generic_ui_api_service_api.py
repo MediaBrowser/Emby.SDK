@@ -26,7 +26,7 @@ class GenericUIApiServiceApi(object):
     def get_ui_view(self, page_id, client_locale, **kwargs):  # noqa: E501
         """Gets UI view data  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ui_view(page_id, client_locale, async_req=True)
@@ -49,7 +49,7 @@ class GenericUIApiServiceApi(object):
     def get_ui_view_with_http_info(self, page_id, client_locale, **kwargs):  # noqa: E501
         """Gets UI view data  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ui_view_with_http_info(page_id, client_locale, async_req=True)
@@ -129,7 +129,7 @@ class GenericUIApiServiceApi(object):
     def post_ui_command(self, body, **kwargs):  # noqa: E501
         """Execute a command in the context of tv setup  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_ui_command(body, async_req=True)
@@ -151,7 +151,7 @@ class GenericUIApiServiceApi(object):
     def post_ui_command_with_http_info(self, body, **kwargs):  # noqa: E501
         """Execute a command in the context of tv setup  # noqa: E501
 
-        Requires authentication as user  # noqa: E501
+        Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_ui_command_with_http_info(body, async_req=True)

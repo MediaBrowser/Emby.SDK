@@ -16,7 +16,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The RemoteSearchResult model module.
 * @module model/RemoteSearchResult
-* @version 4.10.0.23
+* @version 4.10.0.24
 */
 export default class RemoteSearchResult {
     /**
@@ -90,6 +90,9 @@ export default class RemoteSearchResult {
             }
             if (data.hasOwnProperty('ImageUrl')) {
                 obj['ImageUrl'] = ApiClient.convertToType(data['ImageUrl'], 'String');
+            }
+            if (data.hasOwnProperty('ThumbnailUrl')) {
+                obj['ThumbnailUrl'] = ApiClient.convertToType(data['ThumbnailUrl'], 'String');
             }
             if (data.hasOwnProperty('SearchProviderName')) {
                 obj['SearchProviderName'] = ApiClient.convertToType(data['SearchProviderName'], 'String');
@@ -179,6 +182,10 @@ export default class RemoteSearchResult {
     * @member {String} ImageUrl
     */
     'ImageUrl' = undefined;
+    /**
+    * @member {String} ThumbnailUrl
+    */
+    'ThumbnailUrl' = undefined;
     /**
     * @member {String} SearchProviderName
     */

@@ -74,6 +74,9 @@ public class RemoteSearchResult {
   @SerializedName("ImageUrl")
   private String imageUrl = null;
 
+  @SerializedName("ThumbnailUrl")
+  private String thumbnailUrl = null;
+
   @SerializedName("SearchProviderName")
   private String searchProviderName = null;
 
@@ -380,6 +383,24 @@ public class RemoteSearchResult {
     this.imageUrl = imageUrl;
   }
 
+  public RemoteSearchResult thumbnailUrl(String thumbnailUrl) {
+    this.thumbnailUrl = thumbnailUrl;
+    return this;
+  }
+
+   /**
+   * Get thumbnailUrl
+   * @return thumbnailUrl
+  **/
+  @Schema(description = "")
+  public String getThumbnailUrl() {
+    return thumbnailUrl;
+  }
+
+  public void setThumbnailUrl(String thumbnailUrl) {
+    this.thumbnailUrl = thumbnailUrl;
+  }
+
   public RemoteSearchResult searchProviderName(String searchProviderName) {
     this.searchProviderName = searchProviderName;
     return this;
@@ -522,6 +543,7 @@ public class RemoteSearchResult {
         Objects.equals(this.role, remoteSearchResult.role) &&
         Objects.equals(this.type, remoteSearchResult.type) &&
         Objects.equals(this.imageUrl, remoteSearchResult.imageUrl) &&
+        Objects.equals(this.thumbnailUrl, remoteSearchResult.thumbnailUrl) &&
         Objects.equals(this.searchProviderName, remoteSearchResult.searchProviderName) &&
         Objects.equals(this.gameSystem, remoteSearchResult.gameSystem) &&
         Objects.equals(this.overview, remoteSearchResult.overview) &&
@@ -532,7 +554,7 @@ public class RemoteSearchResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, originalTitle, providerIds, productionYear, indexNumber, indexNumberEnd, parentIndexNumber, sortIndexNumber, sortParentIndexNumber, premiereDate, startDate, endDate, personType, role, type, imageUrl, searchProviderName, gameSystem, overview, disambiguationComment, albumArtist, artists);
+    return Objects.hash(name, originalTitle, providerIds, productionYear, indexNumber, indexNumberEnd, parentIndexNumber, sortIndexNumber, sortParentIndexNumber, premiereDate, startDate, endDate, personType, role, type, imageUrl, thumbnailUrl, searchProviderName, gameSystem, overview, disambiguationComment, albumArtist, artists);
   }
 
 
@@ -557,6 +579,7 @@ public class RemoteSearchResult {
     sb.append("    role: ").append(toIndentedString(role)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
+    sb.append("    thumbnailUrl: ").append(toIndentedString(thumbnailUrl)).append("\n");
     sb.append("    searchProviderName: ").append(toIndentedString(searchProviderName)).append("\n");
     sb.append("    gameSystem: ").append(toIndentedString(gameSystem)).append("\n");
     sb.append("    overview: ").append(toIndentedString(overview)).append("\n");

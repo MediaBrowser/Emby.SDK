@@ -16,7 +16,7 @@ import UIViewInfo from '../model/UIViewInfo';
 /**
 * GenericUIApiService service.
 * @module api/GenericUIApiServiceApi
-* @version 4.10.0.23
+* @version 4.10.0.24
 */
 export default class GenericUIApiServiceApi {
 
@@ -35,7 +35,7 @@ export default class GenericUIApiServiceApi {
 
     /**
      * Gets UI view data
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UIViewInfo} and HTTP response
      */
     getUIViewWithHttpInfo() {
@@ -66,7 +66,7 @@ export default class GenericUIApiServiceApi {
 
     /**
      * Gets UI view data
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UIViewInfo}
      */
     getUIView() {
@@ -79,7 +79,7 @@ export default class GenericUIApiServiceApi {
 
     /**
      * Execute a command in the context of tv setup
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UIViewInfo} and HTTP response
      */
     postUICommandWithHttpInfo() {
@@ -108,7 +108,7 @@ export default class GenericUIApiServiceApi {
 
     /**
      * Execute a command in the context of tv setup
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UIViewInfo}
      */
     postUICommand() {

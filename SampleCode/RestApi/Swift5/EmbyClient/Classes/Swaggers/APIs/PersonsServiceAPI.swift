@@ -1493,6 +1493,7 @@ open class PersonsServiceAPI {
   "Items" : [ {
     "IndexNumberEnd" : 1,
     "GameSystem" : "GameSystem",
+    "ThumbnailUrl" : "ThumbnailUrl",
     "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
     "SortParentIndexNumber" : 2,
     "ImageUrl" : "ImageUrl",
@@ -1517,6 +1518,7 @@ open class PersonsServiceAPI {
   }, {
     "IndexNumberEnd" : 1,
     "GameSystem" : "GameSystem",
+    "ThumbnailUrl" : "ThumbnailUrl",
     "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
     "SortParentIndexNumber" : 2,
     "ImageUrl" : "ImageUrl",
@@ -1544,6 +1546,7 @@ open class PersonsServiceAPI {
   "Items" : [ {
     "IndexNumberEnd" : 1,
     "GameSystem" : "GameSystem",
+    "ThumbnailUrl" : "ThumbnailUrl",
     "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
     "SortParentIndexNumber" : 2,
     "ImageUrl" : "ImageUrl",
@@ -1568,6 +1571,7 @@ open class PersonsServiceAPI {
   }, {
     "IndexNumberEnd" : 1,
     "GameSystem" : "GameSystem",
+    "ThumbnailUrl" : "ThumbnailUrl",
     "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
     "SortParentIndexNumber" : 2,
     "ImageUrl" : "ImageUrl",

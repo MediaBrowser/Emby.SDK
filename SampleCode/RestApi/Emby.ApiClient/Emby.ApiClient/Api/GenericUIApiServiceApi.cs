@@ -44,7 +44,7 @@ namespace Emby.ApiClient.Api
         /// Gets UI view data
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <param name="pageId">Id of the page controller</param>
         /// <param name="clientLocale">Locale identifier of the client</param>
@@ -84,7 +84,7 @@ namespace Emby.ApiClient.Api
         /// Execute a command in the context of tv setup
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <param name="body">RunUICommand</param>
         /// <returns>Task of ApiResponse (UIViewInfo)</returns>

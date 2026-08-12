@@ -38,6 +38,7 @@ class RemoteSearchResult(object):
         'role': 'str',
         'type': 'str',
         'image_url': 'str',
+        'thumbnail_url': 'str',
         'search_provider_name': 'str',
         'game_system': 'str',
         'overview': 'str',
@@ -63,6 +64,7 @@ class RemoteSearchResult(object):
         'role': 'Role',
         'type': 'Type',
         'image_url': 'ImageUrl',
+        'thumbnail_url': 'ThumbnailUrl',
         'search_provider_name': 'SearchProviderName',
         'game_system': 'GameSystem',
         'overview': 'Overview',
@@ -71,7 +73,7 @@ class RemoteSearchResult(object):
         'artists': 'Artists'
     }
 
-    def __init__(self, name=None, original_title=None, provider_ids=None, production_year=None, index_number=None, index_number_end=None, parent_index_number=None, sort_index_number=None, sort_parent_index_number=None, premiere_date=None, start_date=None, end_date=None, person_type=None, role=None, type=None, image_url=None, search_provider_name=None, game_system=None, overview=None, disambiguation_comment=None, album_artist=None, artists=None):  # noqa: E501
+    def __init__(self, name=None, original_title=None, provider_ids=None, production_year=None, index_number=None, index_number_end=None, parent_index_number=None, sort_index_number=None, sort_parent_index_number=None, premiere_date=None, start_date=None, end_date=None, person_type=None, role=None, type=None, image_url=None, thumbnail_url=None, search_provider_name=None, game_system=None, overview=None, disambiguation_comment=None, album_artist=None, artists=None):  # noqa: E501
         """RemoteSearchResult - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._original_title = None
@@ -89,6 +91,7 @@ class RemoteSearchResult(object):
         self._role = None
         self._type = None
         self._image_url = None
+        self._thumbnail_url = None
         self._search_provider_name = None
         self._game_system = None
         self._overview = None
@@ -128,6 +131,8 @@ class RemoteSearchResult(object):
             self.type = type
         if image_url is not None:
             self.image_url = image_url
+        if thumbnail_url is not None:
+            self.thumbnail_url = thumbnail_url
         if search_provider_name is not None:
             self.search_provider_name = search_provider_name
         if game_system is not None:
@@ -480,6 +485,27 @@ class RemoteSearchResult(object):
         """
 
         self._image_url = image_url
+
+    @property
+    def thumbnail_url(self):
+        """Gets the thumbnail_url of this RemoteSearchResult.  # noqa: E501
+
+
+        :return: The thumbnail_url of this RemoteSearchResult.  # noqa: E501
+        :rtype: str
+        """
+        return self._thumbnail_url
+
+    @thumbnail_url.setter
+    def thumbnail_url(self, thumbnail_url):
+        """Sets the thumbnail_url of this RemoteSearchResult.
+
+
+        :param thumbnail_url: The thumbnail_url of this RemoteSearchResult.  # noqa: E501
+        :type: str
+        """
+
+        self._thumbnail_url = thumbnail_url
 
     @property
     def search_provider_name(self):
