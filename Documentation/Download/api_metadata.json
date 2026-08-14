@@ -7299,6 +7299,7 @@
   "MediaBrowser.Controller.Entities.InternalItemsQuery.GroupByAlbumId": "MediaBrowser.Controller.Entities.InternalItemsQuery.yml",
   "MediaBrowser.Controller.Entities.InternalItemsQuery.GroupByParentPresentationUniqueKey": "MediaBrowser.Controller.Entities.InternalItemsQuery.yml",
   "MediaBrowser.Controller.Entities.InternalItemsQuery.GroupByPresentationUniqueKey": "MediaBrowser.Controller.Entities.InternalItemsQuery.yml",
+  "MediaBrowser.Controller.Entities.InternalItemsQuery.GroupByPrimaryImagePath": "MediaBrowser.Controller.Entities.InternalItemsQuery.yml",
   "MediaBrowser.Controller.Entities.InternalItemsQuery.GroupBySeriesId": "MediaBrowser.Controller.Entities.InternalItemsQuery.yml",
   "MediaBrowser.Controller.Entities.InternalItemsQuery.GroupBySeriesPresentationUniqueKey": "MediaBrowser.Controller.Entities.InternalItemsQuery.yml",
   "MediaBrowser.Controller.Entities.InternalItemsQuery.GroupItemsIntoItemLinkType": "MediaBrowser.Controller.Entities.InternalItemsQuery.yml",

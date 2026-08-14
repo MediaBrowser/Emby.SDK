@@ -71790,6 +71790,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.GroupByPresentationUniqueKey
   nameWithType: InternalItemsQuery.GroupByPresentationUniqueKey
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.GroupByPrimaryImagePath
+  name: GroupByPrimaryImagePath
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_GroupByPrimaryImagePath
+  commentId: P:MediaBrowser.Controller.Entities.InternalItemsQuery.GroupByPrimaryImagePath
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.GroupByPrimaryImagePath
+  nameWithType: InternalItemsQuery.GroupByPrimaryImagePath
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.GroupByPrimaryImagePath*
+  name: GroupByPrimaryImagePath
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_GroupByPrimaryImagePath_
+  commentId: Overload:MediaBrowser.Controller.Entities.InternalItemsQuery.GroupByPrimaryImagePath
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.GroupByPrimaryImagePath
+  nameWithType: InternalItemsQuery.GroupByPrimaryImagePath
 - uid: MediaBrowser.Controller.Entities.InternalItemsQuery.GroupBySeriesId
   name: GroupBySeriesId
   href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_GroupBySeriesId

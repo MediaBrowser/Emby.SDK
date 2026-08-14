@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The GlobalizationCountryInfo model module.
 * @module model/GlobalizationCountryInfo
-* @version 4.10.0.24
+* @version 4.10.0.25
 */
 export default class GlobalizationCountryInfo {
     /**

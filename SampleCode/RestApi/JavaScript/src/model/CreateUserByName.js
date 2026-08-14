@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The CreateUserByName model module.
 * @module model/CreateUserByName
-* @version 4.10.0.24
+* @version 4.10.0.25
 */
 export default class CreateUserByName {
     /**

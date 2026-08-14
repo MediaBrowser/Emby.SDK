@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LibraryMediaUpdateInfo model module.
 * @module model/LibraryMediaUpdateInfo
-* @version 4.10.0.24
+* @version 4.10.0.25
 */
 export default class LibraryMediaUpdateInfo {
     /**
