@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The GetDirectoryContents model module.
 * @module model/GetDirectoryContents
-* @version 4.10.0.25
+* @version 4.10.0.26
 */
 export default class GetDirectoryContents {
     /**

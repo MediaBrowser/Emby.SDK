@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The Resolution model module.
 * @module model/Resolution
-* @version 4.10.0.25
+* @version 4.10.0.26
 */
 export default class Resolution {
     /**

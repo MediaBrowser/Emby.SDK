@@ -16,7 +16,7 @@ import ProfileInformation from './ProfileInformation';
 /**
 * The ProfileLevelInformation model module.
 * @module model/ProfileLevelInformation
-* @version 4.10.0.25
+* @version 4.10.0.26
 */
 export default class ProfileLevelInformation {
     /**

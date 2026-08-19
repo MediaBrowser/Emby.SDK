@@ -20,7 +20,7 @@ import UserLibraryUpdateUserItemAccess from '../model/UserLibraryUpdateUserItemA
 /**
 * UserLibraryService service.
 * @module api/UserLibraryServiceApi
-* @version 4.10.0.25
+* @version 4.10.0.26
 */
 export default class UserLibraryServiceApi {
 

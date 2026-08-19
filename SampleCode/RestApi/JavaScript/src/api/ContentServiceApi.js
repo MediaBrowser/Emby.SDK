@@ -18,7 +18,7 @@ import UserLibraryMoveHomeSections from '../model/UserLibraryMoveHomeSections';
 /**
 * ContentService service.
 * @module api/ContentServiceApi
-* @version 4.10.0.25
+* @version 4.10.0.26
 */
 export default class ContentServiceApi {
 
