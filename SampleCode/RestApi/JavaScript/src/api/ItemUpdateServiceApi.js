@@ -16,7 +16,7 @@ import MetadataEditorInfo from '../model/MetadataEditorInfo';
 /**
 * ItemUpdateService service.
 * @module api/ItemUpdateServiceApi
-* @version 4.10.0.26
+* @version 4.10.0.27
 */
 export default class ItemUpdateServiceApi {
 
