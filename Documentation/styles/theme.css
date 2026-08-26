@@ -1,0 +1,587 @@
+/* ==========================================================================
+   Emby Developer site theme
+   Re-skins the docfx output to match the emby.media website redesign.
+   Loaded after docfx.css/main.css/header.css so it can safely
+   override their color and header rules.
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   FONTS
+   Self-hosted locally (this site lives on a different origin than
+   emby.media, e.g. dev.emby.media, so we can't share emby.media's
+   cached copy the way the support site does). font-display: block
+   (not swap) since the file is local/fast to load - this briefly
+   holds text rendering instead of flashing the fallback font and
+   then visibly swapping to Inter.
+   ------------------------------------------------------------------------- */
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/InterVariable.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/InterVariable-Italic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: block;
+}
+
+/* -------------------------------------------------------------------------
+   COLOR VARIABLES
+   `--modern-*` mirror the variables used on the main website
+   (see resources/modern-theme.css) so the two can be kept in sync.
+   The legacy `--header-*`/`--highlight-*`/etc. names are still used
+   throughout main.css; aliasing them here re-themes those rules too.
+   ------------------------------------------------------------------------- */
+:root {
+    --modern-bg: #090d0f;
+    --modern-surface: #111719;
+    --modern-surface-2: #172023;
+    --modern-text: #f7f9f8;
+    --modern-muted: #a7b2ae;
+    --modern-line: rgba(255, 255, 255, .1);
+    --modern-green: #75d66d;
+    --modern-green-deep: #52b54b;
+    --modern-button-green: #75d66d;
+
+    --header-bg-color: var(--modern-surface);
+    --header-ft-color: var(--modern-text);
+    --highlight-light: var(--modern-green);
+    --highlight-dark: var(--modern-green-deep);
+    --accent-dim: var(--modern-line);
+    --accent-super-dim: var(--modern-surface-2);
+    --font-color: var(--modern-text);
+    --toc-font-color: var(--modern-muted);
+    --tab-hover-color: var(--modern-surface-2);
+    --card-box-shadow: 0 18px 42px rgba(0, 0, 0, .12);
+    --search-box-shadow: 0 18px 45px rgba(0, 0, 0, .14);
+
+    --header-height: 76px;
+    --header-height-mobile: 68px;
+    --subnav-height: 62px;
+    --subnav-height-mobile: 56px;
+}
+
+/* -------------------------------------------------------------------------
+   BASE
+   ------------------------------------------------------------------------- */
+html {
+    background: var(--modern-bg);
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--modern-bg);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--modern-text);
+}
+
+h1 {
+    color: var(--modern-text);
+    font-weight: 700;
+    letter-spacing: -.02em;
+}
+
+strong, b, optgroup {
+    color: var(--modern-text);
+}
+
+::selection {
+    background: rgba(117, 214, 109, .35);
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 2px solid var(--modern-green);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+}
+
+/* -------------------------------------------------------------------------
+   PAGE CHROME
+   The .site-header and the breadcrumb/search subnav are both fixed and
+   stacked (subnav sits right under the header). docfx's own CSS makes
+   .sidefilter/.sidetoc/.sideaffix position:fixed too, so #wrapper's
+   padding and those elements' `top` must both clear header + subnav.
+   ------------------------------------------------------------------------- */
+#wrapper {
+    padding-top: calc(var(--header-height) + var(--subnav-height));
+}
+
+.article {
+    margin-top: 0;
+}
+
+.sidefilter,
+.sideaffix {
+    top: calc(var(--header-height) + var(--subnav-height) + 16px);
+}
+
+.sidetoc {
+    top: calc(var(--header-height) + var(--subnav-height) + 60px);
+}
+
+@media only screen and (max-width: 900px) {
+    #wrapper { padding-top: calc(var(--header-height-mobile) + var(--subnav-height-mobile)); }
+    .sidefilter, .sideaffix { top: calc(var(--header-height-mobile) + var(--subnav-height-mobile) + 16px); }
+    .sidetoc { top: calc(var(--header-height-mobile) + var(--subnav-height-mobile) + 56px); }
+}
+
+/* -------------------------------------------------------------------------
+   SITE HEADER / NAVIGATION
+   Mirrors the main website's .site-header component.
+   ------------------------------------------------------------------------- */
+.site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 1000;
+    height: var(--header-height);
+    background: rgba(9, 13, 15, .82);
+    border-bottom: 1px solid var(--modern-line);
+    backdrop-filter: blur(18px);
+}
+
+.site-header .nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    height: var(--header-height);
+}
+
+/* Bootstrap's .container::before/::after clearfix become phantom flex
+   items once .container is flexed, offsetting the real content by
+   however much space they (and their surrounding `gap`) take up. */
+.site-header .nav::before,
+.site-header .nav::after {
+    display: none;
+    content: none;
+}
+
+.site-header .brand {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.site-header .brand img {
+    display: block;
+    height: 102px;
+    width: auto;
+    max-width: none;
+}
+
+.site-header .brand .logo-on-light {
+    display: none;
+}
+
+.site-header .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: 3px;
+}
+
+.site-header .nav-links-list {
+    display: contents;
+}
+
+.site-header .nav-links-list li {
+    list-style: none;
+}
+
+.site-header .nav-links a {
+    padding: 0;
+    color: #d9e0dd;
+    font-size: 15px;
+    font-weight: 650;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.site-header .nav-links a:hover,
+.site-header .nav-links a.is-current,
+.site-header .nav-links a.active {
+    color: var(--modern-green);
+}
+
+.site-header .menu-button {
+    display: none;
+    margin-left: auto;
+    padding: 8px;
+    color: #fff;
+    background: none;
+    border: 0;
+    font-size: 26px;
+    line-height: 1;
+}
+
+@media only screen and (max-width: 900px) {
+    .site-header { height: var(--header-height-mobile); }
+    .site-header .nav { height: var(--header-height-mobile); gap: 16px; }
+    .site-header .menu-button { display: block; }
+    .site-header .nav-links {
+        display: none;
+        position: absolute;
+        inset: var(--header-height-mobile) 14px auto;
+        padding: 18px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        background: var(--modern-surface);
+        border: 1px solid var(--modern-line);
+        border-radius: 16px;
+        box-shadow: 0 24px 48px rgba(0, 0, 0, .4);
+    }
+    .site-header .nav-links.open { display: flex; }
+    .site-header .nav-links a { padding: 12px; }
+}
+
+/* -------------------------------------------------------------------------
+   BREADCRUMB / SEARCH SUBNAV
+   Fixed right under the .site-header (see PAGE CHROME for the matching
+   #wrapper padding and sidebar offsets).
+   ------------------------------------------------------------------------- */
+.subnav.navbar {
+    position: fixed;
+    inset: var(--header-height) 0 auto;
+    z-index: 999;
+    height: var(--subnav-height);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background: var(--modern-bg);
+    border-bottom: 1px solid var(--modern-line);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .subnav.navbar {
+        inset: var(--header-height-mobile) 0 auto;
+        height: var(--subnav-height-mobile);
+    }
+}
+
+.subnav .container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.subnav .container::before,
+.subnav .container::after {
+    display: none;
+    content: none;
+}
+
+.subnav #breadcrumb {
+    flex: 1 1 auto;
+}
+
+.breadcrumb {
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+.breadcrumb li {
+    color: var(--modern-muted);
+    font-weight: 650;
+}
+
+.breadcrumpsearch {
+    flex: 0 0 auto;
+    margin-right: -5px;
+}
+
+.breadcrumpsearch .navbar-form {
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumpsearch .form-group {
+    margin: 0;
+    position: relative;
+}
+
+.breadcrumpsearch .form-group .fa-search {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    color: var(--modern-green);
+    font-size: 13px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+#search .form-control,
+#toc_filter_input {
+    height: 32px;
+    padding: 0 14px;
+    color: var(--modern-text);
+    background: var(--modern-surface);
+    border: 1px solid var(--modern-line);
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.toc-filter > .clear-icon {
+    right: 10px;
+}
+
+#search .form-control {
+    width: 220px;
+    padding-left: 34px;
+}
+
+#search .form-control::placeholder,
+#toc_filter_input::placeholder {
+    color: var(--modern-muted);
+}
+
+#search .form-control:focus,
+#toc_filter_input:focus {
+    border-color: var(--modern-green);
+    outline: 2px solid rgba(117, 214, 109, .24);
+    outline-offset: 1px;
+}
+
+/* -------------------------------------------------------------------------
+   SIDEBAR / TABLE OF CONTENTS
+   ------------------------------------------------------------------------- */
+.sidefilter,
+.sidetoc,
+.sidetoc > .toc {
+    background-color: var(--modern-bg);
+}
+
+.toc-filter {
+    box-shadow: none;
+}
+
+.toc .nav > li.active > a,
+.toc .nav > li.active > a:hover,
+.toc .nav > li.active > a:focus {
+    color: var(--modern-green);
+}
+
+.affix ul > li.active > a,
+.affix ul > li.active > a:before {
+    color: var(--modern-green);
+}
+
+.expand-stub {
+    color: var(--modern-muted);
+}
+
+/* -------------------------------------------------------------------------
+   CONTENT: links, alerts, code, tables, images
+   ------------------------------------------------------------------------- */
+article h4 {
+    border-bottom-color: var(--modern-line);
+}
+
+.alert-info > h5 {
+    color: #8ecbf5;
+    background-color: rgba(25, 118, 210, .16);
+    border-bottom-color: #3f9fe0;
+}
+
+.alert-warning > h5 {
+    color: #f5c26b;
+    background-color: rgba(245, 127, 23, .16);
+    border-bottom-color: #f5a623;
+}
+
+.alert-danger > h5 {
+    color: #f28b8b;
+    background-color: rgba(211, 47, 47, .18);
+    border-bottom-color: #e35b5b;
+}
+
+pre {
+    color: var(--modern-text);
+    background-color: var(--modern-surface-2);
+}
+
+code {
+    color: var(--modern-green);
+    background-color: var(--modern-surface-2);
+}
+
+pre code {
+    color: inherit;
+    background: none;
+}
+
+blockquote {
+    color: var(--modern-muted);
+    background: var(--modern-surface);
+    border-left: 4px solid var(--modern-line);
+    font-size: inherit;
+}
+
+table {
+    color: var(--modern-muted);
+    background: var(--modern-surface);
+    border: 1px solid var(--modern-line);
+}
+
+th {
+    color: var(--modern-text);
+    background: var(--modern-surface-2);
+}
+
+td, th {
+    border-color: var(--modern-line) !important;
+}
+
+hr {
+    border-color: var(--modern-line);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+    color: var(--modern-text);
+    background: var(--modern-surface);
+    border: 1px solid var(--modern-line);
+}
+
+.article img {
+    border-radius: 10px;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, .14);
+}
+
+/* -------------------------------------------------------------------------
+   SEARCH RESULTS
+   ------------------------------------------------------------------------- */
+#search-results {
+    color: var(--modern-text);
+}
+
+#search-results .search-list {
+    color: var(--modern-muted);
+}
+
+#search-results mark {
+    color: inherit;
+    background: rgba(117, 214, 109, .35);
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    color: var(--modern-text);
+    background-color: var(--modern-surface);
+    border-color: var(--modern-line);
+}
+
+.pagination > .active > a,
+.pagination > .active > span {
+    color: #0d1210;
+    background-color: var(--modern-green);
+    border-color: var(--modern-green);
+}
+
+/* -------------------------------------------------------------------------
+   FOOTER
+   ------------------------------------------------------------------------- */
+footer .footer {
+    padding: 26px 0;
+    color: var(--modern-muted);
+    background-color: var(--modern-bg);
+    border-top: 1px solid var(--modern-line);
+}
+
+footer .footer a.lnk {
+    color: var(--modern-green);
+}
+
+footer .footer a.lnk:hover {
+    color: var(--modern-text);
+}
+
+.contribution-link {
+    opacity: .7;
+}
+
+.contribution-link:hover {
+    opacity: 1;
+}
+
+/* -------------------------------------------------------------------------
+   LIGHT THEME
+   Matches the main website's light palette (currently its live default).
+   ------------------------------------------------------------------------- */
+html[data-theme="light"] {
+    --modern-bg: #f7f8f9;
+    --modern-surface: #ffffff;
+    --modern-surface-2: #f1f3f5;
+    --modern-text: #18201d;
+    --modern-muted: #5f6f65;
+    --modern-line: rgba(24, 32, 29, .12);
+    --modern-green: #418f3c;
+    --modern-green-deep: #367b32;
+    --modern-button-green: #52b54b;
+}
+
+html[data-theme="light"] .site-header {
+    background: rgba(255, 255, 255, .95);
+    border-bottom-color: rgba(24, 32, 29, .12);
+    box-shadow: 0 8px 24px rgba(25, 31, 28, .06);
+}
+
+html[data-theme="light"] .site-header .brand .logo-on-dark {
+    display: none;
+}
+
+html[data-theme="light"] .site-header .brand .logo-on-light {
+    display: block;
+}
+
+html[data-theme="light"] .site-header .nav-links a {
+    color: #2d3b33;
+}
+
+html[data-theme="light"] .site-header .nav-links a:hover,
+html[data-theme="light"] .site-header .nav-links a.is-current,
+html[data-theme="light"] .site-header .nav-links a.active {
+    color: var(--modern-green);
+}
+
+html[data-theme="light"] .site-header .menu-button {
+    color: #142019;
+}
+
+html[data-theme="light"] .site-header .nav-links {
+    background: #ffffff;
+}
+
+html[data-theme="light"] .alert-info > h5 { color: #1976d2; }
+html[data-theme="light"] .alert-warning > h5 { color: #b96a00; }
+html[data-theme="light"] .alert-danger > h5 { color: #d32f2f; }
+
+html[data-theme="light"] code { color: var(--modern-green-deep); }
+
+html[data-theme="light"] .pagination > .active > a,
+html[data-theme="light"] .pagination > .active > span {
+    color: #ffffff;
+}

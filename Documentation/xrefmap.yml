@@ -117014,6 +117014,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Dto.BaseItemDto.MediaType
   nameWithType: BaseItemDto.MediaType
+- uid: MediaBrowser.Model.Dto.BaseItemDto.MimeType
+  name: MimeType
+  href: reference/pluginapi/MediaBrowser.Model.Dto.BaseItemDto.html#MediaBrowser_Model_Dto_BaseItemDto_MimeType
+  commentId: P:MediaBrowser.Model.Dto.BaseItemDto.MimeType
+  fullName: MediaBrowser.Model.Dto.BaseItemDto.MimeType
+  nameWithType: BaseItemDto.MimeType
+- uid: MediaBrowser.Model.Dto.BaseItemDto.MimeType*
+  name: MimeType
+  href: reference/pluginapi/MediaBrowser.Model.Dto.BaseItemDto.html#MediaBrowser_Model_Dto_BaseItemDto_MimeType_
+  commentId: Overload:MediaBrowser.Model.Dto.BaseItemDto.MimeType
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Dto.BaseItemDto.MimeType
+  nameWithType: BaseItemDto.MimeType
 - uid: MediaBrowser.Model.Dto.BaseItemDto.MovieCount
   name: MovieCount
   href: reference/pluginapi/MediaBrowser.Model.Dto.BaseItemDto.html#MediaBrowser_Model_Dto_BaseItemDto_MovieCount
@@ -119042,6 +119055,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Dto.MediaSourceInfo.MediaStreams
   nameWithType: MediaSourceInfo.MediaStreams
+- uid: MediaBrowser.Model.Dto.MediaSourceInfo.MimeType
+  name: MimeType
+  href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_MimeType
+  commentId: P:MediaBrowser.Model.Dto.MediaSourceInfo.MimeType
+  fullName: MediaBrowser.Model.Dto.MediaSourceInfo.MimeType
+  nameWithType: MediaSourceInfo.MimeType
+- uid: MediaBrowser.Model.Dto.MediaSourceInfo.MimeType*
+  name: MimeType
+  href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_MimeType_
+  commentId: Overload:MediaBrowser.Model.Dto.MediaSourceInfo.MimeType
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Dto.MediaSourceInfo.MimeType
+  nameWithType: MediaSourceInfo.MimeType
 - uid: MediaBrowser.Model.Dto.MediaSourceInfo.Name
   name: Name
   href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_Name
@@ -119302,6 +119328,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Dto.MediaSourceInfo.Timestamp
   nameWithType: MediaSourceInfo.Timestamp
+- uid: MediaBrowser.Model.Dto.MediaSourceInfo.ToFileSystemMetadata
+  name: ToFileSystemMetadata()
+  href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_ToFileSystemMetadata
+  commentId: M:MediaBrowser.Model.Dto.MediaSourceInfo.ToFileSystemMetadata
+  fullName: MediaBrowser.Model.Dto.MediaSourceInfo.ToFileSystemMetadata()
+  nameWithType: MediaSourceInfo.ToFileSystemMetadata()
+- uid: MediaBrowser.Model.Dto.MediaSourceInfo.ToFileSystemMetadata*
+  name: ToFileSystemMetadata
+  href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_ToFileSystemMetadata_
+  commentId: Overload:MediaBrowser.Model.Dto.MediaSourceInfo.ToFileSystemMetadata
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Dto.MediaSourceInfo.ToFileSystemMetadata
+  nameWithType: MediaSourceInfo.ToFileSystemMetadata
 - uid: MediaBrowser.Model.Dto.MediaSourceInfo.ToString
   name: ToString()
   href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_ToString
@@ -119354,6 +119393,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Dto.MediaSourceInfo.TranscodingContainer
   nameWithType: MediaSourceInfo.TranscodingContainer
+- uid: MediaBrowser.Model.Dto.MediaSourceInfo.TranscodingMimeType
+  name: TranscodingMimeType
+  href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_TranscodingMimeType
+  commentId: P:MediaBrowser.Model.Dto.MediaSourceInfo.TranscodingMimeType
+  fullName: MediaBrowser.Model.Dto.MediaSourceInfo.TranscodingMimeType
+  nameWithType: MediaSourceInfo.TranscodingMimeType
+- uid: MediaBrowser.Model.Dto.MediaSourceInfo.TranscodingMimeType*
+  name: TranscodingMimeType
+  href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_TranscodingMimeType_
+  commentId: Overload:MediaBrowser.Model.Dto.MediaSourceInfo.TranscodingMimeType
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Dto.MediaSourceInfo.TranscodingMimeType
+  nameWithType: MediaSourceInfo.TranscodingMimeType
 - uid: MediaBrowser.Model.Dto.MediaSourceInfo.TranscodingSubProtocol
   name: TranscodingSubProtocol
   href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_TranscodingSubProtocol
@@ -135149,6 +135201,12 @@ references:
   commentId: F:MediaBrowser.Model.Querying.ItemFields.MediaStreams
   fullName: MediaBrowser.Model.Querying.ItemFields.MediaStreams
   nameWithType: ItemFields.MediaStreams
+- uid: MediaBrowser.Model.Querying.ItemFields.MimeType
+  name: MimeType
+  href: reference/pluginapi/MediaBrowser.Model.Querying.ItemFields.html#MediaBrowser_Model_Querying_ItemFields_MimeType
+  commentId: F:MediaBrowser.Model.Querying.ItemFields.MimeType
+  fullName: MediaBrowser.Model.Querying.ItemFields.MimeType
+  nameWithType: ItemFields.MimeType
 - uid: MediaBrowser.Model.Querying.ItemFields.Name
   name: Name
   href: reference/pluginapi/MediaBrowser.Model.Querying.ItemFields.html#MediaBrowser_Model_Querying_ItemFields_Name

@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.27
+ * OpenAPI spec version: 4.10.0.28
  * 
  *
  * NOTE: This file is auto generated.
@@ -1729,6 +1729,12 @@ export interface BaseItemDto {
      * @memberof BaseItemDto
      */
     MediaType?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof BaseItemDto
+     */
+    MimeType?: string;
     /**
      * The end date.
      * @type {Date}
@@ -7619,6 +7625,18 @@ export interface MediaSourceInfo {
      * @memberof MediaSourceInfo
      */
     ServerId?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaSourceInfo
+     */
+    MimeType?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaSourceInfo
+     */
+    TranscodingMimeType?: string;
 }
 /**
  * 

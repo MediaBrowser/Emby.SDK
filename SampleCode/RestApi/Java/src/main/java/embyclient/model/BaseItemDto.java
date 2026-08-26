@@ -382,6 +382,9 @@ public class BaseItemDto {
   @SerializedName("MediaType")
   private String mediaType = null;
 
+  @SerializedName("MimeType")
+  private String mimeType = null;
+
   @SerializedName("EndDate")
   private OffsetDateTime endDate = null;
 
@@ -2739,6 +2742,24 @@ public class BaseItemDto {
     this.mediaType = mediaType;
   }
 
+  public BaseItemDto mimeType(String mimeType) {
+    this.mimeType = mimeType;
+    return this;
+  }
+
+   /**
+   * Get mimeType
+   * @return mimeType
+  **/
+  @Schema(description = "")
+  public String getMimeType() {
+    return mimeType;
+  }
+
+  public void setMimeType(String mimeType) {
+    this.mimeType = mimeType;
+  }
+
   public BaseItemDto endDate(OffsetDateTime endDate) {
     this.endDate = endDate;
     return this;
@@ -3760,6 +3781,7 @@ public class BaseItemDto {
         Objects.equals(this.chapters, baseItemDto.chapters) &&
         Objects.equals(this.locationType, baseItemDto.locationType) &&
         Objects.equals(this.mediaType, baseItemDto.mediaType) &&
+        Objects.equals(this.mimeType, baseItemDto.mimeType) &&
         Objects.equals(this.endDate, baseItemDto.endDate) &&
         Objects.equals(this.lockedFields, baseItemDto.lockedFields) &&
         Objects.equals(this.lockData, baseItemDto.lockData) &&
@@ -3813,7 +3835,7 @@ public class BaseItemDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, originalTitle, serverId, id, guid, etag, prefix, tunerName, playlistItemId, dateCreated, dateModified, videoCodec, audioCodec, averageFrameRate, realFrameRate, extraType, sortIndexNumber, sortParentIndexNumber, canDelete, canDownload, canEditItems, supportsResume, presentationUniqueKey, preferredMetadataLanguage, preferredMetadataCountryCode, supportsSync, syncStatus, canManageAccess, canLeaveContent, canMakePublic, container, sortName, forcedSortName, video3DFormat, premiereDate, externalUrls, mediaSources, criticRating, gameSystemId, asSeries, gameSystem, productionLocations, path, officialRating, customRating, channelId, channelName, overview, taglines, genres, communityRating, runTimeTicks, size, fileName, bitrate, productionYear, number, channelNumber, indexNumber, indexNumberEnd, parentIndexNumber, remoteTrailers, providerIds, isFolder, parentId, type, people, studios, genreItems, tagItems, collections, parentLogoItemId, parentBackdropItemId, parentBackdropImageTags, localTrailerCount, userData, recursiveItemCount, childCount, seasonCount, seriesName, seriesId, seasonId, specialFeatureCount, displayPreferencesId, status, airDays, tags, primaryImageAspectRatio, artists, artistItems, composers, album, collectionType, displayOrder, albumId, albumPrimaryImageTag, seriesPrimaryImageTag, albumArtist, albumArtists, seasonName, mediaStreams, partCount, imageTags, backdropImageTags, parentLogoImageTag, seriesStudio, primaryImageItemId, primaryImageTag, parentThumbItemId, parentThumbImageTag, chapters, locationType, mediaType, endDate, lockedFields, lockData, width, height, cameraMake, cameraModel, software, exposureTime, focalLength, imageOrientation, aperture, shutterSpeed, latitude, longitude, altitude, isoSpeedRating, seriesTimerId, channelPrimaryImageTag, startDate, completionPercentage, isRepeat, isNew, episodeTitle, isMovie, isSports, isSeries, isLive, isNews, isKids, isPremiere, timerType, disabled, managementId, timerId, currentProgram, movieCount, seriesCount, albumCount, songCount, musicVideoCount, subviews, listingsProviderId, listingsChannelId, listingsPath, listingsId, listingsChannelName, listingsChannelNumber, affiliateCallSign);
+    return Objects.hash(name, originalTitle, serverId, id, guid, etag, prefix, tunerName, playlistItemId, dateCreated, dateModified, videoCodec, audioCodec, averageFrameRate, realFrameRate, extraType, sortIndexNumber, sortParentIndexNumber, canDelete, canDownload, canEditItems, supportsResume, presentationUniqueKey, preferredMetadataLanguage, preferredMetadataCountryCode, supportsSync, syncStatus, canManageAccess, canLeaveContent, canMakePublic, container, sortName, forcedSortName, video3DFormat, premiereDate, externalUrls, mediaSources, criticRating, gameSystemId, asSeries, gameSystem, productionLocations, path, officialRating, customRating, channelId, channelName, overview, taglines, genres, communityRating, runTimeTicks, size, fileName, bitrate, productionYear, number, channelNumber, indexNumber, indexNumberEnd, parentIndexNumber, remoteTrailers, providerIds, isFolder, parentId, type, people, studios, genreItems, tagItems, collections, parentLogoItemId, parentBackdropItemId, parentBackdropImageTags, localTrailerCount, userData, recursiveItemCount, childCount, seasonCount, seriesName, seriesId, seasonId, specialFeatureCount, displayPreferencesId, status, airDays, tags, primaryImageAspectRatio, artists, artistItems, composers, album, collectionType, displayOrder, albumId, albumPrimaryImageTag, seriesPrimaryImageTag, albumArtist, albumArtists, seasonName, mediaStreams, partCount, imageTags, backdropImageTags, parentLogoImageTag, seriesStudio, primaryImageItemId, primaryImageTag, parentThumbItemId, parentThumbImageTag, chapters, locationType, mediaType, mimeType, endDate, lockedFields, lockData, width, height, cameraMake, cameraModel, software, exposureTime, focalLength, imageOrientation, aperture, shutterSpeed, latitude, longitude, altitude, isoSpeedRating, seriesTimerId, channelPrimaryImageTag, startDate, completionPercentage, isRepeat, isNew, episodeTitle, isMovie, isSports, isSeries, isLive, isNews, isKids, isPremiere, timerType, disabled, managementId, timerId, currentProgram, movieCount, seriesCount, albumCount, songCount, musicVideoCount, subviews, listingsProviderId, listingsChannelId, listingsPath, listingsId, listingsChannelName, listingsChannelNumber, affiliateCallSign);
   }
 
 
@@ -3935,6 +3957,7 @@ public class BaseItemDto {
     sb.append("    chapters: ").append(toIndentedString(chapters)).append("\n");
     sb.append("    locationType: ").append(toIndentedString(locationType)).append("\n");
     sb.append("    mediaType: ").append(toIndentedString(mediaType)).append("\n");
+    sb.append("    mimeType: ").append(toIndentedString(mimeType)).append("\n");
     sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
     sb.append("    lockedFields: ").append(toIndentedString(lockedFields)).append("\n");
     sb.append("    lockData: ").append(toIndentedString(lockData)).append("\n");

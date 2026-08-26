@@ -705,6 +705,12 @@ namespace Emby.ApiClient.Model
         public string MediaType { get; set; }
 
         /// <summary>
+        /// Gets or Sets MimeType
+        /// </summary>
+        /// <value>The MimeType.</value>
+        public string MimeType { get; set; }
+
+        /// <summary>
         /// The end date.
         /// </summary>
         /// <value>The EndDate.</value>
@@ -1119,6 +1125,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  Chapters: ").Append(Chapters).Append("\n");
             sb.Append("  LocationType: ").Append(LocationType).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  MimeType: ").Append(MimeType).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  LockedFields: ").Append(LockedFields).Append("\n");
             sb.Append("  LockData: ").Append(LockData).Append("\n");
@@ -1781,6 +1788,11 @@ namespace Emby.ApiClient.Model
                     this.MediaType.Equals(input.MediaType))
                 ) && 
                 (
+                    this.MimeType == input.MimeType ||
+                    (this.MimeType != null &&
+                    this.MimeType.Equals(input.MimeType))
+                ) && 
+                (
                     this.EndDate == input.EndDate ||
                     (this.EndDate != null &&
                     this.EndDate.Equals(input.EndDate))
@@ -2264,6 +2276,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.LocationType.GetHashCode();
                 if (this.MediaType != null)
                     hashCode = hashCode * 59 + this.MediaType.GetHashCode();
+                if (this.MimeType != null)
+                    hashCode = hashCode * 59 + this.MimeType.GetHashCode();
                 if (this.EndDate != null)
                     hashCode = hashCode * 59 + this.EndDate.GetHashCode();
                 if (this.LockedFields != null)

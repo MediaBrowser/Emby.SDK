@@ -31,7 +31,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The BaseItemDto model module.
 * @module model/BaseItemDto
-* @version 4.10.0.27
+* @version 4.10.0.28
 */
 export default class BaseItemDto {
     /**
@@ -397,6 +397,9 @@ export default class BaseItemDto {
             }
             if (data.hasOwnProperty('MediaType')) {
                 obj['MediaType'] = ApiClient.convertToType(data['MediaType'], 'String');
+            }
+            if (data.hasOwnProperty('MimeType')) {
+                obj['MimeType'] = ApiClient.convertToType(data['MimeType'], 'String');
             }
             if (data.hasOwnProperty('EndDate')) {
                 obj['EndDate'] = ApiClient.convertToType(data['EndDate'], 'Date');
@@ -1071,6 +1074,10 @@ export default class BaseItemDto {
     * @member {String} MediaType
     */
     'MediaType' = undefined;
+    /**
+    * @member {String} MimeType
+    */
+    'MimeType' = undefined;
     /**
     * The end date.
     * @member {Date} EndDate

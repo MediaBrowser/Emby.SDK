@@ -194,6 +194,7 @@ type BaseItemDto struct {
 	LocationType *LocationType `json:"LocationType,omitempty"`
 	// The type of the media.
 	MediaType string `json:"MediaType,omitempty"`
+	MimeType string `json:"MimeType,omitempty"`
 	// The end date.
 	EndDate time.Time `json:"EndDate,omitempty"`
 	// The locked fields.

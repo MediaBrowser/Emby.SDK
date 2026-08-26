@@ -309,6 +309,18 @@ namespace Emby.ApiClient.Model
         public string ServerId { get; set; }
 
         /// <summary>
+        /// Gets or Sets MimeType
+        /// </summary>
+        /// <value>The MimeType.</value>
+        public string MimeType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TranscodingMimeType
+        /// </summary>
+        /// <value>The TranscodingMimeType.</value>
+        public string TranscodingMimeType { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -363,6 +375,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  DefaultSubtitleStreamIndex: ").Append(DefaultSubtitleStreamIndex).Append("\n");
             sb.Append("  ItemId: ").Append(ItemId).Append("\n");
             sb.Append("  ServerId: ").Append(ServerId).Append("\n");
+            sb.Append("  MimeType: ").Append(MimeType).Append("\n");
+            sb.Append("  TranscodingMimeType: ").Append(TranscodingMimeType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -626,6 +640,16 @@ namespace Emby.ApiClient.Model
                     this.ServerId == input.ServerId ||
                     (this.ServerId != null &&
                     this.ServerId.Equals(input.ServerId))
+                ) && 
+                (
+                    this.MimeType == input.MimeType ||
+                    (this.MimeType != null &&
+                    this.MimeType.Equals(input.MimeType))
+                ) && 
+                (
+                    this.TranscodingMimeType == input.TranscodingMimeType ||
+                    (this.TranscodingMimeType != null &&
+                    this.TranscodingMimeType.Equals(input.TranscodingMimeType))
                 );
         }
 
@@ -732,6 +756,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.ItemId.GetHashCode();
                 if (this.ServerId != null)
                     hashCode = hashCode * 59 + this.ServerId.GetHashCode();
+                if (this.MimeType != null)
+                    hashCode = hashCode * 59 + this.MimeType.GetHashCode();
+                if (this.TranscodingMimeType != null)
+                    hashCode = hashCode * 59 + this.TranscodingMimeType.GetHashCode();
                 return hashCode;
             }
         }

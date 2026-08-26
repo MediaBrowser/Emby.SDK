@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.27"
+    "version": "4.10.0.28"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -73717,6 +73717,9 @@
           "description": "The type of the media.",
           "type": "string"
         },
+        "MimeType": {
+          "type": "string"
+        },
         "EndDate": {
           "format": "date-time",
           "description": "The end date.",
@@ -74112,6 +74115,12 @@
         },
         "ServerId": {
           "description": "Used only by our Windows app. Not used by Emby Server.",
+          "type": "string"
+        },
+        "MimeType": {
+          "type": "string"
+        },
+        "TranscodingMimeType": {
           "type": "string"
         }
       },

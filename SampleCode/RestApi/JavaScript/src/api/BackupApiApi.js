@@ -17,7 +17,7 @@ import MBBackupApiRestoreOptions from '../model/MBBackupApiRestoreOptions';
 /**
 * BackupApi service.
 * @module api/BackupApiApi
-* @version 4.10.0.27
+* @version 4.10.0.28
 */
 export default class BackupApiApi {
 

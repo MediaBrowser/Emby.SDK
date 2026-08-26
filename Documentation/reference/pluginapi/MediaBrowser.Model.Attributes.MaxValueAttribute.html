@@ -11,16 +11,17 @@
     <meta name="title" content="Class MaxValueAttribute
    ">
     <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="theme-color" content="#090d0f">
     
     <link rel="shortcut icon" href="../../favicon.ico">
+    <script type="text/javascript" src="../../styles/theme-config.js"></script>
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
-    <link rel="stylesheet" href="../../styles/socialbar.css">
     <link rel="stylesheet" href="../../styles/header.css">
     <link rel="stylesheet" href="../../styles/version.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../styles/theme.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
     <meta property="docfx:uid" content="MediaBrowser.Model.Attributes.MaxValueAttribute">
@@ -32,101 +33,57 @@
   
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
-      <header>
-        
-        <div class="mb-socials-heading" style="height: 40px;">
-        	<div class="mb-socials-heading-inner container">
-        		<div class="mb-socials-heading-right">
-        			<div class="mb-socials-list">
-                          
-        				<div class="mb-socials-item facebook">
-        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
-        					<div class="mb-socials-item-popup">
-        						<span>Facebook</span>
-        					</div>
-        				</div><div class="mb-socials-item twitter">
-        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
-        					<div class="mb-socials-item-popup">
-        						<span>Twitter</span>
-        					</div>
-        				</div>
-        				<div class="mb-socials-item pinterest">
-        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
-        					<div class="mb-socials-item-popup">
-        						<span>Pinterest</span>
-        					</div>
-        				</div>
-        				<div class="mb-socials-item tumblr">
-        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
-        					<div class="mb-socials-item-popup">
-        						<span>Tumblr</span>
-        					</div>
-        				</div>
-        				<div class="mb-socials-item github">
-        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
-        					<div class="mb-socials-item-popup">
-        						<span>GitHub</span>
-        					</div>
-        				</div><div class="mb-socials-item rss">
-        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
-        					<div class="mb-socials-item-popup">
-        						<span>RSS</span>
-        					</div>
-        				</div>
-                          
-        			</div>
-        		</div>
-        	</div>
-        </div>
-        <div class="container">
-        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-        		  
-        		  <a class="navbar-brand" href="../../index.html">
-        		    <img id="logo" class="svg" src="../../images/emby_dev_logo_beta.png" alt="">
-        		  </a>
-        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-        			<span class="sr-only">Toggle navigation</span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-        		  </button>
-        		<div class="collapse navbar-collapse" id="navbar">
-        			
-        			<ul class="nav level1 navbar-nav">
-        			      <li class="nav-item">
-        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
-        			      </li>
-        			      <li class="nav-item">
-        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
-        			      </li>
-        			      <li class="nav-item">
-        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
-        			      </li>
-        			      <li class="nav-item">
-        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
-        			      </li>
-        			</ul>		</div>
-        	</nav>
-        </div>
-        <div class="nav-overlay d-none"></div>        
-        <div class="subnav navbar navbar-default">
-          <div class="container">
-            <div class="hide-when-search" id="breadcrumb">
-        	  <ul class="breadcrumb">
-        		<li></li>
-        	  </ul>
-        	</div>
-        
-        	<div class="breadcrumpsearch">
-        	  <form class="navbar-form navbar-right" role="search" id="search">
-        		<div class="form-group">
-        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-        		</div>
-        	  </form>
-        	</div>
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="../../index.html" aria-label="Emby Developer home">
+            
+      <img class="logo-on-dark" src="../../images/emby_dev_logo_beta.png" alt="Emby Developer">
+      <img class="logo-on-light" src="../../images/emby_dev_logo_black.png" alt="Emby Developer">
+          </a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list">
+                
+                    <li><a href="../../index.html" title="DEV Home">DEV Home</a></li>
+                    <li><a href="../../doc/index.html" title="Documentation">Documentation</a></li>
+                    <li><a href="../../reference/index.html" title="Reference">Reference</a></li>
+                    <li><a href="../../download/index.html" title="Download">Download</a></li>
+            </ul>
           </div>
-        </div>
+        </nav>
       </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <div class="hide-when-search" id="breadcrumb">
+      	  <ul class="breadcrumb">
+      		<li></li>
+      	  </ul>
+      	</div>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
       <div class="container body-content">
         
         <div id="search-results">

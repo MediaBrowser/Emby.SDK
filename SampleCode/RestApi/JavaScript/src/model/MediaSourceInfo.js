@@ -20,7 +20,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The MediaSourceInfo model module.
 * @module model/MediaSourceInfo
-* @version 4.10.0.27
+* @version 4.10.0.28
 */
 export default class MediaSourceInfo {
     /**
@@ -187,6 +187,12 @@ export default class MediaSourceInfo {
             }
             if (data.hasOwnProperty('ServerId')) {
                 obj['ServerId'] = ApiClient.convertToType(data['ServerId'], 'String');
+            }
+            if (data.hasOwnProperty('MimeType')) {
+                obj['MimeType'] = ApiClient.convertToType(data['MimeType'], 'String');
+            }
+            if (data.hasOwnProperty('TranscodingMimeType')) {
+                obj['TranscodingMimeType'] = ApiClient.convertToType(data['TranscodingMimeType'], 'String');
             }
         }
         return obj;
@@ -383,6 +389,14 @@ export default class MediaSourceInfo {
     * @member {String} ServerId
     */
     'ServerId' = undefined;
+    /**
+    * @member {String} MimeType
+    */
+    'MimeType' = undefined;
+    /**
+    * @member {String} TranscodingMimeType
+    */
+    'TranscodingMimeType' = undefined;
 
 
 

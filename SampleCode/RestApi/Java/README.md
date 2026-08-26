@@ -1,7 +1,7 @@
 # embyclient
 
 Emby Server REST API (BETA)
-- API version: 4.10.0.27
+- API version: 4.10.0.28
 
 Explore the Emby Server API
 
@@ -37,7 +37,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>media.emby</groupId>
   <artifactId>embyclient</artifactId>
-  <version>4.10.0.27</version>
+  <version>4.10.0.28</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -47,7 +47,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "media.emby:embyclient:4.10.0.27"
+compile "media.emby:embyclient:4.10.0.28"
 ```
 
 ### Others
@@ -60,7 +60,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/embyclient-4.10.0.27.jar`
+* `target/embyclient-4.10.0.28.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
