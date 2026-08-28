@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.28
+ * OpenAPI spec version: 4.10.0.29
  * 
  *
  * NOTE: This file is auto generated.
@@ -5918,12 +5918,6 @@ export interface LibraryRemoveVirtualFolder {
      * @memberof LibraryRemoveVirtualFolder
      */
     Id?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof LibraryRemoveVirtualFolder
-     */
-    RefreshLibrary?: boolean;
 }
 /**
  * 

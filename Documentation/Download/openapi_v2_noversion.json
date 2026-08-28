@@ -83093,9 +83093,6 @@
       "properties": {
         "Id": {
           "type": "string"
-        },
-        "RefreshLibrary": {
-          "type": "boolean"
         }
       },
       "x-internal-ref-name": "Emby.Api.Library.RemoveVirtualFolder"

@@ -8312,7 +8312,7 @@
   "reference/RestAPI/LibraryStructureService/postLibraryVirtualfoldersDelete.html": {
     "href": "reference/RestAPI/LibraryStructureService/postLibraryVirtualfoldersDelete.html",
     "title": "postLibraryVirtualfoldersDelete",
-    "keywords": "postLibraryVirtualfoldersDelete Requires authentication as administrator postLibraryVirtualfoldersDelete Request post /Library/VirtualFolders/Delete Parameters Name In Type Default Notes *body body RemoveVirtualFolder RemoveVirtualFolder Responses Status Code Type Description Samples 200 Operation successful. Empty response. 400 Bad Request. Server cannot process request. 401 Unauthorized. Client needs to authenticate. 403 Forbidden. No permission for the reqested operation. 404 Resource not found or unavailable. 500 Server error. Definitions RemoveVirtualFolder Emby.Api.Library.RemoveVirtualFolder Name Type Notes Id string RefreshLibrary boolean"
+    "keywords": "postLibraryVirtualfoldersDelete Requires authentication as administrator postLibraryVirtualfoldersDelete Request post /Library/VirtualFolders/Delete Parameters Name In Type Default Notes *body body RemoveVirtualFolder RemoveVirtualFolder Responses Status Code Type Description Samples 200 Operation successful. Empty response. 400 Bad Request. Server cannot process request. 401 Unauthorized. Client needs to authenticate. 403 Forbidden. No permission for the reqested operation. 404 Resource not found or unavailable. 500 Server error. Definitions RemoveVirtualFolder Emby.Api.Library.RemoveVirtualFolder Name Type Notes Id string"
   },
   "reference/RestAPI/LibraryStructureService/postLibraryVirtualfoldersLibraryoptions.html": {
     "href": "reference/RestAPI/LibraryStructureService/postLibraryVirtualfoldersLibraryoptions.html",

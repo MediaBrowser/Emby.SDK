@@ -33,12 +33,6 @@ namespace Emby.ApiClient.Model
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets RefreshLibrary
-        /// </summary>
-        /// <value>The RefreshLibrary.</value>
-        public bool? RefreshLibrary { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -47,7 +41,6 @@ namespace Emby.ApiClient.Model
             var sb = new StringBuilder();
             sb.Append("class LibraryRemoveVirtualFolder {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  RefreshLibrary: ").Append(RefreshLibrary).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -77,11 +70,6 @@ namespace Emby.ApiClient.Model
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
-                ) && 
-                (
-                    this.RefreshLibrary == input.RefreshLibrary ||
-                    (this.RefreshLibrary != null &&
-                    this.RefreshLibrary.Equals(input.RefreshLibrary))
                 );
         }
 
@@ -96,8 +84,6 @@ namespace Emby.ApiClient.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.RefreshLibrary != null)
-                    hashCode = hashCode * 59 + this.RefreshLibrary.GetHashCode();
                 return hashCode;
             }
         }

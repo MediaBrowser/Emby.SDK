@@ -22,24 +22,19 @@ class LibraryRemoveVirtualFolder(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'refresh_library': 'bool'
+        'id': 'str'
     }
 
     attribute_map = {
-        'id': 'Id',
-        'refresh_library': 'RefreshLibrary'
+        'id': 'Id'
     }
 
-    def __init__(self, id=None, refresh_library=None):  # noqa: E501
+    def __init__(self, id=None):  # noqa: E501
         """LibraryRemoveVirtualFolder - a model defined in Swagger"""  # noqa: E501
         self._id = None
-        self._refresh_library = None
         self.discriminator = None
         if id is not None:
             self.id = id
-        if refresh_library is not None:
-            self.refresh_library = refresh_library
 
     @property
     def id(self):
@@ -61,27 +56,6 @@ class LibraryRemoveVirtualFolder(object):
         """
 
         self._id = id
-
-    @property
-    def refresh_library(self):
-        """Gets the refresh_library of this LibraryRemoveVirtualFolder.  # noqa: E501
-
-
-        :return: The refresh_library of this LibraryRemoveVirtualFolder.  # noqa: E501
-        :rtype: bool
-        """
-        return self._refresh_library
-
-    @refresh_library.setter
-    def refresh_library(self, refresh_library):
-        """Sets the refresh_library of this LibraryRemoveVirtualFolder.
-
-
-        :param refresh_library: The refresh_library of this LibraryRemoveVirtualFolder.  # noqa: E501
-        :type: bool
-        """
-
-        self._refresh_library = refresh_library
 
     def to_dict(self):
         """Returns the model properties as a dict"""

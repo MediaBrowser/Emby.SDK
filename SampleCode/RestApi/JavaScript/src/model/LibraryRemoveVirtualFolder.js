@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LibraryRemoveVirtualFolder model module.
 * @module model/LibraryRemoveVirtualFolder
-* @version 4.10.0.28
+* @version 4.10.0.29
 */
 export default class LibraryRemoveVirtualFolder {
     /**
@@ -44,9 +44,6 @@ export default class LibraryRemoveVirtualFolder {
             if (data.hasOwnProperty('Id')) {
                 obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
             }
-            if (data.hasOwnProperty('RefreshLibrary')) {
-                obj['RefreshLibrary'] = ApiClient.convertToType(data['RefreshLibrary'], 'Boolean');
-            }
         }
         return obj;
     }
@@ -55,10 +52,6 @@ export default class LibraryRemoveVirtualFolder {
     * @member {String} Id
     */
     'Id' = undefined;
-    /**
-    * @member {Boolean} RefreshLibrary
-    */
-    'RefreshLibrary' = undefined;
 
 
 

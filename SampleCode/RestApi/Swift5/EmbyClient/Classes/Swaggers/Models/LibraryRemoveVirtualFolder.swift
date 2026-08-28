@@ -12,16 +12,13 @@ import Foundation
 public struct LibraryRemoveVirtualFolder: Codable {
 
     public var _id: String?
-    public var refreshLibrary: Bool?
 
-    public init(_id: String? = nil, refreshLibrary: Bool? = nil) {
+    public init(_id: String? = nil) {
         self._id = _id
-        self.refreshLibrary = refreshLibrary
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "Id"
-        case refreshLibrary = "RefreshLibrary"
     }
 
 }

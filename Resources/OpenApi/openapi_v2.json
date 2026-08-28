@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.28"
+    "version": "4.10.0.29"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -83095,9 +83095,6 @@
       "properties": {
         "Id": {
           "type": "string"
-        },
-        "RefreshLibrary": {
-          "type": "boolean"
         }
       },
       "x-internal-ref-name": "Emby.Api.Library.RemoveVirtualFolder"
