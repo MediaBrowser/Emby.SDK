@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ParentalRating model module.
 * @module model/ParentalRating
-* @version 4.10.0.29
+* @version 4.10.0.30
 */
 export default class ParentalRating {
     /**
