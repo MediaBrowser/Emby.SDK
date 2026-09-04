@@ -30,7 +30,7 @@ import UserPolicy from '../model/UserPolicy';
 /**
 * UserService service.
 * @module api/UserServiceApi
-* @version 4.10.0.30
+* @version 4.10.0.31
 */
 export default class UserServiceApi {
 
@@ -84,6 +84,49 @@ export default class UserServiceApi {
      */
     deleteUsersById() {
       return this.deleteUsersByIdWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Clears recently searched
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    deleteUsersByIdRecentlysearchedWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+        'Id': Id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{Id}/RecentlySearched', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Clears recently searched
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    deleteUsersByIdRecentlysearched() {
+      return this.deleteUsersByIdRecentlysearchedWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -796,6 +839,49 @@ export default class UserServiceApi {
      */
     postUsersByIdPolicy() {
       return this.postUsersByIdPolicyWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Clears recently searched
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    postUsersByIdRecentlysearchedDeleteWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+        'Id': Id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{Id}/RecentlySearched/Delete', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Clears recently searched
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    postUsersByIdRecentlysearchedDelete() {
+      return this.postUsersByIdRecentlysearchedDeleteWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

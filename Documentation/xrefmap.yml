@@ -21902,6 +21902,15 @@ references:
 - uid: emby.restapi/deleteUsersByIdImagesByTypeByIndex/operationlistitem
   name: deleteUsersByIdImagesByTypeByIndex
   href: reference/RestAPI/ImageService.html#emby_restapi_deleteUsersByIdImagesByTypeByIndex_operationlistitem
+- uid: emby.restapi/deleteUsersByIdRecentlysearched
+  name: deleteUsersByIdRecentlysearched
+  href: reference/RestAPI/UserService/deleteUsersByIdRecentlysearched.html
+- uid: emby.restapi/deleteUsersByIdRecentlysearched/operation
+  name: deleteUsersByIdRecentlysearched
+  href: reference/RestAPI/UserService/deleteUsersByIdRecentlysearched.html#emby_restapi_deleteUsersByIdRecentlysearched_operation
+- uid: emby.restapi/deleteUsersByIdRecentlysearched/operationlistitem
+  name: deleteUsersByIdRecentlysearched
+  href: reference/RestAPI/UserService.html#emby_restapi_deleteUsersByIdRecentlysearched_operationlistitem
 - uid: emby.restapi/deleteUsersByIdTrackselectionsByTracktype
   name: deleteUsersByIdTrackselectionsByTracktype
   href: reference/RestAPI/UserService/deleteUsersByIdTrackselectionsByTracktype.html
@@ -26285,6 +26294,15 @@ references:
 - uid: emby.restapi/postUsersByIdPolicy/operationlistitem
   name: postUsersByIdPolicy
   href: reference/RestAPI/UserService.html#emby_restapi_postUsersByIdPolicy_operationlistitem
+- uid: emby.restapi/postUsersByIdRecentlysearchedDelete
+  name: postUsersByIdRecentlysearchedDelete
+  href: reference/RestAPI/UserService/postUsersByIdRecentlysearchedDelete.html
+- uid: emby.restapi/postUsersByIdRecentlysearchedDelete/operation
+  name: postUsersByIdRecentlysearchedDelete
+  href: reference/RestAPI/UserService/postUsersByIdRecentlysearchedDelete.html#emby_restapi_postUsersByIdRecentlysearchedDelete_operation
+- uid: emby.restapi/postUsersByIdRecentlysearchedDelete/operationlistitem
+  name: postUsersByIdRecentlysearchedDelete
+  href: reference/RestAPI/UserService.html#emby_restapi_postUsersByIdRecentlysearchedDelete_operationlistitem
 - uid: emby.restapi/postUsersByIdTrackselectionsByTracktypeDelete
   name: postUsersByIdTrackselectionsByTracktypeDelete
   href: reference/RestAPI/UserService/postUsersByIdTrackselectionsByTracktypeDelete.html
@@ -82789,6 +82807,19 @@ references:
   commentId: T:MediaBrowser.Controller.Library.IUserDataManager
   fullName: MediaBrowser.Controller.Library.IUserDataManager
   nameWithType: IUserDataManager
+- uid: MediaBrowser.Controller.Library.IUserDataManager.ClearRecentlySearched(System.Int64)
+  name: ClearRecentlySearched(Int64)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserDataManager.html#MediaBrowser_Controller_Library_IUserDataManager_ClearRecentlySearched_System_Int64_
+  commentId: M:MediaBrowser.Controller.Library.IUserDataManager.ClearRecentlySearched(System.Int64)
+  fullName: MediaBrowser.Controller.Library.IUserDataManager.ClearRecentlySearched(System.Int64)
+  nameWithType: IUserDataManager.ClearRecentlySearched(Int64)
+- uid: MediaBrowser.Controller.Library.IUserDataManager.ClearRecentlySearched*
+  name: ClearRecentlySearched
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserDataManager.html#MediaBrowser_Controller_Library_IUserDataManager_ClearRecentlySearched_
+  commentId: Overload:MediaBrowser.Controller.Library.IUserDataManager.ClearRecentlySearched
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.IUserDataManager.ClearRecentlySearched
+  nameWithType: IUserDataManager.ClearRecentlySearched
 - uid: MediaBrowser.Controller.Library.IUserDataManager.ClearTrackSelections(System.Int64,MediaBrowser.Model.Entities.MediaStreamType)
   name: ClearTrackSelections(Int64, MediaStreamType)
   href: reference/pluginapi/MediaBrowser.Controller.Library.IUserDataManager.html#MediaBrowser_Controller_Library_IUserDataManager_ClearTrackSelections_System_Int64_MediaBrowser_Model_Entities_MediaStreamType_
@@ -96008,6 +96039,19 @@ references:
   commentId: T:MediaBrowser.Controller.Persistence.IUserDataRepository
   fullName: MediaBrowser.Controller.Persistence.IUserDataRepository
   nameWithType: IUserDataRepository
+- uid: MediaBrowser.Controller.Persistence.IUserDataRepository.ClearRecentlySearched(System.Int64)
+  name: ClearRecentlySearched(Int64)
+  href: reference/pluginapi/MediaBrowser.Controller.Persistence.IUserDataRepository.html#MediaBrowser_Controller_Persistence_IUserDataRepository_ClearRecentlySearched_System_Int64_
+  commentId: M:MediaBrowser.Controller.Persistence.IUserDataRepository.ClearRecentlySearched(System.Int64)
+  fullName: MediaBrowser.Controller.Persistence.IUserDataRepository.ClearRecentlySearched(System.Int64)
+  nameWithType: IUserDataRepository.ClearRecentlySearched(Int64)
+- uid: MediaBrowser.Controller.Persistence.IUserDataRepository.ClearRecentlySearched*
+  name: ClearRecentlySearched
+  href: reference/pluginapi/MediaBrowser.Controller.Persistence.IUserDataRepository.html#MediaBrowser_Controller_Persistence_IUserDataRepository_ClearRecentlySearched_
+  commentId: Overload:MediaBrowser.Controller.Persistence.IUserDataRepository.ClearRecentlySearched
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Persistence.IUserDataRepository.ClearRecentlySearched
+  nameWithType: IUserDataRepository.ClearRecentlySearched
 - uid: MediaBrowser.Controller.Persistence.IUserDataRepository.ClearTrackSelections(System.Int64,MediaBrowser.Model.Entities.MediaStreamType)
   name: ClearTrackSelections(Int64, MediaStreamType)
   href: reference/pluginapi/MediaBrowser.Controller.Persistence.IUserDataRepository.html#MediaBrowser_Controller_Persistence_IUserDataRepository_ClearTrackSelections_System_Int64_MediaBrowser_Model_Entities_MediaStreamType_

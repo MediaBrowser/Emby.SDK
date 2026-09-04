@@ -69,6 +69,34 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Clears recently searched
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> DeleteUsersByIdRecentlysearched (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling UserServiceApi->DeleteUsersByIdRecentlysearched");
+            }
+            
+            var request = new RestRequest("/Users/{Id}/RecentlySearched", Method.Delete);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
@@ -667,6 +695,34 @@ namespace Emby.ApiClient.Api
                 request.AddJsonBody(body);
             }
             
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Clears recently searched
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostUsersByIdRecentlysearchedDelete (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling UserServiceApi->PostUsersByIdRecentlysearchedDelete");
+            }
+            
+            var request = new RestRequest("/Users/{Id}/RecentlySearched/Delete", Method.Post);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
             // make the HTTP request
             var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
             return localVarResponse;

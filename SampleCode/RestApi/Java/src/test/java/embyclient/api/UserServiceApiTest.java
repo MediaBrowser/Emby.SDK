@@ -55,6 +55,21 @@ public class UserServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Clears recently searched
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void deleteUsersByIdRecentlysearchedTest() throws Exception {
+        String id = null;
+        api.deleteUsersByIdRecentlysearched(id);
+
+        // TODO: test validations
+    }
+    /**
      * Clears audio or subtitle track selections for a user
      *
      * Requires authentication as user
@@ -313,6 +328,21 @@ public class UserServiceApiTest {
         UserPolicy body = null;
         String id = null;
         api.postUsersByIdPolicy(body, id);
+
+        // TODO: test validations
+    }
+    /**
+     * Clears recently searched
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersByIdRecentlysearchedDeleteTest() throws Exception {
+        String id = null;
+        api.postUsersByIdRecentlysearchedDelete(id);
 
         // TODO: test validations
     }

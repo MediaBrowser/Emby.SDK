@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.10.0.30"
+    "version": "4.10.0.31"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -55592,6 +55592,54 @@
       },
       "x-summary": "Deletes a user"
     },
+    "/Users/{Id}/RecentlySearched": {
+      "delete": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Clears recently searched",
+        "description": "Requires authentication as user",
+        "operationId": "deleteUsersByIdRecentlysearched",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Clears recently searched"
+    },
     "/Users/{Id}/Authenticate": {
       "post": {
         "tags": [
@@ -63908,6 +63956,54 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Clears audio or subtitle track selections for a user"
+    },
+    "/Users/{Id}/RecentlySearched/Delete": {
+      "post": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Clears recently searched",
+        "description": "Requires authentication as user",
+        "operationId": "postUsersByIdRecentlysearchedDelete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Clears recently searched"
     },
     "/Users/{Id}/Configuration/Partial": {
       "post": {

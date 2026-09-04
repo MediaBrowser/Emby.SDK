@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.10.0.30
+ * OpenAPI spec version: 4.10.0.31
  * 
  *
  * NOTE: This file is auto generated.
@@ -9563,6 +9563,10 @@ describe("UserServiceApi", () => {
     const Id: string = "Id_example"
     return expect(instance.deleteUsersById(Id, {})).resolves.toBe(null)
   })
+  test("deleteUsersByIdRecentlysearched", () => {
+    const Id: string = "Id_example"
+    return expect(instance.deleteUsersByIdRecentlysearched(Id, {})).resolves.toBe(null)
+  })
   test("deleteUsersByIdTrackselectionsByTracktype", () => {
     const Id: string = "Id_example"
     const TrackType: string = "TrackType_example"
@@ -9648,6 +9652,10 @@ describe("UserServiceApi", () => {
     const body: api.UserPolicy = undefined
     const Id: string = "Id_example"
     return expect(instance.postUsersByIdPolicy(body, Id, {})).resolves.toBe(null)
+  })
+  test("postUsersByIdRecentlysearchedDelete", () => {
+    const Id: string = "Id_example"
+    return expect(instance.postUsersByIdRecentlysearchedDelete(Id, {})).resolves.toBe(null)
   })
   test("postUsersByIdTrackselectionsByTracktypeDelete", () => {
     const Id: string = "Id_example"
