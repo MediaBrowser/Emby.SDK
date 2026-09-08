@@ -24,7 +24,7 @@ class CreateUserByName(object):
     swagger_types = {
         'name': 'str',
         'copy_from_user_id': 'str',
-        'user_copy_options': 'list[LibraryUserCopyOptions]'
+        'user_copy_options': 'list[str]'
     }
 
     attribute_map = {
@@ -94,7 +94,7 @@ class CreateUserByName(object):
 
 
         :return: The user_copy_options of this CreateUserByName.  # noqa: E501
-        :rtype: list[LibraryUserCopyOptions]
+        :rtype: list[str]
         """
         return self._user_copy_options
 
@@ -104,7 +104,7 @@ class CreateUserByName(object):
 
 
         :param user_copy_options: The user_copy_options of this CreateUserByName.  # noqa: E501
-        :type: list[LibraryUserCopyOptions]
+        :type: list[str]
         """
 
         self._user_copy_options = user_copy_options

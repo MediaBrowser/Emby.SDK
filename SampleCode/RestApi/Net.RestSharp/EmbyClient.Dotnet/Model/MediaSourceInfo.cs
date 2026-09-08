@@ -73,7 +73,9 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="defaultSubtitleStreamIndex">defaultSubtitleStreamIndex.</param>
         /// <param name="itemId">Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi.</param>
         /// <param name="serverId">Used only by our Windows app. Not used by Emby Server..</param>
-        public MediaSourceInfo(List<ChapterInfo> chapters = default(List<ChapterInfo>), MediaProtocol protocol = default(MediaProtocol), string id = default(string), string path = default(string), string encoderPath = default(string), MediaProtocol encoderProtocol = default(MediaProtocol), MediaSourceType type = default(MediaSourceType), string probePath = default(string), MediaProtocol probeProtocol = default(MediaProtocol), string container = default(string), long? size = default(long?), string name = default(string), string sortName = default(string), bool? isRemote = default(bool?), bool? hasMixedProtocols = default(bool?), long? runTimeTicks = default(long?), long? containerStartTimeTicks = default(long?), bool? supportsTranscoding = default(bool?), int? trancodeLiveStartIndex = default(int?), DateTimeOffset? wallClockStart = default(DateTimeOffset?), bool? supportsDirectStream = default(bool?), bool? supportsDirectPlay = default(bool?), bool? isInfiniteStream = default(bool?), bool? requiresOpening = default(bool?), string openToken = default(string), bool? requiresClosing = default(bool?), string liveStreamId = default(string), int? bufferMs = default(int?), bool? requiresLooping = default(bool?), bool? supportsProbing = default(bool?), Video3DFormat video3DFormat = default(Video3DFormat), List<MediaStream> mediaStreams = default(List<MediaStream>), List<string> formats = default(List<string>), int? bitrate = default(int?), TransportStreamTimestamp timestamp = default(TransportStreamTimestamp), Dictionary<string, string> requiredHttpHeaders = default(Dictionary<string, string>), string directStreamUrl = default(string), bool? addApiKeyToDirectStreamUrl = default(bool?), string transcodingUrl = default(string), string transcodingSubProtocol = default(string), string transcodingContainer = default(string), int? analyzeDurationMs = default(int?), bool? readAtNativeFramerate = default(bool?), int? defaultAudioStreamIndex = default(int?), int? defaultSubtitleStreamIndex = default(int?), string itemId = default(string), string serverId = default(string))
+        /// <param name="mimeType">mimeType.</param>
+        /// <param name="transcodingMimeType">transcodingMimeType.</param>
+        public MediaSourceInfo(List<ChapterInfo> chapters = default(List<ChapterInfo>), MediaProtocol protocol = default(MediaProtocol), string id = default(string), string path = default(string), string encoderPath = default(string), MediaProtocol encoderProtocol = default(MediaProtocol), MediaSourceType type = default(MediaSourceType), string probePath = default(string), MediaProtocol probeProtocol = default(MediaProtocol), string container = default(string), long? size = default(long?), string name = default(string), string sortName = default(string), bool? isRemote = default(bool?), bool? hasMixedProtocols = default(bool?), long? runTimeTicks = default(long?), long? containerStartTimeTicks = default(long?), bool? supportsTranscoding = default(bool?), int? trancodeLiveStartIndex = default(int?), DateTimeOffset? wallClockStart = default(DateTimeOffset?), bool? supportsDirectStream = default(bool?), bool? supportsDirectPlay = default(bool?), bool? isInfiniteStream = default(bool?), bool? requiresOpening = default(bool?), string openToken = default(string), bool? requiresClosing = default(bool?), string liveStreamId = default(string), int? bufferMs = default(int?), bool? requiresLooping = default(bool?), bool? supportsProbing = default(bool?), Video3DFormat video3DFormat = default(Video3DFormat), List<MediaStream> mediaStreams = default(List<MediaStream>), List<string> formats = default(List<string>), int? bitrate = default(int?), TransportStreamTimestamp timestamp = default(TransportStreamTimestamp), Dictionary<string, string> requiredHttpHeaders = default(Dictionary<string, string>), string directStreamUrl = default(string), bool? addApiKeyToDirectStreamUrl = default(bool?), string transcodingUrl = default(string), string transcodingSubProtocol = default(string), string transcodingContainer = default(string), int? analyzeDurationMs = default(int?), bool? readAtNativeFramerate = default(bool?), int? defaultAudioStreamIndex = default(int?), int? defaultSubtitleStreamIndex = default(int?), string itemId = default(string), string serverId = default(string), string mimeType = default(string), string transcodingMimeType = default(string))
         {
             this.Chapters = chapters;
             this.Protocol = protocol;
@@ -122,6 +124,8 @@ namespace EmbyClient.Dotnet.Model
             this.DefaultSubtitleStreamIndex = defaultSubtitleStreamIndex;
             this.ItemId = itemId;
             this.ServerId = serverId;
+            this.MimeType = mimeType;
+            this.TranscodingMimeType = transcodingMimeType;
         }
         
         /// <summary>
@@ -410,6 +414,18 @@ namespace EmbyClient.Dotnet.Model
         public string ServerId { get; set; }
 
         /// <summary>
+        /// Gets or Sets MimeType
+        /// </summary>
+        [DataMember(Name="MimeType", EmitDefaultValue=false)]
+        public string MimeType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TranscodingMimeType
+        /// </summary>
+        [DataMember(Name="TranscodingMimeType", EmitDefaultValue=false)]
+        public string TranscodingMimeType { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -464,6 +480,8 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  DefaultSubtitleStreamIndex: ").Append(DefaultSubtitleStreamIndex).Append("\n");
             sb.Append("  ItemId: ").Append(ItemId).Append("\n");
             sb.Append("  ServerId: ").Append(ServerId).Append("\n");
+            sb.Append("  MimeType: ").Append(MimeType).Append("\n");
+            sb.Append("  TranscodingMimeType: ").Append(TranscodingMimeType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -736,6 +754,16 @@ namespace EmbyClient.Dotnet.Model
                     this.ServerId == input.ServerId ||
                     (this.ServerId != null &&
                     this.ServerId.Equals(input.ServerId))
+                ) && 
+                (
+                    this.MimeType == input.MimeType ||
+                    (this.MimeType != null &&
+                    this.MimeType.Equals(input.MimeType))
+                ) && 
+                (
+                    this.TranscodingMimeType == input.TranscodingMimeType ||
+                    (this.TranscodingMimeType != null &&
+                    this.TranscodingMimeType.Equals(input.TranscodingMimeType))
                 );
         }
 
@@ -842,6 +870,10 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.ItemId.GetHashCode();
                 if (this.ServerId != null)
                     hashCode = hashCode * 59 + this.ServerId.GetHashCode();
+                if (this.MimeType != null)
+                    hashCode = hashCode * 59 + this.MimeType.GetHashCode();
+                if (this.TranscodingMimeType != null)
+                    hashCode = hashCode * 59 + this.TranscodingMimeType.GetHashCode();
                 return hashCode;
             }
         }

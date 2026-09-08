@@ -447,6 +447,12 @@ namespace Emby.ApiClient.Model
         public List<NameLongIdPair> TagItems { get; set; }
 
         /// <summary>
+        /// Gets or Sets Collections
+        /// </summary>
+        /// <value>The Collections.</value>
+        public List<NameLongIdPair> Collections { get; set; }
+
+        /// <summary>
         /// If the item does not have a logo, this will hold the Id of the Parent that has one.
         /// </summary>
         /// <value>The ParentLogoItemId.</value>
@@ -697,6 +703,12 @@ namespace Emby.ApiClient.Model
         /// </summary>
         /// <value>The MediaType.</value>
         public string MediaType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MimeType
+        /// </summary>
+        /// <value>The MimeType.</value>
+        public string MimeType { get; set; }
 
         /// <summary>
         /// The end date.
@@ -1070,6 +1082,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  Studios: ").Append(Studios).Append("\n");
             sb.Append("  GenreItems: ").Append(GenreItems).Append("\n");
             sb.Append("  TagItems: ").Append(TagItems).Append("\n");
+            sb.Append("  Collections: ").Append(Collections).Append("\n");
             sb.Append("  ParentLogoItemId: ").Append(ParentLogoItemId).Append("\n");
             sb.Append("  ParentBackdropItemId: ").Append(ParentBackdropItemId).Append("\n");
             sb.Append("  ParentBackdropImageTags: ").Append(ParentBackdropImageTags).Append("\n");
@@ -1112,6 +1125,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  Chapters: ").Append(Chapters).Append("\n");
             sb.Append("  LocationType: ").Append(LocationType).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  MimeType: ").Append(MimeType).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  LockedFields: ").Append(LockedFields).Append("\n");
             sb.Append("  LockData: ").Append(LockData).Append("\n");
@@ -1547,6 +1561,12 @@ namespace Emby.ApiClient.Model
                     this.TagItems.SequenceEqual(input.TagItems)
                 ) && 
                 (
+                    this.Collections == input.Collections ||
+                    this.Collections != null &&
+                    input.Collections != null &&
+                    this.Collections.SequenceEqual(input.Collections)
+                ) && 
+                (
                     this.ParentLogoItemId == input.ParentLogoItemId ||
                     (this.ParentLogoItemId != null &&
                     this.ParentLogoItemId.Equals(input.ParentLogoItemId))
@@ -1766,6 +1786,11 @@ namespace Emby.ApiClient.Model
                     this.MediaType == input.MediaType ||
                     (this.MediaType != null &&
                     this.MediaType.Equals(input.MediaType))
+                ) && 
+                (
+                    this.MimeType == input.MimeType ||
+                    (this.MimeType != null &&
+                    this.MimeType.Equals(input.MimeType))
                 ) && 
                 (
                     this.EndDate == input.EndDate ||
@@ -2165,6 +2190,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.GenreItems.GetHashCode();
                 if (this.TagItems != null)
                     hashCode = hashCode * 59 + this.TagItems.GetHashCode();
+                if (this.Collections != null)
+                    hashCode = hashCode * 59 + this.Collections.GetHashCode();
                 if (this.ParentLogoItemId != null)
                     hashCode = hashCode * 59 + this.ParentLogoItemId.GetHashCode();
                 if (this.ParentBackdropItemId != null)
@@ -2249,6 +2276,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.LocationType.GetHashCode();
                 if (this.MediaType != null)
                     hashCode = hashCode * 59 + this.MediaType.GetHashCode();
+                if (this.MimeType != null)
+                    hashCode = hashCode * 59 + this.MimeType.GetHashCode();
                 if (this.EndDate != null)
                     hashCode = hashCode * 59 + this.EndDate.GetHashCode();
                 if (this.LockedFields != null)

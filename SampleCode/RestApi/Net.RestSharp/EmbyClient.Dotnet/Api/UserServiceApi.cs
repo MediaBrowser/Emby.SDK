@@ -40,6 +40,27 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteUsersByIdWithHttpInfo (string id);
         /// <summary>
+        /// Clears recently searched
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        void DeleteUsersByIdRecentlysearched (string id);
+
+        /// <summary>
+        /// Clears recently searched
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteUsersByIdRecentlysearchedWithHttpInfo (string id);
+        /// <summary>
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
@@ -106,6 +127,25 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="userId"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetUsersByUseridTypedsettingsByKeyWithHttpInfo (string key, string userId);
+        /// <summary>
+        /// Gets copy data options
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>LibraryFullUserCopyDataOptions</returns>
+        LibraryFullUserCopyDataOptions GetUsersCopydataoptions ();
+
+        /// <summary>
+        /// Gets copy data options
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of LibraryFullUserCopyDataOptions</returns>
+        ApiResponse<LibraryFullUserCopyDataOptions> GetUsersCopydataoptionsWithHttpInfo ();
         /// <summary>
         /// Gets a list of users
         /// </summary>
@@ -401,6 +441,27 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostUsersByIdPolicyWithHttpInfo (UserPolicy body, string id);
         /// <summary>
+        /// Clears recently searched
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        void PostUsersByIdRecentlysearchedDelete (string id);
+
+        /// <summary>
+        /// Clears recently searched
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostUsersByIdRecentlysearchedDeleteWithHttpInfo (string id);
+        /// <summary>
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
@@ -423,6 +484,29 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="trackType"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostUsersByIdTrackselectionsByTracktypeDeleteWithHttpInfo (string id, string trackType);
+        /// <summary>
+        /// Copies data from one user to another
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CopyData</param>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        void PostUsersByUseridCopydata (CopyData body, string userId);
+
+        /// <summary>
+        /// Copies data from one user to another
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CopyData</param>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostUsersByUseridCopydataWithHttpInfo (CopyData body, string userId);
         /// <summary>
         /// Updates a typed user setting
         /// </summary>
@@ -535,6 +619,27 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersByIdAsyncWithHttpInfo (string id);
         /// <summary>
+        /// Clears recently searched
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteUsersByIdRecentlysearchedAsync (string id);
+
+        /// <summary>
+        /// Clears recently searched
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersByIdRecentlysearchedAsyncWithHttpInfo (string id);
+        /// <summary>
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
@@ -601,6 +706,25 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="userId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo (string key, string userId);
+        /// <summary>
+        /// Gets copy data options
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of LibraryFullUserCopyDataOptions</returns>
+        System.Threading.Tasks.Task<LibraryFullUserCopyDataOptions> GetUsersCopydataoptionsAsync ();
+
+        /// <summary>
+        /// Gets copy data options
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (LibraryFullUserCopyDataOptions)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LibraryFullUserCopyDataOptions>> GetUsersCopydataoptionsAsyncWithHttpInfo ();
         /// <summary>
         /// Gets a list of users
         /// </summary>
@@ -896,6 +1020,27 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdPolicyAsyncWithHttpInfo (UserPolicy body, string id);
         /// <summary>
+        /// Clears recently searched
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostUsersByIdRecentlysearchedDeleteAsync (string id);
+
+        /// <summary>
+        /// Clears recently searched
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdRecentlysearchedDeleteAsyncWithHttpInfo (string id);
+        /// <summary>
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
@@ -918,6 +1063,29 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="trackType"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdTrackselectionsByTracktypeDeleteAsyncWithHttpInfo (string id, string trackType);
+        /// <summary>
+        /// Copies data from one user to another
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CopyData</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostUsersByUseridCopydataAsync (CopyData body, string userId);
+
+        /// <summary>
+        /// Copies data from one user to another
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CopyData</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridCopydataAsyncWithHttpInfo (CopyData body, string userId);
         /// <summary>
         /// Updates a typed user setting
         /// </summary>
@@ -1258,6 +1426,155 @@ namespace EmbyClient.Dotnet.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("DeleteUsersById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Clears recently searched Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public void DeleteUsersByIdRecentlysearched (string id)
+        {
+             DeleteUsersByIdRecentlysearchedWithHttpInfo(id);
+        }
+
+        /// <summary>
+        /// Clears recently searched Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteUsersByIdRecentlysearchedWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UserServiceApi->DeleteUsersByIdRecentlysearched");
+
+            var localVarPath = "/Users/{Id}/RecentlySearched";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteUsersByIdRecentlysearched", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Clears recently searched Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteUsersByIdRecentlysearchedAsync (string id)
+        {
+             await DeleteUsersByIdRecentlysearchedAsyncWithHttpInfo(id);
+
+        }
+
+        /// <summary>
+        /// Clears recently searched Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersByIdRecentlysearchedAsyncWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UserServiceApi->DeleteUsersByIdRecentlysearched");
+
+            var localVarPath = "/Users/{Id}/RecentlySearched";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteUsersByIdRecentlysearched", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1741,6 +2058,149 @@ namespace EmbyClient.Dotnet.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
+        }
+
+        /// <summary>
+        /// Gets copy data options Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>LibraryFullUserCopyDataOptions</returns>
+        public LibraryFullUserCopyDataOptions GetUsersCopydataoptions ()
+        {
+             ApiResponse<LibraryFullUserCopyDataOptions> localVarResponse = GetUsersCopydataoptionsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets copy data options Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of LibraryFullUserCopyDataOptions</returns>
+        public ApiResponse< LibraryFullUserCopyDataOptions > GetUsersCopydataoptionsWithHttpInfo ()
+        {
+
+            var localVarPath = "/Users/CopyDataOptions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUsersCopydataoptions", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LibraryFullUserCopyDataOptions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (LibraryFullUserCopyDataOptions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LibraryFullUserCopyDataOptions)));
+        }
+
+        /// <summary>
+        /// Gets copy data options Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of LibraryFullUserCopyDataOptions</returns>
+        public async System.Threading.Tasks.Task<LibraryFullUserCopyDataOptions> GetUsersCopydataoptionsAsync ()
+        {
+             ApiResponse<LibraryFullUserCopyDataOptions> localVarResponse = await GetUsersCopydataoptionsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets copy data options Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (LibraryFullUserCopyDataOptions)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LibraryFullUserCopyDataOptions>> GetUsersCopydataoptionsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/Users/CopyDataOptions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUsersCopydataoptions", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LibraryFullUserCopyDataOptions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (LibraryFullUserCopyDataOptions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LibraryFullUserCopyDataOptions)));
         }
 
         /// <summary>
@@ -3836,6 +4296,155 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
+        /// Clears recently searched Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public void PostUsersByIdRecentlysearchedDelete (string id)
+        {
+             PostUsersByIdRecentlysearchedDeleteWithHttpInfo(id);
+        }
+
+        /// <summary>
+        /// Clears recently searched Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostUsersByIdRecentlysearchedDeleteWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UserServiceApi->PostUsersByIdRecentlysearchedDelete");
+
+            var localVarPath = "/Users/{Id}/RecentlySearched/Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByIdRecentlysearchedDelete", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Clears recently searched Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostUsersByIdRecentlysearchedDeleteAsync (string id)
+        {
+             await PostUsersByIdRecentlysearchedDeleteAsyncWithHttpInfo(id);
+
+        }
+
+        /// <summary>
+        /// Clears recently searched Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdRecentlysearchedDeleteAsyncWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UserServiceApi->PostUsersByIdRecentlysearchedDelete");
+
+            var localVarPath = "/Users/{Id}/RecentlySearched/Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByIdRecentlysearchedDelete", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
         /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3988,6 +4597,185 @@ namespace EmbyClient.Dotnet.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("PostUsersByIdTrackselectionsByTracktypeDelete", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Copies data from one user to another Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CopyData</param>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public void PostUsersByUseridCopydata (CopyData body, string userId)
+        {
+             PostUsersByUseridCopydataWithHttpInfo(body, userId);
+        }
+
+        /// <summary>
+        /// Copies data from one user to another Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CopyData</param>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostUsersByUseridCopydataWithHttpInfo (CopyData body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserServiceApi->PostUsersByUseridCopydata");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserServiceApi->PostUsersByUseridCopydata");
+
+            var localVarPath = "/Users/{UserId}/CopyData";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByUseridCopydata", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Copies data from one user to another Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CopyData</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostUsersByUseridCopydataAsync (CopyData body, string userId)
+        {
+             await PostUsersByUseridCopydataAsyncWithHttpInfo(body, userId);
+
+        }
+
+        /// <summary>
+        /// Copies data from one user to another Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CopyData</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridCopydataAsyncWithHttpInfo (CopyData body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserServiceApi->PostUsersByUseridCopydata");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserServiceApi->PostUsersByUseridCopydata");
+
+            var localVarPath = "/Users/{UserId}/CopyData";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByUseridCopydata", localVarResponse);
                 if (exception != null) throw exception;
             }
 

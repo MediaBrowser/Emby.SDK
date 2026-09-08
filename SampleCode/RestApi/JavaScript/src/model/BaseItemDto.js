@@ -31,7 +31,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The BaseItemDto model module.
 * @module model/BaseItemDto
-* @version 4.9.5.0
+* @version 4.10.0.40
 */
 export default class BaseItemDto {
     /**
@@ -269,6 +269,9 @@ export default class BaseItemDto {
             if (data.hasOwnProperty('TagItems')) {
                 obj['TagItems'] = ApiClient.convertToType(data['TagItems'], [NameLongIdPair]);
             }
+            if (data.hasOwnProperty('Collections')) {
+                obj['Collections'] = ApiClient.convertToType(data['Collections'], [NameLongIdPair]);
+            }
             if (data.hasOwnProperty('ParentLogoItemId')) {
                 obj['ParentLogoItemId'] = ApiClient.convertToType(data['ParentLogoItemId'], 'String');
             }
@@ -394,6 +397,9 @@ export default class BaseItemDto {
             }
             if (data.hasOwnProperty('MediaType')) {
                 obj['MediaType'] = ApiClient.convertToType(data['MediaType'], 'String');
+            }
+            if (data.hasOwnProperty('MimeType')) {
+                obj['MimeType'] = ApiClient.convertToType(data['MimeType'], 'String');
             }
             if (data.hasOwnProperty('EndDate')) {
                 obj['EndDate'] = ApiClient.convertToType(data['EndDate'], 'Date');
@@ -861,6 +867,10 @@ export default class BaseItemDto {
     */
     'TagItems' = undefined;
     /**
+    * @member {Array.<module:model/NameLongIdPair>} Collections
+    */
+    'Collections' = undefined;
+    /**
     * If the item does not have a logo, this will hold the Id of the Parent that has one.
     * @member {String} ParentLogoItemId
     */
@@ -1064,6 +1074,10 @@ export default class BaseItemDto {
     * @member {String} MediaType
     */
     'MediaType' = undefined;
+    /**
+    * @member {String} MimeType
+    */
+    'MimeType' = undefined;
     /**
     * The end date.
     * @member {Date} EndDate

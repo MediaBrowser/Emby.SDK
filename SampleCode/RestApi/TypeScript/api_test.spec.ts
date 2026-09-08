@@ -2,7 +2,7 @@
  * Emby Server REST API
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.5.0
+ * OpenAPI spec version: 4.10.0.40
  * 
  *
  * NOTE: This file is auto generated.
@@ -611,6 +611,212 @@ describe("CollectionServiceApi", () => {
     const Id: string = "Id_example"
     return expect(instance.deleteCollectionsByIdItems(Ids, Id, {})).resolves.toBe(null)
   })
+  test("getCollectionsByIdMissing", () => {
+    const Id: string = "Id_example"
+    const ArtistType: string = "ArtistType_example"
+    const MaxOfficialRating: string = "MaxOfficialRating_example"
+    const HasThemeSong: boolean = true
+    const HasThemeVideo: boolean = true
+    const HasSubtitles: boolean = true
+    const HasSpecialFeature: boolean = true
+    const HasTrailer: boolean = true
+    const IsSpecialSeason: boolean = true
+    const AdjacentTo: string = "AdjacentTo_example"
+    const StartItemId: string = "StartItemId_example"
+    const MinIndexNumber: number = 56
+    const MinStartDate: Date = 2013-10-20T19:20:30+01:00
+    const MaxStartDate: Date = 2013-10-20T19:20:30+01:00
+    const MinEndDate: Date = 2013-10-20T19:20:30+01:00
+    const MaxEndDate: Date = 2013-10-20T19:20:30+01:00
+    const MinPlayers: number = 56
+    const MaxPlayers: number = 56
+    const ParentIndexNumber: number = 56
+    const HasParentalRating: boolean = true
+    const IsHD: boolean = true
+    const IsUnaired: boolean = true
+    const MinCommunityRating: number = 1.2
+    const MinCriticRating: number = 1.2
+    const AiredDuringSeason: number = 56
+    const MinPremiereDate: Date = 2013-10-20T19:20:30+01:00
+    const MinDateLastSaved: Date = 2013-10-20T19:20:30+01:00
+    const MinDateLastSavedForUser: Date = 2013-10-20T19:20:30+01:00
+    const MaxPremiereDate: Date = 2013-10-20T19:20:30+01:00
+    const HasOverview: boolean = true
+    const HasImdbId: boolean = true
+    const HasTmdbId: boolean = true
+    const HasTvdbId: boolean = true
+    const ExcludeItemIds: string = "ExcludeItemIds_example"
+    const StartIndex: number = 56
+    const Limit: number = 56
+    const Recursive: boolean = true
+    const SearchTerm: string = "SearchTerm_example"
+    const SortOrder: string = "SortOrder_example"
+    const ParentId: string = "ParentId_example"
+    const Fields: string = "Fields_example"
+    const ExcludeItemTypes: string = "ExcludeItemTypes_example"
+    const IncludeItemTypes: string = "IncludeItemTypes_example"
+    const AnyProviderIdEquals: string = "AnyProviderIdEquals_example"
+    const Filters: string = "Filters_example"
+    const IsFavorite: boolean = true
+    const IsMovie: boolean = true
+    const IsSeries: boolean = true
+    const IsFolder: boolean = true
+    const IsNews: boolean = true
+    const IsKids: boolean = true
+    const IsSports: boolean = true
+    const IsNew: boolean = true
+    const IsPremiere: boolean = true
+    const IsNewOrPremiere: boolean = true
+    const IsRepeat: boolean = true
+    const ProjectToMedia: boolean = true
+    const MediaTypes: string = "MediaTypes_example"
+    const ImageTypes: string = "ImageTypes_example"
+    const SortBy: string = "SortBy_example"
+    const IsPlayed: boolean = true
+    const Genres: string = "Genres_example"
+    const OfficialRatings: string = "OfficialRatings_example"
+    const Tags: string = "Tags_example"
+    const ExcludeTags: string = "ExcludeTags_example"
+    const Years: string = "Years_example"
+    const EnableImages: boolean = true
+    const EnableUserData: boolean = true
+    const ImageTypeLimit: number = 56
+    const EnableImageTypes: string = "EnableImageTypes_example"
+    const Person: string = "Person_example"
+    const PersonIds: string = "PersonIds_example"
+    const PersonTypes: string = "PersonTypes_example"
+    const Studios: string = "Studios_example"
+    const StudioIds: string = "StudioIds_example"
+    const Artists: string = "Artists_example"
+    const ArtistIds: string = "ArtistIds_example"
+    const Albums: string = "Albums_example"
+    const Ids: string = "Ids_example"
+    const VideoTypes: string = "VideoTypes_example"
+    const Containers: string = "Containers_example"
+    const AudioCodecs: string = "AudioCodecs_example"
+    const AudioLayouts: string = "AudioLayouts_example"
+    const VideoCodecs: string = "VideoCodecs_example"
+    const ExtendedVideoTypes: string = "ExtendedVideoTypes_example"
+    const SubtitleCodecs: string = "SubtitleCodecs_example"
+    const Path: string = "Path_example"
+    const UserId: string = "UserId_example"
+    const MinOfficialRating: string = "MinOfficialRating_example"
+    const IsLocked: boolean = true
+    const IsPlaceHolder: boolean = true
+    const HasOfficialRating: boolean = true
+    const GroupItemsIntoCollections: boolean = true
+    const Is3D: boolean = true
+    const SeriesStatus: string = "SeriesStatus_example"
+    const NameStartsWithOrGreater: string = "NameStartsWithOrGreater_example"
+    const ArtistStartsWithOrGreater: string = "ArtistStartsWithOrGreater_example"
+    const AlbumArtistStartsWithOrGreater: string = "AlbumArtistStartsWithOrGreater_example"
+    const NameStartsWith: string = "NameStartsWith_example"
+    const NameLessThan: string = "NameLessThan_example"
+    return expect(instance.getCollectionsByIdMissing(Id, ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, {})).resolves.toBe(null)
+  })
+  test("getCollectionsByIdProvideritems", () => {
+    const Id: string = "Id_example"
+    const ArtistType: string = "ArtistType_example"
+    const MaxOfficialRating: string = "MaxOfficialRating_example"
+    const HasThemeSong: boolean = true
+    const HasThemeVideo: boolean = true
+    const HasSubtitles: boolean = true
+    const HasSpecialFeature: boolean = true
+    const HasTrailer: boolean = true
+    const IsSpecialSeason: boolean = true
+    const AdjacentTo: string = "AdjacentTo_example"
+    const StartItemId: string = "StartItemId_example"
+    const MinIndexNumber: number = 56
+    const MinStartDate: Date = 2013-10-20T19:20:30+01:00
+    const MaxStartDate: Date = 2013-10-20T19:20:30+01:00
+    const MinEndDate: Date = 2013-10-20T19:20:30+01:00
+    const MaxEndDate: Date = 2013-10-20T19:20:30+01:00
+    const MinPlayers: number = 56
+    const MaxPlayers: number = 56
+    const ParentIndexNumber: number = 56
+    const HasParentalRating: boolean = true
+    const IsHD: boolean = true
+    const IsUnaired: boolean = true
+    const MinCommunityRating: number = 1.2
+    const MinCriticRating: number = 1.2
+    const AiredDuringSeason: number = 56
+    const MinPremiereDate: Date = 2013-10-20T19:20:30+01:00
+    const MinDateLastSaved: Date = 2013-10-20T19:20:30+01:00
+    const MinDateLastSavedForUser: Date = 2013-10-20T19:20:30+01:00
+    const MaxPremiereDate: Date = 2013-10-20T19:20:30+01:00
+    const HasOverview: boolean = true
+    const HasImdbId: boolean = true
+    const HasTmdbId: boolean = true
+    const HasTvdbId: boolean = true
+    const ExcludeItemIds: string = "ExcludeItemIds_example"
+    const StartIndex: number = 56
+    const Limit: number = 56
+    const Recursive: boolean = true
+    const SearchTerm: string = "SearchTerm_example"
+    const SortOrder: string = "SortOrder_example"
+    const ParentId: string = "ParentId_example"
+    const Fields: string = "Fields_example"
+    const ExcludeItemTypes: string = "ExcludeItemTypes_example"
+    const IncludeItemTypes: string = "IncludeItemTypes_example"
+    const AnyProviderIdEquals: string = "AnyProviderIdEquals_example"
+    const Filters: string = "Filters_example"
+    const IsFavorite: boolean = true
+    const IsMovie: boolean = true
+    const IsSeries: boolean = true
+    const IsFolder: boolean = true
+    const IsNews: boolean = true
+    const IsKids: boolean = true
+    const IsSports: boolean = true
+    const IsNew: boolean = true
+    const IsPremiere: boolean = true
+    const IsNewOrPremiere: boolean = true
+    const IsRepeat: boolean = true
+    const ProjectToMedia: boolean = true
+    const MediaTypes: string = "MediaTypes_example"
+    const ImageTypes: string = "ImageTypes_example"
+    const SortBy: string = "SortBy_example"
+    const IsPlayed: boolean = true
+    const Genres: string = "Genres_example"
+    const OfficialRatings: string = "OfficialRatings_example"
+    const Tags: string = "Tags_example"
+    const ExcludeTags: string = "ExcludeTags_example"
+    const Years: string = "Years_example"
+    const EnableImages: boolean = true
+    const EnableUserData: boolean = true
+    const ImageTypeLimit: number = 56
+    const EnableImageTypes: string = "EnableImageTypes_example"
+    const Person: string = "Person_example"
+    const PersonIds: string = "PersonIds_example"
+    const PersonTypes: string = "PersonTypes_example"
+    const Studios: string = "Studios_example"
+    const StudioIds: string = "StudioIds_example"
+    const Artists: string = "Artists_example"
+    const ArtistIds: string = "ArtistIds_example"
+    const Albums: string = "Albums_example"
+    const Ids: string = "Ids_example"
+    const VideoTypes: string = "VideoTypes_example"
+    const Containers: string = "Containers_example"
+    const AudioCodecs: string = "AudioCodecs_example"
+    const AudioLayouts: string = "AudioLayouts_example"
+    const VideoCodecs: string = "VideoCodecs_example"
+    const ExtendedVideoTypes: string = "ExtendedVideoTypes_example"
+    const SubtitleCodecs: string = "SubtitleCodecs_example"
+    const Path: string = "Path_example"
+    const UserId: string = "UserId_example"
+    const MinOfficialRating: string = "MinOfficialRating_example"
+    const IsLocked: boolean = true
+    const IsPlaceHolder: boolean = true
+    const HasOfficialRating: boolean = true
+    const GroupItemsIntoCollections: boolean = true
+    const Is3D: boolean = true
+    const SeriesStatus: string = "SeriesStatus_example"
+    const NameStartsWithOrGreater: string = "NameStartsWithOrGreater_example"
+    const ArtistStartsWithOrGreater: string = "ArtistStartsWithOrGreater_example"
+    const AlbumArtistStartsWithOrGreater: string = "AlbumArtistStartsWithOrGreater_example"
+    const NameStartsWith: string = "NameStartsWith_example"
+    const NameLessThan: string = "NameLessThan_example"
+    return expect(instance.getCollectionsByIdProvideritems(Id, ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, {})).resolves.toBe(null)
+  })
   test("postCollections", () => {
     const IsLocked: boolean = true
     const Name: string = "Name_example"
@@ -798,6 +1004,21 @@ describe("ContentServiceApi", () => {
     const NameStartsWith: string = "NameStartsWith_example"
     const NameLessThan: string = "NameLessThan_example"
     return expect(instance.getUsersByUseridSectionsBySectionidItems(SectionId, UserId, ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, {})).resolves.toBe(null)
+  })
+  test("postUsersByUseridHomesections", () => {
+    const body: api.ContentSection = undefined
+    const UserId: string = "UserId_example"
+    return expect(instance.postUsersByUseridHomesections(body, UserId, {})).resolves.toBe(null)
+  })
+  test("postUsersByUseridHomesectionsDelete", () => {
+    const body: api.UserLibraryDeleteHomeSections = undefined
+    const UserId: string = "UserId_example"
+    return expect(instance.postUsersByUseridHomesectionsDelete(body, UserId, {})).resolves.toBe(null)
+  })
+  test("postUsersByUseridHomesectionsMove", () => {
+    const body: api.UserLibraryMoveHomeSections = undefined
+    const UserId: string = "UserId_example"
+    return expect(instance.postUsersByUseridHomesectionsMove(body, UserId, {})).resolves.toBe(null)
   })
 })
 
@@ -5942,7 +6163,8 @@ describe("MediaInfoServiceApi", () => {
   })
   test("postLivestreamsClose", () => {
     const LiveStreamId: string = "LiveStreamId_example"
-    return expect(instance.postLivestreamsClose(LiveStreamId, {})).resolves.toBe(null)
+    const PlaySessionId: string = "PlaySessionId_example"
+    return expect(instance.postLivestreamsClose(LiveStreamId, PlaySessionId, {})).resolves.toBe(null)
   })
   test("postLivestreamsMediainfo", () => {
     const LiveStreamId: string = "LiveStreamId_example"
@@ -6289,6 +6511,9 @@ describe("PartyServiceApi", () => {
   test("getPartiesInfo", () => {
     return expect(instance.getPartiesInfo({})).resolves.toBe(null)
   })
+  test("getPartiesMessages", () => {
+    return expect(instance.getPartiesMessages({})).resolves.toBe(null)
+  })
   test("postParties", () => {
     return expect(instance.postParties({})).resolves.toBe(null)
   })
@@ -6298,6 +6523,10 @@ describe("PartyServiceApi", () => {
   })
   test("postPartiesLeave", () => {
     return expect(instance.postPartiesLeave({})).resolves.toBe(null)
+  })
+  test("postPartiesMessages", () => {
+    const body: api.SessionPartyMessage = undefined
+    return expect(instance.postPartiesMessages(body, {})).resolves.toBe(null)
   })
 })
 
@@ -6408,6 +6637,10 @@ describe("PersonsServiceApi", () => {
     const NameStartsWith: string = "NameStartsWith_example"
     const NameLessThan: string = "NameLessThan_example"
     return expect(instance.getPersons(ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, {})).resolves.toBe(null)
+  })
+  test("getPersonsByIdCredits", () => {
+    const Id: string = "Id_example"
+    return expect(instance.getPersonsByIdCredits(Id, {})).resolves.toBe(null)
   })
   test("getPersonsByName", () => {
     const Name: string = "Name_example"
@@ -9298,6 +9531,11 @@ describe("UserLibraryServiceApi", () => {
     const Id: string = "Id_example"
     return expect(instance.postUsersByUseridItemsByIdRatingDelete(UserId, Id, {})).resolves.toBe(null)
   })
+  test("postUsersByUseridSearcheditems", () => {
+    const body: api.UserLibraryReportItemsSearched = undefined
+    const UserId: string = "UserId_example"
+    return expect(instance.postUsersByUseridSearcheditems(body, UserId, {})).resolves.toBe(null)
+  })
 })
 
 describe("UserNotificationsServiceApi", () => {
@@ -9325,6 +9563,10 @@ describe("UserServiceApi", () => {
     const Id: string = "Id_example"
     return expect(instance.deleteUsersById(Id, {})).resolves.toBe(null)
   })
+  test("deleteUsersByIdRecentlysearched", () => {
+    const Id: string = "Id_example"
+    return expect(instance.deleteUsersByIdRecentlysearched(Id, {})).resolves.toBe(null)
+  })
   test("deleteUsersByIdTrackselectionsByTracktype", () => {
     const Id: string = "Id_example"
     const TrackType: string = "TrackType_example"
@@ -9338,6 +9580,9 @@ describe("UserServiceApi", () => {
     const Key: string = "Key_example"
     const UserId: string = "UserId_example"
     return expect(instance.getUsersByUseridTypedsettingsByKey(Key, UserId, {})).resolves.toBe(null)
+  })
+  test("getUsersCopydataoptions", () => {
+    return expect(instance.getUsersCopydataoptions({})).resolves.toBe(null)
   })
   test("getUsersItemaccess", () => {
     const IsHidden: boolean = true
@@ -9408,10 +9653,19 @@ describe("UserServiceApi", () => {
     const Id: string = "Id_example"
     return expect(instance.postUsersByIdPolicy(body, Id, {})).resolves.toBe(null)
   })
+  test("postUsersByIdRecentlysearchedDelete", () => {
+    const Id: string = "Id_example"
+    return expect(instance.postUsersByIdRecentlysearchedDelete(Id, {})).resolves.toBe(null)
+  })
   test("postUsersByIdTrackselectionsByTracktypeDelete", () => {
     const Id: string = "Id_example"
     const TrackType: string = "TrackType_example"
     return expect(instance.postUsersByIdTrackselectionsByTracktypeDelete(Id, TrackType, {})).resolves.toBe(null)
+  })
+  test("postUsersByUseridCopydata", () => {
+    const body: api.CopyData = undefined
+    const UserId: string = "UserId_example"
+    return expect(instance.postUsersByUseridCopydata(body, UserId, {})).resolves.toBe(null)
   })
   test("postUsersByUseridTypedsettingsByKey", () => {
     const body: Object = undefined

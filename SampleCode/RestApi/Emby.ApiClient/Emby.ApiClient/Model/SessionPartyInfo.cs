@@ -45,10 +45,22 @@ namespace Emby.ApiClient.Model
         public List<SessionSessionInfo> Sessions { get; set; }
 
         /// <summary>
-        /// Gets or Sets Users
+        /// Gets or Sets Messages
         /// </summary>
-        /// <value>The Users.</value>
-        public List<EntitiesUser> Users { get; set; }
+        /// <value>The Messages.</value>
+        public List<SessionPartyMessage> Messages { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MasterSession
+        /// </summary>
+        /// <value>The MasterSession.</value>
+        public SessionSessionInfo MasterSession { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsPlaying
+        /// </summary>
+        /// <value>The IsPlaying.</value>
+        public bool? IsPlaying { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,7 +73,9 @@ namespace Emby.ApiClient.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
-            sb.Append("  Users: ").Append(Users).Append("\n");
+            sb.Append("  Messages: ").Append(Messages).Append("\n");
+            sb.Append("  MasterSession: ").Append(MasterSession).Append("\n");
+            sb.Append("  IsPlaying: ").Append(IsPlaying).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -104,10 +118,20 @@ namespace Emby.ApiClient.Model
                     this.Sessions.SequenceEqual(input.Sessions)
                 ) && 
                 (
-                    this.Users == input.Users ||
-                    this.Users != null &&
-                    input.Users != null &&
-                    this.Users.SequenceEqual(input.Users)
+                    this.Messages == input.Messages ||
+                    this.Messages != null &&
+                    input.Messages != null &&
+                    this.Messages.SequenceEqual(input.Messages)
+                ) && 
+                (
+                    this.MasterSession == input.MasterSession ||
+                    (this.MasterSession != null &&
+                    this.MasterSession.Equals(input.MasterSession))
+                ) && 
+                (
+                    this.IsPlaying == input.IsPlaying ||
+                    (this.IsPlaying != null &&
+                    this.IsPlaying.Equals(input.IsPlaying))
                 );
         }
 
@@ -126,8 +150,12 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Sessions != null)
                     hashCode = hashCode * 59 + this.Sessions.GetHashCode();
-                if (this.Users != null)
-                    hashCode = hashCode * 59 + this.Users.GetHashCode();
+                if (this.Messages != null)
+                    hashCode = hashCode * 59 + this.Messages.GetHashCode();
+                if (this.MasterSession != null)
+                    hashCode = hashCode * 59 + this.MasterSession.GetHashCode();
+                if (this.IsPlaying != null)
+                    hashCode = hashCode * 59 + this.IsPlaying.GetHashCode();
                 return hashCode;
             }
         }

@@ -8,10 +8,12 @@ package embyclient.api;
 import embyclient.model.AuthenticateUser;
 import embyclient.model.AuthenticateUserByName;
 import embyclient.model.AuthenticationAuthenticationResult;
+import embyclient.model.CopyData;
 import embyclient.model.CreateUserByName;
 import embyclient.model.ForgotPassword;
 import embyclient.model.ForgotPasswordPin;
 import embyclient.model.ForgotPasswordResult;
+import embyclient.model.LibraryFullUserCopyDataOptions;
 import embyclient.model.NameIdPair;
 import embyclient.model.PinRedeemResult;
 import embyclient.model.QueryResultUserDto;
@@ -49,6 +51,21 @@ public class UserServiceApiTest {
     public void deleteUsersByIdTest() throws Exception {
         String id = null;
         api.deleteUsersById(id);
+
+        // TODO: test validations
+    }
+    /**
+     * Clears recently searched
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void deleteUsersByIdRecentlysearchedTest() throws Exception {
+        String id = null;
+        api.deleteUsersByIdRecentlysearched(id);
 
         // TODO: test validations
     }
@@ -96,6 +113,20 @@ public class UserServiceApiTest {
         String key = null;
         String userId = null;
         api.getUsersByUseridTypedsettingsByKey(key, userId);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets copy data options
+     *
+     * Requires authentication as administrator
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getUsersCopydataoptionsTest() throws Exception {
+        LibraryFullUserCopyDataOptions response = api.getUsersCopydataoptions();
 
         // TODO: test validations
     }
@@ -301,6 +332,21 @@ public class UserServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Clears recently searched
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersByIdRecentlysearchedDeleteTest() throws Exception {
+        String id = null;
+        api.postUsersByIdRecentlysearchedDelete(id);
+
+        // TODO: test validations
+    }
+    /**
      * Clears audio or subtitle track selections for a user
      *
      * Requires authentication as user
@@ -313,6 +359,22 @@ public class UserServiceApiTest {
         String id = null;
         String trackType = null;
         api.postUsersByIdTrackselectionsByTracktypeDelete(id, trackType);
+
+        // TODO: test validations
+    }
+    /**
+     * Copies data from one user to another
+     *
+     * Requires authentication as administrator
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersByUseridCopydataTest() throws Exception {
+        CopyData body = null;
+        String userId = null;
+        api.postUsersByUseridCopydata(body, userId);
 
         // TODO: test validations
     }

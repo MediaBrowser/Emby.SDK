@@ -27,11 +27,9 @@ namespace EmbyClient.Dotnet.Model
         /// Initializes a new instance of the <see cref="LibraryRemoveVirtualFolder" /> class.
         /// </summary>
         /// <param name="id">id.</param>
-        /// <param name="refreshLibrary">refreshLibrary.</param>
-        public LibraryRemoveVirtualFolder(string id = default(string), bool? refreshLibrary = default(bool?))
+        public LibraryRemoveVirtualFolder(string id = default(string))
         {
             this.Id = id;
-            this.RefreshLibrary = refreshLibrary;
         }
         
         /// <summary>
@@ -39,12 +37,6 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
-
-        /// <summary>
-        /// Gets or Sets RefreshLibrary
-        /// </summary>
-        [DataMember(Name="RefreshLibrary", EmitDefaultValue=false)]
-        public bool? RefreshLibrary { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,7 +47,6 @@ namespace EmbyClient.Dotnet.Model
             var sb = new StringBuilder();
             sb.Append("class LibraryRemoveVirtualFolder {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  RefreshLibrary: ").Append(RefreshLibrary).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,11 +85,6 @@ namespace EmbyClient.Dotnet.Model
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
-                ) && 
-                (
-                    this.RefreshLibrary == input.RefreshLibrary ||
-                    (this.RefreshLibrary != null &&
-                    this.RefreshLibrary.Equals(input.RefreshLibrary))
                 );
         }
 
@@ -113,8 +99,6 @@ namespace EmbyClient.Dotnet.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.RefreshLibrary != null)
-                    hashCode = hashCode * 59 + this.RefreshLibrary.GetHashCode();
                 return hashCode;
             }
         }

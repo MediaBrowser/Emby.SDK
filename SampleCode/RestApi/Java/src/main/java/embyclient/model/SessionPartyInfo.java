@@ -12,7 +12,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import embyclient.model.EntitiesUser;
+import embyclient.model.SessionPartyMessage;
 import embyclient.model.SessionSessionInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
@@ -33,8 +33,14 @@ public class SessionPartyInfo {
   @SerializedName("Sessions")
   private List<SessionSessionInfo> sessions = null;
 
-  @SerializedName("Users")
-  private List<EntitiesUser> users = null;
+  @SerializedName("Messages")
+  private List<SessionPartyMessage> messages = null;
+
+  @SerializedName("MasterSession")
+  private SessionSessionInfo masterSession = null;
+
+  @SerializedName("IsPlaying")
+  private Boolean isPlaying = null;
 
   public SessionPartyInfo id(String id) {
     this.id = id;
@@ -98,30 +104,66 @@ public class SessionPartyInfo {
     this.sessions = sessions;
   }
 
-  public SessionPartyInfo users(List<EntitiesUser> users) {
-    this.users = users;
+  public SessionPartyInfo messages(List<SessionPartyMessage> messages) {
+    this.messages = messages;
     return this;
   }
 
-  public SessionPartyInfo addUsersItem(EntitiesUser usersItem) {
-    if (this.users == null) {
-      this.users = new ArrayList<>();
+  public SessionPartyInfo addMessagesItem(SessionPartyMessage messagesItem) {
+    if (this.messages == null) {
+      this.messages = new ArrayList<>();
     }
-    this.users.add(usersItem);
+    this.messages.add(messagesItem);
     return this;
   }
 
    /**
-   * Get users
-   * @return users
+   * Get messages
+   * @return messages
   **/
   @Schema(description = "")
-  public List<EntitiesUser> getUsers() {
-    return users;
+  public List<SessionPartyMessage> getMessages() {
+    return messages;
   }
 
-  public void setUsers(List<EntitiesUser> users) {
-    this.users = users;
+  public void setMessages(List<SessionPartyMessage> messages) {
+    this.messages = messages;
+  }
+
+  public SessionPartyInfo masterSession(SessionSessionInfo masterSession) {
+    this.masterSession = masterSession;
+    return this;
+  }
+
+   /**
+   * Get masterSession
+   * @return masterSession
+  **/
+  @Schema(description = "")
+  public SessionSessionInfo getMasterSession() {
+    return masterSession;
+  }
+
+  public void setMasterSession(SessionSessionInfo masterSession) {
+    this.masterSession = masterSession;
+  }
+
+  public SessionPartyInfo isPlaying(Boolean isPlaying) {
+    this.isPlaying = isPlaying;
+    return this;
+  }
+
+   /**
+   * Get isPlaying
+   * @return isPlaying
+  **/
+  @Schema(description = "")
+  public Boolean isIsPlaying() {
+    return isPlaying;
+  }
+
+  public void setIsPlaying(Boolean isPlaying) {
+    this.isPlaying = isPlaying;
   }
 
 
@@ -137,12 +179,14 @@ public class SessionPartyInfo {
     return Objects.equals(this.id, sessionPartyInfo.id) &&
         Objects.equals(this.name, sessionPartyInfo.name) &&
         Objects.equals(this.sessions, sessionPartyInfo.sessions) &&
-        Objects.equals(this.users, sessionPartyInfo.users);
+        Objects.equals(this.messages, sessionPartyInfo.messages) &&
+        Objects.equals(this.masterSession, sessionPartyInfo.masterSession) &&
+        Objects.equals(this.isPlaying, sessionPartyInfo.isPlaying);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, sessions, users);
+    return Objects.hash(id, name, sessions, messages, masterSession, isPlaying);
   }
 
 
@@ -154,7 +198,9 @@ public class SessionPartyInfo {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    sessions: ").append(toIndentedString(sessions)).append("\n");
-    sb.append("    users: ").append(toIndentedString(users)).append("\n");
+    sb.append("    messages: ").append(toIndentedString(messages)).append("\n");
+    sb.append("    masterSession: ").append(toIndentedString(masterSession)).append("\n");
+    sb.append("    isPlaying: ").append(toIndentedString(isPlaying)).append("\n");
     sb.append("}");
     return sb.toString();
   }

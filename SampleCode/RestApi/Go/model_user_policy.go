@@ -33,6 +33,7 @@ type UserPolicy struct {
 	EnableMediaPlayback bool `json:"EnableMediaPlayback,omitempty"`
 	EnableAudioPlaybackTranscoding bool `json:"EnableAudioPlaybackTranscoding,omitempty"`
 	EnableVideoPlaybackTranscoding bool `json:"EnableVideoPlaybackTranscoding,omitempty"`
+	EnableTranscodingQuality bool `json:"EnableTranscodingQuality,omitempty"`
 	AutoRemoteQuality int32 `json:"AutoRemoteQuality,omitempty"`
 	EnablePlaybackRemuxing bool `json:"EnablePlaybackRemuxing,omitempty"`
 	EnableContentDeletion bool `json:"EnableContentDeletion,omitempty"`

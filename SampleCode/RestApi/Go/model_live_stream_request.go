@@ -23,4 +23,5 @@ type LiveStreamRequest struct {
 	AllowVideoStreamCopy bool `json:"AllowVideoStreamCopy,omitempty"`
 	AllowInterlacedVideoStreamCopy bool `json:"AllowInterlacedVideoStreamCopy,omitempty"`
 	AllowAudioStreamCopy bool `json:"AllowAudioStreamCopy,omitempty"`
+	ConsumerId string `json:"ConsumerId,omitempty"`
 }

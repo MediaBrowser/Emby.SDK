@@ -22,7 +22,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets UI view data
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageId">Id of the page controller</param>
@@ -34,7 +34,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets UI view data
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageId">Id of the page controller</param>
@@ -45,7 +45,7 @@ namespace EmbyClient.Dotnet.Api
         /// Execute a command in the context of tv setup
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RunUICommand</param>
@@ -56,7 +56,7 @@ namespace EmbyClient.Dotnet.Api
         /// Execute a command in the context of tv setup
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RunUICommand</param>
@@ -68,7 +68,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets UI view data
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageId">Id of the page controller</param>
@@ -80,7 +80,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets UI view data
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageId">Id of the page controller</param>
@@ -91,7 +91,7 @@ namespace EmbyClient.Dotnet.Api
         /// Execute a command in the context of tv setup
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RunUICommand</param>
@@ -102,7 +102,7 @@ namespace EmbyClient.Dotnet.Api
         /// Execute a command in the context of tv setup
         /// </summary>
         /// <remarks>
-        /// Requires authentication as user
+        /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RunUICommand</param>
@@ -220,7 +220,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets UI view data Requires authentication as user
+        /// Gets UI view data Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageId">Id of the page controller</param>
@@ -233,7 +233,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets UI view data Requires authentication as user
+        /// Gets UI view data Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageId">Id of the page controller</param>
@@ -303,7 +303,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets UI view data Requires authentication as user
+        /// Gets UI view data Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageId">Id of the page controller</param>
@@ -317,7 +317,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets UI view data Requires authentication as user
+        /// Gets UI view data Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageId">Id of the page controller</param>
@@ -387,7 +387,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Execute a command in the context of tv setup Requires authentication as user
+        /// Execute a command in the context of tv setup Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RunUICommand</param>
@@ -399,7 +399,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Execute a command in the context of tv setup Requires authentication as user
+        /// Execute a command in the context of tv setup Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RunUICommand</param>
@@ -473,7 +473,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Execute a command in the context of tv setup Requires authentication as user
+        /// Execute a command in the context of tv setup Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RunUICommand</param>
@@ -486,7 +486,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Execute a command in the context of tv setup Requires authentication as user
+        /// Execute a command in the context of tv setup Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RunUICommand</param>

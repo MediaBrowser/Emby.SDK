@@ -13,6 +13,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import embyclient.model.BaseItemDto;
+import embyclient.model.ItemsQuery;
 import embyclient.model.ScrollDirection;
 import embyclient.model.TextSectionInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -27,6 +28,9 @@ import java.util.List;
 public class ContentSection {
   @SerializedName("Name")
   private String name = null;
+
+  @SerializedName("CustomName")
+  private String customName = null;
 
   @SerializedName("Subtitle")
   private String subtitle = null;
@@ -43,8 +47,20 @@ public class ContentSection {
   @SerializedName("ViewType")
   private String viewType = null;
 
+  @SerializedName("ImageType")
+  private String imageType = null;
+
+  @SerializedName("DisplayMode")
+  private String displayMode = null;
+
   @SerializedName("Monitor")
   private List<String> monitor = null;
+
+  @SerializedName("ItemTypes")
+  private List<String> itemTypes = null;
+
+  @SerializedName("ExcludedFolders")
+  private List<String> excludedFolders = null;
 
   @SerializedName("CardSizeOffset")
   private Integer cardSizeOffset = null;
@@ -54,6 +70,9 @@ public class ContentSection {
 
   @SerializedName("ParentItem")
   private BaseItemDto parentItem = null;
+
+  @SerializedName("ParentId")
+  private String parentId = null;
 
   @SerializedName("TextInfo")
   private TextSectionInfo textInfo = null;
@@ -66,6 +85,18 @@ public class ContentSection {
 
   @SerializedName("RefreshInterval")
   private Integer refreshInterval = null;
+
+  @SerializedName("SortBy")
+  private String sortBy = null;
+
+  @SerializedName("SortOrder")
+  private String sortOrder = null;
+
+  @SerializedName("IncludeNextUpInResume")
+  private Boolean includeNextUpInResume = null;
+
+  @SerializedName("Query")
+  private ItemsQuery query = null;
 
   public ContentSection name(String name) {
     this.name = name;
@@ -83,6 +114,24 @@ public class ContentSection {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public ContentSection customName(String customName) {
+    this.customName = customName;
+    return this;
+  }
+
+   /**
+   * Get customName
+   * @return customName
+  **/
+  @Schema(description = "")
+  public String getCustomName() {
+    return customName;
+  }
+
+  public void setCustomName(String customName) {
+    this.customName = customName;
   }
 
   public ContentSection subtitle(String subtitle) {
@@ -175,6 +224,42 @@ public class ContentSection {
     this.viewType = viewType;
   }
 
+  public ContentSection imageType(String imageType) {
+    this.imageType = imageType;
+    return this;
+  }
+
+   /**
+   * Get imageType
+   * @return imageType
+  **/
+  @Schema(description = "")
+  public String getImageType() {
+    return imageType;
+  }
+
+  public void setImageType(String imageType) {
+    this.imageType = imageType;
+  }
+
+  public ContentSection displayMode(String displayMode) {
+    this.displayMode = displayMode;
+    return this;
+  }
+
+   /**
+   * Get displayMode
+   * @return displayMode
+  **/
+  @Schema(description = "")
+  public String getDisplayMode() {
+    return displayMode;
+  }
+
+  public void setDisplayMode(String displayMode) {
+    this.displayMode = displayMode;
+  }
+
   public ContentSection monitor(List<String> monitor) {
     this.monitor = monitor;
     return this;
@@ -199,6 +284,58 @@ public class ContentSection {
 
   public void setMonitor(List<String> monitor) {
     this.monitor = monitor;
+  }
+
+  public ContentSection itemTypes(List<String> itemTypes) {
+    this.itemTypes = itemTypes;
+    return this;
+  }
+
+  public ContentSection addItemTypesItem(String itemTypesItem) {
+    if (this.itemTypes == null) {
+      this.itemTypes = new ArrayList<>();
+    }
+    this.itemTypes.add(itemTypesItem);
+    return this;
+  }
+
+   /**
+   * Get itemTypes
+   * @return itemTypes
+  **/
+  @Schema(description = "")
+  public List<String> getItemTypes() {
+    return itemTypes;
+  }
+
+  public void setItemTypes(List<String> itemTypes) {
+    this.itemTypes = itemTypes;
+  }
+
+  public ContentSection excludedFolders(List<String> excludedFolders) {
+    this.excludedFolders = excludedFolders;
+    return this;
+  }
+
+  public ContentSection addExcludedFoldersItem(String excludedFoldersItem) {
+    if (this.excludedFolders == null) {
+      this.excludedFolders = new ArrayList<>();
+    }
+    this.excludedFolders.add(excludedFoldersItem);
+    return this;
+  }
+
+   /**
+   * Get excludedFolders
+   * @return excludedFolders
+  **/
+  @Schema(description = "")
+  public List<String> getExcludedFolders() {
+    return excludedFolders;
+  }
+
+  public void setExcludedFolders(List<String> excludedFolders) {
+    this.excludedFolders = excludedFolders;
   }
 
   public ContentSection cardSizeOffset(Integer cardSizeOffset) {
@@ -253,6 +390,24 @@ public class ContentSection {
 
   public void setParentItem(BaseItemDto parentItem) {
     this.parentItem = parentItem;
+  }
+
+  public ContentSection parentId(String parentId) {
+    this.parentId = parentId;
+    return this;
+  }
+
+   /**
+   * Get parentId
+   * @return parentId
+  **/
+  @Schema(description = "")
+  public String getParentId() {
+    return parentId;
+  }
+
+  public void setParentId(String parentId) {
+    this.parentId = parentId;
   }
 
   public ContentSection textInfo(TextSectionInfo textInfo) {
@@ -327,6 +482,78 @@ public class ContentSection {
     this.refreshInterval = refreshInterval;
   }
 
+  public ContentSection sortBy(String sortBy) {
+    this.sortBy = sortBy;
+    return this;
+  }
+
+   /**
+   * Get sortBy
+   * @return sortBy
+  **/
+  @Schema(description = "")
+  public String getSortBy() {
+    return sortBy;
+  }
+
+  public void setSortBy(String sortBy) {
+    this.sortBy = sortBy;
+  }
+
+  public ContentSection sortOrder(String sortOrder) {
+    this.sortOrder = sortOrder;
+    return this;
+  }
+
+   /**
+   * Get sortOrder
+   * @return sortOrder
+  **/
+  @Schema(description = "")
+  public String getSortOrder() {
+    return sortOrder;
+  }
+
+  public void setSortOrder(String sortOrder) {
+    this.sortOrder = sortOrder;
+  }
+
+  public ContentSection includeNextUpInResume(Boolean includeNextUpInResume) {
+    this.includeNextUpInResume = includeNextUpInResume;
+    return this;
+  }
+
+   /**
+   * Get includeNextUpInResume
+   * @return includeNextUpInResume
+  **/
+  @Schema(description = "")
+  public Boolean isIncludeNextUpInResume() {
+    return includeNextUpInResume;
+  }
+
+  public void setIncludeNextUpInResume(Boolean includeNextUpInResume) {
+    this.includeNextUpInResume = includeNextUpInResume;
+  }
+
+  public ContentSection query(ItemsQuery query) {
+    this.query = query;
+    return this;
+  }
+
+   /**
+   * Get query
+   * @return query
+  **/
+  @Schema(description = "")
+  public ItemsQuery getQuery() {
+    return query;
+  }
+
+  public void setQuery(ItemsQuery query) {
+    this.query = query;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -338,24 +565,34 @@ public class ContentSection {
     }
     ContentSection contentSection = (ContentSection) o;
     return Objects.equals(this.name, contentSection.name) &&
+        Objects.equals(this.customName, contentSection.customName) &&
         Objects.equals(this.subtitle, contentSection.subtitle) &&
         Objects.equals(this.id, contentSection.id) &&
         Objects.equals(this.sectionType, contentSection.sectionType) &&
         Objects.equals(this.collectionType, contentSection.collectionType) &&
         Objects.equals(this.viewType, contentSection.viewType) &&
+        Objects.equals(this.imageType, contentSection.imageType) &&
+        Objects.equals(this.displayMode, contentSection.displayMode) &&
         Objects.equals(this.monitor, contentSection.monitor) &&
+        Objects.equals(this.itemTypes, contentSection.itemTypes) &&
+        Objects.equals(this.excludedFolders, contentSection.excludedFolders) &&
         Objects.equals(this.cardSizeOffset, contentSection.cardSizeOffset) &&
         Objects.equals(this.scrollDirection, contentSection.scrollDirection) &&
         Objects.equals(this.parentItem, contentSection.parentItem) &&
+        Objects.equals(this.parentId, contentSection.parentId) &&
         Objects.equals(this.textInfo, contentSection.textInfo) &&
         Objects.equals(this.premiumFeature, contentSection.premiumFeature) &&
         Objects.equals(this.premiumMessage, contentSection.premiumMessage) &&
-        Objects.equals(this.refreshInterval, contentSection.refreshInterval);
+        Objects.equals(this.refreshInterval, contentSection.refreshInterval) &&
+        Objects.equals(this.sortBy, contentSection.sortBy) &&
+        Objects.equals(this.sortOrder, contentSection.sortOrder) &&
+        Objects.equals(this.includeNextUpInResume, contentSection.includeNextUpInResume) &&
+        Objects.equals(this.query, contentSection.query);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, subtitle, id, sectionType, collectionType, viewType, monitor, cardSizeOffset, scrollDirection, parentItem, textInfo, premiumFeature, premiumMessage, refreshInterval);
+    return Objects.hash(name, customName, subtitle, id, sectionType, collectionType, viewType, imageType, displayMode, monitor, itemTypes, excludedFolders, cardSizeOffset, scrollDirection, parentItem, parentId, textInfo, premiumFeature, premiumMessage, refreshInterval, sortBy, sortOrder, includeNextUpInResume, query);
   }
 
 
@@ -365,19 +602,29 @@ public class ContentSection {
     sb.append("class ContentSection {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    customName: ").append(toIndentedString(customName)).append("\n");
     sb.append("    subtitle: ").append(toIndentedString(subtitle)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    sectionType: ").append(toIndentedString(sectionType)).append("\n");
     sb.append("    collectionType: ").append(toIndentedString(collectionType)).append("\n");
     sb.append("    viewType: ").append(toIndentedString(viewType)).append("\n");
+    sb.append("    imageType: ").append(toIndentedString(imageType)).append("\n");
+    sb.append("    displayMode: ").append(toIndentedString(displayMode)).append("\n");
     sb.append("    monitor: ").append(toIndentedString(monitor)).append("\n");
+    sb.append("    itemTypes: ").append(toIndentedString(itemTypes)).append("\n");
+    sb.append("    excludedFolders: ").append(toIndentedString(excludedFolders)).append("\n");
     sb.append("    cardSizeOffset: ").append(toIndentedString(cardSizeOffset)).append("\n");
     sb.append("    scrollDirection: ").append(toIndentedString(scrollDirection)).append("\n");
     sb.append("    parentItem: ").append(toIndentedString(parentItem)).append("\n");
+    sb.append("    parentId: ").append(toIndentedString(parentId)).append("\n");
     sb.append("    textInfo: ").append(toIndentedString(textInfo)).append("\n");
     sb.append("    premiumFeature: ").append(toIndentedString(premiumFeature)).append("\n");
     sb.append("    premiumMessage: ").append(toIndentedString(premiumMessage)).append("\n");
     sb.append("    refreshInterval: ").append(toIndentedString(refreshInterval)).append("\n");
+    sb.append("    sortBy: ").append(toIndentedString(sortBy)).append("\n");
+    sb.append("    sortOrder: ").append(toIndentedString(sortOrder)).append("\n");
+    sb.append("    includeNextUpInResume: ").append(toIndentedString(includeNextUpInResume)).append("\n");
+    sb.append("    query: ").append(toIndentedString(query)).append("\n");
     sb.append("}");
     return sb.toString();
   }

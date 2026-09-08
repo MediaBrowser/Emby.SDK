@@ -8,5 +8,4 @@ package embyclient
 
 type LibraryRemoveVirtualFolder struct {
 	Id string `json:"Id,omitempty"`
-	RefreshLibrary bool `json:"RefreshLibrary,omitempty"`
 }

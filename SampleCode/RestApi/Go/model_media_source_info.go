@@ -60,4 +60,6 @@ type MediaSourceInfo struct {
 	ItemId string `json:"ItemId,omitempty"`
 	// Used only by our Windows app. Not used by Emby Server.
 	ServerId string `json:"ServerId,omitempty"`
+	MimeType string `json:"MimeType,omitempty"`
+	TranscodingMimeType string `json:"TranscodingMimeType,omitempty"`
 }

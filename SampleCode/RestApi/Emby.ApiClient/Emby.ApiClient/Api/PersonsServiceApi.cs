@@ -651,6 +651,34 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Gets credits for a person
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id">The person id</param>
+        /// <returns>Task of ApiResponse (List&lt;UserLibraryCreditsList&gt;)</returns>
+        public async Task<RestResponse<List<UserLibraryCreditsList>>> GetPersonsByIdCredits (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling PersonsServiceApi->GetPersonsByIdCredits");
+            }
+            
+            var request = new RestRequest("/Persons/{Id}/Credits", Method.Get);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<List<UserLibraryCreditsList>>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Gets a person, by name
         /// </summary>
         /// <remarks>

@@ -69,6 +69,34 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Clears recently searched
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> DeleteUsersByIdRecentlysearched (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling UserServiceApi->DeleteUsersByIdRecentlysearched");
+            }
+            
+            var request = new RestRequest("/Users/{Id}/RecentlySearched", Method.Delete);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
@@ -173,6 +201,22 @@ namespace Emby.ApiClient.Api
 
             // make the HTTP request
             var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets copy data options
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <returns>Task of ApiResponse (LibraryFullUserCopyDataOptions)</returns>
+        public async Task<RestResponse<LibraryFullUserCopyDataOptions>> GetUsersCopydataoptions ()
+        {
+            var request = new RestRequest("/Users/CopyDataOptions", Method.Get);
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<LibraryFullUserCopyDataOptions>(request).ConfigureAwait(false);
             return localVarResponse;
         }
 
@@ -657,6 +701,34 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Clears recently searched
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostUsersByIdRecentlysearchedDelete (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling UserServiceApi->PostUsersByIdRecentlysearchedDelete");
+            }
+            
+            var request = new RestRequest("/Users/{Id}/RecentlySearched/Delete", Method.Post);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
@@ -691,6 +763,46 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("TrackType", this.ApiClient.ParameterToString(trackType), ParameterType.UrlSegment);
             }
 
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Copies data from one user to another
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <param name="body">CopyData</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostUsersByUseridCopydata (CopyData body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new ApiException("Missing required parameter 'body' when calling UserServiceApi->PostUsersByUseridCopydata");
+            }
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+            {
+                throw new ApiException("Missing required parameter 'userId' when calling UserServiceApi->PostUsersByUseridCopydata");
+            }
+            
+            var request = new RestRequest("/Users/{UserId}/CopyData", Method.Post);
+
+            if (userId != null)
+            {
+                request.AddParameter("UserId", this.ApiClient.ParameterToString(userId), ParameterType.UrlSegment);
+            }
+
+            if (body != null)
+            {
+                request.AddJsonBody(body);
+            }
+            
             // make the HTTP request
             var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
             return localVarResponse;

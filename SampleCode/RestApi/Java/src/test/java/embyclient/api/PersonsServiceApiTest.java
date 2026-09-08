@@ -8,6 +8,7 @@ package embyclient.api;
 import embyclient.model.BaseItemDto;
 import java.time.OffsetDateTime;
 import embyclient.model.QueryResultBaseItemDto;
+import embyclient.model.UserLibraryCreditsList;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -136,6 +137,21 @@ public class PersonsServiceApiTest {
         String nameStartsWith = null;
         String nameLessThan = null;
         QueryResultBaseItemDto response = api.getPersons(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, isSpecialSeason, adjacentTo, startItemId, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets credits for a person
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getPersonsByIdCreditsTest() throws Exception {
+        String id = null;
+        List<UserLibraryCreditsList> response = api.getPersonsByIdCredits(id);
 
         // TODO: test validations
     }

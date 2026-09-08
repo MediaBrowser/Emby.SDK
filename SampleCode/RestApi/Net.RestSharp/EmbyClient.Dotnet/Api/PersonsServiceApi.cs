@@ -236,6 +236,27 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>ApiResponse of QueryResultBaseItemDto</returns>
         ApiResponse<QueryResultBaseItemDto> GetPersonsWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, bool? isSpecialSeason, string adjacentTo, string startItemId, int? minIndexNumber, DateTimeOffset? minStartDate, DateTimeOffset? maxStartDate, DateTimeOffset? minEndDate, DateTimeOffset? maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, DateTimeOffset? minPremiereDate, DateTimeOffset? minDateLastSaved, DateTimeOffset? minDateLastSavedForUser, DateTimeOffset? maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
         /// <summary>
+        /// Gets credits for a person
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The person id</param>
+        /// <returns>List&lt;UserLibraryCreditsList&gt;</returns>
+        List<UserLibraryCreditsList> GetPersonsByIdCredits (string id);
+
+        /// <summary>
+        /// Gets credits for a person
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The person id</param>
+        /// <returns>ApiResponse of List&lt;UserLibraryCreditsList&gt;</returns>
+        ApiResponse<List<UserLibraryCreditsList>> GetPersonsByIdCreditsWithHttpInfo (string id);
+        /// <summary>
         /// Gets a person, by name
         /// </summary>
         /// <remarks>
@@ -477,6 +498,27 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultBaseItemDto)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetPersonsAsyncWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, bool? isSpecialSeason, string adjacentTo, string startItemId, int? minIndexNumber, DateTimeOffset? minStartDate, DateTimeOffset? maxStartDate, DateTimeOffset? minEndDate, DateTimeOffset? maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, DateTimeOffset? minPremiereDate, DateTimeOffset? minDateLastSaved, DateTimeOffset? minDateLastSavedForUser, DateTimeOffset? maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        /// <summary>
+        /// Gets credits for a person
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The person id</param>
+        /// <returns>Task of List&lt;UserLibraryCreditsList&gt;</returns>
+        System.Threading.Tasks.Task<List<UserLibraryCreditsList>> GetPersonsByIdCreditsAsync (string id);
+
+        /// <summary>
+        /// Gets credits for a person
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The person id</param>
+        /// <returns>Task of ApiResponse (List&lt;UserLibraryCreditsList&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UserLibraryCreditsList>>> GetPersonsByIdCreditsAsyncWithHttpInfo (string id);
         /// <summary>
         /// Gets a person, by name
         /// </summary>
@@ -1346,6 +1388,161 @@ namespace EmbyClient.Dotnet.Api
             return new ApiResponse<QueryResultBaseItemDto>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (QueryResultBaseItemDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultBaseItemDto)));
+        }
+
+        /// <summary>
+        /// Gets credits for a person Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The person id</param>
+        /// <returns>List&lt;UserLibraryCreditsList&gt;</returns>
+        public List<UserLibraryCreditsList> GetPersonsByIdCredits (string id)
+        {
+             ApiResponse<List<UserLibraryCreditsList>> localVarResponse = GetPersonsByIdCreditsWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets credits for a person Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The person id</param>
+        /// <returns>ApiResponse of List&lt;UserLibraryCreditsList&gt;</returns>
+        public ApiResponse< List<UserLibraryCreditsList> > GetPersonsByIdCreditsWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling PersonsServiceApi->GetPersonsByIdCredits");
+
+            var localVarPath = "/Persons/{Id}/Credits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPersonsByIdCredits", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UserLibraryCreditsList>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UserLibraryCreditsList>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserLibraryCreditsList>)));
+        }
+
+        /// <summary>
+        /// Gets credits for a person Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The person id</param>
+        /// <returns>Task of List&lt;UserLibraryCreditsList&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UserLibraryCreditsList>> GetPersonsByIdCreditsAsync (string id)
+        {
+             ApiResponse<List<UserLibraryCreditsList>> localVarResponse = await GetPersonsByIdCreditsAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets credits for a person Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The person id</param>
+        /// <returns>Task of ApiResponse (List&lt;UserLibraryCreditsList&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UserLibraryCreditsList>>> GetPersonsByIdCreditsAsyncWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling PersonsServiceApi->GetPersonsByIdCredits");
+
+            var localVarPath = "/Persons/{Id}/Credits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPersonsByIdCredits", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UserLibraryCreditsList>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<UserLibraryCreditsList>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserLibraryCreditsList>)));
         }
 
         /// <summary>

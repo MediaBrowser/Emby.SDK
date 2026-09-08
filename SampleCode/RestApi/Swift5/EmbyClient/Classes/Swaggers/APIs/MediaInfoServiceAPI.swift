@@ -37,11 +37,44 @@ open class MediaInfoServiceAPI {
      - examples: [{contentType=application/json, example={
   "PlaySessionId" : "PlaySessionId",
   "MediaSources" : [ {
+    "RunTimeTicks" : 9,
+    "Size" : 7,
+    "BufferMs" : 4,
+    "SortName" : "SortName",
+    "ItemId" : "ItemId",
+    "Name" : "Name",
+    "SupportsDirectStream" : true,
+    "Container" : "Container",
+    "TranscodingMimeType" : "TranscodingMimeType",
+    "LiveStreamId" : "LiveStreamId",
+    "RequiresLooping" : true,
+    "IsInfiniteStream" : true,
+    "SupportsDirectPlay" : true,
+    "AnalyzeDurationMs" : 3,
+    "OpenToken" : "OpenToken",
+    "ReadAtNativeFramerate" : true,
+    "TranscodingContainer" : "TranscodingContainer",
+    "ProbePath" : "ProbePath",
+    "TranscodingUrl" : "TranscodingUrl",
+    "Chapters" : [ {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    }, {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    } ],
+    "Id" : "Id",
+    "DefaultAudioStreamIndex" : 6,
     "EncoderPath" : "EncoderPath",
     "RequiredHttpHeaders" : {
       "key" : "RequiredHttpHeaders"
     },
-    "RunTimeTicks" : 9,
     "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
@@ -69,6 +102,7 @@ open class MediaInfoServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -124,6 +158,7 @@ open class MediaInfoServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -154,63 +189,65 @@ open class MediaInfoServiceAPI {
       "Extradata" : "Extradata",
       "BitRate" : 1
     } ],
-    "Size" : 7,
-    "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
-    "SortName" : "SortName",
     "Timestamp" : "None",
-    "ItemId" : "ItemId",
-    "Name" : "Name",
+    "MimeType" : "MimeType",
     "RequiresOpening" : true,
     "DirectStreamUrl" : "DirectStreamUrl",
-    "SupportsDirectStream" : true,
     "RequiresClosing" : true,
-    "Container" : "Container",
     "ServerId" : "ServerId",
-    "LiveStreamId" : "LiveStreamId",
-    "RequiresLooping" : true,
     "Protocol" : "File",
     "AddApiKeyToDirectStreamUrl" : true,
     "DefaultSubtitleStreamIndex" : 1,
     "TrancodeLiveStartIndex" : 2,
-    "IsInfiniteStream" : true,
     "Path" : "Path",
     "IsRemote" : true,
-    "SupportsDirectPlay" : true,
     "TranscodingSubProtocol" : "TranscodingSubProtocol",
     "Formats" : [ "Formats", "Formats" ],
-    "AnalyzeDurationMs" : 3,
     "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
     "Bitrate" : 6,
-    "OpenToken" : "OpenToken",
     "SupportsProbing" : true,
     "Type" : "Default",
-    "ReadAtNativeFramerate" : true,
-    "TranscodingContainer" : "TranscodingContainer",
-    "ProbePath" : "ProbePath",
-    "TranscodingUrl" : "TranscodingUrl",
-    "Chapters" : [ {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    }, {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    } ],
-    "Id" : "Id",
-    "SupportsTranscoding" : true,
-    "DefaultAudioStreamIndex" : 6
+    "SupportsTranscoding" : true
   }, {
+    "RunTimeTicks" : 9,
+    "Size" : 7,
+    "BufferMs" : 4,
+    "SortName" : "SortName",
+    "ItemId" : "ItemId",
+    "Name" : "Name",
+    "SupportsDirectStream" : true,
+    "Container" : "Container",
+    "TranscodingMimeType" : "TranscodingMimeType",
+    "LiveStreamId" : "LiveStreamId",
+    "RequiresLooping" : true,
+    "IsInfiniteStream" : true,
+    "SupportsDirectPlay" : true,
+    "AnalyzeDurationMs" : 3,
+    "OpenToken" : "OpenToken",
+    "ReadAtNativeFramerate" : true,
+    "TranscodingContainer" : "TranscodingContainer",
+    "ProbePath" : "ProbePath",
+    "TranscodingUrl" : "TranscodingUrl",
+    "Chapters" : [ {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    }, {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    } ],
+    "Id" : "Id",
+    "DefaultAudioStreamIndex" : 6,
     "EncoderPath" : "EncoderPath",
     "RequiredHttpHeaders" : {
       "key" : "RequiredHttpHeaders"
     },
-    "RunTimeTicks" : 9,
     "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
@@ -238,6 +275,7 @@ open class MediaInfoServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -293,6 +331,7 @@ open class MediaInfoServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -323,57 +362,26 @@ open class MediaInfoServiceAPI {
       "Extradata" : "Extradata",
       "BitRate" : 1
     } ],
-    "Size" : 7,
-    "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
-    "SortName" : "SortName",
     "Timestamp" : "None",
-    "ItemId" : "ItemId",
-    "Name" : "Name",
+    "MimeType" : "MimeType",
     "RequiresOpening" : true,
     "DirectStreamUrl" : "DirectStreamUrl",
-    "SupportsDirectStream" : true,
     "RequiresClosing" : true,
-    "Container" : "Container",
     "ServerId" : "ServerId",
-    "LiveStreamId" : "LiveStreamId",
-    "RequiresLooping" : true,
     "Protocol" : "File",
     "AddApiKeyToDirectStreamUrl" : true,
     "DefaultSubtitleStreamIndex" : 1,
     "TrancodeLiveStartIndex" : 2,
-    "IsInfiniteStream" : true,
     "Path" : "Path",
     "IsRemote" : true,
-    "SupportsDirectPlay" : true,
     "TranscodingSubProtocol" : "TranscodingSubProtocol",
     "Formats" : [ "Formats", "Formats" ],
-    "AnalyzeDurationMs" : 3,
     "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
     "Bitrate" : 6,
-    "OpenToken" : "OpenToken",
     "SupportsProbing" : true,
     "Type" : "Default",
-    "ReadAtNativeFramerate" : true,
-    "TranscodingContainer" : "TranscodingContainer",
-    "ProbePath" : "ProbePath",
-    "TranscodingUrl" : "TranscodingUrl",
-    "Chapters" : [ {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    }, {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    } ],
-    "Id" : "Id",
-    "SupportsTranscoding" : true,
-    "DefaultAudioStreamIndex" : 6
+    "SupportsTranscoding" : true
   } ],
   "ErrorCode" : "NotAllowed"
 }}]
@@ -469,11 +477,44 @@ open class MediaInfoServiceAPI {
      - examples: [{contentType=application/json, example={
   "PlaySessionId" : "PlaySessionId",
   "MediaSources" : [ {
+    "RunTimeTicks" : 9,
+    "Size" : 7,
+    "BufferMs" : 4,
+    "SortName" : "SortName",
+    "ItemId" : "ItemId",
+    "Name" : "Name",
+    "SupportsDirectStream" : true,
+    "Container" : "Container",
+    "TranscodingMimeType" : "TranscodingMimeType",
+    "LiveStreamId" : "LiveStreamId",
+    "RequiresLooping" : true,
+    "IsInfiniteStream" : true,
+    "SupportsDirectPlay" : true,
+    "AnalyzeDurationMs" : 3,
+    "OpenToken" : "OpenToken",
+    "ReadAtNativeFramerate" : true,
+    "TranscodingContainer" : "TranscodingContainer",
+    "ProbePath" : "ProbePath",
+    "TranscodingUrl" : "TranscodingUrl",
+    "Chapters" : [ {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    }, {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    } ],
+    "Id" : "Id",
+    "DefaultAudioStreamIndex" : 6,
     "EncoderPath" : "EncoderPath",
     "RequiredHttpHeaders" : {
       "key" : "RequiredHttpHeaders"
     },
-    "RunTimeTicks" : 9,
     "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
@@ -501,6 +542,7 @@ open class MediaInfoServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -556,6 +598,7 @@ open class MediaInfoServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -586,63 +629,65 @@ open class MediaInfoServiceAPI {
       "Extradata" : "Extradata",
       "BitRate" : 1
     } ],
-    "Size" : 7,
-    "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
-    "SortName" : "SortName",
     "Timestamp" : "None",
-    "ItemId" : "ItemId",
-    "Name" : "Name",
+    "MimeType" : "MimeType",
     "RequiresOpening" : true,
     "DirectStreamUrl" : "DirectStreamUrl",
-    "SupportsDirectStream" : true,
     "RequiresClosing" : true,
-    "Container" : "Container",
     "ServerId" : "ServerId",
-    "LiveStreamId" : "LiveStreamId",
-    "RequiresLooping" : true,
     "Protocol" : "File",
     "AddApiKeyToDirectStreamUrl" : true,
     "DefaultSubtitleStreamIndex" : 1,
     "TrancodeLiveStartIndex" : 2,
-    "IsInfiniteStream" : true,
     "Path" : "Path",
     "IsRemote" : true,
-    "SupportsDirectPlay" : true,
     "TranscodingSubProtocol" : "TranscodingSubProtocol",
     "Formats" : [ "Formats", "Formats" ],
-    "AnalyzeDurationMs" : 3,
     "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
     "Bitrate" : 6,
-    "OpenToken" : "OpenToken",
     "SupportsProbing" : true,
     "Type" : "Default",
-    "ReadAtNativeFramerate" : true,
-    "TranscodingContainer" : "TranscodingContainer",
-    "ProbePath" : "ProbePath",
-    "TranscodingUrl" : "TranscodingUrl",
-    "Chapters" : [ {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    }, {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    } ],
-    "Id" : "Id",
-    "SupportsTranscoding" : true,
-    "DefaultAudioStreamIndex" : 6
+    "SupportsTranscoding" : true
   }, {
+    "RunTimeTicks" : 9,
+    "Size" : 7,
+    "BufferMs" : 4,
+    "SortName" : "SortName",
+    "ItemId" : "ItemId",
+    "Name" : "Name",
+    "SupportsDirectStream" : true,
+    "Container" : "Container",
+    "TranscodingMimeType" : "TranscodingMimeType",
+    "LiveStreamId" : "LiveStreamId",
+    "RequiresLooping" : true,
+    "IsInfiniteStream" : true,
+    "SupportsDirectPlay" : true,
+    "AnalyzeDurationMs" : 3,
+    "OpenToken" : "OpenToken",
+    "ReadAtNativeFramerate" : true,
+    "TranscodingContainer" : "TranscodingContainer",
+    "ProbePath" : "ProbePath",
+    "TranscodingUrl" : "TranscodingUrl",
+    "Chapters" : [ {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    }, {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    } ],
+    "Id" : "Id",
+    "DefaultAudioStreamIndex" : 6,
     "EncoderPath" : "EncoderPath",
     "RequiredHttpHeaders" : {
       "key" : "RequiredHttpHeaders"
     },
-    "RunTimeTicks" : 9,
     "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
@@ -670,6 +715,7 @@ open class MediaInfoServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -725,6 +771,7 @@ open class MediaInfoServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -755,57 +802,26 @@ open class MediaInfoServiceAPI {
       "Extradata" : "Extradata",
       "BitRate" : 1
     } ],
-    "Size" : 7,
-    "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
-    "SortName" : "SortName",
     "Timestamp" : "None",
-    "ItemId" : "ItemId",
-    "Name" : "Name",
+    "MimeType" : "MimeType",
     "RequiresOpening" : true,
     "DirectStreamUrl" : "DirectStreamUrl",
-    "SupportsDirectStream" : true,
     "RequiresClosing" : true,
-    "Container" : "Container",
     "ServerId" : "ServerId",
-    "LiveStreamId" : "LiveStreamId",
-    "RequiresLooping" : true,
     "Protocol" : "File",
     "AddApiKeyToDirectStreamUrl" : true,
     "DefaultSubtitleStreamIndex" : 1,
     "TrancodeLiveStartIndex" : 2,
-    "IsInfiniteStream" : true,
     "Path" : "Path",
     "IsRemote" : true,
-    "SupportsDirectPlay" : true,
     "TranscodingSubProtocol" : "TranscodingSubProtocol",
     "Formats" : [ "Formats", "Formats" ],
-    "AnalyzeDurationMs" : 3,
     "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
     "Bitrate" : 6,
-    "OpenToken" : "OpenToken",
     "SupportsProbing" : true,
     "Type" : "Default",
-    "ReadAtNativeFramerate" : true,
-    "TranscodingContainer" : "TranscodingContainer",
-    "ProbePath" : "ProbePath",
-    "TranscodingUrl" : "TranscodingUrl",
-    "Chapters" : [ {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    }, {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    } ],
-    "Id" : "Id",
-    "SupportsTranscoding" : true,
-    "DefaultAudioStreamIndex" : 6
+    "SupportsTranscoding" : true
   } ],
   "ErrorCode" : "NotAllowed"
 }}]
@@ -832,10 +848,11 @@ open class MediaInfoServiceAPI {
      Closes a media source
 
      - parameter liveStreamId: (query) LiveStreamId 
+     - parameter playSessionId: (query) PlaySessionId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLivestreamsClose(liveStreamId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        postLivestreamsCloseWithRequestBuilder(liveStreamId: liveStreamId).execute { (response, error) -> Void in
+    open class func postLivestreamsClose(liveStreamId: String, playSessionId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postLivestreamsCloseWithRequestBuilder(liveStreamId: liveStreamId, playSessionId: playSessionId).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -856,16 +873,18 @@ open class MediaInfoServiceAPI {
        - type: http
        - name: embyauth
      - parameter liveStreamId: (query) LiveStreamId 
+     - parameter playSessionId: (query) PlaySessionId 
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postLivestreamsCloseWithRequestBuilder(liveStreamId: String) -> RequestBuilder<Void> {
+    open class func postLivestreamsCloseWithRequestBuilder(liveStreamId: String, playSessionId: String) -> RequestBuilder<Void> {
         let path = "/LiveStreams/Close"
         let URLString = EmbyClientAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-                        "LiveStreamId": liveStreamId
+                        "LiveStreamId": liveStreamId, 
+                        "PlaySessionId": playSessionId
         ])
 
 
@@ -943,11 +962,44 @@ open class MediaInfoServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "MediaSource" : {
+    "RunTimeTicks" : 9,
+    "Size" : 7,
+    "BufferMs" : 4,
+    "SortName" : "SortName",
+    "ItemId" : "ItemId",
+    "Name" : "Name",
+    "SupportsDirectStream" : true,
+    "Container" : "Container",
+    "TranscodingMimeType" : "TranscodingMimeType",
+    "LiveStreamId" : "LiveStreamId",
+    "RequiresLooping" : true,
+    "IsInfiniteStream" : true,
+    "SupportsDirectPlay" : true,
+    "AnalyzeDurationMs" : 3,
+    "OpenToken" : "OpenToken",
+    "ReadAtNativeFramerate" : true,
+    "TranscodingContainer" : "TranscodingContainer",
+    "ProbePath" : "ProbePath",
+    "TranscodingUrl" : "TranscodingUrl",
+    "Chapters" : [ {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    }, {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    } ],
+    "Id" : "Id",
+    "DefaultAudioStreamIndex" : 6,
     "EncoderPath" : "EncoderPath",
     "RequiredHttpHeaders" : {
       "key" : "RequiredHttpHeaders"
     },
-    "RunTimeTicks" : 9,
     "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
@@ -975,6 +1027,7 @@ open class MediaInfoServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -1030,6 +1083,7 @@ open class MediaInfoServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -1060,57 +1114,26 @@ open class MediaInfoServiceAPI {
       "Extradata" : "Extradata",
       "BitRate" : 1
     } ],
-    "Size" : 7,
-    "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
-    "SortName" : "SortName",
     "Timestamp" : "None",
-    "ItemId" : "ItemId",
-    "Name" : "Name",
+    "MimeType" : "MimeType",
     "RequiresOpening" : true,
     "DirectStreamUrl" : "DirectStreamUrl",
-    "SupportsDirectStream" : true,
     "RequiresClosing" : true,
-    "Container" : "Container",
     "ServerId" : "ServerId",
-    "LiveStreamId" : "LiveStreamId",
-    "RequiresLooping" : true,
     "Protocol" : "File",
     "AddApiKeyToDirectStreamUrl" : true,
     "DefaultSubtitleStreamIndex" : 1,
     "TrancodeLiveStartIndex" : 2,
-    "IsInfiniteStream" : true,
     "Path" : "Path",
     "IsRemote" : true,
-    "SupportsDirectPlay" : true,
     "TranscodingSubProtocol" : "TranscodingSubProtocol",
     "Formats" : [ "Formats", "Formats" ],
-    "AnalyzeDurationMs" : 3,
     "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
     "Bitrate" : 6,
-    "OpenToken" : "OpenToken",
     "SupportsProbing" : true,
     "Type" : "Default",
-    "ReadAtNativeFramerate" : true,
-    "TranscodingContainer" : "TranscodingContainer",
-    "ProbePath" : "ProbePath",
-    "TranscodingUrl" : "TranscodingUrl",
-    "Chapters" : [ {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    }, {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    } ],
-    "Id" : "Id",
-    "SupportsTranscoding" : true,
-    "DefaultAudioStreamIndex" : 6
+    "SupportsTranscoding" : true
   }
 }}]
      - parameter body: (body) LiveStreamRequest:  

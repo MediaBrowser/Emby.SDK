@@ -31,9 +31,6 @@ public class LiveTvSeriesTimerInfo {
   @SerializedName("Id")
   private String id = null;
 
-  @SerializedName("ChannelId")
-  private String channelId = null;
-
   @SerializedName("ChannelIds")
   private List<String> channelIds = null;
 
@@ -125,24 +122,6 @@ public class LiveTvSeriesTimerInfo {
 
   public void setId(String id) {
     this.id = id;
-  }
-
-  public LiveTvSeriesTimerInfo channelId(String channelId) {
-    this.channelId = channelId;
-    return this;
-  }
-
-   /**
-   * ChannelId of the recording.
-   * @return channelId
-  **/
-  @Schema(description = "ChannelId of the recording.")
-  public String getChannelId() {
-    return channelId;
-  }
-
-  public void setChannelId(String channelId) {
-    this.channelId = channelId;
   }
 
   public LiveTvSeriesTimerInfo channelIds(List<String> channelIds) {
@@ -630,7 +609,6 @@ public class LiveTvSeriesTimerInfo {
     }
     LiveTvSeriesTimerInfo liveTvSeriesTimerInfo = (LiveTvSeriesTimerInfo) o;
     return Objects.equals(this.id, liveTvSeriesTimerInfo.id) &&
-        Objects.equals(this.channelId, liveTvSeriesTimerInfo.channelId) &&
         Objects.equals(this.channelIds, liveTvSeriesTimerInfo.channelIds) &&
         Objects.equals(this.parentFolderId, liveTvSeriesTimerInfo.parentFolderId) &&
         Objects.equals(this.programId, liveTvSeriesTimerInfo.programId) &&
@@ -660,7 +638,7 @@ public class LiveTvSeriesTimerInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, channelId, channelIds, parentFolderId, programId, serviceName, overview, startDate, endDate, recordAnyTime, keepUpTo, keepUntil, skipEpisodesInLibrary, matchExistingItemsWithAnyLibrary, recordNewOnly, days, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, isPostPaddingRequired, seriesId, providerIds, maxRecordingSeconds, keywords, timerType, name);
+    return Objects.hash(id, channelIds, parentFolderId, programId, serviceName, overview, startDate, endDate, recordAnyTime, keepUpTo, keepUntil, skipEpisodesInLibrary, matchExistingItemsWithAnyLibrary, recordNewOnly, days, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, isPostPaddingRequired, seriesId, providerIds, maxRecordingSeconds, keywords, timerType, name);
   }
 
 
@@ -670,7 +648,6 @@ public class LiveTvSeriesTimerInfo {
     sb.append("class LiveTvSeriesTimerInfo {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    channelId: ").append(toIndentedString(channelId)).append("\n");
     sb.append("    channelIds: ").append(toIndentedString(channelIds)).append("\n");
     sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
     sb.append("    programId: ").append(toIndentedString(programId)).append("\n");

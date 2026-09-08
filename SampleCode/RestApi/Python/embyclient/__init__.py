@@ -134,6 +134,7 @@ from embyclient.models.connect_user_link_result import ConnectUserLinkResult
 from embyclient.models.connect_user_link_type import ConnectUserLinkType
 from embyclient.models.container_profile import ContainerProfile
 from embyclient.models.content_section import ContentSection
+from embyclient.models.copy_data import CopyData
 from embyclient.models.create_user_by_name import CreateUserByName
 from embyclient.models.day_of_week import DayOfWeek
 from embyclient.models.default_directory_browser_info import DefaultDirectoryBrowserInfo
@@ -158,8 +159,6 @@ from embyclient.models.editors_editor_base import EditorsEditorBase
 from embyclient.models.editors_editor_button_item import EditorsEditorButtonItem
 from embyclient.models.editors_editor_root import EditorsEditorRoot
 from embyclient.models.encoding_context import EncodingContext
-from embyclient.models.entities_item_image_info import EntitiesItemImageInfo
-from embyclient.models.entities_user import EntitiesUser
 from embyclient.models.enums_ui_command_type import EnumsUICommandType
 from embyclient.models.enums_ui_view_type import EnumsUIViewType
 from embyclient.models.extended_video_sub_types import ExtendedVideoSubTypes
@@ -192,10 +191,12 @@ from embyclient.models.item_counts import ItemCounts
 from embyclient.models.item_file_info import ItemFileInfo
 from embyclient.models.item_file_type import ItemFileType
 from embyclient.models.item_lookup_info import ItemLookupInfo
+from embyclient.models.items_query import ItemsQuery
 from embyclient.models.level_information import LevelInformation
 from embyclient.models.library_add_media_path import LibraryAddMediaPath
 from embyclient.models.library_add_virtual_folder import LibraryAddVirtualFolder
 from embyclient.models.library_delete_info import LibraryDeleteInfo
+from embyclient.models.library_full_user_copy_data_options import LibraryFullUserCopyDataOptions
 from embyclient.models.library_item_link_type import LibraryItemLinkType
 from embyclient.models.library_media_folder import LibraryMediaFolder
 from embyclient.models.library_media_update_info import LibraryMediaUpdateInfo
@@ -210,8 +211,6 @@ from embyclient.models.library_sub_folder import LibrarySubFolder
 from embyclient.models.library_type_options import LibraryTypeOptions
 from embyclient.models.library_update_library_options import LibraryUpdateLibraryOptions
 from embyclient.models.library_update_media_path import LibraryUpdateMediaPath
-from embyclient.models.library_user_copy_options import LibraryUserCopyOptions
-from embyclient.models.linked_item_info import LinkedItemInfo
 from embyclient.models.live_stream_request import LiveStreamRequest
 from embyclient.models.live_stream_response import LiveStreamResponse
 from embyclient.models.live_tv_channel_type import LiveTvChannelType
@@ -305,6 +304,7 @@ from embyclient.models.query_result_devices_device_info import QueryResultDevice
 from embyclient.models.query_result_live_tv_series_timer_info_dto import QueryResultLiveTvSeriesTimerInfoDto
 from embyclient.models.query_result_live_tv_timer_info_dto import QueryResultLiveTvTimerInfoDto
 from embyclient.models.query_result_log_file import QueryResultLogFile
+from embyclient.models.query_result_session_party_message import QueryResultSessionPartyMessage
 from embyclient.models.query_result_string import QueryResultString
 from embyclient.models.query_result_sync_job import QueryResultSyncJob
 from embyclient.models.query_result_sync_job_item import QueryResultSyncJobItem
@@ -345,6 +345,7 @@ from embyclient.models.series_info import SeriesInfo
 from embyclient.models.server_configuration import ServerConfiguration
 from embyclient.models.session_party_info import SessionPartyInfo
 from embyclient.models.session_party_info_result import SessionPartyInfoResult
+from embyclient.models.session_party_message import SessionPartyMessage
 from embyclient.models.session_session_info import SessionSessionInfo
 from embyclient.models.session_user_info import SessionUserInfo
 from embyclient.models.sleep_timer_mode import SleepTimerMode
@@ -402,9 +403,13 @@ from embyclient.models.user_dto import UserDto
 from embyclient.models.user_item_data_dto import UserItemDataDto
 from embyclient.models.user_item_share_level import UserItemShareLevel
 from embyclient.models.user_library_add_tags import UserLibraryAddTags
+from embyclient.models.user_library_credits_list import UserLibraryCreditsList
+from embyclient.models.user_library_delete_home_sections import UserLibraryDeleteHomeSections
 from embyclient.models.user_library_leave_shared_items import UserLibraryLeaveSharedItems
+from embyclient.models.user_library_move_home_sections import UserLibraryMoveHomeSections
 from embyclient.models.user_library_official_rating_item import UserLibraryOfficialRatingItem
 from embyclient.models.user_library_remove_tags import UserLibraryRemoveTags
+from embyclient.models.user_library_report_items_searched import UserLibraryReportItemsSearched
 from embyclient.models.user_library_tag_item import UserLibraryTagItem
 from embyclient.models.user_library_update_user_item_access import UserLibraryUpdateUserItemAccess
 from embyclient.models.user_notification_info import UserNotificationInfo

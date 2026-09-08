@@ -33,6 +33,12 @@ namespace Emby.ApiClient.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or Sets CustomName
+        /// </summary>
+        /// <value>The CustomName.</value>
+        public string CustomName { get; set; }
+
+        /// <summary>
         /// Gets or Sets Subtitle
         /// </summary>
         /// <value>The Subtitle.</value>
@@ -63,10 +69,34 @@ namespace Emby.ApiClient.Model
         public string ViewType { get; set; }
 
         /// <summary>
+        /// Gets or Sets ImageType
+        /// </summary>
+        /// <value>The ImageType.</value>
+        public string ImageType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DisplayMode
+        /// </summary>
+        /// <value>The DisplayMode.</value>
+        public string DisplayMode { get; set; }
+
+        /// <summary>
         /// Gets or Sets Monitor
         /// </summary>
         /// <value>The Monitor.</value>
         public List<string> Monitor { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ItemTypes
+        /// </summary>
+        /// <value>The ItemTypes.</value>
+        public List<string> ItemTypes { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ExcludedFolders
+        /// </summary>
+        /// <value>The ExcludedFolders.</value>
+        public List<string> ExcludedFolders { get; set; }
 
         /// <summary>
         /// Gets or Sets CardSizeOffset
@@ -85,6 +115,12 @@ namespace Emby.ApiClient.Model
         /// </summary>
         /// <value>The ParentItem.</value>
         public BaseItemDto ParentItem { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ParentId
+        /// </summary>
+        /// <value>The ParentId.</value>
+        public string ParentId { get; set; }
 
         /// <summary>
         /// Gets or Sets TextInfo
@@ -111,6 +147,30 @@ namespace Emby.ApiClient.Model
         public int? RefreshInterval { get; set; }
 
         /// <summary>
+        /// Gets or Sets SortBy
+        /// </summary>
+        /// <value>The SortBy.</value>
+        public string SortBy { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SortOrder
+        /// </summary>
+        /// <value>The SortOrder.</value>
+        public string SortOrder { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IncludeNextUpInResume
+        /// </summary>
+        /// <value>The IncludeNextUpInResume.</value>
+        public bool? IncludeNextUpInResume { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Query
+        /// </summary>
+        /// <value>The Query.</value>
+        public ItemsQuery Query { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -119,19 +179,29 @@ namespace Emby.ApiClient.Model
             var sb = new StringBuilder();
             sb.Append("class ContentSection {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  CustomName: ").Append(CustomName).Append("\n");
             sb.Append("  Subtitle: ").Append(Subtitle).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  SectionType: ").Append(SectionType).Append("\n");
             sb.Append("  CollectionType: ").Append(CollectionType).Append("\n");
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
+            sb.Append("  ImageType: ").Append(ImageType).Append("\n");
+            sb.Append("  DisplayMode: ").Append(DisplayMode).Append("\n");
             sb.Append("  Monitor: ").Append(Monitor).Append("\n");
+            sb.Append("  ItemTypes: ").Append(ItemTypes).Append("\n");
+            sb.Append("  ExcludedFolders: ").Append(ExcludedFolders).Append("\n");
             sb.Append("  CardSizeOffset: ").Append(CardSizeOffset).Append("\n");
             sb.Append("  ScrollDirection: ").Append(ScrollDirection).Append("\n");
             sb.Append("  ParentItem: ").Append(ParentItem).Append("\n");
+            sb.Append("  ParentId: ").Append(ParentId).Append("\n");
             sb.Append("  TextInfo: ").Append(TextInfo).Append("\n");
             sb.Append("  PremiumFeature: ").Append(PremiumFeature).Append("\n");
             sb.Append("  PremiumMessage: ").Append(PremiumMessage).Append("\n");
             sb.Append("  RefreshInterval: ").Append(RefreshInterval).Append("\n");
+            sb.Append("  SortBy: ").Append(SortBy).Append("\n");
+            sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
+            sb.Append("  IncludeNextUpInResume: ").Append(IncludeNextUpInResume).Append("\n");
+            sb.Append("  Query: ").Append(Query).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -163,6 +233,11 @@ namespace Emby.ApiClient.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
+                    this.CustomName == input.CustomName ||
+                    (this.CustomName != null &&
+                    this.CustomName.Equals(input.CustomName))
+                ) && 
+                (
                     this.Subtitle == input.Subtitle ||
                     (this.Subtitle != null &&
                     this.Subtitle.Equals(input.Subtitle))
@@ -188,10 +263,32 @@ namespace Emby.ApiClient.Model
                     this.ViewType.Equals(input.ViewType))
                 ) && 
                 (
+                    this.ImageType == input.ImageType ||
+                    (this.ImageType != null &&
+                    this.ImageType.Equals(input.ImageType))
+                ) && 
+                (
+                    this.DisplayMode == input.DisplayMode ||
+                    (this.DisplayMode != null &&
+                    this.DisplayMode.Equals(input.DisplayMode))
+                ) && 
+                (
                     this.Monitor == input.Monitor ||
                     this.Monitor != null &&
                     input.Monitor != null &&
                     this.Monitor.SequenceEqual(input.Monitor)
+                ) && 
+                (
+                    this.ItemTypes == input.ItemTypes ||
+                    this.ItemTypes != null &&
+                    input.ItemTypes != null &&
+                    this.ItemTypes.SequenceEqual(input.ItemTypes)
+                ) && 
+                (
+                    this.ExcludedFolders == input.ExcludedFolders ||
+                    this.ExcludedFolders != null &&
+                    input.ExcludedFolders != null &&
+                    this.ExcludedFolders.SequenceEqual(input.ExcludedFolders)
                 ) && 
                 (
                     this.CardSizeOffset == input.CardSizeOffset ||
@@ -207,6 +304,11 @@ namespace Emby.ApiClient.Model
                     this.ParentItem == input.ParentItem ||
                     (this.ParentItem != null &&
                     this.ParentItem.Equals(input.ParentItem))
+                ) && 
+                (
+                    this.ParentId == input.ParentId ||
+                    (this.ParentId != null &&
+                    this.ParentId.Equals(input.ParentId))
                 ) && 
                 (
                     this.TextInfo == input.TextInfo ||
@@ -227,6 +329,26 @@ namespace Emby.ApiClient.Model
                     this.RefreshInterval == input.RefreshInterval ||
                     (this.RefreshInterval != null &&
                     this.RefreshInterval.Equals(input.RefreshInterval))
+                ) && 
+                (
+                    this.SortBy == input.SortBy ||
+                    (this.SortBy != null &&
+                    this.SortBy.Equals(input.SortBy))
+                ) && 
+                (
+                    this.SortOrder == input.SortOrder ||
+                    (this.SortOrder != null &&
+                    this.SortOrder.Equals(input.SortOrder))
+                ) && 
+                (
+                    this.IncludeNextUpInResume == input.IncludeNextUpInResume ||
+                    (this.IncludeNextUpInResume != null &&
+                    this.IncludeNextUpInResume.Equals(input.IncludeNextUpInResume))
+                ) && 
+                (
+                    this.Query == input.Query ||
+                    (this.Query != null &&
+                    this.Query.Equals(input.Query))
                 );
         }
 
@@ -241,6 +363,8 @@ namespace Emby.ApiClient.Model
                 int hashCode = 41;
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.CustomName != null)
+                    hashCode = hashCode * 59 + this.CustomName.GetHashCode();
                 if (this.Subtitle != null)
                     hashCode = hashCode * 59 + this.Subtitle.GetHashCode();
                 if (this.Id != null)
@@ -251,14 +375,24 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.CollectionType.GetHashCode();
                 if (this.ViewType != null)
                     hashCode = hashCode * 59 + this.ViewType.GetHashCode();
+                if (this.ImageType != null)
+                    hashCode = hashCode * 59 + this.ImageType.GetHashCode();
+                if (this.DisplayMode != null)
+                    hashCode = hashCode * 59 + this.DisplayMode.GetHashCode();
                 if (this.Monitor != null)
                     hashCode = hashCode * 59 + this.Monitor.GetHashCode();
+                if (this.ItemTypes != null)
+                    hashCode = hashCode * 59 + this.ItemTypes.GetHashCode();
+                if (this.ExcludedFolders != null)
+                    hashCode = hashCode * 59 + this.ExcludedFolders.GetHashCode();
                 if (this.CardSizeOffset != null)
                     hashCode = hashCode * 59 + this.CardSizeOffset.GetHashCode();
                 if (this.ScrollDirection != null)
                     hashCode = hashCode * 59 + this.ScrollDirection.GetHashCode();
                 if (this.ParentItem != null)
                     hashCode = hashCode * 59 + this.ParentItem.GetHashCode();
+                if (this.ParentId != null)
+                    hashCode = hashCode * 59 + this.ParentId.GetHashCode();
                 if (this.TextInfo != null)
                     hashCode = hashCode * 59 + this.TextInfo.GetHashCode();
                 if (this.PremiumFeature != null)
@@ -267,6 +401,14 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.PremiumMessage.GetHashCode();
                 if (this.RefreshInterval != null)
                     hashCode = hashCode * 59 + this.RefreshInterval.GetHashCode();
+                if (this.SortBy != null)
+                    hashCode = hashCode * 59 + this.SortBy.GetHashCode();
+                if (this.SortOrder != null)
+                    hashCode = hashCode * 59 + this.SortOrder.GetHashCode();
+                if (this.IncludeNextUpInResume != null)
+                    hashCode = hashCode * 59 + this.IncludeNextUpInResume.GetHashCode();
+                if (this.Query != null)
+                    hashCode = hashCode * 59 + this.Query.GetHashCode();
                 return hashCode;
             }
         }

@@ -926,5 +926,45 @@ namespace Emby.ApiClient.Api
             return localVarResponse;
         }
 
+        /// <summary>
+        /// Marks an item as a favorite
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="body">ReportItemsSearched</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostUsersByUseridSearcheditems (UserLibraryReportItemsSearched body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new ApiException("Missing required parameter 'body' when calling UserLibraryServiceApi->PostUsersByUseridSearcheditems");
+            }
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+            {
+                throw new ApiException("Missing required parameter 'userId' when calling UserLibraryServiceApi->PostUsersByUseridSearcheditems");
+            }
+            
+            var request = new RestRequest("/Users/{UserId}/SearchedItems/", Method.Post);
+
+            if (userId != null)
+            {
+                request.AddParameter("UserId", this.ApiClient.ParameterToString(userId), ParameterType.UrlSegment);
+            }
+
+            if (body != null)
+            {
+                request.AddJsonBody(body);
+            }
+            
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
     }
 }

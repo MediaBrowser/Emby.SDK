@@ -57,6 +57,25 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>ApiResponse of SessionPartyInfoResult</returns>
         ApiResponse<SessionPartyInfoResult> GetPartiesInfoWithHttpInfo ();
         /// <summary>
+        /// Gets party messages
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>QueryResultSessionPartyMessage</returns>
+        QueryResultSessionPartyMessage GetPartiesMessages ();
+
+        /// <summary>
+        /// Gets party messages
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of QueryResultSessionPartyMessage</returns>
+        ApiResponse<QueryResultSessionPartyMessage> GetPartiesMessagesWithHttpInfo ();
+        /// <summary>
         /// Creates a party
         /// </summary>
         /// <remarks>
@@ -115,6 +134,27 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostPartiesLeaveWithHttpInfo ();
+        /// <summary>
+        /// Posts a message to the party
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">PartyMessage: </param>
+        /// <returns></returns>
+        void PostPartiesMessages (SessionPartyMessage body);
+
+        /// <summary>
+        /// Posts a message to the party
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">PartyMessage: </param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostPartiesMessagesWithHttpInfo (SessionPartyMessage body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -155,6 +195,25 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SessionPartyInfoResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<SessionPartyInfoResult>> GetPartiesInfoAsyncWithHttpInfo ();
+        /// <summary>
+        /// Gets party messages
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of QueryResultSessionPartyMessage</returns>
+        System.Threading.Tasks.Task<QueryResultSessionPartyMessage> GetPartiesMessagesAsync ();
+
+        /// <summary>
+        /// Gets party messages
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (QueryResultSessionPartyMessage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueryResultSessionPartyMessage>> GetPartiesMessagesAsyncWithHttpInfo ();
         /// <summary>
         /// Creates a party
         /// </summary>
@@ -214,6 +273,27 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostPartiesLeaveAsyncWithHttpInfo ();
+        /// <summary>
+        /// Posts a message to the party
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">PartyMessage: </param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostPartiesMessagesAsync (SessionPartyMessage body);
+
+        /// <summary>
+        /// Posts a message to the party
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">PartyMessage: </param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostPartiesMessagesAsyncWithHttpInfo (SessionPartyMessage body);
         #endregion Asynchronous Operations
     }
 
@@ -603,6 +683,149 @@ namespace EmbyClient.Dotnet.Api
             return new ApiResponse<SessionPartyInfoResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (SessionPartyInfoResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SessionPartyInfoResult)));
+        }
+
+        /// <summary>
+        /// Gets party messages Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>QueryResultSessionPartyMessage</returns>
+        public QueryResultSessionPartyMessage GetPartiesMessages ()
+        {
+             ApiResponse<QueryResultSessionPartyMessage> localVarResponse = GetPartiesMessagesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets party messages Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of QueryResultSessionPartyMessage</returns>
+        public ApiResponse< QueryResultSessionPartyMessage > GetPartiesMessagesWithHttpInfo ()
+        {
+
+            var localVarPath = "/Parties/Messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPartiesMessages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<QueryResultSessionPartyMessage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (QueryResultSessionPartyMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultSessionPartyMessage)));
+        }
+
+        /// <summary>
+        /// Gets party messages Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of QueryResultSessionPartyMessage</returns>
+        public async System.Threading.Tasks.Task<QueryResultSessionPartyMessage> GetPartiesMessagesAsync ()
+        {
+             ApiResponse<QueryResultSessionPartyMessage> localVarResponse = await GetPartiesMessagesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets party messages Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (QueryResultSessionPartyMessage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultSessionPartyMessage>> GetPartiesMessagesAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/Parties/Messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPartiesMessages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<QueryResultSessionPartyMessage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (QueryResultSessionPartyMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultSessionPartyMessage)));
         }
 
         /// <summary>
@@ -1032,6 +1255,173 @@ namespace EmbyClient.Dotnet.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("PostPartiesLeave", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Posts a message to the party Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">PartyMessage: </param>
+        /// <returns></returns>
+        public void PostPartiesMessages (SessionPartyMessage body)
+        {
+             PostPartiesMessagesWithHttpInfo(body);
+        }
+
+        /// <summary>
+        /// Posts a message to the party Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">PartyMessage: </param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostPartiesMessagesWithHttpInfo (SessionPartyMessage body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling PartyServiceApi->PostPartiesMessages");
+
+            var localVarPath = "/Parties/Messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPartiesMessages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Posts a message to the party Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">PartyMessage: </param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostPartiesMessagesAsync (SessionPartyMessage body)
+        {
+             await PostPartiesMessagesAsyncWithHttpInfo(body);
+
+        }
+
+        /// <summary>
+        /// Posts a message to the party Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">PartyMessage: </param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostPartiesMessagesAsyncWithHttpInfo (SessionPartyMessage body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling PartyServiceApi->PostPartiesMessages");
+
+            var localVarPath = "/Parties/Messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPartiesMessages", localVarResponse);
                 if (exception != null) throw exception;
             }
 

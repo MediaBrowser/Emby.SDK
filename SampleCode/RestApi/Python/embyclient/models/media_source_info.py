@@ -68,7 +68,9 @@ class MediaSourceInfo(object):
         'default_audio_stream_index': 'int',
         'default_subtitle_stream_index': 'int',
         'item_id': 'str',
-        'server_id': 'str'
+        'server_id': 'str',
+        'mime_type': 'str',
+        'transcoding_mime_type': 'str'
     }
 
     attribute_map = {
@@ -118,10 +120,12 @@ class MediaSourceInfo(object):
         'default_audio_stream_index': 'DefaultAudioStreamIndex',
         'default_subtitle_stream_index': 'DefaultSubtitleStreamIndex',
         'item_id': 'ItemId',
-        'server_id': 'ServerId'
+        'server_id': 'ServerId',
+        'mime_type': 'MimeType',
+        'transcoding_mime_type': 'TranscodingMimeType'
     }
 
-    def __init__(self, chapters=None, protocol=None, id=None, path=None, encoder_path=None, encoder_protocol=None, type=None, probe_path=None, probe_protocol=None, container=None, size=None, name=None, sort_name=None, is_remote=None, has_mixed_protocols=None, run_time_ticks=None, container_start_time_ticks=None, supports_transcoding=None, trancode_live_start_index=None, wall_clock_start=None, supports_direct_stream=None, supports_direct_play=None, is_infinite_stream=None, requires_opening=None, open_token=None, requires_closing=None, live_stream_id=None, buffer_ms=None, requires_looping=None, supports_probing=None, video3_d_format=None, media_streams=None, formats=None, bitrate=None, timestamp=None, required_http_headers=None, direct_stream_url=None, add_api_key_to_direct_stream_url=None, transcoding_url=None, transcoding_sub_protocol=None, transcoding_container=None, analyze_duration_ms=None, read_at_native_framerate=None, default_audio_stream_index=None, default_subtitle_stream_index=None, item_id=None, server_id=None):  # noqa: E501
+    def __init__(self, chapters=None, protocol=None, id=None, path=None, encoder_path=None, encoder_protocol=None, type=None, probe_path=None, probe_protocol=None, container=None, size=None, name=None, sort_name=None, is_remote=None, has_mixed_protocols=None, run_time_ticks=None, container_start_time_ticks=None, supports_transcoding=None, trancode_live_start_index=None, wall_clock_start=None, supports_direct_stream=None, supports_direct_play=None, is_infinite_stream=None, requires_opening=None, open_token=None, requires_closing=None, live_stream_id=None, buffer_ms=None, requires_looping=None, supports_probing=None, video3_d_format=None, media_streams=None, formats=None, bitrate=None, timestamp=None, required_http_headers=None, direct_stream_url=None, add_api_key_to_direct_stream_url=None, transcoding_url=None, transcoding_sub_protocol=None, transcoding_container=None, analyze_duration_ms=None, read_at_native_framerate=None, default_audio_stream_index=None, default_subtitle_stream_index=None, item_id=None, server_id=None, mime_type=None, transcoding_mime_type=None):  # noqa: E501
         """MediaSourceInfo - a model defined in Swagger"""  # noqa: E501
         self._chapters = None
         self._protocol = None
@@ -170,6 +174,8 @@ class MediaSourceInfo(object):
         self._default_subtitle_stream_index = None
         self._item_id = None
         self._server_id = None
+        self._mime_type = None
+        self._transcoding_mime_type = None
         self.discriminator = None
         if chapters is not None:
             self.chapters = chapters
@@ -265,6 +271,10 @@ class MediaSourceInfo(object):
             self.item_id = item_id
         if server_id is not None:
             self.server_id = server_id
+        if mime_type is not None:
+            self.mime_type = mime_type
+        if transcoding_mime_type is not None:
+            self.transcoding_mime_type = transcoding_mime_type
 
     @property
     def chapters(self):
@@ -1258,6 +1268,48 @@ class MediaSourceInfo(object):
         """
 
         self._server_id = server_id
+
+    @property
+    def mime_type(self):
+        """Gets the mime_type of this MediaSourceInfo.  # noqa: E501
+
+
+        :return: The mime_type of this MediaSourceInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._mime_type
+
+    @mime_type.setter
+    def mime_type(self, mime_type):
+        """Sets the mime_type of this MediaSourceInfo.
+
+
+        :param mime_type: The mime_type of this MediaSourceInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._mime_type = mime_type
+
+    @property
+    def transcoding_mime_type(self):
+        """Gets the transcoding_mime_type of this MediaSourceInfo.  # noqa: E501
+
+
+        :return: The transcoding_mime_type of this MediaSourceInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._transcoding_mime_type
+
+    @transcoding_mime_type.setter
+    def transcoding_mime_type(self, transcoding_mime_type):
+        """Sets the transcoding_mime_type of this MediaSourceInfo.
+
+
+        :param transcoding_mime_type: The transcoding_mime_type of this MediaSourceInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._transcoding_mime_type = transcoding_mime_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

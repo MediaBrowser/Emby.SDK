@@ -140,6 +140,9 @@ public class MediaStream {
   @SerializedName("DeliveryUrl")
   private String deliveryUrl = null;
 
+  @SerializedName("DeliveryFormat")
+  private String deliveryFormat = null;
+
   @SerializedName("IsExternalUrl")
   private Boolean isExternalUrl = null;
 
@@ -875,6 +878,24 @@ public class MediaStream {
     this.deliveryUrl = deliveryUrl;
   }
 
+  public MediaStream deliveryFormat(String deliveryFormat) {
+    this.deliveryFormat = deliveryFormat;
+    return this;
+  }
+
+   /**
+   * Get deliveryFormat
+   * @return deliveryFormat
+  **/
+  @Schema(description = "")
+  public String getDeliveryFormat() {
+    return deliveryFormat;
+  }
+
+  public void setDeliveryFormat(String deliveryFormat) {
+    this.deliveryFormat = deliveryFormat;
+  }
+
   public MediaStream isExternalUrl(Boolean isExternalUrl) {
     this.isExternalUrl = isExternalUrl;
     return this;
@@ -1229,6 +1250,7 @@ public class MediaStream {
         Objects.equals(this.isExternal, mediaStream.isExternal) &&
         Objects.equals(this.deliveryMethod, mediaStream.deliveryMethod) &&
         Objects.equals(this.deliveryUrl, mediaStream.deliveryUrl) &&
+        Objects.equals(this.deliveryFormat, mediaStream.deliveryFormat) &&
         Objects.equals(this.isExternalUrl, mediaStream.isExternalUrl) &&
         Objects.equals(this.isChunkedResponse, mediaStream.isChunkedResponse) &&
         Objects.equals(this.isTextSubtitleStream, mediaStream.isTextSubtitleStream) &&
@@ -1250,7 +1272,7 @@ public class MediaStream {
 
   @Override
   public int hashCode() {
-    return Objects.hash(codec, codecTag, language, colorTransfer, colorPrimaries, colorSpace, comment, streamStartTimeTicks, timeBase, title, extradata, videoRange, displayTitle, displayLanguage, nalLengthSize, isInterlaced, isAVC, channelLayout, bitRate, bitDepth, refFrames, rotation, channels, sampleRate, isDefault, isForced, isHearingImpaired, height, width, averageFrameRate, realFrameRate, profile, type, aspectRatio, index, isExternal, deliveryMethod, deliveryUrl, isExternalUrl, isChunkedResponse, isTextSubtitleStream, supportsExternalStream, path, protocol, pixelFormat, level, isAnamorphic, extendedVideoType, extendedVideoSubType, extendedVideoSubTypeDescription, itemId, serverId, attachmentSize, mimeType, subtitleLocationType);
+    return Objects.hash(codec, codecTag, language, colorTransfer, colorPrimaries, colorSpace, comment, streamStartTimeTicks, timeBase, title, extradata, videoRange, displayTitle, displayLanguage, nalLengthSize, isInterlaced, isAVC, channelLayout, bitRate, bitDepth, refFrames, rotation, channels, sampleRate, isDefault, isForced, isHearingImpaired, height, width, averageFrameRate, realFrameRate, profile, type, aspectRatio, index, isExternal, deliveryMethod, deliveryUrl, deliveryFormat, isExternalUrl, isChunkedResponse, isTextSubtitleStream, supportsExternalStream, path, protocol, pixelFormat, level, isAnamorphic, extendedVideoType, extendedVideoSubType, extendedVideoSubTypeDescription, itemId, serverId, attachmentSize, mimeType, subtitleLocationType);
   }
 
 
@@ -1297,6 +1319,7 @@ public class MediaStream {
     sb.append("    isExternal: ").append(toIndentedString(isExternal)).append("\n");
     sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
     sb.append("    deliveryUrl: ").append(toIndentedString(deliveryUrl)).append("\n");
+    sb.append("    deliveryFormat: ").append(toIndentedString(deliveryFormat)).append("\n");
     sb.append("    isExternalUrl: ").append(toIndentedString(isExternalUrl)).append("\n");
     sb.append("    isChunkedResponse: ").append(toIndentedString(isChunkedResponse)).append("\n");
     sb.append("    isTextSubtitleStream: ").append(toIndentedString(isTextSubtitleStream)).append("\n");

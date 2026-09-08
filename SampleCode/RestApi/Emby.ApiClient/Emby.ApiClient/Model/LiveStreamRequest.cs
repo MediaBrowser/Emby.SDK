@@ -123,6 +123,12 @@ namespace Emby.ApiClient.Model
         public bool? AllowAudioStreamCopy { get; set; }
 
         /// <summary>
+        /// Gets or Sets ConsumerId
+        /// </summary>
+        /// <value>The ConsumerId.</value>
+        public string ConsumerId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -146,6 +152,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  AllowVideoStreamCopy: ").Append(AllowVideoStreamCopy).Append("\n");
             sb.Append("  AllowInterlacedVideoStreamCopy: ").Append(AllowInterlacedVideoStreamCopy).Append("\n");
             sb.Append("  AllowAudioStreamCopy: ").Append(AllowAudioStreamCopy).Append("\n");
+            sb.Append("  ConsumerId: ").Append(ConsumerId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -250,6 +257,11 @@ namespace Emby.ApiClient.Model
                     this.AllowAudioStreamCopy == input.AllowAudioStreamCopy ||
                     (this.AllowAudioStreamCopy != null &&
                     this.AllowAudioStreamCopy.Equals(input.AllowAudioStreamCopy))
+                ) && 
+                (
+                    this.ConsumerId == input.ConsumerId ||
+                    (this.ConsumerId != null &&
+                    this.ConsumerId.Equals(input.ConsumerId))
                 );
         }
 
@@ -294,6 +306,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.AllowInterlacedVideoStreamCopy.GetHashCode();
                 if (this.AllowAudioStreamCopy != null)
                     hashCode = hashCode * 59 + this.AllowAudioStreamCopy.GetHashCode();
+                if (this.ConsumerId != null)
+                    hashCode = hashCode * 59 + this.ConsumerId.GetHashCode();
                 return hashCode;
             }
         }

@@ -42,7 +42,8 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="allowVideoStreamCopy">allowVideoStreamCopy.</param>
         /// <param name="allowInterlacedVideoStreamCopy">allowInterlacedVideoStreamCopy.</param>
         /// <param name="allowAudioStreamCopy">allowAudioStreamCopy.</param>
-        public LiveStreamRequest(string openToken = default(string), string userId = default(string), string playSessionId = default(string), long? maxStreamingBitrate = default(long?), long? startTimeTicks = default(long?), int? audioStreamIndex = default(int?), int? subtitleStreamIndex = default(int?), int? maxAudioChannels = default(int?), long? itemId = default(long?), DeviceProfile deviceProfile = default(DeviceProfile), bool? enableDirectPlay = default(bool?), bool? enableDirectStream = default(bool?), bool? enableTranscoding = default(bool?), bool? allowVideoStreamCopy = default(bool?), bool? allowInterlacedVideoStreamCopy = default(bool?), bool? allowAudioStreamCopy = default(bool?))
+        /// <param name="consumerId">consumerId.</param>
+        public LiveStreamRequest(string openToken = default(string), string userId = default(string), string playSessionId = default(string), long? maxStreamingBitrate = default(long?), long? startTimeTicks = default(long?), int? audioStreamIndex = default(int?), int? subtitleStreamIndex = default(int?), int? maxAudioChannels = default(int?), long? itemId = default(long?), DeviceProfile deviceProfile = default(DeviceProfile), bool? enableDirectPlay = default(bool?), bool? enableDirectStream = default(bool?), bool? enableTranscoding = default(bool?), bool? allowVideoStreamCopy = default(bool?), bool? allowInterlacedVideoStreamCopy = default(bool?), bool? allowAudioStreamCopy = default(bool?), string consumerId = default(string))
         {
             this.OpenToken = openToken;
             this.UserId = userId;
@@ -60,6 +61,7 @@ namespace EmbyClient.Dotnet.Model
             this.AllowVideoStreamCopy = allowVideoStreamCopy;
             this.AllowInterlacedVideoStreamCopy = allowInterlacedVideoStreamCopy;
             this.AllowAudioStreamCopy = allowAudioStreamCopy;
+            this.ConsumerId = consumerId;
         }
         
         /// <summary>
@@ -159,6 +161,12 @@ namespace EmbyClient.Dotnet.Model
         public bool? AllowAudioStreamCopy { get; set; }
 
         /// <summary>
+        /// Gets or Sets ConsumerId
+        /// </summary>
+        [DataMember(Name="ConsumerId", EmitDefaultValue=false)]
+        public string ConsumerId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -182,6 +190,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  AllowVideoStreamCopy: ").Append(AllowVideoStreamCopy).Append("\n");
             sb.Append("  AllowInterlacedVideoStreamCopy: ").Append(AllowInterlacedVideoStreamCopy).Append("\n");
             sb.Append("  AllowAudioStreamCopy: ").Append(AllowAudioStreamCopy).Append("\n");
+            sb.Append("  ConsumerId: ").Append(ConsumerId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -295,6 +304,11 @@ namespace EmbyClient.Dotnet.Model
                     this.AllowAudioStreamCopy == input.AllowAudioStreamCopy ||
                     (this.AllowAudioStreamCopy != null &&
                     this.AllowAudioStreamCopy.Equals(input.AllowAudioStreamCopy))
+                ) && 
+                (
+                    this.ConsumerId == input.ConsumerId ||
+                    (this.ConsumerId != null &&
+                    this.ConsumerId.Equals(input.ConsumerId))
                 );
         }
 
@@ -339,6 +353,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.AllowInterlacedVideoStreamCopy.GetHashCode();
                 if (this.AllowAudioStreamCopy != null)
                     hashCode = hashCode * 59 + this.AllowAudioStreamCopy.GetHashCode();
+                if (this.ConsumerId != null)
+                    hashCode = hashCode * 59 + this.ConsumerId.GetHashCode();
                 return hashCode;
             }
         }

@@ -74,6 +74,15 @@ open class PartyServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "PartyInfo" : {
+    "Messages" : [ {
+      "Message" : "Message",
+      "UserId" : 5,
+      "DateTime" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "Message" : "Message",
+      "UserId" : 5,
+      "DateTime" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "Sessions" : [ {
       "PlaylistLength" : 3,
       "ApplicationVersion" : "ApplicationVersion",
@@ -126,11 +135,44 @@ open class PartyServiceAPI {
           "Name" : "Name"
         } ],
         "MediaSources" : [ {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -158,6 +200,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -213,6 +256,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -243,63 +287,65 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         }, {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -327,6 +373,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -382,6 +429,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -412,57 +460,26 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         } ],
         "GenreItems" : [ null, null ],
         "OfficialRating" : "OfficialRating",
@@ -484,6 +501,7 @@ open class PartyServiceAPI {
         "FileName" : "FileName",
         "PrimaryImageTag" : "PrimaryImageTag",
         "Prefix" : "Prefix",
+        "MimeType" : "MimeType",
         "CanDownload" : true,
         "IsMovie" : true,
         "SeriesCount" : 8,
@@ -548,6 +566,7 @@ open class PartyServiceAPI {
         "Genres" : [ "Genres", "Genres" ],
         "SeasonId" : "SeasonId",
         "LockedFields" : [ "Cast", "Cast" ],
+        "Collections" : [ null, null ],
         "Disabled" : true,
         "ProviderIds" : {
           "key" : "ProviderIds"
@@ -748,11 +767,44 @@ open class PartyServiceAPI {
         "RepeatMode" : "RepeatNone",
         "CanSeek" : true,
         "MediaSource" : {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -780,6 +832,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -835,6 +888,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -865,57 +919,26 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         },
         "PlayMethod" : "Transcode",
         "SleepTimerEndTime" : "2000-01-23T04:56:07.000+00:00",
@@ -977,11 +1000,44 @@ open class PartyServiceAPI {
           "Name" : "Name"
         } ],
         "MediaSources" : [ {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -1009,6 +1065,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -1064,6 +1121,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -1094,63 +1152,65 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         }, {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -1178,6 +1238,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -1233,6 +1294,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -1263,57 +1325,26 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         } ],
         "GenreItems" : [ null, null ],
         "OfficialRating" : "OfficialRating",
@@ -1335,6 +1366,7 @@ open class PartyServiceAPI {
         "FileName" : "FileName",
         "PrimaryImageTag" : "PrimaryImageTag",
         "Prefix" : "Prefix",
+        "MimeType" : "MimeType",
         "CanDownload" : true,
         "IsMovie" : true,
         "SeriesCount" : 8,
@@ -1399,6 +1431,7 @@ open class PartyServiceAPI {
         "Genres" : [ "Genres", "Genres" ],
         "SeasonId" : "SeasonId",
         "LockedFields" : [ "Cast", "Cast" ],
+        "Collections" : [ null, null ],
         "Disabled" : true,
         "ProviderIds" : {
           "key" : "ProviderIds"
@@ -1599,11 +1632,44 @@ open class PartyServiceAPI {
         "RepeatMode" : "RepeatNone",
         "CanSeek" : true,
         "MediaSource" : {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -1631,6 +1697,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -1686,6 +1753,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -1716,57 +1784,26 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         },
         "PlayMethod" : "Transcode",
         "SleepTimerEndTime" : "2000-01-23T04:56:07.000+00:00",
@@ -1778,101 +1815,7 @@ open class PartyServiceAPI {
       "DeviceName" : "DeviceName"
     } ],
     "Id" : "Id",
-    "Users" : [ {
-      "PlayedPercentage" : 3.353193347011243,
-      "RecursiveChildCountEqualsChildCount" : true,
-      "OriginalParsedName" : "OriginalParsedName",
-      "ConnectAccessKey" : "ConnectAccessKey",
-      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsNameParsedFromFolder" : true,
-      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "ImportedCollections" : [ {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      }, {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      } ],
-      "ConnectUserId" : "ConnectUserId",
-      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
-      "Name" : "Name",
-      "ImageInfos" : [ {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      }, {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      } ],
-      "UsesIdForConfigurationPath" : true,
-      "Salt" : "Salt",
-      "ConnectUserName" : "ConnectUserName",
-      "IdString" : "IdString",
-      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-      "ConnectLinkType" : "LinkedUser",
-      "EasyPassword" : "EasyPassword",
-      "Password" : "Password"
-    }, {
-      "PlayedPercentage" : 3.353193347011243,
-      "RecursiveChildCountEqualsChildCount" : true,
-      "OriginalParsedName" : "OriginalParsedName",
-      "ConnectAccessKey" : "ConnectAccessKey",
-      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsNameParsedFromFolder" : true,
-      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "ImportedCollections" : [ {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      }, {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      } ],
-      "ConnectUserId" : "ConnectUserId",
-      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
-      "Name" : "Name",
-      "ImageInfos" : [ {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      }, {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      } ],
-      "UsesIdForConfigurationPath" : true,
-      "Salt" : "Salt",
-      "ConnectUserName" : "ConnectUserName",
-      "IdString" : "IdString",
-      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-      "ConnectLinkType" : "LinkedUser",
-      "EasyPassword" : "EasyPassword",
-      "Password" : "Password"
-    } ],
+    "IsPlaying" : true,
     "Name" : "Name"
   }
 }}]
@@ -1887,6 +1830,54 @@ open class PartyServiceAPI {
 
 
         let requestBuilder: RequestBuilder<SessionPartyInfoResult>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets party messages
+
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getPartiesMessages(completion: @escaping ((_ data: QueryResultSessionPartyMessage?,_ error: Error?) -> Void)) {
+        getPartiesMessagesWithRequestBuilder().execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     Gets party messages
+     - GET /Parties/Messages
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - examples: [{contentType=application/json, example={
+  "TotalRecordCount" : 0,
+  "Items" : [ {
+    "Message" : "Message",
+    "UserId" : 5,
+    "DateTime" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "Message" : "Message",
+    "UserId" : 5,
+    "DateTime" : "2000-01-23T04:56:07.000+00:00"
+  } ]
+}}]
+
+     - returns: RequestBuilder<QueryResultSessionPartyMessage> 
+     */
+    open class func getPartiesMessagesWithRequestBuilder() -> RequestBuilder<QueryResultSessionPartyMessage> {
+        let path = "/Parties/Messages"
+        let URLString = EmbyClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<QueryResultSessionPartyMessage>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -1914,6 +1905,15 @@ open class PartyServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "PartyInfo" : {
+    "Messages" : [ {
+      "Message" : "Message",
+      "UserId" : 5,
+      "DateTime" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "Message" : "Message",
+      "UserId" : 5,
+      "DateTime" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "Sessions" : [ {
       "PlaylistLength" : 3,
       "ApplicationVersion" : "ApplicationVersion",
@@ -1966,11 +1966,44 @@ open class PartyServiceAPI {
           "Name" : "Name"
         } ],
         "MediaSources" : [ {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -1998,6 +2031,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2053,6 +2087,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2083,63 +2118,65 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         }, {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -2167,6 +2204,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2222,6 +2260,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2252,57 +2291,26 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         } ],
         "GenreItems" : [ null, null ],
         "OfficialRating" : "OfficialRating",
@@ -2324,6 +2332,7 @@ open class PartyServiceAPI {
         "FileName" : "FileName",
         "PrimaryImageTag" : "PrimaryImageTag",
         "Prefix" : "Prefix",
+        "MimeType" : "MimeType",
         "CanDownload" : true,
         "IsMovie" : true,
         "SeriesCount" : 8,
@@ -2388,6 +2397,7 @@ open class PartyServiceAPI {
         "Genres" : [ "Genres", "Genres" ],
         "SeasonId" : "SeasonId",
         "LockedFields" : [ "Cast", "Cast" ],
+        "Collections" : [ null, null ],
         "Disabled" : true,
         "ProviderIds" : {
           "key" : "ProviderIds"
@@ -2588,11 +2598,44 @@ open class PartyServiceAPI {
         "RepeatMode" : "RepeatNone",
         "CanSeek" : true,
         "MediaSource" : {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -2620,6 +2663,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2675,6 +2719,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2705,57 +2750,26 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         },
         "PlayMethod" : "Transcode",
         "SleepTimerEndTime" : "2000-01-23T04:56:07.000+00:00",
@@ -2817,11 +2831,44 @@ open class PartyServiceAPI {
           "Name" : "Name"
         } ],
         "MediaSources" : [ {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -2849,6 +2896,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2904,6 +2952,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -2934,63 +2983,65 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         }, {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -3018,6 +3069,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -3073,6 +3125,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -3103,57 +3156,26 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         } ],
         "GenreItems" : [ null, null ],
         "OfficialRating" : "OfficialRating",
@@ -3175,6 +3197,7 @@ open class PartyServiceAPI {
         "FileName" : "FileName",
         "PrimaryImageTag" : "PrimaryImageTag",
         "Prefix" : "Prefix",
+        "MimeType" : "MimeType",
         "CanDownload" : true,
         "IsMovie" : true,
         "SeriesCount" : 8,
@@ -3239,6 +3262,7 @@ open class PartyServiceAPI {
         "Genres" : [ "Genres", "Genres" ],
         "SeasonId" : "SeasonId",
         "LockedFields" : [ "Cast", "Cast" ],
+        "Collections" : [ null, null ],
         "Disabled" : true,
         "ProviderIds" : {
           "key" : "ProviderIds"
@@ -3439,11 +3463,44 @@ open class PartyServiceAPI {
         "RepeatMode" : "RepeatNone",
         "CanSeek" : true,
         "MediaSource" : {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -3471,6 +3528,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -3526,6 +3584,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -3556,57 +3615,26 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         },
         "PlayMethod" : "Transcode",
         "SleepTimerEndTime" : "2000-01-23T04:56:07.000+00:00",
@@ -3618,101 +3646,7 @@ open class PartyServiceAPI {
       "DeviceName" : "DeviceName"
     } ],
     "Id" : "Id",
-    "Users" : [ {
-      "PlayedPercentage" : 3.353193347011243,
-      "RecursiveChildCountEqualsChildCount" : true,
-      "OriginalParsedName" : "OriginalParsedName",
-      "ConnectAccessKey" : "ConnectAccessKey",
-      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsNameParsedFromFolder" : true,
-      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "ImportedCollections" : [ {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      }, {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      } ],
-      "ConnectUserId" : "ConnectUserId",
-      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
-      "Name" : "Name",
-      "ImageInfos" : [ {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      }, {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      } ],
-      "UsesIdForConfigurationPath" : true,
-      "Salt" : "Salt",
-      "ConnectUserName" : "ConnectUserName",
-      "IdString" : "IdString",
-      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-      "ConnectLinkType" : "LinkedUser",
-      "EasyPassword" : "EasyPassword",
-      "Password" : "Password"
-    }, {
-      "PlayedPercentage" : 3.353193347011243,
-      "RecursiveChildCountEqualsChildCount" : true,
-      "OriginalParsedName" : "OriginalParsedName",
-      "ConnectAccessKey" : "ConnectAccessKey",
-      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsNameParsedFromFolder" : true,
-      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "ImportedCollections" : [ {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      }, {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      } ],
-      "ConnectUserId" : "ConnectUserId",
-      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
-      "Name" : "Name",
-      "ImageInfos" : [ {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      }, {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      } ],
-      "UsesIdForConfigurationPath" : true,
-      "Salt" : "Salt",
-      "ConnectUserName" : "ConnectUserName",
-      "IdString" : "IdString",
-      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-      "ConnectLinkType" : "LinkedUser",
-      "EasyPassword" : "EasyPassword",
-      "Password" : "Password"
-    } ],
+    "IsPlaying" : true,
     "Name" : "Name"
   }
 }}]
@@ -3755,6 +3689,15 @@ open class PartyServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "PartyInfo" : {
+    "Messages" : [ {
+      "Message" : "Message",
+      "UserId" : 5,
+      "DateTime" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "Message" : "Message",
+      "UserId" : 5,
+      "DateTime" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "Sessions" : [ {
       "PlaylistLength" : 3,
       "ApplicationVersion" : "ApplicationVersion",
@@ -3807,11 +3750,44 @@ open class PartyServiceAPI {
           "Name" : "Name"
         } ],
         "MediaSources" : [ {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -3839,6 +3815,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -3894,6 +3871,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -3924,63 +3902,65 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         }, {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -4008,6 +3988,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4063,6 +4044,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4093,57 +4075,26 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         } ],
         "GenreItems" : [ null, null ],
         "OfficialRating" : "OfficialRating",
@@ -4165,6 +4116,7 @@ open class PartyServiceAPI {
         "FileName" : "FileName",
         "PrimaryImageTag" : "PrimaryImageTag",
         "Prefix" : "Prefix",
+        "MimeType" : "MimeType",
         "CanDownload" : true,
         "IsMovie" : true,
         "SeriesCount" : 8,
@@ -4229,6 +4181,7 @@ open class PartyServiceAPI {
         "Genres" : [ "Genres", "Genres" ],
         "SeasonId" : "SeasonId",
         "LockedFields" : [ "Cast", "Cast" ],
+        "Collections" : [ null, null ],
         "Disabled" : true,
         "ProviderIds" : {
           "key" : "ProviderIds"
@@ -4429,11 +4382,44 @@ open class PartyServiceAPI {
         "RepeatMode" : "RepeatNone",
         "CanSeek" : true,
         "MediaSource" : {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -4461,6 +4447,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4516,6 +4503,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4546,57 +4534,26 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         },
         "PlayMethod" : "Transcode",
         "SleepTimerEndTime" : "2000-01-23T04:56:07.000+00:00",
@@ -4658,11 +4615,44 @@ open class PartyServiceAPI {
           "Name" : "Name"
         } ],
         "MediaSources" : [ {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -4690,6 +4680,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4745,6 +4736,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4775,63 +4767,65 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         }, {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -4859,6 +4853,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4914,6 +4909,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -4944,57 +4940,26 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         } ],
         "GenreItems" : [ null, null ],
         "OfficialRating" : "OfficialRating",
@@ -5016,6 +4981,7 @@ open class PartyServiceAPI {
         "FileName" : "FileName",
         "PrimaryImageTag" : "PrimaryImageTag",
         "Prefix" : "Prefix",
+        "MimeType" : "MimeType",
         "CanDownload" : true,
         "IsMovie" : true,
         "SeriesCount" : 8,
@@ -5080,6 +5046,7 @@ open class PartyServiceAPI {
         "Genres" : [ "Genres", "Genres" ],
         "SeasonId" : "SeasonId",
         "LockedFields" : [ "Cast", "Cast" ],
+        "Collections" : [ null, null ],
         "Disabled" : true,
         "ProviderIds" : {
           "key" : "ProviderIds"
@@ -5280,11 +5247,44 @@ open class PartyServiceAPI {
         "RepeatMode" : "RepeatNone",
         "CanSeek" : true,
         "MediaSource" : {
+          "RunTimeTicks" : 9,
+          "Size" : 7,
+          "BufferMs" : 4,
+          "SortName" : "SortName",
+          "ItemId" : "ItemId",
+          "Name" : "Name",
+          "SupportsDirectStream" : true,
+          "Container" : "Container",
+          "TranscodingMimeType" : "TranscodingMimeType",
+          "LiveStreamId" : "LiveStreamId",
+          "RequiresLooping" : true,
+          "IsInfiniteStream" : true,
+          "SupportsDirectPlay" : true,
+          "AnalyzeDurationMs" : 3,
+          "OpenToken" : "OpenToken",
+          "ReadAtNativeFramerate" : true,
+          "TranscodingContainer" : "TranscodingContainer",
+          "ProbePath" : "ProbePath",
+          "TranscodingUrl" : "TranscodingUrl",
+          "Chapters" : [ {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          }, {
+            "StartPositionTicks" : 5,
+            "ImageTag" : "ImageTag",
+            "MarkerType" : "Chapter",
+            "ChapterIndex" : 2,
+            "Name" : "Name"
+          } ],
+          "Id" : "Id",
+          "DefaultAudioStreamIndex" : 6,
           "EncoderPath" : "EncoderPath",
           "RequiredHttpHeaders" : {
             "key" : "RequiredHttpHeaders"
           },
-          "RunTimeTicks" : 9,
           "HasMixedProtocols" : true,
           "MediaStreams" : [ {
             "VideoRange" : "VideoRange",
@@ -5312,6 +5312,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -5367,6 +5368,7 @@ open class PartyServiceAPI {
             "AverageFrameRate" : 9.965781,
             "StreamStartTimeTicks" : 7,
             "IsExternal" : true,
+            "DeliveryFormat" : "DeliveryFormat",
             "Level" : 8.762042012749001,
             "ExtendedVideoSubType" : "None",
             "Channels" : 7,
@@ -5397,57 +5399,26 @@ open class PartyServiceAPI {
             "Extradata" : "Extradata",
             "BitRate" : 1
           } ],
-          "Size" : 7,
-          "BufferMs" : 4,
           "ContainerStartTimeTicks" : 3,
-          "SortName" : "SortName",
           "Timestamp" : "None",
-          "ItemId" : "ItemId",
-          "Name" : "Name",
+          "MimeType" : "MimeType",
           "RequiresOpening" : true,
           "DirectStreamUrl" : "DirectStreamUrl",
-          "SupportsDirectStream" : true,
           "RequiresClosing" : true,
-          "Container" : "Container",
           "ServerId" : "ServerId",
-          "LiveStreamId" : "LiveStreamId",
-          "RequiresLooping" : true,
           "Protocol" : "File",
           "AddApiKeyToDirectStreamUrl" : true,
           "DefaultSubtitleStreamIndex" : 1,
           "TrancodeLiveStartIndex" : 2,
-          "IsInfiniteStream" : true,
           "Path" : "Path",
           "IsRemote" : true,
-          "SupportsDirectPlay" : true,
           "TranscodingSubProtocol" : "TranscodingSubProtocol",
           "Formats" : [ "Formats", "Formats" ],
-          "AnalyzeDurationMs" : 3,
           "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
           "Bitrate" : 6,
-          "OpenToken" : "OpenToken",
           "SupportsProbing" : true,
           "Type" : "Default",
-          "ReadAtNativeFramerate" : true,
-          "TranscodingContainer" : "TranscodingContainer",
-          "ProbePath" : "ProbePath",
-          "TranscodingUrl" : "TranscodingUrl",
-          "Chapters" : [ {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          }, {
-            "StartPositionTicks" : 5,
-            "ImageTag" : "ImageTag",
-            "MarkerType" : "Chapter",
-            "ChapterIndex" : 2,
-            "Name" : "Name"
-          } ],
-          "Id" : "Id",
-          "SupportsTranscoding" : true,
-          "DefaultAudioStreamIndex" : 6
+          "SupportsTranscoding" : true
         },
         "PlayMethod" : "Transcode",
         "SleepTimerEndTime" : "2000-01-23T04:56:07.000+00:00",
@@ -5459,101 +5430,7 @@ open class PartyServiceAPI {
       "DeviceName" : "DeviceName"
     } ],
     "Id" : "Id",
-    "Users" : [ {
-      "PlayedPercentage" : 3.353193347011243,
-      "RecursiveChildCountEqualsChildCount" : true,
-      "OriginalParsedName" : "OriginalParsedName",
-      "ConnectAccessKey" : "ConnectAccessKey",
-      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsNameParsedFromFolder" : true,
-      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "ImportedCollections" : [ {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      }, {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      } ],
-      "ConnectUserId" : "ConnectUserId",
-      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
-      "Name" : "Name",
-      "ImageInfos" : [ {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      }, {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      } ],
-      "UsesIdForConfigurationPath" : true,
-      "Salt" : "Salt",
-      "ConnectUserName" : "ConnectUserName",
-      "IdString" : "IdString",
-      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-      "ConnectLinkType" : "LinkedUser",
-      "EasyPassword" : "EasyPassword",
-      "Password" : "Password"
-    }, {
-      "PlayedPercentage" : 3.353193347011243,
-      "RecursiveChildCountEqualsChildCount" : true,
-      "OriginalParsedName" : "OriginalParsedName",
-      "ConnectAccessKey" : "ConnectAccessKey",
-      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsNameParsedFromFolder" : true,
-      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "ImportedCollections" : [ {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      }, {
-        "Id" : 3,
-        "ProviderIds" : {
-          "key" : "ProviderIds"
-        },
-        "Name" : "Name"
-      } ],
-      "ConnectUserId" : "ConnectUserId",
-      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
-      "Name" : "Name",
-      "ImageInfos" : [ {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      }, {
-        "Path" : "Path",
-        "Type" : "Primary",
-        "Height" : 6,
-        "Orientation" : "TopLeft",
-        "Width" : 5,
-        "DateModified" : "2000-01-23T04:56:07.000+00:00"
-      } ],
-      "UsesIdForConfigurationPath" : true,
-      "Salt" : "Salt",
-      "ConnectUserName" : "ConnectUserName",
-      "IdString" : "IdString",
-      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-      "ConnectLinkType" : "LinkedUser",
-      "EasyPassword" : "EasyPassword",
-      "Password" : "Password"
-    } ],
+    "IsPlaying" : true,
     "Name" : "Name"
   }
 }}]
@@ -5614,5 +5491,47 @@ open class PartyServiceAPI {
         let requestBuilder: RequestBuilder<Void>.Type = EmbyClientAPI.requestBuilderFactory.getNonDecodableBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Posts a message to the party
+
+     - parameter body: (body) PartyMessage:  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postPartiesMessages(body: SessionPartyMessage, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postPartiesMessagesWithRequestBuilder(body: body).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Posts a message to the party
+     - POST /Parties/Messages
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) PartyMessage:  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postPartiesMessagesWithRequestBuilder(body: SessionPartyMessage) -> RequestBuilder<Void> {
+        let path = "/Parties/Messages"
+        let URLString = EmbyClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = EmbyClientAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 }

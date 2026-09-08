@@ -123,7 +123,7 @@ public class GenericUiApiServiceApi {
 
     /**
      * Gets UI view data
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param pageId Id of the page controller (required)
      * @param clientLocale Locale identifier of the client (required)
      * @return UIViewInfo
@@ -136,7 +136,7 @@ public class GenericUiApiServiceApi {
 
     /**
      * Gets UI view data
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param pageId Id of the page controller (required)
      * @param clientLocale Locale identifier of the client (required)
      * @return ApiResponse&lt;UIViewInfo&gt;
@@ -150,7 +150,7 @@ public class GenericUiApiServiceApi {
 
     /**
      * Gets UI view data (asynchronously)
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param pageId Id of the page controller (required)
      * @param clientLocale Locale identifier of the client (required)
      * @param callback The callback to be executed when the API call finishes
@@ -250,7 +250,7 @@ public class GenericUiApiServiceApi {
 
     /**
      * Execute a command in the context of tv setup
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param body RunUICommand (required)
      * @return UIViewInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -262,7 +262,7 @@ public class GenericUiApiServiceApi {
 
     /**
      * Execute a command in the context of tv setup
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param body RunUICommand (required)
      * @return ApiResponse&lt;UIViewInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -275,7 +275,7 @@ public class GenericUiApiServiceApi {
 
     /**
      * Execute a command in the context of tv setup (asynchronously)
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param body RunUICommand (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

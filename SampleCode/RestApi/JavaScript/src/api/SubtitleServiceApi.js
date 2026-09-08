@@ -16,7 +16,7 @@ import SubtitlesSubtitleDownloadResult from '../model/SubtitlesSubtitleDownloadR
 /**
 * SubtitleService service.
 * @module api/SubtitleServiceApi
-* @version 4.9.5.0
+* @version 4.10.0.40
 */
 export default class SubtitleServiceApi {
 

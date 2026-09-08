@@ -34,9 +34,11 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="enableHttps">A value indicating whether \\[use HTTPS\\]..</param>
         /// <param name="certificatePath">The value pointing to the file system where the ssl certiifcate is located...</param>
         /// <param name="certificatePassword">certificatePassword.</param>
+        /// <param name="bannerText">bannerText.</param>
         /// <param name="isPortAuthorized">A value indicating whether this instance is port authorized..</param>
         /// <param name="autoRunWebApp">autoRunWebApp.</param>
         /// <param name="enableRemoteAccess">enableRemoteAccess.</param>
+        /// <param name="validateImageTags">validateImageTags.</param>
         /// <param name="logAllQueryTimes">logAllQueryTimes.</param>
         /// <param name="disableOutgoingIPv6">disableOutgoingIPv6.</param>
         /// <param name="enableCaseSensitiveItemIds">A value indicating whether \\[enable case sensitive item ids\\]..</param>
@@ -95,7 +97,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="runAtStartup">A value indicating whether \\[run at startup\\]..</param>
         /// <param name="isStartupWizardCompleted">A value indicating whether this instance is first run..</param>
         /// <param name="cachePath">The cache path..</param>
-        public ServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? disableOutgoingIPv6 = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelaySeconds = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ImageSavingConvention imageSavingConvention = default(ImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), NetSocketsAddressFamily preferredDetectedRemoteAddressFamily = default(NetSocketsAddressFamily), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<PathSubstitution> pathSubstitutions = default(List<PathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? imageExtractorUpgraded1 = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), int? maxLibraryDatabaseConnections = default(int?), int? maxAuthDbConnections = default(int?), int? maxOtherDbConnections = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares8 = default(bool?), bool? migratedLibraryOptionsToDb = default(bool?), bool? allowLegacyLocalNetworkPassword = default(bool?), bool? enableSavedMetadataForPeople = default(bool?), bool? tvChannelsRefreshed = default(bool?), ProxyHeaderMode proxyHeaderMode = default(ProxyHeaderMode), bool? isInMaintenanceMode = default(bool?), string maintenanceModeMessage = default(string), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
+        public ServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), string bannerText = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? validateImageTags = default(bool?), bool? logAllQueryTimes = default(bool?), bool? disableOutgoingIPv6 = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelaySeconds = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ImageSavingConvention imageSavingConvention = default(ImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), NetSocketsAddressFamily preferredDetectedRemoteAddressFamily = default(NetSocketsAddressFamily), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<PathSubstitution> pathSubstitutions = default(List<PathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? imageExtractorUpgraded1 = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), int? maxLibraryDatabaseConnections = default(int?), int? maxAuthDbConnections = default(int?), int? maxOtherDbConnections = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares8 = default(bool?), bool? migratedLibraryOptionsToDb = default(bool?), bool? allowLegacyLocalNetworkPassword = default(bool?), bool? enableSavedMetadataForPeople = default(bool?), bool? tvChannelsRefreshed = default(bool?), ProxyHeaderMode proxyHeaderMode = default(ProxyHeaderMode), bool? isInMaintenanceMode = default(bool?), string maintenanceModeMessage = default(string), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
         {
             this.EnableUPnP = enableUPnP;
             this.PublicPort = publicPort;
@@ -105,9 +107,11 @@ namespace EmbyClient.Dotnet.Model
             this.EnableHttps = enableHttps;
             this.CertificatePath = certificatePath;
             this.CertificatePassword = certificatePassword;
+            this.BannerText = bannerText;
             this.IsPortAuthorized = isPortAuthorized;
             this.AutoRunWebApp = autoRunWebApp;
             this.EnableRemoteAccess = enableRemoteAccess;
+            this.ValidateImageTags = validateImageTags;
             this.LogAllQueryTimes = logAllQueryTimes;
             this.DisableOutgoingIPv6 = disableOutgoingIPv6;
             this.EnableCaseSensitiveItemIds = enableCaseSensitiveItemIds;
@@ -224,6 +228,12 @@ namespace EmbyClient.Dotnet.Model
         public string CertificatePassword { get; set; }
 
         /// <summary>
+        /// Gets or Sets BannerText
+        /// </summary>
+        [DataMember(Name="BannerText", EmitDefaultValue=false)]
+        public string BannerText { get; set; }
+
+        /// <summary>
         /// A value indicating whether this instance is port authorized.
         /// </summary>
         /// <value>A value indicating whether this instance is port authorized.</value>
@@ -241,6 +251,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="EnableRemoteAccess", EmitDefaultValue=false)]
         public bool? EnableRemoteAccess { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ValidateImageTags
+        /// </summary>
+        [DataMember(Name="ValidateImageTags", EmitDefaultValue=false)]
+        public bool? ValidateImageTags { get; set; }
 
         /// <summary>
         /// Gets or Sets LogAllQueryTimes
@@ -620,9 +636,11 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  EnableHttps: ").Append(EnableHttps).Append("\n");
             sb.Append("  CertificatePath: ").Append(CertificatePath).Append("\n");
             sb.Append("  CertificatePassword: ").Append(CertificatePassword).Append("\n");
+            sb.Append("  BannerText: ").Append(BannerText).Append("\n");
             sb.Append("  IsPortAuthorized: ").Append(IsPortAuthorized).Append("\n");
             sb.Append("  AutoRunWebApp: ").Append(AutoRunWebApp).Append("\n");
             sb.Append("  EnableRemoteAccess: ").Append(EnableRemoteAccess).Append("\n");
+            sb.Append("  ValidateImageTags: ").Append(ValidateImageTags).Append("\n");
             sb.Append("  LogAllQueryTimes: ").Append(LogAllQueryTimes).Append("\n");
             sb.Append("  DisableOutgoingIPv6: ").Append(DisableOutgoingIPv6).Append("\n");
             sb.Append("  EnableCaseSensitiveItemIds: ").Append(EnableCaseSensitiveItemIds).Append("\n");
@@ -756,6 +774,11 @@ namespace EmbyClient.Dotnet.Model
                     this.CertificatePassword.Equals(input.CertificatePassword))
                 ) && 
                 (
+                    this.BannerText == input.BannerText ||
+                    (this.BannerText != null &&
+                    this.BannerText.Equals(input.BannerText))
+                ) && 
+                (
                     this.IsPortAuthorized == input.IsPortAuthorized ||
                     (this.IsPortAuthorized != null &&
                     this.IsPortAuthorized.Equals(input.IsPortAuthorized))
@@ -769,6 +792,11 @@ namespace EmbyClient.Dotnet.Model
                     this.EnableRemoteAccess == input.EnableRemoteAccess ||
                     (this.EnableRemoteAccess != null &&
                     this.EnableRemoteAccess.Equals(input.EnableRemoteAccess))
+                ) && 
+                (
+                    this.ValidateImageTags == input.ValidateImageTags ||
+                    (this.ValidateImageTags != null &&
+                    this.ValidateImageTags.Equals(input.ValidateImageTags))
                 ) && 
                 (
                     this.LogAllQueryTimes == input.LogAllQueryTimes ||
@@ -1093,12 +1121,16 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.CertificatePath.GetHashCode();
                 if (this.CertificatePassword != null)
                     hashCode = hashCode * 59 + this.CertificatePassword.GetHashCode();
+                if (this.BannerText != null)
+                    hashCode = hashCode * 59 + this.BannerText.GetHashCode();
                 if (this.IsPortAuthorized != null)
                     hashCode = hashCode * 59 + this.IsPortAuthorized.GetHashCode();
                 if (this.AutoRunWebApp != null)
                     hashCode = hashCode * 59 + this.AutoRunWebApp.GetHashCode();
                 if (this.EnableRemoteAccess != null)
                     hashCode = hashCode * 59 + this.EnableRemoteAccess.GetHashCode();
+                if (this.ValidateImageTags != null)
+                    hashCode = hashCode * 59 + this.ValidateImageTags.GetHashCode();
                 if (this.LogAllQueryTimes != null)
                     hashCode = hashCode * 59 + this.LogAllQueryTimes.GetHashCode();
                 if (this.DisableOutgoingIPv6 != null)

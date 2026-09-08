@@ -28,7 +28,7 @@ public class GenericUiApiServiceApiTest {
     /**
      * Gets UI view data
      *
-     * Requires authentication as user
+     * Requires authentication as administrator
      *
      * @throws Exception
      *          if the Api call fails
@@ -44,7 +44,7 @@ public class GenericUiApiServiceApiTest {
     /**
      * Execute a command in the context of tv setup
      *
-     * Requires authentication as user
+     * Requires authentication as administrator
      *
      * @throws Exception
      *          if the Api call fails

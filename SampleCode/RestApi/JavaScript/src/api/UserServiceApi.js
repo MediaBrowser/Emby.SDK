@@ -13,10 +13,12 @@ import ApiClient from "../ApiClient";
 import AuthenticateUser from '../model/AuthenticateUser';
 import AuthenticateUserByName from '../model/AuthenticateUserByName';
 import AuthenticationAuthenticationResult from '../model/AuthenticationAuthenticationResult';
+import CopyData from '../model/CopyData';
 import CreateUserByName from '../model/CreateUserByName';
 import ForgotPassword from '../model/ForgotPassword';
 import ForgotPasswordPin from '../model/ForgotPasswordPin';
 import ForgotPasswordResult from '../model/ForgotPasswordResult';
+import LibraryFullUserCopyDataOptions from '../model/LibraryFullUserCopyDataOptions';
 import NameIdPair from '../model/NameIdPair';
 import PinRedeemResult from '../model/PinRedeemResult';
 import QueryResultUserDto from '../model/QueryResultUserDto';
@@ -28,7 +30,7 @@ import UserPolicy from '../model/UserPolicy';
 /**
 * UserService service.
 * @module api/UserServiceApi
-* @version 4.9.5.0
+* @version 4.10.0.40
 */
 export default class UserServiceApi {
 
@@ -82,6 +84,49 @@ export default class UserServiceApi {
      */
     deleteUsersById() {
       return this.deleteUsersByIdWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Clears recently searched
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    deleteUsersByIdRecentlysearchedWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+        'Id': Id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{Id}/RecentlySearched', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Clears recently searched
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    deleteUsersByIdRecentlysearched() {
+      return this.deleteUsersByIdRecentlysearchedWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -213,6 +258,48 @@ export default class UserServiceApi {
      */
     getUsersByUseridTypedsettingsByKey() {
       return this.getUsersByUseridTypedsettingsByKeyWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Gets copy data options
+     * Requires authentication as administrator
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LibraryFullUserCopyDataOptions} and HTTP response
+     */
+    getUsersCopydataoptionsWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = LibraryFullUserCopyDataOptions;
+
+      return this.apiClient.callApi(
+        '/Users/CopyDataOptions', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Gets copy data options
+     * Requires authentication as administrator
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LibraryFullUserCopyDataOptions}
+     */
+    getUsersCopydataoptions() {
+      return this.getUsersCopydataoptionsWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -759,6 +846,49 @@ export default class UserServiceApi {
 
 
     /**
+     * Clears recently searched
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    postUsersByIdRecentlysearchedDeleteWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+        'Id': Id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{Id}/RecentlySearched/Delete', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Clears recently searched
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    postUsersByIdRecentlysearchedDelete() {
+      return this.postUsersByIdRecentlysearchedDeleteWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Clears audio or subtitle track selections for a user
      * Requires authentication as user
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -796,6 +926,49 @@ export default class UserServiceApi {
      */
     postUsersByIdTrackselectionsByTracktypeDelete() {
       return this.postUsersByIdTrackselectionsByTracktypeDeleteWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Copies data from one user to another
+     * Requires authentication as administrator
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    postUsersByUseridCopydataWithHttpInfo() {
+      let postBody = body;
+
+      let pathParams = {
+        'UserId': UserId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{UserId}/CopyData', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Copies data from one user to another
+     * Requires authentication as administrator
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    postUsersByUseridCopydata() {
+      return this.postUsersByUseridCopydataWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

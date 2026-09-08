@@ -168,11 +168,44 @@ open class PersonsServiceAPI {
       "Name" : "Name"
     } ],
     "MediaSources" : [ {
+      "RunTimeTicks" : 9,
+      "Size" : 7,
+      "BufferMs" : 4,
+      "SortName" : "SortName",
+      "ItemId" : "ItemId",
+      "Name" : "Name",
+      "SupportsDirectStream" : true,
+      "Container" : "Container",
+      "TranscodingMimeType" : "TranscodingMimeType",
+      "LiveStreamId" : "LiveStreamId",
+      "RequiresLooping" : true,
+      "IsInfiniteStream" : true,
+      "SupportsDirectPlay" : true,
+      "AnalyzeDurationMs" : 3,
+      "OpenToken" : "OpenToken",
+      "ReadAtNativeFramerate" : true,
+      "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
+      "TranscodingUrl" : "TranscodingUrl",
+      "Chapters" : [ {
+        "StartPositionTicks" : 5,
+        "ImageTag" : "ImageTag",
+        "MarkerType" : "Chapter",
+        "ChapterIndex" : 2,
+        "Name" : "Name"
+      }, {
+        "StartPositionTicks" : 5,
+        "ImageTag" : "ImageTag",
+        "MarkerType" : "Chapter",
+        "ChapterIndex" : 2,
+        "Name" : "Name"
+      } ],
+      "Id" : "Id",
+      "DefaultAudioStreamIndex" : 6,
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 9,
       "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
@@ -200,6 +233,7 @@ open class PersonsServiceAPI {
         "AverageFrameRate" : 9.965781,
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
+        "DeliveryFormat" : "DeliveryFormat",
         "Level" : 8.762042012749001,
         "ExtendedVideoSubType" : "None",
         "Channels" : 7,
@@ -255,6 +289,7 @@ open class PersonsServiceAPI {
         "AverageFrameRate" : 9.965781,
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
+        "DeliveryFormat" : "DeliveryFormat",
         "Level" : 8.762042012749001,
         "ExtendedVideoSubType" : "None",
         "Channels" : 7,
@@ -285,63 +320,65 @@ open class PersonsServiceAPI {
         "Extradata" : "Extradata",
         "BitRate" : 1
       } ],
-      "Size" : 7,
-      "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
-      "SortName" : "SortName",
       "Timestamp" : "None",
-      "ItemId" : "ItemId",
-      "Name" : "Name",
+      "MimeType" : "MimeType",
       "RequiresOpening" : true,
       "DirectStreamUrl" : "DirectStreamUrl",
-      "SupportsDirectStream" : true,
       "RequiresClosing" : true,
-      "Container" : "Container",
       "ServerId" : "ServerId",
-      "LiveStreamId" : "LiveStreamId",
-      "RequiresLooping" : true,
       "Protocol" : "File",
       "AddApiKeyToDirectStreamUrl" : true,
       "DefaultSubtitleStreamIndex" : 1,
       "TrancodeLiveStartIndex" : 2,
-      "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
-      "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 3,
       "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
       "Bitrate" : 6,
-      "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
-      "ReadAtNativeFramerate" : true,
-      "TranscodingContainer" : "TranscodingContainer",
-      "ProbePath" : "ProbePath",
-      "TranscodingUrl" : "TranscodingUrl",
-      "Chapters" : [ {
-        "StartPositionTicks" : 5,
-        "ImageTag" : "ImageTag",
-        "MarkerType" : "Chapter",
-        "ChapterIndex" : 2,
-        "Name" : "Name"
-      }, {
-        "StartPositionTicks" : 5,
-        "ImageTag" : "ImageTag",
-        "MarkerType" : "Chapter",
-        "ChapterIndex" : 2,
-        "Name" : "Name"
-      } ],
-      "Id" : "Id",
-      "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "SupportsTranscoding" : true
     }, {
+      "RunTimeTicks" : 9,
+      "Size" : 7,
+      "BufferMs" : 4,
+      "SortName" : "SortName",
+      "ItemId" : "ItemId",
+      "Name" : "Name",
+      "SupportsDirectStream" : true,
+      "Container" : "Container",
+      "TranscodingMimeType" : "TranscodingMimeType",
+      "LiveStreamId" : "LiveStreamId",
+      "RequiresLooping" : true,
+      "IsInfiniteStream" : true,
+      "SupportsDirectPlay" : true,
+      "AnalyzeDurationMs" : 3,
+      "OpenToken" : "OpenToken",
+      "ReadAtNativeFramerate" : true,
+      "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
+      "TranscodingUrl" : "TranscodingUrl",
+      "Chapters" : [ {
+        "StartPositionTicks" : 5,
+        "ImageTag" : "ImageTag",
+        "MarkerType" : "Chapter",
+        "ChapterIndex" : 2,
+        "Name" : "Name"
+      }, {
+        "StartPositionTicks" : 5,
+        "ImageTag" : "ImageTag",
+        "MarkerType" : "Chapter",
+        "ChapterIndex" : 2,
+        "Name" : "Name"
+      } ],
+      "Id" : "Id",
+      "DefaultAudioStreamIndex" : 6,
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 9,
       "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
@@ -369,6 +406,7 @@ open class PersonsServiceAPI {
         "AverageFrameRate" : 9.965781,
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
+        "DeliveryFormat" : "DeliveryFormat",
         "Level" : 8.762042012749001,
         "ExtendedVideoSubType" : "None",
         "Channels" : 7,
@@ -424,6 +462,7 @@ open class PersonsServiceAPI {
         "AverageFrameRate" : 9.965781,
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
+        "DeliveryFormat" : "DeliveryFormat",
         "Level" : 8.762042012749001,
         "ExtendedVideoSubType" : "None",
         "Channels" : 7,
@@ -454,57 +493,26 @@ open class PersonsServiceAPI {
         "Extradata" : "Extradata",
         "BitRate" : 1
       } ],
-      "Size" : 7,
-      "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
-      "SortName" : "SortName",
       "Timestamp" : "None",
-      "ItemId" : "ItemId",
-      "Name" : "Name",
+      "MimeType" : "MimeType",
       "RequiresOpening" : true,
       "DirectStreamUrl" : "DirectStreamUrl",
-      "SupportsDirectStream" : true,
       "RequiresClosing" : true,
-      "Container" : "Container",
       "ServerId" : "ServerId",
-      "LiveStreamId" : "LiveStreamId",
-      "RequiresLooping" : true,
       "Protocol" : "File",
       "AddApiKeyToDirectStreamUrl" : true,
       "DefaultSubtitleStreamIndex" : 1,
       "TrancodeLiveStartIndex" : 2,
-      "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
-      "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 3,
       "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
       "Bitrate" : 6,
-      "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
-      "ReadAtNativeFramerate" : true,
-      "TranscodingContainer" : "TranscodingContainer",
-      "ProbePath" : "ProbePath",
-      "TranscodingUrl" : "TranscodingUrl",
-      "Chapters" : [ {
-        "StartPositionTicks" : 5,
-        "ImageTag" : "ImageTag",
-        "MarkerType" : "Chapter",
-        "ChapterIndex" : 2,
-        "Name" : "Name"
-      }, {
-        "StartPositionTicks" : 5,
-        "ImageTag" : "ImageTag",
-        "MarkerType" : "Chapter",
-        "ChapterIndex" : 2,
-        "Name" : "Name"
-      } ],
-      "Id" : "Id",
-      "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "SupportsTranscoding" : true
     } ],
     "GenreItems" : [ null, null ],
     "OfficialRating" : "OfficialRating",
@@ -526,6 +534,7 @@ open class PersonsServiceAPI {
     "FileName" : "FileName",
     "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
+    "MimeType" : "MimeType",
     "CanDownload" : true,
     "IsMovie" : true,
     "SeriesCount" : 8,
@@ -590,6 +599,7 @@ open class PersonsServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"
@@ -719,11 +729,44 @@ open class PersonsServiceAPI {
       "Name" : "Name"
     } ],
     "MediaSources" : [ {
+      "RunTimeTicks" : 9,
+      "Size" : 7,
+      "BufferMs" : 4,
+      "SortName" : "SortName",
+      "ItemId" : "ItemId",
+      "Name" : "Name",
+      "SupportsDirectStream" : true,
+      "Container" : "Container",
+      "TranscodingMimeType" : "TranscodingMimeType",
+      "LiveStreamId" : "LiveStreamId",
+      "RequiresLooping" : true,
+      "IsInfiniteStream" : true,
+      "SupportsDirectPlay" : true,
+      "AnalyzeDurationMs" : 3,
+      "OpenToken" : "OpenToken",
+      "ReadAtNativeFramerate" : true,
+      "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
+      "TranscodingUrl" : "TranscodingUrl",
+      "Chapters" : [ {
+        "StartPositionTicks" : 5,
+        "ImageTag" : "ImageTag",
+        "MarkerType" : "Chapter",
+        "ChapterIndex" : 2,
+        "Name" : "Name"
+      }, {
+        "StartPositionTicks" : 5,
+        "ImageTag" : "ImageTag",
+        "MarkerType" : "Chapter",
+        "ChapterIndex" : 2,
+        "Name" : "Name"
+      } ],
+      "Id" : "Id",
+      "DefaultAudioStreamIndex" : 6,
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 9,
       "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
@@ -751,6 +794,7 @@ open class PersonsServiceAPI {
         "AverageFrameRate" : 9.965781,
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
+        "DeliveryFormat" : "DeliveryFormat",
         "Level" : 8.762042012749001,
         "ExtendedVideoSubType" : "None",
         "Channels" : 7,
@@ -806,6 +850,7 @@ open class PersonsServiceAPI {
         "AverageFrameRate" : 9.965781,
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
+        "DeliveryFormat" : "DeliveryFormat",
         "Level" : 8.762042012749001,
         "ExtendedVideoSubType" : "None",
         "Channels" : 7,
@@ -836,63 +881,65 @@ open class PersonsServiceAPI {
         "Extradata" : "Extradata",
         "BitRate" : 1
       } ],
-      "Size" : 7,
-      "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
-      "SortName" : "SortName",
       "Timestamp" : "None",
-      "ItemId" : "ItemId",
-      "Name" : "Name",
+      "MimeType" : "MimeType",
       "RequiresOpening" : true,
       "DirectStreamUrl" : "DirectStreamUrl",
-      "SupportsDirectStream" : true,
       "RequiresClosing" : true,
-      "Container" : "Container",
       "ServerId" : "ServerId",
-      "LiveStreamId" : "LiveStreamId",
-      "RequiresLooping" : true,
       "Protocol" : "File",
       "AddApiKeyToDirectStreamUrl" : true,
       "DefaultSubtitleStreamIndex" : 1,
       "TrancodeLiveStartIndex" : 2,
-      "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
-      "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 3,
       "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
       "Bitrate" : 6,
-      "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
-      "ReadAtNativeFramerate" : true,
-      "TranscodingContainer" : "TranscodingContainer",
-      "ProbePath" : "ProbePath",
-      "TranscodingUrl" : "TranscodingUrl",
-      "Chapters" : [ {
-        "StartPositionTicks" : 5,
-        "ImageTag" : "ImageTag",
-        "MarkerType" : "Chapter",
-        "ChapterIndex" : 2,
-        "Name" : "Name"
-      }, {
-        "StartPositionTicks" : 5,
-        "ImageTag" : "ImageTag",
-        "MarkerType" : "Chapter",
-        "ChapterIndex" : 2,
-        "Name" : "Name"
-      } ],
-      "Id" : "Id",
-      "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "SupportsTranscoding" : true
     }, {
+      "RunTimeTicks" : 9,
+      "Size" : 7,
+      "BufferMs" : 4,
+      "SortName" : "SortName",
+      "ItemId" : "ItemId",
+      "Name" : "Name",
+      "SupportsDirectStream" : true,
+      "Container" : "Container",
+      "TranscodingMimeType" : "TranscodingMimeType",
+      "LiveStreamId" : "LiveStreamId",
+      "RequiresLooping" : true,
+      "IsInfiniteStream" : true,
+      "SupportsDirectPlay" : true,
+      "AnalyzeDurationMs" : 3,
+      "OpenToken" : "OpenToken",
+      "ReadAtNativeFramerate" : true,
+      "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
+      "TranscodingUrl" : "TranscodingUrl",
+      "Chapters" : [ {
+        "StartPositionTicks" : 5,
+        "ImageTag" : "ImageTag",
+        "MarkerType" : "Chapter",
+        "ChapterIndex" : 2,
+        "Name" : "Name"
+      }, {
+        "StartPositionTicks" : 5,
+        "ImageTag" : "ImageTag",
+        "MarkerType" : "Chapter",
+        "ChapterIndex" : 2,
+        "Name" : "Name"
+      } ],
+      "Id" : "Id",
+      "DefaultAudioStreamIndex" : 6,
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 9,
       "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
@@ -920,6 +967,7 @@ open class PersonsServiceAPI {
         "AverageFrameRate" : 9.965781,
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
+        "DeliveryFormat" : "DeliveryFormat",
         "Level" : 8.762042012749001,
         "ExtendedVideoSubType" : "None",
         "Channels" : 7,
@@ -975,6 +1023,7 @@ open class PersonsServiceAPI {
         "AverageFrameRate" : 9.965781,
         "StreamStartTimeTicks" : 7,
         "IsExternal" : true,
+        "DeliveryFormat" : "DeliveryFormat",
         "Level" : 8.762042012749001,
         "ExtendedVideoSubType" : "None",
         "Channels" : 7,
@@ -1005,57 +1054,26 @@ open class PersonsServiceAPI {
         "Extradata" : "Extradata",
         "BitRate" : 1
       } ],
-      "Size" : 7,
-      "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
-      "SortName" : "SortName",
       "Timestamp" : "None",
-      "ItemId" : "ItemId",
-      "Name" : "Name",
+      "MimeType" : "MimeType",
       "RequiresOpening" : true,
       "DirectStreamUrl" : "DirectStreamUrl",
-      "SupportsDirectStream" : true,
       "RequiresClosing" : true,
-      "Container" : "Container",
       "ServerId" : "ServerId",
-      "LiveStreamId" : "LiveStreamId",
-      "RequiresLooping" : true,
       "Protocol" : "File",
       "AddApiKeyToDirectStreamUrl" : true,
       "DefaultSubtitleStreamIndex" : 1,
       "TrancodeLiveStartIndex" : 2,
-      "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
-      "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 3,
       "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
       "Bitrate" : 6,
-      "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
-      "ReadAtNativeFramerate" : true,
-      "TranscodingContainer" : "TranscodingContainer",
-      "ProbePath" : "ProbePath",
-      "TranscodingUrl" : "TranscodingUrl",
-      "Chapters" : [ {
-        "StartPositionTicks" : 5,
-        "ImageTag" : "ImageTag",
-        "MarkerType" : "Chapter",
-        "ChapterIndex" : 2,
-        "Name" : "Name"
-      }, {
-        "StartPositionTicks" : 5,
-        "ImageTag" : "ImageTag",
-        "MarkerType" : "Chapter",
-        "ChapterIndex" : 2,
-        "Name" : "Name"
-      } ],
-      "Id" : "Id",
-      "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "SupportsTranscoding" : true
     } ],
     "GenreItems" : [ null, null ],
     "OfficialRating" : "OfficialRating",
@@ -1077,6 +1095,7 @@ open class PersonsServiceAPI {
     "FileName" : "FileName",
     "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
+    "MimeType" : "MimeType",
     "CanDownload" : true,
     "IsMovie" : true,
     "SeriesCount" : 8,
@@ -1141,6 +1160,7 @@ open class PersonsServiceAPI {
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
+    "Collections" : [ null, null ],
     "Disabled" : true,
     "ProviderIds" : {
       "key" : "ProviderIds"
@@ -1456,6 +1476,154 @@ open class PersonsServiceAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Gets credits for a person
+
+     - parameter _id: (path) The person id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getPersonsByIdCredits(_id: String, completion: @escaping ((_ data: [UserLibraryCreditsList]?,_ error: Error?) -> Void)) {
+        getPersonsByIdCreditsWithRequestBuilder(_id: _id).execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     Gets credits for a person
+     - GET /Persons/{Id}/Credits
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - examples: [{contentType=application/json, example=[ {
+  "PersonType" : "Actor",
+  "Items" : [ {
+    "IndexNumberEnd" : 1,
+    "GameSystem" : "GameSystem",
+    "ThumbnailUrl" : "ThumbnailUrl",
+    "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+    "SortParentIndexNumber" : 2,
+    "ImageUrl" : "ImageUrl",
+    "PersonType" : "Actor",
+    "Overview" : "Overview",
+    "ParentIndexNumber" : 5,
+    "DisambiguationComment" : "DisambiguationComment",
+    "EndDate" : "2000-01-23T04:56:07.000+00:00",
+    "Name" : "Name",
+    "StartDate" : "2000-01-23T04:56:07.000+00:00",
+    "Role" : "Role",
+    "ProductionYear" : 0,
+    "Type" : "Type",
+    "OriginalTitle" : "OriginalTitle",
+    "IndexNumber" : 6,
+    "SortIndexNumber" : 5,
+    "SearchProviderName" : "SearchProviderName",
+    "ProviderIds" : {
+      "key" : "ProviderIds"
+    },
+    "Artists" : [ null, null ]
+  }, {
+    "IndexNumberEnd" : 1,
+    "GameSystem" : "GameSystem",
+    "ThumbnailUrl" : "ThumbnailUrl",
+    "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+    "SortParentIndexNumber" : 2,
+    "ImageUrl" : "ImageUrl",
+    "PersonType" : "Actor",
+    "Overview" : "Overview",
+    "ParentIndexNumber" : 5,
+    "DisambiguationComment" : "DisambiguationComment",
+    "EndDate" : "2000-01-23T04:56:07.000+00:00",
+    "Name" : "Name",
+    "StartDate" : "2000-01-23T04:56:07.000+00:00",
+    "Role" : "Role",
+    "ProductionYear" : 0,
+    "Type" : "Type",
+    "OriginalTitle" : "OriginalTitle",
+    "IndexNumber" : 6,
+    "SortIndexNumber" : 5,
+    "SearchProviderName" : "SearchProviderName",
+    "ProviderIds" : {
+      "key" : "ProviderIds"
+    },
+    "Artists" : [ null, null ]
+  } ]
+}, {
+  "PersonType" : "Actor",
+  "Items" : [ {
+    "IndexNumberEnd" : 1,
+    "GameSystem" : "GameSystem",
+    "ThumbnailUrl" : "ThumbnailUrl",
+    "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+    "SortParentIndexNumber" : 2,
+    "ImageUrl" : "ImageUrl",
+    "PersonType" : "Actor",
+    "Overview" : "Overview",
+    "ParentIndexNumber" : 5,
+    "DisambiguationComment" : "DisambiguationComment",
+    "EndDate" : "2000-01-23T04:56:07.000+00:00",
+    "Name" : "Name",
+    "StartDate" : "2000-01-23T04:56:07.000+00:00",
+    "Role" : "Role",
+    "ProductionYear" : 0,
+    "Type" : "Type",
+    "OriginalTitle" : "OriginalTitle",
+    "IndexNumber" : 6,
+    "SortIndexNumber" : 5,
+    "SearchProviderName" : "SearchProviderName",
+    "ProviderIds" : {
+      "key" : "ProviderIds"
+    },
+    "Artists" : [ null, null ]
+  }, {
+    "IndexNumberEnd" : 1,
+    "GameSystem" : "GameSystem",
+    "ThumbnailUrl" : "ThumbnailUrl",
+    "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+    "SortParentIndexNumber" : 2,
+    "ImageUrl" : "ImageUrl",
+    "PersonType" : "Actor",
+    "Overview" : "Overview",
+    "ParentIndexNumber" : 5,
+    "DisambiguationComment" : "DisambiguationComment",
+    "EndDate" : "2000-01-23T04:56:07.000+00:00",
+    "Name" : "Name",
+    "StartDate" : "2000-01-23T04:56:07.000+00:00",
+    "Role" : "Role",
+    "ProductionYear" : 0,
+    "Type" : "Type",
+    "OriginalTitle" : "OriginalTitle",
+    "IndexNumber" : 6,
+    "SortIndexNumber" : 5,
+    "SearchProviderName" : "SearchProviderName",
+    "ProviderIds" : {
+      "key" : "ProviderIds"
+    },
+    "Artists" : [ null, null ]
+  } ]
+} ]}]
+     - parameter _id: (path) The person id 
+
+     - returns: RequestBuilder<[UserLibraryCreditsList]> 
+     */
+    open class func getPersonsByIdCreditsWithRequestBuilder(_id: String) -> RequestBuilder<[UserLibraryCreditsList]> {
+        var path = "/Persons/{Id}/Credits"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = EmbyClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<[UserLibraryCreditsList]>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
      Gets a person, by name
 
      - parameter name: (path) The person name 
@@ -1514,11 +1682,44 @@ open class PersonsServiceAPI {
     "Name" : "Name"
   } ],
   "MediaSources" : [ {
+    "RunTimeTicks" : 9,
+    "Size" : 7,
+    "BufferMs" : 4,
+    "SortName" : "SortName",
+    "ItemId" : "ItemId",
+    "Name" : "Name",
+    "SupportsDirectStream" : true,
+    "Container" : "Container",
+    "TranscodingMimeType" : "TranscodingMimeType",
+    "LiveStreamId" : "LiveStreamId",
+    "RequiresLooping" : true,
+    "IsInfiniteStream" : true,
+    "SupportsDirectPlay" : true,
+    "AnalyzeDurationMs" : 3,
+    "OpenToken" : "OpenToken",
+    "ReadAtNativeFramerate" : true,
+    "TranscodingContainer" : "TranscodingContainer",
+    "ProbePath" : "ProbePath",
+    "TranscodingUrl" : "TranscodingUrl",
+    "Chapters" : [ {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    }, {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    } ],
+    "Id" : "Id",
+    "DefaultAudioStreamIndex" : 6,
     "EncoderPath" : "EncoderPath",
     "RequiredHttpHeaders" : {
       "key" : "RequiredHttpHeaders"
     },
-    "RunTimeTicks" : 9,
     "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
@@ -1546,6 +1747,7 @@ open class PersonsServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -1601,6 +1803,7 @@ open class PersonsServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -1631,63 +1834,65 @@ open class PersonsServiceAPI {
       "Extradata" : "Extradata",
       "BitRate" : 1
     } ],
-    "Size" : 7,
-    "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
-    "SortName" : "SortName",
     "Timestamp" : "None",
-    "ItemId" : "ItemId",
-    "Name" : "Name",
+    "MimeType" : "MimeType",
     "RequiresOpening" : true,
     "DirectStreamUrl" : "DirectStreamUrl",
-    "SupportsDirectStream" : true,
     "RequiresClosing" : true,
-    "Container" : "Container",
     "ServerId" : "ServerId",
-    "LiveStreamId" : "LiveStreamId",
-    "RequiresLooping" : true,
     "Protocol" : "File",
     "AddApiKeyToDirectStreamUrl" : true,
     "DefaultSubtitleStreamIndex" : 1,
     "TrancodeLiveStartIndex" : 2,
-    "IsInfiniteStream" : true,
     "Path" : "Path",
     "IsRemote" : true,
-    "SupportsDirectPlay" : true,
     "TranscodingSubProtocol" : "TranscodingSubProtocol",
     "Formats" : [ "Formats", "Formats" ],
-    "AnalyzeDurationMs" : 3,
     "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
     "Bitrate" : 6,
-    "OpenToken" : "OpenToken",
     "SupportsProbing" : true,
     "Type" : "Default",
-    "ReadAtNativeFramerate" : true,
-    "TranscodingContainer" : "TranscodingContainer",
-    "ProbePath" : "ProbePath",
-    "TranscodingUrl" : "TranscodingUrl",
-    "Chapters" : [ {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    }, {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    } ],
-    "Id" : "Id",
-    "SupportsTranscoding" : true,
-    "DefaultAudioStreamIndex" : 6
+    "SupportsTranscoding" : true
   }, {
+    "RunTimeTicks" : 9,
+    "Size" : 7,
+    "BufferMs" : 4,
+    "SortName" : "SortName",
+    "ItemId" : "ItemId",
+    "Name" : "Name",
+    "SupportsDirectStream" : true,
+    "Container" : "Container",
+    "TranscodingMimeType" : "TranscodingMimeType",
+    "LiveStreamId" : "LiveStreamId",
+    "RequiresLooping" : true,
+    "IsInfiniteStream" : true,
+    "SupportsDirectPlay" : true,
+    "AnalyzeDurationMs" : 3,
+    "OpenToken" : "OpenToken",
+    "ReadAtNativeFramerate" : true,
+    "TranscodingContainer" : "TranscodingContainer",
+    "ProbePath" : "ProbePath",
+    "TranscodingUrl" : "TranscodingUrl",
+    "Chapters" : [ {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    }, {
+      "StartPositionTicks" : 5,
+      "ImageTag" : "ImageTag",
+      "MarkerType" : "Chapter",
+      "ChapterIndex" : 2,
+      "Name" : "Name"
+    } ],
+    "Id" : "Id",
+    "DefaultAudioStreamIndex" : 6,
     "EncoderPath" : "EncoderPath",
     "RequiredHttpHeaders" : {
       "key" : "RequiredHttpHeaders"
     },
-    "RunTimeTicks" : 9,
     "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
@@ -1715,6 +1920,7 @@ open class PersonsServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -1770,6 +1976,7 @@ open class PersonsServiceAPI {
       "AverageFrameRate" : 9.965781,
       "StreamStartTimeTicks" : 7,
       "IsExternal" : true,
+      "DeliveryFormat" : "DeliveryFormat",
       "Level" : 8.762042012749001,
       "ExtendedVideoSubType" : "None",
       "Channels" : 7,
@@ -1800,57 +2007,26 @@ open class PersonsServiceAPI {
       "Extradata" : "Extradata",
       "BitRate" : 1
     } ],
-    "Size" : 7,
-    "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
-    "SortName" : "SortName",
     "Timestamp" : "None",
-    "ItemId" : "ItemId",
-    "Name" : "Name",
+    "MimeType" : "MimeType",
     "RequiresOpening" : true,
     "DirectStreamUrl" : "DirectStreamUrl",
-    "SupportsDirectStream" : true,
     "RequiresClosing" : true,
-    "Container" : "Container",
     "ServerId" : "ServerId",
-    "LiveStreamId" : "LiveStreamId",
-    "RequiresLooping" : true,
     "Protocol" : "File",
     "AddApiKeyToDirectStreamUrl" : true,
     "DefaultSubtitleStreamIndex" : 1,
     "TrancodeLiveStartIndex" : 2,
-    "IsInfiniteStream" : true,
     "Path" : "Path",
     "IsRemote" : true,
-    "SupportsDirectPlay" : true,
     "TranscodingSubProtocol" : "TranscodingSubProtocol",
     "Formats" : [ "Formats", "Formats" ],
-    "AnalyzeDurationMs" : 3,
     "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
     "Bitrate" : 6,
-    "OpenToken" : "OpenToken",
     "SupportsProbing" : true,
     "Type" : "Default",
-    "ReadAtNativeFramerate" : true,
-    "TranscodingContainer" : "TranscodingContainer",
-    "ProbePath" : "ProbePath",
-    "TranscodingUrl" : "TranscodingUrl",
-    "Chapters" : [ {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    }, {
-      "StartPositionTicks" : 5,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 2,
-      "Name" : "Name"
-    } ],
-    "Id" : "Id",
-    "SupportsTranscoding" : true,
-    "DefaultAudioStreamIndex" : 6
+    "SupportsTranscoding" : true
   } ],
   "GenreItems" : [ null, null ],
   "OfficialRating" : "OfficialRating",
@@ -1872,6 +2048,7 @@ open class PersonsServiceAPI {
   "FileName" : "FileName",
   "PrimaryImageTag" : "PrimaryImageTag",
   "Prefix" : "Prefix",
+  "MimeType" : "MimeType",
   "CanDownload" : true,
   "IsMovie" : true,
   "SeriesCount" : 8,
@@ -1936,6 +2113,7 @@ open class PersonsServiceAPI {
   "Genres" : [ "Genres", "Genres" ],
   "SeasonId" : "SeasonId",
   "LockedFields" : [ "Cast", "Cast" ],
+  "Collections" : [ null, null ],
   "Disabled" : true,
   "ProviderIds" : {
     "key" : "ProviderIds"

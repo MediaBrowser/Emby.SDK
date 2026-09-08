@@ -25,22 +25,28 @@ class SessionPartyInfo(object):
         'id': 'str',
         'name': 'str',
         'sessions': 'list[SessionSessionInfo]',
-        'users': 'list[EntitiesUser]'
+        'messages': 'list[SessionPartyMessage]',
+        'master_session': 'SessionSessionInfo',
+        'is_playing': 'bool'
     }
 
     attribute_map = {
         'id': 'Id',
         'name': 'Name',
         'sessions': 'Sessions',
-        'users': 'Users'
+        'messages': 'Messages',
+        'master_session': 'MasterSession',
+        'is_playing': 'IsPlaying'
     }
 
-    def __init__(self, id=None, name=None, sessions=None, users=None):  # noqa: E501
+    def __init__(self, id=None, name=None, sessions=None, messages=None, master_session=None, is_playing=None):  # noqa: E501
         """SessionPartyInfo - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
         self._sessions = None
-        self._users = None
+        self._messages = None
+        self._master_session = None
+        self._is_playing = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -48,8 +54,12 @@ class SessionPartyInfo(object):
             self.name = name
         if sessions is not None:
             self.sessions = sessions
-        if users is not None:
-            self.users = users
+        if messages is not None:
+            self.messages = messages
+        if master_session is not None:
+            self.master_session = master_session
+        if is_playing is not None:
+            self.is_playing = is_playing
 
     @property
     def id(self):
@@ -115,25 +125,67 @@ class SessionPartyInfo(object):
         self._sessions = sessions
 
     @property
-    def users(self):
-        """Gets the users of this SessionPartyInfo.  # noqa: E501
+    def messages(self):
+        """Gets the messages of this SessionPartyInfo.  # noqa: E501
 
 
-        :return: The users of this SessionPartyInfo.  # noqa: E501
-        :rtype: list[EntitiesUser]
+        :return: The messages of this SessionPartyInfo.  # noqa: E501
+        :rtype: list[SessionPartyMessage]
         """
-        return self._users
+        return self._messages
 
-    @users.setter
-    def users(self, users):
-        """Sets the users of this SessionPartyInfo.
+    @messages.setter
+    def messages(self, messages):
+        """Sets the messages of this SessionPartyInfo.
 
 
-        :param users: The users of this SessionPartyInfo.  # noqa: E501
-        :type: list[EntitiesUser]
+        :param messages: The messages of this SessionPartyInfo.  # noqa: E501
+        :type: list[SessionPartyMessage]
         """
 
-        self._users = users
+        self._messages = messages
+
+    @property
+    def master_session(self):
+        """Gets the master_session of this SessionPartyInfo.  # noqa: E501
+
+
+        :return: The master_session of this SessionPartyInfo.  # noqa: E501
+        :rtype: SessionSessionInfo
+        """
+        return self._master_session
+
+    @master_session.setter
+    def master_session(self, master_session):
+        """Sets the master_session of this SessionPartyInfo.
+
+
+        :param master_session: The master_session of this SessionPartyInfo.  # noqa: E501
+        :type: SessionSessionInfo
+        """
+
+        self._master_session = master_session
+
+    @property
+    def is_playing(self):
+        """Gets the is_playing of this SessionPartyInfo.  # noqa: E501
+
+
+        :return: The is_playing of this SessionPartyInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_playing
+
+    @is_playing.setter
+    def is_playing(self, is_playing):
+        """Sets the is_playing of this SessionPartyInfo.
+
+
+        :param is_playing: The is_playing of this SessionPartyInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_playing = is_playing
 
     def to_dict(self):
         """Returns the model properties as a dict"""

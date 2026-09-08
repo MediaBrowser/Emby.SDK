@@ -11,13 +11,14 @@
 
 import ApiClient from '../ApiClient';
 import BaseItemDto from './BaseItemDto';
+import ItemsQuery from './ItemsQuery';
 import ScrollDirection from './ScrollDirection';
 import TextSectionInfo from './TextSectionInfo';
 
 /**
 * The ContentSection model module.
 * @module model/ContentSection
-* @version 4.9.5.0
+* @version 4.10.0.40
 */
 export default class ContentSection {
     /**
@@ -47,6 +48,9 @@ export default class ContentSection {
             if (data.hasOwnProperty('Name')) {
                 obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
             }
+            if (data.hasOwnProperty('CustomName')) {
+                obj['CustomName'] = ApiClient.convertToType(data['CustomName'], 'String');
+            }
             if (data.hasOwnProperty('Subtitle')) {
                 obj['Subtitle'] = ApiClient.convertToType(data['Subtitle'], 'String');
             }
@@ -62,8 +66,20 @@ export default class ContentSection {
             if (data.hasOwnProperty('ViewType')) {
                 obj['ViewType'] = ApiClient.convertToType(data['ViewType'], 'String');
             }
+            if (data.hasOwnProperty('ImageType')) {
+                obj['ImageType'] = ApiClient.convertToType(data['ImageType'], 'String');
+            }
+            if (data.hasOwnProperty('DisplayMode')) {
+                obj['DisplayMode'] = ApiClient.convertToType(data['DisplayMode'], 'String');
+            }
             if (data.hasOwnProperty('Monitor')) {
                 obj['Monitor'] = ApiClient.convertToType(data['Monitor'], ['String']);
+            }
+            if (data.hasOwnProperty('ItemTypes')) {
+                obj['ItemTypes'] = ApiClient.convertToType(data['ItemTypes'], ['String']);
+            }
+            if (data.hasOwnProperty('ExcludedFolders')) {
+                obj['ExcludedFolders'] = ApiClient.convertToType(data['ExcludedFolders'], ['String']);
             }
             if (data.hasOwnProperty('CardSizeOffset')) {
                 obj['CardSizeOffset'] = ApiClient.convertToType(data['CardSizeOffset'], 'Number');
@@ -73,6 +89,9 @@ export default class ContentSection {
             }
             if (data.hasOwnProperty('ParentItem')) {
                 obj['ParentItem'] = BaseItemDto.constructFromObject(data['ParentItem']);
+            }
+            if (data.hasOwnProperty('ParentId')) {
+                obj['ParentId'] = ApiClient.convertToType(data['ParentId'], 'String');
             }
             if (data.hasOwnProperty('TextInfo')) {
                 obj['TextInfo'] = TextSectionInfo.constructFromObject(data['TextInfo']);
@@ -86,6 +105,18 @@ export default class ContentSection {
             if (data.hasOwnProperty('RefreshInterval')) {
                 obj['RefreshInterval'] = ApiClient.convertToType(data['RefreshInterval'], 'Number');
             }
+            if (data.hasOwnProperty('SortBy')) {
+                obj['SortBy'] = ApiClient.convertToType(data['SortBy'], 'String');
+            }
+            if (data.hasOwnProperty('SortOrder')) {
+                obj['SortOrder'] = ApiClient.convertToType(data['SortOrder'], 'String');
+            }
+            if (data.hasOwnProperty('IncludeNextUpInResume')) {
+                obj['IncludeNextUpInResume'] = ApiClient.convertToType(data['IncludeNextUpInResume'], 'Boolean');
+            }
+            if (data.hasOwnProperty('Query')) {
+                obj['Query'] = ItemsQuery.constructFromObject(data['Query']);
+            }
         }
         return obj;
     }
@@ -94,6 +125,10 @@ export default class ContentSection {
     * @member {String} Name
     */
     'Name' = undefined;
+    /**
+    * @member {String} CustomName
+    */
+    'CustomName' = undefined;
     /**
     * @member {String} Subtitle
     */
@@ -115,9 +150,25 @@ export default class ContentSection {
     */
     'ViewType' = undefined;
     /**
+    * @member {String} ImageType
+    */
+    'ImageType' = undefined;
+    /**
+    * @member {String} DisplayMode
+    */
+    'DisplayMode' = undefined;
+    /**
     * @member {Array.<String>} Monitor
     */
     'Monitor' = undefined;
+    /**
+    * @member {Array.<String>} ItemTypes
+    */
+    'ItemTypes' = undefined;
+    /**
+    * @member {Array.<String>} ExcludedFolders
+    */
+    'ExcludedFolders' = undefined;
     /**
     * @member {Number} CardSizeOffset
     */
@@ -130,6 +181,10 @@ export default class ContentSection {
     * @member {module:model/BaseItemDto} ParentItem
     */
     'ParentItem' = undefined;
+    /**
+    * @member {String} ParentId
+    */
+    'ParentId' = undefined;
     /**
     * @member {module:model/TextSectionInfo} TextInfo
     */
@@ -146,6 +201,22 @@ export default class ContentSection {
     * @member {Number} RefreshInterval
     */
     'RefreshInterval' = undefined;
+    /**
+    * @member {String} SortBy
+    */
+    'SortBy' = undefined;
+    /**
+    * @member {String} SortOrder
+    */
+    'SortOrder' = undefined;
+    /**
+    * @member {Boolean} IncludeNextUpInResume
+    */
+    'IncludeNextUpInResume' = undefined;
+    /**
+    * @member {module:model/ItemsQuery} Query
+    */
+    'Query' = undefined;
 
 
 

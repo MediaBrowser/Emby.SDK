@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ImageFormatHelpers
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ImageFormatHelpers
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="theme-color" content="#090d0f">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <script type="text/javascript" src="../../styles/theme-config.js"></script>
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../styles/theme.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Model.Drawing.ImageFormatHelpers">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="../../index.html" aria-label="Emby Developer home">
+            
+      <img class="logo-on-dark" src="../../images/emby_dev_logo.png" alt="Emby Developer">
+      <img class="logo-on-light" src="../../images/emby_dev_logo_black.png" alt="Emby Developer">
+          </a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list">
+                
+                    <li><a href="../../index.html" title="DEV Home">DEV Home</a></li>
+                    <li><a href="../../doc/index.html" title="Documentation">Documentation</a></li>
+                    <li><a href="../../reference/index.html" title="Reference">Reference</a></li>
+                    <li><a href="../../download/index.html" title="Download">Download</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <div class="hide-when-search" id="breadcrumb">
+      	  <ul class="breadcrumb">
+      		<li></li>
+      	  </ul>
+      	</div>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Model.Drawing.ImageFormatHelpers">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Model_Drawing_ImageFormatHelpers" data-uid="MediaBrowser.Model.Drawing.ImageFormatHelpers" class="text-break">Class ImageFormatHelpers
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ImageFormatHelpers</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.Drawing.html">MediaBrowser.Model.Drawing</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
+  <h5 id="MediaBrowser_Model_Drawing_ImageFormatHelpers_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ImageFormatHelpers</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Model_Drawing_ImageFormatHelpers_GetImageFormatFromExtension_" data-uid="MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromExtension*"></a>
+  <h4 id="MediaBrowser_Model_Drawing_ImageFormatHelpers_GetImageFormatFromExtension_System_String_System_Nullable_MediaBrowser_Model_Drawing_ImageFormat__" data-uid="MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromExtension(System.String,System.Nullable{MediaBrowser.Model.Drawing.ImageFormat})">GetImageFormatFromExtension(String, Nullable&lt;ImageFormat&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ImageFormat GetImageFormatFromExtension(string extension, ImageFormat? defaultValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">extension</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="MediaBrowser.Model.Drawing.ImageFormat.html">ImageFormat</a>&gt;</td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Drawing.ImageFormat.html">ImageFormat</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Drawing_ImageFormatHelpers_GetImageFormatFromMimeType_" data-uid="MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromMimeType*"></a>
+  <h4 id="MediaBrowser_Model_Drawing_ImageFormatHelpers_GetImageFormatFromMimeType_System_String_System_Nullable_MediaBrowser_Model_Drawing_ImageFormat__" data-uid="MediaBrowser.Model.Drawing.ImageFormatHelpers.GetImageFormatFromMimeType(System.String,System.Nullable{MediaBrowser.Model.Drawing.ImageFormat})">GetImageFormatFromMimeType(String, Nullable&lt;ImageFormat&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ImageFormat GetImageFormatFromMimeType(string mimeType, ImageFormat? defaultValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">mimeType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="MediaBrowser.Model.Drawing.ImageFormat.html">ImageFormat</a>&gt;</td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Drawing.ImageFormat.html">ImageFormat</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

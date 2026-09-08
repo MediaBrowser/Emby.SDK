@@ -37,7 +37,8 @@ class LiveStreamRequest(object):
         'enable_transcoding': 'bool',
         'allow_video_stream_copy': 'bool',
         'allow_interlaced_video_stream_copy': 'bool',
-        'allow_audio_stream_copy': 'bool'
+        'allow_audio_stream_copy': 'bool',
+        'consumer_id': 'str'
     }
 
     attribute_map = {
@@ -56,10 +57,11 @@ class LiveStreamRequest(object):
         'enable_transcoding': 'EnableTranscoding',
         'allow_video_stream_copy': 'AllowVideoStreamCopy',
         'allow_interlaced_video_stream_copy': 'AllowInterlacedVideoStreamCopy',
-        'allow_audio_stream_copy': 'AllowAudioStreamCopy'
+        'allow_audio_stream_copy': 'AllowAudioStreamCopy',
+        'consumer_id': 'ConsumerId'
     }
 
-    def __init__(self, open_token=None, user_id=None, play_session_id=None, max_streaming_bitrate=None, start_time_ticks=None, audio_stream_index=None, subtitle_stream_index=None, max_audio_channels=None, item_id=None, device_profile=None, enable_direct_play=None, enable_direct_stream=None, enable_transcoding=None, allow_video_stream_copy=None, allow_interlaced_video_stream_copy=None, allow_audio_stream_copy=None):  # noqa: E501
+    def __init__(self, open_token=None, user_id=None, play_session_id=None, max_streaming_bitrate=None, start_time_ticks=None, audio_stream_index=None, subtitle_stream_index=None, max_audio_channels=None, item_id=None, device_profile=None, enable_direct_play=None, enable_direct_stream=None, enable_transcoding=None, allow_video_stream_copy=None, allow_interlaced_video_stream_copy=None, allow_audio_stream_copy=None, consumer_id=None):  # noqa: E501
         """LiveStreamRequest - a model defined in Swagger"""  # noqa: E501
         self._open_token = None
         self._user_id = None
@@ -77,6 +79,7 @@ class LiveStreamRequest(object):
         self._allow_video_stream_copy = None
         self._allow_interlaced_video_stream_copy = None
         self._allow_audio_stream_copy = None
+        self._consumer_id = None
         self.discriminator = None
         if open_token is not None:
             self.open_token = open_token
@@ -110,6 +113,8 @@ class LiveStreamRequest(object):
             self.allow_interlaced_video_stream_copy = allow_interlaced_video_stream_copy
         if allow_audio_stream_copy is not None:
             self.allow_audio_stream_copy = allow_audio_stream_copy
+        if consumer_id is not None:
+            self.consumer_id = consumer_id
 
     @property
     def open_token(self):
@@ -446,6 +451,27 @@ class LiveStreamRequest(object):
         """
 
         self._allow_audio_stream_copy = allow_audio_stream_copy
+
+    @property
+    def consumer_id(self):
+        """Gets the consumer_id of this LiveStreamRequest.  # noqa: E501
+
+
+        :return: The consumer_id of this LiveStreamRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._consumer_id
+
+    @consumer_id.setter
+    def consumer_id(self, consumer_id):
+        """Sets the consumer_id of this LiveStreamRequest.
+
+
+        :param consumer_id: The consumer_id of this LiveStreamRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._consumer_id = consumer_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

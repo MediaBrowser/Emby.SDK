@@ -16,6 +16,7 @@ type ApiBaseItemsRequest struct {
 	MaxDateCreated time.Time `json:"MaxDateCreated,omitempty"`
 	EnableTotalRecordCount bool `json:"EnableTotalRecordCount,omitempty"`
 	MatchAnyWord bool `json:"MatchAnyWord,omitempty"`
+	WasSearched bool `json:"WasSearched,omitempty"`
 	IsDuplicate bool `json:"IsDuplicate,omitempty"`
 	Name string `json:"Name,omitempty"`
 	RecordingKeyword string `json:"RecordingKeyword,omitempty"`

@@ -73,6 +73,22 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Gets party messages
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <returns>Task of ApiResponse (QueryResultSessionPartyMessage)</returns>
+        public async Task<RestResponse<QueryResultSessionPartyMessage>> GetPartiesMessages ()
+        {
+            var request = new RestRequest("/Parties/Messages", Method.Get);
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<QueryResultSessionPartyMessage>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Creates a party
         /// </summary>
         /// <remarks>
@@ -127,6 +143,34 @@ namespace Emby.ApiClient.Api
         {
             var request = new RestRequest("/Parties/Leave", Method.Post);
 
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Posts a message to the party
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="body">PartyMessage: </param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostPartiesMessages (SessionPartyMessage body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new ApiException("Missing required parameter 'body' when calling PartyServiceApi->PostPartiesMessages");
+            }
+            
+            var request = new RestRequest("/Parties/Messages", Method.Post);
+
+            if (body != null)
+            {
+                request.AddJsonBody(body);
+            }
+            
             // make the HTTP request
             var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
             return localVarResponse;

@@ -8,6 +8,8 @@ package embyclient.api;
 import embyclient.model.ContentSection;
 import java.time.OffsetDateTime;
 import embyclient.model.QueryResultBaseItemDto;
+import embyclient.model.UserLibraryDeleteHomeSections;
+import embyclient.model.UserLibraryMoveHomeSections;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -152,6 +154,54 @@ public class ContentServiceApiTest {
         String nameStartsWith = null;
         String nameLessThan = null;
         QueryResultBaseItemDto response = api.getUsersByUseridSectionsBySectionidItems(sectionId, userId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, isSpecialSeason, adjacentTo, startItemId, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+
+        // TODO: test validations
+    }
+    /**
+     * 
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersByUseridHomesectionsTest() throws Exception {
+        ContentSection body = null;
+        String userId = null;
+        api.postUsersByUseridHomesections(body, userId);
+
+        // TODO: test validations
+    }
+    /**
+     * 
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersByUseridHomesectionsDeleteTest() throws Exception {
+        UserLibraryDeleteHomeSections body = null;
+        String userId = null;
+        api.postUsersByUseridHomesectionsDelete(body, userId);
+
+        // TODO: test validations
+    }
+    /**
+     * 
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersByUseridHomesectionsMoveTest() throws Exception {
+        UserLibraryMoveHomeSections body = null;
+        String userId = null;
+        api.postUsersByUseridHomesectionsMove(body, userId);
 
         // TODO: test validations
     }

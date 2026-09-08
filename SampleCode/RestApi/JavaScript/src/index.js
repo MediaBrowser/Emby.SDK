@@ -61,6 +61,7 @@ import ConnectUserLinkResult from './model/ConnectUserLinkResult';
 import ConnectUserLinkType from './model/ConnectUserLinkType';
 import ContainerProfile from './model/ContainerProfile';
 import ContentSection from './model/ContentSection';
+import CopyData from './model/CopyData';
 import CreateUserByName from './model/CreateUserByName';
 import DayOfWeek from './model/DayOfWeek';
 import DefaultDirectoryBrowserInfo from './model/DefaultDirectoryBrowserInfo';
@@ -85,8 +86,6 @@ import EditorsEditorBase from './model/EditorsEditorBase';
 import EditorsEditorButtonItem from './model/EditorsEditorButtonItem';
 import EditorsEditorRoot from './model/EditorsEditorRoot';
 import EncodingContext from './model/EncodingContext';
-import EntitiesItemImageInfo from './model/EntitiesItemImageInfo';
-import EntitiesUser from './model/EntitiesUser';
 import EnumsUICommandType from './model/EnumsUICommandType';
 import EnumsUIViewType from './model/EnumsUIViewType';
 import ExtendedVideoSubTypes from './model/ExtendedVideoSubTypes';
@@ -119,10 +118,12 @@ import ItemCounts from './model/ItemCounts';
 import ItemFileInfo from './model/ItemFileInfo';
 import ItemFileType from './model/ItemFileType';
 import ItemLookupInfo from './model/ItemLookupInfo';
+import ItemsQuery from './model/ItemsQuery';
 import LevelInformation from './model/LevelInformation';
 import LibraryAddMediaPath from './model/LibraryAddMediaPath';
 import LibraryAddVirtualFolder from './model/LibraryAddVirtualFolder';
 import LibraryDeleteInfo from './model/LibraryDeleteInfo';
+import LibraryFullUserCopyDataOptions from './model/LibraryFullUserCopyDataOptions';
 import LibraryItemLinkType from './model/LibraryItemLinkType';
 import LibraryMediaFolder from './model/LibraryMediaFolder';
 import LibraryMediaUpdateInfo from './model/LibraryMediaUpdateInfo';
@@ -137,8 +138,6 @@ import LibrarySubFolder from './model/LibrarySubFolder';
 import LibraryTypeOptions from './model/LibraryTypeOptions';
 import LibraryUpdateLibraryOptions from './model/LibraryUpdateLibraryOptions';
 import LibraryUpdateMediaPath from './model/LibraryUpdateMediaPath';
-import LibraryUserCopyOptions from './model/LibraryUserCopyOptions';
-import LinkedItemInfo from './model/LinkedItemInfo';
 import LiveStreamRequest from './model/LiveStreamRequest';
 import LiveStreamResponse from './model/LiveStreamResponse';
 import LiveTvChannelType from './model/LiveTvChannelType';
@@ -232,6 +231,7 @@ import QueryResultDevicesDeviceInfo from './model/QueryResultDevicesDeviceInfo';
 import QueryResultLiveTvSeriesTimerInfoDto from './model/QueryResultLiveTvSeriesTimerInfoDto';
 import QueryResultLiveTvTimerInfoDto from './model/QueryResultLiveTvTimerInfoDto';
 import QueryResultLogFile from './model/QueryResultLogFile';
+import QueryResultSessionPartyMessage from './model/QueryResultSessionPartyMessage';
 import QueryResultString from './model/QueryResultString';
 import QueryResultSyncJob from './model/QueryResultSyncJob';
 import QueryResultSyncJobItem from './model/QueryResultSyncJobItem';
@@ -272,6 +272,7 @@ import SeriesInfo from './model/SeriesInfo';
 import ServerConfiguration from './model/ServerConfiguration';
 import SessionPartyInfo from './model/SessionPartyInfo';
 import SessionPartyInfoResult from './model/SessionPartyInfoResult';
+import SessionPartyMessage from './model/SessionPartyMessage';
 import SessionSessionInfo from './model/SessionSessionInfo';
 import SessionUserInfo from './model/SessionUserInfo';
 import SleepTimerMode from './model/SleepTimerMode';
@@ -329,9 +330,13 @@ import UserDto from './model/UserDto';
 import UserItemDataDto from './model/UserItemDataDto';
 import UserItemShareLevel from './model/UserItemShareLevel';
 import UserLibraryAddTags from './model/UserLibraryAddTags';
+import UserLibraryCreditsList from './model/UserLibraryCreditsList';
+import UserLibraryDeleteHomeSections from './model/UserLibraryDeleteHomeSections';
 import UserLibraryLeaveSharedItems from './model/UserLibraryLeaveSharedItems';
+import UserLibraryMoveHomeSections from './model/UserLibraryMoveHomeSections';
 import UserLibraryOfficialRatingItem from './model/UserLibraryOfficialRatingItem';
 import UserLibraryRemoveTags from './model/UserLibraryRemoveTags';
+import UserLibraryReportItemsSearched from './model/UserLibraryReportItemsSearched';
 import UserLibraryTagItem from './model/UserLibraryTagItem';
 import UserLibraryUpdateUserItemAccess from './model/UserLibraryUpdateUserItemAccess';
 import UserNotificationInfo from './model/UserNotificationInfo';
@@ -443,7 +448,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.9.5.0
+* @version 4.10.0.40
 */
 export {
     /**
@@ -759,6 +764,12 @@ export {
     ContentSection,
 
     /**
+     * The CopyData model constructor.
+     * @property {module:model/CopyData}
+     */
+    CopyData,
+
+    /**
      * The CreateUserByName model constructor.
      * @property {module:model/CreateUserByName}
      */
@@ -901,18 +912,6 @@ export {
      * @property {module:model/EncodingContext}
      */
     EncodingContext,
-
-    /**
-     * The EntitiesItemImageInfo model constructor.
-     * @property {module:model/EntitiesItemImageInfo}
-     */
-    EntitiesItemImageInfo,
-
-    /**
-     * The EntitiesUser model constructor.
-     * @property {module:model/EntitiesUser}
-     */
-    EntitiesUser,
 
     /**
      * The EnumsUICommandType model constructor.
@@ -1107,6 +1106,12 @@ export {
     ItemLookupInfo,
 
     /**
+     * The ItemsQuery model constructor.
+     * @property {module:model/ItemsQuery}
+     */
+    ItemsQuery,
+
+    /**
      * The LevelInformation model constructor.
      * @property {module:model/LevelInformation}
      */
@@ -1129,6 +1134,12 @@ export {
      * @property {module:model/LibraryDeleteInfo}
      */
     LibraryDeleteInfo,
+
+    /**
+     * The LibraryFullUserCopyDataOptions model constructor.
+     * @property {module:model/LibraryFullUserCopyDataOptions}
+     */
+    LibraryFullUserCopyDataOptions,
 
     /**
      * The LibraryItemLinkType model constructor.
@@ -1213,18 +1224,6 @@ export {
      * @property {module:model/LibraryUpdateMediaPath}
      */
     LibraryUpdateMediaPath,
-
-    /**
-     * The LibraryUserCopyOptions model constructor.
-     * @property {module:model/LibraryUserCopyOptions}
-     */
-    LibraryUserCopyOptions,
-
-    /**
-     * The LinkedItemInfo model constructor.
-     * @property {module:model/LinkedItemInfo}
-     */
-    LinkedItemInfo,
 
     /**
      * The LiveStreamRequest model constructor.
@@ -1785,6 +1784,12 @@ export {
     QueryResultLogFile,
 
     /**
+     * The QueryResultSessionPartyMessage model constructor.
+     * @property {module:model/QueryResultSessionPartyMessage}
+     */
+    QueryResultSessionPartyMessage,
+
+    /**
      * The QueryResultString model constructor.
      * @property {module:model/QueryResultString}
      */
@@ -2023,6 +2028,12 @@ export {
      * @property {module:model/SessionPartyInfoResult}
      */
     SessionPartyInfoResult,
+
+    /**
+     * The SessionPartyMessage model constructor.
+     * @property {module:model/SessionPartyMessage}
+     */
+    SessionPartyMessage,
 
     /**
      * The SessionSessionInfo model constructor.
@@ -2367,10 +2378,28 @@ export {
     UserLibraryAddTags,
 
     /**
+     * The UserLibraryCreditsList model constructor.
+     * @property {module:model/UserLibraryCreditsList}
+     */
+    UserLibraryCreditsList,
+
+    /**
+     * The UserLibraryDeleteHomeSections model constructor.
+     * @property {module:model/UserLibraryDeleteHomeSections}
+     */
+    UserLibraryDeleteHomeSections,
+
+    /**
      * The UserLibraryLeaveSharedItems model constructor.
      * @property {module:model/UserLibraryLeaveSharedItems}
      */
     UserLibraryLeaveSharedItems,
+
+    /**
+     * The UserLibraryMoveHomeSections model constructor.
+     * @property {module:model/UserLibraryMoveHomeSections}
+     */
+    UserLibraryMoveHomeSections,
 
     /**
      * The UserLibraryOfficialRatingItem model constructor.
@@ -2383,6 +2412,12 @@ export {
      * @property {module:model/UserLibraryRemoveTags}
      */
     UserLibraryRemoveTags,
+
+    /**
+     * The UserLibraryReportItemsSearched model constructor.
+     * @property {module:model/UserLibraryReportItemsSearched}
+     */
+    UserLibraryReportItemsSearched,
 
     /**
      * The UserLibraryTagItem model constructor.

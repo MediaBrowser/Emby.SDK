@@ -38,14 +38,18 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="premiereDate">premiereDate.</param>
         /// <param name="startDate">startDate.</param>
         /// <param name="endDate">endDate.</param>
+        /// <param name="personType">personType.</param>
+        /// <param name="role">role.</param>
+        /// <param name="type">type.</param>
         /// <param name="imageUrl">imageUrl.</param>
+        /// <param name="thumbnailUrl">thumbnailUrl.</param>
         /// <param name="searchProviderName">searchProviderName.</param>
         /// <param name="gameSystem">gameSystem.</param>
         /// <param name="overview">overview.</param>
         /// <param name="disambiguationComment">disambiguationComment.</param>
         /// <param name="albumArtist">albumArtist.</param>
         /// <param name="artists">artists.</param>
-        public RemoteSearchResult(string name = default(string), string originalTitle = default(string), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? productionYear = default(int?), int? indexNumber = default(int?), int? indexNumberEnd = default(int?), int? parentIndexNumber = default(int?), int? sortIndexNumber = default(int?), int? sortParentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), string imageUrl = default(string), string searchProviderName = default(string), string gameSystem = default(string), string overview = default(string), string disambiguationComment = default(string), RemoteSearchResult albumArtist = default(RemoteSearchResult), List<RemoteSearchResult> artists = default(List<RemoteSearchResult>))
+        public RemoteSearchResult(string name = default(string), string originalTitle = default(string), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? productionYear = default(int?), int? indexNumber = default(int?), int? indexNumberEnd = default(int?), int? parentIndexNumber = default(int?), int? sortIndexNumber = default(int?), int? sortParentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), PersonType personType = default(PersonType), string role = default(string), string type = default(string), string imageUrl = default(string), string thumbnailUrl = default(string), string searchProviderName = default(string), string gameSystem = default(string), string overview = default(string), string disambiguationComment = default(string), RemoteSearchResult albumArtist = default(RemoteSearchResult), List<RemoteSearchResult> artists = default(List<RemoteSearchResult>))
         {
             this.Name = name;
             this.OriginalTitle = originalTitle;
@@ -59,7 +63,11 @@ namespace EmbyClient.Dotnet.Model
             this.PremiereDate = premiereDate;
             this.StartDate = startDate;
             this.EndDate = endDate;
+            this.PersonType = personType;
+            this.Role = role;
+            this.Type = type;
             this.ImageUrl = imageUrl;
+            this.ThumbnailUrl = thumbnailUrl;
             this.SearchProviderName = searchProviderName;
             this.GameSystem = gameSystem;
             this.Overview = overview;
@@ -143,10 +151,34 @@ namespace EmbyClient.Dotnet.Model
         public DateTimeOffset? EndDate { get; set; }
 
         /// <summary>
+        /// Gets or Sets PersonType
+        /// </summary>
+        [DataMember(Name="PersonType", EmitDefaultValue=false)]
+        public PersonType PersonType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Role
+        /// </summary>
+        [DataMember(Name="Role", EmitDefaultValue=false)]
+        public string Role { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="Type", EmitDefaultValue=false)]
+        public string Type { get; set; }
+
+        /// <summary>
         /// Gets or Sets ImageUrl
         /// </summary>
         [DataMember(Name="ImageUrl", EmitDefaultValue=false)]
         public string ImageUrl { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ThumbnailUrl
+        /// </summary>
+        [DataMember(Name="ThumbnailUrl", EmitDefaultValue=false)]
+        public string ThumbnailUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets SearchProviderName
@@ -204,7 +236,11 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  PremiereDate: ").Append(PremiereDate).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            sb.Append("  PersonType: ").Append(PersonType).Append("\n");
+            sb.Append("  Role: ").Append(Role).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
+            sb.Append("  ThumbnailUrl: ").Append(ThumbnailUrl).Append("\n");
             sb.Append("  SearchProviderName: ").Append(SearchProviderName).Append("\n");
             sb.Append("  GameSystem: ").Append(GameSystem).Append("\n");
             sb.Append("  Overview: ").Append(Overview).Append("\n");
@@ -306,9 +342,29 @@ namespace EmbyClient.Dotnet.Model
                     this.EndDate.Equals(input.EndDate))
                 ) && 
                 (
+                    this.PersonType == input.PersonType ||
+                    (this.PersonType != null &&
+                    this.PersonType.Equals(input.PersonType))
+                ) && 
+                (
+                    this.Role == input.Role ||
+                    (this.Role != null &&
+                    this.Role.Equals(input.Role))
+                ) && 
+                (
+                    this.Type == input.Type ||
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
+                ) && 
+                (
                     this.ImageUrl == input.ImageUrl ||
                     (this.ImageUrl != null &&
                     this.ImageUrl.Equals(input.ImageUrl))
+                ) && 
+                (
+                    this.ThumbnailUrl == input.ThumbnailUrl ||
+                    (this.ThumbnailUrl != null &&
+                    this.ThumbnailUrl.Equals(input.ThumbnailUrl))
                 ) && 
                 (
                     this.SearchProviderName == input.SearchProviderName ||
@@ -376,8 +432,16 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.StartDate.GetHashCode();
                 if (this.EndDate != null)
                     hashCode = hashCode * 59 + this.EndDate.GetHashCode();
+                if (this.PersonType != null)
+                    hashCode = hashCode * 59 + this.PersonType.GetHashCode();
+                if (this.Role != null)
+                    hashCode = hashCode * 59 + this.Role.GetHashCode();
+                if (this.Type != null)
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.ImageUrl != null)
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
+                if (this.ThumbnailUrl != null)
+                    hashCode = hashCode * 59 + this.ThumbnailUrl.GetHashCode();
                 if (this.SearchProviderName != null)
                     hashCode = hashCode * 59 + this.SearchProviderName.GetHashCode();
                 if (this.GameSystem != null)

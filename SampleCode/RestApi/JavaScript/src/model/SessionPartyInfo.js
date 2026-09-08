@@ -10,13 +10,13 @@
  */
 
 import ApiClient from '../ApiClient';
-import EntitiesUser from './EntitiesUser';
+import SessionPartyMessage from './SessionPartyMessage';
 import SessionSessionInfo from './SessionSessionInfo';
 
 /**
 * The SessionPartyInfo model module.
 * @module model/SessionPartyInfo
-* @version 4.9.5.0
+* @version 4.10.0.40
 */
 export default class SessionPartyInfo {
     /**
@@ -52,8 +52,14 @@ export default class SessionPartyInfo {
             if (data.hasOwnProperty('Sessions')) {
                 obj['Sessions'] = ApiClient.convertToType(data['Sessions'], [SessionSessionInfo]);
             }
-            if (data.hasOwnProperty('Users')) {
-                obj['Users'] = ApiClient.convertToType(data['Users'], [EntitiesUser]);
+            if (data.hasOwnProperty('Messages')) {
+                obj['Messages'] = ApiClient.convertToType(data['Messages'], [SessionPartyMessage]);
+            }
+            if (data.hasOwnProperty('MasterSession')) {
+                obj['MasterSession'] = SessionSessionInfo.constructFromObject(data['MasterSession']);
+            }
+            if (data.hasOwnProperty('IsPlaying')) {
+                obj['IsPlaying'] = ApiClient.convertToType(data['IsPlaying'], 'Boolean');
             }
         }
         return obj;
@@ -72,9 +78,17 @@ export default class SessionPartyInfo {
     */
     'Sessions' = undefined;
     /**
-    * @member {Array.<module:model/EntitiesUser>} Users
+    * @member {Array.<module:model/SessionPartyMessage>} Messages
     */
-    'Users' = undefined;
+    'Messages' = undefined;
+    /**
+    * @member {module:model/SessionSessionInfo} MasterSession
+    */
+    'MasterSession' = undefined;
+    /**
+    * @member {Boolean} IsPlaying
+    */
+    'IsPlaying' = undefined;
 
 
 

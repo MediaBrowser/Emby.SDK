@@ -23,9 +23,6 @@ public class LibraryRemoveVirtualFolder {
   @SerializedName("Id")
   private String id = null;
 
-  @SerializedName("RefreshLibrary")
-  private Boolean refreshLibrary = null;
-
   public LibraryRemoveVirtualFolder id(String id) {
     this.id = id;
     return this;
@@ -44,24 +41,6 @@ public class LibraryRemoveVirtualFolder {
     this.id = id;
   }
 
-  public LibraryRemoveVirtualFolder refreshLibrary(Boolean refreshLibrary) {
-    this.refreshLibrary = refreshLibrary;
-    return this;
-  }
-
-   /**
-   * Get refreshLibrary
-   * @return refreshLibrary
-  **/
-  @Schema(description = "")
-  public Boolean isRefreshLibrary() {
-    return refreshLibrary;
-  }
-
-  public void setRefreshLibrary(Boolean refreshLibrary) {
-    this.refreshLibrary = refreshLibrary;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -72,13 +51,12 @@ public class LibraryRemoveVirtualFolder {
       return false;
     }
     LibraryRemoveVirtualFolder libraryRemoveVirtualFolder = (LibraryRemoveVirtualFolder) o;
-    return Objects.equals(this.id, libraryRemoveVirtualFolder.id) &&
-        Objects.equals(this.refreshLibrary, libraryRemoveVirtualFolder.refreshLibrary);
+    return Objects.equals(this.id, libraryRemoveVirtualFolder.id);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, refreshLibrary);
+    return Objects.hash(id);
   }
 
 
@@ -88,7 +66,6 @@ public class LibraryRemoveVirtualFolder {
     sb.append("class LibraryRemoveVirtualFolder {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    refreshLibrary: ").append(toIndentedString(refreshLibrary)).append("\n");
     sb.append("}");
     return sb.toString();
   }

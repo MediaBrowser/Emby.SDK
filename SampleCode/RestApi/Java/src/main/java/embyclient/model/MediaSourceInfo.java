@@ -172,6 +172,12 @@ public class MediaSourceInfo {
   @SerializedName("ServerId")
   private String serverId = null;
 
+  @SerializedName("MimeType")
+  private String mimeType = null;
+
+  @SerializedName("TranscodingMimeType")
+  private String transcodingMimeType = null;
+
   public MediaSourceInfo chapters(List<ChapterInfo> chapters) {
     this.chapters = chapters;
     return this;
@@ -1050,6 +1056,42 @@ public class MediaSourceInfo {
     this.serverId = serverId;
   }
 
+  public MediaSourceInfo mimeType(String mimeType) {
+    this.mimeType = mimeType;
+    return this;
+  }
+
+   /**
+   * Get mimeType
+   * @return mimeType
+  **/
+  @Schema(description = "")
+  public String getMimeType() {
+    return mimeType;
+  }
+
+  public void setMimeType(String mimeType) {
+    this.mimeType = mimeType;
+  }
+
+  public MediaSourceInfo transcodingMimeType(String transcodingMimeType) {
+    this.transcodingMimeType = transcodingMimeType;
+    return this;
+  }
+
+   /**
+   * Get transcodingMimeType
+   * @return transcodingMimeType
+  **/
+  @Schema(description = "")
+  public String getTranscodingMimeType() {
+    return transcodingMimeType;
+  }
+
+  public void setTranscodingMimeType(String transcodingMimeType) {
+    this.transcodingMimeType = transcodingMimeType;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1106,12 +1148,14 @@ public class MediaSourceInfo {
         Objects.equals(this.defaultAudioStreamIndex, mediaSourceInfo.defaultAudioStreamIndex) &&
         Objects.equals(this.defaultSubtitleStreamIndex, mediaSourceInfo.defaultSubtitleStreamIndex) &&
         Objects.equals(this.itemId, mediaSourceInfo.itemId) &&
-        Objects.equals(this.serverId, mediaSourceInfo.serverId);
+        Objects.equals(this.serverId, mediaSourceInfo.serverId) &&
+        Objects.equals(this.mimeType, mediaSourceInfo.mimeType) &&
+        Objects.equals(this.transcodingMimeType, mediaSourceInfo.transcodingMimeType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(chapters, protocol, id, path, encoderPath, encoderProtocol, type, probePath, probeProtocol, container, size, name, sortName, isRemote, hasMixedProtocols, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId);
+    return Objects.hash(chapters, protocol, id, path, encoderPath, encoderProtocol, type, probePath, probeProtocol, container, size, name, sortName, isRemote, hasMixedProtocols, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId, mimeType, transcodingMimeType);
   }
 
 
@@ -1167,6 +1211,8 @@ public class MediaSourceInfo {
     sb.append("    defaultSubtitleStreamIndex: ").append(toIndentedString(defaultSubtitleStreamIndex)).append("\n");
     sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");
     sb.append("    serverId: ").append(toIndentedString(serverId)).append("\n");
+    sb.append("    mimeType: ").append(toIndentedString(mimeType)).append("\n");
+    sb.append("    transcodingMimeType: ").append(toIndentedString(transcodingMimeType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

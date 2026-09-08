@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.5.0"
+    "version": "4.10.0.40"
   },
   "servers": [
     {
@@ -31154,6 +31154,17 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "PlaySessionId",
+            "in": "query",
+            "description": "PlaySessionId",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -41191,6 +41202,111 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
+    "/Parties/Messages": {
+      "summary": "Gets party messages",
+      "get": {
+        "tags": [
+          "PartyService"
+        ],
+        "summary": "Gets party messages",
+        "description": "Requires authentication as user",
+        "operationId": "getPartiesMessages",
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a QueryResult<PartyMessage> object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResult_Session.PartyMessage"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResult_Session.PartyMessage"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "post": {
+        "tags": [
+          "PartyService"
+        ],
+        "summary": "Posts a message to the party",
+        "description": "Requires authentication as user",
+        "operationId": "postPartiesMessages",
+        "requestBody": {
+          "description": "PartyMessage: ",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Session.PartyMessage"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Session.PartyMessage"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Parties/Leave": {
       "summary": "Leaves a party",
       "post": {
@@ -45156,7 +45272,7 @@
           "GenericUIApiService"
         ],
         "summary": "Gets UI view data",
-        "description": "Requires authentication as user",
+        "description": "Requires authentication as administrator",
         "operationId": "getUIView",
         "parameters": [
           {
@@ -45222,7 +45338,7 @@
             "embyauth": [ ]
           }
         ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "Requires authentication as administrator"
       }
     },
     "/UI/Command": {
@@ -45232,7 +45348,7 @@
           "GenericUIApiService"
         ],
         "summary": "Execute a command in the context of tv setup",
-        "description": "Requires authentication as user",
+        "description": "Requires authentication as administrator",
         "operationId": "postUICommand",
         "requestBody": {
           "description": "RunUICommand",
@@ -45290,7 +45406,7 @@
             "embyauth": [ ]
           }
         ],
-        "x-RequiredAuthentication": "Requires authentication as user"
+        "x-RequiredAuthentication": "Requires authentication as administrator"
       }
     },
     "/Users/Public": {
@@ -46112,6 +46228,58 @@
           }
         ],
         "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Users/CopyDataOptions": {
+      "summary": "Gets copy data options",
+      "get": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Gets copy data options",
+        "description": "Requires authentication as administrator",
+        "operationId": "getUsersCopydataoptions",
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a FullUserCopyDataOptions object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Library.FullUserCopyDataOptions"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Library.FullUserCopyDataOptions"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
       }
     },
     "/UserSettings/{UserId}": {
@@ -53410,6 +53578,2166 @@
         "responses": {
           "200": {
             "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Collections/{Id}/ProviderItems": {
+      "summary": "Gets a list of missing items",
+      "get": {
+        "tags": [
+          "CollectionService"
+        ],
+        "summary": "Gets a list of missing items",
+        "description": "Requires authentication as user",
+        "operationId": "getCollectionsByIdProvideritems",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ArtistType",
+            "in": "query",
+            "description": "Artist or AlbumArtist",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxOfficialRating",
+            "in": "query",
+            "description": "Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HasThemeSong",
+            "in": "query",
+            "description": "Optional filter by items with theme songs.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasThemeVideo",
+            "in": "query",
+            "description": "Optional filter by items with theme videos.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasSubtitles",
+            "in": "query",
+            "description": "Optional filter by items with subtitles.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasSpecialFeature",
+            "in": "query",
+            "description": "Optional filter by items with special features.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasTrailer",
+            "in": "query",
+            "description": "Optional filter by items with trailers.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AdjacentTo",
+            "in": "query",
+            "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinIndexNumber",
+            "in": "query",
+            "description": "Optional filter by minimum index number.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinPlayers",
+            "in": "query",
+            "description": "Optional filter by minimum number of game players.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxPlayers",
+            "in": "query",
+            "description": "Optional filter by maximum number of game players.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ParentIndexNumber",
+            "in": "query",
+            "description": "Optional filter by parent index number.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasParentalRating",
+            "in": "query",
+            "description": "Optional filter by items that have or do not have a parental rating",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsHD",
+            "in": "query",
+            "description": "Optional filter by items that are HD or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsUnaired",
+            "in": "query",
+            "description": "Optional filter by items that are unaired episodes or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinCommunityRating",
+            "in": "query",
+            "description": "Optional filter by minimum community rating.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "double",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinCriticRating",
+            "in": "query",
+            "description": "Optional filter by minimum critic rating.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "double",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AiredDuringSeason",
+            "in": "query",
+            "description": "Gets all episodes that aired during a season, including specials.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinPremiereDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinDateLastSaved",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinDateLastSavedForUser",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxPremiereDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasOverview",
+            "in": "query",
+            "description": "Optional filter by items that have an overview or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasImdbId",
+            "in": "query",
+            "description": "Optional filter by items that have an imdb id or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasTmdbId",
+            "in": "query",
+            "description": "Optional filter by items that have a tmdb id or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasTvdbId",
+            "in": "query",
+            "description": "Optional filter by items that have a tvdb id or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ExcludeItemIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartIndex",
+            "in": "query",
+            "description": "Optional. The record index to start at. All items with a lower index will be dropped from the results.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Limit",
+            "in": "query",
+            "description": "Optional. The maximum number of records to return",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Recursive",
+            "in": "query",
+            "description": "When searching within folders, this determines whether or not the search will be recursive. true/false",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "SearchTerm",
+            "in": "query",
+            "description": "Enter a search term to perform a search request",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortOrder",
+            "in": "query",
+            "description": "Sort Order - Ascending,Descending",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ParentId",
+            "in": "query",
+            "description": "Specify this to localize the search to a specific item or folder. Omit to use the root",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Fields",
+            "in": "query",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExcludeItemTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IncludeItemTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AnyProviderIdEquals",
+            "in": "query",
+            "description": "Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted value pairs.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filters",
+            "in": "query",
+            "description": "Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsFavorite",
+            "in": "query",
+            "description": "Optional filter by items that are marked as favorite, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsMovie",
+            "in": "query",
+            "description": "Optional filter for movies.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsSeries",
+            "in": "query",
+            "description": "Optional filter for series.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsFolder",
+            "in": "query",
+            "description": "Optional filter for folders.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNews",
+            "in": "query",
+            "description": "Optional filter for news.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsKids",
+            "in": "query",
+            "description": "Optional filter for kids.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsSports",
+            "in": "query",
+            "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ProjectToMedia",
+            "in": "query",
+            "description": "ProjectToMedia",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "MediaTypes",
+            "in": "query",
+            "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ImageTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortBy",
+            "in": "query",
+            "description": "Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsPlayed",
+            "in": "query",
+            "description": "Optional filter by items that are played, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Genres",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OfficialRatings",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Tags",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExcludeTags",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Years",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EnableImages",
+            "in": "query",
+            "description": "Optional, include image information in output",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "EnableUserData",
+            "in": "query",
+            "description": "Optional, include user data",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ImageTypeLimit",
+            "in": "query",
+            "description": "Optional, the max number of images to return, per image type",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "EnableImageTypes",
+            "in": "query",
+            "description": "Optional. The image types to include in the output.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Person",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered to include only those containing the specified person.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PersonIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered to include only those containing the specified person.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PersonTypes",
+            "in": "query",
+            "description": "Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Studios",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StudioIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Artists",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ArtistIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Albums",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Ids",
+            "in": "query",
+            "description": "Optional. If specific items are needed, specify a list of item id's to retrieve. This allows multiple, comma delimited.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "VideoTypes",
+            "in": "query",
+            "description": "Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Containers",
+            "in": "query",
+            "description": "Optional filter by Container. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioCodecs",
+            "in": "query",
+            "description": "Optional filter by AudioCodec. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioLayouts",
+            "in": "query",
+            "description": "Optional filter by AudioLayout. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "VideoCodecs",
+            "in": "query",
+            "description": "Optional filter by VideoCodec. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExtendedVideoTypes",
+            "in": "query",
+            "description": "Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SubtitleCodecs",
+            "in": "query",
+            "description": "Optional filter by SubtitleCodec. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Path",
+            "in": "query",
+            "description": "Optional filter by Path.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "description": "User Id",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          },
+          {
+            "name": "MinOfficialRating",
+            "in": "query",
+            "description": "Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsLocked",
+            "in": "query",
+            "description": "Optional filter by items that are locked.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPlaceHolder",
+            "in": "query",
+            "description": "Optional filter by items that are placeholders",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasOfficialRating",
+            "in": "query",
+            "description": "Optional filter by items that have official ratings",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "GroupItemsIntoCollections",
+            "in": "query",
+            "description": "Whether or not to hide items behind their boxsets.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "Is3D",
+            "in": "query",
+            "description": "Optional filter by items that are 3D, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "SeriesStatus",
+            "in": "query",
+            "description": "Optional filter by Series Status. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NameStartsWithOrGreater",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ArtistStartsWithOrGreater",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AlbumArtistStartsWithOrGreater",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NameStartsWith",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NameLessThan",
+            "in": "query",
+            "description": "Optional filter by items whose name is equally or lesser than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Collections/{Id}/Missing": {
+      "summary": "Gets a list of missing items",
+      "get": {
+        "tags": [
+          "CollectionService"
+        ],
+        "summary": "Gets a list of missing items",
+        "description": "Requires authentication as user",
+        "operationId": "getCollectionsByIdMissing",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ArtistType",
+            "in": "query",
+            "description": "Artist or AlbumArtist",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxOfficialRating",
+            "in": "query",
+            "description": "Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HasThemeSong",
+            "in": "query",
+            "description": "Optional filter by items with theme songs.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasThemeVideo",
+            "in": "query",
+            "description": "Optional filter by items with theme videos.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasSubtitles",
+            "in": "query",
+            "description": "Optional filter by items with subtitles.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasSpecialFeature",
+            "in": "query",
+            "description": "Optional filter by items with special features.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasTrailer",
+            "in": "query",
+            "description": "Optional filter by items with trailers.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AdjacentTo",
+            "in": "query",
+            "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinIndexNumber",
+            "in": "query",
+            "description": "Optional filter by minimum index number.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinPlayers",
+            "in": "query",
+            "description": "Optional filter by minimum number of game players.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxPlayers",
+            "in": "query",
+            "description": "Optional filter by maximum number of game players.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ParentIndexNumber",
+            "in": "query",
+            "description": "Optional filter by parent index number.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasParentalRating",
+            "in": "query",
+            "description": "Optional filter by items that have or do not have a parental rating",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsHD",
+            "in": "query",
+            "description": "Optional filter by items that are HD or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsUnaired",
+            "in": "query",
+            "description": "Optional filter by items that are unaired episodes or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinCommunityRating",
+            "in": "query",
+            "description": "Optional filter by minimum community rating.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "double",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinCriticRating",
+            "in": "query",
+            "description": "Optional filter by minimum critic rating.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "double",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AiredDuringSeason",
+            "in": "query",
+            "description": "Gets all episodes that aired during a season, including specials.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinPremiereDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinDateLastSaved",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinDateLastSavedForUser",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxPremiereDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasOverview",
+            "in": "query",
+            "description": "Optional filter by items that have an overview or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasImdbId",
+            "in": "query",
+            "description": "Optional filter by items that have an imdb id or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasTmdbId",
+            "in": "query",
+            "description": "Optional filter by items that have a tmdb id or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasTvdbId",
+            "in": "query",
+            "description": "Optional filter by items that have a tvdb id or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ExcludeItemIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartIndex",
+            "in": "query",
+            "description": "Optional. The record index to start at. All items with a lower index will be dropped from the results.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Limit",
+            "in": "query",
+            "description": "Optional. The maximum number of records to return",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Recursive",
+            "in": "query",
+            "description": "When searching within folders, this determines whether or not the search will be recursive. true/false",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "SearchTerm",
+            "in": "query",
+            "description": "Enter a search term to perform a search request",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortOrder",
+            "in": "query",
+            "description": "Sort Order - Ascending,Descending",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ParentId",
+            "in": "query",
+            "description": "Specify this to localize the search to a specific item or folder. Omit to use the root",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Fields",
+            "in": "query",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExcludeItemTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IncludeItemTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AnyProviderIdEquals",
+            "in": "query",
+            "description": "Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted value pairs.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filters",
+            "in": "query",
+            "description": "Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsFavorite",
+            "in": "query",
+            "description": "Optional filter by items that are marked as favorite, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsMovie",
+            "in": "query",
+            "description": "Optional filter for movies.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsSeries",
+            "in": "query",
+            "description": "Optional filter for series.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsFolder",
+            "in": "query",
+            "description": "Optional filter for folders.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNews",
+            "in": "query",
+            "description": "Optional filter for news.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsKids",
+            "in": "query",
+            "description": "Optional filter for kids.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsSports",
+            "in": "query",
+            "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ProjectToMedia",
+            "in": "query",
+            "description": "ProjectToMedia",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "MediaTypes",
+            "in": "query",
+            "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ImageTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortBy",
+            "in": "query",
+            "description": "Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsPlayed",
+            "in": "query",
+            "description": "Optional filter by items that are played, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Genres",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OfficialRatings",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Tags",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExcludeTags",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Years",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EnableImages",
+            "in": "query",
+            "description": "Optional, include image information in output",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "EnableUserData",
+            "in": "query",
+            "description": "Optional, include user data",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ImageTypeLimit",
+            "in": "query",
+            "description": "Optional, the max number of images to return, per image type",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "EnableImageTypes",
+            "in": "query",
+            "description": "Optional. The image types to include in the output.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Person",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered to include only those containing the specified person.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PersonIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered to include only those containing the specified person.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PersonTypes",
+            "in": "query",
+            "description": "Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Studios",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StudioIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Artists",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ArtistIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Albums",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Ids",
+            "in": "query",
+            "description": "Optional. If specific items are needed, specify a list of item id's to retrieve. This allows multiple, comma delimited.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "VideoTypes",
+            "in": "query",
+            "description": "Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Containers",
+            "in": "query",
+            "description": "Optional filter by Container. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioCodecs",
+            "in": "query",
+            "description": "Optional filter by AudioCodec. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioLayouts",
+            "in": "query",
+            "description": "Optional filter by AudioLayout. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "VideoCodecs",
+            "in": "query",
+            "description": "Optional filter by VideoCodec. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExtendedVideoTypes",
+            "in": "query",
+            "description": "Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SubtitleCodecs",
+            "in": "query",
+            "description": "Optional filter by SubtitleCodec. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Path",
+            "in": "query",
+            "description": "Optional filter by Path.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "description": "User Id",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          },
+          {
+            "name": "MinOfficialRating",
+            "in": "query",
+            "description": "Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsLocked",
+            "in": "query",
+            "description": "Optional filter by items that are locked.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPlaceHolder",
+            "in": "query",
+            "description": "Optional filter by items that are placeholders",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasOfficialRating",
+            "in": "query",
+            "description": "Optional filter by items that have official ratings",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "GroupItemsIntoCollections",
+            "in": "query",
+            "description": "Whether or not to hide items behind their boxsets.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "Is3D",
+            "in": "query",
+            "description": "Optional filter by items that are 3D, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "SeriesStatus",
+            "in": "query",
+            "description": "Optional filter by Series Status. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NameStartsWithOrGreater",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ArtistStartsWithOrGreater",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AlbumArtistStartsWithOrGreater",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NameStartsWith",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NameLessThan",
+            "in": "query",
+            "description": "Optional filter by items whose name is equally or lesser than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
           },
           "400": {
             "$ref": "#/components/responses/400"
@@ -70340,6 +72668,76 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
+    "/Persons/{Id}/Credits": {
+      "summary": "Gets credits for a person",
+      "get": {
+        "tags": [
+          "PersonsService"
+        ],
+        "summary": "Gets credits for a person",
+        "description": "Requires authentication as user",
+        "operationId": "getPersonsByIdCredits",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "The person id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a CreditsList[] object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserLibrary.CreditsList"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserLibrary.CreditsList"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Playlists/{Id}/AddToPlaylistInfo": {
       "summary": "Gets add to playlist info",
       "get": {
@@ -80404,6 +82802,57 @@
         "x-RequiredAuthentication": "Requires authentication as administrator"
       }
     },
+    "/Users/{Id}/RecentlySearched": {
+      "summary": "Clears recently searched",
+      "delete": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Clears recently searched",
+        "description": "Requires authentication as user",
+        "operationId": "deleteUsersByIdRecentlysearched",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Users/{Id}/Authenticate": {
       "summary": "Authenticates a user",
       "post": {
@@ -80756,6 +83205,73 @@
         "x-RequiredAuthentication": "Requires authentication as administrator"
       }
     },
+    "/Users/{UserId}/CopyData": {
+      "summary": "Copies data from one user to another",
+      "post": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Copies data from one user to another",
+        "description": "Requires authentication as administrator",
+        "operationId": "postUsersByUseridCopydata",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "CopyData",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CopyData"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/CopyData"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      }
+    },
     "/Users/{UserId}/HomeSections": {
       "get": {
         "tags": [
@@ -80796,6 +83312,70 @@
                 }
               }
             }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "post": {
+        "tags": [
+          "ContentService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "postUsersByUseridHomesections",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "description": "User Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ContentSection: ",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContentSection"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/ContentSection"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
           },
           "400": {
             "$ref": "#/components/responses/400"
@@ -81883,6 +84463,74 @@
                 }
               }
             }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Users/{UserId}/SearchedItems/": {
+      "summary": "Marks an item as a favorite",
+      "post": {
+        "tags": [
+          "UserLibraryService"
+        ],
+        "summary": "Marks an item as a favorite",
+        "description": "Requires authentication as user",
+        "operationId": "postUsersByUseridSearcheditems",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "description": "User Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ReportItemsSearched",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.ReportItemsSearched"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.ReportItemsSearched"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
           },
           "400": {
             "$ref": "#/components/responses/400"
@@ -91357,6 +94005,57 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
+    "/Users/{Id}/RecentlySearched/Delete": {
+      "summary": "Clears recently searched",
+      "post": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Clears recently searched",
+        "description": "Requires authentication as user",
+        "operationId": "postUsersByIdRecentlysearchedDelete",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Users/{Id}/Configuration/Partial": {
       "summary": "Updates a user configuration",
       "post": {
@@ -91515,6 +94214,138 @@
               "schema": {
                 "type": "string",
                 "format": "binary"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Users/{UserId}/HomeSections/Delete": {
+      "post": {
+        "tags": [
+          "ContentService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "postUsersByUseridHomesectionsDelete",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "description": "User Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "DeleteHomeSections",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.DeleteHomeSections"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.DeleteHomeSections"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Users/{UserId}/HomeSections/Move": {
+      "post": {
+        "tags": [
+          "ContentService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "postUsersByUseridHomesectionsMove",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "description": "User Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "MoveHomeSections",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.MoveHomeSections"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.MoveHomeSections"
               }
             }
           },
@@ -103920,6 +106751,12 @@
               "$ref": "#/components/schemas/NameLongIdPair"
             }
           },
+          "Collections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NameLongIdPair"
+            }
+          },
           "ParentLogoItemId": {
             "type": "string",
             "description": "If the item does not have a logo, this will hold the Id of the Parent that has one."
@@ -104128,6 +106965,9 @@
           "MediaType": {
             "type": "string",
             "description": "The type of the media."
+          },
+          "MimeType": {
+            "type": "string"
           },
           "EndDate": {
             "type": "string",
@@ -104569,6 +107409,12 @@
           "ServerId": {
             "type": "string",
             "description": "Used only by our Windows app. Not used by Emby Server."
+          },
+          "MimeType": {
+            "type": "string"
+          },
+          "TranscodingMimeType": {
+            "type": "string"
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Dto.MediaSourceInfo"
@@ -104805,6 +107651,9 @@
           "DeliveryUrl": {
             "type": "string",
             "description": "The delivery URL.\r\n\r\nCustom property set by the application."
+          },
+          "DeliveryFormat": {
+            "type": "string"
           },
           "IsExternalUrl": {
             "type": "boolean",
@@ -105530,11 +108379,17 @@
               "$ref": "#/components/schemas/Session.SessionInfo"
             }
           },
-          "Users": {
+          "Messages": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Entities.User"
+              "$ref": "#/components/schemas/Session.PartyMessage"
             }
+          },
+          "MasterSession": {
+            "$ref": "#/components/schemas/Session.SessionInfo"
+          },
+          "IsPlaying": {
+            "type": "boolean"
           }
         },
         "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyInfo"
@@ -106090,170 +108945,22 @@
         "description": "Video Processing Step Type enum.\r\n",
         "x-internal-ref-name": "MediaBrowser.Model.Session.Transcoding.VpStepTypes"
       },
-      "Entities.User": {
+      "Session.PartyMessage": {
         "type": "object",
         "properties": {
-          "UsesIdForConfigurationPath": {
-            "type": "boolean",
-            "description": "From now on all user paths will be Id\\-based. This is for backwards compatibility."
-          },
-          "Password": {
-            "type": "string",
-            "description": "The password."
-          },
-          "EasyPassword": {
-            "type": "string"
-          },
-          "Salt": {
-            "type": "string"
-          },
-          "ConnectUserName": {
-            "type": "string"
-          },
-          "ConnectUserId": {
-            "type": "string"
-          },
-          "ConnectLinkType": {
-            "$ref": "#/components/schemas/Connect.UserLinkType"
-          },
-          "ConnectAccessKey": {
-            "type": "string"
-          },
-          "ImageInfos": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Entities.ItemImageInfo"
-            }
-          },
-          "Name": {
-            "type": "string",
-            "description": "The name."
-          },
-          "LastLoginDate": {
-            "type": "string",
-            "description": "The last login date.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "LastActivityDate": {
-            "type": "string",
-            "description": "The last activity date.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "PlayedPercentage": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "RecursiveChildCountEqualsChildCount": {
-            "type": "boolean"
-          },
-          "OriginalParsedName": {
-            "type": "string",
-            "description": "Internal use only"
-          },
-          "IsNameParsedFromFolder": {
-            "type": "boolean",
-            "description": "Internal use only"
-          },
-          "IdString": {
-            "type": "string"
-          },
-          "DateCreated": {
-            "type": "string",
-            "description": "The date created.",
-            "format": "date-time"
-          },
-          "ImportedCollections": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LinkedItemInfo"
-            }
-          },
-          "ResolvedPresentationUniqueKey": {
-            "type": "string"
-          }
-        },
-        "description": "Class User\r\n",
-        "x-internal-ref-name": "MediaBrowser.Controller.Entities.User"
-      },
-      "Connect.UserLinkType": {
-        "enum": [
-          "LinkedUser",
-          "Guest"
-        ],
-        "type": "string",
-        "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
-      },
-      "Entities.ItemImageInfo": {
-        "type": "object",
-        "properties": {
-          "Path": {
-            "type": "string",
-            "description": "The path."
-          },
-          "Type": {
-            "$ref": "#/components/schemas/ImageType"
-          },
-          "Orientation": {
-            "$ref": "#/components/schemas/Drawing.ImageOrientation"
-          },
-          "DateModified": {
-            "type": "string",
-            "description": "The date modified.",
-            "format": "date-time"
-          },
-          "Width": {
+          "UserId": {
             "type": "integer",
-            "format": "int32"
-          },
-          "Height": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "x-internal-ref-name": "MediaBrowser.Controller.Entities.ItemImageInfo"
-      },
-      "ImageType": {
-        "enum": [
-          "Primary",
-          "Art",
-          "Backdrop",
-          "Banner",
-          "Logo",
-          "Thumb",
-          "Disc",
-          "Box",
-          "Screenshot",
-          "Menu",
-          "Chapter",
-          "BoxRear",
-          "Thumbnail",
-          "LogoLight",
-          "LogoLightColor"
-        ],
-        "type": "string",
-        "description": "Enum ImageType\r\n",
-        "x-internal-ref-name": "MediaBrowser.Model.Entities.ImageType"
-      },
-      "LinkedItemInfo": {
-        "type": "object",
-        "properties": {
-          "ProviderIds": {
-            "$ref": "#/components/schemas/ProviderIdDictionary"
-          },
-          "Name": {
-            "type": "string",
-            "description": "The name."
-          },
-          "Id": {
-            "type": "integer",
-            "description": "The identifier.",
             "format": "int64"
+          },
+          "DateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Message": {
+            "type": "string"
           }
         },
-        "x-internal-ref-name": "MediaBrowser.Model.Dto.LinkedItemInfo"
+        "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyMessage"
       },
       "Playlists.PlaylistCreationResult": {
         "type": "object",
@@ -106457,6 +109164,28 @@
         "type": "string",
         "description": "Enum SystemEvent\r\n",
         "x-internal-ref-name": "MediaBrowser.Model.Tasks.SystemEvent"
+      },
+      "ImageType": {
+        "enum": [
+          "Primary",
+          "Art",
+          "Backdrop",
+          "Banner",
+          "Logo",
+          "Thumb",
+          "Disc",
+          "Box",
+          "Screenshot",
+          "Menu",
+          "Chapter",
+          "BoxRear",
+          "Thumbnail",
+          "LogoLight",
+          "LogoLightColor"
+        ],
+        "type": "string",
+        "description": "Enum ImageType\r\n",
+        "x-internal-ref-name": "MediaBrowser.Model.Entities.ImageType"
       },
       "NameValuePair": {
         "type": "object",
@@ -108254,6 +110983,9 @@
           },
           "AllowAudioStreamCopy": {
             "type": "boolean"
+          },
+          "ConsumerId": {
+            "type": "string"
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.MediaInfo.LiveStreamRequest"
@@ -108589,6 +111321,10 @@
           },
           "MatchAnyWord": {
             "type": "boolean"
+          },
+          "WasSearched": {
+            "type": "boolean",
+            "nullable": true
           },
           "IsDuplicate": {
             "type": "boolean",
@@ -109096,10 +111832,6 @@
             "type": "string",
             "description": "Id of the recording."
           },
-          "ChannelId": {
-            "type": "string",
-            "description": "ChannelId of the recording."
-          },
           "ChannelIds": {
             "type": "array",
             "items": {
@@ -109434,6 +112166,21 @@
           }
         },
         "x-internal-ref-name": "Emby.Notifications.Api.AddAdminNotification"
+      },
+      "QueryResult_Session.PartyMessage": {
+        "type": "object",
+        "properties": {
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Session.PartyMessage"
+            }
+          },
+          "TotalRecordCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
       },
       "PlaybackStartInfo": {
         "type": "object",
@@ -110163,6 +112910,9 @@
           "CertificatePassword": {
             "type": "string"
           },
+          "BannerText": {
+            "type": "string"
+          },
           "IsPortAuthorized": {
             "type": "boolean",
             "description": "A value indicating whether this instance is port authorized."
@@ -110171,6 +112921,9 @@
             "type": "boolean"
           },
           "EnableRemoteAccess": {
+            "type": "boolean"
+          },
+          "ValidateImageTags": {
             "type": "boolean"
           },
           "LogAllQueryTimes": {
@@ -110926,6 +113679,14 @@
         "description": "Class UserDto\r\n",
         "x-internal-ref-name": "MediaBrowser.Model.Dto.UserDto"
       },
+      "Connect.UserLinkType": {
+        "enum": [
+          "LinkedUser",
+          "Guest"
+        ],
+        "type": "string",
+        "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
+      },
       "UserConfiguration": {
         "type": "object",
         "properties": {
@@ -111108,6 +113869,9 @@
             "type": "boolean"
           },
           "EnableVideoPlaybackTranscoding": {
+            "type": "boolean"
+          },
+          "EnableTranscodingQuality": {
             "type": "boolean"
           },
           "AutoRemoteQuality": {
@@ -111318,20 +114082,11 @@
           "UserCopyOptions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Library.UserCopyOptions"
+              "type": "string"
             }
           }
         },
         "x-internal-ref-name": "Emby.Api.CreateUserByName"
-      },
-      "Library.UserCopyOptions": {
-        "enum": [
-          "UserPolicy",
-          "UserConfiguration",
-          "UserData"
-        ],
-        "type": "string",
-        "x-internal-ref-name": "MediaBrowser.Controller.Library.UserCopyOptions"
       },
       "ForgotPassword": {
         "type": "object",
@@ -111368,6 +114123,18 @@
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Model.Users.ForgotPasswordAction"
+      },
+      "Library.FullUserCopyDataOptions": {
+        "type": "object",
+        "properties": {
+          "DataOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NameIdPair"
+            }
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Controller.Library.FullUserCopyDataOptions"
       },
       "Api.ConfigurationPageInfo": {
         "type": "object",
@@ -112421,7 +115188,19 @@
             "format": "date-time",
             "nullable": true
           },
+          "PersonType": {
+            "$ref": "#/components/schemas/PersonType"
+          },
+          "Role": {
+            "type": "string"
+          },
+          "Type": {
+            "type": "string"
+          },
           "ImageUrl": {
+            "type": "string"
+          },
+          "ThumbnailUrl": {
             "type": "string"
           },
           "SearchProviderName": {
@@ -113793,9 +116572,6 @@
         "properties": {
           "Id": {
             "type": "string"
-          },
-          "RefreshLibrary": {
-            "type": "boolean"
           }
         },
         "x-internal-ref-name": "Emby.Api.Library.RemoveVirtualFolder"
@@ -113913,6 +116689,21 @@
           }
         },
         "x-internal-ref-name": "Emby.Notifications.UserNotificationInfo"
+      },
+      "UserLibrary.CreditsList": {
+        "type": "object",
+        "properties": {
+          "PersonType": {
+            "$ref": "#/components/schemas/PersonType"
+          },
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RemoteSearchResult"
+            }
+          }
+        },
+        "x-internal-ref-name": "Emby.Api.UserLibrary.CreditsList"
       },
       "Playlists.AddToPlaylistInfo": {
         "type": "object",
@@ -114491,10 +117282,34 @@
         },
         "x-internal-ref-name": "MediaBrowser.Model.Users.PinRedeemResult"
       },
+      "CopyData": {
+        "type": "object",
+        "properties": {
+          "UserId": {
+            "type": "string"
+          },
+          "ToUserIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "CopyOptions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "x-internal-ref-name": "Emby.Api.CopyData"
+      },
       "ContentSection": {
         "type": "object",
         "properties": {
           "Name": {
+            "type": "string"
+          },
+          "CustomName": {
             "type": "string"
           },
           "Subtitle": {
@@ -114512,7 +117327,25 @@
           "ViewType": {
             "type": "string"
           },
+          "ImageType": {
+            "type": "string"
+          },
+          "DisplayMode": {
+            "type": "string"
+          },
           "Monitor": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ItemTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ExcludedFolders": {
             "type": "array",
             "items": {
               "type": "string"
@@ -114528,6 +117361,9 @@
           "ParentItem": {
             "$ref": "#/components/schemas/BaseItemDto"
           },
+          "ParentId": {
+            "type": "string"
+          },
           "TextInfo": {
             "$ref": "#/components/schemas/TextSectionInfo"
           },
@@ -114541,6 +117377,18 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
+          },
+          "SortBy": {
+            "type": "string"
+          },
+          "SortOrder": {
+            "type": "string"
+          },
+          "IncludeNextUpInResume": {
+            "type": "boolean"
+          },
+          "Query": {
+            "$ref": "#/components/schemas/ItemsQuery"
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Entities.ContentSection"
@@ -114579,6 +117427,77 @@
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Model.Notifications.NotificationLevel"
+      },
+      "ItemsQuery": {
+        "type": "object",
+        "properties": {
+          "StudioIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "TagIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "GenreIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "CollectionTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "IsFavorite": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "IsPlayed": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "IsResumable": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "IsSports": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "IsNews": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "IsSeries": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "IsMovie": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "IsRepeat": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Model.Entities.ItemsQuery"
+      },
+      "UserLibrary.ReportItemsSearched": {
+        "type": "object",
+        "properties": {
+          "WasSearched": {
+            "type": "boolean"
+          }
+        },
+        "x-internal-ref-name": "Emby.Api.UserLibrary.ReportItemsSearched"
       },
       "UserLibrary.AddTags": {
         "type": "object",
@@ -114708,6 +117627,34 @@
             "format": "int32"
           }
         }
+      },
+      "UserLibrary.DeleteHomeSections": {
+        "type": "object",
+        "properties": {
+          "Ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "x-internal-ref-name": "Emby.Api.UserLibrary.DeleteHomeSections"
+      },
+      "UserLibrary.MoveHomeSections": {
+        "type": "object",
+        "properties": {
+          "Ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "NewIndex": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-internal-ref-name": "Emby.Api.UserLibrary.MoveHomeSections"
       },
       "Connect.UserLinkResult": {
         "type": "object",

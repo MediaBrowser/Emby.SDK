@@ -309,9 +309,10 @@ MediaInfoServiceApiService Closes a media source
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param liveStreamId LiveStreamId
+ * @param playSessionId PlaySessionId
 
 */
-func (a *MediaInfoServiceApiService) PostLivestreamsClose(ctx context.Context, liveStreamId string) (*http.Response, error) {
+func (a *MediaInfoServiceApiService) PostLivestreamsClose(ctx context.Context, liveStreamId string, playSessionId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -328,6 +329,7 @@ func (a *MediaInfoServiceApiService) PostLivestreamsClose(ctx context.Context, l
 	localVarFormParams := url.Values{}
 
 	localVarQueryParams.Add("LiveStreamId", parameterToString(liveStreamId, ""))
+	localVarQueryParams.Add("PlaySessionId", parameterToString(playSessionId, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}
 

@@ -5,7 +5,9 @@
 
 package embyclient.api;
 
+import embyclient.model.QueryResultSessionPartyMessage;
 import embyclient.model.SessionPartyInfoResult;
+import embyclient.model.SessionPartyMessage;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -53,6 +55,20 @@ public class PartyServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Gets party messages
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getPartiesMessagesTest() throws Exception {
+        QueryResultSessionPartyMessage response = api.getPartiesMessages();
+
+        // TODO: test validations
+    }
+    /**
      * Creates a party
      *
      * Requires authentication as user
@@ -92,6 +108,21 @@ public class PartyServiceApiTest {
     @Test
     public void postPartiesLeaveTest() throws Exception {
         api.postPartiesLeave();
+
+        // TODO: test validations
+    }
+    /**
+     * Posts a message to the party
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postPartiesMessagesTest() throws Exception {
+        SessionPartyMessage body = null;
+        api.postPartiesMessages(body);
 
         // TODO: test validations
     }

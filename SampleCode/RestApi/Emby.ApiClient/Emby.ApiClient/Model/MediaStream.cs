@@ -255,6 +255,12 @@ namespace Emby.ApiClient.Model
         public string DeliveryUrl { get; set; }
 
         /// <summary>
+        /// Gets or Sets DeliveryFormat
+        /// </summary>
+        /// <value>The DeliveryFormat.</value>
+        public string DeliveryFormat { get; set; }
+
+        /// <summary>
         /// A value indicating whether this instance is external URL.    Custom property set by the application.
         /// </summary>
         /// <value>The IsExternalUrl.</value>
@@ -402,6 +408,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  IsExternal: ").Append(IsExternal).Append("\n");
             sb.Append("  DeliveryMethod: ").Append(DeliveryMethod).Append("\n");
             sb.Append("  DeliveryUrl: ").Append(DeliveryUrl).Append("\n");
+            sb.Append("  DeliveryFormat: ").Append(DeliveryFormat).Append("\n");
             sb.Append("  IsExternalUrl: ").Append(IsExternalUrl).Append("\n");
             sb.Append("  IsChunkedResponse: ").Append(IsChunkedResponse).Append("\n");
             sb.Append("  IsTextSubtitleStream: ").Append(IsTextSubtitleStream).Append("\n");
@@ -635,6 +642,11 @@ namespace Emby.ApiClient.Model
                     this.DeliveryUrl.Equals(input.DeliveryUrl))
                 ) && 
                 (
+                    this.DeliveryFormat == input.DeliveryFormat ||
+                    (this.DeliveryFormat != null &&
+                    this.DeliveryFormat.Equals(input.DeliveryFormat))
+                ) && 
+                (
                     this.IsExternalUrl == input.IsExternalUrl ||
                     (this.IsExternalUrl != null &&
                     this.IsExternalUrl.Equals(input.IsExternalUrl))
@@ -806,6 +818,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.DeliveryMethod.GetHashCode();
                 if (this.DeliveryUrl != null)
                     hashCode = hashCode * 59 + this.DeliveryUrl.GetHashCode();
+                if (this.DeliveryFormat != null)
+                    hashCode = hashCode * 59 + this.DeliveryFormat.GetHashCode();
                 if (this.IsExternalUrl != null)
                     hashCode = hashCode * 59 + this.IsExternalUrl.GetHashCode();
                 if (this.IsChunkedResponse != null)
