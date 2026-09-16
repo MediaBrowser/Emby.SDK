@@ -15,7 +15,7 @@ import Version from './Version';
 /**
 * The CommonPluginsIPlugin model module.
 * @module model/CommonPluginsIPlugin
-* @version 4.10.0.31
+* @version 4.11.0.1
 */
 export default class CommonPluginsIPlugin {
     /**

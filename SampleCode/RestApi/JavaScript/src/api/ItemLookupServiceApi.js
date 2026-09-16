@@ -26,7 +26,7 @@ import RemoteSearchResult from '../model/RemoteSearchResult';
 /**
 * ItemLookupService service.
 * @module api/ItemLookupServiceApi
-* @version 4.10.0.31
+* @version 4.11.0.1
 */
 export default class ItemLookupServiceApi {
 

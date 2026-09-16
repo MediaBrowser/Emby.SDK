@@ -15,7 +15,7 @@ import NotificationsNotificationLevel from './NotificationsNotificationLevel';
 /**
 * The TextSectionInfo model module.
 * @module model/TextSectionInfo
-* @version 4.10.0.31
+* @version 4.11.0.1
 */
 export default class TextSectionInfo {
     /**

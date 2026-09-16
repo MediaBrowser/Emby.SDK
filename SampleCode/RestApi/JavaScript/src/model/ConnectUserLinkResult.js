@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ConnectUserLinkResult model module.
 * @module model/ConnectUserLinkResult
-* @version 4.10.0.31
+* @version 4.11.0.1
 */
 export default class ConnectUserLinkResult {
     /**

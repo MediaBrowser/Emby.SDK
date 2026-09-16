@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ChannelService service.
 * @module api/ChannelServiceApi
-* @version 4.10.0.31
+* @version 4.11.0.1
 */
 export default class ChannelServiceApi {
 

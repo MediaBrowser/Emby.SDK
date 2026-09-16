@@ -5,11 +5,13 @@
     <Configurations>Debug;Release;Beta;AndroidRelease</Configurations>
     <LangVersion>latest</LangVersion>
     <NoWarn>1701;1702;1591</NoWarn>
+    <Version>1.0.0.0</Version>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <PackageId>Emby.WebStreams.Plugin</PackageId>
     <RootNamespace>EmbyFileBrowser</RootNamespace>
     <AssemblyName>EmbyFileBrowser</AssemblyName>
   </PropertyGroup>
