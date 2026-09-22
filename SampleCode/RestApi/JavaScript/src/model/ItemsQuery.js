@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ItemsQuery model module.
 * @module model/ItemsQuery
-* @version 4.11.0.1
+* @version 4.11.0.3
 */
 export default class ItemsQuery {
     /**

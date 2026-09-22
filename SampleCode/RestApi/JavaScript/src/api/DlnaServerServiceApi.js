@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * DlnaServerService service.
 * @module api/DlnaServerServiceApi
-* @version 4.11.0.1
+* @version 4.11.0.3
 */
 export default class DlnaServerServiceApi {
 

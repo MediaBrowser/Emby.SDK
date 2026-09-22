@@ -15,7 +15,7 @@ import ImageType from './ImageType';
 /**
 * The ImageProviderInfo model module.
 * @module model/ImageProviderInfo
-* @version 4.11.0.1
+* @version 4.11.0.3
 */
 export default class ImageProviderInfo {
     /**

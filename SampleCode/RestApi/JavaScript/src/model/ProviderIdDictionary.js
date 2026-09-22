@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ProviderIdDictionary model module.
 * @module model/ProviderIdDictionary
-* @version 4.11.0.1
+* @version 4.11.0.3
 */
 export default class ProviderIdDictionary {
     /**

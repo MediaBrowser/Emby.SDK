@@ -24,7 +24,7 @@ import ThemeMediaResult from '../model/ThemeMediaResult';
 /**
 * LibraryService service.
 * @module api/LibraryServiceApi
-* @version 4.11.0.1
+* @version 4.11.0.3
 */
 export default class LibraryServiceApi {
 
