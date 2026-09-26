@@ -35,6 +35,9 @@ public class PlayRequest {
   @SerializedName("StartIndex")
   private Integer startIndex = null;
 
+  @SerializedName("IsPaused")
+  private Boolean isPaused = null;
+
   public PlayRequest controllingUserId(String controllingUserId) {
     this.controllingUserId = controllingUserId;
     return this;
@@ -125,6 +128,24 @@ public class PlayRequest {
     this.startIndex = startIndex;
   }
 
+  public PlayRequest isPaused(Boolean isPaused) {
+    this.isPaused = isPaused;
+    return this;
+  }
+
+   /**
+   * Get isPaused
+   * @return isPaused
+  **/
+  @Schema(description = "")
+  public Boolean isIsPaused() {
+    return isPaused;
+  }
+
+  public void setIsPaused(Boolean isPaused) {
+    this.isPaused = isPaused;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -139,12 +160,13 @@ public class PlayRequest {
         Objects.equals(this.subtitleStreamIndex, playRequest.subtitleStreamIndex) &&
         Objects.equals(this.audioStreamIndex, playRequest.audioStreamIndex) &&
         Objects.equals(this.mediaSourceId, playRequest.mediaSourceId) &&
-        Objects.equals(this.startIndex, playRequest.startIndex);
+        Objects.equals(this.startIndex, playRequest.startIndex) &&
+        Objects.equals(this.isPaused, playRequest.isPaused);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(controllingUserId, subtitleStreamIndex, audioStreamIndex, mediaSourceId, startIndex);
+    return Objects.hash(controllingUserId, subtitleStreamIndex, audioStreamIndex, mediaSourceId, startIndex, isPaused);
   }
 
 
@@ -158,6 +180,7 @@ public class PlayRequest {
     sb.append("    audioStreamIndex: ").append(toIndentedString(audioStreamIndex)).append("\n");
     sb.append("    mediaSourceId: ").append(toIndentedString(mediaSourceId)).append("\n");
     sb.append("    startIndex: ").append(toIndentedString(startIndex)).append("\n");
+    sb.append("    isPaused: ").append(toIndentedString(isPaused)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -57,6 +57,12 @@ namespace Emby.ApiClient.Model
         public int? StartIndex { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsPaused
+        /// </summary>
+        /// <value>The IsPaused.</value>
+        public bool? IsPaused { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -69,6 +75,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  AudioStreamIndex: ").Append(AudioStreamIndex).Append("\n");
             sb.Append("  MediaSourceId: ").Append(MediaSourceId).Append("\n");
             sb.Append("  StartIndex: ").Append(StartIndex).Append("\n");
+            sb.Append("  IsPaused: ").Append(IsPaused).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -118,6 +125,11 @@ namespace Emby.ApiClient.Model
                     this.StartIndex == input.StartIndex ||
                     (this.StartIndex != null &&
                     this.StartIndex.Equals(input.StartIndex))
+                ) && 
+                (
+                    this.IsPaused == input.IsPaused ||
+                    (this.IsPaused != null &&
+                    this.IsPaused.Equals(input.IsPaused))
                 );
         }
 
@@ -140,6 +152,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.MediaSourceId.GetHashCode();
                 if (this.StartIndex != null)
                     hashCode = hashCode * 59 + this.StartIndex.GetHashCode();
+                if (this.IsPaused != null)
+                    hashCode = hashCode * 59 + this.IsPaused.GetHashCode();
                 return hashCode;
             }
         }

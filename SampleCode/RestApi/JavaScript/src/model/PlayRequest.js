@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The PlayRequest model module.
 * @module model/PlayRequest
-* @version 4.11.0.3
+* @version 4.11.0.4
 */
 export default class PlayRequest {
     /**
@@ -57,6 +57,9 @@ export default class PlayRequest {
             if (data.hasOwnProperty('StartIndex')) {
                 obj['StartIndex'] = ApiClient.convertToType(data['StartIndex'], 'Number');
             }
+            if (data.hasOwnProperty('IsPaused')) {
+                obj['IsPaused'] = ApiClient.convertToType(data['IsPaused'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -82,6 +85,10 @@ export default class PlayRequest {
     * @member {Number} StartIndex
     */
     'StartIndex' = undefined;
+    /**
+    * @member {Boolean} IsPaused
+    */
+    'IsPaused' = undefined;
 
 
 

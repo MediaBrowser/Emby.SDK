@@ -26,7 +26,8 @@ class PlayRequest(object):
         'subtitle_stream_index': 'int',
         'audio_stream_index': 'int',
         'media_source_id': 'str',
-        'start_index': 'int'
+        'start_index': 'int',
+        'is_paused': 'bool'
     }
 
     attribute_map = {
@@ -34,16 +35,18 @@ class PlayRequest(object):
         'subtitle_stream_index': 'SubtitleStreamIndex',
         'audio_stream_index': 'AudioStreamIndex',
         'media_source_id': 'MediaSourceId',
-        'start_index': 'StartIndex'
+        'start_index': 'StartIndex',
+        'is_paused': 'IsPaused'
     }
 
-    def __init__(self, controlling_user_id=None, subtitle_stream_index=None, audio_stream_index=None, media_source_id=None, start_index=None):  # noqa: E501
+    def __init__(self, controlling_user_id=None, subtitle_stream_index=None, audio_stream_index=None, media_source_id=None, start_index=None, is_paused=None):  # noqa: E501
         """PlayRequest - a model defined in Swagger"""  # noqa: E501
         self._controlling_user_id = None
         self._subtitle_stream_index = None
         self._audio_stream_index = None
         self._media_source_id = None
         self._start_index = None
+        self._is_paused = None
         self.discriminator = None
         if controlling_user_id is not None:
             self.controlling_user_id = controlling_user_id
@@ -55,6 +58,8 @@ class PlayRequest(object):
             self.media_source_id = media_source_id
         if start_index is not None:
             self.start_index = start_index
+        if is_paused is not None:
+            self.is_paused = is_paused
 
     @property
     def controlling_user_id(self):
@@ -162,6 +167,27 @@ class PlayRequest(object):
         """
 
         self._start_index = start_index
+
+    @property
+    def is_paused(self):
+        """Gets the is_paused of this PlayRequest.  # noqa: E501
+
+
+        :return: The is_paused of this PlayRequest.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_paused
+
+    @is_paused.setter
+    def is_paused(self, is_paused):
+        """Sets the is_paused of this PlayRequest.
+
+
+        :param is_paused: The is_paused of this PlayRequest.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_paused = is_paused
 
     def to_dict(self):
         """Returns the model properties as a dict"""

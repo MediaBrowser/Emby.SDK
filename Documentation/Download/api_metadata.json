@@ -13629,6 +13629,7 @@
   "MediaBrowser.Model.Session.PlayRequest": "MediaBrowser.Model.Session.PlayRequest.yml",
   "MediaBrowser.Model.Session.PlayRequest.AudioStreamIndex": "MediaBrowser.Model.Session.PlayRequest.yml",
   "MediaBrowser.Model.Session.PlayRequest.ControllingUserId": "MediaBrowser.Model.Session.PlayRequest.yml",
+  "MediaBrowser.Model.Session.PlayRequest.IsPaused": "MediaBrowser.Model.Session.PlayRequest.yml",
   "MediaBrowser.Model.Session.PlayRequest.ItemIds": "MediaBrowser.Model.Session.PlayRequest.yml",
   "MediaBrowser.Model.Session.PlayRequest.MediaSourceId": "MediaBrowser.Model.Session.PlayRequest.yml",
   "MediaBrowser.Model.Session.PlayRequest.PlayCommand": "MediaBrowser.Model.Session.PlayRequest.yml",

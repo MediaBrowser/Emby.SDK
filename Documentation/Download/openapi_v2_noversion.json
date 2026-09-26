@@ -83382,6 +83382,9 @@
         "StartIndex": {
           "format": "int32",
           "type": "integer"
+        },
+        "IsPaused": {
+          "type": "boolean"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Session.PlayRequest"

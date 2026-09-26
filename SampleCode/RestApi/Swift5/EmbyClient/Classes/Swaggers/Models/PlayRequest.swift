@@ -18,13 +18,15 @@ public struct PlayRequest: Codable {
     public var audioStreamIndex: Int?
     public var mediaSourceId: String?
     public var startIndex: Int?
+    public var isPaused: Bool?
 
-    public init(controllingUserId: String? = nil, subtitleStreamIndex: Int? = nil, audioStreamIndex: Int? = nil, mediaSourceId: String? = nil, startIndex: Int? = nil) {
+    public init(controllingUserId: String? = nil, subtitleStreamIndex: Int? = nil, audioStreamIndex: Int? = nil, mediaSourceId: String? = nil, startIndex: Int? = nil, isPaused: Bool? = nil) {
         self.controllingUserId = controllingUserId
         self.subtitleStreamIndex = subtitleStreamIndex
         self.audioStreamIndex = audioStreamIndex
         self.mediaSourceId = mediaSourceId
         self.startIndex = startIndex
+        self.isPaused = isPaused
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -33,6 +35,7 @@ public struct PlayRequest: Codable {
         case audioStreamIndex = "AudioStreamIndex"
         case mediaSourceId = "MediaSourceId"
         case startIndex = "StartIndex"
+        case isPaused = "IsPaused"
     }
 
 }

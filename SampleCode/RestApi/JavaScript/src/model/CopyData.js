@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The CopyData model module.
 * @module model/CopyData
-* @version 4.11.0.3
+* @version 4.11.0.4
 */
 export default class CopyData {
     /**

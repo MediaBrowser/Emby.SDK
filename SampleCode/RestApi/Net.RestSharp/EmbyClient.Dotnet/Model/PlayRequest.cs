@@ -31,13 +31,15 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="audioStreamIndex">audioStreamIndex.</param>
         /// <param name="mediaSourceId">mediaSourceId.</param>
         /// <param name="startIndex">startIndex.</param>
-        public PlayRequest(string controllingUserId = default(string), int? subtitleStreamIndex = default(int?), int? audioStreamIndex = default(int?), string mediaSourceId = default(string), int? startIndex = default(int?))
+        /// <param name="isPaused">isPaused.</param>
+        public PlayRequest(string controllingUserId = default(string), int? subtitleStreamIndex = default(int?), int? audioStreamIndex = default(int?), string mediaSourceId = default(string), int? startIndex = default(int?), bool? isPaused = default(bool?))
         {
             this.ControllingUserId = controllingUserId;
             this.SubtitleStreamIndex = subtitleStreamIndex;
             this.AudioStreamIndex = audioStreamIndex;
             this.MediaSourceId = mediaSourceId;
             this.StartIndex = startIndex;
+            this.IsPaused = isPaused;
         }
         
         /// <summary>
@@ -72,6 +74,12 @@ namespace EmbyClient.Dotnet.Model
         public int? StartIndex { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsPaused
+        /// </summary>
+        [DataMember(Name="IsPaused", EmitDefaultValue=false)]
+        public bool? IsPaused { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -84,6 +92,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  AudioStreamIndex: ").Append(AudioStreamIndex).Append("\n");
             sb.Append("  MediaSourceId: ").Append(MediaSourceId).Append("\n");
             sb.Append("  StartIndex: ").Append(StartIndex).Append("\n");
+            sb.Append("  IsPaused: ").Append(IsPaused).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -142,6 +151,11 @@ namespace EmbyClient.Dotnet.Model
                     this.StartIndex == input.StartIndex ||
                     (this.StartIndex != null &&
                     this.StartIndex.Equals(input.StartIndex))
+                ) && 
+                (
+                    this.IsPaused == input.IsPaused ||
+                    (this.IsPaused != null &&
+                    this.IsPaused.Equals(input.IsPaused))
                 );
         }
 
@@ -164,6 +178,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.MediaSourceId.GetHashCode();
                 if (this.StartIndex != null)
                     hashCode = hashCode * 59 + this.StartIndex.GetHashCode();
+                if (this.IsPaused != null)
+                    hashCode = hashCode * 59 + this.IsPaused.GetHashCode();
                 return hashCode;
             }
         }

@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.11.0.3"
+    "version": "4.11.0.4"
   },
   "servers": [
     {
@@ -116767,6 +116767,9 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
+          },
+          "IsPaused": {
+            "type": "boolean"
           }
         },
         "description": "Class PlayRequest\r\n",

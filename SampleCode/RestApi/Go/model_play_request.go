@@ -14,4 +14,5 @@ type PlayRequest struct {
 	AudioStreamIndex int32 `json:"AudioStreamIndex,omitempty"`
 	MediaSourceId string `json:"MediaSourceId,omitempty"`
 	StartIndex int32 `json:"StartIndex,omitempty"`
+	IsPaused bool `json:"IsPaused,omitempty"`
 }

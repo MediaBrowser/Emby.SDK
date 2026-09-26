@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.11.0.3
+ * OpenAPI spec version: 4.11.0.4
  * 
  *
  * NOTE: This file is auto generated.
@@ -8946,6 +8946,12 @@ export interface PlayRequest {
      * @memberof PlayRequest
      */
     StartIndex?: number;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PlayRequest
+     */
+    IsPaused?: boolean;
 }
 /**
  * 

@@ -140242,6 +140242,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Session.PlayRequest.ControllingUserId
   nameWithType: PlayRequest.ControllingUserId
+- uid: MediaBrowser.Model.Session.PlayRequest.IsPaused
+  name: IsPaused
+  href: reference/pluginapi/MediaBrowser.Model.Session.PlayRequest.html#MediaBrowser_Model_Session_PlayRequest_IsPaused
+  commentId: P:MediaBrowser.Model.Session.PlayRequest.IsPaused
+  fullName: MediaBrowser.Model.Session.PlayRequest.IsPaused
+  nameWithType: PlayRequest.IsPaused
+- uid: MediaBrowser.Model.Session.PlayRequest.IsPaused*
+  name: IsPaused
+  href: reference/pluginapi/MediaBrowser.Model.Session.PlayRequest.html#MediaBrowser_Model_Session_PlayRequest_IsPaused_
+  commentId: Overload:MediaBrowser.Model.Session.PlayRequest.IsPaused
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Session.PlayRequest.IsPaused
+  nameWithType: PlayRequest.IsPaused
 - uid: MediaBrowser.Model.Session.PlayRequest.ItemIds
   name: ItemIds
   href: reference/pluginapi/MediaBrowser.Model.Session.PlayRequest.html#MediaBrowser_Model_Session_PlayRequest_ItemIds
