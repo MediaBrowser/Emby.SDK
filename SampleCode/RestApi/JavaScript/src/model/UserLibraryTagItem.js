@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The UserLibraryTagItem model module.
 * @module model/UserLibraryTagItem
-* @version 4.10.0.40
+* @version 4.10.1.0
 */
 export default class UserLibraryTagItem {
     /**
