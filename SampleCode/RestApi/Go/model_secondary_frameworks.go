@@ -23,4 +23,10 @@ const (
 	D3D11VA_SecondaryFrameworks SecondaryFrameworks = "D3d11va"
 	VIDEO_TOOLBOX_SecondaryFrameworks SecondaryFrameworks = "VideoToolbox"
 	MMAL_SecondaryFrameworks SecondaryFrameworks = "Mmal"
+	VULKAN_SecondaryFrameworks SecondaryFrameworks = "Vulkan"
+	D3D12VA_SecondaryFrameworks SecondaryFrameworks = "D3d12va"
+	OH_CODEC_SecondaryFrameworks SecondaryFrameworks = "OhCodec"
+	RK_MPP_SecondaryFrameworks SecondaryFrameworks = "RkMpp"
+	DRM_SecondaryFrameworks SecondaryFrameworks = "Drm"
+	OPEN_CL_SecondaryFrameworks SecondaryFrameworks = "OpenCL"
 )

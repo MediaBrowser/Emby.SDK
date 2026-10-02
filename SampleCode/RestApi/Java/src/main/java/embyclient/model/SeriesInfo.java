@@ -12,9 +12,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import embyclient.model.EntitiesTVSeriesOrderInfo;
 import embyclient.model.GlobalizationCultureDto;
 import embyclient.model.ProviderIdDictionary;
-import embyclient.model.SeriesDisplayOrder;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.time.OffsetDateTime;
@@ -29,8 +29,11 @@ public class SeriesInfo {
   @SerializedName("EpisodeAirDate")
   private OffsetDateTime episodeAirDate = null;
 
-  @SerializedName("DisplayOrder")
-  private SeriesDisplayOrder displayOrder = null;
+  @SerializedName("SeriesOrder")
+  private String seriesOrder = null;
+
+  @SerializedName("SeriesOrderInfo")
+  private EntitiesTVSeriesOrderInfo seriesOrderInfo = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -86,22 +89,40 @@ public class SeriesInfo {
     this.episodeAirDate = episodeAirDate;
   }
 
-  public SeriesInfo displayOrder(SeriesDisplayOrder displayOrder) {
-    this.displayOrder = displayOrder;
+  public SeriesInfo seriesOrder(String seriesOrder) {
+    this.seriesOrder = seriesOrder;
     return this;
   }
 
    /**
-   * Get displayOrder
-   * @return displayOrder
+   * Get seriesOrder
+   * @return seriesOrder
   **/
   @Schema(description = "")
-  public SeriesDisplayOrder getDisplayOrder() {
-    return displayOrder;
+  public String getSeriesOrder() {
+    return seriesOrder;
   }
 
-  public void setDisplayOrder(SeriesDisplayOrder displayOrder) {
-    this.displayOrder = displayOrder;
+  public void setSeriesOrder(String seriesOrder) {
+    this.seriesOrder = seriesOrder;
+  }
+
+  public SeriesInfo seriesOrderInfo(EntitiesTVSeriesOrderInfo seriesOrderInfo) {
+    this.seriesOrderInfo = seriesOrderInfo;
+    return this;
+  }
+
+   /**
+   * Get seriesOrderInfo
+   * @return seriesOrderInfo
+  **/
+  @Schema(description = "")
+  public EntitiesTVSeriesOrderInfo getSeriesOrderInfo() {
+    return seriesOrderInfo;
+  }
+
+  public void setSeriesOrderInfo(EntitiesTVSeriesOrderInfo seriesOrderInfo) {
+    this.seriesOrderInfo = seriesOrderInfo;
   }
 
   public SeriesInfo name(String name) {
@@ -339,7 +360,8 @@ public class SeriesInfo {
     }
     SeriesInfo seriesInfo = (SeriesInfo) o;
     return Objects.equals(this.episodeAirDate, seriesInfo.episodeAirDate) &&
-        Objects.equals(this.displayOrder, seriesInfo.displayOrder) &&
+        Objects.equals(this.seriesOrder, seriesInfo.seriesOrder) &&
+        Objects.equals(this.seriesOrderInfo, seriesInfo.seriesOrderInfo) &&
         Objects.equals(this.name, seriesInfo.name) &&
         Objects.equals(this.path, seriesInfo.path) &&
         Objects.equals(this.metadataLanguage, seriesInfo.metadataLanguage) &&
@@ -356,7 +378,7 @@ public class SeriesInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(episodeAirDate, displayOrder, name, path, metadataLanguage, metadataCountryCode, metadataLanguages, providerIds, year, indexNumber, parentIndexNumber, premiereDate, isAutomated, enableAdultMetadata);
+    return Objects.hash(episodeAirDate, seriesOrder, seriesOrderInfo, name, path, metadataLanguage, metadataCountryCode, metadataLanguages, providerIds, year, indexNumber, parentIndexNumber, premiereDate, isAutomated, enableAdultMetadata);
   }
 
 
@@ -366,7 +388,8 @@ public class SeriesInfo {
     sb.append("class SeriesInfo {\n");
     
     sb.append("    episodeAirDate: ").append(toIndentedString(episodeAirDate)).append("\n");
-    sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
+    sb.append("    seriesOrder: ").append(toIndentedString(seriesOrder)).append("\n");
+    sb.append("    seriesOrderInfo: ").append(toIndentedString(seriesOrderInfo)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    metadataLanguage: ").append(toIndentedString(metadataLanguage)).append("\n");

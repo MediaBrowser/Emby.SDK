@@ -12,7 +12,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import embyclient.model.ApiNameIdDescriptionPair;
+import embyclient.model.NameIdPair;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,20 +24,20 @@ import java.util.List;
 
 public class ApiAvailableRecordingOptions {
   @SerializedName("RecordingFolders")
-  private List<ApiNameIdDescriptionPair> recordingFolders = null;
+  private List<NameIdPair> recordingFolders = null;
 
   @SerializedName("MovieRecordingFolders")
-  private List<ApiNameIdDescriptionPair> movieRecordingFolders = null;
+  private List<NameIdPair> movieRecordingFolders = null;
 
   @SerializedName("SeriesRecordingFolders")
-  private List<ApiNameIdDescriptionPair> seriesRecordingFolders = null;
+  private List<NameIdPair> seriesRecordingFolders = null;
 
-  public ApiAvailableRecordingOptions recordingFolders(List<ApiNameIdDescriptionPair> recordingFolders) {
+  public ApiAvailableRecordingOptions recordingFolders(List<NameIdPair> recordingFolders) {
     this.recordingFolders = recordingFolders;
     return this;
   }
 
-  public ApiAvailableRecordingOptions addRecordingFoldersItem(ApiNameIdDescriptionPair recordingFoldersItem) {
+  public ApiAvailableRecordingOptions addRecordingFoldersItem(NameIdPair recordingFoldersItem) {
     if (this.recordingFolders == null) {
       this.recordingFolders = new ArrayList<>();
     }
@@ -50,20 +50,20 @@ public class ApiAvailableRecordingOptions {
    * @return recordingFolders
   **/
   @Schema(description = "")
-  public List<ApiNameIdDescriptionPair> getRecordingFolders() {
+  public List<NameIdPair> getRecordingFolders() {
     return recordingFolders;
   }
 
-  public void setRecordingFolders(List<ApiNameIdDescriptionPair> recordingFolders) {
+  public void setRecordingFolders(List<NameIdPair> recordingFolders) {
     this.recordingFolders = recordingFolders;
   }
 
-  public ApiAvailableRecordingOptions movieRecordingFolders(List<ApiNameIdDescriptionPair> movieRecordingFolders) {
+  public ApiAvailableRecordingOptions movieRecordingFolders(List<NameIdPair> movieRecordingFolders) {
     this.movieRecordingFolders = movieRecordingFolders;
     return this;
   }
 
-  public ApiAvailableRecordingOptions addMovieRecordingFoldersItem(ApiNameIdDescriptionPair movieRecordingFoldersItem) {
+  public ApiAvailableRecordingOptions addMovieRecordingFoldersItem(NameIdPair movieRecordingFoldersItem) {
     if (this.movieRecordingFolders == null) {
       this.movieRecordingFolders = new ArrayList<>();
     }
@@ -76,20 +76,20 @@ public class ApiAvailableRecordingOptions {
    * @return movieRecordingFolders
   **/
   @Schema(description = "")
-  public List<ApiNameIdDescriptionPair> getMovieRecordingFolders() {
+  public List<NameIdPair> getMovieRecordingFolders() {
     return movieRecordingFolders;
   }
 
-  public void setMovieRecordingFolders(List<ApiNameIdDescriptionPair> movieRecordingFolders) {
+  public void setMovieRecordingFolders(List<NameIdPair> movieRecordingFolders) {
     this.movieRecordingFolders = movieRecordingFolders;
   }
 
-  public ApiAvailableRecordingOptions seriesRecordingFolders(List<ApiNameIdDescriptionPair> seriesRecordingFolders) {
+  public ApiAvailableRecordingOptions seriesRecordingFolders(List<NameIdPair> seriesRecordingFolders) {
     this.seriesRecordingFolders = seriesRecordingFolders;
     return this;
   }
 
-  public ApiAvailableRecordingOptions addSeriesRecordingFoldersItem(ApiNameIdDescriptionPair seriesRecordingFoldersItem) {
+  public ApiAvailableRecordingOptions addSeriesRecordingFoldersItem(NameIdPair seriesRecordingFoldersItem) {
     if (this.seriesRecordingFolders == null) {
       this.seriesRecordingFolders = new ArrayList<>();
     }
@@ -102,11 +102,11 @@ public class ApiAvailableRecordingOptions {
    * @return seriesRecordingFolders
   **/
   @Schema(description = "")
-  public List<ApiNameIdDescriptionPair> getSeriesRecordingFolders() {
+  public List<NameIdPair> getSeriesRecordingFolders() {
     return seriesRecordingFolders;
   }
 
-  public void setSeriesRecordingFolders(List<ApiNameIdDescriptionPair> seriesRecordingFolders) {
+  public void setSeriesRecordingFolders(List<NameIdPair> seriesRecordingFolders) {
     this.seriesRecordingFolders = seriesRecordingFolders;
   }
 

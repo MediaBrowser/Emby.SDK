@@ -31,6 +31,12 @@ class SecondaryFrameworks(object):
     D3D11VA = "D3d11va"
     VIDEOTOOLBOX = "VideoToolbox"
     MMAL = "Mmal"
+    VULKAN = "Vulkan"
+    D3D12VA = "D3d12va"
+    OHCODEC = "OhCodec"
+    RKMPP = "RkMpp"
+    DRM = "Drm"
+    OPENCL = "OpenCL"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

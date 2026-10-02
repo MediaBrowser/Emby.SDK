@@ -167,12 +167,6 @@ public class ServerConfiguration {
   @SerializedName("EnableSqLiteMmio")
   private Boolean enableSqLiteMmio = null;
 
-  @SerializedName("PlaylistsUpgradedToM3U")
-  private Boolean playlistsUpgradedToM3U = null;
-
-  @SerializedName("ImageExtractorUpgraded1")
-  private Boolean imageExtractorUpgraded1 = null;
-
   @SerializedName("EnablePeopleLetterSubFolders")
   private Boolean enablePeopleLetterSubFolders = null;
 
@@ -200,8 +194,8 @@ public class ServerConfiguration {
   @SerializedName("MigratedLibraryOptionsToDb")
   private Boolean migratedLibraryOptionsToDb = null;
 
-  @SerializedName("AllowLegacyLocalNetworkPassword")
-  private Boolean allowLegacyLocalNetworkPassword = null;
+  @SerializedName("MigratedSeriesDisplayOrder")
+  private Boolean migratedSeriesDisplayOrder = null;
 
   @SerializedName("EnableSavedMetadataForPeople")
   private Boolean enableSavedMetadataForPeople = null;
@@ -1133,42 +1127,6 @@ public class ServerConfiguration {
     this.enableSqLiteMmio = enableSqLiteMmio;
   }
 
-  public ServerConfiguration playlistsUpgradedToM3U(Boolean playlistsUpgradedToM3U) {
-    this.playlistsUpgradedToM3U = playlistsUpgradedToM3U;
-    return this;
-  }
-
-   /**
-   * Get playlistsUpgradedToM3U
-   * @return playlistsUpgradedToM3U
-  **/
-  @Schema(description = "")
-  public Boolean isPlaylistsUpgradedToM3U() {
-    return playlistsUpgradedToM3U;
-  }
-
-  public void setPlaylistsUpgradedToM3U(Boolean playlistsUpgradedToM3U) {
-    this.playlistsUpgradedToM3U = playlistsUpgradedToM3U;
-  }
-
-  public ServerConfiguration imageExtractorUpgraded1(Boolean imageExtractorUpgraded1) {
-    this.imageExtractorUpgraded1 = imageExtractorUpgraded1;
-    return this;
-  }
-
-   /**
-   * Get imageExtractorUpgraded1
-   * @return imageExtractorUpgraded1
-  **/
-  @Schema(description = "")
-  public Boolean isImageExtractorUpgraded1() {
-    return imageExtractorUpgraded1;
-  }
-
-  public void setImageExtractorUpgraded1(Boolean imageExtractorUpgraded1) {
-    this.imageExtractorUpgraded1 = imageExtractorUpgraded1;
-  }
-
   public ServerConfiguration enablePeopleLetterSubFolders(Boolean enablePeopleLetterSubFolders) {
     this.enablePeopleLetterSubFolders = enablePeopleLetterSubFolders;
     return this;
@@ -1331,22 +1289,22 @@ public class ServerConfiguration {
     this.migratedLibraryOptionsToDb = migratedLibraryOptionsToDb;
   }
 
-  public ServerConfiguration allowLegacyLocalNetworkPassword(Boolean allowLegacyLocalNetworkPassword) {
-    this.allowLegacyLocalNetworkPassword = allowLegacyLocalNetworkPassword;
+  public ServerConfiguration migratedSeriesDisplayOrder(Boolean migratedSeriesDisplayOrder) {
+    this.migratedSeriesDisplayOrder = migratedSeriesDisplayOrder;
     return this;
   }
 
    /**
-   * Get allowLegacyLocalNetworkPassword
-   * @return allowLegacyLocalNetworkPassword
+   * Get migratedSeriesDisplayOrder
+   * @return migratedSeriesDisplayOrder
   **/
   @Schema(description = "")
-  public Boolean isAllowLegacyLocalNetworkPassword() {
-    return allowLegacyLocalNetworkPassword;
+  public Boolean isMigratedSeriesDisplayOrder() {
+    return migratedSeriesDisplayOrder;
   }
 
-  public void setAllowLegacyLocalNetworkPassword(Boolean allowLegacyLocalNetworkPassword) {
-    this.allowLegacyLocalNetworkPassword = allowLegacyLocalNetworkPassword;
+  public void setMigratedSeriesDisplayOrder(Boolean migratedSeriesDisplayOrder) {
+    this.migratedSeriesDisplayOrder = migratedSeriesDisplayOrder;
   }
 
   public ServerConfiguration enableSavedMetadataForPeople(Boolean enableSavedMetadataForPeople) {
@@ -1622,8 +1580,6 @@ public class ServerConfiguration {
         Objects.equals(this.simultaneousStreamLimit, serverConfiguration.simultaneousStreamLimit) &&
         Objects.equals(this.databaseCacheSizeMB, serverConfiguration.databaseCacheSizeMB) &&
         Objects.equals(this.enableSqLiteMmio, serverConfiguration.enableSqLiteMmio) &&
-        Objects.equals(this.playlistsUpgradedToM3U, serverConfiguration.playlistsUpgradedToM3U) &&
-        Objects.equals(this.imageExtractorUpgraded1, serverConfiguration.imageExtractorUpgraded1) &&
         Objects.equals(this.enablePeopleLetterSubFolders, serverConfiguration.enablePeopleLetterSubFolders) &&
         Objects.equals(this.optimizeDatabaseOnShutdown, serverConfiguration.optimizeDatabaseOnShutdown) &&
         Objects.equals(this.databaseAnalysisLimit, serverConfiguration.databaseAnalysisLimit) &&
@@ -1633,7 +1589,7 @@ public class ServerConfiguration {
         Objects.equals(this.disableAsyncIO, serverConfiguration.disableAsyncIO) &&
         Objects.equals(this.migratedToUserItemShares8, serverConfiguration.migratedToUserItemShares8) &&
         Objects.equals(this.migratedLibraryOptionsToDb, serverConfiguration.migratedLibraryOptionsToDb) &&
-        Objects.equals(this.allowLegacyLocalNetworkPassword, serverConfiguration.allowLegacyLocalNetworkPassword) &&
+        Objects.equals(this.migratedSeriesDisplayOrder, serverConfiguration.migratedSeriesDisplayOrder) &&
         Objects.equals(this.enableSavedMetadataForPeople, serverConfiguration.enableSavedMetadataForPeople) &&
         Objects.equals(this.tvChannelsRefreshed, serverConfiguration.tvChannelsRefreshed) &&
         Objects.equals(this.proxyHeaderMode, serverConfiguration.proxyHeaderMode) &&
@@ -1650,7 +1606,7 @@ public class ServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, bannerText, isPortAuthorized, autoRunWebApp, enableRemoteAccess, validateImageTags, logAllQueryTimes, disableOutgoingIPv6, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelaySeconds, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, imageExtractorUpgraded1, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, maxLibraryDatabaseConnections, maxAuthDbConnections, maxOtherDbConnections, disableAsyncIO, migratedToUserItemShares8, migratedLibraryOptionsToDb, allowLegacyLocalNetworkPassword, enableSavedMetadataForPeople, tvChannelsRefreshed, proxyHeaderMode, isInMaintenanceMode, maintenanceModeMessage, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, bannerText, isPortAuthorized, autoRunWebApp, enableRemoteAccess, validateImageTags, logAllQueryTimes, disableOutgoingIPv6, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelaySeconds, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, maxLibraryDatabaseConnections, maxAuthDbConnections, maxOtherDbConnections, disableAsyncIO, migratedToUserItemShares8, migratedLibraryOptionsToDb, migratedSeriesDisplayOrder, enableSavedMetadataForPeople, tvChannelsRefreshed, proxyHeaderMode, isInMaintenanceMode, maintenanceModeMessage, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1706,8 +1662,6 @@ public class ServerConfiguration {
     sb.append("    simultaneousStreamLimit: ").append(toIndentedString(simultaneousStreamLimit)).append("\n");
     sb.append("    databaseCacheSizeMB: ").append(toIndentedString(databaseCacheSizeMB)).append("\n");
     sb.append("    enableSqLiteMmio: ").append(toIndentedString(enableSqLiteMmio)).append("\n");
-    sb.append("    playlistsUpgradedToM3U: ").append(toIndentedString(playlistsUpgradedToM3U)).append("\n");
-    sb.append("    imageExtractorUpgraded1: ").append(toIndentedString(imageExtractorUpgraded1)).append("\n");
     sb.append("    enablePeopleLetterSubFolders: ").append(toIndentedString(enablePeopleLetterSubFolders)).append("\n");
     sb.append("    optimizeDatabaseOnShutdown: ").append(toIndentedString(optimizeDatabaseOnShutdown)).append("\n");
     sb.append("    databaseAnalysisLimit: ").append(toIndentedString(databaseAnalysisLimit)).append("\n");
@@ -1717,7 +1671,7 @@ public class ServerConfiguration {
     sb.append("    disableAsyncIO: ").append(toIndentedString(disableAsyncIO)).append("\n");
     sb.append("    migratedToUserItemShares8: ").append(toIndentedString(migratedToUserItemShares8)).append("\n");
     sb.append("    migratedLibraryOptionsToDb: ").append(toIndentedString(migratedLibraryOptionsToDb)).append("\n");
-    sb.append("    allowLegacyLocalNetworkPassword: ").append(toIndentedString(allowLegacyLocalNetworkPassword)).append("\n");
+    sb.append("    migratedSeriesDisplayOrder: ").append(toIndentedString(migratedSeriesDisplayOrder)).append("\n");
     sb.append("    enableSavedMetadataForPeople: ").append(toIndentedString(enableSavedMetadataForPeople)).append("\n");
     sb.append("    tvChannelsRefreshed: ").append(toIndentedString(tvChannelsRefreshed)).append("\n");
     sb.append("    proxyHeaderMode: ").append(toIndentedString(proxyHeaderMode)).append("\n");

@@ -16,6 +16,7 @@ import embyclient.model.MediaSourceInfo;
 import embyclient.model.PlayMethod;
 import embyclient.model.RepeatMode;
 import embyclient.model.SleepTimerMode;
+import embyclient.model.SubtitleEnableReason;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.time.OffsetDateTime;
@@ -45,6 +46,9 @@ public class PlayerStateInfo {
 
   @SerializedName("SubtitleStreamIndex")
   private Integer subtitleStreamIndex = null;
+
+  @SerializedName("SubtitleEnableReason")
+  private SubtitleEnableReason subtitleEnableReason = null;
 
   @SerializedName("MediaSourceId")
   private String mediaSourceId = null;
@@ -197,6 +201,24 @@ public class PlayerStateInfo {
 
   public void setSubtitleStreamIndex(Integer subtitleStreamIndex) {
     this.subtitleStreamIndex = subtitleStreamIndex;
+  }
+
+  public PlayerStateInfo subtitleEnableReason(SubtitleEnableReason subtitleEnableReason) {
+    this.subtitleEnableReason = subtitleEnableReason;
+    return this;
+  }
+
+   /**
+   * Get subtitleEnableReason
+   * @return subtitleEnableReason
+  **/
+  @Schema(description = "")
+  public SubtitleEnableReason getSubtitleEnableReason() {
+    return subtitleEnableReason;
+  }
+
+  public void setSubtitleEnableReason(SubtitleEnableReason subtitleEnableReason) {
+    this.subtitleEnableReason = subtitleEnableReason;
   }
 
   public PlayerStateInfo mediaSourceId(String mediaSourceId) {
@@ -378,6 +400,7 @@ public class PlayerStateInfo {
         Objects.equals(this.volumeLevel, playerStateInfo.volumeLevel) &&
         Objects.equals(this.audioStreamIndex, playerStateInfo.audioStreamIndex) &&
         Objects.equals(this.subtitleStreamIndex, playerStateInfo.subtitleStreamIndex) &&
+        Objects.equals(this.subtitleEnableReason, playerStateInfo.subtitleEnableReason) &&
         Objects.equals(this.mediaSourceId, playerStateInfo.mediaSourceId) &&
         Objects.equals(this.mediaSource, playerStateInfo.mediaSource) &&
         Objects.equals(this.playMethod, playerStateInfo.playMethod) &&
@@ -391,7 +414,7 @@ public class PlayerStateInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(positionTicks, canSeek, isPaused, isMuted, volumeLevel, audioStreamIndex, subtitleStreamIndex, mediaSourceId, mediaSource, playMethod, repeatMode, sleepTimerMode, sleepTimerEndTime, subtitleOffset, shuffle, playbackRate);
+    return Objects.hash(positionTicks, canSeek, isPaused, isMuted, volumeLevel, audioStreamIndex, subtitleStreamIndex, subtitleEnableReason, mediaSourceId, mediaSource, playMethod, repeatMode, sleepTimerMode, sleepTimerEndTime, subtitleOffset, shuffle, playbackRate);
   }
 
 
@@ -407,6 +430,7 @@ public class PlayerStateInfo {
     sb.append("    volumeLevel: ").append(toIndentedString(volumeLevel)).append("\n");
     sb.append("    audioStreamIndex: ").append(toIndentedString(audioStreamIndex)).append("\n");
     sb.append("    subtitleStreamIndex: ").append(toIndentedString(subtitleStreamIndex)).append("\n");
+    sb.append("    subtitleEnableReason: ").append(toIndentedString(subtitleEnableReason)).append("\n");
     sb.append("    mediaSourceId: ").append(toIndentedString(mediaSourceId)).append("\n");
     sb.append("    mediaSource: ").append(toIndentedString(mediaSource)).append("\n");
     sb.append("    playMethod: ").append(toIndentedString(playMethod)).append("\n");

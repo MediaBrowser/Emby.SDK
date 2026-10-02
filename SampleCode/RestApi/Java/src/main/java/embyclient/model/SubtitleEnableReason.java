@@ -15,17 +15,17 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets SeriesDisplayOrder
+ * Gets or Sets SubtitleEnableReason
  */
-@JsonAdapter(SeriesDisplayOrder.Adapter.class)
-public enum SeriesDisplayOrder {
-  AIRED("Aired"),
-  DVD("Dvd"),
-  ABSOLUTE("Absolute");
+@JsonAdapter(SubtitleEnableReason.Adapter.class)
+public enum SubtitleEnableReason {
+  USERENABLED("UserEnabled"),
+  SKIPBACK("SkipBack"),
+  LOWVOLUME("LowVolume");
 
   private String value;
 
-  SeriesDisplayOrder(String value) {
+  SubtitleEnableReason(String value) {
     this.value = value;
   }
 
@@ -38,8 +38,8 @@ public enum SeriesDisplayOrder {
     return String.valueOf(value);
   }
 
-  public static SeriesDisplayOrder fromValue(String input) {
-    for (SeriesDisplayOrder b : SeriesDisplayOrder.values()) {
+  public static SubtitleEnableReason fromValue(String input) {
+    for (SubtitleEnableReason b : SubtitleEnableReason.values()) {
       if (b.value.equals(input)) {
         return b;
       }
@@ -47,16 +47,16 @@ public enum SeriesDisplayOrder {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<SeriesDisplayOrder> {
+  public static class Adapter extends TypeAdapter<SubtitleEnableReason> {
     @Override
-    public void write(final JsonWriter jsonWriter, final SeriesDisplayOrder enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final SubtitleEnableReason enumeration) throws IOException {
       jsonWriter.value(String.valueOf(enumeration.getValue()));
     }
 
     @Override
-    public SeriesDisplayOrder read(final JsonReader jsonReader) throws IOException {
+    public SubtitleEnableReason read(final JsonReader jsonReader) throws IOException {
       Object value = jsonReader.nextString();
-      return SeriesDisplayOrder.fromValue((String)(value));
+      return SubtitleEnableReason.fromValue((String)(value));
     }
   }
 }

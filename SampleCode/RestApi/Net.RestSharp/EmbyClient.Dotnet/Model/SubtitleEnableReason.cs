@@ -18,24 +18,24 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// Defines SeriesDisplayOrder
+    /// Defines SubtitleEnableReason
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
-        public enum SeriesDisplayOrder
+        public enum SubtitleEnableReason
     {
         /// <summary>
-        /// Enum Aired for value: Aired
+        /// Enum UserEnabled for value: UserEnabled
         /// </summary>
-        [EnumMember(Value = "Aired")]
-        Aired = 1,
+        [EnumMember(Value = "UserEnabled")]
+        UserEnabled = 1,
         /// <summary>
-        /// Enum Dvd for value: Dvd
+        /// Enum SkipBack for value: SkipBack
         /// </summary>
-        [EnumMember(Value = "Dvd")]
-        Dvd = 2,
+        [EnumMember(Value = "SkipBack")]
+        SkipBack = 2,
         /// <summary>
-        /// Enum Absolute for value: Absolute
+        /// Enum LowVolume for value: LowVolume
         /// </summary>
-        [EnumMember(Value = "Absolute")]
-        Absolute = 3    }
+        [EnumMember(Value = "LowVolume")]
+        LowVolume = 3    }
 }

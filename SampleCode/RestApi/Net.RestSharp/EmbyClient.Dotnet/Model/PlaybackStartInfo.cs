@@ -32,6 +32,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="sessionId">The session id..</param>
         /// <param name="audioStreamIndex">The index of the audio stream..</param>
         /// <param name="subtitleStreamIndex">The index of the subtitle stream..</param>
+        /// <param name="subtitleEnableReason">subtitleEnableReason.</param>
         /// <param name="isPaused">A value indicating whether this instance is paused..</param>
         /// <param name="playlistIndex">playlistIndex.</param>
         /// <param name="playlistLength">playlistLength.</param>
@@ -56,7 +57,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="mediaSourceId">The media version identifier..</param>
         /// <param name="item">item.</param>
         /// <param name="positionTicks">The position ticks..</param>
-        public PlaybackStartInfo(bool? canSeek = default(bool?), List<QueueItem> nowPlayingQueue = default(List<QueueItem>), string playlistItemId = default(string), string sessionId = default(string), int? audioStreamIndex = default(int?), int? subtitleStreamIndex = default(int?), bool? isPaused = default(bool?), int? playlistIndex = default(int?), int? playlistLength = default(int?), bool? isMuted = default(bool?), long? runTimeTicks = default(long?), long? playbackStartTimeTicks = default(long?), int? volumeLevel = default(int?), int? brightness = default(int?), string aspectRatio = default(string), ProgressEvent eventName = default(ProgressEvent), PlayMethod playMethod = default(PlayMethod), RepeatMode repeatMode = default(RepeatMode), SleepTimerMode sleepTimerMode = default(SleepTimerMode), DateTimeOffset? sleepTimerEndTime = default(DateTimeOffset?), bool? shuffle = default(bool?), int? subtitleOffset = default(int?), double? playbackRate = default(double?), List<string> playlistItemIds = default(List<string>), string playSessionId = default(string), string itemId = default(string), string liveStreamId = default(string), string mediaSourceId = default(string), BaseItemDto item = default(BaseItemDto), long? positionTicks = default(long?))
+        public PlaybackStartInfo(bool? canSeek = default(bool?), List<QueueItem> nowPlayingQueue = default(List<QueueItem>), string playlistItemId = default(string), string sessionId = default(string), int? audioStreamIndex = default(int?), int? subtitleStreamIndex = default(int?), SubtitleEnableReason subtitleEnableReason = default(SubtitleEnableReason), bool? isPaused = default(bool?), int? playlistIndex = default(int?), int? playlistLength = default(int?), bool? isMuted = default(bool?), long? runTimeTicks = default(long?), long? playbackStartTimeTicks = default(long?), int? volumeLevel = default(int?), int? brightness = default(int?), string aspectRatio = default(string), ProgressEvent eventName = default(ProgressEvent), PlayMethod playMethod = default(PlayMethod), RepeatMode repeatMode = default(RepeatMode), SleepTimerMode sleepTimerMode = default(SleepTimerMode), DateTimeOffset? sleepTimerEndTime = default(DateTimeOffset?), bool? shuffle = default(bool?), int? subtitleOffset = default(int?), double? playbackRate = default(double?), List<string> playlistItemIds = default(List<string>), string playSessionId = default(string), string itemId = default(string), string liveStreamId = default(string), string mediaSourceId = default(string), BaseItemDto item = default(BaseItemDto), long? positionTicks = default(long?))
         {
             this.CanSeek = canSeek;
             this.NowPlayingQueue = nowPlayingQueue;
@@ -64,6 +65,7 @@ namespace EmbyClient.Dotnet.Model
             this.SessionId = sessionId;
             this.AudioStreamIndex = audioStreamIndex;
             this.SubtitleStreamIndex = subtitleStreamIndex;
+            this.SubtitleEnableReason = subtitleEnableReason;
             this.IsPaused = isPaused;
             this.PlaylistIndex = playlistIndex;
             this.PlaylistLength = playlistLength;
@@ -129,6 +131,12 @@ namespace EmbyClient.Dotnet.Model
         /// <value>The index of the subtitle stream.</value>
         [DataMember(Name="SubtitleStreamIndex", EmitDefaultValue=false)]
         public int? SubtitleStreamIndex { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SubtitleEnableReason
+        /// </summary>
+        [DataMember(Name="SubtitleEnableReason", EmitDefaultValue=false)]
+        public SubtitleEnableReason SubtitleEnableReason { get; set; }
 
         /// <summary>
         /// A value indicating whether this instance is paused.
@@ -296,6 +304,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  AudioStreamIndex: ").Append(AudioStreamIndex).Append("\n");
             sb.Append("  SubtitleStreamIndex: ").Append(SubtitleStreamIndex).Append("\n");
+            sb.Append("  SubtitleEnableReason: ").Append(SubtitleEnableReason).Append("\n");
             sb.Append("  IsPaused: ").Append(IsPaused).Append("\n");
             sb.Append("  PlaylistIndex: ").Append(PlaylistIndex).Append("\n");
             sb.Append("  PlaylistLength: ").Append(PlaylistLength).Append("\n");
@@ -384,6 +393,11 @@ namespace EmbyClient.Dotnet.Model
                     this.SubtitleStreamIndex == input.SubtitleStreamIndex ||
                     (this.SubtitleStreamIndex != null &&
                     this.SubtitleStreamIndex.Equals(input.SubtitleStreamIndex))
+                ) && 
+                (
+                    this.SubtitleEnableReason == input.SubtitleEnableReason ||
+                    (this.SubtitleEnableReason != null &&
+                    this.SubtitleEnableReason.Equals(input.SubtitleEnableReason))
                 ) && 
                 (
                     this.IsPaused == input.IsPaused ||
@@ -529,6 +543,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.AudioStreamIndex.GetHashCode();
                 if (this.SubtitleStreamIndex != null)
                     hashCode = hashCode * 59 + this.SubtitleStreamIndex.GetHashCode();
+                if (this.SubtitleEnableReason != null)
+                    hashCode = hashCode * 59 + this.SubtitleEnableReason.GetHashCode();
                 if (this.IsPaused != null)
                     hashCode = hashCode * 59 + this.IsPaused.GetHashCode();
                 if (this.PlaylistIndex != null)

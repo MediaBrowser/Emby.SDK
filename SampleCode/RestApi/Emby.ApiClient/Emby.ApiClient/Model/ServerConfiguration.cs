@@ -309,18 +309,6 @@ namespace Emby.ApiClient.Model
         public bool? EnableSqLiteMmio { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlaylistsUpgradedToM3U
-        /// </summary>
-        /// <value>The PlaylistsUpgradedToM3U.</value>
-        public bool? PlaylistsUpgradedToM3U { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ImageExtractorUpgraded1
-        /// </summary>
-        /// <value>The ImageExtractorUpgraded1.</value>
-        public bool? ImageExtractorUpgraded1 { get; set; }
-
-        /// <summary>
         /// Gets or Sets EnablePeopleLetterSubFolders
         /// </summary>
         /// <value>The EnablePeopleLetterSubFolders.</value>
@@ -375,10 +363,10 @@ namespace Emby.ApiClient.Model
         public bool? MigratedLibraryOptionsToDb { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowLegacyLocalNetworkPassword
+        /// Gets or Sets MigratedSeriesDisplayOrder
         /// </summary>
-        /// <value>The AllowLegacyLocalNetworkPassword.</value>
-        public bool? AllowLegacyLocalNetworkPassword { get; set; }
+        /// <value>The MigratedSeriesDisplayOrder.</value>
+        public bool? MigratedSeriesDisplayOrder { get; set; }
 
         /// <summary>
         /// Gets or Sets EnableSavedMetadataForPeople
@@ -507,8 +495,6 @@ namespace Emby.ApiClient.Model
             sb.Append("  SimultaneousStreamLimit: ").Append(SimultaneousStreamLimit).Append("\n");
             sb.Append("  DatabaseCacheSizeMB: ").Append(DatabaseCacheSizeMB).Append("\n");
             sb.Append("  EnableSqLiteMmio: ").Append(EnableSqLiteMmio).Append("\n");
-            sb.Append("  PlaylistsUpgradedToM3U: ").Append(PlaylistsUpgradedToM3U).Append("\n");
-            sb.Append("  ImageExtractorUpgraded1: ").Append(ImageExtractorUpgraded1).Append("\n");
             sb.Append("  EnablePeopleLetterSubFolders: ").Append(EnablePeopleLetterSubFolders).Append("\n");
             sb.Append("  OptimizeDatabaseOnShutdown: ").Append(OptimizeDatabaseOnShutdown).Append("\n");
             sb.Append("  DatabaseAnalysisLimit: ").Append(DatabaseAnalysisLimit).Append("\n");
@@ -518,7 +504,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  DisableAsyncIO: ").Append(DisableAsyncIO).Append("\n");
             sb.Append("  MigratedToUserItemShares8: ").Append(MigratedToUserItemShares8).Append("\n");
             sb.Append("  MigratedLibraryOptionsToDb: ").Append(MigratedLibraryOptionsToDb).Append("\n");
-            sb.Append("  AllowLegacyLocalNetworkPassword: ").Append(AllowLegacyLocalNetworkPassword).Append("\n");
+            sb.Append("  MigratedSeriesDisplayOrder: ").Append(MigratedSeriesDisplayOrder).Append("\n");
             sb.Append("  EnableSavedMetadataForPeople: ").Append(EnableSavedMetadataForPeople).Append("\n");
             sb.Append("  TvChannelsRefreshed: ").Append(TvChannelsRefreshed).Append("\n");
             sb.Append("  ProxyHeaderMode: ").Append(ProxyHeaderMode).Append("\n");
@@ -798,16 +784,6 @@ namespace Emby.ApiClient.Model
                     this.EnableSqLiteMmio.Equals(input.EnableSqLiteMmio))
                 ) && 
                 (
-                    this.PlaylistsUpgradedToM3U == input.PlaylistsUpgradedToM3U ||
-                    (this.PlaylistsUpgradedToM3U != null &&
-                    this.PlaylistsUpgradedToM3U.Equals(input.PlaylistsUpgradedToM3U))
-                ) && 
-                (
-                    this.ImageExtractorUpgraded1 == input.ImageExtractorUpgraded1 ||
-                    (this.ImageExtractorUpgraded1 != null &&
-                    this.ImageExtractorUpgraded1.Equals(input.ImageExtractorUpgraded1))
-                ) && 
-                (
                     this.EnablePeopleLetterSubFolders == input.EnablePeopleLetterSubFolders ||
                     (this.EnablePeopleLetterSubFolders != null &&
                     this.EnablePeopleLetterSubFolders.Equals(input.EnablePeopleLetterSubFolders))
@@ -853,9 +829,9 @@ namespace Emby.ApiClient.Model
                     this.MigratedLibraryOptionsToDb.Equals(input.MigratedLibraryOptionsToDb))
                 ) && 
                 (
-                    this.AllowLegacyLocalNetworkPassword == input.AllowLegacyLocalNetworkPassword ||
-                    (this.AllowLegacyLocalNetworkPassword != null &&
-                    this.AllowLegacyLocalNetworkPassword.Equals(input.AllowLegacyLocalNetworkPassword))
+                    this.MigratedSeriesDisplayOrder == input.MigratedSeriesDisplayOrder ||
+                    (this.MigratedSeriesDisplayOrder != null &&
+                    this.MigratedSeriesDisplayOrder.Equals(input.MigratedSeriesDisplayOrder))
                 ) && 
                 (
                     this.EnableSavedMetadataForPeople == input.EnableSavedMetadataForPeople ||
@@ -1022,10 +998,6 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.DatabaseCacheSizeMB.GetHashCode();
                 if (this.EnableSqLiteMmio != null)
                     hashCode = hashCode * 59 + this.EnableSqLiteMmio.GetHashCode();
-                if (this.PlaylistsUpgradedToM3U != null)
-                    hashCode = hashCode * 59 + this.PlaylistsUpgradedToM3U.GetHashCode();
-                if (this.ImageExtractorUpgraded1 != null)
-                    hashCode = hashCode * 59 + this.ImageExtractorUpgraded1.GetHashCode();
                 if (this.EnablePeopleLetterSubFolders != null)
                     hashCode = hashCode * 59 + this.EnablePeopleLetterSubFolders.GetHashCode();
                 if (this.OptimizeDatabaseOnShutdown != null)
@@ -1044,8 +1016,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.MigratedToUserItemShares8.GetHashCode();
                 if (this.MigratedLibraryOptionsToDb != null)
                     hashCode = hashCode * 59 + this.MigratedLibraryOptionsToDb.GetHashCode();
-                if (this.AllowLegacyLocalNetworkPassword != null)
-                    hashCode = hashCode * 59 + this.AllowLegacyLocalNetworkPassword.GetHashCode();
+                if (this.MigratedSeriesDisplayOrder != null)
+                    hashCode = hashCode * 59 + this.MigratedSeriesDisplayOrder.GetHashCode();
                 if (this.EnableSavedMetadataForPeople != null)
                     hashCode = hashCode * 59 + this.EnableSavedMetadataForPeople.GetHashCode();
                 if (this.TvChannelsRefreshed != null)

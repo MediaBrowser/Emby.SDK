@@ -29,7 +29,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="recordingFolders">recordingFolders.</param>
         /// <param name="movieRecordingFolders">movieRecordingFolders.</param>
         /// <param name="seriesRecordingFolders">seriesRecordingFolders.</param>
-        public ApiAvailableRecordingOptions(List<ApiNameIdDescriptionPair> recordingFolders = default(List<ApiNameIdDescriptionPair>), List<ApiNameIdDescriptionPair> movieRecordingFolders = default(List<ApiNameIdDescriptionPair>), List<ApiNameIdDescriptionPair> seriesRecordingFolders = default(List<ApiNameIdDescriptionPair>))
+        public ApiAvailableRecordingOptions(List<NameIdPair> recordingFolders = default(List<NameIdPair>), List<NameIdPair> movieRecordingFolders = default(List<NameIdPair>), List<NameIdPair> seriesRecordingFolders = default(List<NameIdPair>))
         {
             this.RecordingFolders = recordingFolders;
             this.MovieRecordingFolders = movieRecordingFolders;
@@ -40,19 +40,19 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets RecordingFolders
         /// </summary>
         [DataMember(Name="RecordingFolders", EmitDefaultValue=false)]
-        public List<ApiNameIdDescriptionPair> RecordingFolders { get; set; }
+        public List<NameIdPair> RecordingFolders { get; set; }
 
         /// <summary>
         /// Gets or Sets MovieRecordingFolders
         /// </summary>
         [DataMember(Name="MovieRecordingFolders", EmitDefaultValue=false)]
-        public List<ApiNameIdDescriptionPair> MovieRecordingFolders { get; set; }
+        public List<NameIdPair> MovieRecordingFolders { get; set; }
 
         /// <summary>
         /// Gets or Sets SeriesRecordingFolders
         /// </summary>
         [DataMember(Name="SeriesRecordingFolders", EmitDefaultValue=false)]
-        public List<ApiNameIdDescriptionPair> SeriesRecordingFolders { get; set; }
+        public List<NameIdPair> SeriesRecordingFolders { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

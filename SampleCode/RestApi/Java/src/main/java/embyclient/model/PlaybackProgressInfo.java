@@ -18,6 +18,7 @@ import embyclient.model.ProgressEvent;
 import embyclient.model.QueueItem;
 import embyclient.model.RepeatMode;
 import embyclient.model.SleepTimerMode;
+import embyclient.model.SubtitleEnableReason;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.time.OffsetDateTime;
@@ -46,6 +47,9 @@ public class PlaybackProgressInfo {
 
   @SerializedName("SubtitleStreamIndex")
   private Integer subtitleStreamIndex = null;
+
+  @SerializedName("SubtitleEnableReason")
+  private SubtitleEnableReason subtitleEnableReason = null;
 
   @SerializedName("IsPaused")
   private Boolean isPaused = null;
@@ -233,6 +237,24 @@ public class PlaybackProgressInfo {
 
   public void setSubtitleStreamIndex(Integer subtitleStreamIndex) {
     this.subtitleStreamIndex = subtitleStreamIndex;
+  }
+
+  public PlaybackProgressInfo subtitleEnableReason(SubtitleEnableReason subtitleEnableReason) {
+    this.subtitleEnableReason = subtitleEnableReason;
+    return this;
+  }
+
+   /**
+   * Get subtitleEnableReason
+   * @return subtitleEnableReason
+  **/
+  @Schema(description = "")
+  public SubtitleEnableReason getSubtitleEnableReason() {
+    return subtitleEnableReason;
+  }
+
+  public void setSubtitleEnableReason(SubtitleEnableReason subtitleEnableReason) {
+    this.subtitleEnableReason = subtitleEnableReason;
   }
 
   public PlaybackProgressInfo isPaused(Boolean isPaused) {
@@ -691,6 +713,7 @@ public class PlaybackProgressInfo {
         Objects.equals(this.sessionId, playbackProgressInfo.sessionId) &&
         Objects.equals(this.audioStreamIndex, playbackProgressInfo.audioStreamIndex) &&
         Objects.equals(this.subtitleStreamIndex, playbackProgressInfo.subtitleStreamIndex) &&
+        Objects.equals(this.subtitleEnableReason, playbackProgressInfo.subtitleEnableReason) &&
         Objects.equals(this.isPaused, playbackProgressInfo.isPaused) &&
         Objects.equals(this.playlistIndex, playbackProgressInfo.playlistIndex) &&
         Objects.equals(this.playlistLength, playbackProgressInfo.playlistLength) &&
@@ -719,7 +742,7 @@ public class PlaybackProgressInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(canSeek, nowPlayingQueue, playlistItemId, sessionId, audioStreamIndex, subtitleStreamIndex, isPaused, playlistIndex, playlistLength, isMuted, runTimeTicks, playbackStartTimeTicks, volumeLevel, brightness, aspectRatio, eventName, playMethod, repeatMode, sleepTimerMode, sleepTimerEndTime, shuffle, subtitleOffset, playbackRate, playlistItemIds, playSessionId, itemId, liveStreamId, mediaSourceId, item, positionTicks);
+    return Objects.hash(canSeek, nowPlayingQueue, playlistItemId, sessionId, audioStreamIndex, subtitleStreamIndex, subtitleEnableReason, isPaused, playlistIndex, playlistLength, isMuted, runTimeTicks, playbackStartTimeTicks, volumeLevel, brightness, aspectRatio, eventName, playMethod, repeatMode, sleepTimerMode, sleepTimerEndTime, shuffle, subtitleOffset, playbackRate, playlistItemIds, playSessionId, itemId, liveStreamId, mediaSourceId, item, positionTicks);
   }
 
 
@@ -734,6 +757,7 @@ public class PlaybackProgressInfo {
     sb.append("    sessionId: ").append(toIndentedString(sessionId)).append("\n");
     sb.append("    audioStreamIndex: ").append(toIndentedString(audioStreamIndex)).append("\n");
     sb.append("    subtitleStreamIndex: ").append(toIndentedString(subtitleStreamIndex)).append("\n");
+    sb.append("    subtitleEnableReason: ").append(toIndentedString(subtitleEnableReason)).append("\n");
     sb.append("    isPaused: ").append(toIndentedString(isPaused)).append("\n");
     sb.append("    playlistIndex: ").append(toIndentedString(playlistIndex)).append("\n");
     sb.append("    playlistLength: ").append(toIndentedString(playlistLength)).append("\n");

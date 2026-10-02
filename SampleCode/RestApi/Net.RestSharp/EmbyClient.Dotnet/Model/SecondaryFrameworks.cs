@@ -88,5 +88,35 @@ namespace EmbyClient.Dotnet.Model
         /// Enum Mmal for value: Mmal
         /// </summary>
         [EnumMember(Value = "Mmal")]
-        Mmal = 13    }
+        Mmal = 13,
+        /// <summary>
+        /// Enum Vulkan for value: Vulkan
+        /// </summary>
+        [EnumMember(Value = "Vulkan")]
+        Vulkan = 14,
+        /// <summary>
+        /// Enum D3d12va for value: D3d12va
+        /// </summary>
+        [EnumMember(Value = "D3d12va")]
+        D3d12va = 15,
+        /// <summary>
+        /// Enum OhCodec for value: OhCodec
+        /// </summary>
+        [EnumMember(Value = "OhCodec")]
+        OhCodec = 16,
+        /// <summary>
+        /// Enum RkMpp for value: RkMpp
+        /// </summary>
+        [EnumMember(Value = "RkMpp")]
+        RkMpp = 17,
+        /// <summary>
+        /// Enum Drm for value: Drm
+        /// </summary>
+        [EnumMember(Value = "Drm")]
+        Drm = 18,
+        /// <summary>
+        /// Enum OpenCL for value: OpenCL
+        /// </summary>
+        [EnumMember(Value = "OpenCL")]
+        OpenCL = 19    }
 }

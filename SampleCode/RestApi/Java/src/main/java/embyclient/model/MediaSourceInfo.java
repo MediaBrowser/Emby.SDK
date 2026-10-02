@@ -166,6 +166,9 @@ public class MediaSourceInfo {
   @SerializedName("DefaultSubtitleStreamIndex")
   private Integer defaultSubtitleStreamIndex = null;
 
+  @SerializedName("FullSubtitleStreamIndex")
+  private Integer fullSubtitleStreamIndex = null;
+
   @SerializedName("ItemId")
   private String itemId = null;
 
@@ -1020,6 +1023,24 @@ public class MediaSourceInfo {
     this.defaultSubtitleStreamIndex = defaultSubtitleStreamIndex;
   }
 
+  public MediaSourceInfo fullSubtitleStreamIndex(Integer fullSubtitleStreamIndex) {
+    this.fullSubtitleStreamIndex = fullSubtitleStreamIndex;
+    return this;
+  }
+
+   /**
+   * Get fullSubtitleStreamIndex
+   * @return fullSubtitleStreamIndex
+  **/
+  @Schema(description = "")
+  public Integer getFullSubtitleStreamIndex() {
+    return fullSubtitleStreamIndex;
+  }
+
+  public void setFullSubtitleStreamIndex(Integer fullSubtitleStreamIndex) {
+    this.fullSubtitleStreamIndex = fullSubtitleStreamIndex;
+  }
+
   public MediaSourceInfo itemId(String itemId) {
     this.itemId = itemId;
     return this;
@@ -1147,6 +1168,7 @@ public class MediaSourceInfo {
         Objects.equals(this.readAtNativeFramerate, mediaSourceInfo.readAtNativeFramerate) &&
         Objects.equals(this.defaultAudioStreamIndex, mediaSourceInfo.defaultAudioStreamIndex) &&
         Objects.equals(this.defaultSubtitleStreamIndex, mediaSourceInfo.defaultSubtitleStreamIndex) &&
+        Objects.equals(this.fullSubtitleStreamIndex, mediaSourceInfo.fullSubtitleStreamIndex) &&
         Objects.equals(this.itemId, mediaSourceInfo.itemId) &&
         Objects.equals(this.serverId, mediaSourceInfo.serverId) &&
         Objects.equals(this.mimeType, mediaSourceInfo.mimeType) &&
@@ -1155,7 +1177,7 @@ public class MediaSourceInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(chapters, protocol, id, path, encoderPath, encoderProtocol, type, probePath, probeProtocol, container, size, name, sortName, isRemote, hasMixedProtocols, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId, mimeType, transcodingMimeType);
+    return Objects.hash(chapters, protocol, id, path, encoderPath, encoderProtocol, type, probePath, probeProtocol, container, size, name, sortName, isRemote, hasMixedProtocols, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, fullSubtitleStreamIndex, itemId, serverId, mimeType, transcodingMimeType);
   }
 
 
@@ -1209,6 +1231,7 @@ public class MediaSourceInfo {
     sb.append("    readAtNativeFramerate: ").append(toIndentedString(readAtNativeFramerate)).append("\n");
     sb.append("    defaultAudioStreamIndex: ").append(toIndentedString(defaultAudioStreamIndex)).append("\n");
     sb.append("    defaultSubtitleStreamIndex: ").append(toIndentedString(defaultSubtitleStreamIndex)).append("\n");
+    sb.append("    fullSubtitleStreamIndex: ").append(toIndentedString(fullSubtitleStreamIndex)).append("\n");
     sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");
     sb.append("    serverId: ").append(toIndentedString(serverId)).append("\n");
     sb.append("    mimeType: ").append(toIndentedString(mimeType)).append("\n");

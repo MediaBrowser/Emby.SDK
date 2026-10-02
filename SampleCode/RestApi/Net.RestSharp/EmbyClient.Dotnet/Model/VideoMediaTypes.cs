@@ -1188,5 +1188,245 @@ namespace EmbyClient.Dotnet.Model
         /// Enum Zmbv for value: zmbv
         /// </summary>
         [EnumMember(Value = "zmbv")]
-        Zmbv = 233    }
+        Zmbv = 233,
+        /// <summary>
+        /// Enum Agm for value: agm
+        /// </summary>
+        [EnumMember(Value = "agm")]
+        Agm = 234,
+        /// <summary>
+        /// Enum Apv for value: apv
+        /// </summary>
+        [EnumMember(Value = "apv")]
+        Apv = 235,
+        /// <summary>
+        /// Enum Arbc for value: arbc
+        /// </summary>
+        [EnumMember(Value = "arbc")]
+        Arbc = 236,
+        /// <summary>
+        /// Enum Argo for value: argo
+        /// </summary>
+        [EnumMember(Value = "argo")]
+        Argo = 237,
+        /// <summary>
+        /// Enum Avs2 for value: avs2
+        /// </summary>
+        [EnumMember(Value = "avs2")]
+        Avs2 = 238,
+        /// <summary>
+        /// Enum Avs3 for value: avs3
+        /// </summary>
+        [EnumMember(Value = "avs3")]
+        Avs3 = 239,
+        /// <summary>
+        /// Enum Cdtoons for value: cdtoons
+        /// </summary>
+        [EnumMember(Value = "cdtoons")]
+        Cdtoons = 240,
+        /// <summary>
+        /// Enum Cri for value: cri
+        /// </summary>
+        [EnumMember(Value = "cri")]
+        Cri = 241,
+        /// <summary>
+        /// Enum Dnxuc for value: dnxuc
+        /// </summary>
+        [EnumMember(Value = "dnxuc")]
+        Dnxuc = 242,
+        /// <summary>
+        /// Enum Evc for value: evc
+        /// </summary>
+        [EnumMember(Value = "evc")]
+        Evc = 243,
+        /// <summary>
+        /// Enum Gem for value: gem
+        /// </summary>
+        [EnumMember(Value = "gem")]
+        Gem = 244,
+        /// <summary>
+        /// Enum Hdr for value: hdr
+        /// </summary>
+        [EnumMember(Value = "hdr")]
+        Hdr = 245,
+        /// <summary>
+        /// Enum Hymt for value: hymt
+        /// </summary>
+        [EnumMember(Value = "hymt")]
+        Hymt = 246,
+        /// <summary>
+        /// Enum Imm4 for value: imm4
+        /// </summary>
+        [EnumMember(Value = "imm4")]
+        Imm4 = 247,
+        /// <summary>
+        /// Enum Imm5 for value: imm5
+        /// </summary>
+        [EnumMember(Value = "imm5")]
+        Imm5 = 248,
+        /// <summary>
+        /// Enum Ipu for value: ipu
+        /// </summary>
+        [EnumMember(Value = "ipu")]
+        Ipu = 249,
+        /// <summary>
+        /// Enum Jpegxl for value: jpegxl
+        /// </summary>
+        [EnumMember(Value = "jpegxl")]
+        Jpegxl = 250,
+        /// <summary>
+        /// Enum Jpegxlanim for value: jpegxl_anim
+        /// </summary>
+        [EnumMember(Value = "jpegxl_anim")]
+        Jpegxlanim = 251,
+        /// <summary>
+        /// Enum Lead for value: lead
+        /// </summary>
+        [EnumMember(Value = "lead")]
+        Lead = 252,
+        /// <summary>
+        /// Enum Lscr for value: lscr
+        /// </summary>
+        [EnumMember(Value = "lscr")]
+        Lscr = 253,
+        /// <summary>
+        /// Enum Media100 for value: media100
+        /// </summary>
+        [EnumMember(Value = "media100")]
+        Media100 = 254,
+        /// <summary>
+        /// Enum Mobiclip for value: mobiclip
+        /// </summary>
+        [EnumMember(Value = "mobiclip")]
+        Mobiclip = 255,
+        /// <summary>
+        /// Enum Msp2 for value: msp2
+        /// </summary>
+        [EnumMember(Value = "msp2")]
+        Msp2 = 256,
+        /// <summary>
+        /// Enum Mv30 for value: mv30
+        /// </summary>
+        [EnumMember(Value = "mv30")]
+        Mv30 = 257,
+        /// <summary>
+        /// Enum Mvdv for value: mvdv
+        /// </summary>
+        [EnumMember(Value = "mvdv")]
+        Mvdv = 258,
+        /// <summary>
+        /// Enum Mvha for value: mvha
+        /// </summary>
+        [EnumMember(Value = "mvha")]
+        Mvha = 259,
+        /// <summary>
+        /// Enum Mwsc for value: mwsc
+        /// </summary>
+        [EnumMember(Value = "mwsc")]
+        Mwsc = 260,
+        /// <summary>
+        /// Enum Notchlc for value: notchlc
+        /// </summary>
+        [EnumMember(Value = "notchlc")]
+        Notchlc = 261,
+        /// <summary>
+        /// Enum Pdv for value: pdv
+        /// </summary>
+        [EnumMember(Value = "pdv")]
+        Pdv = 262,
+        /// <summary>
+        /// Enum Pfm for value: pfm
+        /// </summary>
+        [EnumMember(Value = "pfm")]
+        Pfm = 263,
+        /// <summary>
+        /// Enum Pgx for value: pgx
+        /// </summary>
+        [EnumMember(Value = "pgx")]
+        Pgx = 264,
+        /// <summary>
+        /// Enum Phm for value: phm
+        /// </summary>
+        [EnumMember(Value = "phm")]
+        Phm = 265,
+        /// <summary>
+        /// Enum Photocd for value: photocd
+        /// </summary>
+        [EnumMember(Value = "photocd")]
+        Photocd = 266,
+        /// <summary>
+        /// Enum Proresraw for value: prores_raw
+        /// </summary>
+        [EnumMember(Value = "prores_raw")]
+        Proresraw = 267,
+        /// <summary>
+        /// Enum Prosumer for value: prosumer
+        /// </summary>
+        [EnumMember(Value = "prosumer")]
+        Prosumer = 268,
+        /// <summary>
+        /// Enum Qoi for value: qoi
+        /// </summary>
+        [EnumMember(Value = "qoi")]
+        Qoi = 269,
+        /// <summary>
+        /// Enum Rasc for value: rasc
+        /// </summary>
+        [EnumMember(Value = "rasc")]
+        Rasc = 270,
+        /// <summary>
+        /// Enum Rtv1 for value: rtv1
+        /// </summary>
+        [EnumMember(Value = "rtv1")]
+        Rtv1 = 271,
+        /// <summary>
+        /// Enum Rv60 for value: rv60
+        /// </summary>
+        [EnumMember(Value = "rv60")]
+        Rv60 = 272,
+        /// <summary>
+        /// Enum Sga for value: sga
+        /// </summary>
+        [EnumMember(Value = "sga")]
+        Sga = 273,
+        /// <summary>
+        /// Enum Simbiosisimx for value: simbiosis_imx
+        /// </summary>
+        [EnumMember(Value = "simbiosis_imx")]
+        Simbiosisimx = 274,
+        /// <summary>
+        /// Enum Vbn for value: vbn
+        /// </summary>
+        [EnumMember(Value = "vbn")]
+        Vbn = 275,
+        /// <summary>
+        /// Enum Vmix for value: vmix
+        /// </summary>
+        [EnumMember(Value = "vmix")]
+        Vmix = 276,
+        /// <summary>
+        /// Enum Vp4 for value: vp4
+        /// </summary>
+        [EnumMember(Value = "vp4")]
+        Vp4 = 277,
+        /// <summary>
+        /// Enum Vqc for value: vqc
+        /// </summary>
+        [EnumMember(Value = "vqc")]
+        Vqc = 278,
+        /// <summary>
+        /// Enum Vvc for value: vvc
+        /// </summary>
+        [EnumMember(Value = "vvc")]
+        Vvc = 279,
+        /// <summary>
+        /// Enum Wbmp for value: wbmp
+        /// </summary>
+        [EnumMember(Value = "wbmp")]
+        Wbmp = 280,
+        /// <summary>
+        /// Enum Wcmv for value: wcmv
+        /// </summary>
+        [EnumMember(Value = "wcmv")]
+        Wcmv = 281    }
 }

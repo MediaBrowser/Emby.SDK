@@ -47,6 +47,7 @@ class LibraryOptions(object):
         'enable_audio_resume': 'bool',
         'auto_generate_chapters': 'bool',
         'merge_top_level_folders': 'bool',
+        'enable_episode_detection_with_combined_numbers': 'bool',
         'auto_generate_chapter_interval_minutes': 'int',
         'automatic_refresh_interval_days': 'int',
         'placeholder_metadata_refresh_interval_days': 'int',
@@ -115,6 +116,7 @@ class LibraryOptions(object):
         'enable_audio_resume': 'EnableAudioResume',
         'auto_generate_chapters': 'AutoGenerateChapters',
         'merge_top_level_folders': 'MergeTopLevelFolders',
+        'enable_episode_detection_with_combined_numbers': 'EnableEpisodeDetectionWithCombinedNumbers',
         'auto_generate_chapter_interval_minutes': 'AutoGenerateChapterIntervalMinutes',
         'automatic_refresh_interval_days': 'AutomaticRefreshIntervalDays',
         'placeholder_metadata_refresh_interval_days': 'PlaceholderMetadataRefreshIntervalDays',
@@ -157,7 +159,7 @@ class LibraryOptions(object):
         'sample_ignore_size': 'SampleIgnoreSize'
     }
 
-    def __init__(self, enable_archive_media_files=None, enable_photos=None, enable_realtime_monitor=None, enable_marker_detection=None, enable_marker_detection_during_library_scan=None, intro_detection_fingerprint_length=None, enable_chapter_image_extraction=None, extract_chapter_images_during_library_scan=None, download_images_in_advance=None, cache_images=None, exclude_from_search=None, enable_plex_ignore=None, path_infos=None, ignore_hidden_files=None, ignore_file_extensions=None, save_local_metadata=None, save_metadata_hidden=None, save_local_thumbnail_sets=None, import_playlists=None, enable_automatic_series_grouping=None, share_embedded_music_album_images=None, enable_embedded_titles=None, enable_audio_resume=None, auto_generate_chapters=None, merge_top_level_folders=None, auto_generate_chapter_interval_minutes=None, automatic_refresh_interval_days=None, placeholder_metadata_refresh_interval_days=None, preferred_metadata_language=None, preferred_image_language=None, content_type=None, metadata_country_code=None, metadata_savers=None, disabled_local_metadata_readers=None, local_metadata_reader_order=None, disabled_lyrics_fetchers=None, save_lyrics_with_media=None, lyrics_download_max_age_days=None, lyrics_fetcher_order=None, lyrics_download_languages=None, disabled_subtitle_fetchers=None, subtitle_fetcher_order=None, skip_subtitles_if_embedded_subtitles_present=None, skip_subtitles_if_audio_track_matches=None, subtitle_download_languages=None, subtitle_download_max_age_days=None, require_perfect_subtitle_match=None, save_subtitles_with_media=None, forced_subtitles_only=None, hearing_impaired_subtitles_only=None, type_options=None, collapse_single_item_folders=None, force_collapse_single_item_folders=None, enable_adult_metadata=None, import_collections=None, enable_multi_version_by_files=None, enable_multi_version_by_metadata=None, enable_multi_part_items=None, min_collection_items=None, music_folder_structure=None, min_resume_pct=None, max_resume_pct=None, min_resume_duration_seconds=None, thumbnail_images_interval_seconds=None, sample_ignore_size=None):  # noqa: E501
+    def __init__(self, enable_archive_media_files=None, enable_photos=None, enable_realtime_monitor=None, enable_marker_detection=None, enable_marker_detection_during_library_scan=None, intro_detection_fingerprint_length=None, enable_chapter_image_extraction=None, extract_chapter_images_during_library_scan=None, download_images_in_advance=None, cache_images=None, exclude_from_search=None, enable_plex_ignore=None, path_infos=None, ignore_hidden_files=None, ignore_file_extensions=None, save_local_metadata=None, save_metadata_hidden=None, save_local_thumbnail_sets=None, import_playlists=None, enable_automatic_series_grouping=None, share_embedded_music_album_images=None, enable_embedded_titles=None, enable_audio_resume=None, auto_generate_chapters=None, merge_top_level_folders=None, enable_episode_detection_with_combined_numbers=None, auto_generate_chapter_interval_minutes=None, automatic_refresh_interval_days=None, placeholder_metadata_refresh_interval_days=None, preferred_metadata_language=None, preferred_image_language=None, content_type=None, metadata_country_code=None, metadata_savers=None, disabled_local_metadata_readers=None, local_metadata_reader_order=None, disabled_lyrics_fetchers=None, save_lyrics_with_media=None, lyrics_download_max_age_days=None, lyrics_fetcher_order=None, lyrics_download_languages=None, disabled_subtitle_fetchers=None, subtitle_fetcher_order=None, skip_subtitles_if_embedded_subtitles_present=None, skip_subtitles_if_audio_track_matches=None, subtitle_download_languages=None, subtitle_download_max_age_days=None, require_perfect_subtitle_match=None, save_subtitles_with_media=None, forced_subtitles_only=None, hearing_impaired_subtitles_only=None, type_options=None, collapse_single_item_folders=None, force_collapse_single_item_folders=None, enable_adult_metadata=None, import_collections=None, enable_multi_version_by_files=None, enable_multi_version_by_metadata=None, enable_multi_part_items=None, min_collection_items=None, music_folder_structure=None, min_resume_pct=None, max_resume_pct=None, min_resume_duration_seconds=None, thumbnail_images_interval_seconds=None, sample_ignore_size=None):  # noqa: E501
         """LibraryOptions - a model defined in Swagger"""  # noqa: E501
         self._enable_archive_media_files = None
         self._enable_photos = None
@@ -184,6 +186,7 @@ class LibraryOptions(object):
         self._enable_audio_resume = None
         self._auto_generate_chapters = None
         self._merge_top_level_folders = None
+        self._enable_episode_detection_with_combined_numbers = None
         self._auto_generate_chapter_interval_minutes = None
         self._automatic_refresh_interval_days = None
         self._placeholder_metadata_refresh_interval_days = None
@@ -275,6 +278,8 @@ class LibraryOptions(object):
             self.auto_generate_chapters = auto_generate_chapters
         if merge_top_level_folders is not None:
             self.merge_top_level_folders = merge_top_level_folders
+        if enable_episode_detection_with_combined_numbers is not None:
+            self.enable_episode_detection_with_combined_numbers = enable_episode_detection_with_combined_numbers
         if auto_generate_chapter_interval_minutes is not None:
             self.auto_generate_chapter_interval_minutes = auto_generate_chapter_interval_minutes
         if automatic_refresh_interval_days is not None:
@@ -880,6 +885,27 @@ class LibraryOptions(object):
         """
 
         self._merge_top_level_folders = merge_top_level_folders
+
+    @property
+    def enable_episode_detection_with_combined_numbers(self):
+        """Gets the enable_episode_detection_with_combined_numbers of this LibraryOptions.  # noqa: E501
+
+
+        :return: The enable_episode_detection_with_combined_numbers of this LibraryOptions.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_episode_detection_with_combined_numbers
+
+    @enable_episode_detection_with_combined_numbers.setter
+    def enable_episode_detection_with_combined_numbers(self, enable_episode_detection_with_combined_numbers):
+        """Sets the enable_episode_detection_with_combined_numbers of this LibraryOptions.
+
+
+        :param enable_episode_detection_with_combined_numbers: The enable_episode_detection_with_combined_numbers of this LibraryOptions.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_episode_detection_with_combined_numbers = enable_episode_detection_with_combined_numbers
 
     @property
     def auto_generate_chapter_interval_minutes(self):

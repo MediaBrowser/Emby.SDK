@@ -22,9 +22,9 @@ class ApiAvailableRecordingOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'recording_folders': 'list[ApiNameIdDescriptionPair]',
-        'movie_recording_folders': 'list[ApiNameIdDescriptionPair]',
-        'series_recording_folders': 'list[ApiNameIdDescriptionPair]'
+        'recording_folders': 'list[NameIdPair]',
+        'movie_recording_folders': 'list[NameIdPair]',
+        'series_recording_folders': 'list[NameIdPair]'
     }
 
     attribute_map = {
@@ -52,7 +52,7 @@ class ApiAvailableRecordingOptions(object):
 
 
         :return: The recording_folders of this ApiAvailableRecordingOptions.  # noqa: E501
-        :rtype: list[ApiNameIdDescriptionPair]
+        :rtype: list[NameIdPair]
         """
         return self._recording_folders
 
@@ -62,7 +62,7 @@ class ApiAvailableRecordingOptions(object):
 
 
         :param recording_folders: The recording_folders of this ApiAvailableRecordingOptions.  # noqa: E501
-        :type: list[ApiNameIdDescriptionPair]
+        :type: list[NameIdPair]
         """
 
         self._recording_folders = recording_folders
@@ -73,7 +73,7 @@ class ApiAvailableRecordingOptions(object):
 
 
         :return: The movie_recording_folders of this ApiAvailableRecordingOptions.  # noqa: E501
-        :rtype: list[ApiNameIdDescriptionPair]
+        :rtype: list[NameIdPair]
         """
         return self._movie_recording_folders
 
@@ -83,7 +83,7 @@ class ApiAvailableRecordingOptions(object):
 
 
         :param movie_recording_folders: The movie_recording_folders of this ApiAvailableRecordingOptions.  # noqa: E501
-        :type: list[ApiNameIdDescriptionPair]
+        :type: list[NameIdPair]
         """
 
         self._movie_recording_folders = movie_recording_folders
@@ -94,7 +94,7 @@ class ApiAvailableRecordingOptions(object):
 
 
         :return: The series_recording_folders of this ApiAvailableRecordingOptions.  # noqa: E501
-        :rtype: list[ApiNameIdDescriptionPair]
+        :rtype: list[NameIdPair]
         """
         return self._series_recording_folders
 
@@ -104,7 +104,7 @@ class ApiAvailableRecordingOptions(object):
 
 
         :param series_recording_folders: The series_recording_folders of this ApiAvailableRecordingOptions.  # noqa: E501
-        :type: list[ApiNameIdDescriptionPair]
+        :type: list[NameIdPair]
         """
 
         self._series_recording_folders = series_recording_folders

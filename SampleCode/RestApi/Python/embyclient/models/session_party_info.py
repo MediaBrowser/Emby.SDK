@@ -24,42 +24,47 @@ class SessionPartyInfo(object):
     swagger_types = {
         'id': 'str',
         'name': 'str',
-        'sessions': 'list[SessionSessionInfo]',
+        'internal_sessions': 'list[SessionSessionInfo]',
         'messages': 'list[SessionPartyMessage]',
         'master_session': 'SessionSessionInfo',
-        'is_playing': 'bool'
+        'is_playing': 'bool',
+        'sessions': 'list[SessionPartySessionInfo]'
     }
 
     attribute_map = {
         'id': 'Id',
         'name': 'Name',
-        'sessions': 'Sessions',
+        'internal_sessions': 'InternalSessions',
         'messages': 'Messages',
         'master_session': 'MasterSession',
-        'is_playing': 'IsPlaying'
+        'is_playing': 'IsPlaying',
+        'sessions': 'Sessions'
     }
 
-    def __init__(self, id=None, name=None, sessions=None, messages=None, master_session=None, is_playing=None):  # noqa: E501
+    def __init__(self, id=None, name=None, internal_sessions=None, messages=None, master_session=None, is_playing=None, sessions=None):  # noqa: E501
         """SessionPartyInfo - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
-        self._sessions = None
+        self._internal_sessions = None
         self._messages = None
         self._master_session = None
         self._is_playing = None
+        self._sessions = None
         self.discriminator = None
         if id is not None:
             self.id = id
         if name is not None:
             self.name = name
-        if sessions is not None:
-            self.sessions = sessions
+        if internal_sessions is not None:
+            self.internal_sessions = internal_sessions
         if messages is not None:
             self.messages = messages
         if master_session is not None:
             self.master_session = master_session
         if is_playing is not None:
             self.is_playing = is_playing
+        if sessions is not None:
+            self.sessions = sessions
 
     @property
     def id(self):
@@ -104,25 +109,25 @@ class SessionPartyInfo(object):
         self._name = name
 
     @property
-    def sessions(self):
-        """Gets the sessions of this SessionPartyInfo.  # noqa: E501
+    def internal_sessions(self):
+        """Gets the internal_sessions of this SessionPartyInfo.  # noqa: E501
 
 
-        :return: The sessions of this SessionPartyInfo.  # noqa: E501
+        :return: The internal_sessions of this SessionPartyInfo.  # noqa: E501
         :rtype: list[SessionSessionInfo]
         """
-        return self._sessions
+        return self._internal_sessions
 
-    @sessions.setter
-    def sessions(self, sessions):
-        """Sets the sessions of this SessionPartyInfo.
+    @internal_sessions.setter
+    def internal_sessions(self, internal_sessions):
+        """Sets the internal_sessions of this SessionPartyInfo.
 
 
-        :param sessions: The sessions of this SessionPartyInfo.  # noqa: E501
+        :param internal_sessions: The internal_sessions of this SessionPartyInfo.  # noqa: E501
         :type: list[SessionSessionInfo]
         """
 
-        self._sessions = sessions
+        self._internal_sessions = internal_sessions
 
     @property
     def messages(self):
@@ -186,6 +191,27 @@ class SessionPartyInfo(object):
         """
 
         self._is_playing = is_playing
+
+    @property
+    def sessions(self):
+        """Gets the sessions of this SessionPartyInfo.  # noqa: E501
+
+
+        :return: The sessions of this SessionPartyInfo.  # noqa: E501
+        :rtype: list[SessionPartySessionInfo]
+        """
+        return self._sessions
+
+    @sessions.setter
+    def sessions(self, sessions):
+        """Sets the sessions of this SessionPartyInfo.
+
+
+        :param sessions: The sessions of this SessionPartyInfo.  # noqa: E501
+        :type: list[SessionPartySessionInfo]
+        """
+
+        self._sessions = sessions
 
     def to_dict(self):
         """Returns the model properties as a dict"""

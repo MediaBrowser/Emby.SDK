@@ -14,11 +14,12 @@ import MediaSourceInfo from './MediaSourceInfo';
 import PlayMethod from './PlayMethod';
 import RepeatMode from './RepeatMode';
 import SleepTimerMode from './SleepTimerMode';
+import SubtitleEnableReason from './SubtitleEnableReason';
 
 /**
 * The PlayerStateInfo model module.
 * @module model/PlayerStateInfo
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class PlayerStateInfo {
     /**
@@ -65,6 +66,9 @@ export default class PlayerStateInfo {
             }
             if (data.hasOwnProperty('SubtitleStreamIndex')) {
                 obj['SubtitleStreamIndex'] = ApiClient.convertToType(data['SubtitleStreamIndex'], 'Number');
+            }
+            if (data.hasOwnProperty('SubtitleEnableReason')) {
+                obj['SubtitleEnableReason'] = SubtitleEnableReason.constructFromObject(data['SubtitleEnableReason']);
             }
             if (data.hasOwnProperty('MediaSourceId')) {
                 obj['MediaSourceId'] = ApiClient.convertToType(data['MediaSourceId'], 'String');
@@ -132,6 +136,10 @@ export default class PlayerStateInfo {
     * @member {Number} SubtitleStreamIndex
     */
     'SubtitleStreamIndex' = undefined;
+    /**
+    * @member {module:model/SubtitleEnableReason} SubtitleEnableReason
+    */
+    'SubtitleEnableReason' = undefined;
     /**
     * The now playing media version identifier.
     * @member {String} MediaSourceId

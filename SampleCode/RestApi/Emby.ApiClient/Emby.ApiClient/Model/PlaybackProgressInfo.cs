@@ -63,6 +63,12 @@ namespace Emby.ApiClient.Model
         public int? SubtitleStreamIndex { get; set; }
 
         /// <summary>
+        /// Gets or Sets SubtitleEnableReason
+        /// </summary>
+        /// <value>The SubtitleEnableReason.</value>
+        public SubtitleEnableReason SubtitleEnableReason { get; set; }
+
+        /// <summary>
         /// A value indicating whether this instance is paused.
         /// </summary>
         /// <value>The IsPaused.</value>
@@ -220,6 +226,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  AudioStreamIndex: ").Append(AudioStreamIndex).Append("\n");
             sb.Append("  SubtitleStreamIndex: ").Append(SubtitleStreamIndex).Append("\n");
+            sb.Append("  SubtitleEnableReason: ").Append(SubtitleEnableReason).Append("\n");
             sb.Append("  IsPaused: ").Append(IsPaused).Append("\n");
             sb.Append("  PlaylistIndex: ").Append(PlaylistIndex).Append("\n");
             sb.Append("  PlaylistLength: ").Append(PlaylistLength).Append("\n");
@@ -299,6 +306,11 @@ namespace Emby.ApiClient.Model
                     this.SubtitleStreamIndex == input.SubtitleStreamIndex ||
                     (this.SubtitleStreamIndex != null &&
                     this.SubtitleStreamIndex.Equals(input.SubtitleStreamIndex))
+                ) && 
+                (
+                    this.SubtitleEnableReason == input.SubtitleEnableReason ||
+                    (this.SubtitleEnableReason != null &&
+                    this.SubtitleEnableReason.Equals(input.SubtitleEnableReason))
                 ) && 
                 (
                     this.IsPaused == input.IsPaused ||
@@ -444,6 +456,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.AudioStreamIndex.GetHashCode();
                 if (this.SubtitleStreamIndex != null)
                     hashCode = hashCode * 59 + this.SubtitleStreamIndex.GetHashCode();
+                if (this.SubtitleEnableReason != null)
+                    hashCode = hashCode * 59 + this.SubtitleEnableReason.GetHashCode();
                 if (this.IsPaused != null)
                     hashCode = hashCode * 59 + this.IsPaused.GetHashCode();
                 if (this.PlaylistIndex != null)

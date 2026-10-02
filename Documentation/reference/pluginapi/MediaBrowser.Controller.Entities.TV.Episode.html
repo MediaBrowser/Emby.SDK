@@ -1796,12 +1796,12 @@ public override bool SupportsThemeMedia { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_TV_Episode_BeforeMetadataRefresh_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.BeforeMetadataRefresh*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_TV_Episode_BeforeMetadataRefresh_System_Boolean_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.BeforeMetadataRefresh(System.Boolean)">BeforeMetadataRefresh(Boolean)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_TV_Episode_BeforeMetadataRefresh_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.BeforeMetadataRefresh(System.Boolean,MediaBrowser.Model.Configuration.LibraryOptions)">BeforeMetadataRefresh(Boolean, LibraryOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool BeforeMetadataRefresh(bool replaceAllMetdata)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool BeforeMetadataRefresh(bool replaceAllMetdata, LibraryOptions libraryOptions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1816,6 +1816,11 @@ public override bool SupportsThemeMedia { get; }</code></pre>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">replaceAllMetdata</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1836,7 +1841,7 @@ public override bool SupportsThemeMedia { get; }</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_BeforeMetadataRefresh_System_Boolean_">BaseItem.BeforeMetadataRefresh(Boolean)</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_BeforeMetadataRefresh_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.BeforeMetadataRefresh(Boolean, LibraryOptions)</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_TV_Episode_ContainsEpisodeNumber_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.ContainsEpisodeNumber*"></a>

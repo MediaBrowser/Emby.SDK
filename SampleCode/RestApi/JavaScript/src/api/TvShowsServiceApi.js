@@ -10,12 +10,13 @@
  */
 
 import ApiClient from "../ApiClient";
+import NameIdPair from '../model/NameIdPair';
 import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 
 /**
 * TvShowsService service.
 * @module api/TvShowsServiceApi
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class TvShowsServiceApi {
 
@@ -173,6 +174,49 @@ export default class TvShowsServiceApi {
      */
     getShowsByIdEpisodes() {
       return this.getShowsByIdEpisodesWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Gets orders for a show
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/NameIdPair>} and HTTP response
+     */
+    getShowsByIdOrdersWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+        'Id': Id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = [NameIdPair];
+
+      return this.apiClient.callApi(
+        '/Shows/{Id}/Orders', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Gets orders for a show
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/NameIdPair>}
+     */
+    getShowsByIdOrders() {
+      return this.getShowsByIdOrdersWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

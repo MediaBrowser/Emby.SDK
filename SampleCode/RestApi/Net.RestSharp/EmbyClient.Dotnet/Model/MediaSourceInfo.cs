@@ -71,11 +71,12 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="readAtNativeFramerate">readAtNativeFramerate.</param>
         /// <param name="defaultAudioStreamIndex">defaultAudioStreamIndex.</param>
         /// <param name="defaultSubtitleStreamIndex">defaultSubtitleStreamIndex.</param>
+        /// <param name="fullSubtitleStreamIndex">fullSubtitleStreamIndex.</param>
         /// <param name="itemId">Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi.</param>
         /// <param name="serverId">Used only by our Windows app. Not used by Emby Server..</param>
         /// <param name="mimeType">mimeType.</param>
         /// <param name="transcodingMimeType">transcodingMimeType.</param>
-        public MediaSourceInfo(List<ChapterInfo> chapters = default(List<ChapterInfo>), MediaProtocol protocol = default(MediaProtocol), string id = default(string), string path = default(string), string encoderPath = default(string), MediaProtocol encoderProtocol = default(MediaProtocol), MediaSourceType type = default(MediaSourceType), string probePath = default(string), MediaProtocol probeProtocol = default(MediaProtocol), string container = default(string), long? size = default(long?), string name = default(string), string sortName = default(string), bool? isRemote = default(bool?), bool? hasMixedProtocols = default(bool?), long? runTimeTicks = default(long?), long? containerStartTimeTicks = default(long?), bool? supportsTranscoding = default(bool?), int? trancodeLiveStartIndex = default(int?), DateTimeOffset? wallClockStart = default(DateTimeOffset?), bool? supportsDirectStream = default(bool?), bool? supportsDirectPlay = default(bool?), bool? isInfiniteStream = default(bool?), bool? requiresOpening = default(bool?), string openToken = default(string), bool? requiresClosing = default(bool?), string liveStreamId = default(string), int? bufferMs = default(int?), bool? requiresLooping = default(bool?), bool? supportsProbing = default(bool?), Video3DFormat video3DFormat = default(Video3DFormat), List<MediaStream> mediaStreams = default(List<MediaStream>), List<string> formats = default(List<string>), int? bitrate = default(int?), TransportStreamTimestamp timestamp = default(TransportStreamTimestamp), Dictionary<string, string> requiredHttpHeaders = default(Dictionary<string, string>), string directStreamUrl = default(string), bool? addApiKeyToDirectStreamUrl = default(bool?), string transcodingUrl = default(string), string transcodingSubProtocol = default(string), string transcodingContainer = default(string), int? analyzeDurationMs = default(int?), bool? readAtNativeFramerate = default(bool?), int? defaultAudioStreamIndex = default(int?), int? defaultSubtitleStreamIndex = default(int?), string itemId = default(string), string serverId = default(string), string mimeType = default(string), string transcodingMimeType = default(string))
+        public MediaSourceInfo(List<ChapterInfo> chapters = default(List<ChapterInfo>), MediaProtocol protocol = default(MediaProtocol), string id = default(string), string path = default(string), string encoderPath = default(string), MediaProtocol encoderProtocol = default(MediaProtocol), MediaSourceType type = default(MediaSourceType), string probePath = default(string), MediaProtocol probeProtocol = default(MediaProtocol), string container = default(string), long? size = default(long?), string name = default(string), string sortName = default(string), bool? isRemote = default(bool?), bool? hasMixedProtocols = default(bool?), long? runTimeTicks = default(long?), long? containerStartTimeTicks = default(long?), bool? supportsTranscoding = default(bool?), int? trancodeLiveStartIndex = default(int?), DateTimeOffset? wallClockStart = default(DateTimeOffset?), bool? supportsDirectStream = default(bool?), bool? supportsDirectPlay = default(bool?), bool? isInfiniteStream = default(bool?), bool? requiresOpening = default(bool?), string openToken = default(string), bool? requiresClosing = default(bool?), string liveStreamId = default(string), int? bufferMs = default(int?), bool? requiresLooping = default(bool?), bool? supportsProbing = default(bool?), Video3DFormat video3DFormat = default(Video3DFormat), List<MediaStream> mediaStreams = default(List<MediaStream>), List<string> formats = default(List<string>), int? bitrate = default(int?), TransportStreamTimestamp timestamp = default(TransportStreamTimestamp), Dictionary<string, string> requiredHttpHeaders = default(Dictionary<string, string>), string directStreamUrl = default(string), bool? addApiKeyToDirectStreamUrl = default(bool?), string transcodingUrl = default(string), string transcodingSubProtocol = default(string), string transcodingContainer = default(string), int? analyzeDurationMs = default(int?), bool? readAtNativeFramerate = default(bool?), int? defaultAudioStreamIndex = default(int?), int? defaultSubtitleStreamIndex = default(int?), int? fullSubtitleStreamIndex = default(int?), string itemId = default(string), string serverId = default(string), string mimeType = default(string), string transcodingMimeType = default(string))
         {
             this.Chapters = chapters;
             this.Protocol = protocol;
@@ -122,6 +123,7 @@ namespace EmbyClient.Dotnet.Model
             this.ReadAtNativeFramerate = readAtNativeFramerate;
             this.DefaultAudioStreamIndex = defaultAudioStreamIndex;
             this.DefaultSubtitleStreamIndex = defaultSubtitleStreamIndex;
+            this.FullSubtitleStreamIndex = fullSubtitleStreamIndex;
             this.ItemId = itemId;
             this.ServerId = serverId;
             this.MimeType = mimeType;
@@ -400,6 +402,12 @@ namespace EmbyClient.Dotnet.Model
         public int? DefaultSubtitleStreamIndex { get; set; }
 
         /// <summary>
+        /// Gets or Sets FullSubtitleStreamIndex
+        /// </summary>
+        [DataMember(Name="FullSubtitleStreamIndex", EmitDefaultValue=false)]
+        public int? FullSubtitleStreamIndex { get; set; }
+
+        /// <summary>
         /// Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi
         /// </summary>
         /// <value>Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi</value>
@@ -478,6 +486,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  ReadAtNativeFramerate: ").Append(ReadAtNativeFramerate).Append("\n");
             sb.Append("  DefaultAudioStreamIndex: ").Append(DefaultAudioStreamIndex).Append("\n");
             sb.Append("  DefaultSubtitleStreamIndex: ").Append(DefaultSubtitleStreamIndex).Append("\n");
+            sb.Append("  FullSubtitleStreamIndex: ").Append(FullSubtitleStreamIndex).Append("\n");
             sb.Append("  ItemId: ").Append(ItemId).Append("\n");
             sb.Append("  ServerId: ").Append(ServerId).Append("\n");
             sb.Append("  MimeType: ").Append(MimeType).Append("\n");
@@ -746,6 +755,11 @@ namespace EmbyClient.Dotnet.Model
                     this.DefaultSubtitleStreamIndex.Equals(input.DefaultSubtitleStreamIndex))
                 ) && 
                 (
+                    this.FullSubtitleStreamIndex == input.FullSubtitleStreamIndex ||
+                    (this.FullSubtitleStreamIndex != null &&
+                    this.FullSubtitleStreamIndex.Equals(input.FullSubtitleStreamIndex))
+                ) && 
+                (
                     this.ItemId == input.ItemId ||
                     (this.ItemId != null &&
                     this.ItemId.Equals(input.ItemId))
@@ -866,6 +880,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.DefaultAudioStreamIndex.GetHashCode();
                 if (this.DefaultSubtitleStreamIndex != null)
                     hashCode = hashCode * 59 + this.DefaultSubtitleStreamIndex.GetHashCode();
+                if (this.FullSubtitleStreamIndex != null)
+                    hashCode = hashCode * 59 + this.FullSubtitleStreamIndex.GetHashCode();
                 if (this.ItemId != null)
                     hashCode = hashCode * 59 + this.ItemId.GetHashCode();
                 if (this.ServerId != null)

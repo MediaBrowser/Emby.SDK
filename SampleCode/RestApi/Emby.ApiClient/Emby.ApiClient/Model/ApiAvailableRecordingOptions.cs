@@ -30,19 +30,19 @@ namespace Emby.ApiClient.Model
         /// Gets or Sets RecordingFolders
         /// </summary>
         /// <value>The RecordingFolders.</value>
-        public List<ApiNameIdDescriptionPair> RecordingFolders { get; set; }
+        public List<NameIdPair> RecordingFolders { get; set; }
 
         /// <summary>
         /// Gets or Sets MovieRecordingFolders
         /// </summary>
         /// <value>The MovieRecordingFolders.</value>
-        public List<ApiNameIdDescriptionPair> MovieRecordingFolders { get; set; }
+        public List<NameIdPair> MovieRecordingFolders { get; set; }
 
         /// <summary>
         /// Gets or Sets SeriesRecordingFolders
         /// </summary>
         /// <value>The SeriesRecordingFolders.</value>
-        public List<ApiNameIdDescriptionPair> SeriesRecordingFolders { get; set; }
+        public List<NameIdPair> SeriesRecordingFolders { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -11,12 +11,13 @@
 
 import ApiClient from '../ApiClient';
 import SessionPartyMessage from './SessionPartyMessage';
+import SessionPartySessionInfo from './SessionPartySessionInfo';
 import SessionSessionInfo from './SessionSessionInfo';
 
 /**
 * The SessionPartyInfo model module.
 * @module model/SessionPartyInfo
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class SessionPartyInfo {
     /**
@@ -49,8 +50,8 @@ export default class SessionPartyInfo {
             if (data.hasOwnProperty('Name')) {
                 obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
             }
-            if (data.hasOwnProperty('Sessions')) {
-                obj['Sessions'] = ApiClient.convertToType(data['Sessions'], [SessionSessionInfo]);
+            if (data.hasOwnProperty('InternalSessions')) {
+                obj['InternalSessions'] = ApiClient.convertToType(data['InternalSessions'], [SessionSessionInfo]);
             }
             if (data.hasOwnProperty('Messages')) {
                 obj['Messages'] = ApiClient.convertToType(data['Messages'], [SessionPartyMessage]);
@@ -60,6 +61,9 @@ export default class SessionPartyInfo {
             }
             if (data.hasOwnProperty('IsPlaying')) {
                 obj['IsPlaying'] = ApiClient.convertToType(data['IsPlaying'], 'Boolean');
+            }
+            if (data.hasOwnProperty('Sessions')) {
+                obj['Sessions'] = ApiClient.convertToType(data['Sessions'], [SessionPartySessionInfo]);
             }
         }
         return obj;
@@ -74,9 +78,9 @@ export default class SessionPartyInfo {
     */
     'Name' = undefined;
     /**
-    * @member {Array.<module:model/SessionSessionInfo>} Sessions
+    * @member {Array.<module:model/SessionSessionInfo>} InternalSessions
     */
-    'Sessions' = undefined;
+    'InternalSessions' = undefined;
     /**
     * @member {Array.<module:model/SessionPartyMessage>} Messages
     */
@@ -89,6 +93,10 @@ export default class SessionPartyInfo {
     * @member {Boolean} IsPlaying
     */
     'IsPlaying' = undefined;
+    /**
+    * @member {Array.<module:model/SessionPartySessionInfo>} Sessions
+    */
+    'Sessions' = undefined;
 
 
 

@@ -21,7 +21,6 @@ import ApiBaseItemsRequest from './model/ApiBaseItemsRequest';
 import ApiConfigurationPageInfo from './model/ApiConfigurationPageInfo';
 import ApiEpgRow from './model/ApiEpgRow';
 import ApiListingProviderTypeInfo from './model/ApiListingProviderTypeInfo';
-import ApiNameIdDescriptionPair from './model/ApiNameIdDescriptionPair';
 import ApiOnPlaybackProgress from './model/ApiOnPlaybackProgress';
 import ApiSetChannelDisabled from './model/ApiSetChannelDisabled';
 import ApiSetChannelMapping from './model/ApiSetChannelMapping';
@@ -86,6 +85,7 @@ import EditorsEditorBase from './model/EditorsEditorBase';
 import EditorsEditorButtonItem from './model/EditorsEditorButtonItem';
 import EditorsEditorRoot from './model/EditorsEditorRoot';
 import EncodingContext from './model/EncodingContext';
+import EntitiesTVSeriesOrderInfo from './model/EntitiesTVSeriesOrderInfo';
 import EnumsUICommandType from './model/EnumsUICommandType';
 import EnumsUIViewType from './model/EnumsUIViewType';
 import ExtendedVideoSubTypes from './model/ExtendedVideoSubTypes';
@@ -267,18 +267,19 @@ import RunUICommand from './model/RunUICommand';
 import ScrollDirection from './model/ScrollDirection';
 import SecondaryFrameworks from './model/SecondaryFrameworks';
 import SegmentSkipMode from './model/SegmentSkipMode';
-import SeriesDisplayOrder from './model/SeriesDisplayOrder';
 import SeriesInfo from './model/SeriesInfo';
 import ServerConfiguration from './model/ServerConfiguration';
 import SessionPartyInfo from './model/SessionPartyInfo';
 import SessionPartyInfoResult from './model/SessionPartyInfoResult';
 import SessionPartyMessage from './model/SessionPartyMessage';
+import SessionPartySessionInfo from './model/SessionPartySessionInfo';
 import SessionSessionInfo from './model/SessionSessionInfo';
 import SessionUserInfo from './model/SessionUserInfo';
 import SleepTimerMode from './model/SleepTimerMode';
 import SongInfo from './model/SongInfo';
 import SortOrder from './model/SortOrder';
 import SubtitleDeliveryMethod from './model/SubtitleDeliveryMethod';
+import SubtitleEnableReason from './model/SubtitleEnableReason';
 import SubtitleLocationType from './model/SubtitleLocationType';
 import SubtitlePlaybackMode from './model/SubtitlePlaybackMode';
 import SubtitleProfile from './model/SubtitleProfile';
@@ -448,7 +449,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export {
     /**
@@ -522,12 +523,6 @@ export {
      * @property {module:model/ApiListingProviderTypeInfo}
      */
     ApiListingProviderTypeInfo,
-
-    /**
-     * The ApiNameIdDescriptionPair model constructor.
-     * @property {module:model/ApiNameIdDescriptionPair}
-     */
-    ApiNameIdDescriptionPair,
 
     /**
      * The ApiOnPlaybackProgress model constructor.
@@ -912,6 +907,12 @@ export {
      * @property {module:model/EncodingContext}
      */
     EncodingContext,
+
+    /**
+     * The EntitiesTVSeriesOrderInfo model constructor.
+     * @property {module:model/EntitiesTVSeriesOrderInfo}
+     */
+    EntitiesTVSeriesOrderInfo,
 
     /**
      * The EnumsUICommandType model constructor.
@@ -2000,12 +2001,6 @@ export {
     SegmentSkipMode,
 
     /**
-     * The SeriesDisplayOrder model constructor.
-     * @property {module:model/SeriesDisplayOrder}
-     */
-    SeriesDisplayOrder,
-
-    /**
      * The SeriesInfo model constructor.
      * @property {module:model/SeriesInfo}
      */
@@ -2034,6 +2029,12 @@ export {
      * @property {module:model/SessionPartyMessage}
      */
     SessionPartyMessage,
+
+    /**
+     * The SessionPartySessionInfo model constructor.
+     * @property {module:model/SessionPartySessionInfo}
+     */
+    SessionPartySessionInfo,
 
     /**
      * The SessionSessionInfo model constructor.
@@ -2070,6 +2071,12 @@ export {
      * @property {module:model/SubtitleDeliveryMethod}
      */
     SubtitleDeliveryMethod,
+
+    /**
+     * The SubtitleEnableReason model constructor.
+     * @property {module:model/SubtitleEnableReason}
+     */
+    SubtitleEnableReason,
 
     /**
      * The SubtitleLocationType model constructor.

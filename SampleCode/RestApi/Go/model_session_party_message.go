@@ -10,7 +10,8 @@ import (
 )
 
 type SessionPartyMessage struct {
-	UserId int64 `json:"UserId,omitempty"`
 	DateTime time.Time `json:"DateTime,omitempty"`
 	Message string `json:"Message,omitempty"`
+	UserId int64 `json:"UserId,omitempty"`
+	User *UserDto `json:"User,omitempty"`
 }

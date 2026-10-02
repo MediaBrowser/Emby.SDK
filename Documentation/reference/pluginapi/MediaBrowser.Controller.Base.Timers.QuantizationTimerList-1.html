@@ -1,0 +1,483 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class QuantizationTimerList&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class QuantizationTimerList&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="theme-color" content="#090d0f">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <script type="text/javascript" src="../../styles/theme-config.js"></script>
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../styles/theme.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="../../index.html" aria-label="Emby Developer home">
+            
+      <img class="logo-on-dark" src="../../images/emby_dev_logo_beta.png" alt="Emby Developer">
+      <img class="logo-on-light" src="../../images/emby_dev_logo_black.png" alt="Emby Developer">
+          </a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list">
+                
+                    <li><a href="../../index.html" title="DEV Home">DEV Home</a></li>
+                    <li><a href="../../doc/index.html" title="Documentation">Documentation</a></li>
+                    <li><a href="../../reference/index.html" title="Reference">Reference</a></li>
+                    <li><a href="../../download/index.html" title="Download">Download</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <div class="hide-when-search" id="breadcrumb">
+      	  <ul class="breadcrumb">
+      		<li></li>
+      	  </ul>
+      	</div>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1" class="text-break">Class QuantizationTimerList&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A list of items of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> that coalesces bursts of added items into batches,
+raising a single notification once no new items have arrived for a configured idle delay (subject to a
+minimum interval between notifications).</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerBase-1.html">QuantizationTimerBase</a>&lt;<span class="xref">System.Collections.Generic.List</span>&lt;T&gt;&gt;</div>
+    <div class="level2"><span class="xref">QuantizationTimerList&lt;T&gt;</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerBase-1.html#MediaBrowser_Controller_Base_Timers_QuantizationTimerBase_1_Fired">QuantizationTimerBase&lt;List&lt;T&gt;&gt;.Fired</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerBase-1.html#MediaBrowser_Controller_Base_Timers_QuantizationTimerBase_1_IdleDelay">QuantizationTimerBase&lt;List&lt;T&gt;&gt;.IdleDelay</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerBase-1.html#MediaBrowser_Controller_Base_Timers_QuantizationTimerBase_1_MinInterval">QuantizationTimerBase&lt;List&lt;T&gt;&gt;.MinInterval</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerBase-1.html#MediaBrowser_Controller_Base_Timers_QuantizationTimerBase_1_ExecutionTimeAddsToInterval">QuantizationTimerBase&lt;List&lt;T&gt;&gt;.ExecutionTimeAddsToInterval</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerBase-1.html#MediaBrowser_Controller_Base_Timers_QuantizationTimerBase_1_Data">QuantizationTimerBase&lt;List&lt;T&gt;&gt;.Data</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerBase-1.html#MediaBrowser_Controller_Base_Timers_QuantizationTimerBase_1_PingDataChange">QuantizationTimerBase&lt;List&lt;T&gt;&gt;.PingDataChange()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerBase-1.html#MediaBrowser_Controller_Base_Timers_QuantizationTimerBase_1_OnDataChanged">QuantizationTimerBase&lt;List&lt;T&gt;&gt;.OnDataChanged()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Base.Timers.html">MediaBrowser.Controller.Base.Timers</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
+  <h5 id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class QuantizationTimerList&lt;T&gt; : QuantizationTimerBase&lt;List&lt;T&gt;&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of items stored in the list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Each call to <a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerList-1.html#MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_Add__0_">Add(T)</a>, <a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerList-1.html#MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_AddRange_System_Collections_Generic_IEnumerable__0__">AddRange(IEnumerable&lt;T&gt;)</a>, <a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerList-1.html#MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_Remove__0_">Remove(T)</a> or <a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerList-1.html#MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_Clear">Clear()</a> modifies
+the list and (re)starts the idle delay before the next notification is raised. Once no new modifications have
+occurred for the idle delay period, the accumulated list is delivered as a single batch, rather than
+triggering one notification per change.
+</p>
+<p>
+This is useful for reducing the overhead of processing discrete items (e.g. log entries, notifications, or
+queued commands) one at a time, by instead handling them together as a batch once activity has settled down.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1__ctor_" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.#ctor*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1__ctor_System_TimeSpan_System_TimeSpan_System_Boolean_MediaBrowser_Model_Logging_ILogger_" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.#ctor(System.TimeSpan,System.TimeSpan,System.Boolean,MediaBrowser.Model.Logging.ILogger)">QuantizationTimerList(TimeSpan, TimeSpan, Boolean, ILogger)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerList-1.html">QuantizationTimerList&lt;T&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QuantizationTimerList(TimeSpan idleDelay, TimeSpan minInterval, bool executionTimeAddsToInterval, ILogger logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">idleDelay</span></td>
+        <td><p>The period of inactivity (no items added) that must elapse before a batch notification is raised.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">minInterval</span></td>
+        <td><p>The minimum amount of time that must pass between two consecutive batch notifications.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">executionTimeAddsToInterval</span></td>
+        <td><p>If set to <code>true</code>, the time spent executing the notification handler is included when computing <code data-dev-comment-type="paramref" class="paramref">minInterval</code>; otherwise the interval is measured independently of execution time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Logging.ILogger.html">ILogger</a></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger used to report diagnostic information from the underlying timer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_Count_" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.Count*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_Count" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.Count">Count</h4>
+  <div class="markdown level1 summary"><p>Gets the number of elements contained in the <span class="xref">System.Collections.Concurrent.ConcurrentQueue`1</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of elements contained in the <span class="xref">System.Collections.Concurrent.ConcurrentQueue`1</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_Add_" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.Add*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_Add__0_" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.Add(`0)">Add(T)</h4>
+  <div class="markdown level1 summary"><p>Adds an object to the end of the <span class="xref">System.Collections.Generic.List&lt;T&gt;</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The object to be added to the end of the <span class="xref">System.Collections.Generic.List&lt;T&gt;</span>. The value can be <span class="xref">null</span> for reference types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_AddRange_" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.AddRange*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_AddRange_System_Collections_Generic_IEnumerable__0__" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.AddRange(System.Collections.Generic.IEnumerable{`0})">AddRange(IEnumerable&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds the elements of the specified collection to the end of the <span class="xref">System.Collections.Generic.List&lt;T&gt;</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRange(IEnumerable&lt;T&gt; collection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td><p>The collection whose elements should be added to the end of the <span class="xref">System.Collections.Generic.List&lt;T&gt;</span>. The collection itself cannot be <span class="xref">null</span>, but it can contain elements that are <span class="xref">null</span>, if type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> is a reference type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">collection</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_Clear_" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.Clear*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_Clear" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Removes all elements from the <span class="xref">System.Collections.Generic.List&lt;T&gt;</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_Contains_" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.Contains*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_Contains__0_" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.Contains(`0)">Contains(T)</h4>
+  <div class="markdown level1 summary"><p>Determines whether an element is in the <span class="xref">System.Collections.Generic.List&lt;T&gt;</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The object to locate in the <span class="xref">System.Collections.Generic.List&lt;T&gt;</span>. The value can be <span class="xref">null</span> for reference types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">item</code> is found in the <span class="xref">System.Collections.Generic.List&lt;T&gt;</span>; otherwise, <span class="xref">false</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_Remove_" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.Remove*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_QuantizationTimerList_1_Remove__0_" data-uid="MediaBrowser.Controller.Base.Timers.QuantizationTimerList`1.Remove(`0)">Remove(T)</h4>
+  <div class="markdown level1 summary"><p>Removes the first occurrence of a specific object from the <span class="xref">System.Collections.Generic.List&lt;T&gt;</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Remove(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The object to remove from the <span class="xref">System.Collections.Generic.List&lt;T&gt;</span>. The value can be <span class="xref">null</span> for reference types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><span class="xref">true</span> if <code data-dev-comment-type="paramref" class="paramref">item</code> is successfully removed; otherwise, <span class="xref">false</span>.  This method also returns <span class="xref">false</span> if <code data-dev-comment-type="paramref" class="paramref">item</code> was not found in the <span class="xref">System.Collections.Generic.List&lt;T&gt;</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Beta">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

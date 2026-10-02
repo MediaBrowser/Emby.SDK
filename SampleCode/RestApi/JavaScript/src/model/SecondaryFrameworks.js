@@ -94,6 +94,42 @@ export default class SecondaryFrameworks {
          */
         Mmal = "Mmal";
 
+        /**
+         * value: "Vulkan"
+         * @const
+         */
+        Vulkan = "Vulkan";
+
+        /**
+         * value: "D3d12va"
+         * @const
+         */
+        D3d12va = "D3d12va";
+
+        /**
+         * value: "OhCodec"
+         * @const
+         */
+        OhCodec = "OhCodec";
+
+        /**
+         * value: "RkMpp"
+         * @const
+         */
+        RkMpp = "RkMpp";
+
+        /**
+         * value: "Drm"
+         * @const
+         */
+        Drm = "Drm";
+
+        /**
+         * value: "OpenCL"
+         * @const
+         */
+        OpenCL = "OpenCL";
+
 
     /**
     * Returns a <code>SecondaryFrameworks</code> enum value from a Javascript object name.

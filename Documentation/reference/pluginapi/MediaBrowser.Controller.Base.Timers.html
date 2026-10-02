@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class PartyMessageDto
+    <title>Namespace MediaBrowser.Controller.Base.Timers
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class PartyMessageDto
+    <meta name="title" content="Namespace MediaBrowser.Controller.Base.Timers
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     <meta name="theme-color" content="#090d0f">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="../../styles/theme.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    <meta property="docfx:uid" content="MediaBrowser.Controller.Session.PartyMessageDto">
+    <meta property="docfx:uid" content="MediaBrowser.Controller.Base.Timers">
     
     <meta property="docfx:rel" content="../../">
     
@@ -104,66 +104,43 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.Session.PartyMessageDto">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.Base.Timers">
 <div class="refdoc">
   
-  
-  <h1 id="MediaBrowser_Controller_Session_PartyMessageDto" data-uid="MediaBrowser.Controller.Session.PartyMessageDto" class="text-break">Class PartyMessageDto
+  <h1 id="MediaBrowser_Controller_Base_Timers" data-uid="MediaBrowser.Controller.Base.Timers" class="text-break">Namespace MediaBrowser.Controller.Base.Timers
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="MediaBrowser.Controller.Session.BasePartyMessage.html">BasePartyMessage</a></div>
-    <div class="level2"><span class="xref">PartyMessageDto</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Session.BasePartyMessage.html#MediaBrowser_Controller_Session_BasePartyMessage_DateTime">BasePartyMessage.DateTime</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Session.BasePartyMessage.html#MediaBrowser_Controller_Session_BasePartyMessage_Message">BasePartyMessage.Message</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Session.html">MediaBrowser.Controller.Session</a></h6>
-  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
-  <h5 id="MediaBrowser_Controller_Session_PartyMessageDto_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PartyMessageDto : BasePartyMessage</code></pre>
-  </div>
-  <h3 id="properties">Properties
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
   </h3>
-  
-  
-  <a id="MediaBrowser_Controller_Session_PartyMessageDto_User_" data-uid="MediaBrowser.Controller.Session.PartyMessageDto.User*"></a>
-  <h4 id="MediaBrowser_Controller_Session_PartyMessageDto_User" data-uid="MediaBrowser.Controller.Session.PartyMessageDto.User">User</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UserDto User { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Dto.UserDto.html">UserDto</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
-  </div>
+      <h4><a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html">IdleTimer</a></h4>
+      <section><p>A timer that tracks transitions between <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Busy">Busy</a>, <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Idle">Idle</a> and
+<a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Suspended">Suspended</a> states based on activity signals and configurable timeouts.</p>
+</section>
+      <h4><a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerBase-1.html">QuantizationTimerBase&lt;TDataObject&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerDictionary-2.html">QuantizationTimerDictionary&lt;TKey, TValue&gt;</a></h4>
+      <section><p>A dictionary of key/value pairs of types <code data-dev-comment-type="typeparamref" class="typeparamref">TKey</code> and <code data-dev-comment-type="typeparamref" class="typeparamref">TValue</code> that
+coalesces bursts of added or updated entries into batches, raising a single notification once no new changes
+have arrived for a configured idle delay (subject to a minimum interval between notifications).</p>
+</section>
+      <h4><a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerList-1.html">QuantizationTimerList&lt;T&gt;</a></h4>
+      <section><p>A list of items of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> that coalesces bursts of added items into batches,
+raising a single notification once no new items have arrived for a configured idle delay (subject to a
+minimum interval between notifications).</p>
+</section>
+      <h4><a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerQueue-1.html">QuantizationTimerQueue&lt;T&gt;</a></h4>
+      <section><p>A queue of items of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> that coalesces bursts of enqueued items into batches,
+raising a single notification once no new items have arrived for a configured idle delay (subject to a
+minimum interval between notifications).</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html">IdleTimer.IdleTimerState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="MediaBrowser.Controller.Base.Timers.QuantizationTimerBase-1.DebounceTimerState.html">QuantizationTimerBase&lt;TDataObject&gt;.DebounceTimerState</a></h4>
+      <section></section>
 </div>
 </article>
           </div>

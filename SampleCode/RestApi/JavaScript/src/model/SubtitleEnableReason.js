@@ -11,34 +11,34 @@
 
 import ApiClient from '../ApiClient';
 /**
-* Enum class SeriesDisplayOrder.
+* Enum class SubtitleEnableReason.
 * @enum {}
 * @readonly
 */
-export default class SeriesDisplayOrder {
+export default class SubtitleEnableReason {
         /**
-         * value: "Aired"
+         * value: "UserEnabled"
          * @const
          */
-        Aired = "Aired";
+        UserEnabled = "UserEnabled";
 
         /**
-         * value: "Dvd"
+         * value: "SkipBack"
          * @const
          */
-        Dvd = "Dvd";
+        SkipBack = "SkipBack";
 
         /**
-         * value: "Absolute"
+         * value: "LowVolume"
          * @const
          */
-        Absolute = "Absolute";
+        LowVolume = "LowVolume";
 
 
     /**
-    * Returns a <code>SeriesDisplayOrder</code> enum value from a Javascript object name.
+    * Returns a <code>SubtitleEnableReason</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
-    * @return {module:model/SeriesDisplayOrder} The enum <code>SeriesDisplayOrder</code> value.
+    * @return {module:model/SubtitleEnableReason} The enum <code>SubtitleEnableReason</code> value.
     */
     static constructFromObject(object) {
         return object;

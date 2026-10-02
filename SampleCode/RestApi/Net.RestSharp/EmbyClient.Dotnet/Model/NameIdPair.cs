@@ -28,10 +28,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="name">The name..</param>
         /// <param name="id">The identifier..</param>
-        public NameIdPair(string name = default(string), string id = default(string))
+        /// <param name="shortOverview">shortOverview.</param>
+        public NameIdPair(string name = default(string), string id = default(string), string shortOverview = default(string))
         {
             this.Name = name;
             this.Id = id;
+            this.ShortOverview = shortOverview;
         }
         
         /// <summary>
@@ -49,6 +51,12 @@ namespace EmbyClient.Dotnet.Model
         public string Id { get; set; }
 
         /// <summary>
+        /// Gets or Sets ShortOverview
+        /// </summary>
+        [DataMember(Name="ShortOverview", EmitDefaultValue=false)]
+        public string ShortOverview { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -58,6 +66,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("class NameIdPair {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  ShortOverview: ").Append(ShortOverview).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -101,6 +110,11 @@ namespace EmbyClient.Dotnet.Model
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
+                ) && 
+                (
+                    this.ShortOverview == input.ShortOverview ||
+                    (this.ShortOverview != null &&
+                    this.ShortOverview.Equals(input.ShortOverview))
                 );
         }
 
@@ -117,6 +131,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.ShortOverview != null)
+                    hashCode = hashCode * 59 + this.ShortOverview.GetHashCode();
                 return hashCode;
             }
         }

@@ -24,6 +24,7 @@ type PlayerStateInfo struct {
 	AudioStreamIndex int32 `json:"AudioStreamIndex,omitempty"`
 	// The index of the now playing subtitle stream.
 	SubtitleStreamIndex int32 `json:"SubtitleStreamIndex,omitempty"`
+	SubtitleEnableReason *SubtitleEnableReason `json:"SubtitleEnableReason,omitempty"`
 	// The now playing media version identifier.
 	MediaSourceId string `json:"MediaSourceId,omitempty"`
 	MediaSource *MediaSourceInfo `json:"MediaSource,omitempty"`

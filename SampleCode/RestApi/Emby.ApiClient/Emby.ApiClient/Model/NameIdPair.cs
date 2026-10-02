@@ -39,6 +39,12 @@ namespace Emby.ApiClient.Model
         public string Id { get; set; }
 
         /// <summary>
+        /// Gets or Sets ShortOverview
+        /// </summary>
+        /// <value>The ShortOverview.</value>
+        public string ShortOverview { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -48,6 +54,7 @@ namespace Emby.ApiClient.Model
             sb.Append("class NameIdPair {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  ShortOverview: ").Append(ShortOverview).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,6 +89,11 @@ namespace Emby.ApiClient.Model
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
+                ) && 
+                (
+                    this.ShortOverview == input.ShortOverview ||
+                    (this.ShortOverview != null &&
+                    this.ShortOverview.Equals(input.ShortOverview))
                 );
         }
 
@@ -98,6 +110,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.ShortOverview != null)
+                    hashCode = hashCode * 59 + this.ShortOverview.GetHashCode();
                 return hashCode;
             }
         }

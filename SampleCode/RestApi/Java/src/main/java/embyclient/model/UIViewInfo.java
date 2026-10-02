@@ -47,6 +47,9 @@ public class UIViewInfo {
   @SerializedName("ShowDialogFullScreen")
   private Boolean showDialogFullScreen = null;
 
+  @SerializedName("ShowResetToDefaults")
+  private Boolean showResetToDefaults = null;
+
   @SerializedName("IsInSequence")
   private Boolean isInSequence = null;
 
@@ -191,6 +194,24 @@ public class UIViewInfo {
     this.showDialogFullScreen = showDialogFullScreen;
   }
 
+  public UIViewInfo showResetToDefaults(Boolean showResetToDefaults) {
+    this.showResetToDefaults = showResetToDefaults;
+    return this;
+  }
+
+   /**
+   * Get showResetToDefaults
+   * @return showResetToDefaults
+  **/
+  @Schema(description = "")
+  public Boolean isShowResetToDefaults() {
+    return showResetToDefaults;
+  }
+
+  public void setShowResetToDefaults(Boolean showResetToDefaults) {
+    this.showResetToDefaults = showResetToDefaults;
+  }
+
   public UIViewInfo isInSequence(Boolean isInSequence) {
     this.isInSequence = isInSequence;
     return this;
@@ -332,6 +353,7 @@ public class UIViewInfo {
         Objects.equals(this.pluginId, uiViewInfo.pluginId) &&
         Objects.equals(this.viewType, uiViewInfo.viewType) &&
         Objects.equals(this.showDialogFullScreen, uiViewInfo.showDialogFullScreen) &&
+        Objects.equals(this.showResetToDefaults, uiViewInfo.showResetToDefaults) &&
         Objects.equals(this.isInSequence, uiViewInfo.isInSequence) &&
         Objects.equals(this.redirectViewUrl, uiViewInfo.redirectViewUrl) &&
         Objects.equals(this.editObjectContainer, uiViewInfo.editObjectContainer) &&
@@ -342,7 +364,7 @@ public class UIViewInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(viewId, pageId, caption, subCaption, pluginId, viewType, showDialogFullScreen, isInSequence, redirectViewUrl, editObjectContainer, commands, tabPageInfos, isPageChangeInfo);
+    return Objects.hash(viewId, pageId, caption, subCaption, pluginId, viewType, showDialogFullScreen, showResetToDefaults, isInSequence, redirectViewUrl, editObjectContainer, commands, tabPageInfos, isPageChangeInfo);
   }
 
 
@@ -358,6 +380,7 @@ public class UIViewInfo {
     sb.append("    pluginId: ").append(toIndentedString(pluginId)).append("\n");
     sb.append("    viewType: ").append(toIndentedString(viewType)).append("\n");
     sb.append("    showDialogFullScreen: ").append(toIndentedString(showDialogFullScreen)).append("\n");
+    sb.append("    showResetToDefaults: ").append(toIndentedString(showResetToDefaults)).append("\n");
     sb.append("    isInSequence: ").append(toIndentedString(isInSequence)).append("\n");
     sb.append("    redirectViewUrl: ").append(toIndentedString(redirectViewUrl)).append("\n");
     sb.append("    editObjectContainer: ").append(toIndentedString(editObjectContainer)).append("\n");

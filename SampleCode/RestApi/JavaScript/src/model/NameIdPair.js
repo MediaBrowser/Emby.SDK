@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The NameIdPair model module.
 * @module model/NameIdPair
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class NameIdPair {
     /**
@@ -47,6 +47,9 @@ export default class NameIdPair {
             if (data.hasOwnProperty('Id')) {
                 obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
             }
+            if (data.hasOwnProperty('ShortOverview')) {
+                obj['ShortOverview'] = ApiClient.convertToType(data['ShortOverview'], 'String');
+            }
         }
         return obj;
     }
@@ -61,6 +64,10 @@ export default class NameIdPair {
     * @member {String} Id
     */
     'Id' = undefined;
+    /**
+    * @member {String} ShortOverview
+    */
+    'ShortOverview' = undefined;
 
 
 

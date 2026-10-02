@@ -23,7 +23,8 @@ class SeriesInfo(object):
     """
     swagger_types = {
         'episode_air_date': 'datetime',
-        'display_order': 'SeriesDisplayOrder',
+        'series_order': 'str',
+        'series_order_info': 'EntitiesTVSeriesOrderInfo',
         'name': 'str',
         'path': 'str',
         'metadata_language': 'str',
@@ -40,7 +41,8 @@ class SeriesInfo(object):
 
     attribute_map = {
         'episode_air_date': 'EpisodeAirDate',
-        'display_order': 'DisplayOrder',
+        'series_order': 'SeriesOrder',
+        'series_order_info': 'SeriesOrderInfo',
         'name': 'Name',
         'path': 'Path',
         'metadata_language': 'MetadataLanguage',
@@ -55,10 +57,11 @@ class SeriesInfo(object):
         'enable_adult_metadata': 'EnableAdultMetadata'
     }
 
-    def __init__(self, episode_air_date=None, display_order=None, name=None, path=None, metadata_language=None, metadata_country_code=None, metadata_languages=None, provider_ids=None, year=None, index_number=None, parent_index_number=None, premiere_date=None, is_automated=None, enable_adult_metadata=None):  # noqa: E501
+    def __init__(self, episode_air_date=None, series_order=None, series_order_info=None, name=None, path=None, metadata_language=None, metadata_country_code=None, metadata_languages=None, provider_ids=None, year=None, index_number=None, parent_index_number=None, premiere_date=None, is_automated=None, enable_adult_metadata=None):  # noqa: E501
         """SeriesInfo - a model defined in Swagger"""  # noqa: E501
         self._episode_air_date = None
-        self._display_order = None
+        self._series_order = None
+        self._series_order_info = None
         self._name = None
         self._path = None
         self._metadata_language = None
@@ -74,8 +77,10 @@ class SeriesInfo(object):
         self.discriminator = None
         if episode_air_date is not None:
             self.episode_air_date = episode_air_date
-        if display_order is not None:
-            self.display_order = display_order
+        if series_order is not None:
+            self.series_order = series_order
+        if series_order_info is not None:
+            self.series_order_info = series_order_info
         if name is not None:
             self.name = name
         if path is not None:
@@ -123,25 +128,46 @@ class SeriesInfo(object):
         self._episode_air_date = episode_air_date
 
     @property
-    def display_order(self):
-        """Gets the display_order of this SeriesInfo.  # noqa: E501
+    def series_order(self):
+        """Gets the series_order of this SeriesInfo.  # noqa: E501
 
 
-        :return: The display_order of this SeriesInfo.  # noqa: E501
-        :rtype: SeriesDisplayOrder
+        :return: The series_order of this SeriesInfo.  # noqa: E501
+        :rtype: str
         """
-        return self._display_order
+        return self._series_order
 
-    @display_order.setter
-    def display_order(self, display_order):
-        """Sets the display_order of this SeriesInfo.
+    @series_order.setter
+    def series_order(self, series_order):
+        """Sets the series_order of this SeriesInfo.
 
 
-        :param display_order: The display_order of this SeriesInfo.  # noqa: E501
-        :type: SeriesDisplayOrder
+        :param series_order: The series_order of this SeriesInfo.  # noqa: E501
+        :type: str
         """
 
-        self._display_order = display_order
+        self._series_order = series_order
+
+    @property
+    def series_order_info(self):
+        """Gets the series_order_info of this SeriesInfo.  # noqa: E501
+
+
+        :return: The series_order_info of this SeriesInfo.  # noqa: E501
+        :rtype: EntitiesTVSeriesOrderInfo
+        """
+        return self._series_order_info
+
+    @series_order_info.setter
+    def series_order_info(self, series_order_info):
+        """Sets the series_order_info of this SeriesInfo.
+
+
+        :param series_order_info: The series_order_info of this SeriesInfo.  # noqa: E501
+        :type: EntitiesTVSeriesOrderInfo
+        """
+
+        self._series_order_info = series_order_info
 
     @property
     def name(self):

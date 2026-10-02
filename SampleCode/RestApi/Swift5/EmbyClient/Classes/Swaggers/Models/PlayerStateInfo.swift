@@ -25,6 +25,7 @@ public struct PlayerStateInfo: Codable {
     public var audioStreamIndex: Int?
     /** The index of the now playing subtitle stream. */
     public var subtitleStreamIndex: Int?
+    public var subtitleEnableReason: SubtitleEnableReason?
     /** The now playing media version identifier. */
     public var mediaSourceId: String?
     public var mediaSource: MediaSourceInfo?
@@ -36,7 +37,7 @@ public struct PlayerStateInfo: Codable {
     public var shuffle: Bool?
     public var playbackRate: Double?
 
-    public init(positionTicks: Int64? = nil, canSeek: Bool? = nil, isPaused: Bool? = nil, isMuted: Bool? = nil, volumeLevel: Int? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, mediaSourceId: String? = nil, mediaSource: MediaSourceInfo? = nil, playMethod: PlayMethod? = nil, repeatMode: RepeatMode? = nil, sleepTimerMode: SleepTimerMode? = nil, sleepTimerEndTime: Date? = nil, subtitleOffset: Int? = nil, shuffle: Bool? = nil, playbackRate: Double? = nil) {
+    public init(positionTicks: Int64? = nil, canSeek: Bool? = nil, isPaused: Bool? = nil, isMuted: Bool? = nil, volumeLevel: Int? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleEnableReason: SubtitleEnableReason? = nil, mediaSourceId: String? = nil, mediaSource: MediaSourceInfo? = nil, playMethod: PlayMethod? = nil, repeatMode: RepeatMode? = nil, sleepTimerMode: SleepTimerMode? = nil, sleepTimerEndTime: Date? = nil, subtitleOffset: Int? = nil, shuffle: Bool? = nil, playbackRate: Double? = nil) {
         self.positionTicks = positionTicks
         self.canSeek = canSeek
         self.isPaused = isPaused
@@ -44,6 +45,7 @@ public struct PlayerStateInfo: Codable {
         self.volumeLevel = volumeLevel
         self.audioStreamIndex = audioStreamIndex
         self.subtitleStreamIndex = subtitleStreamIndex
+        self.subtitleEnableReason = subtitleEnableReason
         self.mediaSourceId = mediaSourceId
         self.mediaSource = mediaSource
         self.playMethod = playMethod
@@ -63,6 +65,7 @@ public struct PlayerStateInfo: Codable {
         case volumeLevel = "VolumeLevel"
         case audioStreamIndex = "AudioStreamIndex"
         case subtitleStreamIndex = "SubtitleStreamIndex"
+        case subtitleEnableReason = "SubtitleEnableReason"
         case mediaSourceId = "MediaSourceId"
         case mediaSource = "MediaSource"
         case playMethod = "PlayMethod"

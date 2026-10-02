@@ -15,7 +15,7 @@ import SessionPartyMessage from './SessionPartyMessage';
 /**
 * The QueryResultSessionPartyMessage model module.
 * @module model/QueryResultSessionPartyMessage
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class QueryResultSessionPartyMessage {
     /**

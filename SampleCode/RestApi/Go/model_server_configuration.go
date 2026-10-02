@@ -71,8 +71,6 @@ type ServerConfiguration struct {
 	SimultaneousStreamLimit int32 `json:"SimultaneousStreamLimit,omitempty"`
 	DatabaseCacheSizeMB int32 `json:"DatabaseCacheSizeMB,omitempty"`
 	EnableSqLiteMmio bool `json:"EnableSqLiteMmio,omitempty"`
-	PlaylistsUpgradedToM3U bool `json:"PlaylistsUpgradedToM3U,omitempty"`
-	ImageExtractorUpgraded1 bool `json:"ImageExtractorUpgraded1,omitempty"`
 	EnablePeopleLetterSubFolders bool `json:"EnablePeopleLetterSubFolders,omitempty"`
 	OptimizeDatabaseOnShutdown bool `json:"OptimizeDatabaseOnShutdown,omitempty"`
 	DatabaseAnalysisLimit int32 `json:"DatabaseAnalysisLimit,omitempty"`
@@ -82,7 +80,7 @@ type ServerConfiguration struct {
 	DisableAsyncIO bool `json:"DisableAsyncIO,omitempty"`
 	MigratedToUserItemShares8 bool `json:"MigratedToUserItemShares8,omitempty"`
 	MigratedLibraryOptionsToDb bool `json:"MigratedLibraryOptionsToDb,omitempty"`
-	AllowLegacyLocalNetworkPassword bool `json:"AllowLegacyLocalNetworkPassword,omitempty"`
+	MigratedSeriesDisplayOrder bool `json:"MigratedSeriesDisplayOrder,omitempty"`
 	EnableSavedMetadataForPeople bool `json:"EnableSavedMetadataForPeople,omitempty"`
 	TvChannelsRefreshed bool `json:"TvChannelsRefreshed,omitempty"`
 	ProxyHeaderMode *ProxyHeaderMode `json:"ProxyHeaderMode,omitempty"`

@@ -673,5 +673,225 @@ namespace EmbyClient.Dotnet.Model
         /// Enum Nv42 for value: nv42
         /// </summary>
         [EnumMember(Value = "nv42")]
-        Nv42 = 130    }
+        Nv42 = 130,
+        /// <summary>
+        /// Enum Vulkan for value: vulkan
+        /// </summary>
+        [EnumMember(Value = "vulkan")]
+        Vulkan = 131,
+        /// <summary>
+        /// Enum Y210 for value: y210
+        /// </summary>
+        [EnumMember(Value = "y210")]
+        Y210 = 132,
+        /// <summary>
+        /// Enum X2rgb10 for value: x2rgb10
+        /// </summary>
+        [EnumMember(Value = "x2rgb10")]
+        X2rgb10 = 133,
+        /// <summary>
+        /// Enum X2bgr10 for value: x2bgr10
+        /// </summary>
+        [EnumMember(Value = "x2bgr10")]
+        X2bgr10 = 134,
+        /// <summary>
+        /// Enum P210 for value: p210
+        /// </summary>
+        [EnumMember(Value = "p210")]
+        P210 = 135,
+        /// <summary>
+        /// Enum P410 for value: p410
+        /// </summary>
+        [EnumMember(Value = "p410")]
+        P410 = 136,
+        /// <summary>
+        /// Enum P216 for value: p216
+        /// </summary>
+        [EnumMember(Value = "p216")]
+        P216 = 137,
+        /// <summary>
+        /// Enum P416 for value: p416
+        /// </summary>
+        [EnumMember(Value = "p416")]
+        P416 = 138,
+        /// <summary>
+        /// Enum Vuya for value: vuya
+        /// </summary>
+        [EnumMember(Value = "vuya")]
+        Vuya = 139,
+        /// <summary>
+        /// Enum Rgbaf16 for value: rgbaf16
+        /// </summary>
+        [EnumMember(Value = "rgbaf16")]
+        Rgbaf16 = 140,
+        /// <summary>
+        /// Enum Vuyx for value: vuyx
+        /// </summary>
+        [EnumMember(Value = "vuyx")]
+        Vuyx = 141,
+        /// <summary>
+        /// Enum P012 for value: p012
+        /// </summary>
+        [EnumMember(Value = "p012")]
+        P012 = 142,
+        /// <summary>
+        /// Enum Y212 for value: y212
+        /// </summary>
+        [EnumMember(Value = "y212")]
+        Y212 = 143,
+        /// <summary>
+        /// Enum Xv30 for value: xv30
+        /// </summary>
+        [EnumMember(Value = "xv30")]
+        Xv30 = 144,
+        /// <summary>
+        /// Enum Xv36 for value: xv36
+        /// </summary>
+        [EnumMember(Value = "xv36")]
+        Xv36 = 145,
+        /// <summary>
+        /// Enum Rgbf32 for value: rgbf32
+        /// </summary>
+        [EnumMember(Value = "rgbf32")]
+        Rgbf32 = 146,
+        /// <summary>
+        /// Enum Rgbaf32 for value: rgbaf32
+        /// </summary>
+        [EnumMember(Value = "rgbaf32")]
+        Rgbaf32 = 147,
+        /// <summary>
+        /// Enum P212 for value: p212
+        /// </summary>
+        [EnumMember(Value = "p212")]
+        P212 = 148,
+        /// <summary>
+        /// Enum P412 for value: p412
+        /// </summary>
+        [EnumMember(Value = "p412")]
+        P412 = 149,
+        /// <summary>
+        /// Enum Gbrap14 for value: gbrap14
+        /// </summary>
+        [EnumMember(Value = "gbrap14")]
+        Gbrap14 = 150,
+        /// <summary>
+        /// Enum D3d12 for value: d3d12
+        /// </summary>
+        [EnumMember(Value = "d3d12")]
+        D3d12 = 151,
+        /// <summary>
+        /// Enum Ayuv for value: ayuv
+        /// </summary>
+        [EnumMember(Value = "ayuv")]
+        Ayuv = 152,
+        /// <summary>
+        /// Enum Uyva for value: uyva
+        /// </summary>
+        [EnumMember(Value = "uyva")]
+        Uyva = 153,
+        /// <summary>
+        /// Enum Vyu444 for value: vyu444
+        /// </summary>
+        [EnumMember(Value = "vyu444")]
+        Vyu444 = 154,
+        /// <summary>
+        /// Enum V30x for value: v30x
+        /// </summary>
+        [EnumMember(Value = "v30x")]
+        V30x = 155,
+        /// <summary>
+        /// Enum Rgbf16 for value: rgbf16
+        /// </summary>
+        [EnumMember(Value = "rgbf16")]
+        Rgbf16 = 156,
+        /// <summary>
+        /// Enum Rgba128 for value: rgba128
+        /// </summary>
+        [EnumMember(Value = "rgba128")]
+        Rgba128 = 157,
+        /// <summary>
+        /// Enum Rgb96 for value: rgb96
+        /// </summary>
+        [EnumMember(Value = "rgb96")]
+        Rgb96 = 158,
+        /// <summary>
+        /// Enum Y216 for value: y216
+        /// </summary>
+        [EnumMember(Value = "y216")]
+        Y216 = 159,
+        /// <summary>
+        /// Enum Xv48 for value: xv48
+        /// </summary>
+        [EnumMember(Value = "xv48")]
+        Xv48 = 160,
+        /// <summary>
+        /// Enum Gbrpf16 for value: gbrpf16
+        /// </summary>
+        [EnumMember(Value = "gbrpf16")]
+        Gbrpf16 = 161,
+        /// <summary>
+        /// Enum Gbrapf16 for value: gbrapf16
+        /// </summary>
+        [EnumMember(Value = "gbrapf16")]
+        Gbrapf16 = 162,
+        /// <summary>
+        /// Enum Grayf16 for value: grayf16
+        /// </summary>
+        [EnumMember(Value = "grayf16")]
+        Grayf16 = 163,
+        /// <summary>
+        /// Enum Amfsurface for value: amf_surface
+        /// </summary>
+        [EnumMember(Value = "amf_surface")]
+        Amfsurface = 164,
+        /// <summary>
+        /// Enum Gray32 for value: gray32
+        /// </summary>
+        [EnumMember(Value = "gray32")]
+        Gray32 = 165,
+        /// <summary>
+        /// Enum Yaf32 for value: yaf32
+        /// </summary>
+        [EnumMember(Value = "yaf32")]
+        Yaf32 = 166,
+        /// <summary>
+        /// Enum Yaf16 for value: yaf16
+        /// </summary>
+        [EnumMember(Value = "yaf16")]
+        Yaf16 = 167,
+        /// <summary>
+        /// Enum Gbrap32 for value: gbrap32
+        /// </summary>
+        [EnumMember(Value = "gbrap32")]
+        Gbrap32 = 168,
+        /// <summary>
+        /// Enum Yuv444p10msb for value: yuv444p10msb
+        /// </summary>
+        [EnumMember(Value = "yuv444p10msb")]
+        Yuv444p10msb = 169,
+        /// <summary>
+        /// Enum Yuv444p12msb for value: yuv444p12msb
+        /// </summary>
+        [EnumMember(Value = "yuv444p12msb")]
+        Yuv444p12msb = 170,
+        /// <summary>
+        /// Enum Gbrp10msb for value: gbrp10msb
+        /// </summary>
+        [EnumMember(Value = "gbrp10msb")]
+        Gbrp10msb = 171,
+        /// <summary>
+        /// Enum Gbrp12msb for value: gbrp12msb
+        /// </summary>
+        [EnumMember(Value = "gbrp12msb")]
+        Gbrp12msb = 172,
+        /// <summary>
+        /// Enum Ohcodec for value: ohcodec
+        /// </summary>
+        [EnumMember(Value = "ohcodec")]
+        Ohcodec = 173,
+        /// <summary>
+        /// Enum Nv15 for value: nv15
+        /// </summary>
+        [EnumMember(Value = "nv15")]
+        Nv15 = 174    }
 }

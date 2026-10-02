@@ -11,7 +11,8 @@ import (
 
 type SeriesInfo struct {
 	EpisodeAirDate time.Time `json:"EpisodeAirDate,omitempty"`
-	DisplayOrder *SeriesDisplayOrder `json:"DisplayOrder,omitempty"`
+	SeriesOrder string `json:"SeriesOrder,omitempty"`
+	SeriesOrderInfo *EntitiesTvSeriesOrderInfo `json:"SeriesOrderInfo,omitempty"`
 	// The name.
 	Name string `json:"Name,omitempty"`
 	Path string `json:"Path,omitempty"`

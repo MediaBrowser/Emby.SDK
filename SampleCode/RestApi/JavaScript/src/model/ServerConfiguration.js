@@ -18,7 +18,7 @@ import ProxyHeaderMode from './ProxyHeaderMode';
 /**
 * The ServerConfiguration model module.
 * @module model/ServerConfiguration
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class ServerConfiguration {
     /**
@@ -187,12 +187,6 @@ export default class ServerConfiguration {
             if (data.hasOwnProperty('EnableSqLiteMmio')) {
                 obj['EnableSqLiteMmio'] = ApiClient.convertToType(data['EnableSqLiteMmio'], 'Boolean');
             }
-            if (data.hasOwnProperty('PlaylistsUpgradedToM3U')) {
-                obj['PlaylistsUpgradedToM3U'] = ApiClient.convertToType(data['PlaylistsUpgradedToM3U'], 'Boolean');
-            }
-            if (data.hasOwnProperty('ImageExtractorUpgraded1')) {
-                obj['ImageExtractorUpgraded1'] = ApiClient.convertToType(data['ImageExtractorUpgraded1'], 'Boolean');
-            }
             if (data.hasOwnProperty('EnablePeopleLetterSubFolders')) {
                 obj['EnablePeopleLetterSubFolders'] = ApiClient.convertToType(data['EnablePeopleLetterSubFolders'], 'Boolean');
             }
@@ -220,8 +214,8 @@ export default class ServerConfiguration {
             if (data.hasOwnProperty('MigratedLibraryOptionsToDb')) {
                 obj['MigratedLibraryOptionsToDb'] = ApiClient.convertToType(data['MigratedLibraryOptionsToDb'], 'Boolean');
             }
-            if (data.hasOwnProperty('AllowLegacyLocalNetworkPassword')) {
-                obj['AllowLegacyLocalNetworkPassword'] = ApiClient.convertToType(data['AllowLegacyLocalNetworkPassword'], 'Boolean');
+            if (data.hasOwnProperty('MigratedSeriesDisplayOrder')) {
+                obj['MigratedSeriesDisplayOrder'] = ApiClient.convertToType(data['MigratedSeriesDisplayOrder'], 'Boolean');
             }
             if (data.hasOwnProperty('EnableSavedMetadataForPeople')) {
                 obj['EnableSavedMetadataForPeople'] = ApiClient.convertToType(data['EnableSavedMetadataForPeople'], 'Boolean');
@@ -468,14 +462,6 @@ export default class ServerConfiguration {
     */
     'EnableSqLiteMmio' = undefined;
     /**
-    * @member {Boolean} PlaylistsUpgradedToM3U
-    */
-    'PlaylistsUpgradedToM3U' = undefined;
-    /**
-    * @member {Boolean} ImageExtractorUpgraded1
-    */
-    'ImageExtractorUpgraded1' = undefined;
-    /**
     * @member {Boolean} EnablePeopleLetterSubFolders
     */
     'EnablePeopleLetterSubFolders' = undefined;
@@ -512,9 +498,9 @@ export default class ServerConfiguration {
     */
     'MigratedLibraryOptionsToDb' = undefined;
     /**
-    * @member {Boolean} AllowLegacyLocalNetworkPassword
+    * @member {Boolean} MigratedSeriesDisplayOrder
     */
-    'AllowLegacyLocalNetworkPassword' = undefined;
+    'MigratedSeriesDisplayOrder' = undefined;
     /**
     * @member {Boolean} EnableSavedMetadataForPeople
     */

@@ -28,6 +28,7 @@ class PlaybackProgressInfo(object):
         'session_id': 'str',
         'audio_stream_index': 'int',
         'subtitle_stream_index': 'int',
+        'subtitle_enable_reason': 'SubtitleEnableReason',
         'is_paused': 'bool',
         'playlist_index': 'int',
         'playlist_length': 'int',
@@ -61,6 +62,7 @@ class PlaybackProgressInfo(object):
         'session_id': 'SessionId',
         'audio_stream_index': 'AudioStreamIndex',
         'subtitle_stream_index': 'SubtitleStreamIndex',
+        'subtitle_enable_reason': 'SubtitleEnableReason',
         'is_paused': 'IsPaused',
         'playlist_index': 'PlaylistIndex',
         'playlist_length': 'PlaylistLength',
@@ -87,7 +89,7 @@ class PlaybackProgressInfo(object):
         'position_ticks': 'PositionTicks'
     }
 
-    def __init__(self, can_seek=None, now_playing_queue=None, playlist_item_id=None, session_id=None, audio_stream_index=None, subtitle_stream_index=None, is_paused=None, playlist_index=None, playlist_length=None, is_muted=None, run_time_ticks=None, playback_start_time_ticks=None, volume_level=None, brightness=None, aspect_ratio=None, event_name=None, play_method=None, repeat_mode=None, sleep_timer_mode=None, sleep_timer_end_time=None, shuffle=None, subtitle_offset=None, playback_rate=None, playlist_item_ids=None, play_session_id=None, item_id=None, live_stream_id=None, media_source_id=None, item=None, position_ticks=None):  # noqa: E501
+    def __init__(self, can_seek=None, now_playing_queue=None, playlist_item_id=None, session_id=None, audio_stream_index=None, subtitle_stream_index=None, subtitle_enable_reason=None, is_paused=None, playlist_index=None, playlist_length=None, is_muted=None, run_time_ticks=None, playback_start_time_ticks=None, volume_level=None, brightness=None, aspect_ratio=None, event_name=None, play_method=None, repeat_mode=None, sleep_timer_mode=None, sleep_timer_end_time=None, shuffle=None, subtitle_offset=None, playback_rate=None, playlist_item_ids=None, play_session_id=None, item_id=None, live_stream_id=None, media_source_id=None, item=None, position_ticks=None):  # noqa: E501
         """PlaybackProgressInfo - a model defined in Swagger"""  # noqa: E501
         self._can_seek = None
         self._now_playing_queue = None
@@ -95,6 +97,7 @@ class PlaybackProgressInfo(object):
         self._session_id = None
         self._audio_stream_index = None
         self._subtitle_stream_index = None
+        self._subtitle_enable_reason = None
         self._is_paused = None
         self._playlist_index = None
         self._playlist_length = None
@@ -132,6 +135,8 @@ class PlaybackProgressInfo(object):
             self.audio_stream_index = audio_stream_index
         if subtitle_stream_index is not None:
             self.subtitle_stream_index = subtitle_stream_index
+        if subtitle_enable_reason is not None:
+            self.subtitle_enable_reason = subtitle_enable_reason
         if is_paused is not None:
             self.is_paused = is_paused
         if playlist_index is not None:
@@ -314,6 +319,27 @@ class PlaybackProgressInfo(object):
         """
 
         self._subtitle_stream_index = subtitle_stream_index
+
+    @property
+    def subtitle_enable_reason(self):
+        """Gets the subtitle_enable_reason of this PlaybackProgressInfo.  # noqa: E501
+
+
+        :return: The subtitle_enable_reason of this PlaybackProgressInfo.  # noqa: E501
+        :rtype: SubtitleEnableReason
+        """
+        return self._subtitle_enable_reason
+
+    @subtitle_enable_reason.setter
+    def subtitle_enable_reason(self, subtitle_enable_reason):
+        """Sets the subtitle_enable_reason of this PlaybackProgressInfo.
+
+
+        :param subtitle_enable_reason: The subtitle_enable_reason of this PlaybackProgressInfo.  # noqa: E501
+        :type: SubtitleEnableReason
+        """
+
+        self._subtitle_enable_reason = subtitle_enable_reason
 
     @property
     def is_paused(self):

@@ -17,7 +17,7 @@ import UserLibraryCreditsList from '../model/UserLibraryCreditsList';
 /**
 * PersonsService service.
 * @module api/PersonsServiceApi
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class PersonsServiceApi {
 

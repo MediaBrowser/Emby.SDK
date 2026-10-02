@@ -27,7 +27,8 @@ namespace EmbyClient.Dotnet.Model
         /// Initializes a new instance of the <see cref="SeriesInfo" /> class.
         /// </summary>
         /// <param name="episodeAirDate">episodeAirDate.</param>
-        /// <param name="displayOrder">displayOrder.</param>
+        /// <param name="seriesOrder">seriesOrder.</param>
+        /// <param name="seriesOrderInfo">seriesOrderInfo.</param>
         /// <param name="name">The name..</param>
         /// <param name="path">path.</param>
         /// <param name="metadataLanguage">The metadata language..</param>
@@ -40,10 +41,11 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="premiereDate">premiereDate.</param>
         /// <param name="isAutomated">isAutomated.</param>
         /// <param name="enableAdultMetadata">enableAdultMetadata.</param>
-        public SeriesInfo(DateTimeOffset? episodeAirDate = default(DateTimeOffset?), SeriesDisplayOrder displayOrder = default(SeriesDisplayOrder), string name = default(string), string path = default(string), string metadataLanguage = default(string), string metadataCountryCode = default(string), List<GlobalizationCultureDto> metadataLanguages = default(List<GlobalizationCultureDto>), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? year = default(int?), int? indexNumber = default(int?), int? parentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), bool? isAutomated = default(bool?), bool? enableAdultMetadata = default(bool?))
+        public SeriesInfo(DateTimeOffset? episodeAirDate = default(DateTimeOffset?), string seriesOrder = default(string), EntitiesTVSeriesOrderInfo seriesOrderInfo = default(EntitiesTVSeriesOrderInfo), string name = default(string), string path = default(string), string metadataLanguage = default(string), string metadataCountryCode = default(string), List<GlobalizationCultureDto> metadataLanguages = default(List<GlobalizationCultureDto>), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? year = default(int?), int? indexNumber = default(int?), int? parentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), bool? isAutomated = default(bool?), bool? enableAdultMetadata = default(bool?))
         {
             this.EpisodeAirDate = episodeAirDate;
-            this.DisplayOrder = displayOrder;
+            this.SeriesOrder = seriesOrder;
+            this.SeriesOrderInfo = seriesOrderInfo;
             this.Name = name;
             this.Path = path;
             this.MetadataLanguage = metadataLanguage;
@@ -65,10 +67,16 @@ namespace EmbyClient.Dotnet.Model
         public DateTimeOffset? EpisodeAirDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayOrder
+        /// Gets or Sets SeriesOrder
         /// </summary>
-        [DataMember(Name="DisplayOrder", EmitDefaultValue=false)]
-        public SeriesDisplayOrder DisplayOrder { get; set; }
+        [DataMember(Name="SeriesOrder", EmitDefaultValue=false)]
+        public string SeriesOrder { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SeriesOrderInfo
+        /// </summary>
+        [DataMember(Name="SeriesOrderInfo", EmitDefaultValue=false)]
+        public EntitiesTVSeriesOrderInfo SeriesOrderInfo { get; set; }
 
         /// <summary>
         /// The name.
@@ -155,7 +163,8 @@ namespace EmbyClient.Dotnet.Model
             var sb = new StringBuilder();
             sb.Append("class SeriesInfo {\n");
             sb.Append("  EpisodeAirDate: ").Append(EpisodeAirDate).Append("\n");
-            sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
+            sb.Append("  SeriesOrder: ").Append(SeriesOrder).Append("\n");
+            sb.Append("  SeriesOrderInfo: ").Append(SeriesOrderInfo).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  MetadataLanguage: ").Append(MetadataLanguage).Append("\n");
@@ -208,9 +217,14 @@ namespace EmbyClient.Dotnet.Model
                     this.EpisodeAirDate.Equals(input.EpisodeAirDate))
                 ) && 
                 (
-                    this.DisplayOrder == input.DisplayOrder ||
-                    (this.DisplayOrder != null &&
-                    this.DisplayOrder.Equals(input.DisplayOrder))
+                    this.SeriesOrder == input.SeriesOrder ||
+                    (this.SeriesOrder != null &&
+                    this.SeriesOrder.Equals(input.SeriesOrder))
+                ) && 
+                (
+                    this.SeriesOrderInfo == input.SeriesOrderInfo ||
+                    (this.SeriesOrderInfo != null &&
+                    this.SeriesOrderInfo.Equals(input.SeriesOrderInfo))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -286,8 +300,10 @@ namespace EmbyClient.Dotnet.Model
                 int hashCode = 41;
                 if (this.EpisodeAirDate != null)
                     hashCode = hashCode * 59 + this.EpisodeAirDate.GetHashCode();
-                if (this.DisplayOrder != null)
-                    hashCode = hashCode * 59 + this.DisplayOrder.GetHashCode();
+                if (this.SeriesOrder != null)
+                    hashCode = hashCode * 59 + this.SeriesOrder.GetHashCode();
+                if (this.SeriesOrderInfo != null)
+                    hashCode = hashCode * 59 + this.SeriesOrderInfo.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Path != null)

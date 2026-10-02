@@ -29,4 +29,6 @@ type UserConfiguration struct {
 	ResumeRewindSeconds int32 `json:"ResumeRewindSeconds,omitempty"`
 	IntroSkipMode *SegmentSkipMode `json:"IntroSkipMode,omitempty"`
 	EnableLocalPassword bool `json:"EnableLocalPassword,omitempty"`
+	ShowSubtitlesOnSkipBack bool `json:"ShowSubtitlesOnSkipBack,omitempty"`
+	ShowSubtitlesOnLowVolume bool `json:"ShowSubtitlesOnLowVolume,omitempty"`
 }

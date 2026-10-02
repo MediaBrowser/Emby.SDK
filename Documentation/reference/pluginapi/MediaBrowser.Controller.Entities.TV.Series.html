@@ -562,6 +562,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ToLinkedItemInfo">BaseItem.ToLinkedItemInfo()</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDisplayOrderIntValue">BaseItem.GetDisplayOrderIntValue()</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetDisplayOrder_System_String_">BaseItem.SetDisplayOrder(String)</a>
     </div>
     <div>
@@ -1219,7 +1222,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetNameForMetadataLookup">BaseItem.GetNameForMetadataLookup()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_BeforeMetadataRefresh_System_Boolean_">BaseItem.BeforeMetadataRefresh(Boolean)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_BeforeMetadataRefresh_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.BeforeMetadataRefresh(Boolean, LibraryOptions)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMappedPath_System_String_System_Nullable_MediaBrowser_Model_MediaInfo_MediaProtocol__MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMappedPath(String, Nullable&lt;MediaProtocol&gt;, LibraryOptions)</a>
@@ -1294,6 +1297,56 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public sealed class Series : Folder, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IHasFolderGrouping, IHasLookupInfo&lt;SeriesInfo&gt;</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="MediaBrowser_Controller_Entities_TV_Series_FileOrderProviderIdKey" data-uid="MediaBrowser.Controller.Entities.TV.Series.FileOrderProviderIdKey">FileOrderProviderIdKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string FileOrderProviderIdKey</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MediaBrowser_Controller_Entities_TV_Series_SeriesOrderIdDelimiter" data-uid="MediaBrowser.Controller.Entities.TV.Series.SeriesOrderIdDelimiter">SeriesOrderIdDelimiter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static char SeriesOrderIdDelimiter</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -1352,13 +1405,13 @@ public string AirTime { get; set; }</code></pre>
   
   <a id="MediaBrowser_Controller_Entities_TV_Series_DisplayOrder_" data-uid="MediaBrowser.Controller.Entities.TV.Series.DisplayOrder*"></a>
   <h4 id="MediaBrowser_Controller_Entities_TV_Series_DisplayOrder" data-uid="MediaBrowser.Controller.Entities.TV.Series.DisplayOrder">DisplayOrder</h4>
-  <div class="markdown level1 summary"><p>airdate, dvd or absolute</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public SeriesDisplayOrder DisplayOrder { get; set; }</code></pre>
+[Obsolete]
+public string DisplayOrder { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1370,7 +1423,7 @@ public SeriesDisplayOrder DisplayOrder { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Entities.SeriesDisplayOrder.html">SeriesDisplayOrder</a></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1431,6 +1484,59 @@ public override bool PrimaryImageRequiresOrientation { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_PrimaryImageRequiresOrientation">Folder.PrimaryImageRequiresOrientation</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_TV_Series_SeriesOrder_" data-uid="MediaBrowser.Controller.Entities.TV.Series.SeriesOrder*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_TV_Series_SeriesOrder" data-uid="MediaBrowser.Controller.Entities.TV.Series.SeriesOrder">SeriesOrder</h4>
+  <div class="markdown level1 summary"><p>airdate, dvd or absolute</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public string SeriesOrder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_TV_Series_SeriesOrderInfo_" data-uid="MediaBrowser.Controller.Entities.TV.Series.SeriesOrderInfo*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_TV_Series_SeriesOrderInfo" data-uid="MediaBrowser.Controller.Entities.TV.Series.SeriesOrderInfo">SeriesOrderInfo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public SeriesOrderInfo SeriesOrderInfo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.TV.SeriesOrderInfo.html">SeriesOrderInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="MediaBrowser_Controller_Entities_TV_Series_Status_" data-uid="MediaBrowser.Controller.Entities.TV.Series.Status*"></a>
@@ -1743,33 +1849,6 @@ public override bool SupportsThemeMedia { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDefaultPrimaryImageAspectRatio">BaseItem.GetDefaultPrimaryImageAspectRatio()</a></div>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_TV_Series_GetDisplayOrderIntValue_" data-uid="MediaBrowser.Controller.Entities.TV.Series.GetDisplayOrderIntValue*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_TV_Series_GetDisplayOrderIntValue" data-uid="MediaBrowser.Controller.Entities.TV.Series.GetDisplayOrderIntValue">GetDisplayOrderIntValue()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override int? GetDisplayOrderIntValue()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDisplayOrderIntValue">BaseItem.GetDisplayOrderIntValue()</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_TV_Series_GetItemIdsInternal_" data-uid="MediaBrowser.Controller.Entities.TV.Series.GetItemIdsInternal*"></a>
@@ -2172,6 +2251,48 @@ public override bool SupportsThemeMedia { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKeyInternal_MediaBrowser_Model_Data_IDataContext_">BaseItem.GetUserDataKeyInternal(IDataContext)</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_TV_Series_ParseSeriesOrder_" data-uid="MediaBrowser.Controller.Entities.TV.Series.ParseSeriesOrder*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_TV_Series_ParseSeriesOrder_System_String_" data-uid="MediaBrowser.Controller.Entities.TV.Series.ParseSeriesOrder(System.String)">ParseSeriesOrder(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SeriesOrderInfo ParseSeriesOrder(string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.TV.SeriesOrderInfo.html">SeriesOrderInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="MediaBrowser_Controller_Entities_TV_Series_SetAutoSorting_" data-uid="MediaBrowser.Controller.Entities.TV.Series.SetAutoSorting*"></a>

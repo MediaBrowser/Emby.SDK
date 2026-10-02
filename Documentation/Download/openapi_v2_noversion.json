@@ -50627,6 +50627,65 @@
       },
       "x-summary": "Reports playback has stopped within a session"
     },
+    "/Shows/{Id}/Orders": {
+      "get": {
+        "tags": [
+          "TvShowsService"
+        ],
+        "summary": "Gets orders for a show",
+        "description": "Requires authentication as user",
+        "operationId": "getShowsByIdOrders",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "The series id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a NameIdPair[] object.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/NameIdPair"
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets orders for a show"
+    },
     "/Shows/{Id}/Seasons": {
       "get": {
         "tags": [
@@ -74203,6 +74262,10 @@
           "format": "int32",
           "type": "integer"
         },
+        "FullSubtitleStreamIndex": {
+          "format": "int32",
+          "type": "integer"
+        },
         "ItemId": {
           "description": "Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi",
           "type": "string"
@@ -74742,6 +74805,9 @@
         "Id": {
           "description": "The identifier.",
           "type": "string"
+        },
+        "ShortOverview": {
+          "type": "string"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Dto.NameIdPair"
@@ -75149,7 +75215,7 @@
         "Name": {
           "type": "string"
         },
-        "Sessions": {
+        "InternalSessions": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Session.SessionInfo"
@@ -75166,6 +75232,12 @@
         },
         "IsPlaying": {
           "type": "boolean"
+        },
+        "Sessions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Session.PartySessionInfo"
+          }
         }
       },
       "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyInfo"
@@ -75316,6 +75388,9 @@
           "description": "The index of the now playing subtitle stream.",
           "type": "integer"
         },
+        "SubtitleEnableReason": {
+          "$ref": "#/definitions/SubtitleEnableReason"
+        },
         "MediaSourceId": {
           "description": "The now playing media version identifier.",
           "type": "string"
@@ -75349,6 +75424,15 @@
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Session.PlayerStateInfo"
+    },
+    "SubtitleEnableReason": {
+      "enum": [
+        "UserEnabled",
+        "SkipBack",
+        "LowVolume"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Session.SubtitleEnableReason"
     },
     "PlayMethod": {
       "enum": [
@@ -75703,19 +75787,472 @@
     "Session.PartyMessage": {
       "type": "object",
       "properties": {
-        "UserId": {
-          "format": "int64",
-          "type": "integer"
-        },
         "DateTime": {
           "format": "date-time",
           "type": "string"
         },
         "Message": {
           "type": "string"
+        },
+        "UserId": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "User": {
+          "$ref": "#/definitions/UserDto"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyMessage"
+    },
+    "UserDto": {
+      "description": "Class UserDto\r\n",
+      "type": "object",
+      "properties": {
+        "Name": {
+          "description": "The name.",
+          "type": "string"
+        },
+        "ServerId": {
+          "description": "The server identifier.",
+          "type": "string"
+        },
+        "ServerName": {
+          "description": "The name of the server. This is not used by the server and is for client\\-side usage only.",
+          "type": "string"
+        },
+        "Prefix": {
+          "type": "string"
+        },
+        "ConnectUserName": {
+          "description": "The name of the connect user.",
+          "type": "string"
+        },
+        "DateCreated": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ConnectLinkType": {
+          "$ref": "#/definitions/Connect.UserLinkType"
+        },
+        "Id": {
+          "description": "The id.",
+          "type": "string"
+        },
+        "PrimaryImageTag": {
+          "description": "The primary image tag.",
+          "type": "string"
+        },
+        "HasPassword": {
+          "description": "A value indicating whether this instance has password.",
+          "type": "boolean"
+        },
+        "HasConfiguredPassword": {
+          "description": "A value indicating whether this instance has configured password.",
+          "type": "boolean"
+        },
+        "EnableAutoLogin": {
+          "type": "boolean"
+        },
+        "LastLoginDate": {
+          "format": "date-time",
+          "description": "The last login date.",
+          "type": "string"
+        },
+        "LastActivityDate": {
+          "format": "date-time",
+          "description": "The last activity date.",
+          "type": "string"
+        },
+        "Configuration": {
+          "$ref": "#/definitions/UserConfiguration"
+        },
+        "Policy": {
+          "$ref": "#/definitions/UserPolicy"
+        },
+        "PrimaryImageAspectRatio": {
+          "format": "double",
+          "description": "The primary image aspect ratio.",
+          "type": "number"
+        },
+        "UserItemShareLevel": {
+          "$ref": "#/definitions/UserItemShareLevel"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.Dto.UserDto"
+    },
+    "Connect.UserLinkType": {
+      "enum": [
+        "LinkedUser",
+        "Guest"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
+    },
+    "UserConfiguration": {
+      "description": "Class UserConfiguration\r\n",
+      "type": "object",
+      "properties": {
+        "AudioLanguagePreference": {
+          "description": "The audio language preference.",
+          "type": "string"
+        },
+        "PlayDefaultAudioTrack": {
+          "description": "A value indicating whether \\[play default audio track\\].",
+          "type": "boolean"
+        },
+        "SubtitleLanguagePreference": {
+          "description": "The subtitle language preference.",
+          "type": "string"
+        },
+        "ProfilePin": {
+          "type": "string"
+        },
+        "DisplayMissingEpisodes": {
+          "type": "boolean"
+        },
+        "SubtitleMode": {
+          "$ref": "#/definitions/SubtitlePlaybackMode"
+        },
+        "OrderedViews": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "LatestItemsExcludes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "MyMediaExcludes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "HidePlayedInLatest": {
+          "type": "boolean"
+        },
+        "HidePlayedInMoreLikeThis": {
+          "type": "boolean"
+        },
+        "HidePlayedInSuggestions": {
+          "type": "boolean"
+        },
+        "RememberAudioSelections": {
+          "type": "boolean"
+        },
+        "RememberSubtitleSelections": {
+          "type": "boolean"
+        },
+        "EnableNextEpisodeAutoPlay": {
+          "type": "boolean"
+        },
+        "ResumeRewindSeconds": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "IntroSkipMode": {
+          "$ref": "#/definitions/SegmentSkipMode"
+        },
+        "EnableLocalPassword": {
+          "type": "boolean"
+        },
+        "ShowSubtitlesOnSkipBack": {
+          "type": "boolean"
+        },
+        "ShowSubtitlesOnLowVolume": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.Configuration.UserConfiguration"
+    },
+    "SubtitlePlaybackMode": {
+      "enum": [
+        "Default",
+        "Always",
+        "OnlyForced",
+        "None",
+        "Smart",
+        "HearingImpaired"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Configuration.SubtitlePlaybackMode"
+    },
+    "SegmentSkipMode": {
+      "enum": [
+        "ShowButton",
+        "AutoSkip",
+        "None"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Configuration.SegmentSkipMode"
+    },
+    "UserPolicy": {
+      "type": "object",
+      "properties": {
+        "IsAdministrator": {
+          "description": "A value indicating whether this instance is administrator.",
+          "type": "boolean"
+        },
+        "IsHidden": {
+          "description": "A value indicating whether this instance is hidden.",
+          "type": "boolean"
+        },
+        "IsHiddenRemotely": {
+          "type": "boolean"
+        },
+        "IsHiddenFromUnusedDevices": {
+          "type": "boolean"
+        },
+        "IsDisabled": {
+          "description": "A value indicating whether this instance is disabled.",
+          "type": "boolean"
+        },
+        "LockedOutDate": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "MaxParentalRating": {
+          "format": "int32",
+          "description": "The max parental rating.",
+          "type": "integer"
+        },
+        "AllowTagOrRating": {
+          "type": "boolean"
+        },
+        "BlockedTags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "IsTagBlockingModeInclusive": {
+          "type": "boolean"
+        },
+        "IncludeTags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "EnableUserPreferenceAccess": {
+          "type": "boolean"
+        },
+        "AccessSchedules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccessSchedule"
+          }
+        },
+        "BlockUnratedItems": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UnratedItem"
+          }
+        },
+        "EnableRemoteControlOfOtherUsers": {
+          "type": "boolean"
+        },
+        "EnableSharedDeviceControl": {
+          "type": "boolean"
+        },
+        "EnableRemoteAccess": {
+          "type": "boolean"
+        },
+        "EnableLiveTvManagement": {
+          "type": "boolean"
+        },
+        "EnableLiveTvAccess": {
+          "type": "boolean"
+        },
+        "EnableMediaPlayback": {
+          "type": "boolean"
+        },
+        "EnableAudioPlaybackTranscoding": {
+          "type": "boolean"
+        },
+        "EnableVideoPlaybackTranscoding": {
+          "type": "boolean"
+        },
+        "EnableTranscodingQuality": {
+          "type": "boolean"
+        },
+        "AutoRemoteQuality": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "EnablePlaybackRemuxing": {
+          "type": "boolean"
+        },
+        "EnableContentDeletion": {
+          "type": "boolean"
+        },
+        "RestrictedFeatures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "EnableContentDeletionFromFolders": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "EnableContentDownloading": {
+          "type": "boolean"
+        },
+        "EnableSubtitleDownloading": {
+          "type": "boolean"
+        },
+        "EnableSubtitleManagement": {
+          "type": "boolean"
+        },
+        "EnableSyncTranscoding": {
+          "description": "A value indicating whether \\[enable synchronize\\].",
+          "type": "boolean"
+        },
+        "EnableMediaConversion": {
+          "type": "boolean"
+        },
+        "EnabledChannels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "EnableAllChannels": {
+          "type": "boolean"
+        },
+        "EnabledFolders": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "EnableAllFolders": {
+          "type": "boolean"
+        },
+        "InvalidLoginAttemptCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "EnablePublicSharing": {
+          "type": "boolean"
+        },
+        "RemoteClientBitrateLimit": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "AuthenticationProviderId": {
+          "type": "string"
+        },
+        "ExcludedSubFolders": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "SimultaneousStreamLimit": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "EnabledDevices": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "EnableAllDevices": {
+          "type": "boolean"
+        },
+        "AllowCameraUpload": {
+          "type": "boolean"
+        },
+        "AllowSharingPersonalItems": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.Users.UserPolicy"
+    },
+    "AccessSchedule": {
+      "type": "object",
+      "properties": {
+        "DayOfWeek": {
+          "$ref": "#/definitions/DynamicDayOfWeek"
+        },
+        "StartHour": {
+          "format": "double",
+          "description": "The start hour.",
+          "type": "number"
+        },
+        "EndHour": {
+          "format": "double",
+          "description": "The end hour.",
+          "type": "number"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.Configuration.AccessSchedule"
+    },
+    "DynamicDayOfWeek": {
+      "enum": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Everyday",
+        "Weekday",
+        "Weekend"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Configuration.DynamicDayOfWeek"
+    },
+    "UnratedItem": {
+      "enum": [
+        "Movie",
+        "Trailer",
+        "Series",
+        "Music",
+        "Game",
+        "Book",
+        "LiveTvChannel",
+        "LiveTvProgram",
+        "ChannelContent",
+        "Other"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Configuration.UnratedItem"
+    },
+    "UserItemShareLevel": {
+      "enum": [
+        "None",
+        "Read",
+        "Write",
+        "Manage",
+        "ManageDelete"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Dto.UserItemShareLevel"
+    },
+    "Session.PartySessionInfo": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "User": {
+          "$ref": "#/definitions/UserDto"
+        },
+        "IsHost": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Controller.Session.PartySessionInfo"
     },
     "Playlists.PlaylistCreationResult": {
       "type": "object",
@@ -77062,17 +77599,6 @@
       },
       "x-internal-ref-name": "Emby.Api.UserLibrary.UpdateUserItemAccess"
     },
-    "UserItemShareLevel": {
-      "enum": [
-        "None",
-        "Read",
-        "Write",
-        "Manage",
-        "ManageDelete"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Dto.UserItemShareLevel"
-    },
     "ItemCounts": {
       "description": "Class LibrarySummary\r\n",
       "type": "object",
@@ -77372,6 +77898,9 @@
           "type": "boolean"
         },
         "MergeTopLevelFolders": {
+          "type": "boolean"
+        },
+        "EnableEpisodeDetectionWithCombinedNumbers": {
           "type": "boolean"
         },
         "AutoGenerateChapterIntervalMinutes": {
@@ -78683,40 +79212,23 @@
         "RecordingFolders": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Api.NameIdDescriptionPair"
+            "$ref": "#/definitions/NameIdPair"
           }
         },
         "MovieRecordingFolders": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Api.NameIdDescriptionPair"
+            "$ref": "#/definitions/NameIdPair"
           }
         },
         "SeriesRecordingFolders": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Api.NameIdDescriptionPair"
+            "$ref": "#/definitions/NameIdPair"
           }
         }
       },
       "x-internal-ref-name": "Emby.LiveTV.Api.AvailableRecordingOptions"
-    },
-    "Api.NameIdDescriptionPair": {
-      "type": "object",
-      "properties": {
-        "ShortOverview": {
-          "type": "string"
-        },
-        "Name": {
-          "description": "The name.",
-          "type": "string"
-        },
-        "Id": {
-          "description": "The identifier.",
-          "type": "string"
-        }
-      },
-      "x-internal-ref-name": "Emby.LiveTV.Api.NameIdDescriptionPair"
     },
     "ParentalRating": {
       "description": "Class ParentalRating\r\n",
@@ -78932,6 +79444,9 @@
           "format": "int32",
           "description": "The index of the subtitle stream.",
           "type": "integer"
+        },
+        "SubtitleEnableReason": {
+          "$ref": "#/definitions/SubtitleEnableReason"
         },
         "IsPaused": {
           "description": "A value indicating whether this instance is paused.",
@@ -79764,12 +80279,6 @@
         "EnableSqLiteMmio": {
           "type": "boolean"
         },
-        "PlaylistsUpgradedToM3U": {
-          "type": "boolean"
-        },
-        "ImageExtractorUpgraded1": {
-          "type": "boolean"
-        },
         "EnablePeopleLetterSubFolders": {
           "type": "boolean"
         },
@@ -79801,7 +80310,7 @@
         "MigratedLibraryOptionsToDb": {
           "type": "boolean"
         },
-        "AllowLegacyLocalNetworkPassword": {
+        "MigratedSeriesDisplayOrder": {
           "type": "boolean"
         },
         "EnableSavedMetadataForPeople": {
@@ -80157,6 +80666,9 @@
         "ShowDialogFullScreen": {
           "type": "boolean"
         },
+        "ShowResetToDefaults": {
+          "type": "boolean"
+        },
         "IsInSequence": {
           "type": "boolean"
         },
@@ -80298,424 +80810,6 @@
         }
       },
       "x-internal-ref-name": "Emby.Web.GenericUI.Api.Endpoints.RunUICommand"
-    },
-    "UserDto": {
-      "description": "Class UserDto\r\n",
-      "type": "object",
-      "properties": {
-        "Name": {
-          "description": "The name.",
-          "type": "string"
-        },
-        "ServerId": {
-          "description": "The server identifier.",
-          "type": "string"
-        },
-        "ServerName": {
-          "description": "The name of the server. This is not used by the server and is for client\\-side usage only.",
-          "type": "string"
-        },
-        "Prefix": {
-          "type": "string"
-        },
-        "ConnectUserName": {
-          "description": "The name of the connect user.",
-          "type": "string"
-        },
-        "DateCreated": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "ConnectLinkType": {
-          "$ref": "#/definitions/Connect.UserLinkType"
-        },
-        "Id": {
-          "description": "The id.",
-          "type": "string"
-        },
-        "PrimaryImageTag": {
-          "description": "The primary image tag.",
-          "type": "string"
-        },
-        "HasPassword": {
-          "description": "A value indicating whether this instance has password.",
-          "type": "boolean"
-        },
-        "HasConfiguredPassword": {
-          "description": "A value indicating whether this instance has configured password.",
-          "type": "boolean"
-        },
-        "EnableAutoLogin": {
-          "type": "boolean"
-        },
-        "LastLoginDate": {
-          "format": "date-time",
-          "description": "The last login date.",
-          "type": "string"
-        },
-        "LastActivityDate": {
-          "format": "date-time",
-          "description": "The last activity date.",
-          "type": "string"
-        },
-        "Configuration": {
-          "$ref": "#/definitions/UserConfiguration"
-        },
-        "Policy": {
-          "$ref": "#/definitions/UserPolicy"
-        },
-        "PrimaryImageAspectRatio": {
-          "format": "double",
-          "description": "The primary image aspect ratio.",
-          "type": "number"
-        },
-        "UserItemShareLevel": {
-          "$ref": "#/definitions/UserItemShareLevel"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.Dto.UserDto"
-    },
-    "Connect.UserLinkType": {
-      "enum": [
-        "LinkedUser",
-        "Guest"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
-    },
-    "UserConfiguration": {
-      "description": "Class UserConfiguration\r\n",
-      "type": "object",
-      "properties": {
-        "AudioLanguagePreference": {
-          "description": "The audio language preference.",
-          "type": "string"
-        },
-        "PlayDefaultAudioTrack": {
-          "description": "A value indicating whether \\[play default audio track\\].",
-          "type": "boolean"
-        },
-        "SubtitleLanguagePreference": {
-          "description": "The subtitle language preference.",
-          "type": "string"
-        },
-        "ProfilePin": {
-          "type": "string"
-        },
-        "DisplayMissingEpisodes": {
-          "type": "boolean"
-        },
-        "SubtitleMode": {
-          "$ref": "#/definitions/SubtitlePlaybackMode"
-        },
-        "OrderedViews": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "LatestItemsExcludes": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "MyMediaExcludes": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "HidePlayedInLatest": {
-          "type": "boolean"
-        },
-        "HidePlayedInMoreLikeThis": {
-          "type": "boolean"
-        },
-        "HidePlayedInSuggestions": {
-          "type": "boolean"
-        },
-        "RememberAudioSelections": {
-          "type": "boolean"
-        },
-        "RememberSubtitleSelections": {
-          "type": "boolean"
-        },
-        "EnableNextEpisodeAutoPlay": {
-          "type": "boolean"
-        },
-        "ResumeRewindSeconds": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "IntroSkipMode": {
-          "$ref": "#/definitions/SegmentSkipMode"
-        },
-        "EnableLocalPassword": {
-          "type": "boolean"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.Configuration.UserConfiguration"
-    },
-    "SubtitlePlaybackMode": {
-      "enum": [
-        "Default",
-        "Always",
-        "OnlyForced",
-        "None",
-        "Smart",
-        "HearingImpaired"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Configuration.SubtitlePlaybackMode"
-    },
-    "SegmentSkipMode": {
-      "enum": [
-        "ShowButton",
-        "AutoSkip",
-        "None"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Configuration.SegmentSkipMode"
-    },
-    "UserPolicy": {
-      "type": "object",
-      "properties": {
-        "IsAdministrator": {
-          "description": "A value indicating whether this instance is administrator.",
-          "type": "boolean"
-        },
-        "IsHidden": {
-          "description": "A value indicating whether this instance is hidden.",
-          "type": "boolean"
-        },
-        "IsHiddenRemotely": {
-          "type": "boolean"
-        },
-        "IsHiddenFromUnusedDevices": {
-          "type": "boolean"
-        },
-        "IsDisabled": {
-          "description": "A value indicating whether this instance is disabled.",
-          "type": "boolean"
-        },
-        "LockedOutDate": {
-          "format": "int64",
-          "type": "integer"
-        },
-        "MaxParentalRating": {
-          "format": "int32",
-          "description": "The max parental rating.",
-          "type": "integer"
-        },
-        "AllowTagOrRating": {
-          "type": "boolean"
-        },
-        "BlockedTags": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "IsTagBlockingModeInclusive": {
-          "type": "boolean"
-        },
-        "IncludeTags": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "EnableUserPreferenceAccess": {
-          "type": "boolean"
-        },
-        "AccessSchedules": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/AccessSchedule"
-          }
-        },
-        "BlockUnratedItems": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/UnratedItem"
-          }
-        },
-        "EnableRemoteControlOfOtherUsers": {
-          "type": "boolean"
-        },
-        "EnableSharedDeviceControl": {
-          "type": "boolean"
-        },
-        "EnableRemoteAccess": {
-          "type": "boolean"
-        },
-        "EnableLiveTvManagement": {
-          "type": "boolean"
-        },
-        "EnableLiveTvAccess": {
-          "type": "boolean"
-        },
-        "EnableMediaPlayback": {
-          "type": "boolean"
-        },
-        "EnableAudioPlaybackTranscoding": {
-          "type": "boolean"
-        },
-        "EnableVideoPlaybackTranscoding": {
-          "type": "boolean"
-        },
-        "EnableTranscodingQuality": {
-          "type": "boolean"
-        },
-        "AutoRemoteQuality": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "EnablePlaybackRemuxing": {
-          "type": "boolean"
-        },
-        "EnableContentDeletion": {
-          "type": "boolean"
-        },
-        "RestrictedFeatures": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "EnableContentDeletionFromFolders": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "EnableContentDownloading": {
-          "type": "boolean"
-        },
-        "EnableSubtitleDownloading": {
-          "type": "boolean"
-        },
-        "EnableSubtitleManagement": {
-          "type": "boolean"
-        },
-        "EnableSyncTranscoding": {
-          "description": "A value indicating whether \\[enable synchronize\\].",
-          "type": "boolean"
-        },
-        "EnableMediaConversion": {
-          "type": "boolean"
-        },
-        "EnabledChannels": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "EnableAllChannels": {
-          "type": "boolean"
-        },
-        "EnabledFolders": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "EnableAllFolders": {
-          "type": "boolean"
-        },
-        "InvalidLoginAttemptCount": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "EnablePublicSharing": {
-          "type": "boolean"
-        },
-        "RemoteClientBitrateLimit": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "AuthenticationProviderId": {
-          "type": "string"
-        },
-        "ExcludedSubFolders": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "SimultaneousStreamLimit": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "EnabledDevices": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "EnableAllDevices": {
-          "type": "boolean"
-        },
-        "AllowCameraUpload": {
-          "type": "boolean"
-        },
-        "AllowSharingPersonalItems": {
-          "type": "boolean"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.Users.UserPolicy"
-    },
-    "AccessSchedule": {
-      "type": "object",
-      "properties": {
-        "DayOfWeek": {
-          "$ref": "#/definitions/DynamicDayOfWeek"
-        },
-        "StartHour": {
-          "format": "double",
-          "description": "The start hour.",
-          "type": "number"
-        },
-        "EndHour": {
-          "format": "double",
-          "description": "The end hour.",
-          "type": "number"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.Configuration.AccessSchedule"
-    },
-    "DynamicDayOfWeek": {
-      "enum": [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Everyday",
-        "Weekday",
-        "Weekend"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Configuration.DynamicDayOfWeek"
-    },
-    "UnratedItem": {
-      "enum": [
-        "Movie",
-        "Trailer",
-        "Series",
-        "Music",
-        "Game",
-        "Book",
-        "LiveTvChannel",
-        "LiveTvProgram",
-        "ChannelContent",
-        "Other"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Configuration.UnratedItem"
     },
     "QueryResult_UserDto": {
       "type": "object",
@@ -81135,7 +81229,13 @@
         "DxVa",
         "D3d11va",
         "VideoToolbox",
-        "Mmal"
+        "Mmal",
+        "Vulkan",
+        "D3d12va",
+        "OhCodec",
+        "RkMpp",
+        "Drm",
+        "OpenCL"
       ],
       "type": "string",
       "x-internal-ref-name": "Emby.Media.Model.Enums.SecondaryFrameworks"
@@ -81385,7 +81485,55 @@
         "yuv4",
         "zerocodec",
         "zlib",
-        "zmbv"
+        "zmbv",
+        "agm",
+        "apv",
+        "arbc",
+        "argo",
+        "avs2",
+        "avs3",
+        "cdtoons",
+        "cri",
+        "dnxuc",
+        "evc",
+        "gem",
+        "hdr",
+        "hymt",
+        "imm4",
+        "imm5",
+        "ipu",
+        "jpegxl",
+        "jpegxl_anim",
+        "lead",
+        "lscr",
+        "media100",
+        "mobiclip",
+        "msp2",
+        "mv30",
+        "mvdv",
+        "mvha",
+        "mwsc",
+        "notchlc",
+        "pdv",
+        "pfm",
+        "pgx",
+        "phm",
+        "photocd",
+        "prores_raw",
+        "prosumer",
+        "qoi",
+        "rasc",
+        "rtv1",
+        "rv60",
+        "sga",
+        "simbiosis_imx",
+        "vbn",
+        "vmix",
+        "vp4",
+        "vqc",
+        "vvc",
+        "wbmp",
+        "wcmv"
       ],
       "type": "string",
       "x-internal-ref-name": "Emby.Media.Model.Enums.VideoMediaTypes"
@@ -81541,7 +81689,51 @@
         "yuva422p12",
         "yuva444p12",
         "nv24",
-        "nv42"
+        "nv42",
+        "vulkan",
+        "y210",
+        "x2rgb10",
+        "x2bgr10",
+        "p210",
+        "p410",
+        "p216",
+        "p416",
+        "vuya",
+        "rgbaf16",
+        "vuyx",
+        "p012",
+        "y212",
+        "xv30",
+        "xv36",
+        "rgbf32",
+        "rgbaf32",
+        "p212",
+        "p412",
+        "gbrap14",
+        "d3d12",
+        "ayuv",
+        "uyva",
+        "vyu444",
+        "v30x",
+        "rgbf16",
+        "rgba128",
+        "rgb96",
+        "y216",
+        "xv48",
+        "gbrpf16",
+        "gbrapf16",
+        "grayf16",
+        "amf_surface",
+        "gray32",
+        "yaf32",
+        "yaf16",
+        "gbrap32",
+        "yuv444p10msb",
+        "yuv444p12msb",
+        "gbrp10msb",
+        "gbrp12msb",
+        "ohcodec",
+        "nv15"
       ],
       "type": "string",
       "x-internal-ref-name": "Emby.Media.Model.Enums.ColorFormats"
@@ -82087,8 +82279,11 @@
           "format": "date-time",
           "type": "string"
         },
-        "DisplayOrder": {
-          "$ref": "#/definitions/SeriesDisplayOrder"
+        "SeriesOrder": {
+          "type": "string"
+        },
+        "SeriesOrderInfo": {
+          "$ref": "#/definitions/Entities.TV.SeriesOrderInfo"
         },
         "Name": {
           "description": "The name.",
@@ -82140,14 +82335,17 @@
       },
       "x-internal-ref-name": "MediaBrowser.Controller.Providers.SeriesInfo"
     },
-    "SeriesDisplayOrder": {
-      "enum": [
-        "Aired",
-        "Dvd",
-        "Absolute"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Entities.SeriesDisplayOrder"
+    "Entities.TV.SeriesOrderInfo": {
+      "type": "object",
+      "properties": {
+        "ProviderKey": {
+          "type": "string"
+        },
+        "Id": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Controller.Entities.TV.SeriesOrderInfo"
     },
     "RemoteSearchQuery_GameInfo": {
       "type": "object",
@@ -83476,6 +83674,9 @@
           "format": "int32",
           "description": "The index of the subtitle stream.",
           "type": "integer"
+        },
+        "SubtitleEnableReason": {
+          "$ref": "#/definitions/SubtitleEnableReason"
         },
         "IsPaused": {
           "description": "A value indicating whether this instance is paused.",

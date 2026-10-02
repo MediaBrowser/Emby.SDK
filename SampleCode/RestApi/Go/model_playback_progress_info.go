@@ -21,6 +21,7 @@ type PlaybackProgressInfo struct {
 	AudioStreamIndex int32 `json:"AudioStreamIndex,omitempty"`
 	// The index of the subtitle stream.
 	SubtitleStreamIndex int32 `json:"SubtitleStreamIndex,omitempty"`
+	SubtitleEnableReason *SubtitleEnableReason `json:"SubtitleEnableReason,omitempty"`
 	// A value indicating whether this instance is paused.
 	IsPaused bool `json:"IsPaused,omitempty"`
 	PlaylistIndex int32 `json:"PlaylistIndex,omitempty"`

@@ -39,7 +39,9 @@ class UserConfiguration(object):
         'enable_next_episode_auto_play': 'bool',
         'resume_rewind_seconds': 'int',
         'intro_skip_mode': 'SegmentSkipMode',
-        'enable_local_password': 'bool'
+        'enable_local_password': 'bool',
+        'show_subtitles_on_skip_back': 'bool',
+        'show_subtitles_on_low_volume': 'bool'
     }
 
     attribute_map = {
@@ -60,10 +62,12 @@ class UserConfiguration(object):
         'enable_next_episode_auto_play': 'EnableNextEpisodeAutoPlay',
         'resume_rewind_seconds': 'ResumeRewindSeconds',
         'intro_skip_mode': 'IntroSkipMode',
-        'enable_local_password': 'EnableLocalPassword'
+        'enable_local_password': 'EnableLocalPassword',
+        'show_subtitles_on_skip_back': 'ShowSubtitlesOnSkipBack',
+        'show_subtitles_on_low_volume': 'ShowSubtitlesOnLowVolume'
     }
 
-    def __init__(self, audio_language_preference=None, play_default_audio_track=None, subtitle_language_preference=None, profile_pin=None, display_missing_episodes=None, subtitle_mode=None, ordered_views=None, latest_items_excludes=None, my_media_excludes=None, hide_played_in_latest=None, hide_played_in_more_like_this=None, hide_played_in_suggestions=None, remember_audio_selections=None, remember_subtitle_selections=None, enable_next_episode_auto_play=None, resume_rewind_seconds=None, intro_skip_mode=None, enable_local_password=None):  # noqa: E501
+    def __init__(self, audio_language_preference=None, play_default_audio_track=None, subtitle_language_preference=None, profile_pin=None, display_missing_episodes=None, subtitle_mode=None, ordered_views=None, latest_items_excludes=None, my_media_excludes=None, hide_played_in_latest=None, hide_played_in_more_like_this=None, hide_played_in_suggestions=None, remember_audio_selections=None, remember_subtitle_selections=None, enable_next_episode_auto_play=None, resume_rewind_seconds=None, intro_skip_mode=None, enable_local_password=None, show_subtitles_on_skip_back=None, show_subtitles_on_low_volume=None):  # noqa: E501
         """UserConfiguration - a model defined in Swagger"""  # noqa: E501
         self._audio_language_preference = None
         self._play_default_audio_track = None
@@ -83,6 +87,8 @@ class UserConfiguration(object):
         self._resume_rewind_seconds = None
         self._intro_skip_mode = None
         self._enable_local_password = None
+        self._show_subtitles_on_skip_back = None
+        self._show_subtitles_on_low_volume = None
         self.discriminator = None
         if audio_language_preference is not None:
             self.audio_language_preference = audio_language_preference
@@ -120,6 +126,10 @@ class UserConfiguration(object):
             self.intro_skip_mode = intro_skip_mode
         if enable_local_password is not None:
             self.enable_local_password = enable_local_password
+        if show_subtitles_on_skip_back is not None:
+            self.show_subtitles_on_skip_back = show_subtitles_on_skip_back
+        if show_subtitles_on_low_volume is not None:
+            self.show_subtitles_on_low_volume = show_subtitles_on_low_volume
 
     @property
     def audio_language_preference(self):
@@ -504,6 +514,48 @@ class UserConfiguration(object):
         """
 
         self._enable_local_password = enable_local_password
+
+    @property
+    def show_subtitles_on_skip_back(self):
+        """Gets the show_subtitles_on_skip_back of this UserConfiguration.  # noqa: E501
+
+
+        :return: The show_subtitles_on_skip_back of this UserConfiguration.  # noqa: E501
+        :rtype: bool
+        """
+        return self._show_subtitles_on_skip_back
+
+    @show_subtitles_on_skip_back.setter
+    def show_subtitles_on_skip_back(self, show_subtitles_on_skip_back):
+        """Sets the show_subtitles_on_skip_back of this UserConfiguration.
+
+
+        :param show_subtitles_on_skip_back: The show_subtitles_on_skip_back of this UserConfiguration.  # noqa: E501
+        :type: bool
+        """
+
+        self._show_subtitles_on_skip_back = show_subtitles_on_skip_back
+
+    @property
+    def show_subtitles_on_low_volume(self):
+        """Gets the show_subtitles_on_low_volume of this UserConfiguration.  # noqa: E501
+
+
+        :return: The show_subtitles_on_low_volume of this UserConfiguration.  # noqa: E501
+        :rtype: bool
+        """
+        return self._show_subtitles_on_low_volume
+
+    @show_subtitles_on_low_volume.setter
+    def show_subtitles_on_low_volume(self, show_subtitles_on_low_volume):
+        """Sets the show_subtitles_on_low_volume of this UserConfiguration.
+
+
+        :param show_subtitles_on_low_volume: The show_subtitles_on_low_volume of this UserConfiguration.  # noqa: E501
+        :type: bool
+        """
+
+        self._show_subtitles_on_low_volume = show_subtitles_on_low_volume
 
     def to_dict(self):
         """Returns the model properties as a dict"""

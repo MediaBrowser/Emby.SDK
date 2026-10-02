@@ -26,6 +26,9 @@ public class NameIdPair {
   @SerializedName("Id")
   private String id = null;
 
+  @SerializedName("ShortOverview")
+  private String shortOverview = null;
+
   public NameIdPair name(String name) {
     this.name = name;
     return this;
@@ -62,6 +65,24 @@ public class NameIdPair {
     this.id = id;
   }
 
+  public NameIdPair shortOverview(String shortOverview) {
+    this.shortOverview = shortOverview;
+    return this;
+  }
+
+   /**
+   * Get shortOverview
+   * @return shortOverview
+  **/
+  @Schema(description = "")
+  public String getShortOverview() {
+    return shortOverview;
+  }
+
+  public void setShortOverview(String shortOverview) {
+    this.shortOverview = shortOverview;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -73,12 +94,13 @@ public class NameIdPair {
     }
     NameIdPair nameIdPair = (NameIdPair) o;
     return Objects.equals(this.name, nameIdPair.name) &&
-        Objects.equals(this.id, nameIdPair.id);
+        Objects.equals(this.id, nameIdPair.id) &&
+        Objects.equals(this.shortOverview, nameIdPair.shortOverview);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, id);
+    return Objects.hash(name, id, shortOverview);
   }
 
 
@@ -89,6 +111,7 @@ public class NameIdPair {
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    shortOverview: ").append(toIndentedString(shortOverview)).append("\n");
     sb.append("}");
     return sb.toString();
   }

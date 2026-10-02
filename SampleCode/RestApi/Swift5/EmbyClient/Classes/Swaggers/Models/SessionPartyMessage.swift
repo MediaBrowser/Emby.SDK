@@ -11,20 +11,23 @@ import Foundation
 
 public struct SessionPartyMessage: Codable {
 
-    public var userId: Int64?
     public var dateTime: Date?
     public var message: String?
+    public var userId: Int64?
+    public var user: UserDto?
 
-    public init(userId: Int64? = nil, dateTime: Date? = nil, message: String? = nil) {
-        self.userId = userId
+    public init(dateTime: Date? = nil, message: String? = nil, userId: Int64? = nil, user: UserDto? = nil) {
         self.dateTime = dateTime
         self.message = message
+        self.userId = userId
+        self.user = user
     }
 
     public enum CodingKeys: String, CodingKey { 
-        case userId = "UserId"
         case dateTime = "DateTime"
         case message = "Message"
+        case userId = "UserId"
+        case user = "User"
     }
 
 }

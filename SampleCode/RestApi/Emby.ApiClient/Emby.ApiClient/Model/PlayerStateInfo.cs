@@ -69,6 +69,12 @@ namespace Emby.ApiClient.Model
         public int? SubtitleStreamIndex { get; set; }
 
         /// <summary>
+        /// Gets or Sets SubtitleEnableReason
+        /// </summary>
+        /// <value>The SubtitleEnableReason.</value>
+        public SubtitleEnableReason SubtitleEnableReason { get; set; }
+
+        /// <summary>
         /// The now playing media version identifier.
         /// </summary>
         /// <value>The MediaSourceId.</value>
@@ -137,6 +143,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  VolumeLevel: ").Append(VolumeLevel).Append("\n");
             sb.Append("  AudioStreamIndex: ").Append(AudioStreamIndex).Append("\n");
             sb.Append("  SubtitleStreamIndex: ").Append(SubtitleStreamIndex).Append("\n");
+            sb.Append("  SubtitleEnableReason: ").Append(SubtitleEnableReason).Append("\n");
             sb.Append("  MediaSourceId: ").Append(MediaSourceId).Append("\n");
             sb.Append("  MediaSource: ").Append(MediaSource).Append("\n");
             sb.Append("  PlayMethod: ").Append(PlayMethod).Append("\n");
@@ -205,6 +212,11 @@ namespace Emby.ApiClient.Model
                     this.SubtitleStreamIndex == input.SubtitleStreamIndex ||
                     (this.SubtitleStreamIndex != null &&
                     this.SubtitleStreamIndex.Equals(input.SubtitleStreamIndex))
+                ) && 
+                (
+                    this.SubtitleEnableReason == input.SubtitleEnableReason ||
+                    (this.SubtitleEnableReason != null &&
+                    this.SubtitleEnableReason.Equals(input.SubtitleEnableReason))
                 ) && 
                 (
                     this.MediaSourceId == input.MediaSourceId ||
@@ -276,6 +288,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.AudioStreamIndex.GetHashCode();
                 if (this.SubtitleStreamIndex != null)
                     hashCode = hashCode * 59 + this.SubtitleStreamIndex.GetHashCode();
+                if (this.SubtitleEnableReason != null)
+                    hashCode = hashCode * 59 + this.SubtitleEnableReason.GetHashCode();
                 if (this.MediaSourceId != null)
                     hashCode = hashCode * 59 + this.MediaSourceId.GetHashCode();
                 if (this.MediaSource != null)

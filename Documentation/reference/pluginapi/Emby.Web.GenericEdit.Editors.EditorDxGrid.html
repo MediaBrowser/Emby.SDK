@@ -173,13 +173,13 @@
   
   
   <a id="Emby_Web_GenericEdit_Editors_EditorDxGrid__ctor_" data-uid="Emby.Web.GenericEdit.Editors.EditorDxGrid.#ctor*"></a>
-  <h4 id="Emby_Web_GenericEdit_Editors_EditorDxGrid__ctor_System_String_System_String_System_Boolean_System_String_System_String_System_String_System_String_System_String_" data-uid="Emby.Web.GenericEdit.Editors.EditorDxGrid.#ctor(System.String,System.String,System.Boolean,System.String,System.String,System.String,System.String,System.String)">EditorDxGrid(String, String, Boolean, String, String, String, String, String)</h4>
+  <h4 id="Emby_Web_GenericEdit_Editors_EditorDxGrid__ctor_System_String_System_String_System_Boolean_System_Boolean_System_String_System_String_System_String_System_String_System_String_" data-uid="Emby.Web.GenericEdit.Editors.EditorDxGrid.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.String,System.String,System.String,System.String,System.String)">EditorDxGrid(String, String, Boolean, Boolean, String, String, String, String, String)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Web.GenericEdit.Editors.EditorDxGrid.html">EditorDxGrid</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EditorDxGrid(string name, string parentId, bool doublePaneGrid, string dataSourceId, string dataSource2Id, string selectionSourceId, string filterSourceId, string datafilterSourceId)</code></pre>
+    <pre><code class="lang-csharp hljs">public EditorDxGrid(string name, string parentId, bool doublePaneGrid, bool filterPanelOnly, string dataSourceId, string dataSource2Id, string selectionSourceId, string filterSourceId, string datafilterSourceId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,6 +207,12 @@
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">doublePaneGrid</span></td>
         <td><p>if set to <code>true</code> [double pane grid].</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">filterPanelOnly</span></td>
+        <td><p>if set to <code>true</code> [filter panel only].</p>
 </td>
       </tr>
       <tr>
@@ -377,6 +383,31 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool ShowDoublePaneGrid { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_Editors_EditorDxGrid_ShowFilterBuilderOnly_" data-uid="Emby.Web.GenericEdit.Editors.EditorDxGrid.ShowFilterBuilderOnly*"></a>
+  <h4 id="Emby_Web_GenericEdit_Editors_EditorDxGrid_ShowFilterBuilderOnly" data-uid="Emby.Web.GenericEdit.Editors.EditorDxGrid.ShowFilterBuilderOnly">ShowFilterBuilderOnly</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowFilterBuilderOnly { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

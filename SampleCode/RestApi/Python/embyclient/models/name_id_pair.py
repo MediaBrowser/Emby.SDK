@@ -23,23 +23,28 @@ class NameIdPair(object):
     """
     swagger_types = {
         'name': 'str',
-        'id': 'str'
+        'id': 'str',
+        'short_overview': 'str'
     }
 
     attribute_map = {
         'name': 'Name',
-        'id': 'Id'
+        'id': 'Id',
+        'short_overview': 'ShortOverview'
     }
 
-    def __init__(self, name=None, id=None):  # noqa: E501
+    def __init__(self, name=None, id=None, short_overview=None):  # noqa: E501
         """NameIdPair - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._id = None
+        self._short_overview = None
         self.discriminator = None
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
+        if short_overview is not None:
+            self.short_overview = short_overview
 
     @property
     def name(self):
@@ -86,6 +91,27 @@ class NameIdPair(object):
         """
 
         self._id = id
+
+    @property
+    def short_overview(self):
+        """Gets the short_overview of this NameIdPair.  # noqa: E501
+
+
+        :return: The short_overview of this NameIdPair.  # noqa: E501
+        :rtype: str
+        """
+        return self._short_overview
+
+    @short_overview.setter
+    def short_overview(self, short_overview):
+        """Sets the short_overview of this NameIdPair.
+
+
+        :param short_overview: The short_overview of this NameIdPair.  # noqa: E501
+        :type: str
+        """
+
+        self._short_overview = short_overview
 
     def to_dict(self):
         """Returns the model properties as a dict"""

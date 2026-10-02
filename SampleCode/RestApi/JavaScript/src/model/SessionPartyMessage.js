@@ -10,11 +10,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import UserDto from './UserDto';
 
 /**
 * The SessionPartyMessage model module.
 * @module model/SessionPartyMessage
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class SessionPartyMessage {
     /**
@@ -41,23 +42,22 @@ export default class SessionPartyMessage {
             obj = obj || new SessionPartyMessage();
                         
             
-            if (data.hasOwnProperty('UserId')) {
-                obj['UserId'] = ApiClient.convertToType(data['UserId'], 'Number');
-            }
             if (data.hasOwnProperty('DateTime')) {
                 obj['DateTime'] = ApiClient.convertToType(data['DateTime'], 'Date');
             }
             if (data.hasOwnProperty('Message')) {
                 obj['Message'] = ApiClient.convertToType(data['Message'], 'String');
             }
+            if (data.hasOwnProperty('UserId')) {
+                obj['UserId'] = ApiClient.convertToType(data['UserId'], 'Number');
+            }
+            if (data.hasOwnProperty('User')) {
+                obj['User'] = UserDto.constructFromObject(data['User']);
+            }
         }
         return obj;
     }
 
-    /**
-    * @member {Number} UserId
-    */
-    'UserId' = undefined;
     /**
     * @member {Date} DateTime
     */
@@ -66,6 +66,14 @@ export default class SessionPartyMessage {
     * @member {String} Message
     */
     'Message' = undefined;
+    /**
+    * @member {Number} UserId
+    */
+    'UserId' = undefined;
+    /**
+    * @member {module:model/UserDto} User
+    */
+    'User' = undefined;
 
 
 

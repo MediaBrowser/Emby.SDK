@@ -18,7 +18,7 @@ import UITabPageInfo from './UITabPageInfo';
 /**
 * The UIViewInfo model module.
 * @module model/UIViewInfo
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class UIViewInfo {
     /**
@@ -65,6 +65,9 @@ export default class UIViewInfo {
             }
             if (data.hasOwnProperty('ShowDialogFullScreen')) {
                 obj['ShowDialogFullScreen'] = ApiClient.convertToType(data['ShowDialogFullScreen'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ShowResetToDefaults')) {
+                obj['ShowResetToDefaults'] = ApiClient.convertToType(data['ShowResetToDefaults'], 'Boolean');
             }
             if (data.hasOwnProperty('IsInSequence')) {
                 obj['IsInSequence'] = ApiClient.convertToType(data['IsInSequence'], 'Boolean');
@@ -116,6 +119,10 @@ export default class UIViewInfo {
     * @member {Boolean} ShowDialogFullScreen
     */
     'ShowDialogFullScreen' = undefined;
+    /**
+    * @member {Boolean} ShowResetToDefaults
+    */
+    'ShowResetToDefaults' = undefined;
     /**
     * @member {Boolean} IsInSequence
     */

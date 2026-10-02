@@ -26,22 +26,18 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SessionPartyMessage" /> class.
         /// </summary>
-        /// <param name="userId">userId.</param>
         /// <param name="dateTime">dateTime.</param>
         /// <param name="message">message.</param>
-        public SessionPartyMessage(long? userId = default(long?), DateTimeOffset? dateTime = default(DateTimeOffset?), string message = default(string))
+        /// <param name="userId">userId.</param>
+        /// <param name="user">user.</param>
+        public SessionPartyMessage(DateTimeOffset? dateTime = default(DateTimeOffset?), string message = default(string), long? userId = default(long?), UserDto user = default(UserDto))
         {
-            this.UserId = userId;
             this.DateTime = dateTime;
             this.Message = message;
+            this.UserId = userId;
+            this.User = user;
         }
         
-        /// <summary>
-        /// Gets or Sets UserId
-        /// </summary>
-        [DataMember(Name="UserId", EmitDefaultValue=false)]
-        public long? UserId { get; set; }
-
         /// <summary>
         /// Gets or Sets DateTime
         /// </summary>
@@ -55,6 +51,18 @@ namespace EmbyClient.Dotnet.Model
         public string Message { get; set; }
 
         /// <summary>
+        /// Gets or Sets UserId
+        /// </summary>
+        [DataMember(Name="UserId", EmitDefaultValue=false)]
+        public long? UserId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets User
+        /// </summary>
+        [DataMember(Name="User", EmitDefaultValue=false)]
+        public UserDto User { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -62,9 +70,10 @@ namespace EmbyClient.Dotnet.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SessionPartyMessage {\n");
-            sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  DateTime: ").Append(DateTime).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  UserId: ").Append(UserId).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -100,11 +109,6 @@ namespace EmbyClient.Dotnet.Model
 
             return 
                 (
-                    this.UserId == input.UserId ||
-                    (this.UserId != null &&
-                    this.UserId.Equals(input.UserId))
-                ) && 
-                (
                     this.DateTime == input.DateTime ||
                     (this.DateTime != null &&
                     this.DateTime.Equals(input.DateTime))
@@ -113,6 +117,16 @@ namespace EmbyClient.Dotnet.Model
                     this.Message == input.Message ||
                     (this.Message != null &&
                     this.Message.Equals(input.Message))
+                ) && 
+                (
+                    this.UserId == input.UserId ||
+                    (this.UserId != null &&
+                    this.UserId.Equals(input.UserId))
+                ) && 
+                (
+                    this.User == input.User ||
+                    (this.User != null &&
+                    this.User.Equals(input.User))
                 );
         }
 
@@ -125,12 +139,14 @@ namespace EmbyClient.Dotnet.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.UserId != null)
-                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
                 if (this.DateTime != null)
                     hashCode = hashCode * 59 + this.DateTime.GetHashCode();
                 if (this.Message != null)
                     hashCode = hashCode * 59 + this.Message.GetHashCode();
+                if (this.UserId != null)
+                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
+                if (this.User != null)
+                    hashCode = hashCode * 59 + this.User.GetHashCode();
                 return hashCode;
             }
         }

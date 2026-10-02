@@ -11,11 +11,11 @@ import Foundation
 
 public struct ApiAvailableRecordingOptions: Codable {
 
-    public var recordingFolders: [ApiNameIdDescriptionPair]?
-    public var movieRecordingFolders: [ApiNameIdDescriptionPair]?
-    public var seriesRecordingFolders: [ApiNameIdDescriptionPair]?
+    public var recordingFolders: [NameIdPair]?
+    public var movieRecordingFolders: [NameIdPair]?
+    public var seriesRecordingFolders: [NameIdPair]?
 
-    public init(recordingFolders: [ApiNameIdDescriptionPair]? = nil, movieRecordingFolders: [ApiNameIdDescriptionPair]? = nil, seriesRecordingFolders: [ApiNameIdDescriptionPair]? = nil) {
+    public init(recordingFolders: [NameIdPair]? = nil, movieRecordingFolders: [NameIdPair]? = nil, seriesRecordingFolders: [NameIdPair]? = nil) {
         self.recordingFolders = recordingFolders
         self.movieRecordingFolders = movieRecordingFolders
         self.seriesRecordingFolders = seriesRecordingFolders

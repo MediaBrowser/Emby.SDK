@@ -18,6 +18,7 @@ public struct UIViewInfo: Codable {
     public var pluginId: String?
     public var viewType: EnumsUIViewType?
     public var showDialogFullScreen: Bool?
+    public var showResetToDefaults: Bool?
     public var isInSequence: Bool?
     public var redirectViewUrl: String?
     public var editObjectContainer: GenericEditIEditObjectContainer?
@@ -25,7 +26,7 @@ public struct UIViewInfo: Codable {
     public var tabPageInfos: [UITabPageInfo]?
     public var isPageChangeInfo: Bool?
 
-    public init(viewId: String? = nil, pageId: String? = nil, caption: String? = nil, subCaption: String? = nil, pluginId: String? = nil, viewType: EnumsUIViewType? = nil, showDialogFullScreen: Bool? = nil, isInSequence: Bool? = nil, redirectViewUrl: String? = nil, editObjectContainer: GenericEditIEditObjectContainer? = nil, commands: [UICommand]? = nil, tabPageInfos: [UITabPageInfo]? = nil, isPageChangeInfo: Bool? = nil) {
+    public init(viewId: String? = nil, pageId: String? = nil, caption: String? = nil, subCaption: String? = nil, pluginId: String? = nil, viewType: EnumsUIViewType? = nil, showDialogFullScreen: Bool? = nil, showResetToDefaults: Bool? = nil, isInSequence: Bool? = nil, redirectViewUrl: String? = nil, editObjectContainer: GenericEditIEditObjectContainer? = nil, commands: [UICommand]? = nil, tabPageInfos: [UITabPageInfo]? = nil, isPageChangeInfo: Bool? = nil) {
         self.viewId = viewId
         self.pageId = pageId
         self.caption = caption
@@ -33,6 +34,7 @@ public struct UIViewInfo: Codable {
         self.pluginId = pluginId
         self.viewType = viewType
         self.showDialogFullScreen = showDialogFullScreen
+        self.showResetToDefaults = showResetToDefaults
         self.isInSequence = isInSequence
         self.redirectViewUrl = redirectViewUrl
         self.editObjectContainer = editObjectContainer
@@ -49,6 +51,7 @@ public struct UIViewInfo: Codable {
         case pluginId = "PluginId"
         case viewType = "ViewType"
         case showDialogFullScreen = "ShowDialogFullScreen"
+        case showResetToDefaults = "ShowResetToDefaults"
         case isInSequence = "IsInSequence"
         case redirectViewUrl = "RedirectViewUrl"
         case editObjectContainer = "EditObjectContainer"

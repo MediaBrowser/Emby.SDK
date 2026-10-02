@@ -38,6 +38,7 @@ open class GenericUIApiServiceAPI {
   "PageId" : "PageId",
   "RedirectViewUrl" : "RedirectViewUrl",
   "ShowDialogFullScreen" : true,
+  "ShowResetToDefaults" : true,
   "PluginId" : "PluginId",
   "Caption" : "Caption",
   "EditObjectContainer" : {
@@ -130,6 +131,7 @@ open class GenericUIApiServiceAPI {
   "PageId" : "PageId",
   "RedirectViewUrl" : "RedirectViewUrl",
   "ShowDialogFullScreen" : true,
+  "ShowResetToDefaults" : true,
   "PluginId" : "PluginId",
   "Caption" : "Caption",
   "EditObjectContainer" : {

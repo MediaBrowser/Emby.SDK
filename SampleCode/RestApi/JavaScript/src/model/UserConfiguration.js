@@ -16,7 +16,7 @@ import SubtitlePlaybackMode from './SubtitlePlaybackMode';
 /**
 * The UserConfiguration model module.
 * @module model/UserConfiguration
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class UserConfiguration {
     /**
@@ -98,6 +98,12 @@ export default class UserConfiguration {
             if (data.hasOwnProperty('EnableLocalPassword')) {
                 obj['EnableLocalPassword'] = ApiClient.convertToType(data['EnableLocalPassword'], 'Boolean');
             }
+            if (data.hasOwnProperty('ShowSubtitlesOnSkipBack')) {
+                obj['ShowSubtitlesOnSkipBack'] = ApiClient.convertToType(data['ShowSubtitlesOnSkipBack'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ShowSubtitlesOnLowVolume')) {
+                obj['ShowSubtitlesOnLowVolume'] = ApiClient.convertToType(data['ShowSubtitlesOnLowVolume'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -177,6 +183,14 @@ export default class UserConfiguration {
     * @member {Boolean} EnableLocalPassword
     */
     'EnableLocalPassword' = undefined;
+    /**
+    * @member {Boolean} ShowSubtitlesOnSkipBack
+    */
+    'ShowSubtitlesOnSkipBack' = undefined;
+    /**
+    * @member {Boolean} ShowSubtitlesOnLowVolume
+    */
+    'ShowSubtitlesOnLowVolume' = undefined;
 
 
 

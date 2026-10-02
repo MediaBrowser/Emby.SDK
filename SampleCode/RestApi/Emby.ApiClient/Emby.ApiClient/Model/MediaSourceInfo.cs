@@ -297,6 +297,12 @@ namespace Emby.ApiClient.Model
         public int? DefaultSubtitleStreamIndex { get; set; }
 
         /// <summary>
+        /// Gets or Sets FullSubtitleStreamIndex
+        /// </summary>
+        /// <value>The FullSubtitleStreamIndex.</value>
+        public int? FullSubtitleStreamIndex { get; set; }
+
+        /// <summary>
         /// Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi
         /// </summary>
         /// <value>The ItemId.</value>
@@ -373,6 +379,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  ReadAtNativeFramerate: ").Append(ReadAtNativeFramerate).Append("\n");
             sb.Append("  DefaultAudioStreamIndex: ").Append(DefaultAudioStreamIndex).Append("\n");
             sb.Append("  DefaultSubtitleStreamIndex: ").Append(DefaultSubtitleStreamIndex).Append("\n");
+            sb.Append("  FullSubtitleStreamIndex: ").Append(FullSubtitleStreamIndex).Append("\n");
             sb.Append("  ItemId: ").Append(ItemId).Append("\n");
             sb.Append("  ServerId: ").Append(ServerId).Append("\n");
             sb.Append("  MimeType: ").Append(MimeType).Append("\n");
@@ -632,6 +639,11 @@ namespace Emby.ApiClient.Model
                     this.DefaultSubtitleStreamIndex.Equals(input.DefaultSubtitleStreamIndex))
                 ) && 
                 (
+                    this.FullSubtitleStreamIndex == input.FullSubtitleStreamIndex ||
+                    (this.FullSubtitleStreamIndex != null &&
+                    this.FullSubtitleStreamIndex.Equals(input.FullSubtitleStreamIndex))
+                ) && 
+                (
                     this.ItemId == input.ItemId ||
                     (this.ItemId != null &&
                     this.ItemId.Equals(input.ItemId))
@@ -752,6 +764,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.DefaultAudioStreamIndex.GetHashCode();
                 if (this.DefaultSubtitleStreamIndex != null)
                     hashCode = hashCode * 59 + this.DefaultSubtitleStreamIndex.GetHashCode();
+                if (this.FullSubtitleStreamIndex != null)
+                    hashCode = hashCode * 59 + this.FullSubtitleStreamIndex.GetHashCode();
                 if (this.ItemId != null)
                     hashCode = hashCode * 59 + this.ItemId.GetHashCode();
                 if (this.ServerId != null)

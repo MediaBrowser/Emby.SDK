@@ -10,12 +10,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApiNameIdDescriptionPair from './ApiNameIdDescriptionPair';
+import NameIdPair from './NameIdPair';
 
 /**
 * The ApiAvailableRecordingOptions model module.
 * @module model/ApiAvailableRecordingOptions
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class ApiAvailableRecordingOptions {
     /**
@@ -43,28 +43,28 @@ export default class ApiAvailableRecordingOptions {
                         
             
             if (data.hasOwnProperty('RecordingFolders')) {
-                obj['RecordingFolders'] = ApiClient.convertToType(data['RecordingFolders'], [ApiNameIdDescriptionPair]);
+                obj['RecordingFolders'] = ApiClient.convertToType(data['RecordingFolders'], [NameIdPair]);
             }
             if (data.hasOwnProperty('MovieRecordingFolders')) {
-                obj['MovieRecordingFolders'] = ApiClient.convertToType(data['MovieRecordingFolders'], [ApiNameIdDescriptionPair]);
+                obj['MovieRecordingFolders'] = ApiClient.convertToType(data['MovieRecordingFolders'], [NameIdPair]);
             }
             if (data.hasOwnProperty('SeriesRecordingFolders')) {
-                obj['SeriesRecordingFolders'] = ApiClient.convertToType(data['SeriesRecordingFolders'], [ApiNameIdDescriptionPair]);
+                obj['SeriesRecordingFolders'] = ApiClient.convertToType(data['SeriesRecordingFolders'], [NameIdPair]);
             }
         }
         return obj;
     }
 
     /**
-    * @member {Array.<module:model/ApiNameIdDescriptionPair>} RecordingFolders
+    * @member {Array.<module:model/NameIdPair>} RecordingFolders
     */
     'RecordingFolders' = undefined;
     /**
-    * @member {Array.<module:model/ApiNameIdDescriptionPair>} MovieRecordingFolders
+    * @member {Array.<module:model/NameIdPair>} MovieRecordingFolders
     */
     'MovieRecordingFolders' = undefined;
     /**
-    * @member {Array.<module:model/ApiNameIdDescriptionPair>} SeriesRecordingFolders
+    * @member {Array.<module:model/NameIdPair>} SeriesRecordingFolders
     */
     'SeriesRecordingFolders' = undefined;
 

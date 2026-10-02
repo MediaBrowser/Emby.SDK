@@ -7,7 +7,7 @@
 package embyclient
 
 type ApiAvailableRecordingOptions struct {
-	RecordingFolders []ApiNameIdDescriptionPair `json:"RecordingFolders,omitempty"`
-	MovieRecordingFolders []ApiNameIdDescriptionPair `json:"MovieRecordingFolders,omitempty"`
-	SeriesRecordingFolders []ApiNameIdDescriptionPair `json:"SeriesRecordingFolders,omitempty"`
+	RecordingFolders []NameIdPair `json:"RecordingFolders,omitempty"`
+	MovieRecordingFolders []NameIdPair `json:"MovieRecordingFolders,omitempty"`
+	SeriesRecordingFolders []NameIdPair `json:"SeriesRecordingFolders,omitempty"`
 }

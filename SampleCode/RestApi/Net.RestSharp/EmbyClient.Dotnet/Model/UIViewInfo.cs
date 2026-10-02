@@ -33,13 +33,14 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="pluginId">pluginId.</param>
         /// <param name="viewType">viewType.</param>
         /// <param name="showDialogFullScreen">showDialogFullScreen.</param>
+        /// <param name="showResetToDefaults">showResetToDefaults.</param>
         /// <param name="isInSequence">isInSequence.</param>
         /// <param name="redirectViewUrl">redirectViewUrl.</param>
         /// <param name="editObjectContainer">editObjectContainer.</param>
         /// <param name="commands">commands.</param>
         /// <param name="tabPageInfos">tabPageInfos.</param>
         /// <param name="isPageChangeInfo">isPageChangeInfo.</param>
-        public UIViewInfo(string viewId = default(string), string pageId = default(string), string caption = default(string), string subCaption = default(string), string pluginId = default(string), EnumsUIViewType viewType = default(EnumsUIViewType), bool? showDialogFullScreen = default(bool?), bool? isInSequence = default(bool?), string redirectViewUrl = default(string), GenericEditIEditObjectContainer editObjectContainer = default(GenericEditIEditObjectContainer), List<UICommand> commands = default(List<UICommand>), List<UITabPageInfo> tabPageInfos = default(List<UITabPageInfo>), bool? isPageChangeInfo = default(bool?))
+        public UIViewInfo(string viewId = default(string), string pageId = default(string), string caption = default(string), string subCaption = default(string), string pluginId = default(string), EnumsUIViewType viewType = default(EnumsUIViewType), bool? showDialogFullScreen = default(bool?), bool? showResetToDefaults = default(bool?), bool? isInSequence = default(bool?), string redirectViewUrl = default(string), GenericEditIEditObjectContainer editObjectContainer = default(GenericEditIEditObjectContainer), List<UICommand> commands = default(List<UICommand>), List<UITabPageInfo> tabPageInfos = default(List<UITabPageInfo>), bool? isPageChangeInfo = default(bool?))
         {
             this.ViewId = viewId;
             this.PageId = pageId;
@@ -48,6 +49,7 @@ namespace EmbyClient.Dotnet.Model
             this.PluginId = pluginId;
             this.ViewType = viewType;
             this.ShowDialogFullScreen = showDialogFullScreen;
+            this.ShowResetToDefaults = showResetToDefaults;
             this.IsInSequence = isInSequence;
             this.RedirectViewUrl = redirectViewUrl;
             this.EditObjectContainer = editObjectContainer;
@@ -97,6 +99,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="ShowDialogFullScreen", EmitDefaultValue=false)]
         public bool? ShowDialogFullScreen { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ShowResetToDefaults
+        /// </summary>
+        [DataMember(Name="ShowResetToDefaults", EmitDefaultValue=false)]
+        public bool? ShowResetToDefaults { get; set; }
 
         /// <summary>
         /// Gets or Sets IsInSequence
@@ -149,6 +157,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  PluginId: ").Append(PluginId).Append("\n");
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
             sb.Append("  ShowDialogFullScreen: ").Append(ShowDialogFullScreen).Append("\n");
+            sb.Append("  ShowResetToDefaults: ").Append(ShowResetToDefaults).Append("\n");
             sb.Append("  IsInSequence: ").Append(IsInSequence).Append("\n");
             sb.Append("  RedirectViewUrl: ").Append(RedirectViewUrl).Append("\n");
             sb.Append("  EditObjectContainer: ").Append(EditObjectContainer).Append("\n");
@@ -225,6 +234,11 @@ namespace EmbyClient.Dotnet.Model
                     this.ShowDialogFullScreen.Equals(input.ShowDialogFullScreen))
                 ) && 
                 (
+                    this.ShowResetToDefaults == input.ShowResetToDefaults ||
+                    (this.ShowResetToDefaults != null &&
+                    this.ShowResetToDefaults.Equals(input.ShowResetToDefaults))
+                ) && 
+                (
                     this.IsInSequence == input.IsInSequence ||
                     (this.IsInSequence != null &&
                     this.IsInSequence.Equals(input.IsInSequence))
@@ -281,6 +295,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.ViewType.GetHashCode();
                 if (this.ShowDialogFullScreen != null)
                     hashCode = hashCode * 59 + this.ShowDialogFullScreen.GetHashCode();
+                if (this.ShowResetToDefaults != null)
+                    hashCode = hashCode * 59 + this.ShowResetToDefaults.GetHashCode();
                 if (this.IsInSequence != null)
                     hashCode = hashCode * 59 + this.IsInSequence.GetHashCode();
                 if (this.RedirectViewUrl != null)

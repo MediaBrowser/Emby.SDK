@@ -44,7 +44,9 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="resumeRewindSeconds">resumeRewindSeconds.</param>
         /// <param name="introSkipMode">introSkipMode.</param>
         /// <param name="enableLocalPassword">enableLocalPassword.</param>
-        public UserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), string profilePin = default(string), bool? displayMissingEpisodes = default(bool?), SubtitlePlaybackMode subtitleMode = default(SubtitlePlaybackMode), List<string> orderedViews = default(List<string>), List<string> latestItemsExcludes = default(List<string>), List<string> myMediaExcludes = default(List<string>), bool? hidePlayedInLatest = default(bool?), bool? hidePlayedInMoreLikeThis = default(bool?), bool? hidePlayedInSuggestions = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), int? resumeRewindSeconds = default(int?), SegmentSkipMode introSkipMode = default(SegmentSkipMode), bool? enableLocalPassword = default(bool?))
+        /// <param name="showSubtitlesOnSkipBack">showSubtitlesOnSkipBack.</param>
+        /// <param name="showSubtitlesOnLowVolume">showSubtitlesOnLowVolume.</param>
+        public UserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), string profilePin = default(string), bool? displayMissingEpisodes = default(bool?), SubtitlePlaybackMode subtitleMode = default(SubtitlePlaybackMode), List<string> orderedViews = default(List<string>), List<string> latestItemsExcludes = default(List<string>), List<string> myMediaExcludes = default(List<string>), bool? hidePlayedInLatest = default(bool?), bool? hidePlayedInMoreLikeThis = default(bool?), bool? hidePlayedInSuggestions = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), int? resumeRewindSeconds = default(int?), SegmentSkipMode introSkipMode = default(SegmentSkipMode), bool? enableLocalPassword = default(bool?), bool? showSubtitlesOnSkipBack = default(bool?), bool? showSubtitlesOnLowVolume = default(bool?))
         {
             this.AudioLanguagePreference = audioLanguagePreference;
             this.PlayDefaultAudioTrack = playDefaultAudioTrack;
@@ -64,6 +66,8 @@ namespace EmbyClient.Dotnet.Model
             this.ResumeRewindSeconds = resumeRewindSeconds;
             this.IntroSkipMode = introSkipMode;
             this.EnableLocalPassword = enableLocalPassword;
+            this.ShowSubtitlesOnSkipBack = showSubtitlesOnSkipBack;
+            this.ShowSubtitlesOnLowVolume = showSubtitlesOnLowVolume;
         }
         
         /// <summary>
@@ -178,6 +182,18 @@ namespace EmbyClient.Dotnet.Model
         public bool? EnableLocalPassword { get; set; }
 
         /// <summary>
+        /// Gets or Sets ShowSubtitlesOnSkipBack
+        /// </summary>
+        [DataMember(Name="ShowSubtitlesOnSkipBack", EmitDefaultValue=false)]
+        public bool? ShowSubtitlesOnSkipBack { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ShowSubtitlesOnLowVolume
+        /// </summary>
+        [DataMember(Name="ShowSubtitlesOnLowVolume", EmitDefaultValue=false)]
+        public bool? ShowSubtitlesOnLowVolume { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -203,6 +219,8 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  ResumeRewindSeconds: ").Append(ResumeRewindSeconds).Append("\n");
             sb.Append("  IntroSkipMode: ").Append(IntroSkipMode).Append("\n");
             sb.Append("  EnableLocalPassword: ").Append(EnableLocalPassword).Append("\n");
+            sb.Append("  ShowSubtitlesOnSkipBack: ").Append(ShowSubtitlesOnSkipBack).Append("\n");
+            sb.Append("  ShowSubtitlesOnLowVolume: ").Append(ShowSubtitlesOnLowVolume).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -329,6 +347,16 @@ namespace EmbyClient.Dotnet.Model
                     this.EnableLocalPassword == input.EnableLocalPassword ||
                     (this.EnableLocalPassword != null &&
                     this.EnableLocalPassword.Equals(input.EnableLocalPassword))
+                ) && 
+                (
+                    this.ShowSubtitlesOnSkipBack == input.ShowSubtitlesOnSkipBack ||
+                    (this.ShowSubtitlesOnSkipBack != null &&
+                    this.ShowSubtitlesOnSkipBack.Equals(input.ShowSubtitlesOnSkipBack))
+                ) && 
+                (
+                    this.ShowSubtitlesOnLowVolume == input.ShowSubtitlesOnLowVolume ||
+                    (this.ShowSubtitlesOnLowVolume != null &&
+                    this.ShowSubtitlesOnLowVolume.Equals(input.ShowSubtitlesOnLowVolume))
                 );
         }
 
@@ -377,6 +405,10 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.IntroSkipMode.GetHashCode();
                 if (this.EnableLocalPassword != null)
                     hashCode = hashCode * 59 + this.EnableLocalPassword.GetHashCode();
+                if (this.ShowSubtitlesOnSkipBack != null)
+                    hashCode = hashCode * 59 + this.ShowSubtitlesOnSkipBack.GetHashCode();
+                if (this.ShowSubtitlesOnLowVolume != null)
+                    hashCode = hashCode * 59 + this.ShowSubtitlesOnLowVolume.GetHashCode();
                 return hashCode;
             }
         }

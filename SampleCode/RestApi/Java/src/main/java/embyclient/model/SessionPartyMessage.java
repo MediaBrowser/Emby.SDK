@@ -12,6 +12,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import embyclient.model.UserDto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.time.OffsetDateTime;
@@ -21,32 +22,17 @@ import java.time.OffsetDateTime;
 
 
 public class SessionPartyMessage {
-  @SerializedName("UserId")
-  private Long userId = null;
-
   @SerializedName("DateTime")
   private OffsetDateTime dateTime = null;
 
   @SerializedName("Message")
   private String message = null;
 
-  public SessionPartyMessage userId(Long userId) {
-    this.userId = userId;
-    return this;
-  }
+  @SerializedName("UserId")
+  private Long userId = null;
 
-   /**
-   * Get userId
-   * @return userId
-  **/
-  @Schema(description = "")
-  public Long getUserId() {
-    return userId;
-  }
-
-  public void setUserId(Long userId) {
-    this.userId = userId;
-  }
+  @SerializedName("User")
+  private UserDto user = null;
 
   public SessionPartyMessage dateTime(OffsetDateTime dateTime) {
     this.dateTime = dateTime;
@@ -84,6 +70,42 @@ public class SessionPartyMessage {
     this.message = message;
   }
 
+  public SessionPartyMessage userId(Long userId) {
+    this.userId = userId;
+    return this;
+  }
+
+   /**
+   * Get userId
+   * @return userId
+  **/
+  @Schema(description = "")
+  public Long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(Long userId) {
+    this.userId = userId;
+  }
+
+  public SessionPartyMessage user(UserDto user) {
+    this.user = user;
+    return this;
+  }
+
+   /**
+   * Get user
+   * @return user
+  **/
+  @Schema(description = "")
+  public UserDto getUser() {
+    return user;
+  }
+
+  public void setUser(UserDto user) {
+    this.user = user;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -94,14 +116,15 @@ public class SessionPartyMessage {
       return false;
     }
     SessionPartyMessage sessionPartyMessage = (SessionPartyMessage) o;
-    return Objects.equals(this.userId, sessionPartyMessage.userId) &&
-        Objects.equals(this.dateTime, sessionPartyMessage.dateTime) &&
-        Objects.equals(this.message, sessionPartyMessage.message);
+    return Objects.equals(this.dateTime, sessionPartyMessage.dateTime) &&
+        Objects.equals(this.message, sessionPartyMessage.message) &&
+        Objects.equals(this.userId, sessionPartyMessage.userId) &&
+        Objects.equals(this.user, sessionPartyMessage.user);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(userId, dateTime, message);
+    return Objects.hash(dateTime, message, userId, user);
   }
 
 
@@ -110,9 +133,10 @@ public class SessionPartyMessage {
     StringBuilder sb = new StringBuilder();
     sb.append("class SessionPartyMessage {\n");
     
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("    dateTime: ").append(toIndentedString(dateTime)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("}");
     return sb.toString();
   }

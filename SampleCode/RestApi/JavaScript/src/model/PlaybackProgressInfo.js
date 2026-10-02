@@ -16,11 +16,12 @@ import ProgressEvent from './ProgressEvent';
 import QueueItem from './QueueItem';
 import RepeatMode from './RepeatMode';
 import SleepTimerMode from './SleepTimerMode';
+import SubtitleEnableReason from './SubtitleEnableReason';
 
 /**
 * The PlaybackProgressInfo model module.
 * @module model/PlaybackProgressInfo
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class PlaybackProgressInfo {
     /**
@@ -65,6 +66,9 @@ export default class PlaybackProgressInfo {
             }
             if (data.hasOwnProperty('SubtitleStreamIndex')) {
                 obj['SubtitleStreamIndex'] = ApiClient.convertToType(data['SubtitleStreamIndex'], 'Number');
+            }
+            if (data.hasOwnProperty('SubtitleEnableReason')) {
+                obj['SubtitleEnableReason'] = SubtitleEnableReason.constructFromObject(data['SubtitleEnableReason']);
             }
             if (data.hasOwnProperty('IsPaused')) {
                 obj['IsPaused'] = ApiClient.convertToType(data['IsPaused'], 'Boolean');
@@ -170,6 +174,10 @@ export default class PlaybackProgressInfo {
     * @member {Number} SubtitleStreamIndex
     */
     'SubtitleStreamIndex' = undefined;
+    /**
+    * @member {module:model/SubtitleEnableReason} SubtitleEnableReason
+    */
+    'SubtitleEnableReason' = undefined;
     /**
     * A value indicating whether this instance is paused.
     * @member {Boolean} IsPaused

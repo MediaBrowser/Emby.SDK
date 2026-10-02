@@ -69,6 +69,12 @@ namespace Emby.ApiClient.Model
         public bool? ShowDialogFullScreen { get; set; }
 
         /// <summary>
+        /// Gets or Sets ShowResetToDefaults
+        /// </summary>
+        /// <value>The ShowResetToDefaults.</value>
+        public bool? ShowResetToDefaults { get; set; }
+
+        /// <summary>
         /// Gets or Sets IsInSequence
         /// </summary>
         /// <value>The IsInSequence.</value>
@@ -119,6 +125,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  PluginId: ").Append(PluginId).Append("\n");
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
             sb.Append("  ShowDialogFullScreen: ").Append(ShowDialogFullScreen).Append("\n");
+            sb.Append("  ShowResetToDefaults: ").Append(ShowResetToDefaults).Append("\n");
             sb.Append("  IsInSequence: ").Append(IsInSequence).Append("\n");
             sb.Append("  RedirectViewUrl: ").Append(RedirectViewUrl).Append("\n");
             sb.Append("  EditObjectContainer: ").Append(EditObjectContainer).Append("\n");
@@ -186,6 +193,11 @@ namespace Emby.ApiClient.Model
                     this.ShowDialogFullScreen.Equals(input.ShowDialogFullScreen))
                 ) && 
                 (
+                    this.ShowResetToDefaults == input.ShowResetToDefaults ||
+                    (this.ShowResetToDefaults != null &&
+                    this.ShowResetToDefaults.Equals(input.ShowResetToDefaults))
+                ) && 
+                (
                     this.IsInSequence == input.IsInSequence ||
                     (this.IsInSequence != null &&
                     this.IsInSequence.Equals(input.IsInSequence))
@@ -242,6 +254,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.ViewType.GetHashCode();
                 if (this.ShowDialogFullScreen != null)
                     hashCode = hashCode * 59 + this.ShowDialogFullScreen.GetHashCode();
+                if (this.ShowResetToDefaults != null)
+                    hashCode = hashCode * 59 + this.ShowResetToDefaults.GetHashCode();
                 if (this.IsInSequence != null)
                     hashCode = hashCode * 59 + this.IsInSequence.GetHashCode();
                 if (this.RedirectViewUrl != null)

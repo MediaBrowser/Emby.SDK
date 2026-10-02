@@ -18,41 +18,31 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// ApiNameIdDescriptionPair
+    /// EntitiesTVSeriesOrderInfo
     /// </summary>
     [DataContract]
-        public partial class ApiNameIdDescriptionPair :  IEquatable<ApiNameIdDescriptionPair>
+        public partial class EntitiesTVSeriesOrderInfo :  IEquatable<EntitiesTVSeriesOrderInfo>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiNameIdDescriptionPair" /> class.
+        /// Initializes a new instance of the <see cref="EntitiesTVSeriesOrderInfo" /> class.
         /// </summary>
-        /// <param name="shortOverview">shortOverview.</param>
-        /// <param name="name">The name..</param>
-        /// <param name="id">The identifier..</param>
-        public ApiNameIdDescriptionPair(string shortOverview = default(string), string name = default(string), string id = default(string))
+        /// <param name="providerKey">providerKey.</param>
+        /// <param name="id">id.</param>
+        public EntitiesTVSeriesOrderInfo(string providerKey = default(string), string id = default(string))
         {
-            this.ShortOverview = shortOverview;
-            this.Name = name;
+            this.ProviderKey = providerKey;
             this.Id = id;
         }
         
         /// <summary>
-        /// Gets or Sets ShortOverview
+        /// Gets or Sets ProviderKey
         /// </summary>
-        [DataMember(Name="ShortOverview", EmitDefaultValue=false)]
-        public string ShortOverview { get; set; }
+        [DataMember(Name="ProviderKey", EmitDefaultValue=false)]
+        public string ProviderKey { get; set; }
 
         /// <summary>
-        /// The name.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The name.</value>
-        [DataMember(Name="Name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-
-        /// <summary>
-        /// The identifier.
-        /// </summary>
-        /// <value>The identifier.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
@@ -63,9 +53,8 @@ namespace EmbyClient.Dotnet.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApiNameIdDescriptionPair {\n");
-            sb.Append("  ShortOverview: ").Append(ShortOverview).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("class EntitiesTVSeriesOrderInfo {\n");
+            sb.Append("  ProviderKey: ").Append(ProviderKey).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -87,29 +76,24 @@ namespace EmbyClient.Dotnet.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApiNameIdDescriptionPair);
+            return this.Equals(input as EntitiesTVSeriesOrderInfo);
         }
 
         /// <summary>
-        /// Returns true if ApiNameIdDescriptionPair instances are equal
+        /// Returns true if EntitiesTVSeriesOrderInfo instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApiNameIdDescriptionPair to be compared</param>
+        /// <param name="input">Instance of EntitiesTVSeriesOrderInfo to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApiNameIdDescriptionPair input)
+        public bool Equals(EntitiesTVSeriesOrderInfo input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.ShortOverview == input.ShortOverview ||
-                    (this.ShortOverview != null &&
-                    this.ShortOverview.Equals(input.ShortOverview))
-                ) && 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    this.ProviderKey == input.ProviderKey ||
+                    (this.ProviderKey != null &&
+                    this.ProviderKey.Equals(input.ProviderKey))
                 ) && 
                 (
                     this.Id == input.Id ||
@@ -127,10 +111,8 @@ namespace EmbyClient.Dotnet.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ShortOverview != null)
-                    hashCode = hashCode * 59 + this.ShortOverview.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.ProviderKey != null)
+                    hashCode = hashCode * 59 + this.ProviderKey.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 return hashCode;

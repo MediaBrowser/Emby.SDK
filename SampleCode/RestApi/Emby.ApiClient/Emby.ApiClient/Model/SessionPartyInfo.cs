@@ -39,10 +39,10 @@ namespace Emby.ApiClient.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Sessions
+        /// Gets or Sets InternalSessions
         /// </summary>
-        /// <value>The Sessions.</value>
-        public List<SessionSessionInfo> Sessions { get; set; }
+        /// <value>The InternalSessions.</value>
+        public List<SessionSessionInfo> InternalSessions { get; set; }
 
         /// <summary>
         /// Gets or Sets Messages
@@ -63,6 +63,12 @@ namespace Emby.ApiClient.Model
         public bool? IsPlaying { get; set; }
 
         /// <summary>
+        /// Gets or Sets Sessions
+        /// </summary>
+        /// <value>The Sessions.</value>
+        public List<SessionPartySessionInfo> Sessions { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -72,10 +78,11 @@ namespace Emby.ApiClient.Model
             sb.Append("class SessionPartyInfo {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Sessions: ").Append(Sessions).Append("\n");
+            sb.Append("  InternalSessions: ").Append(InternalSessions).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
             sb.Append("  MasterSession: ").Append(MasterSession).Append("\n");
             sb.Append("  IsPlaying: ").Append(IsPlaying).Append("\n");
+            sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -112,10 +119,10 @@ namespace Emby.ApiClient.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Sessions == input.Sessions ||
-                    this.Sessions != null &&
-                    input.Sessions != null &&
-                    this.Sessions.SequenceEqual(input.Sessions)
+                    this.InternalSessions == input.InternalSessions ||
+                    this.InternalSessions != null &&
+                    input.InternalSessions != null &&
+                    this.InternalSessions.SequenceEqual(input.InternalSessions)
                 ) && 
                 (
                     this.Messages == input.Messages ||
@@ -132,6 +139,12 @@ namespace Emby.ApiClient.Model
                     this.IsPlaying == input.IsPlaying ||
                     (this.IsPlaying != null &&
                     this.IsPlaying.Equals(input.IsPlaying))
+                ) && 
+                (
+                    this.Sessions == input.Sessions ||
+                    this.Sessions != null &&
+                    input.Sessions != null &&
+                    this.Sessions.SequenceEqual(input.Sessions)
                 );
         }
 
@@ -148,14 +161,16 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.Sessions != null)
-                    hashCode = hashCode * 59 + this.Sessions.GetHashCode();
+                if (this.InternalSessions != null)
+                    hashCode = hashCode * 59 + this.InternalSessions.GetHashCode();
                 if (this.Messages != null)
                     hashCode = hashCode * 59 + this.Messages.GetHashCode();
                 if (this.MasterSession != null)
                     hashCode = hashCode * 59 + this.MasterSession.GetHashCode();
                 if (this.IsPlaying != null)
                     hashCode = hashCode * 59 + this.IsPlaying.GetHashCode();
+                if (this.Sessions != null)
+                    hashCode = hashCode * 59 + this.Sessions.GetHashCode();
                 return hashCode;
             }
         }

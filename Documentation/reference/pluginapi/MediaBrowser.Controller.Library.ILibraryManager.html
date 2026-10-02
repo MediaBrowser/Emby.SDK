@@ -907,13 +907,13 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_FillMissingEpisodeNumbersFromPath_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FillMissingEpisodeNumbersFromPath*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_FillMissingEpisodeNumbersFromPath_MediaBrowser_Controller_Entities_TV_Episode_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FillMissingEpisodeNumbersFromPath(MediaBrowser.Controller.Entities.TV.Episode,System.Boolean)">FillMissingEpisodeNumbersFromPath(Episode, Boolean)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_FillMissingEpisodeNumbersFromPath_MediaBrowser_Controller_Entities_TV_Episode_MediaBrowser_Model_Configuration_LibraryOptions_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FillMissingEpisodeNumbersFromPath(MediaBrowser.Controller.Entities.TV.Episode,MediaBrowser.Model.Configuration.LibraryOptions,System.Boolean)">FillMissingEpisodeNumbersFromPath(Episode, LibraryOptions, Boolean)</h4>
   <div class="markdown level1 summary"><p>Fills the missing episode numbers from path.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool FillMissingEpisodeNumbersFromPath(Episode episode, bool forceRefresh)</code></pre>
+    <pre><code class="lang-csharp hljs">bool FillMissingEpisodeNumbersFromPath(Episode episode, LibraryOptions libraryOptions, bool forceRefresh)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -928,6 +928,11 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.TV.Episode.html">Episode</a></td>
         <td><span class="parametername">episode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
         <td></td>
       </tr>
       <tr>

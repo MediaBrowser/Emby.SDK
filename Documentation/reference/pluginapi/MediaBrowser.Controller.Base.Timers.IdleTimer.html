@@ -1,0 +1,530 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class IdleTimer
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class IdleTimer
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="theme-color" content="#090d0f">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <script type="text/javascript" src="../../styles/theme-config.js"></script>
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../styles/theme.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Controller.Base.Timers.IdleTimer">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="../../index.html" aria-label="Emby Developer home">
+            
+      <img class="logo-on-dark" src="../../images/emby_dev_logo_beta.png" alt="Emby Developer">
+      <img class="logo-on-light" src="../../images/emby_dev_logo_black.png" alt="Emby Developer">
+          </a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list">
+                
+                    <li><a href="../../index.html" title="DEV Home">DEV Home</a></li>
+                    <li><a href="../../doc/index.html" title="Documentation">Documentation</a></li>
+                    <li><a href="../../reference/index.html" title="Reference">Reference</a></li>
+                    <li><a href="../../download/index.html" title="Download">Download</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <div class="hide-when-search" id="breadcrumb">
+      	  <ul class="breadcrumb">
+      		<li></li>
+      	  </ul>
+      	</div>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Controller_Base_Timers_IdleTimer" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer" class="text-break">Class IdleTimer
+  </h1>
+  <div class="markdown level0 summary"><p>A timer that tracks transitions between <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Busy">Busy</a>, <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Idle">Idle</a> and
+<a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Suspended">Suspended</a> states based on activity signals and configurable timeouts.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">IdleTimer</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Base.Timers.html">MediaBrowser.Controller.Base.Timers</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
+  <h5 id="MediaBrowser_Controller_Base_Timers_IdleTimer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class IdleTimer : IDisposable</code></pre>
+  </div>
+  <h5 id="MediaBrowser_Controller_Base_Timers_IdleTimer_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The timer starts in the <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Suspended">Suspended</a> state. Calling code can request a transition to
+<a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Busy">Busy</a> to indicate active work, after which the timer will automatically transition
+to <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Idle">Idle</a> after <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html#MediaBrowser_Controller_Base_Timers_IdleTimer_BusyTimeout">BusyTimeout</a> elapses (if set), and subsequently to
+<a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Suspended">Suspended</a> after <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimeout">IdleTimeout</a> elapses (if set). Consumers can await the
+<a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html#MediaBrowser_Controller_Base_Timers_IdleTimer_TransitionToBusy">TransitionToBusy</a>, <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html#MediaBrowser_Controller_Base_Timers_IdleTimer_TransitionToIdle">TransitionToIdle</a> and <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html#MediaBrowser_Controller_Base_Timers_IdleTimer_TransitionToSuspended">TransitionToSuspended</a> tasks to be
+notified when the respective state is reached, or subscribe to the <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html#MediaBrowser_Controller_Base_Timers_IdleTimer_StateChanged">StateChanged</a> event.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_IdleTimer__ctor_" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.#ctor*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_IdleTimer__ctor_System_Nullable_System_TimeSpan__System_Nullable_System_TimeSpan__" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.#ctor(System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan})">IdleTimer(Nullable&lt;TimeSpan&gt;, Nullable&lt;TimeSpan&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html">IdleTimer</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IdleTimer(TimeSpan? busyTimeout, TimeSpan? idleTimeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
+        <td><span class="parametername">busyTimeout</span></td>
+        <td><p>The busy timeout. A 'null' value means that no timed transition is performed. A value of <span class="xref">System.TimeSpan.Zero</span> is not allowed and will throw an <span class="xref">System.ArgumentOutOfRangeException</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
+        <td><span class="parametername">idleTimeout</span></td>
+        <td><p>The idle timeout. <span class="xref">System.TimeSpan.Zero</span> means immediate transition from idle to suspended. A 'null' value means that no timed transition is performed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>busyTimeout - TimeSpan.Zero is not allowed for BusyTimeout.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_IdleTimer_BusyTimeout_" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.BusyTimeout*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_IdleTimer_BusyTimeout" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.BusyTimeout">BusyTimeout</h4>
+  <div class="markdown level1 summary"><p>Gets the busy timeout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? BusyTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
+        <td><p>The busy timeout.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Controller_Base_Timers_IdleTimer_BusyTimeout_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A &apos;null&apos; value means that no timed transition is performed.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimeout_" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimeout*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimeout" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimeout">IdleTimeout</h4>
+  <div class="markdown level1 summary"><p>Gets the idle timeout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? IdleTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
+        <td><p>The idle timeout.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimeout_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><span class="xref">System.TimeSpan.Zero</span> means immediate transition from idle to suspended.</p>
+<p>A &apos;null&apos; value means that no timed transition is performed.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_IdleTimer_State_" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.State*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_IdleTimer_State" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.State">State</h4>
+  <div class="markdown level1 summary"><p>Gets the current timer state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IdleTimer.IdleTimerState State { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html">IdleTimer.IdleTimerState</a></td>
+        <td><p>The current timer state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_IdleTimer_TransitionToBusy_" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.TransitionToBusy*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_IdleTimer_TransitionToBusy" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.TransitionToBusy">TransitionToBusy</h4>
+  <div class="markdown level1 summary"><p>Gets the transition to <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Busy">Busy</a> Task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task TransitionToBusy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>The transition to  <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Busy">Busy</a> Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Controller_Base_Timers_IdleTimer_TransitionToBusy_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Returns a <span class="xref">System.Threading.Tasks.Task</span> which can be awaited until the timer as transitioned to the respective state.
+The task result is always true.
+If the <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html">IdleTimer</a> is getting disposed, the returned task will be cancelled.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_IdleTimer_TransitionToIdle_" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.TransitionToIdle*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_IdleTimer_TransitionToIdle" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.TransitionToIdle">TransitionToIdle</h4>
+  <div class="markdown level1 summary"><p>Gets the transition to  <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Idle">Idle</a> Task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task TransitionToIdle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>The transition to  <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Idle">Idle</a> Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Controller_Base_Timers_IdleTimer_TransitionToIdle_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Returns a <span class="xref">System.Threading.Tasks.Task</span> which can be awaited until the timer as transitioned to the respective state.
+The task result is always true.
+If the <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html">IdleTimer</a> is getting disposed, the returned task will be cancelled.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_IdleTimer_TransitionToSuspended_" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.TransitionToSuspended*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_IdleTimer_TransitionToSuspended" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.TransitionToSuspended">TransitionToSuspended</h4>
+  <div class="markdown level1 summary"><p>Gets the transition to  <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Suspended">Suspended</a> Task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task TransitionToSuspended { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>The transition to  <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Suspended">Suspended</a> Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Controller_Base_Timers_IdleTimer_TransitionToSuspended_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Returns a <span class="xref">System.Threading.Tasks.Task</span> which can be awaited until the timer as transitioned to the respective state.
+The task result is always true.
+If the <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html">IdleTimer</a> is getting disposed, the returned task will be cancelled.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_IdleTimer_Dispose_" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.Dispose*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_IdleTimer_Dispose" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_IdleTimer_PingIdle_" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.PingIdle*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_IdleTimer_PingIdle" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.PingIdle">PingIdle()</h4>
+  <div class="markdown level1 summary"><p>Keeps the <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Idle">Idle</a> state alive by resetting the idle timeout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PingIdle()</code></pre>
+  </div>
+  <h5 id="MediaBrowser_Controller_Base_Timers_IdleTimer_PingIdle_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not change the state.
+It is only effective when the current state is <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Idle">Idle</a>
+and a value is set for the <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimeout">IdleTimeout</a>.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_IdleTimer_SetBusy_" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.SetBusy*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_IdleTimer_SetBusy" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.SetBusy">SetBusy()</h4>
+  <div class="markdown level1 summary"><p>Sets the state to <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Busy">Busy</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBusy()</code></pre>
+  </div>
+  <h5 id="MediaBrowser_Controller_Base_Timers_IdleTimer_SetBusy_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When setting states manually, timeouts of <span class="xref">System.TimeSpan.Zero</span> are ignored.
+In this case, when setting the state to <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Busy">Busy</a> and the <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html#MediaBrowser_Controller_Base_Timers_IdleTimer_BusyTimeout">BusyTimeout</a> is set to <span class="xref">System.TimeSpan.Zero</span>, the state is not transitioned to <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Idle">Idle</a>.
+When the <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html#MediaBrowser_Controller_Base_Timers_IdleTimer_BusyTimeout">BusyTimeout</a> is set to a non-zero value, the timer is reset, so the timeout period is restarted.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_IdleTimer_SetIdle_" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.SetIdle*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_IdleTimer_SetIdle" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.SetIdle">SetIdle()</h4>
+  <div class="markdown level1 summary"><p>Sets the state to <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Idle">Idle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetIdle()</code></pre>
+  </div>
+  <h5 id="MediaBrowser_Controller_Base_Timers_IdleTimer_SetIdle_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When setting states manually, timeouts of <span class="xref">System.TimeSpan.Zero</span> are ignored.
+In this case, when setting the state to <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Idle">Idle</a> and the <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimeout">IdleTimeout</a> is set to <span class="xref">System.TimeSpan.Zero</span>, the state is not transitioned to <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Suspended">Suspended</a>.
+When the <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimeout">IdleTimeout</a> is set to a non-zero value, the timer is reset, so the timeout period is restarted.</p>
+</div>
+  
+  
+  <a id="MediaBrowser_Controller_Base_Timers_IdleTimer_SetSuspended_" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.SetSuspended*"></a>
+  <h4 id="MediaBrowser_Controller_Base_Timers_IdleTimer_SetSuspended" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.SetSuspended">SetSuspended()</h4>
+  <div class="markdown level1 summary"><p>Sets the state to <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Suspended">Suspended</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSuspended()</code></pre>
+  </div>
+  <h5 id="MediaBrowser_Controller_Base_Timers_IdleTimer_SetSuspended_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html#MediaBrowser_Controller_Base_Timers_IdleTimer_IdleTimerState_Suspended">Suspended</a> state is a terminal state and no timer-based transitions will occur in this state.</p>
+</div>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="MediaBrowser_Controller_Base_Timers_IdleTimer_StateChanged" data-uid="MediaBrowser.Controller.Base.Timers.IdleTimer.StateChanged">StateChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;IdleTimer.IdleTimerState&gt; StateChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="MediaBrowser.Controller.Base.Timers.IdleTimer.IdleTimerState.html">IdleTimer.IdleTimerState</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Beta">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

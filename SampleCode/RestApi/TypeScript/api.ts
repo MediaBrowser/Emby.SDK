@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.11.0.4
+ * OpenAPI spec version: 4.11.0.5
  * 
  *
  * NOTE: This file is auto generated.
@@ -330,22 +330,22 @@ export interface ApiAddAdminNotification {
 export interface ApiAvailableRecordingOptions {
     /**
      * 
-     * @type {Array<ApiNameIdDescriptionPair>}
+     * @type {Array<NameIdPair>}
      * @memberof ApiAvailableRecordingOptions
      */
-    RecordingFolders?: Array<ApiNameIdDescriptionPair>;
+    RecordingFolders?: Array<NameIdPair>;
     /**
      * 
-     * @type {Array<ApiNameIdDescriptionPair>}
+     * @type {Array<NameIdPair>}
      * @memberof ApiAvailableRecordingOptions
      */
-    MovieRecordingFolders?: Array<ApiNameIdDescriptionPair>;
+    MovieRecordingFolders?: Array<NameIdPair>;
     /**
      * 
-     * @type {Array<ApiNameIdDescriptionPair>}
+     * @type {Array<NameIdPair>}
      * @memberof ApiAvailableRecordingOptions
      */
-    SeriesRecordingFolders?: Array<ApiNameIdDescriptionPair>;
+    SeriesRecordingFolders?: Array<NameIdPair>;
 }
 /**
  * 
@@ -722,31 +722,6 @@ export interface ApiListingProviderTypeInfo {
      * @memberof ApiListingProviderTypeInfo
      */
     SetupUrl?: string;
-}
-/**
- * 
- * @export
- * @interface ApiNameIdDescriptionPair
- */
-export interface ApiNameIdDescriptionPair {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiNameIdDescriptionPair
-     */
-    ShortOverview?: string;
-    /**
-     * The name.
-     * @type {string}
-     * @memberof ApiNameIdDescriptionPair
-     */
-    Name?: string;
-    /**
-     * The identifier.
-     * @type {string}
-     * @memberof ApiNameIdDescriptionPair
-     */
-    Id?: string;
 }
 /**
  * 
@@ -2571,7 +2546,51 @@ export enum ColorFormats {
     Yuva422p12 = <any> 'yuva422p12',
     Yuva444p12 = <any> 'yuva444p12',
     Nv24 = <any> 'nv24',
-    Nv42 = <any> 'nv42'
+    Nv42 = <any> 'nv42',
+    Vulkan = <any> 'vulkan',
+    Y210 = <any> 'y210',
+    X2rgb10 = <any> 'x2rgb10',
+    X2bgr10 = <any> 'x2bgr10',
+    P210 = <any> 'p210',
+    P410 = <any> 'p410',
+    P216 = <any> 'p216',
+    P416 = <any> 'p416',
+    Vuya = <any> 'vuya',
+    Rgbaf16 = <any> 'rgbaf16',
+    Vuyx = <any> 'vuyx',
+    P012 = <any> 'p012',
+    Y212 = <any> 'y212',
+    Xv30 = <any> 'xv30',
+    Xv36 = <any> 'xv36',
+    Rgbf32 = <any> 'rgbf32',
+    Rgbaf32 = <any> 'rgbaf32',
+    P212 = <any> 'p212',
+    P412 = <any> 'p412',
+    Gbrap14 = <any> 'gbrap14',
+    D3d12 = <any> 'd3d12',
+    Ayuv = <any> 'ayuv',
+    Uyva = <any> 'uyva',
+    Vyu444 = <any> 'vyu444',
+    V30x = <any> 'v30x',
+    Rgbf16 = <any> 'rgbf16',
+    Rgba128 = <any> 'rgba128',
+    Rgb96 = <any> 'rgb96',
+    Y216 = <any> 'y216',
+    Xv48 = <any> 'xv48',
+    Gbrpf16 = <any> 'gbrpf16',
+    Gbrapf16 = <any> 'gbrapf16',
+    Grayf16 = <any> 'grayf16',
+    AmfSurface = <any> 'amf_surface',
+    Gray32 = <any> 'gray32',
+    Yaf32 = <any> 'yaf32',
+    Yaf16 = <any> 'yaf16',
+    Gbrap32 = <any> 'gbrap32',
+    Yuv444p10msb = <any> 'yuv444p10msb',
+    Yuv444p12msb = <any> 'yuv444p12msb',
+    Gbrp10msb = <any> 'gbrp10msb',
+    Gbrp12msb = <any> 'gbrp12msb',
+    Ohcodec = <any> 'ohcodec',
+    Nv15 = <any> 'nv15'
 }
 /**
  * 
@@ -4196,6 +4215,25 @@ export enum EncodingContext {
 /**
  * 
  * @export
+ * @interface EntitiesTVSeriesOrderInfo
+ */
+export interface EntitiesTVSeriesOrderInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof EntitiesTVSeriesOrderInfo
+     */
+    ProviderKey?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof EntitiesTVSeriesOrderInfo
+     */
+    Id?: string;
+}
+/**
+ * 
+ * @export
  * @enum {string}
  */
 export enum EnumsUICommandType {
@@ -5584,6 +5622,12 @@ export interface LibraryOptions {
      * @memberof LibraryOptions
      */
     MergeTopLevelFolders?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof LibraryOptions
+     */
+    EnableEpisodeDetectionWithCombinedNumbers?: boolean;
     /**
      * 
      * @type {number}
@@ -7608,6 +7652,12 @@ export interface MediaSourceInfo {
      */
     DefaultSubtitleStreamIndex?: number;
     /**
+     * 
+     * @type {number}
+     * @memberof MediaSourceInfo
+     */
+    FullSubtitleStreamIndex?: number;
+    /**
      * Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi
      * @type {string}
      * @memberof MediaSourceInfo
@@ -8285,6 +8335,12 @@ export interface NameIdPair {
      * @memberof NameIdPair
      */
     Id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof NameIdPair
+     */
+    ShortOverview?: string;
 }
 /**
  * 
@@ -9152,6 +9208,12 @@ export interface PlaybackProgressInfo {
      */
     SubtitleStreamIndex?: number;
     /**
+     * 
+     * @type {SubtitleEnableReason}
+     * @memberof PlaybackProgressInfo
+     */
+    SubtitleEnableReason?: SubtitleEnableReason;
+    /**
      * A value indicating whether this instance is paused.
      * @type {boolean}
      * @memberof PlaybackProgressInfo
@@ -9338,6 +9400,12 @@ export interface PlaybackStartInfo {
      * @memberof PlaybackStartInfo
      */
     SubtitleStreamIndex?: number;
+    /**
+     * 
+     * @type {SubtitleEnableReason}
+     * @memberof PlaybackStartInfo
+     */
+    SubtitleEnableReason?: SubtitleEnableReason;
     /**
      * A value indicating whether this instance is paused.
      * @type {boolean}
@@ -9622,6 +9690,12 @@ export interface PlayerStateInfo {
      * @memberof PlayerStateInfo
      */
     SubtitleStreamIndex?: number;
+    /**
+     * 
+     * @type {SubtitleEnableReason}
+     * @memberof PlayerStateInfo
+     */
+    SubtitleEnableReason?: SubtitleEnableReason;
     /**
      * The now playing media version identifier.
      * @type {string}
@@ -11417,7 +11491,13 @@ export enum SecondaryFrameworks {
     DxVa = <any> 'DxVa',
     D3d11va = <any> 'D3d11va',
     VideoToolbox = <any> 'VideoToolbox',
-    Mmal = <any> 'Mmal'
+    Mmal = <any> 'Mmal',
+    Vulkan = <any> 'Vulkan',
+    D3d12va = <any> 'D3d12va',
+    OhCodec = <any> 'OhCodec',
+    RkMpp = <any> 'RkMpp',
+    Drm = <any> 'Drm',
+    OpenCL = <any> 'OpenCL'
 }
 /**
  * 
@@ -11428,16 +11508,6 @@ export enum SegmentSkipMode {
     ShowButton = <any> 'ShowButton',
     AutoSkip = <any> 'AutoSkip',
     None = <any> 'None'
-}
-/**
- * 
- * @export
- * @enum {string}
- */
-export enum SeriesDisplayOrder {
-    Aired = <any> 'Aired',
-    Dvd = <any> 'Dvd',
-    Absolute = <any> 'Absolute'
 }
 /**
  * 
@@ -11453,10 +11523,16 @@ export interface SeriesInfo {
     EpisodeAirDate?: Date;
     /**
      * 
-     * @type {SeriesDisplayOrder}
+     * @type {string}
      * @memberof SeriesInfo
      */
-    DisplayOrder?: SeriesDisplayOrder;
+    SeriesOrder?: string;
+    /**
+     * 
+     * @type {EntitiesTVSeriesOrderInfo}
+     * @memberof SeriesInfo
+     */
+    SeriesOrderInfo?: EntitiesTVSeriesOrderInfo;
     /**
      * The name.
      * @type {string}
@@ -11823,18 +11899,6 @@ export interface ServerConfiguration {
      * @type {boolean}
      * @memberof ServerConfiguration
      */
-    PlaylistsUpgradedToM3U?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ServerConfiguration
-     */
-    ImageExtractorUpgraded1?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ServerConfiguration
-     */
     EnablePeopleLetterSubFolders?: boolean;
     /**
      * 
@@ -11889,7 +11953,7 @@ export interface ServerConfiguration {
      * @type {boolean}
      * @memberof ServerConfiguration
      */
-    AllowLegacyLocalNetworkPassword?: boolean;
+    MigratedSeriesDisplayOrder?: boolean;
     /**
      * 
      * @type {boolean}
@@ -11986,7 +12050,7 @@ export interface SessionPartyInfo {
      * @type {Array<SessionSessionInfo>}
      * @memberof SessionPartyInfo
      */
-    Sessions?: Array<SessionSessionInfo>;
+    InternalSessions?: Array<SessionSessionInfo>;
     /**
      * 
      * @type {Array<SessionPartyMessage>}
@@ -12005,6 +12069,12 @@ export interface SessionPartyInfo {
      * @memberof SessionPartyInfo
      */
     IsPlaying?: boolean;
+    /**
+     * 
+     * @type {Array<SessionPartySessionInfo>}
+     * @memberof SessionPartyInfo
+     */
+    Sessions?: Array<SessionPartySessionInfo>;
 }
 /**
  * 
@@ -12027,12 +12097,6 @@ export interface SessionPartyInfoResult {
 export interface SessionPartyMessage {
     /**
      * 
-     * @type {number}
-     * @memberof SessionPartyMessage
-     */
-    UserId?: number;
-    /**
-     * 
      * @type {Date}
      * @memberof SessionPartyMessage
      */
@@ -12043,6 +12107,43 @@ export interface SessionPartyMessage {
      * @memberof SessionPartyMessage
      */
     Message?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SessionPartyMessage
+     */
+    UserId?: number;
+    /**
+     * 
+     * @type {UserDto}
+     * @memberof SessionPartyMessage
+     */
+    User?: UserDto;
+}
+/**
+ * 
+ * @export
+ * @interface SessionPartySessionInfo
+ */
+export interface SessionPartySessionInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof SessionPartySessionInfo
+     */
+    Id?: string;
+    /**
+     * 
+     * @type {UserDto}
+     * @memberof SessionPartySessionInfo
+     */
+    User?: UserDto;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SessionPartySessionInfo
+     */
+    IsHost?: boolean;
 }
 /**
  * Class SessionInfo  
@@ -12365,6 +12466,16 @@ export enum SubtitleDeliveryMethod {
     External = <any> 'External',
     Hls = <any> 'Hls',
     VideoSideData = <any> 'VideoSideData'
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+export enum SubtitleEnableReason {
+    UserEnabled = <any> 'UserEnabled',
+    SkipBack = <any> 'SkipBack',
+    LowVolume = <any> 'LowVolume'
 }
 /**
  * 
@@ -14370,6 +14481,12 @@ export interface UIViewInfo {
      * @type {boolean}
      * @memberof UIViewInfo
      */
+    ShowResetToDefaults?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof UIViewInfo
+     */
     IsInSequence?: boolean;
     /**
      * 
@@ -14629,6 +14746,18 @@ export interface UserConfiguration {
      * @memberof UserConfiguration
      */
     EnableLocalPassword?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof UserConfiguration
+     */
+    ShowSubtitlesOnSkipBack?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof UserConfiguration
+     */
+    ShowSubtitlesOnLowVolume?: boolean;
 }
 /**
  * Class UserDto  
@@ -15863,7 +15992,55 @@ export enum VideoMediaTypes {
     Yuv4 = <any> 'yuv4',
     Zerocodec = <any> 'zerocodec',
     Zlib = <any> 'zlib',
-    Zmbv = <any> 'zmbv'
+    Zmbv = <any> 'zmbv',
+    Agm = <any> 'agm',
+    Apv = <any> 'apv',
+    Arbc = <any> 'arbc',
+    Argo = <any> 'argo',
+    Avs2 = <any> 'avs2',
+    Avs3 = <any> 'avs3',
+    Cdtoons = <any> 'cdtoons',
+    Cri = <any> 'cri',
+    Dnxuc = <any> 'dnxuc',
+    Evc = <any> 'evc',
+    Gem = <any> 'gem',
+    Hdr = <any> 'hdr',
+    Hymt = <any> 'hymt',
+    Imm4 = <any> 'imm4',
+    Imm5 = <any> 'imm5',
+    Ipu = <any> 'ipu',
+    Jpegxl = <any> 'jpegxl',
+    JpegxlAnim = <any> 'jpegxl_anim',
+    Lead = <any> 'lead',
+    Lscr = <any> 'lscr',
+    Media100 = <any> 'media100',
+    Mobiclip = <any> 'mobiclip',
+    Msp2 = <any> 'msp2',
+    Mv30 = <any> 'mv30',
+    Mvdv = <any> 'mvdv',
+    Mvha = <any> 'mvha',
+    Mwsc = <any> 'mwsc',
+    Notchlc = <any> 'notchlc',
+    Pdv = <any> 'pdv',
+    Pfm = <any> 'pfm',
+    Pgx = <any> 'pgx',
+    Phm = <any> 'phm',
+    Photocd = <any> 'photocd',
+    ProresRaw = <any> 'prores_raw',
+    Prosumer = <any> 'prosumer',
+    Qoi = <any> 'qoi',
+    Rasc = <any> 'rasc',
+    Rtv1 = <any> 'rtv1',
+    Rv60 = <any> 'rv60',
+    Sga = <any> 'sga',
+    SimbiosisImx = <any> 'simbiosis_imx',
+    Vbn = <any> 'vbn',
+    Vmix = <any> 'vmix',
+    Vp4 = <any> 'vp4',
+    Vqc = <any> 'vqc',
+    Vvc = <any> 'vvc',
+    Wbmp = <any> 'wbmp',
+    Wcmv = <any> 'wcmv'
 }
 /**
  * Used to hold information about a user's list of configured virtual folders  
@@ -109086,6 +109263,45 @@ export const TvShowsServiceApiFetchParamCreator = function (configuration?: Conf
         },
         /**
          * Requires authentication as user
+         * @summary Gets orders for a show
+         * @param {string} Id The series id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getShowsByIdOrders(Id: string, options: any = {}): FetchArgs {
+            // verify required parameter 'Id' is not null or undefined
+            if (Id === null || Id === undefined) {
+                throw new RequiredError('Id','Required parameter Id was null or undefined when calling getShowsByIdOrders.');
+            }
+            const localVarPath = `/Shows/{Id}/Orders`
+                .replace(`{${"Id"}}`, encodeURIComponent(String(Id)));
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as user
          * @summary Gets seasons for a tv series
          * @param {string} Id The series id
          * @param {string} [ArtistType] Artist or AlbumArtist
@@ -110892,6 +111108,25 @@ export const TvShowsServiceApiFp = function(configuration?: Configuration) {
         },
         /**
          * Requires authentication as user
+         * @summary Gets orders for a show
+         * @param {string} Id The series id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getShowsByIdOrders(Id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Array<NameIdPair>> {
+            const localVarFetchArgs = TvShowsServiceApiFetchParamCreator(configuration).getShowsByIdOrders(Id, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as user
          * @summary Gets seasons for a tv series
          * @param {string} Id The series id
          * @param {string} [ArtistType] Artist or AlbumArtist
@@ -111392,6 +111627,16 @@ export const TvShowsServiceApiFactory = function (configuration?: Configuration,
         },
         /**
          * Requires authentication as user
+         * @summary Gets orders for a show
+         * @param {string} Id The series id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getShowsByIdOrders(Id: string, options?: any) {
+            return TvShowsServiceApiFp(configuration).getShowsByIdOrders(Id, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as user
          * @summary Gets seasons for a tv series
          * @param {string} Id The series id
          * @param {string} [ArtistType] Artist or AlbumArtist
@@ -111855,6 +112100,18 @@ export class TvShowsServiceApi extends BaseAPI {
      */
     public getShowsByIdEpisodes(Id: string, Season?: number, SeasonId?: string, ArtistType?: string, MaxOfficialRating?: string, HasThemeSong?: boolean, HasThemeVideo?: boolean, HasSubtitles?: boolean, HasSpecialFeature?: boolean, HasTrailer?: boolean, IsSpecialSeason?: boolean, AdjacentTo?: string, StartItemId?: string, MinIndexNumber?: number, MinStartDate?: Date, MaxStartDate?: Date, MinEndDate?: Date, MaxEndDate?: Date, MinPlayers?: number, MaxPlayers?: number, ParentIndexNumber?: number, HasParentalRating?: boolean, IsHD?: boolean, IsUnaired?: boolean, MinCommunityRating?: number, MinCriticRating?: number, AiredDuringSeason?: number, MinPremiereDate?: Date, MinDateLastSaved?: Date, MinDateLastSavedForUser?: Date, MaxPremiereDate?: Date, HasOverview?: boolean, HasImdbId?: boolean, HasTmdbId?: boolean, HasTvdbId?: boolean, ExcludeItemIds?: string, StartIndex?: number, Limit?: number, Recursive?: boolean, SearchTerm?: string, SortOrder?: string, ParentId?: string, Fields?: string, ExcludeItemTypes?: string, IncludeItemTypes?: string, AnyProviderIdEquals?: string, Filters?: string, IsFavorite?: boolean, IsMovie?: boolean, IsSeries?: boolean, IsFolder?: boolean, IsNews?: boolean, IsKids?: boolean, IsSports?: boolean, IsNew?: boolean, IsPremiere?: boolean, IsNewOrPremiere?: boolean, IsRepeat?: boolean, ProjectToMedia?: boolean, MediaTypes?: string, ImageTypes?: string, SortBy?: string, IsPlayed?: boolean, Genres?: string, OfficialRatings?: string, Tags?: string, ExcludeTags?: string, Years?: string, EnableImages?: boolean, EnableUserData?: boolean, ImageTypeLimit?: number, EnableImageTypes?: string, Person?: string, PersonIds?: string, PersonTypes?: string, Studios?: string, StudioIds?: string, Artists?: string, ArtistIds?: string, Albums?: string, Ids?: string, VideoTypes?: string, Containers?: string, AudioCodecs?: string, AudioLayouts?: string, VideoCodecs?: string, ExtendedVideoTypes?: string, SubtitleCodecs?: string, Path?: string, UserId?: string, MinOfficialRating?: string, IsLocked?: boolean, IsPlaceHolder?: boolean, HasOfficialRating?: boolean, GroupItemsIntoCollections?: boolean, Is3D?: boolean, SeriesStatus?: string, NameStartsWithOrGreater?: string, ArtistStartsWithOrGreater?: string, AlbumArtistStartsWithOrGreater?: string, NameStartsWith?: string, NameLessThan?: string, options?: any) {
         return TvShowsServiceApiFp(this.configuration).getShowsByIdEpisodes(Id, Season, SeasonId, ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as user
+     * @summary Gets orders for a show
+     * @param {string} Id The series id
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TvShowsServiceApi
+     */
+    public getShowsByIdOrders(Id: string, options?: any) {
+        return TvShowsServiceApiFp(this.configuration).getShowsByIdOrders(Id, options)(this.fetch, this.basePath);
     }
 
     /**

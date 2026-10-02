@@ -177,6 +177,12 @@ namespace Emby.ApiClient.Model
         public bool? MergeTopLevelFolders { get; set; }
 
         /// <summary>
+        /// Gets or Sets EnableEpisodeDetectionWithCombinedNumbers
+        /// </summary>
+        /// <value>The EnableEpisodeDetectionWithCombinedNumbers.</value>
+        public bool? EnableEpisodeDetectionWithCombinedNumbers { get; set; }
+
+        /// <summary>
         /// Gets or Sets AutoGenerateChapterIntervalMinutes
         /// </summary>
         /// <value>The AutoGenerateChapterIntervalMinutes.</value>
@@ -449,6 +455,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  EnableAudioResume: ").Append(EnableAudioResume).Append("\n");
             sb.Append("  AutoGenerateChapters: ").Append(AutoGenerateChapters).Append("\n");
             sb.Append("  MergeTopLevelFolders: ").Append(MergeTopLevelFolders).Append("\n");
+            sb.Append("  EnableEpisodeDetectionWithCombinedNumbers: ").Append(EnableEpisodeDetectionWithCombinedNumbers).Append("\n");
             sb.Append("  AutoGenerateChapterIntervalMinutes: ").Append(AutoGenerateChapterIntervalMinutes).Append("\n");
             sb.Append("  AutomaticRefreshIntervalDays: ").Append(AutomaticRefreshIntervalDays).Append("\n");
             sb.Append("  PlaceholderMetadataRefreshIntervalDays: ").Append(PlaceholderMetadataRefreshIntervalDays).Append("\n");
@@ -640,6 +647,11 @@ namespace Emby.ApiClient.Model
                     this.MergeTopLevelFolders == input.MergeTopLevelFolders ||
                     (this.MergeTopLevelFolders != null &&
                     this.MergeTopLevelFolders.Equals(input.MergeTopLevelFolders))
+                ) && 
+                (
+                    this.EnableEpisodeDetectionWithCombinedNumbers == input.EnableEpisodeDetectionWithCombinedNumbers ||
+                    (this.EnableEpisodeDetectionWithCombinedNumbers != null &&
+                    this.EnableEpisodeDetectionWithCombinedNumbers.Equals(input.EnableEpisodeDetectionWithCombinedNumbers))
                 ) && 
                 (
                     this.AutoGenerateChapterIntervalMinutes == input.AutoGenerateChapterIntervalMinutes ||
@@ -912,6 +924,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.AutoGenerateChapters.GetHashCode();
                 if (this.MergeTopLevelFolders != null)
                     hashCode = hashCode * 59 + this.MergeTopLevelFolders.GetHashCode();
+                if (this.EnableEpisodeDetectionWithCombinedNumbers != null)
+                    hashCode = hashCode * 59 + this.EnableEpisodeDetectionWithCombinedNumbers.GetHashCode();
                 if (this.AutoGenerateChapterIntervalMinutes != null)
                     hashCode = hashCode * 59 + this.AutoGenerateChapterIntervalMinutes.GetHashCode();
                 if (this.AutomaticRefreshIntervalDays != null)

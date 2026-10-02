@@ -29,6 +29,7 @@ class PlayerStateInfo(object):
         'volume_level': 'int',
         'audio_stream_index': 'int',
         'subtitle_stream_index': 'int',
+        'subtitle_enable_reason': 'SubtitleEnableReason',
         'media_source_id': 'str',
         'media_source': 'MediaSourceInfo',
         'play_method': 'PlayMethod',
@@ -48,6 +49,7 @@ class PlayerStateInfo(object):
         'volume_level': 'VolumeLevel',
         'audio_stream_index': 'AudioStreamIndex',
         'subtitle_stream_index': 'SubtitleStreamIndex',
+        'subtitle_enable_reason': 'SubtitleEnableReason',
         'media_source_id': 'MediaSourceId',
         'media_source': 'MediaSource',
         'play_method': 'PlayMethod',
@@ -59,7 +61,7 @@ class PlayerStateInfo(object):
         'playback_rate': 'PlaybackRate'
     }
 
-    def __init__(self, position_ticks=None, can_seek=None, is_paused=None, is_muted=None, volume_level=None, audio_stream_index=None, subtitle_stream_index=None, media_source_id=None, media_source=None, play_method=None, repeat_mode=None, sleep_timer_mode=None, sleep_timer_end_time=None, subtitle_offset=None, shuffle=None, playback_rate=None):  # noqa: E501
+    def __init__(self, position_ticks=None, can_seek=None, is_paused=None, is_muted=None, volume_level=None, audio_stream_index=None, subtitle_stream_index=None, subtitle_enable_reason=None, media_source_id=None, media_source=None, play_method=None, repeat_mode=None, sleep_timer_mode=None, sleep_timer_end_time=None, subtitle_offset=None, shuffle=None, playback_rate=None):  # noqa: E501
         """PlayerStateInfo - a model defined in Swagger"""  # noqa: E501
         self._position_ticks = None
         self._can_seek = None
@@ -68,6 +70,7 @@ class PlayerStateInfo(object):
         self._volume_level = None
         self._audio_stream_index = None
         self._subtitle_stream_index = None
+        self._subtitle_enable_reason = None
         self._media_source_id = None
         self._media_source = None
         self._play_method = None
@@ -92,6 +95,8 @@ class PlayerStateInfo(object):
             self.audio_stream_index = audio_stream_index
         if subtitle_stream_index is not None:
             self.subtitle_stream_index = subtitle_stream_index
+        if subtitle_enable_reason is not None:
+            self.subtitle_enable_reason = subtitle_enable_reason
         if media_source_id is not None:
             self.media_source_id = media_source_id
         if media_source is not None:
@@ -271,6 +276,27 @@ class PlayerStateInfo(object):
         """
 
         self._subtitle_stream_index = subtitle_stream_index
+
+    @property
+    def subtitle_enable_reason(self):
+        """Gets the subtitle_enable_reason of this PlayerStateInfo.  # noqa: E501
+
+
+        :return: The subtitle_enable_reason of this PlayerStateInfo.  # noqa: E501
+        :rtype: SubtitleEnableReason
+        """
+        return self._subtitle_enable_reason
+
+    @subtitle_enable_reason.setter
+    def subtitle_enable_reason(self, subtitle_enable_reason):
+        """Sets the subtitle_enable_reason of this PlayerStateInfo.
+
+
+        :param subtitle_enable_reason: The subtitle_enable_reason of this PlayerStateInfo.  # noqa: E501
+        :type: SubtitleEnableReason
+        """
+
+        self._subtitle_enable_reason = subtitle_enable_reason
 
     @property
     def media_source_id(self):

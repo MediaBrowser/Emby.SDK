@@ -67,6 +67,7 @@ class MediaSourceInfo(object):
         'read_at_native_framerate': 'bool',
         'default_audio_stream_index': 'int',
         'default_subtitle_stream_index': 'int',
+        'full_subtitle_stream_index': 'int',
         'item_id': 'str',
         'server_id': 'str',
         'mime_type': 'str',
@@ -119,13 +120,14 @@ class MediaSourceInfo(object):
         'read_at_native_framerate': 'ReadAtNativeFramerate',
         'default_audio_stream_index': 'DefaultAudioStreamIndex',
         'default_subtitle_stream_index': 'DefaultSubtitleStreamIndex',
+        'full_subtitle_stream_index': 'FullSubtitleStreamIndex',
         'item_id': 'ItemId',
         'server_id': 'ServerId',
         'mime_type': 'MimeType',
         'transcoding_mime_type': 'TranscodingMimeType'
     }
 
-    def __init__(self, chapters=None, protocol=None, id=None, path=None, encoder_path=None, encoder_protocol=None, type=None, probe_path=None, probe_protocol=None, container=None, size=None, name=None, sort_name=None, is_remote=None, has_mixed_protocols=None, run_time_ticks=None, container_start_time_ticks=None, supports_transcoding=None, trancode_live_start_index=None, wall_clock_start=None, supports_direct_stream=None, supports_direct_play=None, is_infinite_stream=None, requires_opening=None, open_token=None, requires_closing=None, live_stream_id=None, buffer_ms=None, requires_looping=None, supports_probing=None, video3_d_format=None, media_streams=None, formats=None, bitrate=None, timestamp=None, required_http_headers=None, direct_stream_url=None, add_api_key_to_direct_stream_url=None, transcoding_url=None, transcoding_sub_protocol=None, transcoding_container=None, analyze_duration_ms=None, read_at_native_framerate=None, default_audio_stream_index=None, default_subtitle_stream_index=None, item_id=None, server_id=None, mime_type=None, transcoding_mime_type=None):  # noqa: E501
+    def __init__(self, chapters=None, protocol=None, id=None, path=None, encoder_path=None, encoder_protocol=None, type=None, probe_path=None, probe_protocol=None, container=None, size=None, name=None, sort_name=None, is_remote=None, has_mixed_protocols=None, run_time_ticks=None, container_start_time_ticks=None, supports_transcoding=None, trancode_live_start_index=None, wall_clock_start=None, supports_direct_stream=None, supports_direct_play=None, is_infinite_stream=None, requires_opening=None, open_token=None, requires_closing=None, live_stream_id=None, buffer_ms=None, requires_looping=None, supports_probing=None, video3_d_format=None, media_streams=None, formats=None, bitrate=None, timestamp=None, required_http_headers=None, direct_stream_url=None, add_api_key_to_direct_stream_url=None, transcoding_url=None, transcoding_sub_protocol=None, transcoding_container=None, analyze_duration_ms=None, read_at_native_framerate=None, default_audio_stream_index=None, default_subtitle_stream_index=None, full_subtitle_stream_index=None, item_id=None, server_id=None, mime_type=None, transcoding_mime_type=None):  # noqa: E501
         """MediaSourceInfo - a model defined in Swagger"""  # noqa: E501
         self._chapters = None
         self._protocol = None
@@ -172,6 +174,7 @@ class MediaSourceInfo(object):
         self._read_at_native_framerate = None
         self._default_audio_stream_index = None
         self._default_subtitle_stream_index = None
+        self._full_subtitle_stream_index = None
         self._item_id = None
         self._server_id = None
         self._mime_type = None
@@ -267,6 +270,8 @@ class MediaSourceInfo(object):
             self.default_audio_stream_index = default_audio_stream_index
         if default_subtitle_stream_index is not None:
             self.default_subtitle_stream_index = default_subtitle_stream_index
+        if full_subtitle_stream_index is not None:
+            self.full_subtitle_stream_index = full_subtitle_stream_index
         if item_id is not None:
             self.item_id = item_id
         if server_id is not None:
@@ -1222,6 +1227,27 @@ class MediaSourceInfo(object):
         """
 
         self._default_subtitle_stream_index = default_subtitle_stream_index
+
+    @property
+    def full_subtitle_stream_index(self):
+        """Gets the full_subtitle_stream_index of this MediaSourceInfo.  # noqa: E501
+
+
+        :return: The full_subtitle_stream_index of this MediaSourceInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._full_subtitle_stream_index
+
+    @full_subtitle_stream_index.setter
+    def full_subtitle_stream_index(self, full_subtitle_stream_index):
+        """Sets the full_subtitle_stream_index of this MediaSourceInfo.
+
+
+        :param full_subtitle_stream_index: The full_subtitle_stream_index of this MediaSourceInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._full_subtitle_stream_index = full_subtitle_stream_index
 
     @property
     def item_id(self):

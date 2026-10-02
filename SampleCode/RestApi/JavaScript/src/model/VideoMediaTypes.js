@@ -1414,6 +1414,294 @@ export default class VideoMediaTypes {
          */
         zmbv = "zmbv";
 
+        /**
+         * value: "agm"
+         * @const
+         */
+        agm = "agm";
+
+        /**
+         * value: "apv"
+         * @const
+         */
+        apv = "apv";
+
+        /**
+         * value: "arbc"
+         * @const
+         */
+        arbc = "arbc";
+
+        /**
+         * value: "argo"
+         * @const
+         */
+        argo = "argo";
+
+        /**
+         * value: "avs2"
+         * @const
+         */
+        avs2 = "avs2";
+
+        /**
+         * value: "avs3"
+         * @const
+         */
+        avs3 = "avs3";
+
+        /**
+         * value: "cdtoons"
+         * @const
+         */
+        cdtoons = "cdtoons";
+
+        /**
+         * value: "cri"
+         * @const
+         */
+        cri = "cri";
+
+        /**
+         * value: "dnxuc"
+         * @const
+         */
+        dnxuc = "dnxuc";
+
+        /**
+         * value: "evc"
+         * @const
+         */
+        evc = "evc";
+
+        /**
+         * value: "gem"
+         * @const
+         */
+        gem = "gem";
+
+        /**
+         * value: "hdr"
+         * @const
+         */
+        hdr = "hdr";
+
+        /**
+         * value: "hymt"
+         * @const
+         */
+        hymt = "hymt";
+
+        /**
+         * value: "imm4"
+         * @const
+         */
+        imm4 = "imm4";
+
+        /**
+         * value: "imm5"
+         * @const
+         */
+        imm5 = "imm5";
+
+        /**
+         * value: "ipu"
+         * @const
+         */
+        ipu = "ipu";
+
+        /**
+         * value: "jpegxl"
+         * @const
+         */
+        jpegxl = "jpegxl";
+
+        /**
+         * value: "jpegxl_anim"
+         * @const
+         */
+        jpegxl_anim = "jpegxl_anim";
+
+        /**
+         * value: "lead"
+         * @const
+         */
+        lead = "lead";
+
+        /**
+         * value: "lscr"
+         * @const
+         */
+        lscr = "lscr";
+
+        /**
+         * value: "media100"
+         * @const
+         */
+        media100 = "media100";
+
+        /**
+         * value: "mobiclip"
+         * @const
+         */
+        mobiclip = "mobiclip";
+
+        /**
+         * value: "msp2"
+         * @const
+         */
+        msp2 = "msp2";
+
+        /**
+         * value: "mv30"
+         * @const
+         */
+        mv30 = "mv30";
+
+        /**
+         * value: "mvdv"
+         * @const
+         */
+        mvdv = "mvdv";
+
+        /**
+         * value: "mvha"
+         * @const
+         */
+        mvha = "mvha";
+
+        /**
+         * value: "mwsc"
+         * @const
+         */
+        mwsc = "mwsc";
+
+        /**
+         * value: "notchlc"
+         * @const
+         */
+        notchlc = "notchlc";
+
+        /**
+         * value: "pdv"
+         * @const
+         */
+        pdv = "pdv";
+
+        /**
+         * value: "pfm"
+         * @const
+         */
+        pfm = "pfm";
+
+        /**
+         * value: "pgx"
+         * @const
+         */
+        pgx = "pgx";
+
+        /**
+         * value: "phm"
+         * @const
+         */
+        phm = "phm";
+
+        /**
+         * value: "photocd"
+         * @const
+         */
+        photocd = "photocd";
+
+        /**
+         * value: "prores_raw"
+         * @const
+         */
+        prores_raw = "prores_raw";
+
+        /**
+         * value: "prosumer"
+         * @const
+         */
+        prosumer = "prosumer";
+
+        /**
+         * value: "qoi"
+         * @const
+         */
+        qoi = "qoi";
+
+        /**
+         * value: "rasc"
+         * @const
+         */
+        rasc = "rasc";
+
+        /**
+         * value: "rtv1"
+         * @const
+         */
+        rtv1 = "rtv1";
+
+        /**
+         * value: "rv60"
+         * @const
+         */
+        rv60 = "rv60";
+
+        /**
+         * value: "sga"
+         * @const
+         */
+        sga = "sga";
+
+        /**
+         * value: "simbiosis_imx"
+         * @const
+         */
+        simbiosis_imx = "simbiosis_imx";
+
+        /**
+         * value: "vbn"
+         * @const
+         */
+        vbn = "vbn";
+
+        /**
+         * value: "vmix"
+         * @const
+         */
+        vmix = "vmix";
+
+        /**
+         * value: "vp4"
+         * @const
+         */
+        vp4 = "vp4";
+
+        /**
+         * value: "vqc"
+         * @const
+         */
+        vqc = "vqc";
+
+        /**
+         * value: "vvc"
+         * @const
+         */
+        vvc = "vvc";
+
+        /**
+         * value: "wbmp"
+         * @const
+         */
+        wbmp = "wbmp";
+
+        /**
+         * value: "wcmv"
+         * @const
+         */
+        wcmv = "wcmv";
+
 
     /**
     * Returns a <code>VideoMediaTypes</code> enum value from a Javascript object name.

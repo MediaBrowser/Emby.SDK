@@ -39,9 +39,11 @@ open class BackupApiAPI {
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
     "Users" : [ {
       "Id" : "Id",
+      "ShortOverview" : "ShortOverview",
       "Name" : "Name"
     }, {
       "Id" : "Id",
+      "ShortOverview" : "ShortOverview",
       "Name" : "Name"
     } ],
     "IsFullBackup" : true,

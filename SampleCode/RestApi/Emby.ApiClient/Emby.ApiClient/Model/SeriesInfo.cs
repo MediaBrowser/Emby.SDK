@@ -33,10 +33,16 @@ namespace Emby.ApiClient.Model
         public DateTimeOffset? EpisodeAirDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayOrder
+        /// Gets or Sets SeriesOrder
         /// </summary>
-        /// <value>The DisplayOrder.</value>
-        public SeriesDisplayOrder DisplayOrder { get; set; }
+        /// <value>The SeriesOrder.</value>
+        public string SeriesOrder { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SeriesOrderInfo
+        /// </summary>
+        /// <value>The SeriesOrderInfo.</value>
+        public EntitiesTVSeriesOrderInfo SeriesOrderInfo { get; set; }
 
         /// <summary>
         /// The name.
@@ -119,7 +125,8 @@ namespace Emby.ApiClient.Model
             var sb = new StringBuilder();
             sb.Append("class SeriesInfo {\n");
             sb.Append("  EpisodeAirDate: ").Append(EpisodeAirDate).Append("\n");
-            sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
+            sb.Append("  SeriesOrder: ").Append(SeriesOrder).Append("\n");
+            sb.Append("  SeriesOrderInfo: ").Append(SeriesOrderInfo).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  MetadataLanguage: ").Append(MetadataLanguage).Append("\n");
@@ -163,9 +170,14 @@ namespace Emby.ApiClient.Model
                     this.EpisodeAirDate.Equals(input.EpisodeAirDate))
                 ) && 
                 (
-                    this.DisplayOrder == input.DisplayOrder ||
-                    (this.DisplayOrder != null &&
-                    this.DisplayOrder.Equals(input.DisplayOrder))
+                    this.SeriesOrder == input.SeriesOrder ||
+                    (this.SeriesOrder != null &&
+                    this.SeriesOrder.Equals(input.SeriesOrder))
+                ) && 
+                (
+                    this.SeriesOrderInfo == input.SeriesOrderInfo ||
+                    (this.SeriesOrderInfo != null &&
+                    this.SeriesOrderInfo.Equals(input.SeriesOrderInfo))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -241,8 +253,10 @@ namespace Emby.ApiClient.Model
                 int hashCode = 41;
                 if (this.EpisodeAirDate != null)
                     hashCode = hashCode * 59 + this.EpisodeAirDate.GetHashCode();
-                if (this.DisplayOrder != null)
-                    hashCode = hashCode * 59 + this.DisplayOrder.GetHashCode();
+                if (this.SeriesOrder != null)
+                    hashCode = hashCode * 59 + this.SeriesOrder.GetHashCode();
+                if (this.SeriesOrderInfo != null)
+                    hashCode = hashCode * 59 + this.SeriesOrderInfo.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Path != null)

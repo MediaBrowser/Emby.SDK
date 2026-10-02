@@ -29,6 +29,7 @@ class UIViewInfo(object):
         'plugin_id': 'str',
         'view_type': 'EnumsUIViewType',
         'show_dialog_full_screen': 'bool',
+        'show_reset_to_defaults': 'bool',
         'is_in_sequence': 'bool',
         'redirect_view_url': 'str',
         'edit_object_container': 'GenericEditIEditObjectContainer',
@@ -45,6 +46,7 @@ class UIViewInfo(object):
         'plugin_id': 'PluginId',
         'view_type': 'ViewType',
         'show_dialog_full_screen': 'ShowDialogFullScreen',
+        'show_reset_to_defaults': 'ShowResetToDefaults',
         'is_in_sequence': 'IsInSequence',
         'redirect_view_url': 'RedirectViewUrl',
         'edit_object_container': 'EditObjectContainer',
@@ -53,7 +55,7 @@ class UIViewInfo(object):
         'is_page_change_info': 'IsPageChangeInfo'
     }
 
-    def __init__(self, view_id=None, page_id=None, caption=None, sub_caption=None, plugin_id=None, view_type=None, show_dialog_full_screen=None, is_in_sequence=None, redirect_view_url=None, edit_object_container=None, commands=None, tab_page_infos=None, is_page_change_info=None):  # noqa: E501
+    def __init__(self, view_id=None, page_id=None, caption=None, sub_caption=None, plugin_id=None, view_type=None, show_dialog_full_screen=None, show_reset_to_defaults=None, is_in_sequence=None, redirect_view_url=None, edit_object_container=None, commands=None, tab_page_infos=None, is_page_change_info=None):  # noqa: E501
         """UIViewInfo - a model defined in Swagger"""  # noqa: E501
         self._view_id = None
         self._page_id = None
@@ -62,6 +64,7 @@ class UIViewInfo(object):
         self._plugin_id = None
         self._view_type = None
         self._show_dialog_full_screen = None
+        self._show_reset_to_defaults = None
         self._is_in_sequence = None
         self._redirect_view_url = None
         self._edit_object_container = None
@@ -83,6 +86,8 @@ class UIViewInfo(object):
             self.view_type = view_type
         if show_dialog_full_screen is not None:
             self.show_dialog_full_screen = show_dialog_full_screen
+        if show_reset_to_defaults is not None:
+            self.show_reset_to_defaults = show_reset_to_defaults
         if is_in_sequence is not None:
             self.is_in_sequence = is_in_sequence
         if redirect_view_url is not None:
@@ -242,6 +247,27 @@ class UIViewInfo(object):
         """
 
         self._show_dialog_full_screen = show_dialog_full_screen
+
+    @property
+    def show_reset_to_defaults(self):
+        """Gets the show_reset_to_defaults of this UIViewInfo.  # noqa: E501
+
+
+        :return: The show_reset_to_defaults of this UIViewInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._show_reset_to_defaults
+
+    @show_reset_to_defaults.setter
+    def show_reset_to_defaults(self, show_reset_to_defaults):
+        """Sets the show_reset_to_defaults of this UIViewInfo.
+
+
+        :param show_reset_to_defaults: The show_reset_to_defaults of this UIViewInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._show_reset_to_defaults = show_reset_to_defaults
 
     @property
     def is_in_sequence(self):

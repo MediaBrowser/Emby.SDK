@@ -135,6 +135,18 @@ namespace Emby.ApiClient.Model
         public bool? EnableLocalPassword { get; set; }
 
         /// <summary>
+        /// Gets or Sets ShowSubtitlesOnSkipBack
+        /// </summary>
+        /// <value>The ShowSubtitlesOnSkipBack.</value>
+        public bool? ShowSubtitlesOnSkipBack { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ShowSubtitlesOnLowVolume
+        /// </summary>
+        /// <value>The ShowSubtitlesOnLowVolume.</value>
+        public bool? ShowSubtitlesOnLowVolume { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -160,6 +172,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  ResumeRewindSeconds: ").Append(ResumeRewindSeconds).Append("\n");
             sb.Append("  IntroSkipMode: ").Append(IntroSkipMode).Append("\n");
             sb.Append("  EnableLocalPassword: ").Append(EnableLocalPassword).Append("\n");
+            sb.Append("  ShowSubtitlesOnSkipBack: ").Append(ShowSubtitlesOnSkipBack).Append("\n");
+            sb.Append("  ShowSubtitlesOnLowVolume: ").Append(ShowSubtitlesOnLowVolume).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -277,6 +291,16 @@ namespace Emby.ApiClient.Model
                     this.EnableLocalPassword == input.EnableLocalPassword ||
                     (this.EnableLocalPassword != null &&
                     this.EnableLocalPassword.Equals(input.EnableLocalPassword))
+                ) && 
+                (
+                    this.ShowSubtitlesOnSkipBack == input.ShowSubtitlesOnSkipBack ||
+                    (this.ShowSubtitlesOnSkipBack != null &&
+                    this.ShowSubtitlesOnSkipBack.Equals(input.ShowSubtitlesOnSkipBack))
+                ) && 
+                (
+                    this.ShowSubtitlesOnLowVolume == input.ShowSubtitlesOnLowVolume ||
+                    (this.ShowSubtitlesOnLowVolume != null &&
+                    this.ShowSubtitlesOnLowVolume.Equals(input.ShowSubtitlesOnLowVolume))
                 );
         }
 
@@ -325,6 +349,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.IntroSkipMode.GetHashCode();
                 if (this.EnableLocalPassword != null)
                     hashCode = hashCode * 59 + this.EnableLocalPassword.GetHashCode();
+                if (this.ShowSubtitlesOnSkipBack != null)
+                    hashCode = hashCode * 59 + this.ShowSubtitlesOnSkipBack.GetHashCode();
+                if (this.ShowSubtitlesOnLowVolume != null)
+                    hashCode = hashCode * 59 + this.ShowSubtitlesOnLowVolume.GetHashCode();
                 return hashCode;
             }
         }

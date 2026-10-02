@@ -19,7 +19,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The LiveTvSeriesTimerInfo model module.
 * @module model/LiveTvSeriesTimerInfo
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class LiveTvSeriesTimerInfo {
     /**

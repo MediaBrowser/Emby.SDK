@@ -22,6 +22,7 @@ public struct PlaybackStartInfo: Codable {
     public var audioStreamIndex: Int?
     /** The index of the subtitle stream. */
     public var subtitleStreamIndex: Int?
+    public var subtitleEnableReason: SubtitleEnableReason?
     /** A value indicating whether this instance is paused. */
     public var isPaused: Bool?
     public var playlistIndex: Int?
@@ -55,13 +56,14 @@ public struct PlaybackStartInfo: Codable {
     /** The position ticks. */
     public var positionTicks: Int64?
 
-    public init(canSeek: Bool? = nil, nowPlayingQueue: [QueueItem]? = nil, playlistItemId: String? = nil, sessionId: String? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, isPaused: Bool? = nil, playlistIndex: Int? = nil, playlistLength: Int? = nil, isMuted: Bool? = nil, runTimeTicks: Int64? = nil, playbackStartTimeTicks: Int64? = nil, volumeLevel: Int? = nil, brightness: Int? = nil, aspectRatio: String? = nil, eventName: ProgressEvent? = nil, playMethod: PlayMethod? = nil, repeatMode: RepeatMode? = nil, sleepTimerMode: SleepTimerMode? = nil, sleepTimerEndTime: Date? = nil, shuffle: Bool? = nil, subtitleOffset: Int? = nil, playbackRate: Double? = nil, playlistItemIds: [String]? = nil, playSessionId: String? = nil, itemId: String? = nil, liveStreamId: String? = nil, mediaSourceId: String? = nil, item: BaseItemDto? = nil, positionTicks: Int64? = nil) {
+    public init(canSeek: Bool? = nil, nowPlayingQueue: [QueueItem]? = nil, playlistItemId: String? = nil, sessionId: String? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleEnableReason: SubtitleEnableReason? = nil, isPaused: Bool? = nil, playlistIndex: Int? = nil, playlistLength: Int? = nil, isMuted: Bool? = nil, runTimeTicks: Int64? = nil, playbackStartTimeTicks: Int64? = nil, volumeLevel: Int? = nil, brightness: Int? = nil, aspectRatio: String? = nil, eventName: ProgressEvent? = nil, playMethod: PlayMethod? = nil, repeatMode: RepeatMode? = nil, sleepTimerMode: SleepTimerMode? = nil, sleepTimerEndTime: Date? = nil, shuffle: Bool? = nil, subtitleOffset: Int? = nil, playbackRate: Double? = nil, playlistItemIds: [String]? = nil, playSessionId: String? = nil, itemId: String? = nil, liveStreamId: String? = nil, mediaSourceId: String? = nil, item: BaseItemDto? = nil, positionTicks: Int64? = nil) {
         self.canSeek = canSeek
         self.nowPlayingQueue = nowPlayingQueue
         self.playlistItemId = playlistItemId
         self.sessionId = sessionId
         self.audioStreamIndex = audioStreamIndex
         self.subtitleStreamIndex = subtitleStreamIndex
+        self.subtitleEnableReason = subtitleEnableReason
         self.isPaused = isPaused
         self.playlistIndex = playlistIndex
         self.playlistLength = playlistLength
@@ -95,6 +97,7 @@ public struct PlaybackStartInfo: Codable {
         case sessionId = "SessionId"
         case audioStreamIndex = "AudioStreamIndex"
         case subtitleStreamIndex = "SubtitleStreamIndex"
+        case subtitleEnableReason = "SubtitleEnableReason"
         case isPaused = "IsPaused"
         case playlistIndex = "PlaylistIndex"
         case playlistLength = "PlaylistLength"

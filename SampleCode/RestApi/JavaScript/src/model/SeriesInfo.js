@@ -10,14 +10,14 @@
  */
 
 import ApiClient from '../ApiClient';
+import EntitiesTVSeriesOrderInfo from './EntitiesTVSeriesOrderInfo';
 import GlobalizationCultureDto from './GlobalizationCultureDto';
 import ProviderIdDictionary from './ProviderIdDictionary';
-import SeriesDisplayOrder from './SeriesDisplayOrder';
 
 /**
 * The SeriesInfo model module.
 * @module model/SeriesInfo
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class SeriesInfo {
     /**
@@ -47,8 +47,11 @@ export default class SeriesInfo {
             if (data.hasOwnProperty('EpisodeAirDate')) {
                 obj['EpisodeAirDate'] = ApiClient.convertToType(data['EpisodeAirDate'], 'Date');
             }
-            if (data.hasOwnProperty('DisplayOrder')) {
-                obj['DisplayOrder'] = SeriesDisplayOrder.constructFromObject(data['DisplayOrder']);
+            if (data.hasOwnProperty('SeriesOrder')) {
+                obj['SeriesOrder'] = ApiClient.convertToType(data['SeriesOrder'], 'String');
+            }
+            if (data.hasOwnProperty('SeriesOrderInfo')) {
+                obj['SeriesOrderInfo'] = EntitiesTVSeriesOrderInfo.constructFromObject(data['SeriesOrderInfo']);
             }
             if (data.hasOwnProperty('Name')) {
                 obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
@@ -95,9 +98,13 @@ export default class SeriesInfo {
     */
     'EpisodeAirDate' = undefined;
     /**
-    * @member {module:model/SeriesDisplayOrder} DisplayOrder
+    * @member {String} SeriesOrder
     */
-    'DisplayOrder' = undefined;
+    'SeriesOrder' = undefined;
+    /**
+    * @member {module:model/EntitiesTVSeriesOrderInfo} SeriesOrderInfo
+    */
+    'SeriesOrderInfo' = undefined;
     /**
     * The name.
     * @member {String} Name

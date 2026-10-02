@@ -20,7 +20,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The MediaSourceInfo model module.
 * @module model/MediaSourceInfo
-* @version 4.11.0.4
+* @version 4.11.0.5
 */
 export default class MediaSourceInfo {
     /**
@@ -181,6 +181,9 @@ export default class MediaSourceInfo {
             }
             if (data.hasOwnProperty('DefaultSubtitleStreamIndex')) {
                 obj['DefaultSubtitleStreamIndex'] = ApiClient.convertToType(data['DefaultSubtitleStreamIndex'], 'Number');
+            }
+            if (data.hasOwnProperty('FullSubtitleStreamIndex')) {
+                obj['FullSubtitleStreamIndex'] = ApiClient.convertToType(data['FullSubtitleStreamIndex'], 'Number');
             }
             if (data.hasOwnProperty('ItemId')) {
                 obj['ItemId'] = ApiClient.convertToType(data['ItemId'], 'String');
@@ -379,6 +382,10 @@ export default class MediaSourceInfo {
     * @member {Number} DefaultSubtitleStreamIndex
     */
     'DefaultSubtitleStreamIndex' = undefined;
+    /**
+    * @member {Number} FullSubtitleStreamIndex
+    */
+    'FullSubtitleStreamIndex' = undefined;
     /**
     * Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi
     * @member {String} ItemId

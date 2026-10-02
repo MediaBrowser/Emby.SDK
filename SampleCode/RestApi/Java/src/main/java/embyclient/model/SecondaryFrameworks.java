@@ -32,7 +32,13 @@ public enum SecondaryFrameworks {
   DXVA("DxVa"),
   D3D11VA("D3d11va"),
   VIDEOTOOLBOX("VideoToolbox"),
-  MMAL("Mmal");
+  MMAL("Mmal"),
+  VULKAN("Vulkan"),
+  D3D12VA("D3d12va"),
+  OHCODEC("OhCodec"),
+  RKMPP("RkMpp"),
+  DRM("Drm"),
+  OPENCL("OpenCL");
 
   private String value;
 

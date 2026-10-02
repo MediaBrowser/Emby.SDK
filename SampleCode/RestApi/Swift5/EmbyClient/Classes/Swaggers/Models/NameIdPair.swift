@@ -15,15 +15,18 @@ public struct NameIdPair: Codable {
     public var name: String?
     /** The identifier. */
     public var _id: String?
+    public var shortOverview: String?
 
-    public init(name: String? = nil, _id: String? = nil) {
+    public init(name: String? = nil, _id: String? = nil, shortOverview: String? = nil) {
         self.name = name
         self._id = _id
+        self.shortOverview = shortOverview
     }
 
     public enum CodingKeys: String, CodingKey { 
         case name = "Name"
         case _id = "Id"
+        case shortOverview = "ShortOverview"
     }
 
 }

@@ -13,27 +13,30 @@ public struct SessionPartyInfo: Codable {
 
     public var _id: String?
     public var name: String?
-    public var sessions: [SessionSessionInfo]?
+    public var internalSessions: [SessionSessionInfo]?
     public var messages: [SessionPartyMessage]?
     public var masterSession: SessionSessionInfo?
     public var isPlaying: Bool?
+    public var sessions: [SessionPartySessionInfo]?
 
-    public init(_id: String? = nil, name: String? = nil, sessions: [SessionSessionInfo]? = nil, messages: [SessionPartyMessage]? = nil, masterSession: SessionSessionInfo? = nil, isPlaying: Bool? = nil) {
+    public init(_id: String? = nil, name: String? = nil, internalSessions: [SessionSessionInfo]? = nil, messages: [SessionPartyMessage]? = nil, masterSession: SessionSessionInfo? = nil, isPlaying: Bool? = nil, sessions: [SessionPartySessionInfo]? = nil) {
         self._id = _id
         self.name = name
-        self.sessions = sessions
+        self.internalSessions = internalSessions
         self.messages = messages
         self.masterSession = masterSession
         self.isPlaying = isPlaying
+        self.sessions = sessions
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "Id"
         case name = "Name"
-        case sessions = "Sessions"
+        case internalSessions = "InternalSessions"
         case messages = "Messages"
         case masterSession = "MasterSession"
         case isPlaying = "IsPlaying"
+        case sessions = "Sessions"
     }
 
 }

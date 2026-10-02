@@ -23,4 +23,10 @@ public enum SecondaryFrameworks: String, Codable {
     case d3d11va = "D3d11va"
     case videoToolbox = "VideoToolbox"
     case mmal = "Mmal"
+    case vulkan = "Vulkan"
+    case d3d12va = "D3d12va"
+    case ohCodec = "OhCodec"
+    case rkMpp = "RkMpp"
+    case drm = "Drm"
+    case openCL = "OpenCL"
 }

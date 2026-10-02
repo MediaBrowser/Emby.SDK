@@ -78,6 +78,12 @@ public class UserConfiguration {
   @SerializedName("EnableLocalPassword")
   private Boolean enableLocalPassword = null;
 
+  @SerializedName("ShowSubtitlesOnSkipBack")
+  private Boolean showSubtitlesOnSkipBack = null;
+
+  @SerializedName("ShowSubtitlesOnLowVolume")
+  private Boolean showSubtitlesOnLowVolume = null;
+
   public UserConfiguration audioLanguagePreference(String audioLanguagePreference) {
     this.audioLanguagePreference = audioLanguagePreference;
     return this;
@@ -426,6 +432,42 @@ public class UserConfiguration {
     this.enableLocalPassword = enableLocalPassword;
   }
 
+  public UserConfiguration showSubtitlesOnSkipBack(Boolean showSubtitlesOnSkipBack) {
+    this.showSubtitlesOnSkipBack = showSubtitlesOnSkipBack;
+    return this;
+  }
+
+   /**
+   * Get showSubtitlesOnSkipBack
+   * @return showSubtitlesOnSkipBack
+  **/
+  @Schema(description = "")
+  public Boolean isShowSubtitlesOnSkipBack() {
+    return showSubtitlesOnSkipBack;
+  }
+
+  public void setShowSubtitlesOnSkipBack(Boolean showSubtitlesOnSkipBack) {
+    this.showSubtitlesOnSkipBack = showSubtitlesOnSkipBack;
+  }
+
+  public UserConfiguration showSubtitlesOnLowVolume(Boolean showSubtitlesOnLowVolume) {
+    this.showSubtitlesOnLowVolume = showSubtitlesOnLowVolume;
+    return this;
+  }
+
+   /**
+   * Get showSubtitlesOnLowVolume
+   * @return showSubtitlesOnLowVolume
+  **/
+  @Schema(description = "")
+  public Boolean isShowSubtitlesOnLowVolume() {
+    return showSubtitlesOnLowVolume;
+  }
+
+  public void setShowSubtitlesOnLowVolume(Boolean showSubtitlesOnLowVolume) {
+    this.showSubtitlesOnLowVolume = showSubtitlesOnLowVolume;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -453,12 +495,14 @@ public class UserConfiguration {
         Objects.equals(this.enableNextEpisodeAutoPlay, userConfiguration.enableNextEpisodeAutoPlay) &&
         Objects.equals(this.resumeRewindSeconds, userConfiguration.resumeRewindSeconds) &&
         Objects.equals(this.introSkipMode, userConfiguration.introSkipMode) &&
-        Objects.equals(this.enableLocalPassword, userConfiguration.enableLocalPassword);
+        Objects.equals(this.enableLocalPassword, userConfiguration.enableLocalPassword) &&
+        Objects.equals(this.showSubtitlesOnSkipBack, userConfiguration.showSubtitlesOnSkipBack) &&
+        Objects.equals(this.showSubtitlesOnLowVolume, userConfiguration.showSubtitlesOnLowVolume);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(audioLanguagePreference, playDefaultAudioTrack, subtitleLanguagePreference, profilePin, displayMissingEpisodes, subtitleMode, orderedViews, latestItemsExcludes, myMediaExcludes, hidePlayedInLatest, hidePlayedInMoreLikeThis, hidePlayedInSuggestions, rememberAudioSelections, rememberSubtitleSelections, enableNextEpisodeAutoPlay, resumeRewindSeconds, introSkipMode, enableLocalPassword);
+    return Objects.hash(audioLanguagePreference, playDefaultAudioTrack, subtitleLanguagePreference, profilePin, displayMissingEpisodes, subtitleMode, orderedViews, latestItemsExcludes, myMediaExcludes, hidePlayedInLatest, hidePlayedInMoreLikeThis, hidePlayedInSuggestions, rememberAudioSelections, rememberSubtitleSelections, enableNextEpisodeAutoPlay, resumeRewindSeconds, introSkipMode, enableLocalPassword, showSubtitlesOnSkipBack, showSubtitlesOnLowVolume);
   }
 
 
@@ -485,6 +529,8 @@ public class UserConfiguration {
     sb.append("    resumeRewindSeconds: ").append(toIndentedString(resumeRewindSeconds)).append("\n");
     sb.append("    introSkipMode: ").append(toIndentedString(introSkipMode)).append("\n");
     sb.append("    enableLocalPassword: ").append(toIndentedString(enableLocalPassword)).append("\n");
+    sb.append("    showSubtitlesOnSkipBack: ").append(toIndentedString(showSubtitlesOnSkipBack)).append("\n");
+    sb.append("    showSubtitlesOnLowVolume: ").append(toIndentedString(showSubtitlesOnLowVolume)).append("\n");
     sb.append("}");
     return sb.toString();
   }

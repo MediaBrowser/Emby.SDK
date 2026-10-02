@@ -12,7 +12,8 @@ import Foundation
 public struct SeriesInfo: Codable {
 
     public var episodeAirDate: Date?
-    public var displayOrder: SeriesDisplayOrder?
+    public var seriesOrder: String?
+    public var seriesOrderInfo: EntitiesTVSeriesOrderInfo?
     /** The name. */
     public var name: String?
     public var path: String?
@@ -30,9 +31,10 @@ public struct SeriesInfo: Codable {
     public var isAutomated: Bool?
     public var enableAdultMetadata: Bool?
 
-    public init(episodeAirDate: Date? = nil, displayOrder: SeriesDisplayOrder? = nil, name: String? = nil, path: String? = nil, metadataLanguage: String? = nil, metadataCountryCode: String? = nil, metadataLanguages: [GlobalizationCultureDto]? = nil, providerIds: ProviderIdDictionary? = nil, year: Int? = nil, indexNumber: Int? = nil, parentIndexNumber: Int? = nil, premiereDate: Date? = nil, isAutomated: Bool? = nil, enableAdultMetadata: Bool? = nil) {
+    public init(episodeAirDate: Date? = nil, seriesOrder: String? = nil, seriesOrderInfo: EntitiesTVSeriesOrderInfo? = nil, name: String? = nil, path: String? = nil, metadataLanguage: String? = nil, metadataCountryCode: String? = nil, metadataLanguages: [GlobalizationCultureDto]? = nil, providerIds: ProviderIdDictionary? = nil, year: Int? = nil, indexNumber: Int? = nil, parentIndexNumber: Int? = nil, premiereDate: Date? = nil, isAutomated: Bool? = nil, enableAdultMetadata: Bool? = nil) {
         self.episodeAirDate = episodeAirDate
-        self.displayOrder = displayOrder
+        self.seriesOrder = seriesOrder
+        self.seriesOrderInfo = seriesOrderInfo
         self.name = name
         self.path = path
         self.metadataLanguage = metadataLanguage
@@ -49,7 +51,8 @@ public struct SeriesInfo: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case episodeAirDate = "EpisodeAirDate"
-        case displayOrder = "DisplayOrder"
+        case seriesOrder = "SeriesOrder"
+        case seriesOrderInfo = "SeriesOrderInfo"
         case name = "Name"
         case path = "Path"
         case metadataLanguage = "MetadataLanguage"

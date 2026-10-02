@@ -796,6 +796,270 @@ export default class ColorFormats {
          */
         nv42 = "nv42";
 
+        /**
+         * value: "vulkan"
+         * @const
+         */
+        vulkan = "vulkan";
+
+        /**
+         * value: "y210"
+         * @const
+         */
+        y210 = "y210";
+
+        /**
+         * value: "x2rgb10"
+         * @const
+         */
+        x2rgb10 = "x2rgb10";
+
+        /**
+         * value: "x2bgr10"
+         * @const
+         */
+        x2bgr10 = "x2bgr10";
+
+        /**
+         * value: "p210"
+         * @const
+         */
+        p210 = "p210";
+
+        /**
+         * value: "p410"
+         * @const
+         */
+        p410 = "p410";
+
+        /**
+         * value: "p216"
+         * @const
+         */
+        p216 = "p216";
+
+        /**
+         * value: "p416"
+         * @const
+         */
+        p416 = "p416";
+
+        /**
+         * value: "vuya"
+         * @const
+         */
+        vuya = "vuya";
+
+        /**
+         * value: "rgbaf16"
+         * @const
+         */
+        rgbaf16 = "rgbaf16";
+
+        /**
+         * value: "vuyx"
+         * @const
+         */
+        vuyx = "vuyx";
+
+        /**
+         * value: "p012"
+         * @const
+         */
+        p012 = "p012";
+
+        /**
+         * value: "y212"
+         * @const
+         */
+        y212 = "y212";
+
+        /**
+         * value: "xv30"
+         * @const
+         */
+        xv30 = "xv30";
+
+        /**
+         * value: "xv36"
+         * @const
+         */
+        xv36 = "xv36";
+
+        /**
+         * value: "rgbf32"
+         * @const
+         */
+        rgbf32 = "rgbf32";
+
+        /**
+         * value: "rgbaf32"
+         * @const
+         */
+        rgbaf32 = "rgbaf32";
+
+        /**
+         * value: "p212"
+         * @const
+         */
+        p212 = "p212";
+
+        /**
+         * value: "p412"
+         * @const
+         */
+        p412 = "p412";
+
+        /**
+         * value: "gbrap14"
+         * @const
+         */
+        gbrap14 = "gbrap14";
+
+        /**
+         * value: "d3d12"
+         * @const
+         */
+        d3d12 = "d3d12";
+
+        /**
+         * value: "ayuv"
+         * @const
+         */
+        ayuv = "ayuv";
+
+        /**
+         * value: "uyva"
+         * @const
+         */
+        uyva = "uyva";
+
+        /**
+         * value: "vyu444"
+         * @const
+         */
+        vyu444 = "vyu444";
+
+        /**
+         * value: "v30x"
+         * @const
+         */
+        v30x = "v30x";
+
+        /**
+         * value: "rgbf16"
+         * @const
+         */
+        rgbf16 = "rgbf16";
+
+        /**
+         * value: "rgba128"
+         * @const
+         */
+        rgba128 = "rgba128";
+
+        /**
+         * value: "rgb96"
+         * @const
+         */
+        rgb96 = "rgb96";
+
+        /**
+         * value: "y216"
+         * @const
+         */
+        y216 = "y216";
+
+        /**
+         * value: "xv48"
+         * @const
+         */
+        xv48 = "xv48";
+
+        /**
+         * value: "gbrpf16"
+         * @const
+         */
+        gbrpf16 = "gbrpf16";
+
+        /**
+         * value: "gbrapf16"
+         * @const
+         */
+        gbrapf16 = "gbrapf16";
+
+        /**
+         * value: "grayf16"
+         * @const
+         */
+        grayf16 = "grayf16";
+
+        /**
+         * value: "amf_surface"
+         * @const
+         */
+        amf_surface = "amf_surface";
+
+        /**
+         * value: "gray32"
+         * @const
+         */
+        gray32 = "gray32";
+
+        /**
+         * value: "yaf32"
+         * @const
+         */
+        yaf32 = "yaf32";
+
+        /**
+         * value: "yaf16"
+         * @const
+         */
+        yaf16 = "yaf16";
+
+        /**
+         * value: "gbrap32"
+         * @const
+         */
+        gbrap32 = "gbrap32";
+
+        /**
+         * value: "yuv444p10msb"
+         * @const
+         */
+        yuv444p10msb = "yuv444p10msb";
+
+        /**
+         * value: "yuv444p12msb"
+         * @const
+         */
+        yuv444p12msb = "yuv444p12msb";
+
+        /**
+         * value: "gbrp10msb"
+         * @const
+         */
+        gbrp10msb = "gbrp10msb";
+
+        /**
+         * value: "gbrp12msb"
+         * @const
+         */
+        gbrp12msb = "gbrp12msb";
+
+        /**
+         * value: "ohcodec"
+         * @const
+         */
+        ohcodec = "ohcodec";
+
+        /**
+         * value: "nv15"
+         * @const
+         */
+        nv15 = "nv15";
+
 
     /**
     * Returns a <code>ColorFormats</code> enum value from a Javascript object name.

@@ -642,12 +642,12 @@
   
   
   <a id="MediaBrowser_Controller_Resolvers_BaseItemResolver_1_OnItemFound_" data-uid="MediaBrowser.Controller.Resolvers.BaseItemResolver`1.OnItemFound*"></a>
-  <h4 id="MediaBrowser_Controller_Resolvers_BaseItemResolver_1_OnItemFound__1___0_MediaBrowser_Controller_Entities_Folder_" data-uid="MediaBrowser.Controller.Resolvers.BaseItemResolver`1.OnItemFound``1(``0,MediaBrowser.Controller.Entities.Folder)">OnItemFound&lt;TItem&gt;(TItem, Folder)</h4>
+  <h4 id="MediaBrowser_Controller_Resolvers_BaseItemResolver_1_OnItemFound__1___0_MediaBrowser_Controller_Entities_Folder_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Resolvers.BaseItemResolver`1.OnItemFound``1(``0,MediaBrowser.Controller.Entities.Folder,MediaBrowser.Model.Configuration.LibraryOptions)">OnItemFound&lt;TItem&gt;(TItem, Folder, LibraryOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnItemFound&lt;TItem&gt;(TItem item, Folder parent)
+    <pre><code class="lang-csharp hljs">protected virtual void OnItemFound&lt;TItem&gt;(TItem item, Folder parent, LibraryOptions libraryOptions)
     where TItem : BaseItem</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -668,6 +668,11 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a></td>
         <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
         <td></td>
       </tr>
     </tbody>

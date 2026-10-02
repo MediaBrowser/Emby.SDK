@@ -675,6 +675,34 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Gets orders for a show
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id">The series id</param>
+        /// <returns>Task of ApiResponse (List&lt;NameIdPair&gt;)</returns>
+        public async Task<RestResponse<List<NameIdPair>>> GetShowsByIdOrders (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling TvShowsServiceApi->GetShowsByIdOrders");
+            }
+            
+            var request = new RestRequest("/Shows/{Id}/Orders", Method.Get);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<List<NameIdPair>>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Gets seasons for a tv series
         /// </summary>
         /// <remarks>

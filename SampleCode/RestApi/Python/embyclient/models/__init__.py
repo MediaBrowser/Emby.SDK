@@ -19,7 +19,6 @@ from embyclient.models.api_base_items_request import ApiBaseItemsRequest
 from embyclient.models.api_configuration_page_info import ApiConfigurationPageInfo
 from embyclient.models.api_epg_row import ApiEpgRow
 from embyclient.models.api_listing_provider_type_info import ApiListingProviderTypeInfo
-from embyclient.models.api_name_id_description_pair import ApiNameIdDescriptionPair
 from embyclient.models.api_on_playback_progress import ApiOnPlaybackProgress
 from embyclient.models.api_set_channel_disabled import ApiSetChannelDisabled
 from embyclient.models.api_set_channel_mapping import ApiSetChannelMapping
@@ -84,6 +83,7 @@ from embyclient.models.editors_editor_base import EditorsEditorBase
 from embyclient.models.editors_editor_button_item import EditorsEditorButtonItem
 from embyclient.models.editors_editor_root import EditorsEditorRoot
 from embyclient.models.encoding_context import EncodingContext
+from embyclient.models.entities_tv_series_order_info import EntitiesTVSeriesOrderInfo
 from embyclient.models.enums_ui_command_type import EnumsUICommandType
 from embyclient.models.enums_ui_view_type import EnumsUIViewType
 from embyclient.models.extended_video_sub_types import ExtendedVideoSubTypes
@@ -265,18 +265,19 @@ from embyclient.models.run_ui_command import RunUICommand
 from embyclient.models.scroll_direction import ScrollDirection
 from embyclient.models.secondary_frameworks import SecondaryFrameworks
 from embyclient.models.segment_skip_mode import SegmentSkipMode
-from embyclient.models.series_display_order import SeriesDisplayOrder
 from embyclient.models.series_info import SeriesInfo
 from embyclient.models.server_configuration import ServerConfiguration
 from embyclient.models.session_party_info import SessionPartyInfo
 from embyclient.models.session_party_info_result import SessionPartyInfoResult
 from embyclient.models.session_party_message import SessionPartyMessage
+from embyclient.models.session_party_session_info import SessionPartySessionInfo
 from embyclient.models.session_session_info import SessionSessionInfo
 from embyclient.models.session_user_info import SessionUserInfo
 from embyclient.models.sleep_timer_mode import SleepTimerMode
 from embyclient.models.song_info import SongInfo
 from embyclient.models.sort_order import SortOrder
 from embyclient.models.subtitle_delivery_method import SubtitleDeliveryMethod
+from embyclient.models.subtitle_enable_reason import SubtitleEnableReason
 from embyclient.models.subtitle_location_type import SubtitleLocationType
 from embyclient.models.subtitle_playback_mode import SubtitlePlaybackMode
 from embyclient.models.subtitle_profile import SubtitleProfile

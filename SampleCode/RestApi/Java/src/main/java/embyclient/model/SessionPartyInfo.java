@@ -13,6 +13,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import embyclient.model.SessionPartyMessage;
+import embyclient.model.SessionPartySessionInfo;
 import embyclient.model.SessionSessionInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
@@ -30,8 +31,8 @@ public class SessionPartyInfo {
   @SerializedName("Name")
   private String name = null;
 
-  @SerializedName("Sessions")
-  private List<SessionSessionInfo> sessions = null;
+  @SerializedName("InternalSessions")
+  private List<SessionSessionInfo> internalSessions = null;
 
   @SerializedName("Messages")
   private List<SessionPartyMessage> messages = null;
@@ -41,6 +42,9 @@ public class SessionPartyInfo {
 
   @SerializedName("IsPlaying")
   private Boolean isPlaying = null;
+
+  @SerializedName("Sessions")
+  private List<SessionPartySessionInfo> sessions = null;
 
   public SessionPartyInfo id(String id) {
     this.id = id;
@@ -78,30 +82,30 @@ public class SessionPartyInfo {
     this.name = name;
   }
 
-  public SessionPartyInfo sessions(List<SessionSessionInfo> sessions) {
-    this.sessions = sessions;
+  public SessionPartyInfo internalSessions(List<SessionSessionInfo> internalSessions) {
+    this.internalSessions = internalSessions;
     return this;
   }
 
-  public SessionPartyInfo addSessionsItem(SessionSessionInfo sessionsItem) {
-    if (this.sessions == null) {
-      this.sessions = new ArrayList<>();
+  public SessionPartyInfo addInternalSessionsItem(SessionSessionInfo internalSessionsItem) {
+    if (this.internalSessions == null) {
+      this.internalSessions = new ArrayList<>();
     }
-    this.sessions.add(sessionsItem);
+    this.internalSessions.add(internalSessionsItem);
     return this;
   }
 
    /**
-   * Get sessions
-   * @return sessions
+   * Get internalSessions
+   * @return internalSessions
   **/
   @Schema(description = "")
-  public List<SessionSessionInfo> getSessions() {
-    return sessions;
+  public List<SessionSessionInfo> getInternalSessions() {
+    return internalSessions;
   }
 
-  public void setSessions(List<SessionSessionInfo> sessions) {
-    this.sessions = sessions;
+  public void setInternalSessions(List<SessionSessionInfo> internalSessions) {
+    this.internalSessions = internalSessions;
   }
 
   public SessionPartyInfo messages(List<SessionPartyMessage> messages) {
@@ -166,6 +170,32 @@ public class SessionPartyInfo {
     this.isPlaying = isPlaying;
   }
 
+  public SessionPartyInfo sessions(List<SessionPartySessionInfo> sessions) {
+    this.sessions = sessions;
+    return this;
+  }
+
+  public SessionPartyInfo addSessionsItem(SessionPartySessionInfo sessionsItem) {
+    if (this.sessions == null) {
+      this.sessions = new ArrayList<>();
+    }
+    this.sessions.add(sessionsItem);
+    return this;
+  }
+
+   /**
+   * Get sessions
+   * @return sessions
+  **/
+  @Schema(description = "")
+  public List<SessionPartySessionInfo> getSessions() {
+    return sessions;
+  }
+
+  public void setSessions(List<SessionPartySessionInfo> sessions) {
+    this.sessions = sessions;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -178,15 +208,16 @@ public class SessionPartyInfo {
     SessionPartyInfo sessionPartyInfo = (SessionPartyInfo) o;
     return Objects.equals(this.id, sessionPartyInfo.id) &&
         Objects.equals(this.name, sessionPartyInfo.name) &&
-        Objects.equals(this.sessions, sessionPartyInfo.sessions) &&
+        Objects.equals(this.internalSessions, sessionPartyInfo.internalSessions) &&
         Objects.equals(this.messages, sessionPartyInfo.messages) &&
         Objects.equals(this.masterSession, sessionPartyInfo.masterSession) &&
-        Objects.equals(this.isPlaying, sessionPartyInfo.isPlaying);
+        Objects.equals(this.isPlaying, sessionPartyInfo.isPlaying) &&
+        Objects.equals(this.sessions, sessionPartyInfo.sessions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, sessions, messages, masterSession, isPlaying);
+    return Objects.hash(id, name, internalSessions, messages, masterSession, isPlaying, sessions);
   }
 
 
@@ -197,10 +228,11 @@ public class SessionPartyInfo {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    sessions: ").append(toIndentedString(sessions)).append("\n");
+    sb.append("    internalSessions: ").append(toIndentedString(internalSessions)).append("\n");
     sb.append("    messages: ").append(toIndentedString(messages)).append("\n");
     sb.append("    masterSession: ").append(toIndentedString(masterSession)).append("\n");
     sb.append("    isPlaying: ").append(toIndentedString(isPlaying)).append("\n");
+    sb.append("    sessions: ").append(toIndentedString(sessions)).append("\n");
     sb.append("}");
     return sb.toString();
   }

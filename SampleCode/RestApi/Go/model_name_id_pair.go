@@ -11,4 +11,5 @@ type NameIdPair struct {
 	Name string `json:"Name,omitempty"`
 	// The identifier.
 	Id string `json:"Id,omitempty"`
+	ShortOverview string `json:"ShortOverview,omitempty"`
 }
