@@ -9,6 +9,7 @@ package embyclient
 type PlaystateRequest struct {
 	Command *PlaystateCommand `json:"Command,omitempty"`
 	SeekPositionTicks int64 `json:"SeekPositionTicks,omitempty"`
+	SeekToleranceTicks int64 `json:"SeekToleranceTicks,omitempty"`
 	// The controlling user identifier.
 	ControllingUserId string `json:"ControllingUserId,omitempty"`
 }

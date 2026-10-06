@@ -24,25 +24,30 @@ class PlaystateRequest(object):
     swagger_types = {
         'command': 'PlaystateCommand',
         'seek_position_ticks': 'int',
+        'seek_tolerance_ticks': 'int',
         'controlling_user_id': 'str'
     }
 
     attribute_map = {
         'command': 'Command',
         'seek_position_ticks': 'SeekPositionTicks',
+        'seek_tolerance_ticks': 'SeekToleranceTicks',
         'controlling_user_id': 'ControllingUserId'
     }
 
-    def __init__(self, command=None, seek_position_ticks=None, controlling_user_id=None):  # noqa: E501
+    def __init__(self, command=None, seek_position_ticks=None, seek_tolerance_ticks=None, controlling_user_id=None):  # noqa: E501
         """PlaystateRequest - a model defined in Swagger"""  # noqa: E501
         self._command = None
         self._seek_position_ticks = None
+        self._seek_tolerance_ticks = None
         self._controlling_user_id = None
         self.discriminator = None
         if command is not None:
             self.command = command
         if seek_position_ticks is not None:
             self.seek_position_ticks = seek_position_ticks
+        if seek_tolerance_ticks is not None:
+            self.seek_tolerance_ticks = seek_tolerance_ticks
         if controlling_user_id is not None:
             self.controlling_user_id = controlling_user_id
 
@@ -87,6 +92,27 @@ class PlaystateRequest(object):
         """
 
         self._seek_position_ticks = seek_position_ticks
+
+    @property
+    def seek_tolerance_ticks(self):
+        """Gets the seek_tolerance_ticks of this PlaystateRequest.  # noqa: E501
+
+
+        :return: The seek_tolerance_ticks of this PlaystateRequest.  # noqa: E501
+        :rtype: int
+        """
+        return self._seek_tolerance_ticks
+
+    @seek_tolerance_ticks.setter
+    def seek_tolerance_ticks(self, seek_tolerance_ticks):
+        """Sets the seek_tolerance_ticks of this PlaystateRequest.
+
+
+        :param seek_tolerance_ticks: The seek_tolerance_ticks of this PlaystateRequest.  # noqa: E501
+        :type: int
+        """
+
+        self._seek_tolerance_ticks = seek_tolerance_ticks
 
     @property
     def controlling_user_id(self):

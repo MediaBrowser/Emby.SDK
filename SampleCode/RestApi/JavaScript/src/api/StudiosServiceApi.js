@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * StudiosService service.
 * @module api/StudiosServiceApi
-* @version 4.11.0.5
+* @version 4.11.0.6
 */
 export default class StudiosServiceApi {
 

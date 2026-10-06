@@ -15,7 +15,7 @@ import PlaystateCommand from './PlaystateCommand';
 /**
 * The PlaystateRequest model module.
 * @module model/PlaystateRequest
-* @version 4.11.0.5
+* @version 4.11.0.6
 */
 export default class PlaystateRequest {
     /**
@@ -48,6 +48,9 @@ export default class PlaystateRequest {
             if (data.hasOwnProperty('SeekPositionTicks')) {
                 obj['SeekPositionTicks'] = ApiClient.convertToType(data['SeekPositionTicks'], 'Number');
             }
+            if (data.hasOwnProperty('SeekToleranceTicks')) {
+                obj['SeekToleranceTicks'] = ApiClient.convertToType(data['SeekToleranceTicks'], 'Number');
+            }
             if (data.hasOwnProperty('ControllingUserId')) {
                 obj['ControllingUserId'] = ApiClient.convertToType(data['ControllingUserId'], 'String');
             }
@@ -63,6 +66,10 @@ export default class PlaystateRequest {
     * @member {Number} SeekPositionTicks
     */
     'SeekPositionTicks' = undefined;
+    /**
+    * @member {Number} SeekToleranceTicks
+    */
+    'SeekToleranceTicks' = undefined;
     /**
     * The controlling user identifier.
     * @member {String} ControllingUserId

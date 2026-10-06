@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.11.0.5"
+    "version": "4.11.0.6"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -84402,6 +84402,10 @@
           "$ref": "#/definitions/PlaystateCommand"
         },
         "SeekPositionTicks": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "SeekToleranceTicks": {
           "format": "int64",
           "type": "integer"
         },

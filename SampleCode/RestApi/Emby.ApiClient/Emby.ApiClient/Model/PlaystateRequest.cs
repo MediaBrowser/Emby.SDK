@@ -39,6 +39,12 @@ namespace Emby.ApiClient.Model
         public long? SeekPositionTicks { get; set; }
 
         /// <summary>
+        /// Gets or Sets SeekToleranceTicks
+        /// </summary>
+        /// <value>The SeekToleranceTicks.</value>
+        public long? SeekToleranceTicks { get; set; }
+
+        /// <summary>
         /// The controlling user identifier.
         /// </summary>
         /// <value>The ControllingUserId.</value>
@@ -54,6 +60,7 @@ namespace Emby.ApiClient.Model
             sb.Append("class PlaystateRequest {\n");
             sb.Append("  Command: ").Append(Command).Append("\n");
             sb.Append("  SeekPositionTicks: ").Append(SeekPositionTicks).Append("\n");
+            sb.Append("  SeekToleranceTicks: ").Append(SeekToleranceTicks).Append("\n");
             sb.Append("  ControllingUserId: ").Append(ControllingUserId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -91,6 +98,11 @@ namespace Emby.ApiClient.Model
                     this.SeekPositionTicks.Equals(input.SeekPositionTicks))
                 ) && 
                 (
+                    this.SeekToleranceTicks == input.SeekToleranceTicks ||
+                    (this.SeekToleranceTicks != null &&
+                    this.SeekToleranceTicks.Equals(input.SeekToleranceTicks))
+                ) && 
+                (
                     this.ControllingUserId == input.ControllingUserId ||
                     (this.ControllingUserId != null &&
                     this.ControllingUserId.Equals(input.ControllingUserId))
@@ -110,6 +122,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Command.GetHashCode();
                 if (this.SeekPositionTicks != null)
                     hashCode = hashCode * 59 + this.SeekPositionTicks.GetHashCode();
+                if (this.SeekToleranceTicks != null)
+                    hashCode = hashCode * 59 + this.SeekToleranceTicks.GetHashCode();
                 if (this.ControllingUserId != null)
                     hashCode = hashCode * 59 + this.ControllingUserId.GetHashCode();
                 return hashCode;

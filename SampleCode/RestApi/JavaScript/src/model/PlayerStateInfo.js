@@ -19,7 +19,7 @@ import SubtitleEnableReason from './SubtitleEnableReason';
 /**
 * The PlayerStateInfo model module.
 * @module model/PlayerStateInfo
-* @version 4.11.0.5
+* @version 4.11.0.6
 */
 export default class PlayerStateInfo {
     /**

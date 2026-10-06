@@ -27,6 +27,9 @@ public class PlaystateRequest {
   @SerializedName("SeekPositionTicks")
   private Long seekPositionTicks = null;
 
+  @SerializedName("SeekToleranceTicks")
+  private Long seekToleranceTicks = null;
+
   @SerializedName("ControllingUserId")
   private String controllingUserId = null;
 
@@ -66,6 +69,24 @@ public class PlaystateRequest {
     this.seekPositionTicks = seekPositionTicks;
   }
 
+  public PlaystateRequest seekToleranceTicks(Long seekToleranceTicks) {
+    this.seekToleranceTicks = seekToleranceTicks;
+    return this;
+  }
+
+   /**
+   * Get seekToleranceTicks
+   * @return seekToleranceTicks
+  **/
+  @Schema(description = "")
+  public Long getSeekToleranceTicks() {
+    return seekToleranceTicks;
+  }
+
+  public void setSeekToleranceTicks(Long seekToleranceTicks) {
+    this.seekToleranceTicks = seekToleranceTicks;
+  }
+
   public PlaystateRequest controllingUserId(String controllingUserId) {
     this.controllingUserId = controllingUserId;
     return this;
@@ -96,12 +117,13 @@ public class PlaystateRequest {
     PlaystateRequest playstateRequest = (PlaystateRequest) o;
     return Objects.equals(this.command, playstateRequest.command) &&
         Objects.equals(this.seekPositionTicks, playstateRequest.seekPositionTicks) &&
+        Objects.equals(this.seekToleranceTicks, playstateRequest.seekToleranceTicks) &&
         Objects.equals(this.controllingUserId, playstateRequest.controllingUserId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(command, seekPositionTicks, controllingUserId);
+    return Objects.hash(command, seekPositionTicks, seekToleranceTicks, controllingUserId);
   }
 
 
@@ -112,6 +134,7 @@ public class PlaystateRequest {
     
     sb.append("    command: ").append(toIndentedString(command)).append("\n");
     sb.append("    seekPositionTicks: ").append(toIndentedString(seekPositionTicks)).append("\n");
+    sb.append("    seekToleranceTicks: ").append(toIndentedString(seekToleranceTicks)).append("\n");
     sb.append("    controllingUserId: ").append(toIndentedString(controllingUserId)).append("\n");
     sb.append("}");
     return sb.toString();

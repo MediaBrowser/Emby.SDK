@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.11.0.5
+ * OpenAPI spec version: 4.11.0.6
  * 
  *
  * NOTE: This file is auto generated.
@@ -9849,6 +9849,12 @@ export interface PlaystateRequest {
      * @memberof PlaystateRequest
      */
     SeekPositionTicks?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof PlaystateRequest
+     */
+    SeekToleranceTicks?: number;
     /**
      * The controlling user identifier.
      * @type {string}

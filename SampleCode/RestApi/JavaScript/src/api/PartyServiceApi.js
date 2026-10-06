@@ -17,7 +17,7 @@ import SessionPartyMessage from '../model/SessionPartyMessage';
 /**
 * PartyService service.
 * @module api/PartyServiceApi
-* @version 4.11.0.5
+* @version 4.11.0.6
 */
 export default class PartyServiceApi {
 

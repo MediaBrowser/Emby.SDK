@@ -6317,7 +6317,7 @@
   "reference/pluginapi/MediaBrowser.Model.Plugins.UI.html": {
     "href": "reference/pluginapi/MediaBrowser.Model.Plugins.UI.html",
     "title": "Namespace MediaBrowser.Model.Plugins.UI",
-    "keywords": "Namespace MediaBrowser.Model.Plugins.UI Classes EmbyUserException Interfaces IHasTabbedUIPages IHasUIPages IPluginPageSecurity IPluginUIPageController"
+    "keywords": "Namespace MediaBrowser.Model.Plugins.UI Classes EmbyUserException Interfaces IHasTabbedUIPages IHasUIPages IPluginPageSecurity IPluginUIPageController IPluginUIPageController2"
   },
   "reference/pluginapi/MediaBrowser.Model.Plugins.UI.IHasTabbedUIPages.html": {
     "href": "reference/pluginapi/MediaBrowser.Model.Plugins.UI.IHasTabbedUIPages.html",
@@ -6338,6 +6338,11 @@
     "href": "reference/pluginapi/MediaBrowser.Model.Plugins.UI.IPluginUIPageController.html",
     "title": "Interface IPluginUIPageController",
     "keywords": "Interface IPluginUIPageController Namespace : MediaBrowser.Model.Plugins.UI Assembly : MediaBrowser.Model.dll Syntax public interface IPluginUIPageController Properties PageInfo Declaration PluginPageInfo PageInfo { get; } Property Value Type Description PluginPageInfo Methods CreateDefaultPageView() Declaration Task<IPluginUIView> CreateDefaultPageView() Returns Type Description System.Threading.Tasks.Task < IPluginUIView > Initialize(CancellationToken) Declaration Task Initialize(CancellationToken token) Parameters Type Name Description System.Threading.CancellationToken token Returns Type Description System.Threading.Tasks.Task Extension Methods Extensions.JsonClone<T>(T, IJsonSerializer)"
+  },
+  "reference/pluginapi/MediaBrowser.Model.Plugins.UI.IPluginUIPageController2.html": {
+    "href": "reference/pluginapi/MediaBrowser.Model.Plugins.UI.IPluginUIPageController2.html",
+    "title": "Interface IPluginUIPageController2",
+    "keywords": "Interface IPluginUIPageController2 Inherited Members IPluginUIPageController.PageInfo IPluginUIPageController.Initialize(CancellationToken) IPluginUIPageController.CreateDefaultPageView() Namespace : MediaBrowser.Model.Plugins.UI Assembly : MediaBrowser.Model.dll Syntax public interface IPluginUIPageController2 : IPluginUIPageController Methods CreateDefaultPageView(IRequest) Declaration Task<IPluginUIView> CreateDefaultPageView(IRequest request) Parameters Type Name Description IRequest request Returns Type Description System.Threading.Tasks.Task < IPluginUIView > Extension Methods Extensions.JsonClone<T>(T, IJsonSerializer)"
   },
   "reference/pluginapi/MediaBrowser.Model.Plugins.UI.Views.Enums.CompactViewAppearance.html": {
     "href": "reference/pluginapi/MediaBrowser.Model.Plugins.UI.Views.Enums.CompactViewAppearance.html",
@@ -6762,7 +6767,7 @@
   "reference/pluginapi/MediaBrowser.Model.Session.PlaystateRequest.html": {
     "href": "reference/pluginapi/MediaBrowser.Model.Session.PlaystateRequest.html",
     "title": "Class PlaystateRequest",
-    "keywords": "Class PlaystateRequest Inheritance System.Object PlaystateRequest Namespace : MediaBrowser.Model.Session Assembly : MediaBrowser.Model.dll Syntax public class PlaystateRequest Properties Command Declaration public PlaystateCommand Command { get; set; } Property Value Type Description PlaystateCommand ControllingUserId Gets or sets the controlling user identifier. Declaration public string ControllingUserId { get; set; } Property Value Type Description System.String The controlling user identifier. SeekPositionTicks Declaration public long? SeekPositionTicks { get; set; } Property Value Type Description System.Nullable < System.Int64 > Extension Methods Extensions.JsonClone<T>(T, IJsonSerializer)"
+    "keywords": "Class PlaystateRequest Inheritance System.Object PlaystateRequest Namespace : MediaBrowser.Model.Session Assembly : MediaBrowser.Model.dll Syntax public class PlaystateRequest Properties Command Declaration public PlaystateCommand Command { get; set; } Property Value Type Description PlaystateCommand ControllingUserId Gets or sets the controlling user identifier. Declaration public string ControllingUserId { get; set; } Property Value Type Description System.String The controlling user identifier. SeekPositionTicks Declaration public long? SeekPositionTicks { get; set; } Property Value Type Description System.Nullable < System.Int64 > SeekToleranceTicks Declaration public long? SeekToleranceTicks { get; set; } Property Value Type Description System.Nullable < System.Int64 > Extension Methods Extensions.JsonClone<T>(T, IJsonSerializer)"
   },
   "reference/pluginapi/MediaBrowser.Model.Session.ProgressEvent.html": {
     "href": "reference/pluginapi/MediaBrowser.Model.Session.ProgressEvent.html",
@@ -9342,7 +9347,7 @@
   "reference/RestAPI/SessionsService/postSessionsByIdPlayingByCommand.html": {
     "href": "reference/RestAPI/SessionsService/postSessionsByIdPlayingByCommand.html",
     "title": "postSessionsByIdPlayingByCommand",
-    "keywords": "postSessionsByIdPlayingByCommand Issues a playstate command to a client Requires authentication as user postSessionsByIdPlayingByCommand Request post /Sessions/{Id}/Playing/{Command} Parameters Name In Type Default Notes *Id path Session Id *Command path *body body PlaystateRequest PlaystateRequest: Responses Status Code Type Description Samples 200 Operation successful. Empty response. 400 Bad Request. Server cannot process request. 401 Unauthorized. Client needs to authenticate. 403 Forbidden. No permission for the reqested operation. 404 Resource not found or unavailable. 500 Server error. Definitions PlaystateRequest see also MediaBrowser.Model.Session.PlaystateRequest Name Type Notes Command PlaystateCommand Enum PlaystateCommand SeekPositionTicks integer (int64) ControllingUserId string The controlling user identifier. PlaystateCommand see also MediaBrowser.Model.Session.PlaystateCommand Enum Values Stop Pause Unpause NextTrack PreviousTrack Seek Rewind FastForward PlayPause SeekRelative"
+    "keywords": "postSessionsByIdPlayingByCommand Issues a playstate command to a client Requires authentication as user postSessionsByIdPlayingByCommand Request post /Sessions/{Id}/Playing/{Command} Parameters Name In Type Default Notes *Id path Session Id *Command path *body body PlaystateRequest PlaystateRequest: Responses Status Code Type Description Samples 200 Operation successful. Empty response. 400 Bad Request. Server cannot process request. 401 Unauthorized. Client needs to authenticate. 403 Forbidden. No permission for the reqested operation. 404 Resource not found or unavailable. 500 Server error. Definitions PlaystateRequest see also MediaBrowser.Model.Session.PlaystateRequest Name Type Notes Command PlaystateCommand Enum PlaystateCommand SeekPositionTicks integer (int64) SeekToleranceTicks integer (int64) ControllingUserId string The controlling user identifier. PlaystateCommand see also MediaBrowser.Model.Session.PlaystateCommand Enum Values Stop Pause Unpause NextTrack PreviousTrack Seek Rewind FastForward PlayPause SeekRelative"
   },
   "reference/RestAPI/SessionsService/postSessionsByIdSystemByCommand.html": {
     "href": "reference/RestAPI/SessionsService/postSessionsByIdSystemByCommand.html",

@@ -28,11 +28,13 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="command">command.</param>
         /// <param name="seekPositionTicks">seekPositionTicks.</param>
+        /// <param name="seekToleranceTicks">seekToleranceTicks.</param>
         /// <param name="controllingUserId">The controlling user identifier..</param>
-        public PlaystateRequest(PlaystateCommand command = default(PlaystateCommand), long? seekPositionTicks = default(long?), string controllingUserId = default(string))
+        public PlaystateRequest(PlaystateCommand command = default(PlaystateCommand), long? seekPositionTicks = default(long?), long? seekToleranceTicks = default(long?), string controllingUserId = default(string))
         {
             this.Command = command;
             this.SeekPositionTicks = seekPositionTicks;
+            this.SeekToleranceTicks = seekToleranceTicks;
             this.ControllingUserId = controllingUserId;
         }
         
@@ -47,6 +49,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="SeekPositionTicks", EmitDefaultValue=false)]
         public long? SeekPositionTicks { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SeekToleranceTicks
+        /// </summary>
+        [DataMember(Name="SeekToleranceTicks", EmitDefaultValue=false)]
+        public long? SeekToleranceTicks { get; set; }
 
         /// <summary>
         /// The controlling user identifier.
@@ -65,6 +73,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("class PlaystateRequest {\n");
             sb.Append("  Command: ").Append(Command).Append("\n");
             sb.Append("  SeekPositionTicks: ").Append(SeekPositionTicks).Append("\n");
+            sb.Append("  SeekToleranceTicks: ").Append(SeekToleranceTicks).Append("\n");
             sb.Append("  ControllingUserId: ").Append(ControllingUserId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -111,6 +120,11 @@ namespace EmbyClient.Dotnet.Model
                     this.SeekPositionTicks.Equals(input.SeekPositionTicks))
                 ) && 
                 (
+                    this.SeekToleranceTicks == input.SeekToleranceTicks ||
+                    (this.SeekToleranceTicks != null &&
+                    this.SeekToleranceTicks.Equals(input.SeekToleranceTicks))
+                ) && 
+                (
                     this.ControllingUserId == input.ControllingUserId ||
                     (this.ControllingUserId != null &&
                     this.ControllingUserId.Equals(input.ControllingUserId))
@@ -130,6 +144,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Command.GetHashCode();
                 if (this.SeekPositionTicks != null)
                     hashCode = hashCode * 59 + this.SeekPositionTicks.GetHashCode();
+                if (this.SeekToleranceTicks != null)
+                    hashCode = hashCode * 59 + this.SeekToleranceTicks.GetHashCode();
                 if (this.ControllingUserId != null)
                     hashCode = hashCode * 59 + this.ControllingUserId.GetHashCode();
                 return hashCode;

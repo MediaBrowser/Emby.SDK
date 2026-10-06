@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The EntitiesTVSeriesOrderInfo model module.
 * @module model/EntitiesTVSeriesOrderInfo
-* @version 4.11.0.5
+* @version 4.11.0.6
 */
 export default class EntitiesTVSeriesOrderInfo {
     /**

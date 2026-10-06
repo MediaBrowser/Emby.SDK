@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * UserViewsService service.
 * @module api/UserViewsServiceApi
-* @version 4.11.0.5
+* @version 4.11.0.6
 */
 export default class UserViewsServiceApi {
 

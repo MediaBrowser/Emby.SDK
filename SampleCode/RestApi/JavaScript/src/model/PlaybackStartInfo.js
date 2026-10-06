@@ -21,7 +21,7 @@ import SubtitleEnableReason from './SubtitleEnableReason';
 /**
 * The PlaybackStartInfo model module.
 * @module model/PlaybackStartInfo
-* @version 4.11.0.5
+* @version 4.11.0.6
 */
 export default class PlaybackStartInfo {
     /**

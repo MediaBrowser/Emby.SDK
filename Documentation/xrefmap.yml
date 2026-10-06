@@ -135865,6 +135865,25 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Plugins.UI.IPluginUIPageController.PageInfo
   nameWithType: IPluginUIPageController.PageInfo
+- uid: MediaBrowser.Model.Plugins.UI.IPluginUIPageController2
+  name: IPluginUIPageController2
+  href: reference/pluginapi/MediaBrowser.Model.Plugins.UI.IPluginUIPageController2.html
+  commentId: T:MediaBrowser.Model.Plugins.UI.IPluginUIPageController2
+  fullName: MediaBrowser.Model.Plugins.UI.IPluginUIPageController2
+  nameWithType: IPluginUIPageController2
+- uid: MediaBrowser.Model.Plugins.UI.IPluginUIPageController2.CreateDefaultPageView(MediaBrowser.Model.Services.IRequest)
+  name: CreateDefaultPageView(IRequest)
+  href: reference/pluginapi/MediaBrowser.Model.Plugins.UI.IPluginUIPageController2.html#MediaBrowser_Model_Plugins_UI_IPluginUIPageController2_CreateDefaultPageView_MediaBrowser_Model_Services_IRequest_
+  commentId: M:MediaBrowser.Model.Plugins.UI.IPluginUIPageController2.CreateDefaultPageView(MediaBrowser.Model.Services.IRequest)
+  fullName: MediaBrowser.Model.Plugins.UI.IPluginUIPageController2.CreateDefaultPageView(MediaBrowser.Model.Services.IRequest)
+  nameWithType: IPluginUIPageController2.CreateDefaultPageView(IRequest)
+- uid: MediaBrowser.Model.Plugins.UI.IPluginUIPageController2.CreateDefaultPageView*
+  name: CreateDefaultPageView
+  href: reference/pluginapi/MediaBrowser.Model.Plugins.UI.IPluginUIPageController2.html#MediaBrowser_Model_Plugins_UI_IPluginUIPageController2_CreateDefaultPageView_
+  commentId: Overload:MediaBrowser.Model.Plugins.UI.IPluginUIPageController2.CreateDefaultPageView
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Plugins.UI.IPluginUIPageController2.CreateDefaultPageView
+  nameWithType: IPluginUIPageController2.CreateDefaultPageView
 - uid: MediaBrowser.Model.Plugins.UI.Views
   name: MediaBrowser.Model.Plugins.UI.Views
   href: reference/pluginapi/MediaBrowser.Model.Plugins.UI.Views.html
@@ -143332,6 +143351,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Session.PlaystateRequest.SeekPositionTicks
   nameWithType: PlaystateRequest.SeekPositionTicks
+- uid: MediaBrowser.Model.Session.PlaystateRequest.SeekToleranceTicks
+  name: SeekToleranceTicks
+  href: reference/pluginapi/MediaBrowser.Model.Session.PlaystateRequest.html#MediaBrowser_Model_Session_PlaystateRequest_SeekToleranceTicks
+  commentId: P:MediaBrowser.Model.Session.PlaystateRequest.SeekToleranceTicks
+  fullName: MediaBrowser.Model.Session.PlaystateRequest.SeekToleranceTicks
+  nameWithType: PlaystateRequest.SeekToleranceTicks
+- uid: MediaBrowser.Model.Session.PlaystateRequest.SeekToleranceTicks*
+  name: SeekToleranceTicks
+  href: reference/pluginapi/MediaBrowser.Model.Session.PlaystateRequest.html#MediaBrowser_Model_Session_PlaystateRequest_SeekToleranceTicks_
+  commentId: Overload:MediaBrowser.Model.Session.PlaystateRequest.SeekToleranceTicks
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Session.PlaystateRequest.SeekToleranceTicks
+  nameWithType: PlaystateRequest.SeekToleranceTicks
 - uid: MediaBrowser.Model.Session.ProgressEvent
   name: ProgressEvent
   href: reference/pluginapi/MediaBrowser.Model.Session.ProgressEvent.html

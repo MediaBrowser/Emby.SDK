@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class PlaystateRequest
+    <title>Interface IPluginUIPageController2
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class PlaystateRequest
+    <meta name="title" content="Interface IPluginUIPageController2
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     <meta name="theme-color" content="#090d0f">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="../../styles/theme.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    <meta property="docfx:uid" content="MediaBrowser.Model.Session.PlaystateRequest">
+    <meta property="docfx:uid" content="MediaBrowser.Model.Plugins.UI.IPluginUIPageController2">
     
     <meta property="docfx:rel" content="../../">
     
@@ -104,64 +104,62 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MediaBrowser.Model.Session.PlaystateRequest">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Model.Plugins.UI.IPluginUIPageController2">
 <div class="refdoc">
   
   
-  <h1 id="MediaBrowser_Model_Session_PlaystateRequest" data-uid="MediaBrowser.Model.Session.PlaystateRequest" class="text-break">Class PlaystateRequest
+  <h1 id="MediaBrowser_Model_Plugins_UI_IPluginUIPageController2" data-uid="MediaBrowser.Model.Plugins.UI.IPluginUIPageController2" class="text-break">Interface IPluginUIPageController2
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">PlaystateRequest</span></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MediaBrowser.Model.Plugins.UI.IPluginUIPageController.html#MediaBrowser_Model_Plugins_UI_IPluginUIPageController_PageInfo">IPluginUIPageController.PageInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Model.Plugins.UI.IPluginUIPageController.html#MediaBrowser_Model_Plugins_UI_IPluginUIPageController_Initialize_System_Threading_CancellationToken_">IPluginUIPageController.Initialize(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Model.Plugins.UI.IPluginUIPageController.html#MediaBrowser_Model_Plugins_UI_IPluginUIPageController_CreateDefaultPageView">IPluginUIPageController.CreateDefaultPageView()</a>
+    </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.Session.html">MediaBrowser.Model.Session</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.Plugins.UI.html">MediaBrowser.Model.Plugins.UI</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
-  <h5 id="MediaBrowser_Model_Session_PlaystateRequest_syntax">Syntax</h5>
+  <h5 id="MediaBrowser_Model_Plugins_UI_IPluginUIPageController2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PlaystateRequest</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IPluginUIPageController2 : IPluginUIPageController</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="methods">Methods
   </h3>
   
   
-  <a id="MediaBrowser_Model_Session_PlaystateRequest_Command_" data-uid="MediaBrowser.Model.Session.PlaystateRequest.Command*"></a>
-  <h4 id="MediaBrowser_Model_Session_PlaystateRequest_Command" data-uid="MediaBrowser.Model.Session.PlaystateRequest.Command">Command</h4>
+  <a id="MediaBrowser_Model_Plugins_UI_IPluginUIPageController2_CreateDefaultPageView_" data-uid="MediaBrowser.Model.Plugins.UI.IPluginUIPageController2.CreateDefaultPageView*"></a>
+  <h4 id="MediaBrowser_Model_Plugins_UI_IPluginUIPageController2_CreateDefaultPageView_MediaBrowser_Model_Services_IRequest_" data-uid="MediaBrowser.Model.Plugins.UI.IPluginUIPageController2.CreateDefaultPageView(MediaBrowser.Model.Services.IRequest)">CreateDefaultPageView(IRequest)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlaystateCommand Command { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IPluginUIView&gt; CreateDefaultPageView(IRequest request)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Session.PlaystateCommand.html">PlaystateCommand</a></td>
+        <td><a class="xref" href="MediaBrowser.Model.Services.IRequest.html">IRequest</a></td>
+        <td><span class="parametername">request</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="MediaBrowser_Model_Session_PlaystateRequest_ControllingUserId_" data-uid="MediaBrowser.Model.Session.PlaystateRequest.ControllingUserId*"></a>
-  <h4 id="MediaBrowser_Model_Session_PlaystateRequest_ControllingUserId" data-uid="MediaBrowser.Model.Session.PlaystateRequest.ControllingUserId">ControllingUserId</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the controlling user identifier.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ControllingUserId { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -171,58 +169,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>The controlling user identifier.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Model_Session_PlaystateRequest_SeekPositionTicks_" data-uid="MediaBrowser.Model.Session.PlaystateRequest.SeekPositionTicks*"></a>
-  <h4 id="MediaBrowser_Model_Session_PlaystateRequest_SeekPositionTicks" data-uid="MediaBrowser.Model.Session.PlaystateRequest.SeekPositionTicks">SeekPositionTicks</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long? SeekPositionTicks { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Model_Session_PlaystateRequest_SeekToleranceTicks_" data-uid="MediaBrowser.Model.Session.PlaystateRequest.SeekToleranceTicks*"></a>
-  <h4 id="MediaBrowser_Model_Session_PlaystateRequest_SeekToleranceTicks" data-uid="MediaBrowser.Model.Session.PlaystateRequest.SeekToleranceTicks">SeekToleranceTicks</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long? SeekToleranceTicks { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.IPluginUIView.html">IPluginUIView</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

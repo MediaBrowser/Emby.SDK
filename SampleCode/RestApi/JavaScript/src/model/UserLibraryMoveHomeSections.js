@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The UserLibraryMoveHomeSections model module.
 * @module model/UserLibraryMoveHomeSections
-* @version 4.11.0.5
+* @version 4.11.0.6
 */
 export default class UserLibraryMoveHomeSections {
     /**

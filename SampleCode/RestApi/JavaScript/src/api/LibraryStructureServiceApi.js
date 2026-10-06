@@ -22,7 +22,7 @@ import QueryResultVirtualFolderInfo from '../model/QueryResultVirtualFolderInfo'
 /**
 * LibraryStructureService service.
 * @module api/LibraryStructureServiceApi
-* @version 4.11.0.5
+* @version 4.11.0.6
 */
 export default class LibraryStructureServiceApi {
 

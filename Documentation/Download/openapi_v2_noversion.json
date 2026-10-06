@@ -84403,6 +84403,10 @@
           "format": "int64",
           "type": "integer"
         },
+        "SeekToleranceTicks": {
+          "format": "int64",
+          "type": "integer"
+        },
         "ControllingUserId": {
           "description": "The controlling user identifier.",
           "type": "string"

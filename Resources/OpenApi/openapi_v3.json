@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.11.0.5"
+    "version": "4.11.0.6"
   },
   "servers": [
     {
@@ -117818,6 +117818,11 @@
             "$ref": "#/components/schemas/PlaystateCommand"
           },
           "SeekPositionTicks": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "SeekToleranceTicks": {
             "type": "integer",
             "format": "int64",
             "nullable": true

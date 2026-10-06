@@ -13,18 +13,21 @@ public struct PlaystateRequest: Codable {
 
     public var command: PlaystateCommand?
     public var seekPositionTicks: Int64?
+    public var seekToleranceTicks: Int64?
     /** The controlling user identifier. */
     public var controllingUserId: String?
 
-    public init(command: PlaystateCommand? = nil, seekPositionTicks: Int64? = nil, controllingUserId: String? = nil) {
+    public init(command: PlaystateCommand? = nil, seekPositionTicks: Int64? = nil, seekToleranceTicks: Int64? = nil, controllingUserId: String? = nil) {
         self.command = command
         self.seekPositionTicks = seekPositionTicks
+        self.seekToleranceTicks = seekToleranceTicks
         self.controllingUserId = controllingUserId
     }
 
     public enum CodingKeys: String, CodingKey { 
         case command = "Command"
         case seekPositionTicks = "SeekPositionTicks"
+        case seekToleranceTicks = "SeekToleranceTicks"
         case controllingUserId = "ControllingUserId"
     }
 
