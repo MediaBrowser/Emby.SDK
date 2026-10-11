@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.11.0.6
+ * OpenAPI spec version: 4.11.0.7
  * 
  *
  * NOTE: This file is auto generated.
@@ -12107,6 +12107,18 @@ export interface SessionPartyMessage {
      * @memberof SessionPartyMessage
      */
     DateTime?: Date;
+    /**
+     * 
+     * @type {string}
+     * @memberof SessionPartyMessage
+     */
+    MessageTranslationKey?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof SessionPartyMessage
+     */
+    MessageTranslationArguments?: Array<string>;
     /**
      * 
      * @type {string}

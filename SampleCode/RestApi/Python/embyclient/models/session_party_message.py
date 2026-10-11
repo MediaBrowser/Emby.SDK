@@ -23,6 +23,8 @@ class SessionPartyMessage(object):
     """
     swagger_types = {
         'date_time': 'datetime',
+        'message_translation_key': 'str',
+        'message_translation_arguments': 'list[str]',
         'message': 'str',
         'user_id': 'int',
         'user': 'UserDto'
@@ -30,20 +32,28 @@ class SessionPartyMessage(object):
 
     attribute_map = {
         'date_time': 'DateTime',
+        'message_translation_key': 'MessageTranslationKey',
+        'message_translation_arguments': 'MessageTranslationArguments',
         'message': 'Message',
         'user_id': 'UserId',
         'user': 'User'
     }
 
-    def __init__(self, date_time=None, message=None, user_id=None, user=None):  # noqa: E501
+    def __init__(self, date_time=None, message_translation_key=None, message_translation_arguments=None, message=None, user_id=None, user=None):  # noqa: E501
         """SessionPartyMessage - a model defined in Swagger"""  # noqa: E501
         self._date_time = None
+        self._message_translation_key = None
+        self._message_translation_arguments = None
         self._message = None
         self._user_id = None
         self._user = None
         self.discriminator = None
         if date_time is not None:
             self.date_time = date_time
+        if message_translation_key is not None:
+            self.message_translation_key = message_translation_key
+        if message_translation_arguments is not None:
+            self.message_translation_arguments = message_translation_arguments
         if message is not None:
             self.message = message
         if user_id is not None:
@@ -71,6 +81,48 @@ class SessionPartyMessage(object):
         """
 
         self._date_time = date_time
+
+    @property
+    def message_translation_key(self):
+        """Gets the message_translation_key of this SessionPartyMessage.  # noqa: E501
+
+
+        :return: The message_translation_key of this SessionPartyMessage.  # noqa: E501
+        :rtype: str
+        """
+        return self._message_translation_key
+
+    @message_translation_key.setter
+    def message_translation_key(self, message_translation_key):
+        """Sets the message_translation_key of this SessionPartyMessage.
+
+
+        :param message_translation_key: The message_translation_key of this SessionPartyMessage.  # noqa: E501
+        :type: str
+        """
+
+        self._message_translation_key = message_translation_key
+
+    @property
+    def message_translation_arguments(self):
+        """Gets the message_translation_arguments of this SessionPartyMessage.  # noqa: E501
+
+
+        :return: The message_translation_arguments of this SessionPartyMessage.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._message_translation_arguments
+
+    @message_translation_arguments.setter
+    def message_translation_arguments(self, message_translation_arguments):
+        """Sets the message_translation_arguments of this SessionPartyMessage.
+
+
+        :param message_translation_arguments: The message_translation_arguments of this SessionPartyMessage.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._message_translation_arguments = message_translation_arguments
 
     @property
     def message(self):

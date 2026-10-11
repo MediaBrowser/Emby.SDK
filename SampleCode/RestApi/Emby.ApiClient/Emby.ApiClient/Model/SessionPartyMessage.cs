@@ -33,6 +33,18 @@ namespace Emby.ApiClient.Model
         public DateTimeOffset? DateTime { get; set; }
 
         /// <summary>
+        /// Gets or Sets MessageTranslationKey
+        /// </summary>
+        /// <value>The MessageTranslationKey.</value>
+        public string MessageTranslationKey { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MessageTranslationArguments
+        /// </summary>
+        /// <value>The MessageTranslationArguments.</value>
+        public List<string> MessageTranslationArguments { get; set; }
+
+        /// <summary>
         /// Gets or Sets Message
         /// </summary>
         /// <value>The Message.</value>
@@ -59,6 +71,8 @@ namespace Emby.ApiClient.Model
             var sb = new StringBuilder();
             sb.Append("class SessionPartyMessage {\n");
             sb.Append("  DateTime: ").Append(DateTime).Append("\n");
+            sb.Append("  MessageTranslationKey: ").Append(MessageTranslationKey).Append("\n");
+            sb.Append("  MessageTranslationArguments: ").Append(MessageTranslationArguments).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -93,6 +107,17 @@ namespace Emby.ApiClient.Model
                     this.DateTime.Equals(input.DateTime))
                 ) && 
                 (
+                    this.MessageTranslationKey == input.MessageTranslationKey ||
+                    (this.MessageTranslationKey != null &&
+                    this.MessageTranslationKey.Equals(input.MessageTranslationKey))
+                ) && 
+                (
+                    this.MessageTranslationArguments == input.MessageTranslationArguments ||
+                    this.MessageTranslationArguments != null &&
+                    input.MessageTranslationArguments != null &&
+                    this.MessageTranslationArguments.SequenceEqual(input.MessageTranslationArguments)
+                ) && 
+                (
                     this.Message == input.Message ||
                     (this.Message != null &&
                     this.Message.Equals(input.Message))
@@ -120,6 +145,10 @@ namespace Emby.ApiClient.Model
                 int hashCode = 41;
                 if (this.DateTime != null)
                     hashCode = hashCode * 59 + this.DateTime.GetHashCode();
+                if (this.MessageTranslationKey != null)
+                    hashCode = hashCode * 59 + this.MessageTranslationKey.GetHashCode();
+                if (this.MessageTranslationArguments != null)
+                    hashCode = hashCode * 59 + this.MessageTranslationArguments.GetHashCode();
                 if (this.Message != null)
                     hashCode = hashCode * 59 + this.Message.GetHashCode();
                 if (this.UserId != null)

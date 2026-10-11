@@ -105989,12 +105989,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.ISessionManager.PostMessage
   nameWithType: ISessionManager.PostMessage
-- uid: MediaBrowser.Controller.Session.ISessionManager.RegisterPlaySession(MediaBrowser.Model.Session.PlaybackStartInfo,MediaBrowser.Controller.Session.SessionInfo)
-  name: RegisterPlaySession(PlaybackStartInfo, SessionInfo)
-  href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_RegisterPlaySession_MediaBrowser_Model_Session_PlaybackStartInfo_MediaBrowser_Controller_Session_SessionInfo_
-  commentId: M:MediaBrowser.Controller.Session.ISessionManager.RegisterPlaySession(MediaBrowser.Model.Session.PlaybackStartInfo,MediaBrowser.Controller.Session.SessionInfo)
-  fullName: MediaBrowser.Controller.Session.ISessionManager.RegisterPlaySession(MediaBrowser.Model.Session.PlaybackStartInfo, MediaBrowser.Controller.Session.SessionInfo)
-  nameWithType: ISessionManager.RegisterPlaySession(PlaybackStartInfo, SessionInfo)
+- uid: MediaBrowser.Controller.Session.ISessionManager.RegisterPlaySession(MediaBrowser.Model.Session.PlaybackStartInfo,MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Controller.Session.PlaySessionInfo)
+  name: RegisterPlaySession(PlaybackStartInfo, SessionInfo, PlaySessionInfo)
+  href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_RegisterPlaySession_MediaBrowser_Model_Session_PlaybackStartInfo_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Controller_Session_PlaySessionInfo_
+  commentId: M:MediaBrowser.Controller.Session.ISessionManager.RegisterPlaySession(MediaBrowser.Model.Session.PlaybackStartInfo,MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Controller.Session.PlaySessionInfo)
+  fullName: MediaBrowser.Controller.Session.ISessionManager.RegisterPlaySession(MediaBrowser.Model.Session.PlaybackStartInfo, MediaBrowser.Controller.Session.SessionInfo, MediaBrowser.Controller.Session.PlaySessionInfo)
+  nameWithType: ISessionManager.RegisterPlaySession(PlaybackStartInfo, SessionInfo, PlaySessionInfo)
 - uid: MediaBrowser.Controller.Session.ISessionManager.RegisterPlaySession*
   name: RegisterPlaySession
   href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionManager.html#MediaBrowser_Controller_Session_ISessionManager_RegisterPlaySession_
@@ -106557,6 +106557,32 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.PartyMessage.Message
   nameWithType: PartyMessage.Message
+- uid: MediaBrowser.Controller.Session.PartyMessage.MessageTranslationArguments
+  name: MessageTranslationArguments
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_MessageTranslationArguments
+  commentId: P:MediaBrowser.Controller.Session.PartyMessage.MessageTranslationArguments
+  fullName: MediaBrowser.Controller.Session.PartyMessage.MessageTranslationArguments
+  nameWithType: PartyMessage.MessageTranslationArguments
+- uid: MediaBrowser.Controller.Session.PartyMessage.MessageTranslationArguments*
+  name: MessageTranslationArguments
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_MessageTranslationArguments_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyMessage.MessageTranslationArguments
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyMessage.MessageTranslationArguments
+  nameWithType: PartyMessage.MessageTranslationArguments
+- uid: MediaBrowser.Controller.Session.PartyMessage.MessageTranslationKey
+  name: MessageTranslationKey
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_MessageTranslationKey
+  commentId: P:MediaBrowser.Controller.Session.PartyMessage.MessageTranslationKey
+  fullName: MediaBrowser.Controller.Session.PartyMessage.MessageTranslationKey
+  nameWithType: PartyMessage.MessageTranslationKey
+- uid: MediaBrowser.Controller.Session.PartyMessage.MessageTranslationKey*
+  name: MessageTranslationKey
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_MessageTranslationKey_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyMessage.MessageTranslationKey
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyMessage.MessageTranslationKey
+  nameWithType: PartyMessage.MessageTranslationKey
 - uid: MediaBrowser.Controller.Session.PartyMessage.User
   name: User
   href: reference/pluginapi/MediaBrowser.Controller.Session.PartyMessage.html#MediaBrowser_Controller_Session_PartyMessage_User

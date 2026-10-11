@@ -15,7 +15,7 @@ import NameIdPair from './NameIdPair';
 /**
 * The ApiAvailableRecordingOptions model module.
 * @module model/ApiAvailableRecordingOptions
-* @version 4.11.0.6
+* @version 4.11.0.7
 */
 export default class ApiAvailableRecordingOptions {
     /**

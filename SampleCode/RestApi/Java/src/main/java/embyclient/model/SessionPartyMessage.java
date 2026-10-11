@@ -16,6 +16,8 @@ import embyclient.model.UserDto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * SessionPartyMessage
  */
@@ -24,6 +26,12 @@ import java.time.OffsetDateTime;
 public class SessionPartyMessage {
   @SerializedName("DateTime")
   private OffsetDateTime dateTime = null;
+
+  @SerializedName("MessageTranslationKey")
+  private String messageTranslationKey = null;
+
+  @SerializedName("MessageTranslationArguments")
+  private List<String> messageTranslationArguments = null;
 
   @SerializedName("Message")
   private String message = null;
@@ -50,6 +58,50 @@ public class SessionPartyMessage {
 
   public void setDateTime(OffsetDateTime dateTime) {
     this.dateTime = dateTime;
+  }
+
+  public SessionPartyMessage messageTranslationKey(String messageTranslationKey) {
+    this.messageTranslationKey = messageTranslationKey;
+    return this;
+  }
+
+   /**
+   * Get messageTranslationKey
+   * @return messageTranslationKey
+  **/
+  @Schema(description = "")
+  public String getMessageTranslationKey() {
+    return messageTranslationKey;
+  }
+
+  public void setMessageTranslationKey(String messageTranslationKey) {
+    this.messageTranslationKey = messageTranslationKey;
+  }
+
+  public SessionPartyMessage messageTranslationArguments(List<String> messageTranslationArguments) {
+    this.messageTranslationArguments = messageTranslationArguments;
+    return this;
+  }
+
+  public SessionPartyMessage addMessageTranslationArgumentsItem(String messageTranslationArgumentsItem) {
+    if (this.messageTranslationArguments == null) {
+      this.messageTranslationArguments = new ArrayList<>();
+    }
+    this.messageTranslationArguments.add(messageTranslationArgumentsItem);
+    return this;
+  }
+
+   /**
+   * Get messageTranslationArguments
+   * @return messageTranslationArguments
+  **/
+  @Schema(description = "")
+  public List<String> getMessageTranslationArguments() {
+    return messageTranslationArguments;
+  }
+
+  public void setMessageTranslationArguments(List<String> messageTranslationArguments) {
+    this.messageTranslationArguments = messageTranslationArguments;
   }
 
   public SessionPartyMessage message(String message) {
@@ -117,6 +169,8 @@ public class SessionPartyMessage {
     }
     SessionPartyMessage sessionPartyMessage = (SessionPartyMessage) o;
     return Objects.equals(this.dateTime, sessionPartyMessage.dateTime) &&
+        Objects.equals(this.messageTranslationKey, sessionPartyMessage.messageTranslationKey) &&
+        Objects.equals(this.messageTranslationArguments, sessionPartyMessage.messageTranslationArguments) &&
         Objects.equals(this.message, sessionPartyMessage.message) &&
         Objects.equals(this.userId, sessionPartyMessage.userId) &&
         Objects.equals(this.user, sessionPartyMessage.user);
@@ -124,7 +178,7 @@ public class SessionPartyMessage {
 
   @Override
   public int hashCode() {
-    return Objects.hash(dateTime, message, userId, user);
+    return Objects.hash(dateTime, messageTranslationKey, messageTranslationArguments, message, userId, user);
   }
 
 
@@ -134,6 +188,8 @@ public class SessionPartyMessage {
     sb.append("class SessionPartyMessage {\n");
     
     sb.append("    dateTime: ").append(toIndentedString(dateTime)).append("\n");
+    sb.append("    messageTranslationKey: ").append(toIndentedString(messageTranslationKey)).append("\n");
+    sb.append("    messageTranslationArguments: ").append(toIndentedString(messageTranslationArguments)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");

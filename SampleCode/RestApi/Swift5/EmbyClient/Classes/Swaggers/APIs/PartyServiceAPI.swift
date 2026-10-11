@@ -172,8 +172,10 @@ open class PartyServiceAPI {
         "Id" : "Id",
         "HasPassword" : true
       },
+      "MessageTranslationArguments" : [ "MessageTranslationArguments", "MessageTranslationArguments" ],
       "Message" : "Message",
       "UserId" : 5,
+      "MessageTranslationKey" : "MessageTranslationKey",
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "User" : {
@@ -273,8 +275,10 @@ open class PartyServiceAPI {
         "Id" : "Id",
         "HasPassword" : true
       },
+      "MessageTranslationArguments" : [ "MessageTranslationArguments", "MessageTranslationArguments" ],
       "Message" : "Message",
       "UserId" : 5,
+      "MessageTranslationKey" : "MessageTranslationKey",
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     } ],
     "InternalSessions" : [ {
@@ -2168,8 +2172,10 @@ open class PartyServiceAPI {
       "Id" : "Id",
       "HasPassword" : true
     },
+    "MessageTranslationArguments" : [ "MessageTranslationArguments", "MessageTranslationArguments" ],
     "Message" : "Message",
     "UserId" : 5,
+    "MessageTranslationKey" : "MessageTranslationKey",
     "DateTime" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "User" : {
@@ -2269,8 +2275,10 @@ open class PartyServiceAPI {
       "Id" : "Id",
       "HasPassword" : true
     },
+    "MessageTranslationArguments" : [ "MessageTranslationArguments", "MessageTranslationArguments" ],
     "Message" : "Message",
     "UserId" : 5,
+    "MessageTranslationKey" : "MessageTranslationKey",
     "DateTime" : "2000-01-23T04:56:07.000+00:00"
   } ]
 }}]
@@ -2410,8 +2418,10 @@ open class PartyServiceAPI {
         "Id" : "Id",
         "HasPassword" : true
       },
+      "MessageTranslationArguments" : [ "MessageTranslationArguments", "MessageTranslationArguments" ],
       "Message" : "Message",
       "UserId" : 5,
+      "MessageTranslationKey" : "MessageTranslationKey",
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "User" : {
@@ -2511,8 +2521,10 @@ open class PartyServiceAPI {
         "Id" : "Id",
         "HasPassword" : true
       },
+      "MessageTranslationArguments" : [ "MessageTranslationArguments", "MessageTranslationArguments" ],
       "Message" : "Message",
       "UserId" : 5,
+      "MessageTranslationKey" : "MessageTranslationKey",
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     } ],
     "InternalSessions" : [ {
@@ -4407,8 +4419,10 @@ open class PartyServiceAPI {
         "Id" : "Id",
         "HasPassword" : true
       },
+      "MessageTranslationArguments" : [ "MessageTranslationArguments", "MessageTranslationArguments" ],
       "Message" : "Message",
       "UserId" : 5,
+      "MessageTranslationKey" : "MessageTranslationKey",
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "User" : {
@@ -4508,8 +4522,10 @@ open class PartyServiceAPI {
         "Id" : "Id",
         "HasPassword" : true
       },
+      "MessageTranslationArguments" : [ "MessageTranslationArguments", "MessageTranslationArguments" ],
       "Message" : "Message",
       "UserId" : 5,
+      "MessageTranslationKey" : "MessageTranslationKey",
       "DateTime" : "2000-01-23T04:56:07.000+00:00"
     } ],
     "InternalSessions" : [ {

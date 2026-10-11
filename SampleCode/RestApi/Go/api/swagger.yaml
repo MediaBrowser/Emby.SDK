@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.11.0.6
+  version: 4.11.0.7
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -89924,8 +89924,12 @@ components:
               ConnectLinkType: LinkedUser
               Id: Id
               HasPassword: true
+            MessageTranslationArguments:
+            - MessageTranslationArguments
+            - MessageTranslationArguments
             Message: Message
             UserId: 5
+            MessageTranslationKey: MessageTranslationKey
             DateTime: 2000-01-23T04:56:07.000+00:00
           - User:
               Policy:
@@ -90043,8 +90047,12 @@ components:
               ConnectLinkType: LinkedUser
               Id: Id
               HasPassword: true
+            MessageTranslationArguments:
+            - MessageTranslationArguments
+            - MessageTranslationArguments
             Message: Message
             UserId: 5
+            MessageTranslationKey: MessageTranslationKey
             DateTime: 2000-01-23T04:56:07.000+00:00
           InternalSessions:
           - PlaylistLength: 3
@@ -91986,8 +91994,12 @@ components:
             ConnectLinkType: LinkedUser
             Id: Id
             HasPassword: true
+          MessageTranslationArguments:
+          - MessageTranslationArguments
+          - MessageTranslationArguments
           Message: Message
           UserId: 5
+          MessageTranslationKey: MessageTranslationKey
           DateTime: 2000-01-23T04:56:07.000+00:00
         - User:
             Policy:
@@ -92105,8 +92117,12 @@ components:
             ConnectLinkType: LinkedUser
             Id: Id
             HasPassword: true
+          MessageTranslationArguments:
+          - MessageTranslationArguments
+          - MessageTranslationArguments
           Message: Message
           UserId: 5
+          MessageTranslationKey: MessageTranslationKey
           DateTime: 2000-01-23T04:56:07.000+00:00
         InternalSessions:
         - PlaylistLength: 3
@@ -95542,6 +95558,12 @@ components:
         DateTime:
           type: string
           format: date-time
+        MessageTranslationKey:
+          type: string
+        MessageTranslationArguments:
+          type: array
+          items:
+            type: string
         Message:
           type: string
         UserId:
@@ -95666,8 +95688,12 @@ components:
           ConnectLinkType: LinkedUser
           Id: Id
           HasPassword: true
+        MessageTranslationArguments:
+        - MessageTranslationArguments
+        - MessageTranslationArguments
         Message: Message
         UserId: 5
+        MessageTranslationKey: MessageTranslationKey
         DateTime: 2000-01-23T04:56:07.000+00:00
       x-internal-ref-name: MediaBrowser.Controller.Session.PartyMessage
     UserDto:
@@ -104878,8 +104904,12 @@ components:
             ConnectLinkType: LinkedUser
             Id: Id
             HasPassword: true
+          MessageTranslationArguments:
+          - MessageTranslationArguments
+          - MessageTranslationArguments
           Message: Message
           UserId: 5
+          MessageTranslationKey: MessageTranslationKey
           DateTime: 2000-01-23T04:56:07.000+00:00
         - User:
             Policy:
@@ -104997,8 +105027,12 @@ components:
             ConnectLinkType: LinkedUser
             Id: Id
             HasPassword: true
+          MessageTranslationArguments:
+          - MessageTranslationArguments
+          - MessageTranslationArguments
           Message: Message
           UserId: 5
+          MessageTranslationKey: MessageTranslationKey
           DateTime: 2000-01-23T04:56:07.000+00:00
     PlaybackStartInfo:
       type: object

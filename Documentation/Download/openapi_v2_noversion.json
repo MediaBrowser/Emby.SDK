@@ -75791,6 +75791,15 @@
           "format": "date-time",
           "type": "string"
         },
+        "MessageTranslationKey": {
+          "type": "string"
+        },
+        "MessageTranslationArguments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "Message": {
           "type": "string"
         },

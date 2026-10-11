@@ -12,12 +12,16 @@ import Foundation
 public struct SessionPartyMessage: Codable {
 
     public var dateTime: Date?
+    public var messageTranslationKey: String?
+    public var messageTranslationArguments: [String]?
     public var message: String?
     public var userId: Int64?
     public var user: UserDto?
 
-    public init(dateTime: Date? = nil, message: String? = nil, userId: Int64? = nil, user: UserDto? = nil) {
+    public init(dateTime: Date? = nil, messageTranslationKey: String? = nil, messageTranslationArguments: [String]? = nil, message: String? = nil, userId: Int64? = nil, user: UserDto? = nil) {
         self.dateTime = dateTime
+        self.messageTranslationKey = messageTranslationKey
+        self.messageTranslationArguments = messageTranslationArguments
         self.message = message
         self.userId = userId
         self.user = user
@@ -25,6 +29,8 @@ public struct SessionPartyMessage: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case dateTime = "DateTime"
+        case messageTranslationKey = "MessageTranslationKey"
+        case messageTranslationArguments = "MessageTranslationArguments"
         case message = "Message"
         case userId = "UserId"
         case user = "User"

@@ -15,7 +15,7 @@ import UserDto from './UserDto';
 /**
 * The SessionPartyMessage model module.
 * @module model/SessionPartyMessage
-* @version 4.11.0.6
+* @version 4.11.0.7
 */
 export default class SessionPartyMessage {
     /**
@@ -45,6 +45,12 @@ export default class SessionPartyMessage {
             if (data.hasOwnProperty('DateTime')) {
                 obj['DateTime'] = ApiClient.convertToType(data['DateTime'], 'Date');
             }
+            if (data.hasOwnProperty('MessageTranslationKey')) {
+                obj['MessageTranslationKey'] = ApiClient.convertToType(data['MessageTranslationKey'], 'String');
+            }
+            if (data.hasOwnProperty('MessageTranslationArguments')) {
+                obj['MessageTranslationArguments'] = ApiClient.convertToType(data['MessageTranslationArguments'], ['String']);
+            }
             if (data.hasOwnProperty('Message')) {
                 obj['Message'] = ApiClient.convertToType(data['Message'], 'String');
             }
@@ -62,6 +68,14 @@ export default class SessionPartyMessage {
     * @member {Date} DateTime
     */
     'DateTime' = undefined;
+    /**
+    * @member {String} MessageTranslationKey
+    */
+    'MessageTranslationKey' = undefined;
+    /**
+    * @member {Array.<String>} MessageTranslationArguments
+    */
+    'MessageTranslationArguments' = undefined;
     /**
     * @member {String} Message
     */

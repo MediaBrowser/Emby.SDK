@@ -11,6 +11,8 @@ import (
 
 type SessionPartyMessage struct {
 	DateTime time.Time `json:"DateTime,omitempty"`
+	MessageTranslationKey string `json:"MessageTranslationKey,omitempty"`
+	MessageTranslationArguments []string `json:"MessageTranslationArguments,omitempty"`
 	Message string `json:"Message,omitempty"`
 	UserId int64 `json:"UserId,omitempty"`
 	User *UserDto `json:"User,omitempty"`

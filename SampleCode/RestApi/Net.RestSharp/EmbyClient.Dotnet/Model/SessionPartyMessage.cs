@@ -27,12 +27,16 @@ namespace EmbyClient.Dotnet.Model
         /// Initializes a new instance of the <see cref="SessionPartyMessage" /> class.
         /// </summary>
         /// <param name="dateTime">dateTime.</param>
+        /// <param name="messageTranslationKey">messageTranslationKey.</param>
+        /// <param name="messageTranslationArguments">messageTranslationArguments.</param>
         /// <param name="message">message.</param>
         /// <param name="userId">userId.</param>
         /// <param name="user">user.</param>
-        public SessionPartyMessage(DateTimeOffset? dateTime = default(DateTimeOffset?), string message = default(string), long? userId = default(long?), UserDto user = default(UserDto))
+        public SessionPartyMessage(DateTimeOffset? dateTime = default(DateTimeOffset?), string messageTranslationKey = default(string), List<string> messageTranslationArguments = default(List<string>), string message = default(string), long? userId = default(long?), UserDto user = default(UserDto))
         {
             this.DateTime = dateTime;
+            this.MessageTranslationKey = messageTranslationKey;
+            this.MessageTranslationArguments = messageTranslationArguments;
             this.Message = message;
             this.UserId = userId;
             this.User = user;
@@ -43,6 +47,18 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="DateTime", EmitDefaultValue=false)]
         public DateTimeOffset? DateTime { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MessageTranslationKey
+        /// </summary>
+        [DataMember(Name="MessageTranslationKey", EmitDefaultValue=false)]
+        public string MessageTranslationKey { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MessageTranslationArguments
+        /// </summary>
+        [DataMember(Name="MessageTranslationArguments", EmitDefaultValue=false)]
+        public List<string> MessageTranslationArguments { get; set; }
 
         /// <summary>
         /// Gets or Sets Message
@@ -71,6 +87,8 @@ namespace EmbyClient.Dotnet.Model
             var sb = new StringBuilder();
             sb.Append("class SessionPartyMessage {\n");
             sb.Append("  DateTime: ").Append(DateTime).Append("\n");
+            sb.Append("  MessageTranslationKey: ").Append(MessageTranslationKey).Append("\n");
+            sb.Append("  MessageTranslationArguments: ").Append(MessageTranslationArguments).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -114,6 +132,17 @@ namespace EmbyClient.Dotnet.Model
                     this.DateTime.Equals(input.DateTime))
                 ) && 
                 (
+                    this.MessageTranslationKey == input.MessageTranslationKey ||
+                    (this.MessageTranslationKey != null &&
+                    this.MessageTranslationKey.Equals(input.MessageTranslationKey))
+                ) && 
+                (
+                    this.MessageTranslationArguments == input.MessageTranslationArguments ||
+                    this.MessageTranslationArguments != null &&
+                    input.MessageTranslationArguments != null &&
+                    this.MessageTranslationArguments.SequenceEqual(input.MessageTranslationArguments)
+                ) && 
+                (
                     this.Message == input.Message ||
                     (this.Message != null &&
                     this.Message.Equals(input.Message))
@@ -141,6 +170,10 @@ namespace EmbyClient.Dotnet.Model
                 int hashCode = 41;
                 if (this.DateTime != null)
                     hashCode = hashCode * 59 + this.DateTime.GetHashCode();
+                if (this.MessageTranslationKey != null)
+                    hashCode = hashCode * 59 + this.MessageTranslationKey.GetHashCode();
+                if (this.MessageTranslationArguments != null)
+                    hashCode = hashCode * 59 + this.MessageTranslationArguments.GetHashCode();
                 if (this.Message != null)
                     hashCode = hashCode * 59 + this.Message.GetHashCode();
                 if (this.UserId != null)

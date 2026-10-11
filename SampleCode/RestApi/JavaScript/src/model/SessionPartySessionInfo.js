@@ -15,7 +15,7 @@ import UserDto from './UserDto';
 /**
 * The SessionPartySessionInfo model module.
 * @module model/SessionPartySessionInfo
-* @version 4.11.0.6
+* @version 4.11.0.7
 */
 export default class SessionPartySessionInfo {
     /**

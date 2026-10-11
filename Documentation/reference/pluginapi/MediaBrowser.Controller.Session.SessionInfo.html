@@ -1366,7 +1366,7 @@ public long UserInternalId { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RegisterPlaySession(PlaybackProgressInfo info)</code></pre>
+    <pre><code class="lang-csharp hljs">public PlaySessionInfo RegisterPlaySession(PlaybackProgressInfo info)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1381,6 +1381,21 @@ public long UserInternalId { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Session.PlaybackProgressInfo.html">PlaybackProgressInfo</a></td>
         <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.PlaySessionInfo.html">PlaySessionInfo</a></td>
         <td></td>
       </tr>
     </tbody>
