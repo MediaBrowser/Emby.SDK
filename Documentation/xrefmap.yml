@@ -86940,6 +86940,32 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsClosed
   nameWithType: SegmentedStreamSegmentInfo.IsClosed
+- uid: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsDiscontinuity
+  name: IsDiscontinuity
+  href: reference/pluginapi/MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.html#MediaBrowser_Controller_Library_SegmentedStreamSegmentInfo_IsDiscontinuity
+  commentId: P:MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsDiscontinuity
+  fullName: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsDiscontinuity
+  nameWithType: SegmentedStreamSegmentInfo.IsDiscontinuity
+- uid: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsDiscontinuity*
+  name: IsDiscontinuity
+  href: reference/pluginapi/MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.html#MediaBrowser_Controller_Library_SegmentedStreamSegmentInfo_IsDiscontinuity_
+  commentId: Overload:MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsDiscontinuity
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsDiscontinuity
+  nameWithType: SegmentedStreamSegmentInfo.IsDiscontinuity
+- uid: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsGap
+  name: IsGap
+  href: reference/pluginapi/MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.html#MediaBrowser_Controller_Library_SegmentedStreamSegmentInfo_IsGap
+  commentId: P:MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsGap
+  fullName: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsGap
+  nameWithType: SegmentedStreamSegmentInfo.IsGap
+- uid: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsGap*
+  name: IsGap
+  href: reference/pluginapi/MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.html#MediaBrowser_Controller_Library_SegmentedStreamSegmentInfo_IsGap_
+  commentId: Overload:MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsGap
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsGap
+  nameWithType: SegmentedStreamSegmentInfo.IsGap
 - uid: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.IsPartialFile
   name: IsPartialFile
   href: reference/pluginapi/MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.html#MediaBrowser_Controller_Library_SegmentedStreamSegmentInfo_IsPartialFile
@@ -112327,6 +112353,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Configuration.ServerConfiguration.IsRemoteIPFilterBlacklist
   nameWithType: ServerConfiguration.IsRemoteIPFilterBlacklist
+- uid: MediaBrowser.Model.Configuration.ServerConfiguration.KeepLiveStreamFiles
+  name: KeepLiveStreamFiles
+  href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_KeepLiveStreamFiles
+  commentId: P:MediaBrowser.Model.Configuration.ServerConfiguration.KeepLiveStreamFiles
+  fullName: MediaBrowser.Model.Configuration.ServerConfiguration.KeepLiveStreamFiles
+  nameWithType: ServerConfiguration.KeepLiveStreamFiles
+- uid: MediaBrowser.Model.Configuration.ServerConfiguration.KeepLiveStreamFiles*
+  name: KeepLiveStreamFiles
+  href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_KeepLiveStreamFiles_
+  commentId: Overload:MediaBrowser.Model.Configuration.ServerConfiguration.KeepLiveStreamFiles
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Configuration.ServerConfiguration.KeepLiveStreamFiles
+  nameWithType: ServerConfiguration.KeepLiveStreamFiles
 - uid: MediaBrowser.Model.Configuration.ServerConfiguration.LibraryMonitorDelaySeconds
   name: LibraryMonitorDelaySeconds
   href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_LibraryMonitorDelaySeconds
@@ -145737,6 +145776,25 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.System.IServiceRoot.LogManager
   nameWithType: IServiceRoot.LogManager
+- uid: MediaBrowser.Model.System.IShutdownAwarePowerManagement
+  name: IShutdownAwarePowerManagement
+  href: reference/pluginapi/MediaBrowser.Model.System.IShutdownAwarePowerManagement.html
+  commentId: T:MediaBrowser.Model.System.IShutdownAwarePowerManagement
+  fullName: MediaBrowser.Model.System.IShutdownAwarePowerManagement
+  nameWithType: IShutdownAwarePowerManagement
+- uid: MediaBrowser.Model.System.IShutdownAwarePowerManagement.OnServerShutdown
+  name: OnServerShutdown()
+  href: reference/pluginapi/MediaBrowser.Model.System.IShutdownAwarePowerManagement.html#MediaBrowser_Model_System_IShutdownAwarePowerManagement_OnServerShutdown
+  commentId: M:MediaBrowser.Model.System.IShutdownAwarePowerManagement.OnServerShutdown
+  fullName: MediaBrowser.Model.System.IShutdownAwarePowerManagement.OnServerShutdown()
+  nameWithType: IShutdownAwarePowerManagement.OnServerShutdown()
+- uid: MediaBrowser.Model.System.IShutdownAwarePowerManagement.OnServerShutdown*
+  name: OnServerShutdown
+  href: reference/pluginapi/MediaBrowser.Model.System.IShutdownAwarePowerManagement.html#MediaBrowser_Model_System_IShutdownAwarePowerManagement_OnServerShutdown_
+  commentId: Overload:MediaBrowser.Model.System.IShutdownAwarePowerManagement.OnServerShutdown
+  isSpec: "True"
+  fullName: MediaBrowser.Model.System.IShutdownAwarePowerManagement.OnServerShutdown
+  nameWithType: IShutdownAwarePowerManagement.OnServerShutdown
 - uid: MediaBrowser.Model.System.ISystemEvents
   name: ISystemEvents
   href: reference/pluginapi/MediaBrowser.Model.System.ISystemEvents.html

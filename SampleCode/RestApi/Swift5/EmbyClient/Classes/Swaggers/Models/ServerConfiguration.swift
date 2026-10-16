@@ -90,6 +90,7 @@ public struct ServerConfiguration: Codable {
     public var proxyHeaderMode: ProxyHeaderMode?
     public var isInMaintenanceMode: Bool?
     public var maintenanceModeMessage: String?
+    public var keepLiveStreamFiles: Bool?
     /** A value indicating whether \\[enable debug level logging\\]. */
     public var enableDebugLevelLogging: Bool?
     public var revertDebugLogging: String?
@@ -104,7 +105,7 @@ public struct ServerConfiguration: Codable {
     /** The cache path. */
     public var cachePath: String?
 
-    public init(enableUPnP: Bool? = nil, publicPort: Int? = nil, publicHttpsPort: Int? = nil, httpServerPortNumber: Int? = nil, httpsPortNumber: Int? = nil, enableHttps: Bool? = nil, certificatePath: String? = nil, certificatePassword: String? = nil, bannerText: String? = nil, isPortAuthorized: Bool? = nil, autoRunWebApp: Bool? = nil, enableRemoteAccess: Bool? = nil, validateImageTags: Bool? = nil, logAllQueryTimes: Bool? = nil, disableOutgoingIPv6: Bool? = nil, enableCaseSensitiveItemIds: Bool? = nil, metadataPath: String? = nil, metadataNetworkPath: String? = nil, preferredMetadataLanguage: String? = nil, metadataCountryCode: String? = nil, sortRemoveWords: [String]? = nil, libraryMonitorDelaySeconds: Int? = nil, enableDashboardResponseCaching: Bool? = nil, dashboardSourcePath: String? = nil, imageSavingConvention: ImageSavingConvention? = nil, enableAutomaticRestart: Bool? = nil, serverName: String? = nil, preferredDetectedRemoteAddressFamily: NetSocketsAddressFamily? = nil, wanDdns: String? = nil, uICulture: String? = nil, remoteClientBitrateLimit: Int? = nil, localNetworkSubnets: [String]? = nil, localNetworkAddresses: [String]? = nil, enableExternalContentInSuggestions: Bool? = nil, requireHttps: Bool? = nil, isBehindProxy: Bool? = nil, remoteIPFilter: [String]? = nil, isRemoteIPFilterBlacklist: Bool? = nil, imageExtractionTimeoutMs: Int? = nil, pathSubstitutions: [PathSubstitution]? = nil, uninstalledPlugins: [String]? = nil, collapseVideoFolders: Bool? = nil, enableOriginalTrackTitles: Bool? = nil, vacuumDatabaseOnStartup: Bool? = nil, simultaneousStreamLimit: Int? = nil, databaseCacheSizeMB: Int? = nil, enableSqLiteMmio: Bool? = nil, enablePeopleLetterSubFolders: Bool? = nil, optimizeDatabaseOnShutdown: Bool? = nil, databaseAnalysisLimit: Int? = nil, maxLibraryDatabaseConnections: Int? = nil, maxAuthDbConnections: Int? = nil, maxOtherDbConnections: Int? = nil, disableAsyncIO: Bool? = nil, migratedToUserItemShares8: Bool? = nil, migratedLibraryOptionsToDb: Bool? = nil, migratedSeriesDisplayOrder: Bool? = nil, enableSavedMetadataForPeople: Bool? = nil, tvChannelsRefreshed: Bool? = nil, proxyHeaderMode: ProxyHeaderMode? = nil, isInMaintenanceMode: Bool? = nil, maintenanceModeMessage: String? = nil, enableDebugLevelLogging: Bool? = nil, revertDebugLogging: String? = nil, enableAutoUpdate: Bool? = nil, logFileRetentionDays: Int? = nil, runAtStartup: Bool? = nil, isStartupWizardCompleted: Bool? = nil, cachePath: String? = nil) {
+    public init(enableUPnP: Bool? = nil, publicPort: Int? = nil, publicHttpsPort: Int? = nil, httpServerPortNumber: Int? = nil, httpsPortNumber: Int? = nil, enableHttps: Bool? = nil, certificatePath: String? = nil, certificatePassword: String? = nil, bannerText: String? = nil, isPortAuthorized: Bool? = nil, autoRunWebApp: Bool? = nil, enableRemoteAccess: Bool? = nil, validateImageTags: Bool? = nil, logAllQueryTimes: Bool? = nil, disableOutgoingIPv6: Bool? = nil, enableCaseSensitiveItemIds: Bool? = nil, metadataPath: String? = nil, metadataNetworkPath: String? = nil, preferredMetadataLanguage: String? = nil, metadataCountryCode: String? = nil, sortRemoveWords: [String]? = nil, libraryMonitorDelaySeconds: Int? = nil, enableDashboardResponseCaching: Bool? = nil, dashboardSourcePath: String? = nil, imageSavingConvention: ImageSavingConvention? = nil, enableAutomaticRestart: Bool? = nil, serverName: String? = nil, preferredDetectedRemoteAddressFamily: NetSocketsAddressFamily? = nil, wanDdns: String? = nil, uICulture: String? = nil, remoteClientBitrateLimit: Int? = nil, localNetworkSubnets: [String]? = nil, localNetworkAddresses: [String]? = nil, enableExternalContentInSuggestions: Bool? = nil, requireHttps: Bool? = nil, isBehindProxy: Bool? = nil, remoteIPFilter: [String]? = nil, isRemoteIPFilterBlacklist: Bool? = nil, imageExtractionTimeoutMs: Int? = nil, pathSubstitutions: [PathSubstitution]? = nil, uninstalledPlugins: [String]? = nil, collapseVideoFolders: Bool? = nil, enableOriginalTrackTitles: Bool? = nil, vacuumDatabaseOnStartup: Bool? = nil, simultaneousStreamLimit: Int? = nil, databaseCacheSizeMB: Int? = nil, enableSqLiteMmio: Bool? = nil, enablePeopleLetterSubFolders: Bool? = nil, optimizeDatabaseOnShutdown: Bool? = nil, databaseAnalysisLimit: Int? = nil, maxLibraryDatabaseConnections: Int? = nil, maxAuthDbConnections: Int? = nil, maxOtherDbConnections: Int? = nil, disableAsyncIO: Bool? = nil, migratedToUserItemShares8: Bool? = nil, migratedLibraryOptionsToDb: Bool? = nil, migratedSeriesDisplayOrder: Bool? = nil, enableSavedMetadataForPeople: Bool? = nil, tvChannelsRefreshed: Bool? = nil, proxyHeaderMode: ProxyHeaderMode? = nil, isInMaintenanceMode: Bool? = nil, maintenanceModeMessage: String? = nil, keepLiveStreamFiles: Bool? = nil, enableDebugLevelLogging: Bool? = nil, revertDebugLogging: String? = nil, enableAutoUpdate: Bool? = nil, logFileRetentionDays: Int? = nil, runAtStartup: Bool? = nil, isStartupWizardCompleted: Bool? = nil, cachePath: String? = nil) {
         self.enableUPnP = enableUPnP
         self.publicPort = publicPort
         self.publicHttpsPort = publicHttpsPort
@@ -167,6 +168,7 @@ public struct ServerConfiguration: Codable {
         self.proxyHeaderMode = proxyHeaderMode
         self.isInMaintenanceMode = isInMaintenanceMode
         self.maintenanceModeMessage = maintenanceModeMessage
+        self.keepLiveStreamFiles = keepLiveStreamFiles
         self.enableDebugLevelLogging = enableDebugLevelLogging
         self.revertDebugLogging = revertDebugLogging
         self.enableAutoUpdate = enableAutoUpdate
@@ -239,6 +241,7 @@ public struct ServerConfiguration: Codable {
         case proxyHeaderMode = "ProxyHeaderMode"
         case isInMaintenanceMode = "IsInMaintenanceMode"
         case maintenanceModeMessage = "MaintenanceModeMessage"
+        case keepLiveStreamFiles = "KeepLiveStreamFiles"
         case enableDebugLevelLogging = "EnableDebugLevelLogging"
         case revertDebugLogging = "RevertDebugLogging"
         case enableAutoUpdate = "EnableAutoUpdate"

@@ -212,6 +212,9 @@ public class ServerConfiguration {
   @SerializedName("MaintenanceModeMessage")
   private String maintenanceModeMessage = null;
 
+  @SerializedName("KeepLiveStreamFiles")
+  private Boolean keepLiveStreamFiles = null;
+
   @SerializedName("EnableDebugLevelLogging")
   private Boolean enableDebugLevelLogging = null;
 
@@ -1397,6 +1400,24 @@ public class ServerConfiguration {
     this.maintenanceModeMessage = maintenanceModeMessage;
   }
 
+  public ServerConfiguration keepLiveStreamFiles(Boolean keepLiveStreamFiles) {
+    this.keepLiveStreamFiles = keepLiveStreamFiles;
+    return this;
+  }
+
+   /**
+   * Get keepLiveStreamFiles
+   * @return keepLiveStreamFiles
+  **/
+  @Schema(description = "")
+  public Boolean isKeepLiveStreamFiles() {
+    return keepLiveStreamFiles;
+  }
+
+  public void setKeepLiveStreamFiles(Boolean keepLiveStreamFiles) {
+    this.keepLiveStreamFiles = keepLiveStreamFiles;
+  }
+
   public ServerConfiguration enableDebugLevelLogging(Boolean enableDebugLevelLogging) {
     this.enableDebugLevelLogging = enableDebugLevelLogging;
     return this;
@@ -1595,6 +1616,7 @@ public class ServerConfiguration {
         Objects.equals(this.proxyHeaderMode, serverConfiguration.proxyHeaderMode) &&
         Objects.equals(this.isInMaintenanceMode, serverConfiguration.isInMaintenanceMode) &&
         Objects.equals(this.maintenanceModeMessage, serverConfiguration.maintenanceModeMessage) &&
+        Objects.equals(this.keepLiveStreamFiles, serverConfiguration.keepLiveStreamFiles) &&
         Objects.equals(this.enableDebugLevelLogging, serverConfiguration.enableDebugLevelLogging) &&
         Objects.equals(this.revertDebugLogging, serverConfiguration.revertDebugLogging) &&
         Objects.equals(this.enableAutoUpdate, serverConfiguration.enableAutoUpdate) &&
@@ -1606,7 +1628,7 @@ public class ServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, bannerText, isPortAuthorized, autoRunWebApp, enableRemoteAccess, validateImageTags, logAllQueryTimes, disableOutgoingIPv6, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelaySeconds, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, maxLibraryDatabaseConnections, maxAuthDbConnections, maxOtherDbConnections, disableAsyncIO, migratedToUserItemShares8, migratedLibraryOptionsToDb, migratedSeriesDisplayOrder, enableSavedMetadataForPeople, tvChannelsRefreshed, proxyHeaderMode, isInMaintenanceMode, maintenanceModeMessage, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, bannerText, isPortAuthorized, autoRunWebApp, enableRemoteAccess, validateImageTags, logAllQueryTimes, disableOutgoingIPv6, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelaySeconds, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, maxLibraryDatabaseConnections, maxAuthDbConnections, maxOtherDbConnections, disableAsyncIO, migratedToUserItemShares8, migratedLibraryOptionsToDb, migratedSeriesDisplayOrder, enableSavedMetadataForPeople, tvChannelsRefreshed, proxyHeaderMode, isInMaintenanceMode, maintenanceModeMessage, keepLiveStreamFiles, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1677,6 +1699,7 @@ public class ServerConfiguration {
     sb.append("    proxyHeaderMode: ").append(toIndentedString(proxyHeaderMode)).append("\n");
     sb.append("    isInMaintenanceMode: ").append(toIndentedString(isInMaintenanceMode)).append("\n");
     sb.append("    maintenanceModeMessage: ").append(toIndentedString(maintenanceModeMessage)).append("\n");
+    sb.append("    keepLiveStreamFiles: ").append(toIndentedString(keepLiveStreamFiles)).append("\n");
     sb.append("    enableDebugLevelLogging: ").append(toIndentedString(enableDebugLevelLogging)).append("\n");
     sb.append("    revertDebugLogging: ").append(toIndentedString(revertDebugLogging)).append("\n");
     sb.append("    enableAutoUpdate: ").append(toIndentedString(enableAutoUpdate)).append("\n");

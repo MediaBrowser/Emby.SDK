@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.11.0.7
+  version: 4.11.0.8
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -106900,6 +106900,8 @@ components:
           type: boolean
         MaintenanceModeMessage:
           type: string
+        KeepLiveStreamFiles:
+          type: boolean
         EnableDebugLevelLogging:
           type: boolean
           description: "A value indicating whether \\[enable debug level logging\\\
@@ -106940,6 +106942,7 @@ components:
         EnableUPnP: true
         OptimizeDatabaseOnShutdown: true
         MetadataCountryCode: MetadataCountryCode
+        KeepLiveStreamFiles: true
         ProxyHeaderMode: None
         MetadataNetworkPath: MetadataNetworkPath
         LocalNetworkSubnets:

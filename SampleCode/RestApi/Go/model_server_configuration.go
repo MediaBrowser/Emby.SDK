@@ -86,6 +86,7 @@ type ServerConfiguration struct {
 	ProxyHeaderMode *ProxyHeaderMode `json:"ProxyHeaderMode,omitempty"`
 	IsInMaintenanceMode bool `json:"IsInMaintenanceMode,omitempty"`
 	MaintenanceModeMessage string `json:"MaintenanceModeMessage,omitempty"`
+	KeepLiveStreamFiles bool `json:"KeepLiveStreamFiles,omitempty"`
 	// A value indicating whether \\[enable debug level logging\\].
 	EnableDebugLevelLogging bool `json:"EnableDebugLevelLogging,omitempty"`
 	RevertDebugLogging string `json:"RevertDebugLogging,omitempty"`

@@ -80337,6 +80337,9 @@
         "MaintenanceModeMessage": {
           "type": "string"
         },
+        "KeepLiveStreamFiles": {
+          "type": "boolean"
+        },
         "EnableDebugLevelLogging": {
           "description": "A value indicating whether \\[enable debug level logging\\].",
           "type": "boolean"

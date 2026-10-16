@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.11.0.7
+ * OpenAPI spec version: 4.11.0.8
  * 
  *
  * NOTE: This file is auto generated.
@@ -11990,6 +11990,12 @@ export interface ServerConfiguration {
      * @memberof ServerConfiguration
      */
     MaintenanceModeMessage?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ServerConfiguration
+     */
+    KeepLiveStreamFiles?: boolean;
     /**
      * A value indicating whether \\[enable debug level logging\\].
      * @type {boolean}

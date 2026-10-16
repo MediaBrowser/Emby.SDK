@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.11.0.7"
+    "version": "4.11.0.8"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -80338,6 +80338,9 @@
         },
         "MaintenanceModeMessage": {
           "type": "string"
+        },
+        "KeepLiveStreamFiles": {
+          "type": "boolean"
         },
         "EnableDebugLevelLogging": {
           "description": "A value indicating whether \\[enable debug level logging\\].",

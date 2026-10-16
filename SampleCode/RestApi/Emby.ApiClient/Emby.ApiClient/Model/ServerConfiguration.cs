@@ -399,6 +399,12 @@ namespace Emby.ApiClient.Model
         public string MaintenanceModeMessage { get; set; }
 
         /// <summary>
+        /// Gets or Sets KeepLiveStreamFiles
+        /// </summary>
+        /// <value>The KeepLiveStreamFiles.</value>
+        public bool? KeepLiveStreamFiles { get; set; }
+
+        /// <summary>
         /// A value indicating whether \\[enable debug level logging\\].
         /// </summary>
         /// <value>The EnableDebugLevelLogging.</value>
@@ -510,6 +516,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  ProxyHeaderMode: ").Append(ProxyHeaderMode).Append("\n");
             sb.Append("  IsInMaintenanceMode: ").Append(IsInMaintenanceMode).Append("\n");
             sb.Append("  MaintenanceModeMessage: ").Append(MaintenanceModeMessage).Append("\n");
+            sb.Append("  KeepLiveStreamFiles: ").Append(KeepLiveStreamFiles).Append("\n");
             sb.Append("  EnableDebugLevelLogging: ").Append(EnableDebugLevelLogging).Append("\n");
             sb.Append("  RevertDebugLogging: ").Append(RevertDebugLogging).Append("\n");
             sb.Append("  EnableAutoUpdate: ").Append(EnableAutoUpdate).Append("\n");
@@ -859,6 +866,11 @@ namespace Emby.ApiClient.Model
                     this.MaintenanceModeMessage.Equals(input.MaintenanceModeMessage))
                 ) && 
                 (
+                    this.KeepLiveStreamFiles == input.KeepLiveStreamFiles ||
+                    (this.KeepLiveStreamFiles != null &&
+                    this.KeepLiveStreamFiles.Equals(input.KeepLiveStreamFiles))
+                ) && 
+                (
                     this.EnableDebugLevelLogging == input.EnableDebugLevelLogging ||
                     (this.EnableDebugLevelLogging != null &&
                     this.EnableDebugLevelLogging.Equals(input.EnableDebugLevelLogging))
@@ -1028,6 +1040,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.IsInMaintenanceMode.GetHashCode();
                 if (this.MaintenanceModeMessage != null)
                     hashCode = hashCode * 59 + this.MaintenanceModeMessage.GetHashCode();
+                if (this.KeepLiveStreamFiles != null)
+                    hashCode = hashCode * 59 + this.KeepLiveStreamFiles.GetHashCode();
                 if (this.EnableDebugLevelLogging != null)
                     hashCode = hashCode * 59 + this.EnableDebugLevelLogging.GetHashCode();
                 if (this.RevertDebugLogging != null)

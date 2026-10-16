@@ -18,7 +18,7 @@ import ProxyHeaderMode from './ProxyHeaderMode';
 /**
 * The ServerConfiguration model module.
 * @module model/ServerConfiguration
-* @version 4.11.0.7
+* @version 4.11.0.8
 */
 export default class ServerConfiguration {
     /**
@@ -231,6 +231,9 @@ export default class ServerConfiguration {
             }
             if (data.hasOwnProperty('MaintenanceModeMessage')) {
                 obj['MaintenanceModeMessage'] = ApiClient.convertToType(data['MaintenanceModeMessage'], 'String');
+            }
+            if (data.hasOwnProperty('KeepLiveStreamFiles')) {
+                obj['KeepLiveStreamFiles'] = ApiClient.convertToType(data['KeepLiveStreamFiles'], 'Boolean');
             }
             if (data.hasOwnProperty('EnableDebugLevelLogging')) {
                 obj['EnableDebugLevelLogging'] = ApiClient.convertToType(data['EnableDebugLevelLogging'], 'Boolean');
@@ -521,6 +524,10 @@ export default class ServerConfiguration {
     * @member {String} MaintenanceModeMessage
     */
     'MaintenanceModeMessage' = undefined;
+    /**
+    * @member {Boolean} KeepLiveStreamFiles
+    */
+    'KeepLiveStreamFiles' = undefined;
     /**
     * A value indicating whether \\[enable debug level logging\\].
     * @member {Boolean} EnableDebugLevelLogging
