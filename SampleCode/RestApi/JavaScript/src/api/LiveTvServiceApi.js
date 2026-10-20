@@ -38,7 +38,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module api/LiveTvServiceApi
-* @version 4.10.1.0
+* @version 4.10.2.0
 */
 export default class LiveTvServiceApi {
 

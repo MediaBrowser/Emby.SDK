@@ -15,7 +15,7 @@ import ApiEpgRow from './ApiEpgRow';
 /**
 * The QueryResultApiEpgRow model module.
 * @module model/QueryResultApiEpgRow
-* @version 4.10.1.0
+* @version 4.10.2.0
 */
 export default class QueryResultApiEpgRow {
     /**

@@ -448,7 +448,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.10.1.0
+* @version 4.10.2.0
 */
 export {
     /**

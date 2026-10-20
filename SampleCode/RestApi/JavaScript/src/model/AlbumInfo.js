@@ -17,7 +17,7 @@ import SongInfo from './SongInfo';
 /**
 * The AlbumInfo model module.
 * @module model/AlbumInfo
-* @version 4.10.1.0
+* @version 4.10.2.0
 */
 export default class AlbumInfo {
     /**
