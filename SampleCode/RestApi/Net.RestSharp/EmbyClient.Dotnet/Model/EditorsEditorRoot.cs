@@ -40,7 +40,9 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="description">description.</param>
         /// <param name="featureRequiresPremiere">featureRequiresPremiere.</param>
         /// <param name="parentId">parentId.</param>
-        public EditorsEditorRoot(List<ConditionsPropertyCondition> propertyConditions = default(List<ConditionsPropertyCondition>), List<ActionsPostbackAction> postbackActions = default(List<ActionsPostbackAction>), EditorsEditorButtonItem titleButton = default(EditorsEditorButtonItem), List<EditorsEditorBase> editorItems = default(List<EditorsEditorBase>), CommonEditorTypes editorType = default(CommonEditorTypes), string name = default(string), string id = default(string), bool? allowEmpty = default(bool?), bool? isReadOnly = default(bool?), bool? isAdvanced = default(bool?), string displayName = default(string), string description = default(string), bool? featureRequiresPremiere = default(bool?), string parentId = default(string))
+        /// <param name="extensionButtons">Buttons attached to this editor (via &#x60;[IsButtonFor]&#x60; on a&#x60;Emby.Web.GenericEdit.Elements.ButtonItem&#x60; property naming this editor&#x27;s own property) \\- rendered             inline at the end of this editor&#x27;s own control (e.g. next to a dropdown/select) instead of             as a separate, standalone button/group elsewhere in the form..</param>
+        /// <param name="descriptionSourceId">The id of a string property (attached via &#x60;[IsDescriptionFor]&#x60;            naming this editor&#x27;s own property) whose live value is displayed as this editor&#x27;s             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor&#x27;s own static &#x60;Emby.Web.GenericEdit.Editors.EditorBase.Description&#x60;..</param>
+        public EditorsEditorRoot(List<ConditionsPropertyCondition> propertyConditions = default(List<ConditionsPropertyCondition>), List<ActionsPostbackAction> postbackActions = default(List<ActionsPostbackAction>), EditorsEditorButtonItem titleButton = default(EditorsEditorButtonItem), List<EditorsEditorBase> editorItems = default(List<EditorsEditorBase>), CommonEditorTypes editorType = default(CommonEditorTypes), string name = default(string), string id = default(string), bool? allowEmpty = default(bool?), bool? isReadOnly = default(bool?), bool? isAdvanced = default(bool?), string displayName = default(string), string description = default(string), bool? featureRequiresPremiere = default(bool?), string parentId = default(string), List<EditorsEditorButtonItem> extensionButtons = default(List<EditorsEditorButtonItem>), string descriptionSourceId = default(string))
         {
             this.PropertyConditions = propertyConditions;
             this.PostbackActions = postbackActions;
@@ -56,6 +58,8 @@ namespace EmbyClient.Dotnet.Model
             this.Description = description;
             this.FeatureRequiresPremiere = featureRequiresPremiere;
             this.ParentId = parentId;
+            this.ExtensionButtons = extensionButtons;
+            this.DescriptionSourceId = descriptionSourceId;
         }
         
         /// <summary>
@@ -143,6 +147,20 @@ namespace EmbyClient.Dotnet.Model
         public string ParentId { get; set; }
 
         /// <summary>
+        /// Buttons attached to this editor (via &#x60;[IsButtonFor]&#x60; on a&#x60;Emby.Web.GenericEdit.Elements.ButtonItem&#x60; property naming this editor&#x27;s own property) \\- rendered             inline at the end of this editor&#x27;s own control (e.g. next to a dropdown/select) instead of             as a separate, standalone button/group elsewhere in the form.
+        /// </summary>
+        /// <value>Buttons attached to this editor (via &#x60;[IsButtonFor]&#x60; on a&#x60;Emby.Web.GenericEdit.Elements.ButtonItem&#x60; property naming this editor&#x27;s own property) \\- rendered             inline at the end of this editor&#x27;s own control (e.g. next to a dropdown/select) instead of             as a separate, standalone button/group elsewhere in the form.</value>
+        [DataMember(Name="ExtensionButtons", EmitDefaultValue=false)]
+        public List<EditorsEditorButtonItem> ExtensionButtons { get; set; }
+
+        /// <summary>
+        /// The id of a string property (attached via &#x60;[IsDescriptionFor]&#x60;            naming this editor&#x27;s own property) whose live value is displayed as this editor&#x27;s             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor&#x27;s own static &#x60;Emby.Web.GenericEdit.Editors.EditorBase.Description&#x60;.
+        /// </summary>
+        /// <value>The id of a string property (attached via &#x60;[IsDescriptionFor]&#x60;            naming this editor&#x27;s own property) whose live value is displayed as this editor&#x27;s             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor&#x27;s own static &#x60;Emby.Web.GenericEdit.Editors.EditorBase.Description&#x60;.</value>
+        [DataMember(Name="DescriptionSourceId", EmitDefaultValue=false)]
+        public string DescriptionSourceId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -164,6 +182,8 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  FeatureRequiresPremiere: ").Append(FeatureRequiresPremiere).Append("\n");
             sb.Append("  ParentId: ").Append(ParentId).Append("\n");
+            sb.Append("  ExtensionButtons: ").Append(ExtensionButtons).Append("\n");
+            sb.Append("  DescriptionSourceId: ").Append(DescriptionSourceId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -270,6 +290,17 @@ namespace EmbyClient.Dotnet.Model
                     this.ParentId == input.ParentId ||
                     (this.ParentId != null &&
                     this.ParentId.Equals(input.ParentId))
+                ) && 
+                (
+                    this.ExtensionButtons == input.ExtensionButtons ||
+                    this.ExtensionButtons != null &&
+                    input.ExtensionButtons != null &&
+                    this.ExtensionButtons.SequenceEqual(input.ExtensionButtons)
+                ) && 
+                (
+                    this.DescriptionSourceId == input.DescriptionSourceId ||
+                    (this.DescriptionSourceId != null &&
+                    this.DescriptionSourceId.Equals(input.DescriptionSourceId))
                 );
         }
 
@@ -310,6 +341,10 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.FeatureRequiresPremiere.GetHashCode();
                 if (this.ParentId != null)
                     hashCode = hashCode * 59 + this.ParentId.GetHashCode();
+                if (this.ExtensionButtons != null)
+                    hashCode = hashCode * 59 + this.ExtensionButtons.GetHashCode();
+                if (this.DescriptionSourceId != null)
+                    hashCode = hashCode * 59 + this.DescriptionSourceId.GetHashCode();
                 return hashCode;
             }
         }

@@ -15,7 +15,7 @@ import SubtitleDeliveryMethod from './SubtitleDeliveryMethod';
 /**
 * The SubtitleProfile model module.
 * @module model/SubtitleProfile
-* @version 4.11.0.9
+* @version 4.11.0.10
 */
 export default class SubtitleProfile {
     /**
@@ -57,6 +57,9 @@ export default class SubtitleProfile {
             if (data.hasOwnProperty('Container')) {
                 obj['Container'] = ApiClient.convertToType(data['Container'], 'String');
             }
+            if (data.hasOwnProperty('SubtitleContainer')) {
+                obj['SubtitleContainer'] = ApiClient.convertToType(data['SubtitleContainer'], 'String');
+            }
             if (data.hasOwnProperty('AllowChunkedResponse')) {
                 obj['AllowChunkedResponse'] = ApiClient.convertToType(data['AllowChunkedResponse'], 'Boolean');
             }
@@ -87,6 +90,10 @@ export default class SubtitleProfile {
     * @member {String} Container
     */
     'Container' = undefined;
+    /**
+    * @member {String} SubtitleContainer
+    */
+    'SubtitleContainer' = undefined;
     /**
     * @member {Boolean} AllowChunkedResponse
     */

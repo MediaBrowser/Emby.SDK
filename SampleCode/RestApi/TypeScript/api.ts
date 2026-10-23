@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.11.0.9
+ * OpenAPI spec version: 4.11.0.10
  * 
  *
  * NOTE: This file is auto generated.
@@ -4044,6 +4044,18 @@ export interface EditorsEditorBase {
      * @memberof EditorsEditorBase
      */
     ParentId?: string;
+    /**
+     * Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem` property naming this editor's own property) \\- rendered             inline at the end of this editor's own control (e.g. next to a dropdown/select) instead of             as a separate, standalone button/group elsewhere in the form.
+     * @type {Array<EditorsEditorButtonItem>}
+     * @memberof EditorsEditorBase
+     */
+    ExtensionButtons?: Array<EditorsEditorButtonItem>;
+    /**
+     * The id of a string property (attached via `[IsDescriptionFor]`            naming this editor's own property) whose live value is displayed as this editor's             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`.
+     * @type {string}
+     * @memberof EditorsEditorBase
+     */
+    DescriptionSourceId?: string;
 }
 /**
  * 
@@ -4111,6 +4123,18 @@ export interface EditorsEditorButtonItem {
      * @memberof EditorsEditorButtonItem
      */
     ParentId?: string;
+    /**
+     * Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem` property naming this editor's own property) \\- rendered             inline at the end of this editor's own control (e.g. next to a dropdown/select) instead of             as a separate, standalone button/group elsewhere in the form.
+     * @type {Array<EditorsEditorButtonItem>}
+     * @memberof EditorsEditorButtonItem
+     */
+    ExtensionButtons?: Array<EditorsEditorButtonItem>;
+    /**
+     * The id of a string property (attached via `[IsDescriptionFor]`            naming this editor's own property) whose live value is displayed as this editor's             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`.
+     * @type {string}
+     * @memberof EditorsEditorButtonItem
+     */
+    DescriptionSourceId?: string;
 }
 /**
  * 
@@ -4202,6 +4226,18 @@ export interface EditorsEditorRoot {
      * @memberof EditorsEditorRoot
      */
     ParentId?: string;
+    /**
+     * Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem` property naming this editor's own property) \\- rendered             inline at the end of this editor's own control (e.g. next to a dropdown/select) instead of             as a separate, standalone button/group elsewhere in the form.
+     * @type {Array<EditorsEditorButtonItem>}
+     * @memberof EditorsEditorRoot
+     */
+    ExtensionButtons?: Array<EditorsEditorButtonItem>;
+    /**
+     * The id of a string property (attached via `[IsDescriptionFor]`            naming this editor's own property) whose live value is displayed as this editor's             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`.
+     * @type {string}
+     * @memberof EditorsEditorRoot
+     */
+    DescriptionSourceId?: string;
 }
 /**
  * 
@@ -12559,6 +12595,12 @@ export interface SubtitleProfile {
      * @memberof SubtitleProfile
      */
     Container?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubtitleProfile
+     */
+    SubtitleContainer?: string;
     /**
      * 
      * @type {boolean}

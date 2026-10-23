@@ -182,6 +182,7 @@ open class DlnaServiceAPI {
     "Format" : "Format",
     "Language" : "Language",
     "DidlMode" : "DidlMode",
+    "SubtitleContainer" : "SubtitleContainer",
     "Method" : "Encode",
     "Protocol" : "Protocol"
   }, {
@@ -190,6 +191,7 @@ open class DlnaServiceAPI {
     "Format" : "Format",
     "Language" : "Language",
     "DidlMode" : "DidlMode",
+    "SubtitleContainer" : "SubtitleContainer",
     "Method" : "Encode",
     "Protocol" : "Protocol"
   } ],
@@ -364,6 +366,7 @@ open class DlnaServiceAPI {
     "Format" : "Format",
     "Language" : "Language",
     "DidlMode" : "DidlMode",
+    "SubtitleContainer" : "SubtitleContainer",
     "Method" : "Encode",
     "Protocol" : "Protocol"
   }, {
@@ -372,6 +375,7 @@ open class DlnaServiceAPI {
     "Format" : "Format",
     "Language" : "Language",
     "DidlMode" : "DidlMode",
+    "SubtitleContainer" : "SubtitleContainer",
     "Method" : "Encode",
     "Protocol" : "Protocol"
   } ],
@@ -584,6 +588,7 @@ open class DlnaServiceAPI {
     "Format" : "Format",
     "Language" : "Language",
     "DidlMode" : "DidlMode",
+    "SubtitleContainer" : "SubtitleContainer",
     "Method" : "Encode",
     "Protocol" : "Protocol"
   }, {
@@ -592,6 +597,7 @@ open class DlnaServiceAPI {
     "Format" : "Format",
     "Language" : "Language",
     "DidlMode" : "DidlMode",
+    "SubtitleContainer" : "SubtitleContainer",
     "Method" : "Encode",
     "Protocol" : "Protocol"
   } ],
@@ -807,6 +813,7 @@ open class DlnaServiceAPI {
     "Format" : "Format",
     "Language" : "Language",
     "DidlMode" : "DidlMode",
+    "SubtitleContainer" : "SubtitleContainer",
     "Method" : "Encode",
     "Protocol" : "Protocol"
   }, {
@@ -815,6 +822,7 @@ open class DlnaServiceAPI {
     "Format" : "Format",
     "Language" : "Language",
     "DidlMode" : "DidlMode",
+    "SubtitleContainer" : "SubtitleContainer",
     "Method" : "Encode",
     "Protocol" : "Protocol"
   } ],

@@ -15,7 +15,7 @@ import CommonEditorTypes from './CommonEditorTypes';
 /**
 * The EditorsEditorButtonItem model module.
 * @module model/EditorsEditorButtonItem
-* @version 4.11.0.9
+* @version 4.11.0.10
 */
 export default class EditorsEditorButtonItem {
     /**
@@ -72,6 +72,12 @@ export default class EditorsEditorButtonItem {
             if (data.hasOwnProperty('ParentId')) {
                 obj['ParentId'] = ApiClient.convertToType(data['ParentId'], 'String');
             }
+            if (data.hasOwnProperty('ExtensionButtons')) {
+                obj['ExtensionButtons'] = ApiClient.convertToType(data['ExtensionButtons'], [EditorsEditorButtonItem]);
+            }
+            if (data.hasOwnProperty('DescriptionSourceId')) {
+                obj['DescriptionSourceId'] = ApiClient.convertToType(data['DescriptionSourceId'], 'String');
+            }
         }
         return obj;
     }
@@ -116,6 +122,16 @@ export default class EditorsEditorButtonItem {
     * @member {String} ParentId
     */
     'ParentId' = undefined;
+    /**
+    * Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem` property naming this editor's own property) \\- rendered             inline at the end of this editor's own control (e.g. next to a dropdown/select) instead of             as a separate, standalone button/group elsewhere in the form.
+    * @member {Array.<module:model/EditorsEditorButtonItem>} ExtensionButtons
+    */
+    'ExtensionButtons' = undefined;
+    /**
+    * The id of a string property (attached via `[IsDescriptionFor]`            naming this editor's own property) whose live value is displayed as this editor's             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`.
+    * @member {String} DescriptionSourceId
+    */
+    'DescriptionSourceId' = undefined;
 
 
 

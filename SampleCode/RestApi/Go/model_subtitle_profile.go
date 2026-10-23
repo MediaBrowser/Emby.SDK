@@ -12,6 +12,7 @@ type SubtitleProfile struct {
 	DidlMode string `json:"DidlMode,omitempty"`
 	Language string `json:"Language,omitempty"`
 	Container string `json:"Container,omitempty"`
+	SubtitleContainer string `json:"SubtitleContainer,omitempty"`
 	AllowChunkedResponse bool `json:"AllowChunkedResponse,omitempty"`
 	Protocol string `json:"Protocol,omitempty"`
 }

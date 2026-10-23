@@ -15,7 +15,7 @@ import NameIdPair from './NameIdPair';
 /**
 * The LibraryFullUserCopyDataOptions model module.
 * @module model/LibraryFullUserCopyDataOptions
-* @version 4.11.0.9
+* @version 4.11.0.10
 */
 export default class LibraryFullUserCopyDataOptions {
     /**

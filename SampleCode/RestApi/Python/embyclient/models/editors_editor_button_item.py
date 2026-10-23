@@ -31,7 +31,9 @@ class EditorsEditorButtonItem(object):
         'display_name': 'str',
         'description': 'str',
         'feature_requires_premiere': 'bool',
-        'parent_id': 'str'
+        'parent_id': 'str',
+        'extension_buttons': 'list[EditorsEditorButtonItem]',
+        'description_source_id': 'str'
     }
 
     attribute_map = {
@@ -44,10 +46,12 @@ class EditorsEditorButtonItem(object):
         'display_name': 'DisplayName',
         'description': 'Description',
         'feature_requires_premiere': 'FeatureRequiresPremiere',
-        'parent_id': 'ParentId'
+        'parent_id': 'ParentId',
+        'extension_buttons': 'ExtensionButtons',
+        'description_source_id': 'DescriptionSourceId'
     }
 
-    def __init__(self, editor_type=None, name=None, id=None, allow_empty=None, is_read_only=None, is_advanced=None, display_name=None, description=None, feature_requires_premiere=None, parent_id=None):  # noqa: E501
+    def __init__(self, editor_type=None, name=None, id=None, allow_empty=None, is_read_only=None, is_advanced=None, display_name=None, description=None, feature_requires_premiere=None, parent_id=None, extension_buttons=None, description_source_id=None):  # noqa: E501
         """EditorsEditorButtonItem - a model defined in Swagger"""  # noqa: E501
         self._editor_type = None
         self._name = None
@@ -59,6 +63,8 @@ class EditorsEditorButtonItem(object):
         self._description = None
         self._feature_requires_premiere = None
         self._parent_id = None
+        self._extension_buttons = None
+        self._description_source_id = None
         self.discriminator = None
         if editor_type is not None:
             self.editor_type = editor_type
@@ -80,6 +86,10 @@ class EditorsEditorButtonItem(object):
             self.feature_requires_premiere = feature_requires_premiere
         if parent_id is not None:
             self.parent_id = parent_id
+        if extension_buttons is not None:
+            self.extension_buttons = extension_buttons
+        if description_source_id is not None:
+            self.description_source_id = description_source_id
 
     @property
     def editor_type(self):
@@ -290,6 +300,52 @@ class EditorsEditorButtonItem(object):
         """
 
         self._parent_id = parent_id
+
+    @property
+    def extension_buttons(self):
+        """Gets the extension_buttons of this EditorsEditorButtonItem.  # noqa: E501
+
+        Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem` property naming this editor's own property) \\- rendered             inline at the end of this editor's own control (e.g. next to a dropdown/select) instead of             as a separate, standalone button/group elsewhere in the form.  # noqa: E501
+
+        :return: The extension_buttons of this EditorsEditorButtonItem.  # noqa: E501
+        :rtype: list[EditorsEditorButtonItem]
+        """
+        return self._extension_buttons
+
+    @extension_buttons.setter
+    def extension_buttons(self, extension_buttons):
+        """Sets the extension_buttons of this EditorsEditorButtonItem.
+
+        Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem` property naming this editor's own property) \\- rendered             inline at the end of this editor's own control (e.g. next to a dropdown/select) instead of             as a separate, standalone button/group elsewhere in the form.  # noqa: E501
+
+        :param extension_buttons: The extension_buttons of this EditorsEditorButtonItem.  # noqa: E501
+        :type: list[EditorsEditorButtonItem]
+        """
+
+        self._extension_buttons = extension_buttons
+
+    @property
+    def description_source_id(self):
+        """Gets the description_source_id of this EditorsEditorButtonItem.  # noqa: E501
+
+        The id of a string property (attached via `[IsDescriptionFor]`            naming this editor's own property) whose live value is displayed as this editor's             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`.  # noqa: E501
+
+        :return: The description_source_id of this EditorsEditorButtonItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._description_source_id
+
+    @description_source_id.setter
+    def description_source_id(self, description_source_id):
+        """Sets the description_source_id of this EditorsEditorButtonItem.
+
+        The id of a string property (attached via `[IsDescriptionFor]`            naming this editor's own property) whose live value is displayed as this editor's             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`.  # noqa: E501
+
+        :param description_source_id: The description_source_id of this EditorsEditorButtonItem.  # noqa: E501
+        :type: str
+        """
+
+        self._description_source_id = description_source_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

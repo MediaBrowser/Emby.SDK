@@ -36,6 +36,9 @@ public class SubtitleProfile {
   @SerializedName("Container")
   private String container = null;
 
+  @SerializedName("SubtitleContainer")
+  private String subtitleContainer = null;
+
   @SerializedName("AllowChunkedResponse")
   private Boolean allowChunkedResponse = null;
 
@@ -132,6 +135,24 @@ public class SubtitleProfile {
     this.container = container;
   }
 
+  public SubtitleProfile subtitleContainer(String subtitleContainer) {
+    this.subtitleContainer = subtitleContainer;
+    return this;
+  }
+
+   /**
+   * Get subtitleContainer
+   * @return subtitleContainer
+  **/
+  @Schema(description = "")
+  public String getSubtitleContainer() {
+    return subtitleContainer;
+  }
+
+  public void setSubtitleContainer(String subtitleContainer) {
+    this.subtitleContainer = subtitleContainer;
+  }
+
   public SubtitleProfile allowChunkedResponse(Boolean allowChunkedResponse) {
     this.allowChunkedResponse = allowChunkedResponse;
     return this;
@@ -183,13 +204,14 @@ public class SubtitleProfile {
         Objects.equals(this.didlMode, subtitleProfile.didlMode) &&
         Objects.equals(this.language, subtitleProfile.language) &&
         Objects.equals(this.container, subtitleProfile.container) &&
+        Objects.equals(this.subtitleContainer, subtitleProfile.subtitleContainer) &&
         Objects.equals(this.allowChunkedResponse, subtitleProfile.allowChunkedResponse) &&
         Objects.equals(this.protocol, subtitleProfile.protocol);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(format, method, didlMode, language, container, allowChunkedResponse, protocol);
+    return Objects.hash(format, method, didlMode, language, container, subtitleContainer, allowChunkedResponse, protocol);
   }
 
 
@@ -203,6 +225,7 @@ public class SubtitleProfile {
     sb.append("    didlMode: ").append(toIndentedString(didlMode)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    container: ").append(toIndentedString(container)).append("\n");
+    sb.append("    subtitleContainer: ").append(toIndentedString(subtitleContainer)).append("\n");
     sb.append("    allowChunkedResponse: ").append(toIndentedString(allowChunkedResponse)).append("\n");
     sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
     sb.append("}");

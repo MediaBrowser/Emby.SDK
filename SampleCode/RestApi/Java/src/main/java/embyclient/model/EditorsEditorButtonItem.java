@@ -13,8 +13,11 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import embyclient.model.CommonEditorTypes;
+import embyclient.model.EditorsEditorButtonItem;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * EditorsEditorButtonItem
  */
@@ -50,6 +53,12 @@ public class EditorsEditorButtonItem {
 
   @SerializedName("ParentId")
   private String parentId = null;
+
+  @SerializedName("ExtensionButtons")
+  private List<EditorsEditorButtonItem> extensionButtons = null;
+
+  @SerializedName("DescriptionSourceId")
+  private String descriptionSourceId = null;
 
   public EditorsEditorButtonItem editorType(CommonEditorTypes editorType) {
     this.editorType = editorType;
@@ -231,6 +240,50 @@ public class EditorsEditorButtonItem {
     this.parentId = parentId;
   }
 
+  public EditorsEditorButtonItem extensionButtons(List<EditorsEditorButtonItem> extensionButtons) {
+    this.extensionButtons = extensionButtons;
+    return this;
+  }
+
+  public EditorsEditorButtonItem addExtensionButtonsItem(EditorsEditorButtonItem extensionButtonsItem) {
+    if (this.extensionButtons == null) {
+      this.extensionButtons = new ArrayList<>();
+    }
+    this.extensionButtons.add(extensionButtonsItem);
+    return this;
+  }
+
+   /**
+   * Buttons attached to this editor (via &#x60;[IsButtonFor]&#x60; on a&#x60;Emby.Web.GenericEdit.Elements.ButtonItem&#x60; property naming this editor&#x27;s own property) \\- rendered             inline at the end of this editor&#x27;s own control (e.g. next to a dropdown/select) instead of             as a separate, standalone button/group elsewhere in the form.
+   * @return extensionButtons
+  **/
+  @Schema(description = "Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem` property naming this editor's own property) \\- rendered             inline at the end of this editor's own control (e.g. next to a dropdown/select) instead of             as a separate, standalone button/group elsewhere in the form.")
+  public List<EditorsEditorButtonItem> getExtensionButtons() {
+    return extensionButtons;
+  }
+
+  public void setExtensionButtons(List<EditorsEditorButtonItem> extensionButtons) {
+    this.extensionButtons = extensionButtons;
+  }
+
+  public EditorsEditorButtonItem descriptionSourceId(String descriptionSourceId) {
+    this.descriptionSourceId = descriptionSourceId;
+    return this;
+  }
+
+   /**
+   * The id of a string property (attached via &#x60;[IsDescriptionFor]&#x60;            naming this editor&#x27;s own property) whose live value is displayed as this editor&#x27;s             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor&#x27;s own static &#x60;Emby.Web.GenericEdit.Editors.EditorBase.Description&#x60;.
+   * @return descriptionSourceId
+  **/
+  @Schema(description = "The id of a string property (attached via `[IsDescriptionFor]`            naming this editor's own property) whose live value is displayed as this editor's             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`.")
+  public String getDescriptionSourceId() {
+    return descriptionSourceId;
+  }
+
+  public void setDescriptionSourceId(String descriptionSourceId) {
+    this.descriptionSourceId = descriptionSourceId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -250,12 +303,14 @@ public class EditorsEditorButtonItem {
         Objects.equals(this.displayName, editorsEditorButtonItem.displayName) &&
         Objects.equals(this.description, editorsEditorButtonItem.description) &&
         Objects.equals(this.featureRequiresPremiere, editorsEditorButtonItem.featureRequiresPremiere) &&
-        Objects.equals(this.parentId, editorsEditorButtonItem.parentId);
+        Objects.equals(this.parentId, editorsEditorButtonItem.parentId) &&
+        Objects.equals(this.extensionButtons, editorsEditorButtonItem.extensionButtons) &&
+        Objects.equals(this.descriptionSourceId, editorsEditorButtonItem.descriptionSourceId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(editorType, name, id, allowEmpty, isReadOnly, isAdvanced, displayName, description, featureRequiresPremiere, parentId);
+    return Objects.hash(editorType, name, id, allowEmpty, isReadOnly, isAdvanced, displayName, description, featureRequiresPremiere, parentId, extensionButtons, descriptionSourceId);
   }
 
 
@@ -274,6 +329,8 @@ public class EditorsEditorButtonItem {
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    featureRequiresPremiere: ").append(toIndentedString(featureRequiresPremiere)).append("\n");
     sb.append("    parentId: ").append(toIndentedString(parentId)).append("\n");
+    sb.append("    extensionButtons: ").append(toIndentedString(extensionButtons)).append("\n");
+    sb.append("    descriptionSourceId: ").append(toIndentedString(descriptionSourceId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

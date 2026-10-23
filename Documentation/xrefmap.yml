@@ -28732,6 +28732,22 @@ references:
   isSpec: "True"
   fullName: Emby.Web.GenericEdit.Common.EditorHelpers.GetDisplayName
   nameWithType: EditorHelpers.GetDisplayName
+- uid: Emby.Web.GenericEdit.Common.EditorHelpers.GetRadioOptionsFromEnumList*
+  name: GetRadioOptionsFromEnumList
+  href: reference/pluginapi/Emby.Web.GenericEdit.Common.EditorHelpers.html#Emby_Web_GenericEdit_Common_EditorHelpers_GetRadioOptionsFromEnumList_
+  commentId: Overload:Emby.Web.GenericEdit.Common.EditorHelpers.GetRadioOptionsFromEnumList
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.Common.EditorHelpers.GetRadioOptionsFromEnumList
+  nameWithType: EditorHelpers.GetRadioOptionsFromEnumList
+- uid: Emby.Web.GenericEdit.Common.EditorHelpers.GetRadioOptionsFromEnumList``1(System.Collections.Generic.IEnumerable{``0})
+  name: GetRadioOptionsFromEnumList<T>(IEnumerable<T>)
+  href: reference/pluginapi/Emby.Web.GenericEdit.Common.EditorHelpers.html#Emby_Web_GenericEdit_Common_EditorHelpers_GetRadioOptionsFromEnumList__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Emby.Web.GenericEdit.Common.EditorHelpers.GetRadioOptionsFromEnumList``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: GetRadioOptionsFromEnumList(Of T)(IEnumerable(Of T))
+  fullName: Emby.Web.GenericEdit.Common.EditorHelpers.GetRadioOptionsFromEnumList<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Emby.Web.GenericEdit.Common.EditorHelpers.GetRadioOptionsFromEnumList(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: EditorHelpers.GetRadioOptionsFromEnumList<T>(IEnumerable<T>)
+  nameWithType.vb: EditorHelpers.GetRadioOptionsFromEnumList(Of T)(IEnumerable(Of T))
 - uid: Emby.Web.GenericEdit.Common.EditorHelpers.GetSelectOptionsFromEnumList(System.Collections.Generic.IEnumerable{System.Enum})
   name: GetSelectOptionsFromEnumList(IEnumerable<Enum>)
   href: reference/pluginapi/Emby.Web.GenericEdit.Common.EditorHelpers.html#Emby_Web_GenericEdit_Common_EditorHelpers_GetSelectOptionsFromEnumList_System_Collections_Generic_IEnumerable_System_Enum__
@@ -28900,6 +28916,12 @@ references:
   commentId: M:Emby.Web.GenericEdit.Common.EditorSelectOption.#ctor(System.String,System.String,System.Boolean,System.String,System.String,System.String,System.String)
   fullName: Emby.Web.GenericEdit.Common.EditorSelectOption.EditorSelectOption(System.String, System.String, System.Boolean, System.String, System.String, System.String, System.String)
   nameWithType: EditorSelectOption.EditorSelectOption(String, String, Boolean, String, String, String, String)
+- uid: Emby.Web.GenericEdit.Common.EditorSelectOption.#ctor(System.String,System.String,System.String)
+  name: EditorSelectOption(String, String, String)
+  href: reference/pluginapi/Emby.Web.GenericEdit.Common.EditorSelectOption.html#Emby_Web_GenericEdit_Common_EditorSelectOption__ctor_System_String_System_String_System_String_
+  commentId: M:Emby.Web.GenericEdit.Common.EditorSelectOption.#ctor(System.String,System.String,System.String)
+  fullName: Emby.Web.GenericEdit.Common.EditorSelectOption.EditorSelectOption(System.String, System.String, System.String)
+  nameWithType: EditorSelectOption.EditorSelectOption(String, String, String)
 - uid: Emby.Web.GenericEdit.Common.EditorSelectOption.#ctor*
   name: EditorSelectOption
   href: reference/pluginapi/Emby.Web.GenericEdit.Common.EditorSelectOption.html#Emby_Web_GenericEdit_Common_EditorSelectOption__ctor_
@@ -28920,6 +28942,19 @@ references:
   isSpec: "True"
   fullName: Emby.Web.GenericEdit.Common.EditorSelectOption.Color
   nameWithType: EditorSelectOption.Color
+- uid: Emby.Web.GenericEdit.Common.EditorSelectOption.Description
+  name: Description
+  href: reference/pluginapi/Emby.Web.GenericEdit.Common.EditorSelectOption.html#Emby_Web_GenericEdit_Common_EditorSelectOption_Description
+  commentId: P:Emby.Web.GenericEdit.Common.EditorSelectOption.Description
+  fullName: Emby.Web.GenericEdit.Common.EditorSelectOption.Description
+  nameWithType: EditorSelectOption.Description
+- uid: Emby.Web.GenericEdit.Common.EditorSelectOption.Description*
+  name: Description
+  href: reference/pluginapi/Emby.Web.GenericEdit.Common.EditorSelectOption.html#Emby_Web_GenericEdit_Common_EditorSelectOption_Description_
+  commentId: Overload:Emby.Web.GenericEdit.Common.EditorSelectOption.Description
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.Common.EditorSelectOption.Description
+  nameWithType: EditorSelectOption.Description
 - uid: Emby.Web.GenericEdit.Common.EditorSelectOption.DisplayHint
   name: DisplayHint
   href: reference/pluginapi/Emby.Web.GenericEdit.Common.EditorSelectOption.html#Emby_Web_GenericEdit_Common_EditorSelectOption_DisplayHint
@@ -29523,6 +29558,38 @@ references:
   commentId: T:Emby.Web.GenericEdit.EditableOptionsBase
   fullName: Emby.Web.GenericEdit.EditableOptionsBase
   nameWithType: EditableOptionsBase
+- uid: Emby.Web.GenericEdit.EditableOptionsBase.ApplyOptionValues(Emby.Web.GenericEdit.OptionValues.PropertyOptionValues)
+  name: ApplyOptionValues(PropertyOptionValues)
+  href: reference/pluginapi/Emby.Web.GenericEdit.EditableOptionsBase.html#Emby_Web_GenericEdit_EditableOptionsBase_ApplyOptionValues_Emby_Web_GenericEdit_OptionValues_PropertyOptionValues_
+  commentId: M:Emby.Web.GenericEdit.EditableOptionsBase.ApplyOptionValues(Emby.Web.GenericEdit.OptionValues.PropertyOptionValues)
+  fullName: Emby.Web.GenericEdit.EditableOptionsBase.ApplyOptionValues(Emby.Web.GenericEdit.OptionValues.PropertyOptionValues)
+  nameWithType: EditableOptionsBase.ApplyOptionValues(PropertyOptionValues)
+- uid: Emby.Web.GenericEdit.EditableOptionsBase.ApplyOptionValues*
+  name: ApplyOptionValues
+  href: reference/pluginapi/Emby.Web.GenericEdit.EditableOptionsBase.html#Emby_Web_GenericEdit_EditableOptionsBase_ApplyOptionValues_
+  commentId: Overload:Emby.Web.GenericEdit.EditableOptionsBase.ApplyOptionValues
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.EditableOptionsBase.ApplyOptionValues
+  nameWithType: EditableOptionsBase.ApplyOptionValues
+- uid: Emby.Web.GenericEdit.EditableOptionsBase.GetOptionValues
+  name: GetOptionValues()
+  href: reference/pluginapi/Emby.Web.GenericEdit.EditableOptionsBase.html#Emby_Web_GenericEdit_EditableOptionsBase_GetOptionValues
+  commentId: M:Emby.Web.GenericEdit.EditableOptionsBase.GetOptionValues
+  fullName: Emby.Web.GenericEdit.EditableOptionsBase.GetOptionValues()
+  nameWithType: EditableOptionsBase.GetOptionValues()
+- uid: Emby.Web.GenericEdit.EditableOptionsBase.GetOptionValues(Emby.Web.GenericEdit.EditableOptionsBase)
+  name: GetOptionValues(EditableOptionsBase)
+  href: reference/pluginapi/Emby.Web.GenericEdit.EditableOptionsBase.html#Emby_Web_GenericEdit_EditableOptionsBase_GetOptionValues_Emby_Web_GenericEdit_EditableOptionsBase_
+  commentId: M:Emby.Web.GenericEdit.EditableOptionsBase.GetOptionValues(Emby.Web.GenericEdit.EditableOptionsBase)
+  fullName: Emby.Web.GenericEdit.EditableOptionsBase.GetOptionValues(Emby.Web.GenericEdit.EditableOptionsBase)
+  nameWithType: EditableOptionsBase.GetOptionValues(EditableOptionsBase)
+- uid: Emby.Web.GenericEdit.EditableOptionsBase.GetOptionValues*
+  name: GetOptionValues
+  href: reference/pluginapi/Emby.Web.GenericEdit.EditableOptionsBase.html#Emby_Web_GenericEdit_EditableOptionsBase_GetOptionValues_
+  commentId: Overload:Emby.Web.GenericEdit.EditableOptionsBase.GetOptionValues
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.EditableOptionsBase.GetOptionValues
+  nameWithType: EditableOptionsBase.GetOptionValues
 - uid: Emby.Web.GenericEdit.EditObjectContainer
   name: EditObjectContainer
   href: reference/pluginapi/Emby.Web.GenericEdit.EditObjectContainer.html
@@ -29657,6 +29724,19 @@ references:
   isSpec: "True"
   fullName: Emby.Web.GenericEdit.Editors.EditorBase.Description
   nameWithType: EditorBase.Description
+- uid: Emby.Web.GenericEdit.Editors.EditorBase.DescriptionSourceId
+  name: DescriptionSourceId
+  href: reference/pluginapi/Emby.Web.GenericEdit.Editors.EditorBase.html#Emby_Web_GenericEdit_Editors_EditorBase_DescriptionSourceId
+  commentId: P:Emby.Web.GenericEdit.Editors.EditorBase.DescriptionSourceId
+  fullName: Emby.Web.GenericEdit.Editors.EditorBase.DescriptionSourceId
+  nameWithType: EditorBase.DescriptionSourceId
+- uid: Emby.Web.GenericEdit.Editors.EditorBase.DescriptionSourceId*
+  name: DescriptionSourceId
+  href: reference/pluginapi/Emby.Web.GenericEdit.Editors.EditorBase.html#Emby_Web_GenericEdit_Editors_EditorBase_DescriptionSourceId_
+  commentId: Overload:Emby.Web.GenericEdit.Editors.EditorBase.DescriptionSourceId
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.Editors.EditorBase.DescriptionSourceId
+  nameWithType: EditorBase.DescriptionSourceId
 - uid: Emby.Web.GenericEdit.Editors.EditorBase.DisplayName
   name: DisplayName
   href: reference/pluginapi/Emby.Web.GenericEdit.Editors.EditorBase.html#Emby_Web_GenericEdit_Editors_EditorBase_DisplayName
@@ -29683,6 +29763,19 @@ references:
   isSpec: "True"
   fullName: Emby.Web.GenericEdit.Editors.EditorBase.EditorType
   nameWithType: EditorBase.EditorType
+- uid: Emby.Web.GenericEdit.Editors.EditorBase.ExtensionButtons
+  name: ExtensionButtons
+  href: reference/pluginapi/Emby.Web.GenericEdit.Editors.EditorBase.html#Emby_Web_GenericEdit_Editors_EditorBase_ExtensionButtons
+  commentId: P:Emby.Web.GenericEdit.Editors.EditorBase.ExtensionButtons
+  fullName: Emby.Web.GenericEdit.Editors.EditorBase.ExtensionButtons
+  nameWithType: EditorBase.ExtensionButtons
+- uid: Emby.Web.GenericEdit.Editors.EditorBase.ExtensionButtons*
+  name: ExtensionButtons
+  href: reference/pluginapi/Emby.Web.GenericEdit.Editors.EditorBase.html#Emby_Web_GenericEdit_Editors_EditorBase_ExtensionButtons_
+  commentId: Overload:Emby.Web.GenericEdit.Editors.EditorBase.ExtensionButtons
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.Editors.EditorBase.ExtensionButtons
+  nameWithType: EditorBase.ExtensionButtons
 - uid: Emby.Web.GenericEdit.Editors.EditorBase.FeatureRequiresPremiere
   name: FeatureRequiresPremiere
   href: reference/pluginapi/Emby.Web.GenericEdit.Editors.EditorBase.html#Emby_Web_GenericEdit_Editors_EditorBase_FeatureRequiresPremiere
@@ -30482,6 +30575,19 @@ references:
   isSpec: "True"
   fullName: Emby.Web.GenericEdit.Editors.EditorSelectBase.MultiLine
   nameWithType: EditorSelectBase.MultiLine
+- uid: Emby.Web.GenericEdit.Editors.EditorSelectBase.SelectItemsHelpMode
+  name: SelectItemsHelpMode
+  href: reference/pluginapi/Emby.Web.GenericEdit.Editors.EditorSelectBase.html#Emby_Web_GenericEdit_Editors_EditorSelectBase_SelectItemsHelpMode
+  commentId: P:Emby.Web.GenericEdit.Editors.EditorSelectBase.SelectItemsHelpMode
+  fullName: Emby.Web.GenericEdit.Editors.EditorSelectBase.SelectItemsHelpMode
+  nameWithType: EditorSelectBase.SelectItemsHelpMode
+- uid: Emby.Web.GenericEdit.Editors.EditorSelectBase.SelectItemsHelpMode*
+  name: SelectItemsHelpMode
+  href: reference/pluginapi/Emby.Web.GenericEdit.Editors.EditorSelectBase.html#Emby_Web_GenericEdit_Editors_EditorSelectBase_SelectItemsHelpMode_
+  commentId: Overload:Emby.Web.GenericEdit.Editors.EditorSelectBase.SelectItemsHelpMode
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.Editors.EditorSelectBase.SelectItemsHelpMode
+  nameWithType: EditorSelectBase.SelectItemsHelpMode
 - uid: Emby.Web.GenericEdit.Editors.EditorSelectBase.SelectOptions
   name: SelectOptions
   href: reference/pluginapi/Emby.Web.GenericEdit.Editors.EditorSelectBase.html#Emby_Web_GenericEdit_Editors_EditorSelectBase_SelectOptions
@@ -51061,6 +51167,152 @@ references:
   commentId: T:Emby.Web.GenericEdit.IEditableObjectCollection
   fullName: Emby.Web.GenericEdit.IEditableObjectCollection
   nameWithType: IEditableObjectCollection
+- uid: Emby.Web.GenericEdit.OptionValues
+  name: Emby.Web.GenericEdit.OptionValues
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.html
+  commentId: N:Emby.Web.GenericEdit.OptionValues
+  fullName: Emby.Web.GenericEdit.OptionValues
+  nameWithType: Emby.Web.GenericEdit.OptionValues
+- uid: Emby.Web.GenericEdit.OptionValues.OptionValueManager
+  name: OptionValueManager
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.OptionValueManager.html
+  commentId: T:Emby.Web.GenericEdit.OptionValues.OptionValueManager
+  fullName: Emby.Web.GenericEdit.OptionValues.OptionValueManager
+  nameWithType: OptionValueManager
+- uid: Emby.Web.GenericEdit.OptionValues.OptionValueManager.ApplyOptionValues(System.Object,Emby.Web.GenericEdit.OptionValues.PropertyOptionValues)
+  name: ApplyOptionValues(Object, PropertyOptionValues)
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.OptionValueManager.html#Emby_Web_GenericEdit_OptionValues_OptionValueManager_ApplyOptionValues_System_Object_Emby_Web_GenericEdit_OptionValues_PropertyOptionValues_
+  commentId: M:Emby.Web.GenericEdit.OptionValues.OptionValueManager.ApplyOptionValues(System.Object,Emby.Web.GenericEdit.OptionValues.PropertyOptionValues)
+  fullName: Emby.Web.GenericEdit.OptionValues.OptionValueManager.ApplyOptionValues(System.Object, Emby.Web.GenericEdit.OptionValues.PropertyOptionValues)
+  nameWithType: OptionValueManager.ApplyOptionValues(Object, PropertyOptionValues)
+- uid: Emby.Web.GenericEdit.OptionValues.OptionValueManager.ApplyOptionValues*
+  name: ApplyOptionValues
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.OptionValueManager.html#Emby_Web_GenericEdit_OptionValues_OptionValueManager_ApplyOptionValues_
+  commentId: Overload:Emby.Web.GenericEdit.OptionValues.OptionValueManager.ApplyOptionValues
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.OptionValues.OptionValueManager.ApplyOptionValues
+  nameWithType: OptionValueManager.ApplyOptionValues
+- uid: Emby.Web.GenericEdit.OptionValues.OptionValueManager.GetOptionValues(System.Object,System.Object,Emby.Web.GenericEdit.Factory.EditorBuildOptions)
+  name: GetOptionValues(Object, Object, EditorBuildOptions)
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.OptionValueManager.html#Emby_Web_GenericEdit_OptionValues_OptionValueManager_GetOptionValues_System_Object_System_Object_Emby_Web_GenericEdit_Factory_EditorBuildOptions_
+  commentId: M:Emby.Web.GenericEdit.OptionValues.OptionValueManager.GetOptionValues(System.Object,System.Object,Emby.Web.GenericEdit.Factory.EditorBuildOptions)
+  fullName: Emby.Web.GenericEdit.OptionValues.OptionValueManager.GetOptionValues(System.Object, System.Object, Emby.Web.GenericEdit.Factory.EditorBuildOptions)
+  nameWithType: OptionValueManager.GetOptionValues(Object, Object, EditorBuildOptions)
+- uid: Emby.Web.GenericEdit.OptionValues.OptionValueManager.GetOptionValues*
+  name: GetOptionValues
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.OptionValueManager.html#Emby_Web_GenericEdit_OptionValues_OptionValueManager_GetOptionValues_
+  commentId: Overload:Emby.Web.GenericEdit.OptionValues.OptionValueManager.GetOptionValues
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.OptionValues.OptionValueManager.GetOptionValues
+  nameWithType: OptionValueManager.GetOptionValues
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue
+  name: PropertyOptionValue
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.html
+  commentId: T:Emby.Web.GenericEdit.OptionValues.PropertyOptionValue
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue
+  nameWithType: PropertyOptionValue
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.PropertyPath
+  name: PropertyPath
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValue_PropertyPath
+  commentId: P:Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.PropertyPath
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.PropertyPath
+  nameWithType: PropertyOptionValue.PropertyPath
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.PropertyPath*
+  name: PropertyPath
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValue_PropertyPath_
+  commentId: Overload:Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.PropertyPath
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.PropertyPath
+  nameWithType: PropertyOptionValue.PropertyPath
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.ToString
+  name: ToString()
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValue_ToString
+  commentId: M:Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.ToString
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.ToString()
+  nameWithType: PropertyOptionValue.ToString()
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.ToString*
+  name: ToString
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValue_ToString_
+  commentId: Overload:Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.ToString
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.ToString
+  nameWithType: PropertyOptionValue.ToString
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.Value
+  name: Value
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValue_Value
+  commentId: P:Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.Value
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.Value
+  nameWithType: PropertyOptionValue.Value
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.Value*
+  name: Value
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValue_Value_
+  commentId: Overload:Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.Value
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValue.Value
+  nameWithType: PropertyOptionValue.Value
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues
+  name: PropertyOptionValues
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.html
+  commentId: T:Emby.Web.GenericEdit.OptionValues.PropertyOptionValues
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues
+  nameWithType: PropertyOptionValues
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.#ctor
+  name: PropertyOptionValues()
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValues__ctor
+  commentId: M:Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.#ctor
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.PropertyOptionValues()
+  nameWithType: PropertyOptionValues.PropertyOptionValues()
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.#ctor(System.Collections.Generic.IEnumerable{Emby.Web.GenericEdit.OptionValues.PropertyOptionValue})
+  name: PropertyOptionValues(IEnumerable<PropertyOptionValue>)
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValues__ctor_System_Collections_Generic_IEnumerable_Emby_Web_GenericEdit_OptionValues_PropertyOptionValue__
+  commentId: M:Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.#ctor(System.Collections.Generic.IEnumerable{Emby.Web.GenericEdit.OptionValues.PropertyOptionValue})
+  name.vb: PropertyOptionValues(IEnumerable(Of PropertyOptionValue))
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.PropertyOptionValues(System.Collections.Generic.IEnumerable<Emby.Web.GenericEdit.OptionValues.PropertyOptionValue>)
+  fullName.vb: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.PropertyOptionValues(System.Collections.Generic.IEnumerable(Of Emby.Web.GenericEdit.OptionValues.PropertyOptionValue))
+  nameWithType: PropertyOptionValues.PropertyOptionValues(IEnumerable<PropertyOptionValue>)
+  nameWithType.vb: PropertyOptionValues.PropertyOptionValues(IEnumerable(Of PropertyOptionValue))
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.#ctor(System.Int32)
+  name: PropertyOptionValues(Int32)
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValues__ctor_System_Int32_
+  commentId: M:Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.#ctor(System.Int32)
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.PropertyOptionValues(System.Int32)
+  nameWithType: PropertyOptionValues.PropertyOptionValues(Int32)
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.#ctor*
+  name: PropertyOptionValues
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValues__ctor_
+  commentId: Overload:Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.#ctor
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.PropertyOptionValues
+  nameWithType: PropertyOptionValues.PropertyOptionValues
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.Item(System.String)
+  name: Item[String]
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValues_Item_System_String_
+  commentId: P:Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.Item(System.String)
+  name.vb: Item(String)
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.Item[System.String]
+  fullName.vb: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.Item(System.String)
+  nameWithType: PropertyOptionValues.Item[String]
+  nameWithType.vb: PropertyOptionValues.Item(String)
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.Item*
+  name: Item
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValues_Item_
+  commentId: Overload:Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.Item
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.Item
+  nameWithType: PropertyOptionValues.Item
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.ToString
+  name: ToString()
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValues_ToString
+  commentId: M:Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.ToString
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.ToString()
+  nameWithType: PropertyOptionValues.ToString()
+- uid: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.ToString*
+  name: ToString
+  href: reference/pluginapi/Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.html#Emby_Web_GenericEdit_OptionValues_PropertyOptionValues_ToString_
+  commentId: Overload:Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.ToString
+  isSpec: "True"
+  fullName: Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.ToString
+  nameWithType: PropertyOptionValues.ToString
 - uid: Emby.Web.GenericEdit.PropertyDiff
   name: Emby.Web.GenericEdit.PropertyDiff
   href: reference/pluginapi/Emby.Web.GenericEdit.PropertyDiff.html
@@ -94614,15 +94866,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleFileCharacterSet
   nameWithType: ISubtitleEncoder.GetSubtitleFileCharacterSet
-- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob(System.String,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String},MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)
-  name: GetSubtitleJob(String, MediaProtocol, Boolean, IDictionary<String, String>, MediaStream, String, Int64, Int64, Boolean, Boolean, EncodingContext, CancellationToken)
-  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html#MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitleJob_System_String_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Boolean_System_Collections_Generic_IDictionary_System_String_System_String__MediaBrowser_Model_Entities_MediaStream_System_String_System_Int64_System_Int64_System_Boolean_System_Boolean_MediaBrowser_Model_Dlna_EncodingContext_System_Threading_CancellationToken_
-  commentId: M:MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob(System.String,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String},MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)
-  name.vb: GetSubtitleJob(String, MediaProtocol, Boolean, IDictionary(Of String, String), MediaStream, String, Int64, Int64, Boolean, Boolean, EncodingContext, CancellationToken)
-  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob(System.String, MediaBrowser.Model.MediaInfo.MediaProtocol, System.Boolean, System.Collections.Generic.IDictionary<System.String, System.String>, MediaBrowser.Model.Entities.MediaStream, System.String, System.Int64, System.Int64, System.Boolean, System.Boolean, MediaBrowser.Model.Dlna.EncodingContext, System.Threading.CancellationToken)
-  fullName.vb: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob(System.String, MediaBrowser.Model.MediaInfo.MediaProtocol, System.Boolean, System.Collections.Generic.IDictionary(Of System.String, System.String), MediaBrowser.Model.Entities.MediaStream, System.String, System.Int64, System.Int64, System.Boolean, System.Boolean, MediaBrowser.Model.Dlna.EncodingContext, System.Threading.CancellationToken)
-  nameWithType: ISubtitleEncoder.GetSubtitleJob(String, MediaProtocol, Boolean, IDictionary<String, String>, MediaStream, String, Int64, Int64, Boolean, Boolean, EncodingContext, CancellationToken)
-  nameWithType.vb: ISubtitleEncoder.GetSubtitleJob(String, MediaProtocol, Boolean, IDictionary(Of String, String), MediaStream, String, Int64, Int64, Boolean, Boolean, EncodingContext, CancellationToken)
+- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob(MediaBrowser.Model.Dto.MediaSourceInfo,System.Boolean,MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,System.Boolean,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)
+  name: GetSubtitleJob(MediaSourceInfo, Boolean, MediaStream, String, Int64, Int64, Boolean, Boolean, Boolean, EncodingContext, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html#MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitleJob_MediaBrowser_Model_Dto_MediaSourceInfo_System_Boolean_MediaBrowser_Model_Entities_MediaStream_System_String_System_Int64_System_Int64_System_Boolean_System_Boolean_System_Boolean_MediaBrowser_Model_Dlna_EncodingContext_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob(MediaBrowser.Model.Dto.MediaSourceInfo,System.Boolean,MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,System.Boolean,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob(MediaBrowser.Model.Dto.MediaSourceInfo, System.Boolean, MediaBrowser.Model.Entities.MediaStream, System.String, System.Int64, System.Int64, System.Boolean, System.Boolean, System.Boolean, MediaBrowser.Model.Dlna.EncodingContext, System.Threading.CancellationToken)
+  nameWithType: ISubtitleEncoder.GetSubtitleJob(MediaSourceInfo, Boolean, MediaStream, String, Int64, Int64, Boolean, Boolean, Boolean, EncodingContext, CancellationToken)
 - uid: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob*
   name: GetSubtitleJob
   href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html#MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitleJob_
@@ -94630,15 +94879,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob
   nameWithType: ISubtitleEncoder.GetSubtitleJob
-- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitles(System.String,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String},MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)
-  name: GetSubtitles(String, MediaProtocol, Boolean, IDictionary<String, String>, MediaStream, String, Int64, Int64, Boolean, EncodingContext, CancellationToken)
-  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html#MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitles_System_String_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Boolean_System_Collections_Generic_IDictionary_System_String_System_String__MediaBrowser_Model_Entities_MediaStream_System_String_System_Int64_System_Int64_System_Boolean_MediaBrowser_Model_Dlna_EncodingContext_System_Threading_CancellationToken_
-  commentId: M:MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitles(System.String,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String},MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)
-  name.vb: GetSubtitles(String, MediaProtocol, Boolean, IDictionary(Of String, String), MediaStream, String, Int64, Int64, Boolean, EncodingContext, CancellationToken)
-  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitles(System.String, MediaBrowser.Model.MediaInfo.MediaProtocol, System.Boolean, System.Collections.Generic.IDictionary<System.String, System.String>, MediaBrowser.Model.Entities.MediaStream, System.String, System.Int64, System.Int64, System.Boolean, MediaBrowser.Model.Dlna.EncodingContext, System.Threading.CancellationToken)
-  fullName.vb: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitles(System.String, MediaBrowser.Model.MediaInfo.MediaProtocol, System.Boolean, System.Collections.Generic.IDictionary(Of System.String, System.String), MediaBrowser.Model.Entities.MediaStream, System.String, System.Int64, System.Int64, System.Boolean, MediaBrowser.Model.Dlna.EncodingContext, System.Threading.CancellationToken)
-  nameWithType: ISubtitleEncoder.GetSubtitles(String, MediaProtocol, Boolean, IDictionary<String, String>, MediaStream, String, Int64, Int64, Boolean, EncodingContext, CancellationToken)
-  nameWithType.vb: ISubtitleEncoder.GetSubtitles(String, MediaProtocol, Boolean, IDictionary(Of String, String), MediaStream, String, Int64, Int64, Boolean, EncodingContext, CancellationToken)
+- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitles(MediaBrowser.Model.Dto.MediaSourceInfo,System.Boolean,MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)
+  name: GetSubtitles(MediaSourceInfo, Boolean, MediaStream, String, Int64, Int64, Boolean, Boolean, EncodingContext, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html#MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitles_MediaBrowser_Model_Dto_MediaSourceInfo_System_Boolean_MediaBrowser_Model_Entities_MediaStream_System_String_System_Int64_System_Int64_System_Boolean_System_Boolean_MediaBrowser_Model_Dlna_EncodingContext_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitles(MediaBrowser.Model.Dto.MediaSourceInfo,System.Boolean,MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitles(MediaBrowser.Model.Dto.MediaSourceInfo, System.Boolean, MediaBrowser.Model.Entities.MediaStream, System.String, System.Int64, System.Int64, System.Boolean, System.Boolean, MediaBrowser.Model.Dlna.EncodingContext, System.Threading.CancellationToken)
+  nameWithType: ISubtitleEncoder.GetSubtitles(MediaSourceInfo, Boolean, MediaStream, String, Int64, Int64, Boolean, Boolean, EncodingContext, CancellationToken)
 - uid: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitles*
   name: GetSubtitles
   href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html#MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitles_
@@ -109231,6 +109477,70 @@ references:
   commentId: T:MediaBrowser.Model.Attributes.IsAdvancedAttribute
   fullName: MediaBrowser.Model.Attributes.IsAdvancedAttribute
   nameWithType: IsAdvancedAttribute
+- uid: MediaBrowser.Model.Attributes.IsButtonForAttribute
+  name: IsButtonForAttribute
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.IsButtonForAttribute.html
+  commentId: T:MediaBrowser.Model.Attributes.IsButtonForAttribute
+  fullName: MediaBrowser.Model.Attributes.IsButtonForAttribute
+  nameWithType: IsButtonForAttribute
+- uid: MediaBrowser.Model.Attributes.IsButtonForAttribute.#ctor(System.String)
+  name: IsButtonForAttribute(String)
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.IsButtonForAttribute.html#MediaBrowser_Model_Attributes_IsButtonForAttribute__ctor_System_String_
+  commentId: M:MediaBrowser.Model.Attributes.IsButtonForAttribute.#ctor(System.String)
+  fullName: MediaBrowser.Model.Attributes.IsButtonForAttribute.IsButtonForAttribute(System.String)
+  nameWithType: IsButtonForAttribute.IsButtonForAttribute(String)
+- uid: MediaBrowser.Model.Attributes.IsButtonForAttribute.#ctor*
+  name: IsButtonForAttribute
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.IsButtonForAttribute.html#MediaBrowser_Model_Attributes_IsButtonForAttribute__ctor_
+  commentId: Overload:MediaBrowser.Model.Attributes.IsButtonForAttribute.#ctor
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Attributes.IsButtonForAttribute.IsButtonForAttribute
+  nameWithType: IsButtonForAttribute.IsButtonForAttribute
+- uid: MediaBrowser.Model.Attributes.IsButtonForAttribute.PropertyName
+  name: PropertyName
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.IsButtonForAttribute.html#MediaBrowser_Model_Attributes_IsButtonForAttribute_PropertyName
+  commentId: P:MediaBrowser.Model.Attributes.IsButtonForAttribute.PropertyName
+  fullName: MediaBrowser.Model.Attributes.IsButtonForAttribute.PropertyName
+  nameWithType: IsButtonForAttribute.PropertyName
+- uid: MediaBrowser.Model.Attributes.IsButtonForAttribute.PropertyName*
+  name: PropertyName
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.IsButtonForAttribute.html#MediaBrowser_Model_Attributes_IsButtonForAttribute_PropertyName_
+  commentId: Overload:MediaBrowser.Model.Attributes.IsButtonForAttribute.PropertyName
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Attributes.IsButtonForAttribute.PropertyName
+  nameWithType: IsButtonForAttribute.PropertyName
+- uid: MediaBrowser.Model.Attributes.IsDescriptionForAttribute
+  name: IsDescriptionForAttribute
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.IsDescriptionForAttribute.html
+  commentId: T:MediaBrowser.Model.Attributes.IsDescriptionForAttribute
+  fullName: MediaBrowser.Model.Attributes.IsDescriptionForAttribute
+  nameWithType: IsDescriptionForAttribute
+- uid: MediaBrowser.Model.Attributes.IsDescriptionForAttribute.#ctor(System.String)
+  name: IsDescriptionForAttribute(String)
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.IsDescriptionForAttribute.html#MediaBrowser_Model_Attributes_IsDescriptionForAttribute__ctor_System_String_
+  commentId: M:MediaBrowser.Model.Attributes.IsDescriptionForAttribute.#ctor(System.String)
+  fullName: MediaBrowser.Model.Attributes.IsDescriptionForAttribute.IsDescriptionForAttribute(System.String)
+  nameWithType: IsDescriptionForAttribute.IsDescriptionForAttribute(String)
+- uid: MediaBrowser.Model.Attributes.IsDescriptionForAttribute.#ctor*
+  name: IsDescriptionForAttribute
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.IsDescriptionForAttribute.html#MediaBrowser_Model_Attributes_IsDescriptionForAttribute__ctor_
+  commentId: Overload:MediaBrowser.Model.Attributes.IsDescriptionForAttribute.#ctor
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Attributes.IsDescriptionForAttribute.IsDescriptionForAttribute
+  nameWithType: IsDescriptionForAttribute.IsDescriptionForAttribute
+- uid: MediaBrowser.Model.Attributes.IsDescriptionForAttribute.PropertyName
+  name: PropertyName
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.IsDescriptionForAttribute.html#MediaBrowser_Model_Attributes_IsDescriptionForAttribute_PropertyName
+  commentId: P:MediaBrowser.Model.Attributes.IsDescriptionForAttribute.PropertyName
+  fullName: MediaBrowser.Model.Attributes.IsDescriptionForAttribute.PropertyName
+  nameWithType: IsDescriptionForAttribute.PropertyName
+- uid: MediaBrowser.Model.Attributes.IsDescriptionForAttribute.PropertyName*
+  name: PropertyName
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.IsDescriptionForAttribute.html#MediaBrowser_Model_Attributes_IsDescriptionForAttribute_PropertyName_
+  commentId: Overload:MediaBrowser.Model.Attributes.IsDescriptionForAttribute.PropertyName
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Attributes.IsDescriptionForAttribute.PropertyName
+  nameWithType: IsDescriptionForAttribute.PropertyName
 - uid: MediaBrowser.Model.Attributes.IsPasswordAttribute
   name: IsPasswordAttribute
   href: reference/pluginapi/MediaBrowser.Model.Attributes.IsPasswordAttribute.html
@@ -109518,6 +109828,74 @@ references:
   commentId: T:MediaBrowser.Model.Attributes.RequiredAttribute
   fullName: MediaBrowser.Model.Attributes.RequiredAttribute
   nameWithType: RequiredAttribute
+- uid: MediaBrowser.Model.Attributes.SelectItemsHelpAttribute
+  name: SelectItemsHelpAttribute
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.html
+  commentId: T:MediaBrowser.Model.Attributes.SelectItemsHelpAttribute
+  fullName: MediaBrowser.Model.Attributes.SelectItemsHelpAttribute
+  nameWithType: SelectItemsHelpAttribute
+- uid: MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.#ctor(MediaBrowser.Model.Attributes.SelectItemsHelpMode)
+  name: SelectItemsHelpAttribute(SelectItemsHelpMode)
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.html#MediaBrowser_Model_Attributes_SelectItemsHelpAttribute__ctor_MediaBrowser_Model_Attributes_SelectItemsHelpMode_
+  commentId: M:MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.#ctor(MediaBrowser.Model.Attributes.SelectItemsHelpMode)
+  fullName: MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.SelectItemsHelpAttribute(MediaBrowser.Model.Attributes.SelectItemsHelpMode)
+  nameWithType: SelectItemsHelpAttribute.SelectItemsHelpAttribute(SelectItemsHelpMode)
+- uid: MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.#ctor*
+  name: SelectItemsHelpAttribute
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.html#MediaBrowser_Model_Attributes_SelectItemsHelpAttribute__ctor_
+  commentId: Overload:MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.#ctor
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.SelectItemsHelpAttribute
+  nameWithType: SelectItemsHelpAttribute.SelectItemsHelpAttribute
+- uid: MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.HelpMode
+  name: HelpMode
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.html#MediaBrowser_Model_Attributes_SelectItemsHelpAttribute_HelpMode
+  commentId: P:MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.HelpMode
+  fullName: MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.HelpMode
+  nameWithType: SelectItemsHelpAttribute.HelpMode
+- uid: MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.HelpMode*
+  name: HelpMode
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.html#MediaBrowser_Model_Attributes_SelectItemsHelpAttribute_HelpMode_
+  commentId: Overload:MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.HelpMode
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Attributes.SelectItemsHelpAttribute.HelpMode
+  nameWithType: SelectItemsHelpAttribute.HelpMode
+- uid: MediaBrowser.Model.Attributes.SelectItemsHelpMode
+  name: SelectItemsHelpMode
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.SelectItemsHelpMode.html
+  commentId: T:MediaBrowser.Model.Attributes.SelectItemsHelpMode
+  fullName: MediaBrowser.Model.Attributes.SelectItemsHelpMode
+  nameWithType: SelectItemsHelpMode
+- uid: MediaBrowser.Model.Attributes.SelectItemsHelpMode.DescriptionAdd
+  name: DescriptionAdd
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.SelectItemsHelpMode.html#MediaBrowser_Model_Attributes_SelectItemsHelpMode_DescriptionAdd
+  commentId: F:MediaBrowser.Model.Attributes.SelectItemsHelpMode.DescriptionAdd
+  fullName: MediaBrowser.Model.Attributes.SelectItemsHelpMode.DescriptionAdd
+  nameWithType: SelectItemsHelpMode.DescriptionAdd
+- uid: MediaBrowser.Model.Attributes.SelectItemsHelpMode.DescriptionReplace
+  name: DescriptionReplace
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.SelectItemsHelpMode.html#MediaBrowser_Model_Attributes_SelectItemsHelpMode_DescriptionReplace
+  commentId: F:MediaBrowser.Model.Attributes.SelectItemsHelpMode.DescriptionReplace
+  fullName: MediaBrowser.Model.Attributes.SelectItemsHelpMode.DescriptionReplace
+  nameWithType: SelectItemsHelpMode.DescriptionReplace
+- uid: MediaBrowser.Model.Attributes.SelectItemsHelpMode.HelpDialog
+  name: HelpDialog
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.SelectItemsHelpMode.html#MediaBrowser_Model_Attributes_SelectItemsHelpMode_HelpDialog
+  commentId: F:MediaBrowser.Model.Attributes.SelectItemsHelpMode.HelpDialog
+  fullName: MediaBrowser.Model.Attributes.SelectItemsHelpMode.HelpDialog
+  nameWithType: SelectItemsHelpMode.HelpDialog
+- uid: MediaBrowser.Model.Attributes.SelectItemsHelpMode.HelpDialogHideValues
+  name: HelpDialogHideValues
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.SelectItemsHelpMode.html#MediaBrowser_Model_Attributes_SelectItemsHelpMode_HelpDialogHideValues
+  commentId: F:MediaBrowser.Model.Attributes.SelectItemsHelpMode.HelpDialogHideValues
+  fullName: MediaBrowser.Model.Attributes.SelectItemsHelpMode.HelpDialogHideValues
+  nameWithType: SelectItemsHelpMode.HelpDialogHideValues
+- uid: MediaBrowser.Model.Attributes.SelectItemsHelpMode.None
+  name: None
+  href: reference/pluginapi/MediaBrowser.Model.Attributes.SelectItemsHelpMode.html#MediaBrowser_Model_Attributes_SelectItemsHelpMode_None
+  commentId: F:MediaBrowser.Model.Attributes.SelectItemsHelpMode.None
+  fullName: MediaBrowser.Model.Attributes.SelectItemsHelpMode.None
+  nameWithType: SelectItemsHelpMode.None
 - uid: MediaBrowser.Model.Attributes.SelectItemsSourceAttribute
   name: SelectItemsSourceAttribute
   href: reference/pluginapi/MediaBrowser.Model.Attributes.SelectItemsSourceAttribute.html
@@ -116500,6 +116878,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Dlna.RequestedStreamInfo.SampleRate
   nameWithType: RequestedStreamInfo.SampleRate
+- uid: MediaBrowser.Model.Dlna.RequestedStreamInfo.SubtitleContainer
+  name: SubtitleContainer
+  href: reference/pluginapi/MediaBrowser.Model.Dlna.RequestedStreamInfo.html#MediaBrowser_Model_Dlna_RequestedStreamInfo_SubtitleContainer
+  commentId: P:MediaBrowser.Model.Dlna.RequestedStreamInfo.SubtitleContainer
+  fullName: MediaBrowser.Model.Dlna.RequestedStreamInfo.SubtitleContainer
+  nameWithType: RequestedStreamInfo.SubtitleContainer
+- uid: MediaBrowser.Model.Dlna.RequestedStreamInfo.SubtitleContainer*
+  name: SubtitleContainer
+  href: reference/pluginapi/MediaBrowser.Model.Dlna.RequestedStreamInfo.html#MediaBrowser_Model_Dlna_RequestedStreamInfo_SubtitleContainer_
+  commentId: Overload:MediaBrowser.Model.Dlna.RequestedStreamInfo.SubtitleContainer
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Dlna.RequestedStreamInfo.SubtitleContainer
+  nameWithType: RequestedStreamInfo.SubtitleContainer
 - uid: MediaBrowser.Model.Dlna.RequestedStreamInfo.SubtitleDeliveryMethod
   name: SubtitleDeliveryMethod
   href: reference/pluginapi/MediaBrowser.Model.Dlna.RequestedStreamInfo.html#MediaBrowser_Model_Dlna_RequestedStreamInfo_SubtitleDeliveryMethod
@@ -117862,6 +118253,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Dlna.SubtitleProfile.Protocol
   nameWithType: SubtitleProfile.Protocol
+- uid: MediaBrowser.Model.Dlna.SubtitleProfile.SubtitleContainer
+  name: SubtitleContainer
+  href: reference/pluginapi/MediaBrowser.Model.Dlna.SubtitleProfile.html#MediaBrowser_Model_Dlna_SubtitleProfile_SubtitleContainer
+  commentId: P:MediaBrowser.Model.Dlna.SubtitleProfile.SubtitleContainer
+  fullName: MediaBrowser.Model.Dlna.SubtitleProfile.SubtitleContainer
+  nameWithType: SubtitleProfile.SubtitleContainer
+- uid: MediaBrowser.Model.Dlna.SubtitleProfile.SubtitleContainer*
+  name: SubtitleContainer
+  href: reference/pluginapi/MediaBrowser.Model.Dlna.SubtitleProfile.html#MediaBrowser_Model_Dlna_SubtitleProfile_SubtitleContainer_
+  commentId: Overload:MediaBrowser.Model.Dlna.SubtitleProfile.SubtitleContainer
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Dlna.SubtitleProfile.SubtitleContainer
+  nameWithType: SubtitleProfile.SubtitleContainer
 - uid: MediaBrowser.Model.Dlna.SubtitleProfile.SupportsLanguage(System.ReadOnlySpan{System.Char})
   name: SupportsLanguage(ReadOnlySpan<Char>)
   href: reference/pluginapi/MediaBrowser.Model.Dlna.SubtitleProfile.html#MediaBrowser_Model_Dlna_SubtitleProfile_SupportsLanguage_System_ReadOnlySpan_System_Char__
@@ -126874,6 +127278,25 @@ references:
   commentId: T:MediaBrowser.Model.Entities.VirtualFolderInfo
   fullName: MediaBrowser.Model.Entities.VirtualFolderInfo
   nameWithType: VirtualFolderInfo
+- uid: MediaBrowser.Model.Entities.VirtualFolderInfo.#ctor
+  name: VirtualFolderInfo()
+  href: reference/pluginapi/MediaBrowser.Model.Entities.VirtualFolderInfo.html#MediaBrowser_Model_Entities_VirtualFolderInfo__ctor
+  commentId: M:MediaBrowser.Model.Entities.VirtualFolderInfo.#ctor
+  fullName: MediaBrowser.Model.Entities.VirtualFolderInfo.VirtualFolderInfo()
+  nameWithType: VirtualFolderInfo.VirtualFolderInfo()
+- uid: MediaBrowser.Model.Entities.VirtualFolderInfo.#ctor(MediaBrowser.Model.Entities.VirtualFolderInfo)
+  name: VirtualFolderInfo(VirtualFolderInfo)
+  href: reference/pluginapi/MediaBrowser.Model.Entities.VirtualFolderInfo.html#MediaBrowser_Model_Entities_VirtualFolderInfo__ctor_MediaBrowser_Model_Entities_VirtualFolderInfo_
+  commentId: M:MediaBrowser.Model.Entities.VirtualFolderInfo.#ctor(MediaBrowser.Model.Entities.VirtualFolderInfo)
+  fullName: MediaBrowser.Model.Entities.VirtualFolderInfo.VirtualFolderInfo(MediaBrowser.Model.Entities.VirtualFolderInfo)
+  nameWithType: VirtualFolderInfo.VirtualFolderInfo(VirtualFolderInfo)
+- uid: MediaBrowser.Model.Entities.VirtualFolderInfo.#ctor*
+  name: VirtualFolderInfo
+  href: reference/pluginapi/MediaBrowser.Model.Entities.VirtualFolderInfo.html#MediaBrowser_Model_Entities_VirtualFolderInfo__ctor_
+  commentId: Overload:MediaBrowser.Model.Entities.VirtualFolderInfo.#ctor
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.VirtualFolderInfo.VirtualFolderInfo
+  nameWithType: VirtualFolderInfo.VirtualFolderInfo
 - uid: MediaBrowser.Model.Entities.VirtualFolderInfo.CollectionType
   name: CollectionType
   href: reference/pluginapi/MediaBrowser.Model.Entities.VirtualFolderInfo.html#MediaBrowser_Model_Entities_VirtualFolderInfo_CollectionType
@@ -134514,6 +134937,25 @@ references:
   commentId: F:MediaBrowser.Model.MediaInfo.SubtitleCodec.SRT
   fullName: MediaBrowser.Model.MediaInfo.SubtitleCodec.SRT
   nameWithType: SubtitleCodec.SRT
+- uid: MediaBrowser.Model.MediaInfo.SubtitleFormatValidator
+  name: SubtitleFormatValidator
+  href: reference/pluginapi/MediaBrowser.Model.MediaInfo.SubtitleFormatValidator.html
+  commentId: T:MediaBrowser.Model.MediaInfo.SubtitleFormatValidator
+  fullName: MediaBrowser.Model.MediaInfo.SubtitleFormatValidator
+  nameWithType: SubtitleFormatValidator
+- uid: MediaBrowser.Model.MediaInfo.SubtitleFormatValidator.IsValid(System.String)
+  name: IsValid(String)
+  href: reference/pluginapi/MediaBrowser.Model.MediaInfo.SubtitleFormatValidator.html#MediaBrowser_Model_MediaInfo_SubtitleFormatValidator_IsValid_System_String_
+  commentId: M:MediaBrowser.Model.MediaInfo.SubtitleFormatValidator.IsValid(System.String)
+  fullName: MediaBrowser.Model.MediaInfo.SubtitleFormatValidator.IsValid(System.String)
+  nameWithType: SubtitleFormatValidator.IsValid(String)
+- uid: MediaBrowser.Model.MediaInfo.SubtitleFormatValidator.IsValid*
+  name: IsValid
+  href: reference/pluginapi/MediaBrowser.Model.MediaInfo.SubtitleFormatValidator.html#MediaBrowser_Model_MediaInfo_SubtitleFormatValidator_IsValid_
+  commentId: Overload:MediaBrowser.Model.MediaInfo.SubtitleFormatValidator.IsValid
+  isSpec: "True"
+  fullName: MediaBrowser.Model.MediaInfo.SubtitleFormatValidator.IsValid
+  nameWithType: SubtitleFormatValidator.IsValid
 - uid: MediaBrowser.Model.MediaInfo.SubtitleTrackEvent
   name: SubtitleTrackEvent
   href: reference/pluginapi/MediaBrowser.Model.MediaInfo.SubtitleTrackEvent.html

@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.11.0.9
+  version: 4.11.0.10
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -96913,6 +96913,7 @@ components:
           Format: Format
           Language: Language
           DidlMode: DidlMode
+          SubtitleContainer: SubtitleContainer
           Method: Encode
           Protocol: Protocol
         - AllowChunkedResponse: true
@@ -96920,6 +96921,7 @@ components:
           Format: Format
           Language: Language
           DidlMode: DidlMode
+          SubtitleContainer: SubtitleContainer
           Method: Encode
           Protocol: Protocol
         MaxAlbumArtHeight: 6
@@ -97336,6 +97338,8 @@ components:
           type: string
         Container:
           type: string
+        SubtitleContainer:
+          type: string
         AllowChunkedResponse:
           type: boolean
         Protocol:
@@ -97346,6 +97350,7 @@ components:
         Format: Format
         Language: Language
         DidlMode: DidlMode
+        SubtitleContainer: SubtitleContainer
         Method: Encode
         Protocol: Protocol
       x-internal-ref-name: MediaBrowser.Model.Dlna.SubtitleProfile
@@ -97431,6 +97436,10 @@ components:
             ParentId: ParentId
             AllowEmpty: true
             Description: Description
+            DescriptionSourceId: DescriptionSourceId
+            ExtensionButtons:
+            - null
+            - null
             DisplayName: DisplayName
             EditorType: Group
             Id: Id
@@ -97450,6 +97459,10 @@ components:
           - ParentId: ParentId
             AllowEmpty: true
             Description: Description
+            DescriptionSourceId: DescriptionSourceId
+            ExtensionButtons:
+            - null
+            - null
             DisplayName: DisplayName
             EditorType: null
             Id: Id
@@ -97460,6 +97473,10 @@ components:
           - ParentId: ParentId
             AllowEmpty: true
             Description: Description
+            DescriptionSourceId: DescriptionSourceId
+            ExtensionButtons:
+            - null
+            - null
             DisplayName: DisplayName
             EditorType: null
             Id: Id
@@ -97467,6 +97484,10 @@ components:
             IsReadOnly: true
             FeatureRequiresPremiere: true
             Name: Name
+          DescriptionSourceId: DescriptionSourceId
+          ExtensionButtons:
+          - null
+          - null
           DisplayName: DisplayName
           Id: Id
           IsAdvanced: true
@@ -97512,6 +97533,22 @@ components:
           type: boolean
         ParentId:
           type: string
+        ExtensionButtons:
+          type: array
+          description: "Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem`\
+            \ property naming this editor's own property) \\- rendered           \
+            \  inline at the end of this editor's own control (e.g. next to a dropdown\\\
+            /select) instead of             as a separate, standalone button\\/group\
+            \ elsewhere in the form."
+          items:
+            $ref: '#/components/schemas/Editors.EditorButtonItem'
+        DescriptionSourceId:
+          type: string
+          description: "The id of a string property (attached via `[IsDescriptionFor]`\
+            \            naming this editor's own property) whose live value is displayed\
+            \ as this editor's             description, refreshed dynamically whenever\
+            \ the value is re\\-pushed \\- in addition to (not             instead\
+            \ of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`."
       example:
         ParentId: ParentId
         AllowEmpty: true
@@ -97534,6 +97571,10 @@ components:
           ParentId: ParentId
           AllowEmpty: true
           Description: Description
+          DescriptionSourceId: DescriptionSourceId
+          ExtensionButtons:
+          - null
+          - null
           DisplayName: DisplayName
           EditorType: Group
           Id: Id
@@ -97553,6 +97594,10 @@ components:
         - ParentId: ParentId
           AllowEmpty: true
           Description: Description
+          DescriptionSourceId: DescriptionSourceId
+          ExtensionButtons:
+          - null
+          - null
           DisplayName: DisplayName
           EditorType: null
           Id: Id
@@ -97563,6 +97608,10 @@ components:
         - ParentId: ParentId
           AllowEmpty: true
           Description: Description
+          DescriptionSourceId: DescriptionSourceId
+          ExtensionButtons:
+          - null
+          - null
           DisplayName: DisplayName
           EditorType: null
           Id: Id
@@ -97570,6 +97619,10 @@ components:
           IsReadOnly: true
           FeatureRequiresPremiere: true
           Name: Name
+        DescriptionSourceId: DescriptionSourceId
+        ExtensionButtons:
+        - null
+        - null
         DisplayName: DisplayName
         Id: Id
         IsAdvanced: true
@@ -97664,10 +97717,30 @@ components:
           type: boolean
         ParentId:
           type: string
+        ExtensionButtons:
+          type: array
+          description: "Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem`\
+            \ property naming this editor's own property) \\- rendered           \
+            \  inline at the end of this editor's own control (e.g. next to a dropdown\\\
+            /select) instead of             as a separate, standalone button\\/group\
+            \ elsewhere in the form."
+          items:
+            $ref: '#/components/schemas/Editors.EditorButtonItem'
+        DescriptionSourceId:
+          type: string
+          description: "The id of a string property (attached via `[IsDescriptionFor]`\
+            \            naming this editor's own property) whose live value is displayed\
+            \ as this editor's             description, refreshed dynamically whenever\
+            \ the value is re\\-pushed \\- in addition to (not             instead\
+            \ of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`."
       example:
         ParentId: ParentId
         AllowEmpty: true
         Description: Description
+        DescriptionSourceId: DescriptionSourceId
+        ExtensionButtons:
+        - null
+        - null
         DisplayName: DisplayName
         EditorType: Group
         Id: Id
@@ -97723,10 +97796,30 @@ components:
           type: boolean
         ParentId:
           type: string
+        ExtensionButtons:
+          type: array
+          description: "Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem`\
+            \ property naming this editor's own property) \\- rendered           \
+            \  inline at the end of this editor's own control (e.g. next to a dropdown\\\
+            /select) instead of             as a separate, standalone button\\/group\
+            \ elsewhere in the form."
+          items:
+            $ref: '#/components/schemas/Editors.EditorButtonItem'
+        DescriptionSourceId:
+          type: string
+          description: "The id of a string property (attached via `[IsDescriptionFor]`\
+            \            naming this editor's own property) whose live value is displayed\
+            \ as this editor's             description, refreshed dynamically whenever\
+            \ the value is re\\-pushed \\- in addition to (not             instead\
+            \ of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`."
       example:
         ParentId: ParentId
         AllowEmpty: true
         Description: Description
+        DescriptionSourceId: DescriptionSourceId
+        ExtensionButtons:
+        - null
+        - null
         DisplayName: DisplayName
         EditorType: null
         Id: Id

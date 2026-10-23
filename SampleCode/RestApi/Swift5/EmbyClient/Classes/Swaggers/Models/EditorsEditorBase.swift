@@ -21,8 +21,12 @@ public struct EditorsEditorBase: Codable {
     public var _description: String?
     public var featureRequiresPremiere: Bool?
     public var parentId: String?
+    /** Buttons attached to this editor (via &#x60;[IsButtonFor]&#x60; on a&#x60;Emby.Web.GenericEdit.Elements.ButtonItem&#x60; property naming this editor&#x27;s own property) \\- rendered             inline at the end of this editor&#x27;s own control (e.g. next to a dropdown/select) instead of             as a separate, standalone button/group elsewhere in the form. */
+    public var extensionButtons: [EditorsEditorButtonItem]?
+    /** The id of a string property (attached via &#x60;[IsDescriptionFor]&#x60;            naming this editor&#x27;s own property) whose live value is displayed as this editor&#x27;s             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor&#x27;s own static &#x60;Emby.Web.GenericEdit.Editors.EditorBase.Description&#x60;. */
+    public var descriptionSourceId: String?
 
-    public init(editorType: CommonEditorTypes? = nil, name: String? = nil, _id: String? = nil, allowEmpty: Bool? = nil, isReadOnly: Bool? = nil, isAdvanced: Bool? = nil, displayName: String? = nil, _description: String? = nil, featureRequiresPremiere: Bool? = nil, parentId: String? = nil) {
+    public init(editorType: CommonEditorTypes? = nil, name: String? = nil, _id: String? = nil, allowEmpty: Bool? = nil, isReadOnly: Bool? = nil, isAdvanced: Bool? = nil, displayName: String? = nil, _description: String? = nil, featureRequiresPremiere: Bool? = nil, parentId: String? = nil, extensionButtons: [EditorsEditorButtonItem]? = nil, descriptionSourceId: String? = nil) {
         self.editorType = editorType
         self.name = name
         self._id = _id
@@ -33,6 +37,8 @@ public struct EditorsEditorBase: Codable {
         self._description = _description
         self.featureRequiresPremiere = featureRequiresPremiere
         self.parentId = parentId
+        self.extensionButtons = extensionButtons
+        self.descriptionSourceId = descriptionSourceId
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -46,6 +52,8 @@ public struct EditorsEditorBase: Codable {
         case _description = "Description"
         case featureRequiresPremiere = "FeatureRequiresPremiere"
         case parentId = "ParentId"
+        case extensionButtons = "ExtensionButtons"
+        case descriptionSourceId = "DescriptionSourceId"
     }
 
 }

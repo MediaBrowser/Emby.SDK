@@ -176,6 +176,136 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class EditableOptionsBase : EditableObjectBase, IEditableObject</code></pre>
   </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Emby_Web_GenericEdit_EditableOptionsBase_ApplyOptionValues_" data-uid="Emby.Web.GenericEdit.EditableOptionsBase.ApplyOptionValues*"></a>
+  <h4 id="Emby_Web_GenericEdit_EditableOptionsBase_ApplyOptionValues_Emby_Web_GenericEdit_OptionValues_PropertyOptionValues_" data-uid="Emby.Web.GenericEdit.EditableOptionsBase.ApplyOptionValues(Emby.Web.GenericEdit.OptionValues.PropertyOptionValues)">ApplyOptionValues(PropertyOptionValues)</h4>
+  <div class="markdown level1 summary"><p>Assigns previously collected values back onto this instance, which has to be
+constructed and initialized the same way the baseline they were collected against was.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertyOptionValues ApplyOptionValues(PropertyOptionValues optionValues)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.html">PropertyOptionValues</a></td>
+        <td><span class="parametername">optionValues</span></td>
+        <td><p>The values to apply.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.html">PropertyOptionValues</a></td>
+        <td><p>The entries which could not be applied - see
+<a class="xref" href="Emby.Web.GenericEdit.OptionValues.OptionValueManager.html#Emby_Web_GenericEdit_OptionValues_OptionValueManager_ApplyOptionValues_System_Object_Emby_Web_GenericEdit_OptionValues_PropertyOptionValues_">ApplyOptionValues(Object, PropertyOptionValues)</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Web_GenericEdit_EditableOptionsBase_GetOptionValues_" data-uid="Emby.Web.GenericEdit.EditableOptionsBase.GetOptionValues*"></a>
+  <h4 id="Emby_Web_GenericEdit_EditableOptionsBase_GetOptionValues" data-uid="Emby.Web.GenericEdit.EditableOptionsBase.GetOptionValues">GetOptionValues()</h4>
+  <div class="markdown level1 summary"><p>Gets those values of this instance which differ from a default-constructed instance of
+the same type, for persisting a configuration as only its deviations from the defaults.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertyOptionValues GetOptionValues()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.html">PropertyOptionValues</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Emby_Web_GenericEdit_EditableOptionsBase_GetOptionValues_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only applicable to types whose defaults are declared on the properties themselves.
+Types which receive defaults from an initialization step - the encoder and filter parameter
+classes, whose defaults depend on the codec or filter they are initialized with - have to use
+<a class="xref" href="Emby.Web.GenericEdit.EditableOptionsBase.html#Emby_Web_GenericEdit_EditableOptionsBase_GetOptionValues_Emby_Web_GenericEdit_EditableOptionsBase_">GetOptionValues(EditableOptionsBase)</a> with an identically initialized baseline. A
+bare instance would differ from the real defaults, and those differences would then be persisted
+as though the user had chosen them, which would make the defaults impossible to change later.</p>
+</div>
+  
+  
+  <a id="Emby_Web_GenericEdit_EditableOptionsBase_GetOptionValues_" data-uid="Emby.Web.GenericEdit.EditableOptionsBase.GetOptionValues*"></a>
+  <h4 id="Emby_Web_GenericEdit_EditableOptionsBase_GetOptionValues_Emby_Web_GenericEdit_EditableOptionsBase_" data-uid="Emby.Web.GenericEdit.EditableOptionsBase.GetOptionValues(Emby.Web.GenericEdit.EditableOptionsBase)">GetOptionValues(EditableOptionsBase)</h4>
+  <div class="markdown level1 summary"><p>Gets those values of this instance which differ from <code data-dev-comment-type="paramref" class="paramref">baselineOptions</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertyOptionValues GetOptionValues(EditableOptionsBase baselineOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.EditableOptionsBase.html">EditableOptionsBase</a></td>
+        <td><span class="parametername">baselineOptions</span></td>
+        <td><p>An instance of this same type, constructed and initialized the way
+this instance was but otherwise left untouched, so that only the user's own changes are
+collected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Web.GenericEdit.OptionValues.PropertyOptionValues.html">PropertyOptionValues</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Model.GenericEdit.IEditableObject.html">IEditableObject</a>

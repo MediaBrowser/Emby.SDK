@@ -57,6 +57,12 @@ namespace Emby.ApiClient.Model
         public string Container { get; set; }
 
         /// <summary>
+        /// Gets or Sets SubtitleContainer
+        /// </summary>
+        /// <value>The SubtitleContainer.</value>
+        public string SubtitleContainer { get; set; }
+
+        /// <summary>
         /// Gets or Sets AllowChunkedResponse
         /// </summary>
         /// <value>The AllowChunkedResponse.</value>
@@ -81,6 +87,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  DidlMode: ").Append(DidlMode).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Container: ").Append(Container).Append("\n");
+            sb.Append("  SubtitleContainer: ").Append(SubtitleContainer).Append("\n");
             sb.Append("  AllowChunkedResponse: ").Append(AllowChunkedResponse).Append("\n");
             sb.Append("  Protocol: ").Append(Protocol).Append("\n");
             sb.Append("}\n");
@@ -134,6 +141,11 @@ namespace Emby.ApiClient.Model
                     this.Container.Equals(input.Container))
                 ) && 
                 (
+                    this.SubtitleContainer == input.SubtitleContainer ||
+                    (this.SubtitleContainer != null &&
+                    this.SubtitleContainer.Equals(input.SubtitleContainer))
+                ) && 
+                (
                     this.AllowChunkedResponse == input.AllowChunkedResponse ||
                     (this.AllowChunkedResponse != null &&
                     this.AllowChunkedResponse.Equals(input.AllowChunkedResponse))
@@ -164,6 +176,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Language.GetHashCode();
                 if (this.Container != null)
                     hashCode = hashCode * 59 + this.Container.GetHashCode();
+                if (this.SubtitleContainer != null)
+                    hashCode = hashCode * 59 + this.SubtitleContainer.GetHashCode();
                 if (this.AllowChunkedResponse != null)
                     hashCode = hashCode * 59 + this.AllowChunkedResponse.GetHashCode();
                 if (this.Protocol != null)

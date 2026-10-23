@@ -77206,6 +77206,9 @@
         "Container": {
           "type": "string"
         },
+        "SubtitleContainer": {
+          "type": "string"
+        },
         "AllowChunkedResponse": {
           "type": "boolean"
         },
@@ -77336,6 +77339,17 @@
         },
         "ParentId": {
           "type": "string"
+        },
+        "ExtensionButtons": {
+          "description": "Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem` property naming this editor's own property) \\- rendered             inline at the end of this editor's own control (e.g. next to a dropdown\\/select) instead of             as a separate, standalone button\\/group elsewhere in the form.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Editors.EditorButtonItem"
+          }
+        },
+        "DescriptionSourceId": {
+          "description": "The id of a string property (attached via `[IsDescriptionFor]`            naming this editor's own property) whose live value is displayed as this editor's             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`.",
+          "type": "string"
         }
       },
       "x-internal-ref-name": "Emby.Web.GenericEdit.Editors.EditorRoot"
@@ -77445,6 +77459,17 @@
         },
         "ParentId": {
           "type": "string"
+        },
+        "ExtensionButtons": {
+          "description": "Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem` property naming this editor's own property) \\- rendered             inline at the end of this editor's own control (e.g. next to a dropdown\\/select) instead of             as a separate, standalone button\\/group elsewhere in the form.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Editors.EditorButtonItem"
+          }
+        },
+        "DescriptionSourceId": {
+          "description": "The id of a string property (attached via `[IsDescriptionFor]`            naming this editor's own property) whose live value is displayed as this editor's             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`.",
+          "type": "string"
         }
       },
       "x-internal-ref-name": "Emby.Web.GenericEdit.Editors.EditorButtonItem"
@@ -77506,6 +77531,17 @@
           "type": "boolean"
         },
         "ParentId": {
+          "type": "string"
+        },
+        "ExtensionButtons": {
+          "description": "Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem` property naming this editor's own property) \\- rendered             inline at the end of this editor's own control (e.g. next to a dropdown\\/select) instead of             as a separate, standalone button\\/group elsewhere in the form.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Editors.EditorButtonItem"
+          }
+        },
+        "DescriptionSourceId": {
+          "description": "The id of a string property (attached via `[IsDescriptionFor]`            naming this editor's own property) whose live value is displayed as this editor's             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`.",
           "type": "string"
         }
       },

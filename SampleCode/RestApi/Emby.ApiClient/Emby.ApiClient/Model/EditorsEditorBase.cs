@@ -87,6 +87,18 @@ namespace Emby.ApiClient.Model
         public string ParentId { get; set; }
 
         /// <summary>
+        /// Buttons attached to this editor (via `[IsButtonFor]` on a`Emby.Web.GenericEdit.Elements.ButtonItem` property naming this editor's own property) \\- rendered             inline at the end of this editor's own control (e.g. next to a dropdown/select) instead of             as a separate, standalone button/group elsewhere in the form.
+        /// </summary>
+        /// <value>The ExtensionButtons.</value>
+        public List<EditorsEditorButtonItem> ExtensionButtons { get; set; }
+
+        /// <summary>
+        /// The id of a string property (attached via `[IsDescriptionFor]`            naming this editor's own property) whose live value is displayed as this editor's             description, refreshed dynamically whenever the value is re\\-pushed \\- in addition to (not             instead of) this editor's own static `Emby.Web.GenericEdit.Editors.EditorBase.Description`.
+        /// </summary>
+        /// <value>The DescriptionSourceId.</value>
+        public string DescriptionSourceId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -104,6 +116,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  FeatureRequiresPremiere: ").Append(FeatureRequiresPremiere).Append("\n");
             sb.Append("  ParentId: ").Append(ParentId).Append("\n");
+            sb.Append("  ExtensionButtons: ").Append(ExtensionButtons).Append("\n");
+            sb.Append("  DescriptionSourceId: ").Append(DescriptionSourceId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -178,6 +192,17 @@ namespace Emby.ApiClient.Model
                     this.ParentId == input.ParentId ||
                     (this.ParentId != null &&
                     this.ParentId.Equals(input.ParentId))
+                ) && 
+                (
+                    this.ExtensionButtons == input.ExtensionButtons ||
+                    this.ExtensionButtons != null &&
+                    input.ExtensionButtons != null &&
+                    this.ExtensionButtons.SequenceEqual(input.ExtensionButtons)
+                ) && 
+                (
+                    this.DescriptionSourceId == input.DescriptionSourceId ||
+                    (this.DescriptionSourceId != null &&
+                    this.DescriptionSourceId.Equals(input.DescriptionSourceId))
                 );
         }
 
@@ -210,6 +235,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.FeatureRequiresPremiere.GetHashCode();
                 if (this.ParentId != null)
                     hashCode = hashCode * 59 + this.ParentId.GetHashCode();
+                if (this.ExtensionButtons != null)
+                    hashCode = hashCode * 59 + this.ExtensionButtons.GetHashCode();
+                if (this.DescriptionSourceId != null)
+                    hashCode = hashCode * 59 + this.DescriptionSourceId.GetHashCode();
                 return hashCode;
             }
         }

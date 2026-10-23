@@ -192,12 +192,12 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitleJob_" data-uid="MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitleJob_System_String_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Boolean_System_Collections_Generic_IDictionary_System_String_System_String__MediaBrowser_Model_Entities_MediaStream_System_String_System_Int64_System_Int64_System_Boolean_System_Boolean_MediaBrowser_Model_Dlna_EncodingContext_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob(System.String,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String},MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)">GetSubtitleJob(String, MediaProtocol, Boolean, IDictionary&lt;String, String&gt;, MediaStream, String, Int64, Int64, Boolean, Boolean, EncodingContext, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitleJob_MediaBrowser_Model_Dto_MediaSourceInfo_System_Boolean_MediaBrowser_Model_Entities_MediaStream_System_String_System_Int64_System_Int64_System_Boolean_System_Boolean_System_Boolean_MediaBrowser_Model_Dlna_EncodingContext_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob(MediaBrowser.Model.Dto.MediaSourceInfo,System.Boolean,MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,System.Boolean,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)">GetSubtitleJob(MediaSourceInfo, Boolean, MediaStream, String, Int64, Int64, Boolean, Boolean, Boolean, EncodingContext, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ISubtitleConversionJob&gt; GetSubtitleJob(string inputPath, MediaProtocol inputProtocol, bool isAudio, IDictionary&lt;string, string&gt; requestHeaders, MediaStream subtitleStream, string outputFormat, long startTimeTicks, long endTimeTicks, bool preserveOriginalTimestamps, bool enableChunkedResponse, EncodingContext encodingContext, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ISubtitleConversionJob&gt; GetSubtitleJob(MediaSourceInfo mediaSource, bool isAudio, MediaStream subtitleStream, string outputFormat, long startTimeTicks, long endTimeTicks, bool preserveOriginalTimestamps, bool shiftTimeStampsByContainerStartTime, bool enableChunkedResponse, EncodingContext encodingContext, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,23 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">inputPath</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.MediaInfo.MediaProtocol.html">MediaProtocol</a></td>
-        <td><span class="parametername">inputProtocol</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
+        <td><span class="parametername">mediaSource</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">isAudio</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><span class="parametername">requestHeaders</span></td>
         <td></td>
       </tr>
       <tr>
@@ -252,6 +242,11 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">preserveOriginalTimestamps</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">shiftTimeStampsByContainerStartTime</span></td>
         <td></td>
       </tr>
       <tr>
@@ -289,13 +284,13 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitles_" data-uid="MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitles*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitles_System_String_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Boolean_System_Collections_Generic_IDictionary_System_String_System_String__MediaBrowser_Model_Entities_MediaStream_System_String_System_Int64_System_Int64_System_Boolean_MediaBrowser_Model_Dlna_EncodingContext_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitles(System.String,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String},MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)">GetSubtitles(String, MediaProtocol, Boolean, IDictionary&lt;String, String&gt;, MediaStream, String, Int64, Int64, Boolean, EncodingContext, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitles_MediaBrowser_Model_Dto_MediaSourceInfo_System_Boolean_MediaBrowser_Model_Entities_MediaStream_System_String_System_Int64_System_Int64_System_Boolean_System_Boolean_MediaBrowser_Model_Dlna_EncodingContext_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitles(MediaBrowser.Model.Dto.MediaSourceInfo,System.Boolean,MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)">GetSubtitles(MediaSourceInfo, Boolean, MediaStream, String, Int64, Int64, Boolean, Boolean, EncodingContext, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Gets the subtitles.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;string&gt; GetSubtitles(string inputPath, MediaProtocol inputProtocol, bool isAudio, IDictionary&lt;string, string&gt; requestHeaders, MediaStream subtitleStream, string outputFormat, long startTimeTicks, long endTimeTicks, bool preserveOriginalTimestamps, EncodingContext encodingContext, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; GetSubtitles(MediaSourceInfo mediaSource, bool isAudio, MediaStream subtitleStream, string outputFormat, long startTimeTicks, long endTimeTicks, bool preserveOriginalTimestamps, bool shiftTimeStampsByContainerStartTime, EncodingContext encodingContext, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,23 +303,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">inputPath</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.MediaInfo.MediaProtocol.html">MediaProtocol</a></td>
-        <td><span class="parametername">inputProtocol</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
+        <td><span class="parametername">mediaSource</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">isAudio</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><span class="parametername">requestHeaders</span></td>
         <td></td>
       </tr>
       <tr>
@@ -350,6 +335,11 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">preserveOriginalTimestamps</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">shiftTimeStampsByContainerStartTime</span></td>
         <td></td>
       </tr>
       <tr>
