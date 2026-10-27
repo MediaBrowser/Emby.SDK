@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.11.0.10"
+    "version": "4.11.0.11"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -81145,12 +81145,6 @@
             "type": "string"
           }
         },
-        "ProfileAndLevelInformation": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ProfileLevelInformation"
-          }
-        },
         "Id": {
           "type": "string"
         },
@@ -81787,141 +81781,6 @@
       ],
       "type": "string",
       "x-internal-ref-name": "Emby.Media.Model.Enums.ColorFormats"
-    },
-    "ProfileLevelInformation": {
-      "description": "A class combining both `Emby.Media.Model.Types.ProfileInformation` and `Emby.Media.Model.Types.LevelInformation`.\r\n",
-      "type": "object",
-      "properties": {
-        "Profile": {
-          "$ref": "#/definitions/ProfileInformation"
-        },
-        "Level": {
-          "$ref": "#/definitions/LevelInformation"
-        }
-      },
-      "x-internal-ref-name": "Emby.Media.Model.Types.ProfileLevelInformation"
-    },
-    "ProfileInformation": {
-      "description": "Class for unified presentation of all information associated with a specific codec profile.\r\n",
-      "type": "object",
-      "properties": {
-        "ShortName": {
-          "description": "The enum member name of the profile.",
-          "type": "string"
-        },
-        "Description": {
-          "description": "The common name of the profile.",
-          "type": "string"
-        },
-        "Details": {
-          "description": "Detail information about the profile.",
-          "type": "string"
-        },
-        "Id": {
-          "description": "A unique identifier.",
-          "type": "string"
-        },
-        "BitDepths": {
-          "description": "The bit depths.",
-          "type": "array",
-          "items": {
-            "format": "int32",
-            "type": "integer"
-          }
-        }
-      },
-      "x-internal-ref-name": "Emby.Media.Model.Types.ProfileInformation"
-    },
-    "LevelInformation": {
-      "description": "Class for unified presentation of all information associated with a specific codec level.\r\n",
-      "type": "object",
-      "properties": {
-        "ShortName": {
-          "description": "The enum member name of the level.",
-          "type": "string"
-        },
-        "Description": {
-          "description": "The common name of the level.",
-          "type": "string"
-        },
-        "Ordinal": {
-          "format": "int32",
-          "description": "A value indicating the level's ranking relative to other levels.",
-          "type": "integer"
-        },
-        "MaxBitRate": {
-          "$ref": "#/definitions/BitRate"
-        },
-        "MaxBitRateDisplay": {
-          "description": "A display value of the `Emby.Media.Model.Types.LevelInformation.MaxBitRate` property.",
-          "type": "string"
-        },
-        "Id": {
-          "description": "A unique identifier.",
-          "type": "string"
-        },
-        "ResolutionRates": {
-          "description": "Examples for the maximum supported combinations of resolution and rate for this level.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ResolutionWithRate"
-          }
-        },
-        "ResolutionRateStrings": {
-          "description": "Examples for the maximum supported combinations of resolution and rate for this level as string values.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "ResolutionRatesDisplay": {
-          "description": "A single string from the `Emby.Media.Model.Types.LevelInformation.ResolutionRateStrings` list.",
-          "type": "string"
-        }
-      },
-      "x-internal-ref-name": "Emby.Media.Model.Types.LevelInformation"
-    },
-    "ResolutionWithRate": {
-      "description": "Struct representing a combination of video resolution and frame rate.\r\n\r\n\r\n`System.IEquatable`1`\r\n",
-      "type": "object",
-      "properties": {
-        "Width": {
-          "format": "int32",
-          "description": "The resolution width.",
-          "type": "integer"
-        },
-        "Height": {
-          "format": "int32",
-          "description": "The resolution height.",
-          "type": "integer"
-        },
-        "FrameRate": {
-          "format": "double",
-          "description": "The frame rate in frames\\/second (fps).",
-          "type": "number"
-        },
-        "Resolution": {
-          "$ref": "#/definitions/Resolution"
-        }
-      },
-      "x-internal-ref-name": "Emby.Media.Model.Types.ResolutionWithRate"
-    },
-    "Resolution": {
-      "description": "Struct representing a video resolution specified in X and Y dimension.\r\n\r\n\r\n`System.IComparable`\r\n\r\n\r\n`System.IEquatable`1`\r\n",
-      "type": "object",
-      "properties": {
-        "Width": {
-          "format": "int32",
-          "description": "The resolution width.",
-          "type": "integer"
-        },
-        "Height": {
-          "format": "int32",
-          "description": "The resolution height.",
-          "type": "integer"
-        }
-      },
-      "x-internal-ref-name": "Emby.Media.Model.Types.Resolution"
     },
     "CodecDirections": {
       "description": "Enum for indicating the processing direction of a codec.\r\n",

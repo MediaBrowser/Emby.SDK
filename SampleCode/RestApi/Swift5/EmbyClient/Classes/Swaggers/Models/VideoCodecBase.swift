@@ -24,7 +24,6 @@ public struct VideoCodecBase: Codable {
     public var maxBitRate: BitRate?
     public var supportedColorFormats: [ColorFormats]?
     public var supportedColorFormatStrings: [String]?
-    public var profileAndLevelInformation: [ProfileLevelInformation]?
     public var _id: String?
     public var direction: CodecDirections?
     public var name: String?
@@ -37,7 +36,7 @@ public struct VideoCodecBase: Codable {
     public var isEnabledByDefault: Bool?
     public var defaultPriority: Int?
 
-    public init(codecDeviceInfo: CommonInterfacesICodecDeviceInfo? = nil, codecKind: CodecKinds? = nil, mediaTypeName: String? = nil, videoMediaType: VideoMediaTypes? = nil, minWidth: Int? = nil, maxWidth: Int? = nil, minHeight: Int? = nil, maxHeight: Int? = nil, widthAlignment: Int? = nil, heightAlignment: Int? = nil, maxBitRate: BitRate? = nil, supportedColorFormats: [ColorFormats]? = nil, supportedColorFormatStrings: [String]? = nil, profileAndLevelInformation: [ProfileLevelInformation]? = nil, _id: String? = nil, direction: CodecDirections? = nil, name: String? = nil, _description: String? = nil, frameworkCodec: String? = nil, isHardwareCodec: Bool? = nil, secondaryFramework: SecondaryFrameworks? = nil, secondaryFrameworkCodec: String? = nil, maxInstanceCount: Int? = nil, isEnabledByDefault: Bool? = nil, defaultPriority: Int? = nil) {
+    public init(codecDeviceInfo: CommonInterfacesICodecDeviceInfo? = nil, codecKind: CodecKinds? = nil, mediaTypeName: String? = nil, videoMediaType: VideoMediaTypes? = nil, minWidth: Int? = nil, maxWidth: Int? = nil, minHeight: Int? = nil, maxHeight: Int? = nil, widthAlignment: Int? = nil, heightAlignment: Int? = nil, maxBitRate: BitRate? = nil, supportedColorFormats: [ColorFormats]? = nil, supportedColorFormatStrings: [String]? = nil, _id: String? = nil, direction: CodecDirections? = nil, name: String? = nil, _description: String? = nil, frameworkCodec: String? = nil, isHardwareCodec: Bool? = nil, secondaryFramework: SecondaryFrameworks? = nil, secondaryFrameworkCodec: String? = nil, maxInstanceCount: Int? = nil, isEnabledByDefault: Bool? = nil, defaultPriority: Int? = nil) {
         self.codecDeviceInfo = codecDeviceInfo
         self.codecKind = codecKind
         self.mediaTypeName = mediaTypeName
@@ -51,7 +50,6 @@ public struct VideoCodecBase: Codable {
         self.maxBitRate = maxBitRate
         self.supportedColorFormats = supportedColorFormats
         self.supportedColorFormatStrings = supportedColorFormatStrings
-        self.profileAndLevelInformation = profileAndLevelInformation
         self._id = _id
         self.direction = direction
         self.name = name
@@ -79,7 +77,6 @@ public struct VideoCodecBase: Codable {
         case maxBitRate = "MaxBitRate"
         case supportedColorFormats = "SupportedColorFormats"
         case supportedColorFormatStrings = "SupportedColorFormatStrings"
-        case profileAndLevelInformation = "ProfileAndLevelInformation"
         case _id = "Id"
         case direction = "Direction"
         case name = "Name"

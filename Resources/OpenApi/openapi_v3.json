@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.11.0.10"
+    "version": "4.11.0.11"
   },
   "servers": [
     {
@@ -114468,12 +114468,6 @@
               "type": "string"
             }
           },
-          "ProfileAndLevelInformation": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProfileLevelInformation"
-            }
-          },
           "Id": {
             "type": "string"
           },
@@ -115111,142 +115105,6 @@
         "type": "string",
         "description": "Enum listing color formats.\r\n\r\n\r\nThe enum member names are matching those that are used by ffmpeg. (execute 'ffmpeg \\-pix\\_fmts' to list them) Exception: Items that are starting with a number are prefixed with an underscore here. In ffmpeg code these are prefixed with 'AV\\_PIX\\_FMT\\_' and all\\-caps.\r\n",
         "x-internal-ref-name": "Emby.Media.Model.Enums.ColorFormats"
-      },
-      "ProfileLevelInformation": {
-        "type": "object",
-        "properties": {
-          "Profile": {
-            "$ref": "#/components/schemas/ProfileInformation"
-          },
-          "Level": {
-            "$ref": "#/components/schemas/LevelInformation"
-          }
-        },
-        "description": "A class combining both `Emby.Media.Model.Types.ProfileInformation` and `Emby.Media.Model.Types.LevelInformation`.\r\n",
-        "x-internal-ref-name": "Emby.Media.Model.Types.ProfileLevelInformation"
-      },
-      "ProfileInformation": {
-        "type": "object",
-        "properties": {
-          "ShortName": {
-            "type": "string",
-            "description": "The enum member name of the profile."
-          },
-          "Description": {
-            "type": "string",
-            "description": "The common name of the profile."
-          },
-          "Details": {
-            "type": "string",
-            "description": "Detail information about the profile."
-          },
-          "Id": {
-            "type": "string",
-            "description": "A unique identifier."
-          },
-          "BitDepths": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "description": "The bit depths."
-          }
-        },
-        "description": "Class for unified presentation of all information associated with a specific codec profile.\r\n",
-        "x-internal-ref-name": "Emby.Media.Model.Types.ProfileInformation"
-      },
-      "LevelInformation": {
-        "type": "object",
-        "properties": {
-          "ShortName": {
-            "type": "string",
-            "description": "The enum member name of the level."
-          },
-          "Description": {
-            "type": "string",
-            "description": "The common name of the level."
-          },
-          "Ordinal": {
-            "type": "integer",
-            "description": "A value indicating the level's ranking relative to other levels.",
-            "format": "int32",
-            "nullable": true
-          },
-          "MaxBitRate": {
-            "$ref": "#/components/schemas/BitRate"
-          },
-          "MaxBitRateDisplay": {
-            "type": "string",
-            "description": "A display value of the `Emby.Media.Model.Types.LevelInformation.MaxBitRate` property."
-          },
-          "Id": {
-            "type": "string",
-            "description": "A unique identifier."
-          },
-          "ResolutionRates": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ResolutionWithRate"
-            },
-            "description": "Examples for the maximum supported combinations of resolution and rate for this level."
-          },
-          "ResolutionRateStrings": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Examples for the maximum supported combinations of resolution and rate for this level as string values."
-          },
-          "ResolutionRatesDisplay": {
-            "type": "string",
-            "description": "A single string from the `Emby.Media.Model.Types.LevelInformation.ResolutionRateStrings` list."
-          }
-        },
-        "description": "Class for unified presentation of all information associated with a specific codec level.\r\n",
-        "x-internal-ref-name": "Emby.Media.Model.Types.LevelInformation"
-      },
-      "ResolutionWithRate": {
-        "type": "object",
-        "properties": {
-          "Width": {
-            "type": "integer",
-            "description": "The resolution width.",
-            "format": "int32"
-          },
-          "Height": {
-            "type": "integer",
-            "description": "The resolution height.",
-            "format": "int32"
-          },
-          "FrameRate": {
-            "type": "number",
-            "description": "The frame rate in frames\\/second (fps).",
-            "format": "double"
-          },
-          "Resolution": {
-            "$ref": "#/components/schemas/Resolution"
-          }
-        },
-        "description": "Struct representing a combination of video resolution and frame rate.\r\n\r\n\r\n`System.IEquatable`1`\r\n",
-        "x-internal-ref-name": "Emby.Media.Model.Types.ResolutionWithRate"
-      },
-      "Resolution": {
-        "type": "object",
-        "properties": {
-          "Width": {
-            "type": "integer",
-            "description": "The resolution width.",
-            "format": "int32"
-          },
-          "Height": {
-            "type": "integer",
-            "description": "The resolution height.",
-            "format": "int32"
-          }
-        },
-        "description": "Struct representing a video resolution specified in X and Y dimension.\r\n\r\n\r\n`System.IComparable`\r\n\r\n\r\n`System.IEquatable`1`\r\n",
-        "x-internal-ref-name": "Emby.Media.Model.Types.Resolution"
       },
       "CodecDirections": {
         "enum": [

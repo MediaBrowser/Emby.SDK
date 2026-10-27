@@ -15,14 +15,13 @@ import CodecDirections from './CodecDirections';
 import CodecKinds from './CodecKinds';
 import ColorFormats from './ColorFormats';
 import CommonInterfacesICodecDeviceInfo from './CommonInterfacesICodecDeviceInfo';
-import ProfileLevelInformation from './ProfileLevelInformation';
 import SecondaryFrameworks from './SecondaryFrameworks';
 import VideoMediaTypes from './VideoMediaTypes';
 
 /**
 * The VideoCodecBase model module.
 * @module model/VideoCodecBase
-* @version 4.11.0.10
+* @version 4.11.0.11
 */
 export default class VideoCodecBase {
     /**
@@ -87,9 +86,6 @@ export default class VideoCodecBase {
             }
             if (data.hasOwnProperty('SupportedColorFormatStrings')) {
                 obj['SupportedColorFormatStrings'] = ApiClient.convertToType(data['SupportedColorFormatStrings'], ['String']);
-            }
-            if (data.hasOwnProperty('ProfileAndLevelInformation')) {
-                obj['ProfileAndLevelInformation'] = ApiClient.convertToType(data['ProfileAndLevelInformation'], [ProfileLevelInformation]);
             }
             if (data.hasOwnProperty('Id')) {
                 obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
@@ -180,10 +176,6 @@ export default class VideoCodecBase {
     * @member {Array.<String>} SupportedColorFormatStrings
     */
     'SupportedColorFormatStrings' = undefined;
-    /**
-    * @member {Array.<module:model/ProfileLevelInformation>} ProfileAndLevelInformation
-    */
-    'ProfileAndLevelInformation' = undefined;
     /**
     * @member {String} Id
     */

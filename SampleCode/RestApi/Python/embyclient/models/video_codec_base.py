@@ -35,7 +35,6 @@ class VideoCodecBase(object):
         'max_bit_rate': 'BitRate',
         'supported_color_formats': 'list[ColorFormats]',
         'supported_color_format_strings': 'list[str]',
-        'profile_and_level_information': 'list[ProfileLevelInformation]',
         'id': 'str',
         'direction': 'CodecDirections',
         'name': 'str',
@@ -63,7 +62,6 @@ class VideoCodecBase(object):
         'max_bit_rate': 'MaxBitRate',
         'supported_color_formats': 'SupportedColorFormats',
         'supported_color_format_strings': 'SupportedColorFormatStrings',
-        'profile_and_level_information': 'ProfileAndLevelInformation',
         'id': 'Id',
         'direction': 'Direction',
         'name': 'Name',
@@ -77,7 +75,7 @@ class VideoCodecBase(object):
         'default_priority': 'DefaultPriority'
     }
 
-    def __init__(self, codec_device_info=None, codec_kind=None, media_type_name=None, video_media_type=None, min_width=None, max_width=None, min_height=None, max_height=None, width_alignment=None, height_alignment=None, max_bit_rate=None, supported_color_formats=None, supported_color_format_strings=None, profile_and_level_information=None, id=None, direction=None, name=None, description=None, framework_codec=None, is_hardware_codec=None, secondary_framework=None, secondary_framework_codec=None, max_instance_count=None, is_enabled_by_default=None, default_priority=None):  # noqa: E501
+    def __init__(self, codec_device_info=None, codec_kind=None, media_type_name=None, video_media_type=None, min_width=None, max_width=None, min_height=None, max_height=None, width_alignment=None, height_alignment=None, max_bit_rate=None, supported_color_formats=None, supported_color_format_strings=None, id=None, direction=None, name=None, description=None, framework_codec=None, is_hardware_codec=None, secondary_framework=None, secondary_framework_codec=None, max_instance_count=None, is_enabled_by_default=None, default_priority=None):  # noqa: E501
         """VideoCodecBase - a model defined in Swagger"""  # noqa: E501
         self._codec_device_info = None
         self._codec_kind = None
@@ -92,7 +90,6 @@ class VideoCodecBase(object):
         self._max_bit_rate = None
         self._supported_color_formats = None
         self._supported_color_format_strings = None
-        self._profile_and_level_information = None
         self._id = None
         self._direction = None
         self._name = None
@@ -131,8 +128,6 @@ class VideoCodecBase(object):
             self.supported_color_formats = supported_color_formats
         if supported_color_format_strings is not None:
             self.supported_color_format_strings = supported_color_format_strings
-        if profile_and_level_information is not None:
-            self.profile_and_level_information = profile_and_level_information
         if id is not None:
             self.id = id
         if direction is not None:
@@ -428,27 +423,6 @@ class VideoCodecBase(object):
         """
 
         self._supported_color_format_strings = supported_color_format_strings
-
-    @property
-    def profile_and_level_information(self):
-        """Gets the profile_and_level_information of this VideoCodecBase.  # noqa: E501
-
-
-        :return: The profile_and_level_information of this VideoCodecBase.  # noqa: E501
-        :rtype: list[ProfileLevelInformation]
-        """
-        return self._profile_and_level_information
-
-    @profile_and_level_information.setter
-    def profile_and_level_information(self, profile_and_level_information):
-        """Sets the profile_and_level_information of this VideoCodecBase.
-
-
-        :param profile_and_level_information: The profile_and_level_information of this VideoCodecBase.  # noqa: E501
-        :type: list[ProfileLevelInformation]
-        """
-
-        self._profile_and_level_information = profile_and_level_information
 
     @property
     def id(self):

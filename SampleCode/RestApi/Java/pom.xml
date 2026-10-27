@@ -5,7 +5,7 @@
   <artifactId>embyclient</artifactId>
   <packaging>jar</packaging>
   <name>embyclient</name>
-  <version>4.11.0.10</version>
+  <version>4.11.0.11</version>
   <url>https://dev.emby.media</url>
   <description>Swagger Java</description>
 
@@ -228,7 +228,7 @@
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <swagger-core-version>2.0.0</swagger-core-version>
     <okhttp-version>2.7.5</okhttp-version>
-    <gson-version>2.8.1</gson-version>
+    <gson-version>2.8.3</gson-version>
     <gson-fire-version>1.8.3</gson-fire-version>
     <maven-plugin-version>1.0.0</maven-plugin-version>
     <junit-version>4.13.1</junit-version>

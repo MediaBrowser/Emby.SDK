@@ -17,7 +17,6 @@ import embyclient.model.CodecDirections;
 import embyclient.model.CodecKinds;
 import embyclient.model.ColorFormats;
 import embyclient.model.CommonInterfacesICodecDeviceInfo;
-import embyclient.model.ProfileLevelInformation;
 import embyclient.model.SecondaryFrameworks;
 import embyclient.model.VideoMediaTypes;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -68,9 +67,6 @@ public class VideoCodecBase {
 
   @SerializedName("SupportedColorFormatStrings")
   private List<String> supportedColorFormatStrings = null;
-
-  @SerializedName("ProfileAndLevelInformation")
-  private List<ProfileLevelInformation> profileAndLevelInformation = null;
 
   @SerializedName("Id")
   private String id = null;
@@ -355,32 +351,6 @@ public class VideoCodecBase {
     this.supportedColorFormatStrings = supportedColorFormatStrings;
   }
 
-  public VideoCodecBase profileAndLevelInformation(List<ProfileLevelInformation> profileAndLevelInformation) {
-    this.profileAndLevelInformation = profileAndLevelInformation;
-    return this;
-  }
-
-  public VideoCodecBase addProfileAndLevelInformationItem(ProfileLevelInformation profileAndLevelInformationItem) {
-    if (this.profileAndLevelInformation == null) {
-      this.profileAndLevelInformation = new ArrayList<>();
-    }
-    this.profileAndLevelInformation.add(profileAndLevelInformationItem);
-    return this;
-  }
-
-   /**
-   * Get profileAndLevelInformation
-   * @return profileAndLevelInformation
-  **/
-  @Schema(description = "")
-  public List<ProfileLevelInformation> getProfileAndLevelInformation() {
-    return profileAndLevelInformation;
-  }
-
-  public void setProfileAndLevelInformation(List<ProfileLevelInformation> profileAndLevelInformation) {
-    this.profileAndLevelInformation = profileAndLevelInformation;
-  }
-
   public VideoCodecBase id(String id) {
     this.id = id;
     return this;
@@ -602,7 +572,6 @@ public class VideoCodecBase {
         Objects.equals(this.maxBitRate, videoCodecBase.maxBitRate) &&
         Objects.equals(this.supportedColorFormats, videoCodecBase.supportedColorFormats) &&
         Objects.equals(this.supportedColorFormatStrings, videoCodecBase.supportedColorFormatStrings) &&
-        Objects.equals(this.profileAndLevelInformation, videoCodecBase.profileAndLevelInformation) &&
         Objects.equals(this.id, videoCodecBase.id) &&
         Objects.equals(this.direction, videoCodecBase.direction) &&
         Objects.equals(this.name, videoCodecBase.name) &&
@@ -618,7 +587,7 @@ public class VideoCodecBase {
 
   @Override
   public int hashCode() {
-    return Objects.hash(codecDeviceInfo, codecKind, mediaTypeName, videoMediaType, minWidth, maxWidth, minHeight, maxHeight, widthAlignment, heightAlignment, maxBitRate, supportedColorFormats, supportedColorFormatStrings, profileAndLevelInformation, id, direction, name, description, frameworkCodec, isHardwareCodec, secondaryFramework, secondaryFrameworkCodec, maxInstanceCount, isEnabledByDefault, defaultPriority);
+    return Objects.hash(codecDeviceInfo, codecKind, mediaTypeName, videoMediaType, minWidth, maxWidth, minHeight, maxHeight, widthAlignment, heightAlignment, maxBitRate, supportedColorFormats, supportedColorFormatStrings, id, direction, name, description, frameworkCodec, isHardwareCodec, secondaryFramework, secondaryFrameworkCodec, maxInstanceCount, isEnabledByDefault, defaultPriority);
   }
 
 
@@ -640,7 +609,6 @@ public class VideoCodecBase {
     sb.append("    maxBitRate: ").append(toIndentedString(maxBitRate)).append("\n");
     sb.append("    supportedColorFormats: ").append(toIndentedString(supportedColorFormats)).append("\n");
     sb.append("    supportedColorFormatStrings: ").append(toIndentedString(supportedColorFormatStrings)).append("\n");
-    sb.append("    profileAndLevelInformation: ").append(toIndentedString(profileAndLevelInformation)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

@@ -105,12 +105,6 @@ namespace Emby.ApiClient.Model
         public List<string> SupportedColorFormatStrings { get; set; }
 
         /// <summary>
-        /// Gets or Sets ProfileAndLevelInformation
-        /// </summary>
-        /// <value>The ProfileAndLevelInformation.</value>
-        public List<ProfileLevelInformation> ProfileAndLevelInformation { get; set; }
-
-        /// <summary>
         /// Gets or Sets Id
         /// </summary>
         /// <value>The Id.</value>
@@ -197,7 +191,6 @@ namespace Emby.ApiClient.Model
             sb.Append("  MaxBitRate: ").Append(MaxBitRate).Append("\n");
             sb.Append("  SupportedColorFormats: ").Append(SupportedColorFormats).Append("\n");
             sb.Append("  SupportedColorFormatStrings: ").Append(SupportedColorFormatStrings).Append("\n");
-            sb.Append("  ProfileAndLevelInformation: ").Append(ProfileAndLevelInformation).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -302,12 +295,6 @@ namespace Emby.ApiClient.Model
                     this.SupportedColorFormatStrings.SequenceEqual(input.SupportedColorFormatStrings)
                 ) && 
                 (
-                    this.ProfileAndLevelInformation == input.ProfileAndLevelInformation ||
-                    this.ProfileAndLevelInformation != null &&
-                    input.ProfileAndLevelInformation != null &&
-                    this.ProfileAndLevelInformation.SequenceEqual(input.ProfileAndLevelInformation)
-                ) && 
-                (
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
@@ -399,8 +386,6 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.SupportedColorFormats.GetHashCode();
                 if (this.SupportedColorFormatStrings != null)
                     hashCode = hashCode * 59 + this.SupportedColorFormatStrings.GetHashCode();
-                if (this.ProfileAndLevelInformation != null)
-                    hashCode = hashCode * 59 + this.ProfileAndLevelInformation.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Direction != null)

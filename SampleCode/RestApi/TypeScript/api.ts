@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.11.0.10
+ * OpenAPI spec version: 4.11.0.11
  * 
  *
  * NOTE: This file is auto generated.
@@ -5243,67 +5243,6 @@ export interface ItemsQuery {
     IsRepeat?: boolean;
 }
 /**
- * Class for unified presentation of all information associated with a specific codec level.  
- * @export
- * @interface LevelInformation
- */
-export interface LevelInformation {
-    /**
-     * The enum member name of the level.
-     * @type {string}
-     * @memberof LevelInformation
-     */
-    ShortName?: string;
-    /**
-     * The common name of the level.
-     * @type {string}
-     * @memberof LevelInformation
-     */
-    Description?: string;
-    /**
-     * A value indicating the level's ranking relative to other levels.
-     * @type {number}
-     * @memberof LevelInformation
-     */
-    Ordinal?: number;
-    /**
-     * 
-     * @type {BitRate}
-     * @memberof LevelInformation
-     */
-    MaxBitRate?: BitRate;
-    /**
-     * A display value of the `Emby.Media.Model.Types.LevelInformation.MaxBitRate` property.
-     * @type {string}
-     * @memberof LevelInformation
-     */
-    MaxBitRateDisplay?: string;
-    /**
-     * A unique identifier.
-     * @type {string}
-     * @memberof LevelInformation
-     */
-    Id?: string;
-    /**
-     * Examples for the maximum supported combinations of resolution and rate for this level.
-     * @type {Array<ResolutionWithRate>}
-     * @memberof LevelInformation
-     */
-    ResolutionRates?: Array<ResolutionWithRate>;
-    /**
-     * Examples for the maximum supported combinations of resolution and rate for this level as string values.
-     * @type {Array<string>}
-     * @memberof LevelInformation
-     */
-    ResolutionRateStrings?: Array<string>;
-    /**
-     * A single string from the `Emby.Media.Model.Types.LevelInformation.ResolutionRateStrings` list.
-     * @type {string}
-     * @memberof LevelInformation
-     */
-    ResolutionRatesDisplay?: string;
-}
-/**
  * 
  * @export
  * @interface LibraryAddMediaPath
@@ -10095,62 +10034,6 @@ export enum ProfileConditionValue {
     IsExternalAudio = <any> 'IsExternalAudio'
 }
 /**
- * Class for unified presentation of all information associated with a specific codec profile.  
- * @export
- * @interface ProfileInformation
- */
-export interface ProfileInformation {
-    /**
-     * The enum member name of the profile.
-     * @type {string}
-     * @memberof ProfileInformation
-     */
-    ShortName?: string;
-    /**
-     * The common name of the profile.
-     * @type {string}
-     * @memberof ProfileInformation
-     */
-    Description?: string;
-    /**
-     * Detail information about the profile.
-     * @type {string}
-     * @memberof ProfileInformation
-     */
-    Details?: string;
-    /**
-     * A unique identifier.
-     * @type {string}
-     * @memberof ProfileInformation
-     */
-    Id?: string;
-    /**
-     * The bit depths.
-     * @type {Array<number>}
-     * @memberof ProfileInformation
-     */
-    BitDepths?: Array<number>;
-}
-/**
- * A class combining both `Emby.Media.Model.Types.ProfileInformation` and `Emby.Media.Model.Types.LevelInformation`.  
- * @export
- * @interface ProfileLevelInformation
- */
-export interface ProfileLevelInformation {
-    /**
-     * 
-     * @type {ProfileInformation}
-     * @memberof ProfileLevelInformation
-     */
-    Profile?: ProfileInformation;
-    /**
-     * 
-     * @type {LevelInformation}
-     * @memberof ProfileLevelInformation
-     */
-    Level?: LevelInformation;
-}
-/**
  * 
  * @export
  * @enum {string}
@@ -11331,56 +11214,6 @@ export enum RepeatMode {
     RepeatNone = <any> 'RepeatNone',
     RepeatAll = <any> 'RepeatAll',
     RepeatOne = <any> 'RepeatOne'
-}
-/**
- * Struct representing a video resolution specified in X and Y dimension.      `System.IComparable`      `System.IEquatable`1`  
- * @export
- * @interface Resolution
- */
-export interface Resolution {
-    /**
-     * The resolution width.
-     * @type {number}
-     * @memberof Resolution
-     */
-    Width?: number;
-    /**
-     * The resolution height.
-     * @type {number}
-     * @memberof Resolution
-     */
-    Height?: number;
-}
-/**
- * Struct representing a combination of video resolution and frame rate.      `System.IEquatable`1`  
- * @export
- * @interface ResolutionWithRate
- */
-export interface ResolutionWithRate {
-    /**
-     * The resolution width.
-     * @type {number}
-     * @memberof ResolutionWithRate
-     */
-    Width?: number;
-    /**
-     * The resolution height.
-     * @type {number}
-     * @memberof ResolutionWithRate
-     */
-    Height?: number;
-    /**
-     * The frame rate in frames/second (fps).
-     * @type {number}
-     * @memberof ResolutionWithRate
-     */
-    FrameRate?: number;
-    /**
-     * 
-     * @type {Resolution}
-     * @memberof ResolutionWithRate
-     */
-    Resolution?: Resolution;
 }
 /**
  * 
@@ -15747,12 +15580,6 @@ export interface VideoCodecBase {
      * @memberof VideoCodecBase
      */
     SupportedColorFormatStrings?: Array<string>;
-    /**
-     * 
-     * @type {Array<ProfileLevelInformation>}
-     * @memberof VideoCodecBase
-     */
-    ProfileAndLevelInformation?: Array<ProfileLevelInformation>;
     /**
      * 
      * @type {string}

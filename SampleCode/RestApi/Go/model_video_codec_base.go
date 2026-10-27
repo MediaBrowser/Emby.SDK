@@ -20,7 +20,6 @@ type VideoCodecBase struct {
 	MaxBitRate *BitRate `json:"MaxBitRate,omitempty"`
 	SupportedColorFormats []ColorFormats `json:"SupportedColorFormats,omitempty"`
 	SupportedColorFormatStrings []string `json:"SupportedColorFormatStrings,omitempty"`
-	ProfileAndLevelInformation []ProfileLevelInformation `json:"ProfileAndLevelInformation,omitempty"`
 	Id string `json:"Id,omitempty"`
 	Direction *CodecDirections `json:"Direction,omitempty"`
 	Name string `json:"Name,omitempty"`

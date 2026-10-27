@@ -192,7 +192,6 @@ from embyclient.models.item_file_info import ItemFileInfo
 from embyclient.models.item_file_type import ItemFileType
 from embyclient.models.item_lookup_info import ItemLookupInfo
 from embyclient.models.items_query import ItemsQuery
-from embyclient.models.level_information import LevelInformation
 from embyclient.models.library_add_media_path import LibraryAddMediaPath
 from embyclient.models.library_add_virtual_folder import LibraryAddVirtualFolder
 from embyclient.models.library_delete_info import LibraryDeleteInfo
@@ -290,8 +289,6 @@ from embyclient.models.process_run_metrics_process_statistics import ProcessRunM
 from embyclient.models.profile_condition import ProfileCondition
 from embyclient.models.profile_condition_type import ProfileConditionType
 from embyclient.models.profile_condition_value import ProfileConditionValue
-from embyclient.models.profile_information import ProfileInformation
-from embyclient.models.profile_level_information import ProfileLevelInformation
 from embyclient.models.progress_event import ProgressEvent
 from embyclient.models.provider_id_dictionary import ProviderIdDictionary
 from embyclient.models.proxy_header_mode import ProxyHeaderMode
@@ -331,8 +328,6 @@ from embyclient.models.remote_search_query_trailer_info import RemoteSearchQuery
 from embyclient.models.remote_search_result import RemoteSearchResult
 from embyclient.models.remote_subtitle_info import RemoteSubtitleInfo
 from embyclient.models.repeat_mode import RepeatMode
-from embyclient.models.resolution import Resolution
-from embyclient.models.resolution_with_rate import ResolutionWithRate
 from embyclient.models.response_profile import ResponseProfile
 from embyclient.models.roku_metadata_api_thumbnail_info import RokuMetadataApiThumbnailInfo
 from embyclient.models.roku_metadata_api_thumbnail_set_info import RokuMetadataApiThumbnailSetInfo

@@ -119,7 +119,6 @@ import ItemFileInfo from './model/ItemFileInfo';
 import ItemFileType from './model/ItemFileType';
 import ItemLookupInfo from './model/ItemLookupInfo';
 import ItemsQuery from './model/ItemsQuery';
-import LevelInformation from './model/LevelInformation';
 import LibraryAddMediaPath from './model/LibraryAddMediaPath';
 import LibraryAddVirtualFolder from './model/LibraryAddVirtualFolder';
 import LibraryDeleteInfo from './model/LibraryDeleteInfo';
@@ -217,8 +216,6 @@ import ProcessRunMetricsProcessStatistics from './model/ProcessRunMetricsProcess
 import ProfileCondition from './model/ProfileCondition';
 import ProfileConditionType from './model/ProfileConditionType';
 import ProfileConditionValue from './model/ProfileConditionValue';
-import ProfileInformation from './model/ProfileInformation';
-import ProfileLevelInformation from './model/ProfileLevelInformation';
 import ProgressEvent from './model/ProgressEvent';
 import ProviderIdDictionary from './model/ProviderIdDictionary';
 import ProxyHeaderMode from './model/ProxyHeaderMode';
@@ -258,8 +255,6 @@ import RemoteSearchQueryTrailerInfo from './model/RemoteSearchQueryTrailerInfo';
 import RemoteSearchResult from './model/RemoteSearchResult';
 import RemoteSubtitleInfo from './model/RemoteSubtitleInfo';
 import RepeatMode from './model/RepeatMode';
-import Resolution from './model/Resolution';
-import ResolutionWithRate from './model/ResolutionWithRate';
 import ResponseProfile from './model/ResponseProfile';
 import RokuMetadataApiThumbnailInfo from './model/RokuMetadataApiThumbnailInfo';
 import RokuMetadataApiThumbnailSetInfo from './model/RokuMetadataApiThumbnailSetInfo';
@@ -449,7 +444,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.11.0.10
+* @version 4.11.0.11
 */
 export {
     /**
@@ -1113,12 +1108,6 @@ export {
     ItemsQuery,
 
     /**
-     * The LevelInformation model constructor.
-     * @property {module:model/LevelInformation}
-     */
-    LevelInformation,
-
-    /**
      * The LibraryAddMediaPath model constructor.
      * @property {module:model/LibraryAddMediaPath}
      */
@@ -1701,18 +1690,6 @@ export {
     ProfileConditionValue,
 
     /**
-     * The ProfileInformation model constructor.
-     * @property {module:model/ProfileInformation}
-     */
-    ProfileInformation,
-
-    /**
-     * The ProfileLevelInformation model constructor.
-     * @property {module:model/ProfileLevelInformation}
-     */
-    ProfileLevelInformation,
-
-    /**
      * The ProgressEvent model constructor.
      * @property {module:model/ProgressEvent}
      */
@@ -1945,18 +1922,6 @@ export {
      * @property {module:model/RepeatMode}
      */
     RepeatMode,
-
-    /**
-     * The Resolution model constructor.
-     * @property {module:model/Resolution}
-     */
-    Resolution,
-
-    /**
-     * The ResolutionWithRate model constructor.
-     * @property {module:model/ResolutionWithRate}
-     */
-    ResolutionWithRate,
 
     /**
      * The ResponseProfile model constructor.

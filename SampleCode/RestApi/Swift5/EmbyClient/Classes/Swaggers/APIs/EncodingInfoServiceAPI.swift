@@ -81,13 +81,17 @@ open class EncodingInfoServiceAPI {
   "CodecKind" : "Audio",
   "MinHeight" : 2,
   "FrameworkCodec" : "FrameworkCodec",
+  "MediaTypeName" : "MediaTypeName",
   "Description" : "Description",
+  "SupportedColorFormatStrings" : [ "SupportedColorFormatStrings", "SupportedColorFormatStrings" ],
   "MaxBitRate" : {
     "bps" : 2,
     "kbps" : 4.145608029883936,
     "Mbps" : 7.386281948385884
   },
+  "MinWidth" : 5,
   "Direction" : "Encoder",
+  "IsHardwareCodec" : true,
   "Name" : "Name",
   "SecondaryFrameworkCodec" : "SecondaryFrameworkCodec",
   "CodecDeviceInfo" : {
@@ -119,100 +123,31 @@ open class EncodingInfoServiceAPI {
     "DevPath" : "DevPath",
     "DeviceName" : "DeviceName"
   },
-  "MaxWidth" : 5,
-  "ProfileAndLevelInformation" : [ {
-    "Level" : {
-      "ResolutionRatesDisplay" : "ResolutionRatesDisplay",
-      "Description" : "Description",
-      "MaxBitRateDisplay" : "MaxBitRateDisplay",
-      "Ordinal" : 1,
-      "ResolutionRates" : [ {
-        "FrameRate" : 7.457744773683766,
-        "Height" : 6,
-        "Width" : 1,
-        "Resolution" : {
-          "Height" : 4,
-          "Width" : 1
-        }
-      }, {
-        "FrameRate" : 7.457744773683766,
-        "Height" : 6,
-        "Width" : 1,
-        "Resolution" : {
-          "Height" : 4,
-          "Width" : 1
-        }
-      } ],
-      "ShortName" : "ShortName",
-      "Id" : "Id",
-      "ResolutionRateStrings" : [ "ResolutionRateStrings", "ResolutionRateStrings" ]
-    },
-    "Profile" : {
-      "Description" : "Description",
-      "Details" : "Details",
-      "ShortName" : "ShortName",
-      "Id" : "Id",
-      "BitDepths" : [ 1, 1 ]
-    }
-  }, {
-    "Level" : {
-      "ResolutionRatesDisplay" : "ResolutionRatesDisplay",
-      "Description" : "Description",
-      "MaxBitRateDisplay" : "MaxBitRateDisplay",
-      "Ordinal" : 1,
-      "ResolutionRates" : [ {
-        "FrameRate" : 7.457744773683766,
-        "Height" : 6,
-        "Width" : 1,
-        "Resolution" : {
-          "Height" : 4,
-          "Width" : 1
-        }
-      }, {
-        "FrameRate" : 7.457744773683766,
-        "Height" : 6,
-        "Width" : 1,
-        "Resolution" : {
-          "Height" : 4,
-          "Width" : 1
-        }
-      } ],
-      "ShortName" : "ShortName",
-      "Id" : "Id",
-      "ResolutionRateStrings" : [ "ResolutionRateStrings", "ResolutionRateStrings" ]
-    },
-    "Profile" : {
-      "Description" : "Description",
-      "Details" : "Details",
-      "ShortName" : "ShortName",
-      "Id" : "Id",
-      "BitDepths" : [ 1, 1 ]
-    }
-  } ],
-  "DefaultPriority" : 9,
-  "WidthAlignment" : 9,
-  "VideoMediaType" : "Unknown",
-  "MediaTypeName" : "MediaTypeName",
-  "SupportedColorFormatStrings" : [ "SupportedColorFormatStrings", "SupportedColorFormatStrings" ],
-  "MinWidth" : 5,
-  "IsHardwareCodec" : true,
   "HeightAlignment" : 3,
-  "MaxInstanceCount" : 5,
+  "MaxInstanceCount" : 1,
+  "MaxWidth" : 5,
+  "DefaultPriority" : 1,
+  "WidthAlignment" : 9,
   "SupportedColorFormats" : [ "Unknown", "Unknown" ],
   "MaxHeight" : 7,
   "Id" : "Id",
-  "IsEnabledByDefault" : true
+  "IsEnabledByDefault" : true,
+  "VideoMediaType" : "Unknown"
 }, {
   "CodecKind" : "Audio",
   "MinHeight" : 2,
   "FrameworkCodec" : "FrameworkCodec",
+  "MediaTypeName" : "MediaTypeName",
   "Description" : "Description",
+  "SupportedColorFormatStrings" : [ "SupportedColorFormatStrings", "SupportedColorFormatStrings" ],
   "MaxBitRate" : {
     "bps" : 2,
     "kbps" : 4.145608029883936,
     "Mbps" : 7.386281948385884
   },
+  "MinWidth" : 5,
   "Direction" : "Encoder",
+  "IsHardwareCodec" : true,
   "Name" : "Name",
   "SecondaryFrameworkCodec" : "SecondaryFrameworkCodec",
   "CodecDeviceInfo" : {
@@ -244,89 +179,16 @@ open class EncodingInfoServiceAPI {
     "DevPath" : "DevPath",
     "DeviceName" : "DeviceName"
   },
-  "MaxWidth" : 5,
-  "ProfileAndLevelInformation" : [ {
-    "Level" : {
-      "ResolutionRatesDisplay" : "ResolutionRatesDisplay",
-      "Description" : "Description",
-      "MaxBitRateDisplay" : "MaxBitRateDisplay",
-      "Ordinal" : 1,
-      "ResolutionRates" : [ {
-        "FrameRate" : 7.457744773683766,
-        "Height" : 6,
-        "Width" : 1,
-        "Resolution" : {
-          "Height" : 4,
-          "Width" : 1
-        }
-      }, {
-        "FrameRate" : 7.457744773683766,
-        "Height" : 6,
-        "Width" : 1,
-        "Resolution" : {
-          "Height" : 4,
-          "Width" : 1
-        }
-      } ],
-      "ShortName" : "ShortName",
-      "Id" : "Id",
-      "ResolutionRateStrings" : [ "ResolutionRateStrings", "ResolutionRateStrings" ]
-    },
-    "Profile" : {
-      "Description" : "Description",
-      "Details" : "Details",
-      "ShortName" : "ShortName",
-      "Id" : "Id",
-      "BitDepths" : [ 1, 1 ]
-    }
-  }, {
-    "Level" : {
-      "ResolutionRatesDisplay" : "ResolutionRatesDisplay",
-      "Description" : "Description",
-      "MaxBitRateDisplay" : "MaxBitRateDisplay",
-      "Ordinal" : 1,
-      "ResolutionRates" : [ {
-        "FrameRate" : 7.457744773683766,
-        "Height" : 6,
-        "Width" : 1,
-        "Resolution" : {
-          "Height" : 4,
-          "Width" : 1
-        }
-      }, {
-        "FrameRate" : 7.457744773683766,
-        "Height" : 6,
-        "Width" : 1,
-        "Resolution" : {
-          "Height" : 4,
-          "Width" : 1
-        }
-      } ],
-      "ShortName" : "ShortName",
-      "Id" : "Id",
-      "ResolutionRateStrings" : [ "ResolutionRateStrings", "ResolutionRateStrings" ]
-    },
-    "Profile" : {
-      "Description" : "Description",
-      "Details" : "Details",
-      "ShortName" : "ShortName",
-      "Id" : "Id",
-      "BitDepths" : [ 1, 1 ]
-    }
-  } ],
-  "DefaultPriority" : 9,
-  "WidthAlignment" : 9,
-  "VideoMediaType" : "Unknown",
-  "MediaTypeName" : "MediaTypeName",
-  "SupportedColorFormatStrings" : [ "SupportedColorFormatStrings", "SupportedColorFormatStrings" ],
-  "MinWidth" : 5,
-  "IsHardwareCodec" : true,
   "HeightAlignment" : 3,
-  "MaxInstanceCount" : 5,
+  "MaxInstanceCount" : 1,
+  "MaxWidth" : 5,
+  "DefaultPriority" : 1,
+  "WidthAlignment" : 9,
   "SupportedColorFormats" : [ "Unknown", "Unknown" ],
   "MaxHeight" : 7,
   "Id" : "Id",
-  "IsEnabledByDefault" : true
+  "IsEnabledByDefault" : true,
+  "VideoMediaType" : "Unknown"
 } ]}]
 
      - returns: RequestBuilder<[VideoCodecBase]> 

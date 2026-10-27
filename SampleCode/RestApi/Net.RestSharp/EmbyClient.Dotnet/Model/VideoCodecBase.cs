@@ -39,7 +39,6 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="maxBitRate">maxBitRate.</param>
         /// <param name="supportedColorFormats">supportedColorFormats.</param>
         /// <param name="supportedColorFormatStrings">supportedColorFormatStrings.</param>
-        /// <param name="profileAndLevelInformation">profileAndLevelInformation.</param>
         /// <param name="id">id.</param>
         /// <param name="direction">direction.</param>
         /// <param name="name">name.</param>
@@ -51,7 +50,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="maxInstanceCount">maxInstanceCount.</param>
         /// <param name="isEnabledByDefault">isEnabledByDefault.</param>
         /// <param name="defaultPriority">defaultPriority.</param>
-        public VideoCodecBase(CommonInterfacesICodecDeviceInfo codecDeviceInfo = default(CommonInterfacesICodecDeviceInfo), CodecKinds codecKind = default(CodecKinds), string mediaTypeName = default(string), VideoMediaTypes videoMediaType = default(VideoMediaTypes), int? minWidth = default(int?), int? maxWidth = default(int?), int? minHeight = default(int?), int? maxHeight = default(int?), int? widthAlignment = default(int?), int? heightAlignment = default(int?), BitRate maxBitRate = default(BitRate), List<ColorFormats> supportedColorFormats = default(List<ColorFormats>), List<string> supportedColorFormatStrings = default(List<string>), List<ProfileLevelInformation> profileAndLevelInformation = default(List<ProfileLevelInformation>), string id = default(string), CodecDirections direction = default(CodecDirections), string name = default(string), string description = default(string), string frameworkCodec = default(string), bool? isHardwareCodec = default(bool?), SecondaryFrameworks secondaryFramework = default(SecondaryFrameworks), string secondaryFrameworkCodec = default(string), int? maxInstanceCount = default(int?), bool? isEnabledByDefault = default(bool?), int? defaultPriority = default(int?))
+        public VideoCodecBase(CommonInterfacesICodecDeviceInfo codecDeviceInfo = default(CommonInterfacesICodecDeviceInfo), CodecKinds codecKind = default(CodecKinds), string mediaTypeName = default(string), VideoMediaTypes videoMediaType = default(VideoMediaTypes), int? minWidth = default(int?), int? maxWidth = default(int?), int? minHeight = default(int?), int? maxHeight = default(int?), int? widthAlignment = default(int?), int? heightAlignment = default(int?), BitRate maxBitRate = default(BitRate), List<ColorFormats> supportedColorFormats = default(List<ColorFormats>), List<string> supportedColorFormatStrings = default(List<string>), string id = default(string), CodecDirections direction = default(CodecDirections), string name = default(string), string description = default(string), string frameworkCodec = default(string), bool? isHardwareCodec = default(bool?), SecondaryFrameworks secondaryFramework = default(SecondaryFrameworks), string secondaryFrameworkCodec = default(string), int? maxInstanceCount = default(int?), bool? isEnabledByDefault = default(bool?), int? defaultPriority = default(int?))
         {
             this.CodecDeviceInfo = codecDeviceInfo;
             this.CodecKind = codecKind;
@@ -66,7 +65,6 @@ namespace EmbyClient.Dotnet.Model
             this.MaxBitRate = maxBitRate;
             this.SupportedColorFormats = supportedColorFormats;
             this.SupportedColorFormatStrings = supportedColorFormatStrings;
-            this.ProfileAndLevelInformation = profileAndLevelInformation;
             this.Id = id;
             this.Direction = direction;
             this.Name = name;
@@ -159,12 +157,6 @@ namespace EmbyClient.Dotnet.Model
         public List<string> SupportedColorFormatStrings { get; set; }
 
         /// <summary>
-        /// Gets or Sets ProfileAndLevelInformation
-        /// </summary>
-        [DataMember(Name="ProfileAndLevelInformation", EmitDefaultValue=false)]
-        public List<ProfileLevelInformation> ProfileAndLevelInformation { get; set; }
-
-        /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="Id", EmitDefaultValue=false)]
@@ -251,7 +243,6 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  MaxBitRate: ").Append(MaxBitRate).Append("\n");
             sb.Append("  SupportedColorFormats: ").Append(SupportedColorFormats).Append("\n");
             sb.Append("  SupportedColorFormatStrings: ").Append(SupportedColorFormatStrings).Append("\n");
-            sb.Append("  ProfileAndLevelInformation: ").Append(ProfileAndLevelInformation).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -365,12 +356,6 @@ namespace EmbyClient.Dotnet.Model
                     this.SupportedColorFormatStrings.SequenceEqual(input.SupportedColorFormatStrings)
                 ) && 
                 (
-                    this.ProfileAndLevelInformation == input.ProfileAndLevelInformation ||
-                    this.ProfileAndLevelInformation != null &&
-                    input.ProfileAndLevelInformation != null &&
-                    this.ProfileAndLevelInformation.SequenceEqual(input.ProfileAndLevelInformation)
-                ) && 
-                (
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
@@ -462,8 +447,6 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.SupportedColorFormats.GetHashCode();
                 if (this.SupportedColorFormatStrings != null)
                     hashCode = hashCode * 59 + this.SupportedColorFormatStrings.GetHashCode();
-                if (this.ProfileAndLevelInformation != null)
-                    hashCode = hashCode * 59 + this.ProfileAndLevelInformation.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Direction != null)

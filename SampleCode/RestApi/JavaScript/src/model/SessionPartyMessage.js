@@ -15,7 +15,7 @@ import UserDto from './UserDto';
 /**
 * The SessionPartyMessage model module.
 * @module model/SessionPartyMessage
-* @version 4.11.0.10
+* @version 4.11.0.11
 */
 export default class SessionPartyMessage {
     /**

@@ -16,7 +16,7 @@ import ConnectUserLinkResult from '../model/ConnectUserLinkResult';
 /**
 * ConnectService service.
 * @module api/ConnectServiceApi
-* @version 4.11.0.10
+* @version 4.11.0.11
 */
 export default class ConnectServiceApi {
 

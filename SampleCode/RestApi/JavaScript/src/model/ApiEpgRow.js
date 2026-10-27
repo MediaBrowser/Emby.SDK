@@ -15,7 +15,7 @@ import BaseItemDto from './BaseItemDto';
 /**
 * The ApiEpgRow model module.
 * @module model/ApiEpgRow
-* @version 4.11.0.10
+* @version 4.11.0.11
 */
 export default class ApiEpgRow {
     /**

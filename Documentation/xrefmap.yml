@@ -8156,6 +8156,60 @@ references:
   commentId: F:Emby.Media.Model.Enums.HevcLevels.HevcLevel62
   fullName: Emby.Media.Model.Enums.HevcLevels.HevcLevel62
   nameWithType: HevcLevels.HevcLevel62
+- uid: Emby.Media.Model.Enums.HevcLevelsHigh
+  name: HevcLevelsHigh
+  href: reference/pluginapi/Emby.Media.Model.Enums.HevcLevelsHigh.html
+  commentId: T:Emby.Media.Model.Enums.HevcLevelsHigh
+  fullName: Emby.Media.Model.Enums.HevcLevelsHigh
+  nameWithType: HevcLevelsHigh
+- uid: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel4
+  name: HevcLevel4
+  href: reference/pluginapi/Emby.Media.Model.Enums.HevcLevelsHigh.html#Emby_Media_Model_Enums_HevcLevelsHigh_HevcLevel4
+  commentId: F:Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel4
+  fullName: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel4
+  nameWithType: HevcLevelsHigh.HevcLevel4
+- uid: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel41
+  name: HevcLevel41
+  href: reference/pluginapi/Emby.Media.Model.Enums.HevcLevelsHigh.html#Emby_Media_Model_Enums_HevcLevelsHigh_HevcLevel41
+  commentId: F:Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel41
+  fullName: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel41
+  nameWithType: HevcLevelsHigh.HevcLevel41
+- uid: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel5
+  name: HevcLevel5
+  href: reference/pluginapi/Emby.Media.Model.Enums.HevcLevelsHigh.html#Emby_Media_Model_Enums_HevcLevelsHigh_HevcLevel5
+  commentId: F:Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel5
+  fullName: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel5
+  nameWithType: HevcLevelsHigh.HevcLevel5
+- uid: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel51
+  name: HevcLevel51
+  href: reference/pluginapi/Emby.Media.Model.Enums.HevcLevelsHigh.html#Emby_Media_Model_Enums_HevcLevelsHigh_HevcLevel51
+  commentId: F:Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel51
+  fullName: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel51
+  nameWithType: HevcLevelsHigh.HevcLevel51
+- uid: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel52
+  name: HevcLevel52
+  href: reference/pluginapi/Emby.Media.Model.Enums.HevcLevelsHigh.html#Emby_Media_Model_Enums_HevcLevelsHigh_HevcLevel52
+  commentId: F:Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel52
+  fullName: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel52
+  nameWithType: HevcLevelsHigh.HevcLevel52
+- uid: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel6
+  name: HevcLevel6
+  href: reference/pluginapi/Emby.Media.Model.Enums.HevcLevelsHigh.html#Emby_Media_Model_Enums_HevcLevelsHigh_HevcLevel6
+  commentId: F:Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel6
+  fullName: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel6
+  nameWithType: HevcLevelsHigh.HevcLevel6
+- uid: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel61
+  name: HevcLevel61
+  href: reference/pluginapi/Emby.Media.Model.Enums.HevcLevelsHigh.html#Emby_Media_Model_Enums_HevcLevelsHigh_HevcLevel61
+  commentId: F:Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel61
+  fullName: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel61
+  nameWithType: HevcLevelsHigh.HevcLevel61
+- uid: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel62
+  name: HevcLevel62
+  href: reference/pluginapi/Emby.Media.Model.Enums.HevcLevelsHigh.html#Emby_Media_Model_Enums_HevcLevelsHigh_HevcLevel62
+  commentId: F:Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel62
+  fullName: Emby.Media.Model.Enums.HevcLevelsHigh.HevcLevel62
+  nameWithType: HevcLevelsHigh.HevcLevel62
 - uid: Emby.Media.Model.Enums.HevcPresets
   name: HevcPresets
   href: reference/pluginapi/Emby.Media.Model.Enums.HevcPresets.html
@@ -12541,6 +12595,19 @@ references:
   isSpec: "True"
   fullName: Emby.Media.Model.ProbeModel.ProbeFrame.sample_fmt
   nameWithType: ProbeFrame.sample_fmt
+- uid: Emby.Media.Model.ProbeModel.ProbeFrame.side_data_list
+  name: side_data_list
+  href: reference/pluginapi/Emby.Media.Model.ProbeModel.ProbeFrame.html#Emby_Media_Model_ProbeModel_ProbeFrame_side_data_list
+  commentId: P:Emby.Media.Model.ProbeModel.ProbeFrame.side_data_list
+  fullName: Emby.Media.Model.ProbeModel.ProbeFrame.side_data_list
+  nameWithType: ProbeFrame.side_data_list
+- uid: Emby.Media.Model.ProbeModel.ProbeFrame.side_data_list*
+  name: side_data_list
+  href: reference/pluginapi/Emby.Media.Model.ProbeModel.ProbeFrame.html#Emby_Media_Model_ProbeModel_ProbeFrame_side_data_list_
+  commentId: Overload:Emby.Media.Model.ProbeModel.ProbeFrame.side_data_list
+  isSpec: "True"
+  fullName: Emby.Media.Model.ProbeModel.ProbeFrame.side_data_list
+  nameWithType: ProbeFrame.side_data_list
 - uid: Emby.Media.Model.ProbeModel.ProbeFrame.stream_index
   name: stream_index
   href: reference/pluginapi/Emby.Media.Model.ProbeModel.ProbeFrame.html#Emby_Media_Model_ProbeModel_ProbeFrame_stream_index
@@ -13974,6 +14041,18 @@ references:
   commentId: F:Emby.Media.Model.ProbeModel.SideData.ProbeSideDataDovi.SideDataTypeName
   fullName: Emby.Media.Model.ProbeModel.SideData.ProbeSideDataDovi.SideDataTypeName
   nameWithType: ProbeSideDataDovi.SideDataTypeName
+- uid: Emby.Media.Model.ProbeModel.SideData.ProbeSideDataHdr10Plus
+  name: ProbeSideDataHdr10Plus
+  href: reference/pluginapi/Emby.Media.Model.ProbeModel.SideData.ProbeSideDataHdr10Plus.html
+  commentId: T:Emby.Media.Model.ProbeModel.SideData.ProbeSideDataHdr10Plus
+  fullName: Emby.Media.Model.ProbeModel.SideData.ProbeSideDataHdr10Plus
+  nameWithType: ProbeSideDataHdr10Plus
+- uid: Emby.Media.Model.ProbeModel.SideData.ProbeSideDataHdr10Plus.SideDataTypeName
+  name: SideDataTypeName
+  href: reference/pluginapi/Emby.Media.Model.ProbeModel.SideData.ProbeSideDataHdr10Plus.html#Emby_Media_Model_ProbeModel_SideData_ProbeSideDataHdr10Plus_SideDataTypeName
+  commentId: F:Emby.Media.Model.ProbeModel.SideData.ProbeSideDataHdr10Plus.SideDataTypeName
+  fullName: Emby.Media.Model.ProbeModel.SideData.ProbeSideDataHdr10Plus.SideDataTypeName
+  nameWithType: ProbeSideDataHdr10Plus.SideDataTypeName
 - uid: Emby.Media.Model.ProbeModel.SideData.ProbeSideDataMateringDisplay
   name: ProbeSideDataMateringDisplay
   href: reference/pluginapi/Emby.Media.Model.ProbeModel.SideData.ProbeSideDataMateringDisplay.html
@@ -16606,6 +16685,53 @@ references:
   isSpec: "True"
   fullName: Emby.Media.Model.Types.H263ProfileWithLevelList.H263ProfileWithLevelList
   nameWithType: H263ProfileWithLevelList.H263ProfileWithLevelList
+- uid: Emby.Media.Model.Types.HevcHighProfileWithLevel
+  name: HevcHighProfileWithLevel
+  href: reference/pluginapi/Emby.Media.Model.Types.HevcHighProfileWithLevel.html
+  commentId: T:Emby.Media.Model.Types.HevcHighProfileWithLevel
+  fullName: Emby.Media.Model.Types.HevcHighProfileWithLevel
+  nameWithType: HevcHighProfileWithLevel
+- uid: Emby.Media.Model.Types.HevcHighProfileWithLevel.#ctor(Emby.Media.Model.Enums.HevcProfiles,Emby.Media.Model.Enums.HevcLevelsHigh)
+  name: HevcHighProfileWithLevel(HevcProfiles, HevcLevelsHigh)
+  href: reference/pluginapi/Emby.Media.Model.Types.HevcHighProfileWithLevel.html#Emby_Media_Model_Types_HevcHighProfileWithLevel__ctor_Emby_Media_Model_Enums_HevcProfiles_Emby_Media_Model_Enums_HevcLevelsHigh_
+  commentId: M:Emby.Media.Model.Types.HevcHighProfileWithLevel.#ctor(Emby.Media.Model.Enums.HevcProfiles,Emby.Media.Model.Enums.HevcLevelsHigh)
+  fullName: Emby.Media.Model.Types.HevcHighProfileWithLevel.HevcHighProfileWithLevel(Emby.Media.Model.Enums.HevcProfiles, Emby.Media.Model.Enums.HevcLevelsHigh)
+  nameWithType: HevcHighProfileWithLevel.HevcHighProfileWithLevel(HevcProfiles, HevcLevelsHigh)
+- uid: Emby.Media.Model.Types.HevcHighProfileWithLevel.#ctor*
+  name: HevcHighProfileWithLevel
+  href: reference/pluginapi/Emby.Media.Model.Types.HevcHighProfileWithLevel.html#Emby_Media_Model_Types_HevcHighProfileWithLevel__ctor_
+  commentId: Overload:Emby.Media.Model.Types.HevcHighProfileWithLevel.#ctor
+  isSpec: "True"
+  fullName: Emby.Media.Model.Types.HevcHighProfileWithLevel.HevcHighProfileWithLevel
+  nameWithType: HevcHighProfileWithLevel.HevcHighProfileWithLevel
+- uid: Emby.Media.Model.Types.HevcHighProfileWithLevelList
+  name: HevcHighProfileWithLevelList
+  href: reference/pluginapi/Emby.Media.Model.Types.HevcHighProfileWithLevelList.html
+  commentId: T:Emby.Media.Model.Types.HevcHighProfileWithLevelList
+  fullName: Emby.Media.Model.Types.HevcHighProfileWithLevelList
+  nameWithType: HevcHighProfileWithLevelList
+- uid: Emby.Media.Model.Types.HevcHighProfileWithLevelList.#ctor
+  name: HevcHighProfileWithLevelList()
+  href: reference/pluginapi/Emby.Media.Model.Types.HevcHighProfileWithLevelList.html#Emby_Media_Model_Types_HevcHighProfileWithLevelList__ctor
+  commentId: M:Emby.Media.Model.Types.HevcHighProfileWithLevelList.#ctor
+  fullName: Emby.Media.Model.Types.HevcHighProfileWithLevelList.HevcHighProfileWithLevelList()
+  nameWithType: HevcHighProfileWithLevelList.HevcHighProfileWithLevelList()
+- uid: Emby.Media.Model.Types.HevcHighProfileWithLevelList.#ctor(System.Collections.Generic.IEnumerable{Emby.Media.Model.Types.HevcHighProfileWithLevel})
+  name: HevcHighProfileWithLevelList(IEnumerable<HevcHighProfileWithLevel>)
+  href: reference/pluginapi/Emby.Media.Model.Types.HevcHighProfileWithLevelList.html#Emby_Media_Model_Types_HevcHighProfileWithLevelList__ctor_System_Collections_Generic_IEnumerable_Emby_Media_Model_Types_HevcHighProfileWithLevel__
+  commentId: M:Emby.Media.Model.Types.HevcHighProfileWithLevelList.#ctor(System.Collections.Generic.IEnumerable{Emby.Media.Model.Types.HevcHighProfileWithLevel})
+  name.vb: HevcHighProfileWithLevelList(IEnumerable(Of HevcHighProfileWithLevel))
+  fullName: Emby.Media.Model.Types.HevcHighProfileWithLevelList.HevcHighProfileWithLevelList(System.Collections.Generic.IEnumerable<Emby.Media.Model.Types.HevcHighProfileWithLevel>)
+  fullName.vb: Emby.Media.Model.Types.HevcHighProfileWithLevelList.HevcHighProfileWithLevelList(System.Collections.Generic.IEnumerable(Of Emby.Media.Model.Types.HevcHighProfileWithLevel))
+  nameWithType: HevcHighProfileWithLevelList.HevcHighProfileWithLevelList(IEnumerable<HevcHighProfileWithLevel>)
+  nameWithType.vb: HevcHighProfileWithLevelList.HevcHighProfileWithLevelList(IEnumerable(Of HevcHighProfileWithLevel))
+- uid: Emby.Media.Model.Types.HevcHighProfileWithLevelList.#ctor*
+  name: HevcHighProfileWithLevelList
+  href: reference/pluginapi/Emby.Media.Model.Types.HevcHighProfileWithLevelList.html#Emby_Media_Model_Types_HevcHighProfileWithLevelList__ctor_
+  commentId: Overload:Emby.Media.Model.Types.HevcHighProfileWithLevelList.#ctor
+  isSpec: "True"
+  fullName: Emby.Media.Model.Types.HevcHighProfileWithLevelList.HevcHighProfileWithLevelList
+  nameWithType: HevcHighProfileWithLevelList.HevcHighProfileWithLevelList
 - uid: Emby.Media.Model.Types.HevcProfileWithLevel
   name: HevcProfileWithLevel
   href: reference/pluginapi/Emby.Media.Model.Types.HevcProfileWithLevel.html
