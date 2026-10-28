@@ -29,6 +29,7 @@ class UIViewInfo(object):
         'plugin_id': 'str',
         'view_type': 'EnumsUIViewType',
         'show_dialog_full_screen': 'bool',
+        'dialog_size': 'EnumsUiDialogSize',
         'show_reset_to_defaults': 'bool',
         'is_in_sequence': 'bool',
         'redirect_view_url': 'str',
@@ -46,6 +47,7 @@ class UIViewInfo(object):
         'plugin_id': 'PluginId',
         'view_type': 'ViewType',
         'show_dialog_full_screen': 'ShowDialogFullScreen',
+        'dialog_size': 'DialogSize',
         'show_reset_to_defaults': 'ShowResetToDefaults',
         'is_in_sequence': 'IsInSequence',
         'redirect_view_url': 'RedirectViewUrl',
@@ -55,7 +57,7 @@ class UIViewInfo(object):
         'is_page_change_info': 'IsPageChangeInfo'
     }
 
-    def __init__(self, view_id=None, page_id=None, caption=None, sub_caption=None, plugin_id=None, view_type=None, show_dialog_full_screen=None, show_reset_to_defaults=None, is_in_sequence=None, redirect_view_url=None, edit_object_container=None, commands=None, tab_page_infos=None, is_page_change_info=None):  # noqa: E501
+    def __init__(self, view_id=None, page_id=None, caption=None, sub_caption=None, plugin_id=None, view_type=None, show_dialog_full_screen=None, dialog_size=None, show_reset_to_defaults=None, is_in_sequence=None, redirect_view_url=None, edit_object_container=None, commands=None, tab_page_infos=None, is_page_change_info=None):  # noqa: E501
         """UIViewInfo - a model defined in Swagger"""  # noqa: E501
         self._view_id = None
         self._page_id = None
@@ -64,6 +66,7 @@ class UIViewInfo(object):
         self._plugin_id = None
         self._view_type = None
         self._show_dialog_full_screen = None
+        self._dialog_size = None
         self._show_reset_to_defaults = None
         self._is_in_sequence = None
         self._redirect_view_url = None
@@ -86,6 +89,8 @@ class UIViewInfo(object):
             self.view_type = view_type
         if show_dialog_full_screen is not None:
             self.show_dialog_full_screen = show_dialog_full_screen
+        if dialog_size is not None:
+            self.dialog_size = dialog_size
         if show_reset_to_defaults is not None:
             self.show_reset_to_defaults = show_reset_to_defaults
         if is_in_sequence is not None:
@@ -247,6 +252,27 @@ class UIViewInfo(object):
         """
 
         self._show_dialog_full_screen = show_dialog_full_screen
+
+    @property
+    def dialog_size(self):
+        """Gets the dialog_size of this UIViewInfo.  # noqa: E501
+
+
+        :return: The dialog_size of this UIViewInfo.  # noqa: E501
+        :rtype: EnumsUiDialogSize
+        """
+        return self._dialog_size
+
+    @dialog_size.setter
+    def dialog_size(self, dialog_size):
+        """Sets the dialog_size of this UIViewInfo.
+
+
+        :param dialog_size: The dialog_size of this UIViewInfo.  # noqa: E501
+        :type: EnumsUiDialogSize
+        """
+
+        self._dialog_size = dialog_size
 
     @property
     def show_reset_to_defaults(self):

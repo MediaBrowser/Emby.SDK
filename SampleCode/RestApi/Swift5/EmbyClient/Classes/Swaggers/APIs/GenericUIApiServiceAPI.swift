@@ -39,6 +39,7 @@ open class GenericUIApiServiceAPI {
   "RedirectViewUrl" : "RedirectViewUrl",
   "ShowDialogFullScreen" : true,
   "ShowResetToDefaults" : true,
+  "DialogSize" : "AutoFit",
   "PluginId" : "PluginId",
   "Caption" : "Caption",
   "EditObjectContainer" : {
@@ -132,6 +133,7 @@ open class GenericUIApiServiceAPI {
   "RedirectViewUrl" : "RedirectViewUrl",
   "ShowDialogFullScreen" : true,
   "ShowResetToDefaults" : true,
+  "DialogSize" : "AutoFit",
   "PluginId" : "PluginId",
   "Caption" : "Caption",
   "EditObjectContainer" : {

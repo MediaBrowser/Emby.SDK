@@ -80714,6 +80714,9 @@
         "ShowDialogFullScreen": {
           "type": "boolean"
         },
+        "DialogSize": {
+          "$ref": "#/definitions/Enums.UiDialogSize"
+        },
         "ShowResetToDefaults": {
           "type": "boolean"
         },
@@ -80752,6 +80755,18 @@
       ],
       "type": "string",
       "x-internal-ref-name": "Emby.Web.GenericUI.Model.Enums.UIViewType"
+    },
+    "Enums.UiDialogSize": {
+      "enum": [
+        "AutoFit",
+        "Small",
+        "Medium",
+        "MediumTall",
+        "FullScreenBorder",
+        "FullScreen"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "Emby.Web.GenericUI.Model.Enums.UiDialogSize"
     },
     "GenericEdit.IEditObjectContainer": {
       "type": "object",

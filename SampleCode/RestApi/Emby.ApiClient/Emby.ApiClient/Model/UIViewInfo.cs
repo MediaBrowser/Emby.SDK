@@ -69,6 +69,12 @@ namespace Emby.ApiClient.Model
         public bool? ShowDialogFullScreen { get; set; }
 
         /// <summary>
+        /// Gets or Sets DialogSize
+        /// </summary>
+        /// <value>The DialogSize.</value>
+        public EnumsUiDialogSize DialogSize { get; set; }
+
+        /// <summary>
         /// Gets or Sets ShowResetToDefaults
         /// </summary>
         /// <value>The ShowResetToDefaults.</value>
@@ -125,6 +131,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  PluginId: ").Append(PluginId).Append("\n");
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
             sb.Append("  ShowDialogFullScreen: ").Append(ShowDialogFullScreen).Append("\n");
+            sb.Append("  DialogSize: ").Append(DialogSize).Append("\n");
             sb.Append("  ShowResetToDefaults: ").Append(ShowResetToDefaults).Append("\n");
             sb.Append("  IsInSequence: ").Append(IsInSequence).Append("\n");
             sb.Append("  RedirectViewUrl: ").Append(RedirectViewUrl).Append("\n");
@@ -193,6 +200,11 @@ namespace Emby.ApiClient.Model
                     this.ShowDialogFullScreen.Equals(input.ShowDialogFullScreen))
                 ) && 
                 (
+                    this.DialogSize == input.DialogSize ||
+                    (this.DialogSize != null &&
+                    this.DialogSize.Equals(input.DialogSize))
+                ) && 
+                (
                     this.ShowResetToDefaults == input.ShowResetToDefaults ||
                     (this.ShowResetToDefaults != null &&
                     this.ShowResetToDefaults.Equals(input.ShowResetToDefaults))
@@ -254,6 +266,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.ViewType.GetHashCode();
                 if (this.ShowDialogFullScreen != null)
                     hashCode = hashCode * 59 + this.ShowDialogFullScreen.GetHashCode();
+                if (this.DialogSize != null)
+                    hashCode = hashCode * 59 + this.DialogSize.GetHashCode();
                 if (this.ShowResetToDefaults != null)
                     hashCode = hashCode * 59 + this.ShowResetToDefaults.GetHashCode();
                 if (this.IsInSequence != null)

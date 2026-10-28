@@ -14,6 +14,7 @@ type UiViewInfo struct {
 	PluginId string `json:"PluginId,omitempty"`
 	ViewType *EnumsUiViewType `json:"ViewType,omitempty"`
 	ShowDialogFullScreen bool `json:"ShowDialogFullScreen,omitempty"`
+	DialogSize *EnumsUiDialogSize `json:"DialogSize,omitempty"`
 	ShowResetToDefaults bool `json:"ShowResetToDefaults,omitempty"`
 	IsInSequence bool `json:"IsInSequence,omitempty"`
 	RedirectViewUrl string `json:"RedirectViewUrl,omitempty"`

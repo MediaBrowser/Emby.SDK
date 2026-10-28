@@ -13,6 +13,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import embyclient.model.EnumsUIViewType;
+import embyclient.model.EnumsUiDialogSize;
 import embyclient.model.GenericEditIEditObjectContainer;
 import embyclient.model.UICommand;
 import embyclient.model.UITabPageInfo;
@@ -46,6 +47,9 @@ public class UIViewInfo {
 
   @SerializedName("ShowDialogFullScreen")
   private Boolean showDialogFullScreen = null;
+
+  @SerializedName("DialogSize")
+  private EnumsUiDialogSize dialogSize = null;
 
   @SerializedName("ShowResetToDefaults")
   private Boolean showResetToDefaults = null;
@@ -192,6 +196,24 @@ public class UIViewInfo {
 
   public void setShowDialogFullScreen(Boolean showDialogFullScreen) {
     this.showDialogFullScreen = showDialogFullScreen;
+  }
+
+  public UIViewInfo dialogSize(EnumsUiDialogSize dialogSize) {
+    this.dialogSize = dialogSize;
+    return this;
+  }
+
+   /**
+   * Get dialogSize
+   * @return dialogSize
+  **/
+  @Schema(description = "")
+  public EnumsUiDialogSize getDialogSize() {
+    return dialogSize;
+  }
+
+  public void setDialogSize(EnumsUiDialogSize dialogSize) {
+    this.dialogSize = dialogSize;
   }
 
   public UIViewInfo showResetToDefaults(Boolean showResetToDefaults) {
@@ -353,6 +375,7 @@ public class UIViewInfo {
         Objects.equals(this.pluginId, uiViewInfo.pluginId) &&
         Objects.equals(this.viewType, uiViewInfo.viewType) &&
         Objects.equals(this.showDialogFullScreen, uiViewInfo.showDialogFullScreen) &&
+        Objects.equals(this.dialogSize, uiViewInfo.dialogSize) &&
         Objects.equals(this.showResetToDefaults, uiViewInfo.showResetToDefaults) &&
         Objects.equals(this.isInSequence, uiViewInfo.isInSequence) &&
         Objects.equals(this.redirectViewUrl, uiViewInfo.redirectViewUrl) &&
@@ -364,7 +387,7 @@ public class UIViewInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(viewId, pageId, caption, subCaption, pluginId, viewType, showDialogFullScreen, showResetToDefaults, isInSequence, redirectViewUrl, editObjectContainer, commands, tabPageInfos, isPageChangeInfo);
+    return Objects.hash(viewId, pageId, caption, subCaption, pluginId, viewType, showDialogFullScreen, dialogSize, showResetToDefaults, isInSequence, redirectViewUrl, editObjectContainer, commands, tabPageInfos, isPageChangeInfo);
   }
 
 
@@ -380,6 +403,7 @@ public class UIViewInfo {
     sb.append("    pluginId: ").append(toIndentedString(pluginId)).append("\n");
     sb.append("    viewType: ").append(toIndentedString(viewType)).append("\n");
     sb.append("    showDialogFullScreen: ").append(toIndentedString(showDialogFullScreen)).append("\n");
+    sb.append("    dialogSize: ").append(toIndentedString(dialogSize)).append("\n");
     sb.append("    showResetToDefaults: ").append(toIndentedString(showResetToDefaults)).append("\n");
     sb.append("    isInSequence: ").append(toIndentedString(isInSequence)).append("\n");
     sb.append("    redirectViewUrl: ").append(toIndentedString(redirectViewUrl)).append("\n");

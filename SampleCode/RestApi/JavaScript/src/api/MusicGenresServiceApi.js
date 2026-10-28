@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * MusicGenresService service.
 * @module api/MusicGenresServiceApi
-* @version 4.11.0.11
+* @version 4.11.0.12
 */
 export default class MusicGenresServiceApi {
 

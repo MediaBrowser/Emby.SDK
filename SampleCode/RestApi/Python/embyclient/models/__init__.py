@@ -86,6 +86,7 @@ from embyclient.models.encoding_context import EncodingContext
 from embyclient.models.entities_tv_series_order_info import EntitiesTVSeriesOrderInfo
 from embyclient.models.enums_ui_command_type import EnumsUICommandType
 from embyclient.models.enums_ui_view_type import EnumsUIViewType
+from embyclient.models.enums_ui_dialog_size import EnumsUiDialogSize
 from embyclient.models.extended_video_sub_types import ExtendedVideoSubTypes
 from embyclient.models.extended_video_types import ExtendedVideoTypes
 from embyclient.models.external_id_info import ExternalIdInfo

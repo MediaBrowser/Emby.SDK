@@ -11,6 +11,7 @@
 
 import ApiClient from '../ApiClient';
 import EnumsUIViewType from './EnumsUIViewType';
+import EnumsUiDialogSize from './EnumsUiDialogSize';
 import GenericEditIEditObjectContainer from './GenericEditIEditObjectContainer';
 import UICommand from './UICommand';
 import UITabPageInfo from './UITabPageInfo';
@@ -18,7 +19,7 @@ import UITabPageInfo from './UITabPageInfo';
 /**
 * The UIViewInfo model module.
 * @module model/UIViewInfo
-* @version 4.11.0.11
+* @version 4.11.0.12
 */
 export default class UIViewInfo {
     /**
@@ -65,6 +66,9 @@ export default class UIViewInfo {
             }
             if (data.hasOwnProperty('ShowDialogFullScreen')) {
                 obj['ShowDialogFullScreen'] = ApiClient.convertToType(data['ShowDialogFullScreen'], 'Boolean');
+            }
+            if (data.hasOwnProperty('DialogSize')) {
+                obj['DialogSize'] = EnumsUiDialogSize.constructFromObject(data['DialogSize']);
             }
             if (data.hasOwnProperty('ShowResetToDefaults')) {
                 obj['ShowResetToDefaults'] = ApiClient.convertToType(data['ShowResetToDefaults'], 'Boolean');
@@ -119,6 +123,10 @@ export default class UIViewInfo {
     * @member {Boolean} ShowDialogFullScreen
     */
     'ShowDialogFullScreen' = undefined;
+    /**
+    * @member {module:model/EnumsUiDialogSize} DialogSize
+    */
+    'DialogSize' = undefined;
     /**
     * @member {Boolean} ShowResetToDefaults
     */

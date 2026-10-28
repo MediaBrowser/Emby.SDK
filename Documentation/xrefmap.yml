@@ -70518,6 +70518,31 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.BaseItem.TriggerOnRefreshStart
   nameWithType: BaseItem.TriggerOnRefreshStart
+- uid: MediaBrowser.Controller.Entities.BaseItem.TrimCommonNames(MediaBrowser.Model.Dto.MediaSourceInfo[],System.String)
+  name: TrimCommonNames(MediaSourceInfo[], String)
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TrimCommonNames_MediaBrowser_Model_Dto_MediaSourceInfo___System_String_
+  commentId: M:MediaBrowser.Controller.Entities.BaseItem.TrimCommonNames(MediaBrowser.Model.Dto.MediaSourceInfo[],System.String)
+  name.vb: TrimCommonNames(MediaSourceInfo(), String)
+  fullName: MediaBrowser.Controller.Entities.BaseItem.TrimCommonNames(MediaBrowser.Model.Dto.MediaSourceInfo[], System.String)
+  fullName.vb: MediaBrowser.Controller.Entities.BaseItem.TrimCommonNames(MediaBrowser.Model.Dto.MediaSourceInfo(), System.String)
+  nameWithType: BaseItem.TrimCommonNames(MediaSourceInfo[], String)
+  nameWithType.vb: BaseItem.TrimCommonNames(MediaSourceInfo(), String)
+- uid: MediaBrowser.Controller.Entities.BaseItem.TrimCommonNames(System.String[])
+  name: TrimCommonNames(String[])
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TrimCommonNames_System_String___
+  commentId: M:MediaBrowser.Controller.Entities.BaseItem.TrimCommonNames(System.String[])
+  name.vb: TrimCommonNames(String())
+  fullName: MediaBrowser.Controller.Entities.BaseItem.TrimCommonNames(System.String[])
+  fullName.vb: MediaBrowser.Controller.Entities.BaseItem.TrimCommonNames(System.String())
+  nameWithType: BaseItem.TrimCommonNames(String[])
+  nameWithType.vb: BaseItem.TrimCommonNames(String())
+- uid: MediaBrowser.Controller.Entities.BaseItem.TrimCommonNames*
+  name: TrimCommonNames
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TrimCommonNames_
+  commentId: Overload:MediaBrowser.Controller.Entities.BaseItem.TrimCommonNames
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.BaseItem.TrimCommonNames
+  nameWithType: BaseItem.TrimCommonNames
 - uid: MediaBrowser.Controller.Entities.BaseItem.UnplayedItemCount
   name: UnplayedItemCount
   href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UnplayedItemCount
@@ -87588,6 +87613,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.Channel
   nameWithType: ActiveRecordingInfo.Channel
+- uid: MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.Exception
+  name: Exception
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.html#MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_Exception
+  commentId: P:MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.Exception
+  fullName: MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.Exception
+  nameWithType: ActiveRecordingInfo.Exception
+- uid: MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.Exception*
+  name: Exception
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.html#MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_Exception_
+  commentId: Overload:MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.Exception
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.Exception
+  nameWithType: ActiveRecordingInfo.Exception
 - uid: MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.GetSegments
   name: GetSegments()
   href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.html#MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_GetSegments
@@ -87820,12 +87858,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.LiveTv.BaseTunerHost.DeserializeChannelsFromFileAsync
   nameWithType: BaseTunerHost.DeserializeChannelsFromFileAsync
-- uid: MediaBrowser.Controller.LiveTv.BaseTunerHost.DiscoverDevices(System.Int32,System.Threading.CancellationToken)
-  name: DiscoverDevices(Int32, CancellationToken)
-  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.BaseTunerHost.html#MediaBrowser_Controller_LiveTv_BaseTunerHost_DiscoverDevices_System_Int32_System_Threading_CancellationToken_
-  commentId: M:MediaBrowser.Controller.LiveTv.BaseTunerHost.DiscoverDevices(System.Int32,System.Threading.CancellationToken)
-  fullName: MediaBrowser.Controller.LiveTv.BaseTunerHost.DiscoverDevices(System.Int32, System.Threading.CancellationToken)
-  nameWithType: BaseTunerHost.DiscoverDevices(Int32, CancellationToken)
+- uid: MediaBrowser.Controller.LiveTv.BaseTunerHost.DiscoverDevices(System.Threading.CancellationToken)
+  name: DiscoverDevices(CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.BaseTunerHost.html#MediaBrowser_Controller_LiveTv_BaseTunerHost_DiscoverDevices_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.LiveTv.BaseTunerHost.DiscoverDevices(System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.LiveTv.BaseTunerHost.DiscoverDevices(System.Threading.CancellationToken)
+  nameWithType: BaseTunerHost.DiscoverDevices(CancellationToken)
 - uid: MediaBrowser.Controller.LiveTv.BaseTunerHost.DiscoverDevices*
   name: DiscoverDevices
   href: reference/pluginapi/MediaBrowser.Controller.LiveTv.BaseTunerHost.html#MediaBrowser_Controller_LiveTv_BaseTunerHost_DiscoverDevices_
@@ -89384,12 +89422,12 @@ references:
   commentId: T:MediaBrowser.Controller.LiveTv.ITunerHost
   fullName: MediaBrowser.Controller.LiveTv.ITunerHost
   nameWithType: ITunerHost
-- uid: MediaBrowser.Controller.LiveTv.ITunerHost.DiscoverDevices(System.Int32,System.Threading.CancellationToken)
-  name: DiscoverDevices(Int32, CancellationToken)
-  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ITunerHost.html#MediaBrowser_Controller_LiveTv_ITunerHost_DiscoverDevices_System_Int32_System_Threading_CancellationToken_
-  commentId: M:MediaBrowser.Controller.LiveTv.ITunerHost.DiscoverDevices(System.Int32,System.Threading.CancellationToken)
-  fullName: MediaBrowser.Controller.LiveTv.ITunerHost.DiscoverDevices(System.Int32, System.Threading.CancellationToken)
-  nameWithType: ITunerHost.DiscoverDevices(Int32, CancellationToken)
+- uid: MediaBrowser.Controller.LiveTv.ITunerHost.DiscoverDevices(System.Threading.CancellationToken)
+  name: DiscoverDevices(CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ITunerHost.html#MediaBrowser_Controller_LiveTv_ITunerHost_DiscoverDevices_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.LiveTv.ITunerHost.DiscoverDevices(System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.LiveTv.ITunerHost.DiscoverDevices(System.Threading.CancellationToken)
+  nameWithType: ITunerHost.DiscoverDevices(CancellationToken)
 - uid: MediaBrowser.Controller.LiveTv.ITunerHost.DiscoverDevices*
   name: DiscoverDevices
   href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ITunerHost.html#MediaBrowser_Controller_LiveTv_ITunerHost_DiscoverDevices_
@@ -99339,6 +99377,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Persistence.MediaStreamQuery.ItemId
   nameWithType: MediaStreamQuery.ItemId
+- uid: MediaBrowser.Controller.Persistence.MediaStreamQuery.ItemIds
+  name: ItemIds
+  href: reference/pluginapi/MediaBrowser.Controller.Persistence.MediaStreamQuery.html#MediaBrowser_Controller_Persistence_MediaStreamQuery_ItemIds
+  commentId: P:MediaBrowser.Controller.Persistence.MediaStreamQuery.ItemIds
+  fullName: MediaBrowser.Controller.Persistence.MediaStreamQuery.ItemIds
+  nameWithType: MediaStreamQuery.ItemIds
+- uid: MediaBrowser.Controller.Persistence.MediaStreamQuery.ItemIds*
+  name: ItemIds
+  href: reference/pluginapi/MediaBrowser.Controller.Persistence.MediaStreamQuery.html#MediaBrowser_Controller_Persistence_MediaStreamQuery_ItemIds_
+  commentId: Overload:MediaBrowser.Controller.Persistence.MediaStreamQuery.ItemIds
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Persistence.MediaStreamQuery.ItemIds
+  nameWithType: MediaStreamQuery.ItemIds
 - uid: MediaBrowser.Controller.Persistence.MediaStreamQuery.Type
   name: Type
   href: reference/pluginapi/MediaBrowser.Controller.Persistence.MediaStreamQuery.html#MediaBrowser_Controller_Persistence_MediaStreamQuery_Type

@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.11.0.11
+  version: 4.11.0.12
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -107413,6 +107413,8 @@ components:
           $ref: '#/components/schemas/Enums.UIViewType'
         ShowDialogFullScreen:
           type: boolean
+        DialogSize:
+          $ref: '#/components/schemas/Enums.UiDialogSize'
         ShowResetToDefaults:
           type: boolean
         IsInSequence:
@@ -107436,6 +107438,7 @@ components:
         RedirectViewUrl: RedirectViewUrl
         ShowDialogFullScreen: true
         ShowResetToDefaults: true
+        DialogSize: AutoFit
         PluginId: PluginId
         Caption: Caption
         EditObjectContainer:
@@ -107483,6 +107486,16 @@ components:
       - Dialog
       - Wizard
       x-internal-ref-name: Emby.Web.GenericUI.Model.Enums.UIViewType
+    Enums.UiDialogSize:
+      type: string
+      enum:
+      - AutoFit
+      - Small
+      - Medium
+      - MediumTall
+      - FullScreenBorder
+      - FullScreen
+      x-internal-ref-name: Emby.Web.GenericUI.Model.Enums.UiDialogSize
     GenericEdit.IEditObjectContainer:
       type: object
       properties:

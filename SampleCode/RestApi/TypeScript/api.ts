@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.11.0.11
+ * OpenAPI spec version: 4.11.0.12
  * 
  *
  * NOTE: This file is auto generated.
@@ -4295,6 +4295,19 @@ export enum EnumsUIViewType {
     RegularPage = <any> 'RegularPage',
     Dialog = <any> 'Dialog',
     Wizard = <any> 'Wizard'
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+export enum EnumsUiDialogSize {
+    AutoFit = <any> 'AutoFit',
+    Small = <any> 'Small',
+    Medium = <any> 'Medium',
+    MediumTall = <any> 'MediumTall',
+    FullScreenBorder = <any> 'FullScreenBorder',
+    FullScreen = <any> 'FullScreen'
 }
 /**
  * 
@@ -14375,6 +14388,12 @@ export interface UIViewInfo {
      * @memberof UIViewInfo
      */
     ShowDialogFullScreen?: boolean;
+    /**
+     * 
+     * @type {EnumsUiDialogSize}
+     * @memberof UIViewInfo
+     */
+    DialogSize?: EnumsUiDialogSize;
     /**
      * 
      * @type {boolean}

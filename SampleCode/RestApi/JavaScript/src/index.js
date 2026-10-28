@@ -88,6 +88,7 @@ import EncodingContext from './model/EncodingContext';
 import EntitiesTVSeriesOrderInfo from './model/EntitiesTVSeriesOrderInfo';
 import EnumsUICommandType from './model/EnumsUICommandType';
 import EnumsUIViewType from './model/EnumsUIViewType';
+import EnumsUiDialogSize from './model/EnumsUiDialogSize';
 import ExtendedVideoSubTypes from './model/ExtendedVideoSubTypes';
 import ExtendedVideoTypes from './model/ExtendedVideoTypes';
 import ExternalIdInfo from './model/ExternalIdInfo';
@@ -444,7 +445,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.11.0.11
+* @version 4.11.0.12
 */
 export {
     /**
@@ -920,6 +921,12 @@ export {
      * @property {module:model/EnumsUIViewType}
      */
     EnumsUIViewType,
+
+    /**
+     * The EnumsUiDialogSize model constructor.
+     * @property {module:model/EnumsUiDialogSize}
+     */
+    EnumsUiDialogSize,
 
     /**
      * The ExtendedVideoSubTypes model constructor.

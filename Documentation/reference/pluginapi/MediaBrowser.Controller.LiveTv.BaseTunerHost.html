@@ -548,12 +548,12 @@
   
   
   <a id="MediaBrowser_Controller_LiveTv_BaseTunerHost_DiscoverDevices_" data-uid="MediaBrowser.Controller.LiveTv.BaseTunerHost.DiscoverDevices*"></a>
-  <h4 id="MediaBrowser_Controller_LiveTv_BaseTunerHost_DiscoverDevices_System_Int32_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.LiveTv.BaseTunerHost.DiscoverDevices(System.Int32,System.Threading.CancellationToken)">DiscoverDevices(Int32, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_LiveTv_BaseTunerHost_DiscoverDevices_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.LiveTv.BaseTunerHost.DiscoverDevices(System.Threading.CancellationToken)">DiscoverDevices(CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;List&lt;TunerHostInfo&gt;&gt; DiscoverDevices(int discoveryDurationMs, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;List&lt;TunerHostInfo&gt;&gt; DiscoverDevices(CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -565,11 +565,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">discoveryDurationMs</span></td>
-        <td></td>
-      </tr>
       <tr>
         <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>

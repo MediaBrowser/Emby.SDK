@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.11.0.11"
+    "version": "4.11.0.12"
   },
   "servers": [
     {
@@ -114032,6 +114032,9 @@
           "ShowDialogFullScreen": {
             "type": "boolean"
           },
+          "DialogSize": {
+            "$ref": "#/components/schemas/Enums.UiDialogSize"
+          },
           "ShowResetToDefaults": {
             "type": "boolean"
           },
@@ -114070,6 +114073,18 @@
         ],
         "type": "string",
         "x-internal-ref-name": "Emby.Web.GenericUI.Model.Enums.UIViewType"
+      },
+      "Enums.UiDialogSize": {
+        "enum": [
+          "AutoFit",
+          "Small",
+          "Medium",
+          "MediumTall",
+          "FullScreenBorder",
+          "FullScreen"
+        ],
+        "type": "string",
+        "x-internal-ref-name": "Emby.Web.GenericUI.Model.Enums.UiDialogSize"
       },
       "GenericEdit.IEditObjectContainer": {
         "type": "object",
