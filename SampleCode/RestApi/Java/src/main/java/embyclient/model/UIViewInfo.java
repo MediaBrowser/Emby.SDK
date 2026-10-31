@@ -60,6 +60,9 @@ public class UIViewInfo {
   @SerializedName("RedirectViewUrl")
   private String redirectViewUrl = null;
 
+  @SerializedName("HelpUrl")
+  private String helpUrl = null;
+
   @SerializedName("EditObjectContainer")
   private GenericEditIEditObjectContainer editObjectContainer = null;
 
@@ -270,6 +273,24 @@ public class UIViewInfo {
     this.redirectViewUrl = redirectViewUrl;
   }
 
+  public UIViewInfo helpUrl(String helpUrl) {
+    this.helpUrl = helpUrl;
+    return this;
+  }
+
+   /**
+   * Get helpUrl
+   * @return helpUrl
+  **/
+  @Schema(description = "")
+  public String getHelpUrl() {
+    return helpUrl;
+  }
+
+  public void setHelpUrl(String helpUrl) {
+    this.helpUrl = helpUrl;
+  }
+
   public UIViewInfo editObjectContainer(GenericEditIEditObjectContainer editObjectContainer) {
     this.editObjectContainer = editObjectContainer;
     return this;
@@ -379,6 +400,7 @@ public class UIViewInfo {
         Objects.equals(this.showResetToDefaults, uiViewInfo.showResetToDefaults) &&
         Objects.equals(this.isInSequence, uiViewInfo.isInSequence) &&
         Objects.equals(this.redirectViewUrl, uiViewInfo.redirectViewUrl) &&
+        Objects.equals(this.helpUrl, uiViewInfo.helpUrl) &&
         Objects.equals(this.editObjectContainer, uiViewInfo.editObjectContainer) &&
         Objects.equals(this.commands, uiViewInfo.commands) &&
         Objects.equals(this.tabPageInfos, uiViewInfo.tabPageInfos) &&
@@ -387,7 +409,7 @@ public class UIViewInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(viewId, pageId, caption, subCaption, pluginId, viewType, showDialogFullScreen, dialogSize, showResetToDefaults, isInSequence, redirectViewUrl, editObjectContainer, commands, tabPageInfos, isPageChangeInfo);
+    return Objects.hash(viewId, pageId, caption, subCaption, pluginId, viewType, showDialogFullScreen, dialogSize, showResetToDefaults, isInSequence, redirectViewUrl, helpUrl, editObjectContainer, commands, tabPageInfos, isPageChangeInfo);
   }
 
 
@@ -407,6 +429,7 @@ public class UIViewInfo {
     sb.append("    showResetToDefaults: ").append(toIndentedString(showResetToDefaults)).append("\n");
     sb.append("    isInSequence: ").append(toIndentedString(isInSequence)).append("\n");
     sb.append("    redirectViewUrl: ").append(toIndentedString(redirectViewUrl)).append("\n");
+    sb.append("    helpUrl: ").append(toIndentedString(helpUrl)).append("\n");
     sb.append("    editObjectContainer: ").append(toIndentedString(editObjectContainer)).append("\n");
     sb.append("    commands: ").append(toIndentedString(commands)).append("\n");
     sb.append("    tabPageInfos: ").append(toIndentedString(tabPageInfos)).append("\n");

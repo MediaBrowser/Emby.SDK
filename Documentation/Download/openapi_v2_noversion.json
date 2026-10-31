@@ -80726,6 +80726,9 @@
         "RedirectViewUrl": {
           "type": "string"
         },
+        "HelpUrl": {
+          "type": "string"
+        },
         "EditObjectContainer": {
           "$ref": "#/definitions/GenericEdit.IEditObjectContainer"
         },

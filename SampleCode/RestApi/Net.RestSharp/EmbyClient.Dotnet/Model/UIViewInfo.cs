@@ -37,11 +37,12 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="showResetToDefaults">showResetToDefaults.</param>
         /// <param name="isInSequence">isInSequence.</param>
         /// <param name="redirectViewUrl">redirectViewUrl.</param>
+        /// <param name="helpUrl">helpUrl.</param>
         /// <param name="editObjectContainer">editObjectContainer.</param>
         /// <param name="commands">commands.</param>
         /// <param name="tabPageInfos">tabPageInfos.</param>
         /// <param name="isPageChangeInfo">isPageChangeInfo.</param>
-        public UIViewInfo(string viewId = default(string), string pageId = default(string), string caption = default(string), string subCaption = default(string), string pluginId = default(string), EnumsUIViewType viewType = default(EnumsUIViewType), bool? showDialogFullScreen = default(bool?), EnumsUiDialogSize dialogSize = default(EnumsUiDialogSize), bool? showResetToDefaults = default(bool?), bool? isInSequence = default(bool?), string redirectViewUrl = default(string), GenericEditIEditObjectContainer editObjectContainer = default(GenericEditIEditObjectContainer), List<UICommand> commands = default(List<UICommand>), List<UITabPageInfo> tabPageInfos = default(List<UITabPageInfo>), bool? isPageChangeInfo = default(bool?))
+        public UIViewInfo(string viewId = default(string), string pageId = default(string), string caption = default(string), string subCaption = default(string), string pluginId = default(string), EnumsUIViewType viewType = default(EnumsUIViewType), bool? showDialogFullScreen = default(bool?), EnumsUiDialogSize dialogSize = default(EnumsUiDialogSize), bool? showResetToDefaults = default(bool?), bool? isInSequence = default(bool?), string redirectViewUrl = default(string), string helpUrl = default(string), GenericEditIEditObjectContainer editObjectContainer = default(GenericEditIEditObjectContainer), List<UICommand> commands = default(List<UICommand>), List<UITabPageInfo> tabPageInfos = default(List<UITabPageInfo>), bool? isPageChangeInfo = default(bool?))
         {
             this.ViewId = viewId;
             this.PageId = pageId;
@@ -54,6 +55,7 @@ namespace EmbyClient.Dotnet.Model
             this.ShowResetToDefaults = showResetToDefaults;
             this.IsInSequence = isInSequence;
             this.RedirectViewUrl = redirectViewUrl;
+            this.HelpUrl = helpUrl;
             this.EditObjectContainer = editObjectContainer;
             this.Commands = commands;
             this.TabPageInfos = tabPageInfos;
@@ -127,6 +129,12 @@ namespace EmbyClient.Dotnet.Model
         public string RedirectViewUrl { get; set; }
 
         /// <summary>
+        /// Gets or Sets HelpUrl
+        /// </summary>
+        [DataMember(Name="HelpUrl", EmitDefaultValue=false)]
+        public string HelpUrl { get; set; }
+
+        /// <summary>
         /// Gets or Sets EditObjectContainer
         /// </summary>
         [DataMember(Name="EditObjectContainer", EmitDefaultValue=false)]
@@ -169,6 +177,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  ShowResetToDefaults: ").Append(ShowResetToDefaults).Append("\n");
             sb.Append("  IsInSequence: ").Append(IsInSequence).Append("\n");
             sb.Append("  RedirectViewUrl: ").Append(RedirectViewUrl).Append("\n");
+            sb.Append("  HelpUrl: ").Append(HelpUrl).Append("\n");
             sb.Append("  EditObjectContainer: ").Append(EditObjectContainer).Append("\n");
             sb.Append("  Commands: ").Append(Commands).Append("\n");
             sb.Append("  TabPageInfos: ").Append(TabPageInfos).Append("\n");
@@ -263,6 +272,11 @@ namespace EmbyClient.Dotnet.Model
                     this.RedirectViewUrl.Equals(input.RedirectViewUrl))
                 ) && 
                 (
+                    this.HelpUrl == input.HelpUrl ||
+                    (this.HelpUrl != null &&
+                    this.HelpUrl.Equals(input.HelpUrl))
+                ) && 
+                (
                     this.EditObjectContainer == input.EditObjectContainer ||
                     (this.EditObjectContainer != null &&
                     this.EditObjectContainer.Equals(input.EditObjectContainer))
@@ -317,6 +331,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.IsInSequence.GetHashCode();
                 if (this.RedirectViewUrl != null)
                     hashCode = hashCode * 59 + this.RedirectViewUrl.GetHashCode();
+                if (this.HelpUrl != null)
+                    hashCode = hashCode * 59 + this.HelpUrl.GetHashCode();
                 if (this.EditObjectContainer != null)
                     hashCode = hashCode * 59 + this.EditObjectContainer.GetHashCode();
                 if (this.Commands != null)

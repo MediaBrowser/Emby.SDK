@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.11.0.12
+ * OpenAPI spec version: 4.11.0.13
  * 
  *
  * NOTE: This file is auto generated.
@@ -14412,6 +14412,12 @@ export interface UIViewInfo {
      * @memberof UIViewInfo
      */
     RedirectViewUrl?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UIViewInfo
+     */
+    HelpUrl?: string;
     /**
      * 
      * @type {GenericEditIEditObjectContainer}

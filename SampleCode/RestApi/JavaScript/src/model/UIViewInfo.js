@@ -19,7 +19,7 @@ import UITabPageInfo from './UITabPageInfo';
 /**
 * The UIViewInfo model module.
 * @module model/UIViewInfo
-* @version 4.11.0.12
+* @version 4.11.0.13
 */
 export default class UIViewInfo {
     /**
@@ -78,6 +78,9 @@ export default class UIViewInfo {
             }
             if (data.hasOwnProperty('RedirectViewUrl')) {
                 obj['RedirectViewUrl'] = ApiClient.convertToType(data['RedirectViewUrl'], 'String');
+            }
+            if (data.hasOwnProperty('HelpUrl')) {
+                obj['HelpUrl'] = ApiClient.convertToType(data['HelpUrl'], 'String');
             }
             if (data.hasOwnProperty('EditObjectContainer')) {
                 obj['EditObjectContainer'] = GenericEditIEditObjectContainer.constructFromObject(data['EditObjectContainer']);
@@ -139,6 +142,10 @@ export default class UIViewInfo {
     * @member {String} RedirectViewUrl
     */
     'RedirectViewUrl' = undefined;
+    /**
+    * @member {String} HelpUrl
+    */
+    'HelpUrl' = undefined;
     /**
     * @member {module:model/GenericEditIEditObjectContainer} EditObjectContainer
     */

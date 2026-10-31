@@ -82120,6 +82120,37 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Extensions.StringExtensions.RemoveDiacritics
   nameWithType: StringExtensions.RemoveDiacritics
+- uid: MediaBrowser.Controller.Help
+  name: MediaBrowser.Controller.Help
+  href: reference/pluginapi/MediaBrowser.Controller.Help.html
+  commentId: N:MediaBrowser.Controller.Help
+  fullName: MediaBrowser.Controller.Help
+  nameWithType: MediaBrowser.Controller.Help
+- uid: MediaBrowser.Controller.Help.IHelpProvider
+  name: IHelpProvider
+  href: reference/pluginapi/MediaBrowser.Controller.Help.IHelpProvider.html
+  commentId: T:MediaBrowser.Controller.Help.IHelpProvider
+  fullName: MediaBrowser.Controller.Help.IHelpProvider
+  nameWithType: IHelpProvider
+- uid: MediaBrowser.Controller.Help.IHelpProvider.PrepareHelpUrl(System.String)
+  name: PrepareHelpUrl(String)
+  href: reference/pluginapi/MediaBrowser.Controller.Help.IHelpProvider.html#MediaBrowser_Controller_Help_IHelpProvider_PrepareHelpUrl_System_String_
+  commentId: M:MediaBrowser.Controller.Help.IHelpProvider.PrepareHelpUrl(System.String)
+  fullName: MediaBrowser.Controller.Help.IHelpProvider.PrepareHelpUrl(System.String)
+  nameWithType: IHelpProvider.PrepareHelpUrl(String)
+- uid: MediaBrowser.Controller.Help.IHelpProvider.PrepareHelpUrl(System.Uri)
+  name: PrepareHelpUrl(Uri)
+  href: reference/pluginapi/MediaBrowser.Controller.Help.IHelpProvider.html#MediaBrowser_Controller_Help_IHelpProvider_PrepareHelpUrl_System_Uri_
+  commentId: M:MediaBrowser.Controller.Help.IHelpProvider.PrepareHelpUrl(System.Uri)
+  fullName: MediaBrowser.Controller.Help.IHelpProvider.PrepareHelpUrl(System.Uri)
+  nameWithType: IHelpProvider.PrepareHelpUrl(Uri)
+- uid: MediaBrowser.Controller.Help.IHelpProvider.PrepareHelpUrl*
+  name: PrepareHelpUrl
+  href: reference/pluginapi/MediaBrowser.Controller.Help.IHelpProvider.html#MediaBrowser_Controller_Help_IHelpProvider_PrepareHelpUrl_
+  commentId: Overload:MediaBrowser.Controller.Help.IHelpProvider.PrepareHelpUrl
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Help.IHelpProvider.PrepareHelpUrl
+  nameWithType: IHelpProvider.PrepareHelpUrl
 - uid: MediaBrowser.Controller.IO
   name: MediaBrowser.Controller.IO
   href: reference/pluginapi/MediaBrowser.Controller.IO.html
@@ -87304,6 +87335,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.ByteRangeStart
   nameWithType: SegmentedStreamSegmentInfo.ByteRangeStart
+- uid: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.DiscontinuitySequenceBase
+  name: DiscontinuitySequenceBase
+  href: reference/pluginapi/MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.html#MediaBrowser_Controller_Library_SegmentedStreamSegmentInfo_DiscontinuitySequenceBase
+  commentId: P:MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.DiscontinuitySequenceBase
+  fullName: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.DiscontinuitySequenceBase
+  nameWithType: SegmentedStreamSegmentInfo.DiscontinuitySequenceBase
+- uid: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.DiscontinuitySequenceBase*
+  name: DiscontinuitySequenceBase
+  href: reference/pluginapi/MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.html#MediaBrowser_Controller_Library_SegmentedStreamSegmentInfo_DiscontinuitySequenceBase_
+  commentId: Overload:MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.DiscontinuitySequenceBase
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.DiscontinuitySequenceBase
+  nameWithType: SegmentedStreamSegmentInfo.DiscontinuitySequenceBase
 - uid: MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.Duration
   name: Duration
   href: reference/pluginapi/MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.html#MediaBrowser_Controller_Library_SegmentedStreamSegmentInfo_Duration
@@ -89646,6 +89690,77 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.LiveTv.ITunerHost.ValdidateOptions
   nameWithType: ITunerHost.ValdidateOptions
+- uid: MediaBrowser.Controller.LiveTv.LeagueInfo
+  name: LeagueInfo
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LeagueInfo.html
+  commentId: T:MediaBrowser.Controller.LiveTv.LeagueInfo
+  fullName: MediaBrowser.Controller.LiveTv.LeagueInfo
+  nameWithType: LeagueInfo
+- uid: MediaBrowser.Controller.LiveTv.LeagueInfo.Id
+  name: Id
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LeagueInfo.html#MediaBrowser_Controller_LiveTv_LeagueInfo_Id
+  commentId: P:MediaBrowser.Controller.LiveTv.LeagueInfo.Id
+  fullName: MediaBrowser.Controller.LiveTv.LeagueInfo.Id
+  nameWithType: LeagueInfo.Id
+- uid: MediaBrowser.Controller.LiveTv.LeagueInfo.Id*
+  name: Id
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LeagueInfo.html#MediaBrowser_Controller_LiveTv_LeagueInfo_Id_
+  commentId: Overload:MediaBrowser.Controller.LiveTv.LeagueInfo.Id
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.LiveTv.LeagueInfo.Id
+  nameWithType: LeagueInfo.Id
+- uid: MediaBrowser.Controller.LiveTv.LeagueInfo.LogoImageUrl
+  name: LogoImageUrl
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LeagueInfo.html#MediaBrowser_Controller_LiveTv_LeagueInfo_LogoImageUrl
+  commentId: P:MediaBrowser.Controller.LiveTv.LeagueInfo.LogoImageUrl
+  fullName: MediaBrowser.Controller.LiveTv.LeagueInfo.LogoImageUrl
+  nameWithType: LeagueInfo.LogoImageUrl
+- uid: MediaBrowser.Controller.LiveTv.LeagueInfo.LogoImageUrl*
+  name: LogoImageUrl
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LeagueInfo.html#MediaBrowser_Controller_LiveTv_LeagueInfo_LogoImageUrl_
+  commentId: Overload:MediaBrowser.Controller.LiveTv.LeagueInfo.LogoImageUrl
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.LiveTv.LeagueInfo.LogoImageUrl
+  nameWithType: LeagueInfo.LogoImageUrl
+- uid: MediaBrowser.Controller.LiveTv.LeagueInfo.Name
+  name: Name
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LeagueInfo.html#MediaBrowser_Controller_LiveTv_LeagueInfo_Name
+  commentId: P:MediaBrowser.Controller.LiveTv.LeagueInfo.Name
+  fullName: MediaBrowser.Controller.LiveTv.LeagueInfo.Name
+  nameWithType: LeagueInfo.Name
+- uid: MediaBrowser.Controller.LiveTv.LeagueInfo.Name*
+  name: Name
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LeagueInfo.html#MediaBrowser_Controller_LiveTv_LeagueInfo_Name_
+  commentId: Overload:MediaBrowser.Controller.LiveTv.LeagueInfo.Name
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.LiveTv.LeagueInfo.Name
+  nameWithType: LeagueInfo.Name
+- uid: MediaBrowser.Controller.LiveTv.LeagueInfo.SportId
+  name: SportId
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LeagueInfo.html#MediaBrowser_Controller_LiveTv_LeagueInfo_SportId
+  commentId: P:MediaBrowser.Controller.LiveTv.LeagueInfo.SportId
+  fullName: MediaBrowser.Controller.LiveTv.LeagueInfo.SportId
+  nameWithType: LeagueInfo.SportId
+- uid: MediaBrowser.Controller.LiveTv.LeagueInfo.SportId*
+  name: SportId
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LeagueInfo.html#MediaBrowser_Controller_LiveTv_LeagueInfo_SportId_
+  commentId: Overload:MediaBrowser.Controller.LiveTv.LeagueInfo.SportId
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.LiveTv.LeagueInfo.SportId
+  nameWithType: LeagueInfo.SportId
+- uid: MediaBrowser.Controller.LiveTv.LeagueInfo.SportName
+  name: SportName
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LeagueInfo.html#MediaBrowser_Controller_LiveTv_LeagueInfo_SportName
+  commentId: P:MediaBrowser.Controller.LiveTv.LeagueInfo.SportName
+  fullName: MediaBrowser.Controller.LiveTv.LeagueInfo.SportName
+  nameWithType: LeagueInfo.SportName
+- uid: MediaBrowser.Controller.LiveTv.LeagueInfo.SportName*
+  name: SportName
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LeagueInfo.html#MediaBrowser_Controller_LiveTv_LeagueInfo_SportName_
+  commentId: Overload:MediaBrowser.Controller.LiveTv.LeagueInfo.SportName
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.LiveTv.LeagueInfo.SportName
+  nameWithType: LeagueInfo.SportName
 - uid: MediaBrowser.Controller.LiveTv.LiveStreamOptions
   name: LiveStreamOptions
   href: reference/pluginapi/MediaBrowser.Controller.LiveTv.LiveStreamOptions.html
@@ -91524,6 +91639,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.LiveTv.ProgramInfo.IsSubjectToBlackout
   nameWithType: ProgramInfo.IsSubjectToBlackout
+- uid: MediaBrowser.Controller.LiveTv.ProgramInfo.LeagueId
+  name: LeagueId
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ProgramInfo.html#MediaBrowser_Controller_LiveTv_ProgramInfo_LeagueId
+  commentId: P:MediaBrowser.Controller.LiveTv.ProgramInfo.LeagueId
+  fullName: MediaBrowser.Controller.LiveTv.ProgramInfo.LeagueId
+  nameWithType: ProgramInfo.LeagueId
+- uid: MediaBrowser.Controller.LiveTv.ProgramInfo.LeagueId*
+  name: LeagueId
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ProgramInfo.html#MediaBrowser_Controller_LiveTv_ProgramInfo_LeagueId_
+  commentId: Overload:MediaBrowser.Controller.LiveTv.ProgramInfo.LeagueId
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.LiveTv.ProgramInfo.LeagueId
+  nameWithType: ProgramInfo.LeagueId
 - uid: MediaBrowser.Controller.LiveTv.ProgramInfo.LogoImageUrl
   name: LogoImageUrl
   href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ProgramInfo.html#MediaBrowser_Controller_LiveTv_ProgramInfo_LogoImageUrl
@@ -91680,6 +91808,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.LiveTv.ProgramInfo.ShowId
   nameWithType: ProgramInfo.ShowId
+- uid: MediaBrowser.Controller.LiveTv.ProgramInfo.SportId
+  name: SportId
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ProgramInfo.html#MediaBrowser_Controller_LiveTv_ProgramInfo_SportId
+  commentId: P:MediaBrowser.Controller.LiveTv.ProgramInfo.SportId
+  fullName: MediaBrowser.Controller.LiveTv.ProgramInfo.SportId
+  nameWithType: ProgramInfo.SportId
+- uid: MediaBrowser.Controller.LiveTv.ProgramInfo.SportId*
+  name: SportId
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ProgramInfo.html#MediaBrowser_Controller_LiveTv_ProgramInfo_SportId_
+  commentId: Overload:MediaBrowser.Controller.LiveTv.ProgramInfo.SportId
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.LiveTv.ProgramInfo.SportId
+  nameWithType: ProgramInfo.SportId
 - uid: MediaBrowser.Controller.LiveTv.ProgramInfo.StartDate
   name: StartDate
   href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ProgramInfo.html#MediaBrowser_Controller_LiveTv_ProgramInfo_StartDate
@@ -91693,6 +91834,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.LiveTv.ProgramInfo.StartDate
   nameWithType: ProgramInfo.StartDate
+- uid: MediaBrowser.Controller.LiveTv.ProgramInfo.Teams
+  name: Teams
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ProgramInfo.html#MediaBrowser_Controller_LiveTv_ProgramInfo_Teams
+  commentId: P:MediaBrowser.Controller.LiveTv.ProgramInfo.Teams
+  fullName: MediaBrowser.Controller.LiveTv.ProgramInfo.Teams
+  nameWithType: ProgramInfo.Teams
+- uid: MediaBrowser.Controller.LiveTv.ProgramInfo.Teams*
+  name: Teams
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ProgramInfo.html#MediaBrowser_Controller_LiveTv_ProgramInfo_Teams_
+  commentId: Overload:MediaBrowser.Controller.LiveTv.ProgramInfo.Teams
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.LiveTv.ProgramInfo.Teams
+  nameWithType: ProgramInfo.Teams
 - uid: MediaBrowser.Controller.LiveTv.ProgramInfo.ThumbImageUrl
   name: ThumbImageUrl
   href: reference/pluginapi/MediaBrowser.Controller.LiveTv.ProgramInfo.html#MediaBrowser_Controller_LiveTv_ProgramInfo_ThumbImageUrl
@@ -92562,6 +92716,51 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.LiveTv.SeriesTimerInfo.TimerType
   nameWithType: SeriesTimerInfo.TimerType
+- uid: MediaBrowser.Controller.LiveTv.TeamInfo
+  name: TeamInfo
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.TeamInfo.html
+  commentId: T:MediaBrowser.Controller.LiveTv.TeamInfo
+  fullName: MediaBrowser.Controller.LiveTv.TeamInfo
+  nameWithType: TeamInfo
+- uid: MediaBrowser.Controller.LiveTv.TeamInfo.Id
+  name: Id
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.TeamInfo.html#MediaBrowser_Controller_LiveTv_TeamInfo_Id
+  commentId: P:MediaBrowser.Controller.LiveTv.TeamInfo.Id
+  fullName: MediaBrowser.Controller.LiveTv.TeamInfo.Id
+  nameWithType: TeamInfo.Id
+- uid: MediaBrowser.Controller.LiveTv.TeamInfo.Id*
+  name: Id
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.TeamInfo.html#MediaBrowser_Controller_LiveTv_TeamInfo_Id_
+  commentId: Overload:MediaBrowser.Controller.LiveTv.TeamInfo.Id
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.LiveTv.TeamInfo.Id
+  nameWithType: TeamInfo.Id
+- uid: MediaBrowser.Controller.LiveTv.TeamInfo.IsHome
+  name: IsHome
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.TeamInfo.html#MediaBrowser_Controller_LiveTv_TeamInfo_IsHome
+  commentId: P:MediaBrowser.Controller.LiveTv.TeamInfo.IsHome
+  fullName: MediaBrowser.Controller.LiveTv.TeamInfo.IsHome
+  nameWithType: TeamInfo.IsHome
+- uid: MediaBrowser.Controller.LiveTv.TeamInfo.IsHome*
+  name: IsHome
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.TeamInfo.html#MediaBrowser_Controller_LiveTv_TeamInfo_IsHome_
+  commentId: Overload:MediaBrowser.Controller.LiveTv.TeamInfo.IsHome
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.LiveTv.TeamInfo.IsHome
+  nameWithType: TeamInfo.IsHome
+- uid: MediaBrowser.Controller.LiveTv.TeamInfo.Name
+  name: Name
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.TeamInfo.html#MediaBrowser_Controller_LiveTv_TeamInfo_Name
+  commentId: P:MediaBrowser.Controller.LiveTv.TeamInfo.Name
+  fullName: MediaBrowser.Controller.LiveTv.TeamInfo.Name
+  nameWithType: TeamInfo.Name
+- uid: MediaBrowser.Controller.LiveTv.TeamInfo.Name*
+  name: Name
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.TeamInfo.html#MediaBrowser_Controller_LiveTv_TeamInfo_Name_
+  commentId: Overload:MediaBrowser.Controller.LiveTv.TeamInfo.Name
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.LiveTv.TeamInfo.Name
+  nameWithType: TeamInfo.Name
 - uid: MediaBrowser.Controller.LiveTv.TimerEventInfo
   name: TimerEventInfo
   href: reference/pluginapi/MediaBrowser.Controller.LiveTv.TimerEventInfo.html
@@ -140795,6 +140994,25 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Serialization.IJsonSerializer.SerializeToStream
   nameWithType: IJsonSerializer.SerializeToStream
+- uid: MediaBrowser.Model.Serialization.IJsonSerializer.SerializeToStreamAsync(System.Object,System.IO.Stream)
+  name: SerializeToStreamAsync(Object, Stream)
+  href: reference/pluginapi/MediaBrowser.Model.Serialization.IJsonSerializer.html#MediaBrowser_Model_Serialization_IJsonSerializer_SerializeToStreamAsync_System_Object_System_IO_Stream_
+  commentId: M:MediaBrowser.Model.Serialization.IJsonSerializer.SerializeToStreamAsync(System.Object,System.IO.Stream)
+  fullName: MediaBrowser.Model.Serialization.IJsonSerializer.SerializeToStreamAsync(System.Object, System.IO.Stream)
+  nameWithType: IJsonSerializer.SerializeToStreamAsync(Object, Stream)
+- uid: MediaBrowser.Model.Serialization.IJsonSerializer.SerializeToStreamAsync(System.Object,System.IO.Stream,MediaBrowser.Model.Serialization.JsonSerializerOptions)
+  name: SerializeToStreamAsync(Object, Stream, JsonSerializerOptions)
+  href: reference/pluginapi/MediaBrowser.Model.Serialization.IJsonSerializer.html#MediaBrowser_Model_Serialization_IJsonSerializer_SerializeToStreamAsync_System_Object_System_IO_Stream_MediaBrowser_Model_Serialization_JsonSerializerOptions_
+  commentId: M:MediaBrowser.Model.Serialization.IJsonSerializer.SerializeToStreamAsync(System.Object,System.IO.Stream,MediaBrowser.Model.Serialization.JsonSerializerOptions)
+  fullName: MediaBrowser.Model.Serialization.IJsonSerializer.SerializeToStreamAsync(System.Object, System.IO.Stream, MediaBrowser.Model.Serialization.JsonSerializerOptions)
+  nameWithType: IJsonSerializer.SerializeToStreamAsync(Object, Stream, JsonSerializerOptions)
+- uid: MediaBrowser.Model.Serialization.IJsonSerializer.SerializeToStreamAsync*
+  name: SerializeToStreamAsync
+  href: reference/pluginapi/MediaBrowser.Model.Serialization.IJsonSerializer.html#MediaBrowser_Model_Serialization_IJsonSerializer_SerializeToStreamAsync_
+  commentId: Overload:MediaBrowser.Model.Serialization.IJsonSerializer.SerializeToStreamAsync
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Serialization.IJsonSerializer.SerializeToStreamAsync
+  nameWithType: IJsonSerializer.SerializeToStreamAsync
 - uid: MediaBrowser.Model.Serialization.IJsonSerializer.SerializeToString(System.Object)
   name: SerializeToString(Object)
   href: reference/pluginapi/MediaBrowser.Model.Serialization.IJsonSerializer.html#MediaBrowser_Model_Serialization_IJsonSerializer_SerializeToString_System_Object_

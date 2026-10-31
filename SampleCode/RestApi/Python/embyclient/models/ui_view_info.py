@@ -33,6 +33,7 @@ class UIViewInfo(object):
         'show_reset_to_defaults': 'bool',
         'is_in_sequence': 'bool',
         'redirect_view_url': 'str',
+        'help_url': 'str',
         'edit_object_container': 'GenericEditIEditObjectContainer',
         'commands': 'list[UICommand]',
         'tab_page_infos': 'list[UITabPageInfo]',
@@ -51,13 +52,14 @@ class UIViewInfo(object):
         'show_reset_to_defaults': 'ShowResetToDefaults',
         'is_in_sequence': 'IsInSequence',
         'redirect_view_url': 'RedirectViewUrl',
+        'help_url': 'HelpUrl',
         'edit_object_container': 'EditObjectContainer',
         'commands': 'Commands',
         'tab_page_infos': 'TabPageInfos',
         'is_page_change_info': 'IsPageChangeInfo'
     }
 
-    def __init__(self, view_id=None, page_id=None, caption=None, sub_caption=None, plugin_id=None, view_type=None, show_dialog_full_screen=None, dialog_size=None, show_reset_to_defaults=None, is_in_sequence=None, redirect_view_url=None, edit_object_container=None, commands=None, tab_page_infos=None, is_page_change_info=None):  # noqa: E501
+    def __init__(self, view_id=None, page_id=None, caption=None, sub_caption=None, plugin_id=None, view_type=None, show_dialog_full_screen=None, dialog_size=None, show_reset_to_defaults=None, is_in_sequence=None, redirect_view_url=None, help_url=None, edit_object_container=None, commands=None, tab_page_infos=None, is_page_change_info=None):  # noqa: E501
         """UIViewInfo - a model defined in Swagger"""  # noqa: E501
         self._view_id = None
         self._page_id = None
@@ -70,6 +72,7 @@ class UIViewInfo(object):
         self._show_reset_to_defaults = None
         self._is_in_sequence = None
         self._redirect_view_url = None
+        self._help_url = None
         self._edit_object_container = None
         self._commands = None
         self._tab_page_infos = None
@@ -97,6 +100,8 @@ class UIViewInfo(object):
             self.is_in_sequence = is_in_sequence
         if redirect_view_url is not None:
             self.redirect_view_url = redirect_view_url
+        if help_url is not None:
+            self.help_url = help_url
         if edit_object_container is not None:
             self.edit_object_container = edit_object_container
         if commands is not None:
@@ -336,6 +341,27 @@ class UIViewInfo(object):
         """
 
         self._redirect_view_url = redirect_view_url
+
+    @property
+    def help_url(self):
+        """Gets the help_url of this UIViewInfo.  # noqa: E501
+
+
+        :return: The help_url of this UIViewInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._help_url
+
+    @help_url.setter
+    def help_url(self, help_url):
+        """Sets the help_url of this UIViewInfo.
+
+
+        :param help_url: The help_url of this UIViewInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._help_url = help_url
 
     @property
     def edit_object_container(self):

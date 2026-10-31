@@ -93,6 +93,12 @@ namespace Emby.ApiClient.Model
         public string RedirectViewUrl { get; set; }
 
         /// <summary>
+        /// Gets or Sets HelpUrl
+        /// </summary>
+        /// <value>The HelpUrl.</value>
+        public string HelpUrl { get; set; }
+
+        /// <summary>
         /// Gets or Sets EditObjectContainer
         /// </summary>
         /// <value>The EditObjectContainer.</value>
@@ -135,6 +141,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  ShowResetToDefaults: ").Append(ShowResetToDefaults).Append("\n");
             sb.Append("  IsInSequence: ").Append(IsInSequence).Append("\n");
             sb.Append("  RedirectViewUrl: ").Append(RedirectViewUrl).Append("\n");
+            sb.Append("  HelpUrl: ").Append(HelpUrl).Append("\n");
             sb.Append("  EditObjectContainer: ").Append(EditObjectContainer).Append("\n");
             sb.Append("  Commands: ").Append(Commands).Append("\n");
             sb.Append("  TabPageInfos: ").Append(TabPageInfos).Append("\n");
@@ -220,6 +227,11 @@ namespace Emby.ApiClient.Model
                     this.RedirectViewUrl.Equals(input.RedirectViewUrl))
                 ) && 
                 (
+                    this.HelpUrl == input.HelpUrl ||
+                    (this.HelpUrl != null &&
+                    this.HelpUrl.Equals(input.HelpUrl))
+                ) && 
+                (
                     this.EditObjectContainer == input.EditObjectContainer ||
                     (this.EditObjectContainer != null &&
                     this.EditObjectContainer.Equals(input.EditObjectContainer))
@@ -274,6 +286,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.IsInSequence.GetHashCode();
                 if (this.RedirectViewUrl != null)
                     hashCode = hashCode * 59 + this.RedirectViewUrl.GetHashCode();
+                if (this.HelpUrl != null)
+                    hashCode = hashCode * 59 + this.HelpUrl.GetHashCode();
                 if (this.EditObjectContainer != null)
                     hashCode = hashCode * 59 + this.EditObjectContainer.GetHashCode();
                 if (this.Commands != null)

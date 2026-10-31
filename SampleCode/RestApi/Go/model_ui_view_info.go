@@ -18,6 +18,7 @@ type UiViewInfo struct {
 	ShowResetToDefaults bool `json:"ShowResetToDefaults,omitempty"`
 	IsInSequence bool `json:"IsInSequence,omitempty"`
 	RedirectViewUrl string `json:"RedirectViewUrl,omitempty"`
+	HelpUrl string `json:"HelpUrl,omitempty"`
 	EditObjectContainer *GenericEditIEditObjectContainer `json:"EditObjectContainer,omitempty"`
 	Commands []UiCommand `json:"Commands,omitempty"`
 	TabPageInfos []UiTabPageInfo `json:"TabPageInfos,omitempty"`

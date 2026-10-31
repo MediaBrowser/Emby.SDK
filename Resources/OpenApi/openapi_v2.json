@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.11.0.12"
+    "version": "4.11.0.13"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -80726,6 +80726,9 @@
           "type": "boolean"
         },
         "RedirectViewUrl": {
+          "type": "string"
+        },
+        "HelpUrl": {
           "type": "string"
         },
         "EditObjectContainer": {

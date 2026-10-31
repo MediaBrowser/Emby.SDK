@@ -42,6 +42,7 @@ open class GenericUIApiServiceAPI {
   "DialogSize" : "AutoFit",
   "PluginId" : "PluginId",
   "Caption" : "Caption",
+  "HelpUrl" : "HelpUrl",
   "EditObjectContainer" : {
     "TypeName" : "TypeName",
     "DefaultObject" : { },
@@ -136,6 +137,7 @@ open class GenericUIApiServiceAPI {
   "DialogSize" : "AutoFit",
   "PluginId" : "PluginId",
   "Caption" : "Caption",
+  "HelpUrl" : "HelpUrl",
   "EditObjectContainer" : {
     "TypeName" : "TypeName",
     "DefaultObject" : { },
