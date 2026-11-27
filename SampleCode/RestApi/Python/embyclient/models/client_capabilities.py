@@ -30,7 +30,9 @@ class ClientCapabilities(object):
         'supports_sync': 'bool',
         'device_profile': 'DeviceProfile',
         'icon_url': 'str',
-        'app_id': 'str'
+        'app_id': 'str',
+        'attestation_provider': 'str',
+        'attestation_reply': 'SecurityAttestationReply'
     }
 
     attribute_map = {
@@ -42,10 +44,12 @@ class ClientCapabilities(object):
         'supports_sync': 'SupportsSync',
         'device_profile': 'DeviceProfile',
         'icon_url': 'IconUrl',
-        'app_id': 'AppId'
+        'app_id': 'AppId',
+        'attestation_provider': 'AttestationProvider',
+        'attestation_reply': 'AttestationReply'
     }
 
-    def __init__(self, playable_media_types=None, supported_commands=None, supports_media_control=None, push_token=None, push_token_type=None, supports_sync=None, device_profile=None, icon_url=None, app_id=None):  # noqa: E501
+    def __init__(self, playable_media_types=None, supported_commands=None, supports_media_control=None, push_token=None, push_token_type=None, supports_sync=None, device_profile=None, icon_url=None, app_id=None, attestation_provider=None, attestation_reply=None):  # noqa: E501
         """ClientCapabilities - a model defined in Swagger"""  # noqa: E501
         self._playable_media_types = None
         self._supported_commands = None
@@ -56,6 +60,8 @@ class ClientCapabilities(object):
         self._device_profile = None
         self._icon_url = None
         self._app_id = None
+        self._attestation_provider = None
+        self._attestation_reply = None
         self.discriminator = None
         if playable_media_types is not None:
             self.playable_media_types = playable_media_types
@@ -75,6 +81,10 @@ class ClientCapabilities(object):
             self.icon_url = icon_url
         if app_id is not None:
             self.app_id = app_id
+        if attestation_provider is not None:
+            self.attestation_provider = attestation_provider
+        if attestation_reply is not None:
+            self.attestation_reply = attestation_reply
 
     @property
     def playable_media_types(self):
@@ -264,6 +274,48 @@ class ClientCapabilities(object):
         """
 
         self._app_id = app_id
+
+    @property
+    def attestation_provider(self):
+        """Gets the attestation_provider of this ClientCapabilities.  # noqa: E501
+
+
+        :return: The attestation_provider of this ClientCapabilities.  # noqa: E501
+        :rtype: str
+        """
+        return self._attestation_provider
+
+    @attestation_provider.setter
+    def attestation_provider(self, attestation_provider):
+        """Sets the attestation_provider of this ClientCapabilities.
+
+
+        :param attestation_provider: The attestation_provider of this ClientCapabilities.  # noqa: E501
+        :type: str
+        """
+
+        self._attestation_provider = attestation_provider
+
+    @property
+    def attestation_reply(self):
+        """Gets the attestation_reply of this ClientCapabilities.  # noqa: E501
+
+
+        :return: The attestation_reply of this ClientCapabilities.  # noqa: E501
+        :rtype: SecurityAttestationReply
+        """
+        return self._attestation_reply
+
+    @attestation_reply.setter
+    def attestation_reply(self, attestation_reply):
+        """Sets the attestation_reply of this ClientCapabilities.
+
+
+        :param attestation_reply: The attestation_reply of this ClientCapabilities.  # noqa: E501
+        :type: SecurityAttestationReply
+        """
+
+        self._attestation_reply = attestation_reply
 
     def to_dict(self):
         """Returns the model properties as a dict"""

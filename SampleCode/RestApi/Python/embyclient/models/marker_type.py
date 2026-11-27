@@ -22,6 +22,9 @@ class MarkerType(object):
     INTROSTART = "IntroStart"
     INTROEND = "IntroEnd"
     CREDITSSTART = "CreditsStart"
+    CREDITSEND = "CreditsEnd"
+    COMMERCIALSSTART = "CommercialsStart"
+    COMMERCIALSEND = "CommercialsEnd"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

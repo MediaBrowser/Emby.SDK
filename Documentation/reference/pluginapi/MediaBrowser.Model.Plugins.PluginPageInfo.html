@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Class PluginPageInfo
    </title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="Class PluginPageInfo
    ">
     <meta name="generator" content="docfx 2.59.2.0">
@@ -36,16 +36,18 @@
       
       <header class="site-header">
         <nav class="nav container" aria-label="Primary navigation">
-          <a class="brand" href="../../index.html" aria-label="Emby Developer home">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
             
-      <img class="logo-on-dark" src="../../images/emby_dev_logo_beta.png" alt="Emby Developer">
-      <img class="logo-on-light" src="../../images/emby_dev_logo_black.png" alt="Emby Developer">
+            <img class="logo-on-dark" src="../../images/emby-logo-dark-beta.png" alt="Emby">
+            <img class="logo-on-light" src="../../images/emby-logo-beta.png" alt="Emby">
           </a>
+          <a class="site-title-link" href="../../index.html"><span class="site-title">Emby <strong>BetaDev</strong></span></a>
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
           <div class="nav-links" id="navbar">
             <ul class="nav-links-list">
                 
-                    <li><a href="../../index.html" title="DEV Home">DEV Home</a></li>
+                    <li><a href="https://emby.media/" title="Emby Home">Emby Home</a></li>
+                    <li><a href="../../index.html" title="Dev Home">Dev Home</a></li>
                     <li><a href="../../doc/index.html" title="Documentation">Documentation</a></li>
                     <li><a href="../../reference/index.html" title="Reference">Reference</a></li>
                     <li><a href="../../download/index.html" title="Download">Download</a></li>
@@ -277,6 +279,35 @@
   </table>
   
   
+  <a id="MediaBrowser_Model_Plugins_PluginPageInfo_MenuDisplayName_" data-uid="MediaBrowser.Model.Plugins.PluginPageInfo.MenuDisplayName*"></a>
+  <h4 id="MediaBrowser_Model_Plugins_PluginPageInfo_MenuDisplayName" data-uid="MediaBrowser.Model.Plugins.PluginPageInfo.MenuDisplayName">MenuDisplayName</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the label of the page's menu entry, where it should differ from
+<a class="xref" href="MediaBrowser.Model.Plugins.PluginPageInfo.html#MediaBrowser_Model_Plugins_PluginPageInfo_DisplayName">DisplayName</a>. A page with tabs shows <a class="xref" href="MediaBrowser.Model.Plugins.PluginPageInfo.html#MediaBrowser_Model_Plugins_PluginPageInfo_DisplayName">DisplayName</a> on its own tab, so this is
+how the menu entry can name the page as a whole.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MenuDisplayName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The menu label, or <code>null</code> to use <a class="xref" href="MediaBrowser.Model.Plugins.PluginPageInfo.html#MediaBrowser_Model_Plugins_PluginPageInfo_DisplayName">DisplayName</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Model_Plugins_PluginPageInfo_MenuIcon_" data-uid="MediaBrowser.Model.Plugins.PluginPageInfo.MenuIcon*"></a>
   <h4 id="MediaBrowser_Model_Plugins_PluginPageInfo_MenuIcon" data-uid="MediaBrowser.Model.Plugins.PluginPageInfo.MenuIcon">MenuIcon</h4>
   <div class="markdown level1 summary"></div>
@@ -297,6 +328,33 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Plugins_PluginPageInfo_MenuOrder_" data-uid="MediaBrowser.Model.Plugins.PluginPageInfo.MenuOrder*"></a>
+  <h4 id="MediaBrowser_Model_Plugins_PluginPageInfo_MenuOrder" data-uid="MediaBrowser.Model.Plugins.PluginPageInfo.MenuOrder">MenuOrder</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the position of the page's menu entry relative to the other entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MenuOrder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>The position, or <code>null</code> when the page does not specify one.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -354,6 +412,9 @@
   <div>
       <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
   </div>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_System_Type_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, Type, IJsonSerializer)</a>
+  </div>
 </div>
 </article>
           </div>
@@ -395,5 +456,6 @@
     <script type="text/javascript" src="../../styles/lunr.min.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
+    <script src="https://emby.media/resources/site-switcher.js" data-site-switcher=".site-title-link" data-current-site="betadev"></script>
   </body>
 </html>

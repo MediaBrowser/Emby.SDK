@@ -34,6 +34,7 @@ class ProgressEvent(object):
     PLAYBACKRATECHANGE = "PlaybackRateChange"
     SHUFFLECHANGE = "ShuffleChange"
     SLEEPTIMERCHANGE = "SleepTimerChange"
+    SEEKED = "Seeked"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

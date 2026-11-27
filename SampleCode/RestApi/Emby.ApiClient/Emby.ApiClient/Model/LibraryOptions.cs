@@ -45,6 +45,18 @@ namespace Emby.ApiClient.Model
         public bool? EnableRealtimeMonitor { get; set; }
 
         /// <summary>
+        /// Gets or Sets EnableCreditsDetection
+        /// </summary>
+        /// <value>The EnableCreditsDetection.</value>
+        public bool? EnableCreditsDetection { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EnableCreditsDetectionDuringLibraryScan
+        /// </summary>
+        /// <value>The EnableCreditsDetectionDuringLibraryScan.</value>
+        public bool? EnableCreditsDetectionDuringLibraryScan { get; set; }
+
+        /// <summary>
         /// Gets or Sets EnableMarkerDetection
         /// </summary>
         /// <value>The EnableMarkerDetection.</value>
@@ -433,6 +445,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  EnableArchiveMediaFiles: ").Append(EnableArchiveMediaFiles).Append("\n");
             sb.Append("  EnablePhotos: ").Append(EnablePhotos).Append("\n");
             sb.Append("  EnableRealtimeMonitor: ").Append(EnableRealtimeMonitor).Append("\n");
+            sb.Append("  EnableCreditsDetection: ").Append(EnableCreditsDetection).Append("\n");
+            sb.Append("  EnableCreditsDetectionDuringLibraryScan: ").Append(EnableCreditsDetectionDuringLibraryScan).Append("\n");
             sb.Append("  EnableMarkerDetection: ").Append(EnableMarkerDetection).Append("\n");
             sb.Append("  EnableMarkerDetectionDuringLibraryScan: ").Append(EnableMarkerDetectionDuringLibraryScan).Append("\n");
             sb.Append("  IntroDetectionFingerprintLength: ").Append(IntroDetectionFingerprintLength).Append("\n");
@@ -535,6 +549,16 @@ namespace Emby.ApiClient.Model
                     this.EnableRealtimeMonitor == input.EnableRealtimeMonitor ||
                     (this.EnableRealtimeMonitor != null &&
                     this.EnableRealtimeMonitor.Equals(input.EnableRealtimeMonitor))
+                ) && 
+                (
+                    this.EnableCreditsDetection == input.EnableCreditsDetection ||
+                    (this.EnableCreditsDetection != null &&
+                    this.EnableCreditsDetection.Equals(input.EnableCreditsDetection))
+                ) && 
+                (
+                    this.EnableCreditsDetectionDuringLibraryScan == input.EnableCreditsDetectionDuringLibraryScan ||
+                    (this.EnableCreditsDetectionDuringLibraryScan != null &&
+                    this.EnableCreditsDetectionDuringLibraryScan.Equals(input.EnableCreditsDetectionDuringLibraryScan))
                 ) && 
                 (
                     this.EnableMarkerDetection == input.EnableMarkerDetection ||
@@ -880,6 +904,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.EnablePhotos.GetHashCode();
                 if (this.EnableRealtimeMonitor != null)
                     hashCode = hashCode * 59 + this.EnableRealtimeMonitor.GetHashCode();
+                if (this.EnableCreditsDetection != null)
+                    hashCode = hashCode * 59 + this.EnableCreditsDetection.GetHashCode();
+                if (this.EnableCreditsDetectionDuringLibraryScan != null)
+                    hashCode = hashCode * 59 + this.EnableCreditsDetectionDuringLibraryScan.GetHashCode();
                 if (this.EnableMarkerDetection != null)
                     hashCode = hashCode * 59 + this.EnableMarkerDetection.GetHashCode();
                 if (this.EnableMarkerDetectionDuringLibraryScan != null)

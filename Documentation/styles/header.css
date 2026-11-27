@@ -1,39 +1,65 @@
+:root {
+    --sdk-content-max-width: 1180px;
+    --sdk-page-gutter: 20px;
+    /* Preserve the existing 280px sidebar and 35px article gap. */
+    --sdk-sidebar-space: 315px;
+}
 
 .container {
-    width: 100%;
-    padding-right: 50px;
-    padding-left: 40px;
+    width: min(var(--sdk-content-max-width), calc(100% - 2 * var(--sdk-page-gutter)));
+    max-width: var(--sdk-content-max-width);
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
 }
-.nav.container {
-    padding-left: 32px;
+
+/* The capped shell owns the outer gutters; retain grids inside article content. */
+.body-content > .row {
+    margin-left: 0;
+    margin-right: 0;
 }
-.sidetoc {
-    text-align: left;
+
+.body-content > .row > [class*="col-"]:first-child { padding-left: 0; }
+.body-content > .row > [class*="col-"]:last-child { padding-right: 0; }
+.body-content > .article.grid-right { margin-left: var(--sdk-sidebar-space); }
+
+.subnav.navbar {
+    border-left: 0;
+    border-right: 0;
+}
+
+.subnav .breadcrumpsearch { margin-right: 0; }
+.sidetoc { text-align: left; }
+
+@media (min-width: 992px) {
+    /* The fixed outline remains inside its last-sixth Bootstrap column. */
+    .article .sideaffix {
+        max-width: calc(min(var(--sdk-content-max-width), calc(100% - 2 * var(--sdk-page-gutter))) / 6 - 15px);
+    }
+
+    .article.grid-right .sideaffix {
+        max-width: calc((min(var(--sdk-content-max-width), calc(100% - 2 * var(--sdk-page-gutter))) - var(--sdk-sidebar-space)) / 6 - 15px);
+    }
+}
+
+@media (max-width: 991px) {
+    .body-content > .row > .col-md-10 { padding-right: 0; }
+}
+
+@media (max-width: 800px) {
+    :root { --sdk-page-gutter: 14px; }
 }
 
 @media (max-width: 768px) {
-
-    .breadcrumpsearch {
-        display: none;
-    }
-
-    .container {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-
+    .breadcrumpsearch { display: none; }
+    .body-content > .article.grid-right { margin-left: 0; }
+    .sidenav { margin-left: 0; margin-right: 0; }
     .sidetoc, .sidefilter {
         overflow-x: auto;
         overflow-wrap: normal;
         width: 100%;
     }
-
-    .sidetoggle {
-        padding: 0 15px;
-    }
-
-    .sidetoc {
-        padding: 10px;
-        text-align: left;
-    }
+    .sidetoggle { padding: 0; }
+    .sidetoc { padding: 10px; text-align: left; }
 }

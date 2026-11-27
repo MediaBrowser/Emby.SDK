@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Enum TestHwaccels
    </title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="Enum TestHwaccels
    ">
     <meta name="generator" content="docfx 2.59.2.0">
@@ -36,16 +36,18 @@
       
       <header class="site-header">
         <nav class="nav container" aria-label="Primary navigation">
-          <a class="brand" href="../../index.html" aria-label="Emby Developer home">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
             
-      <img class="logo-on-dark" src="../../images/emby_dev_logo_beta.png" alt="Emby Developer">
-      <img class="logo-on-light" src="../../images/emby_dev_logo_black.png" alt="Emby Developer">
+            <img class="logo-on-dark" src="../../images/emby-logo-dark-beta.png" alt="Emby">
+            <img class="logo-on-light" src="../../images/emby-logo-beta.png" alt="Emby">
           </a>
+          <a class="site-title-link" href="../../index.html"><span class="site-title">Emby <strong>BetaDev</strong></span></a>
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
           <div class="nav-links" id="navbar">
             <ul class="nav-links-list">
                 
-                    <li><a href="../../index.html" title="DEV Home">DEV Home</a></li>
+                    <li><a href="https://emby.media/" title="Emby Home">Emby Home</a></li>
+                    <li><a href="../../index.html" title="Dev Home">Dev Home</a></li>
                     <li><a href="../../doc/index.html" title="Documentation">Documentation</a></li>
                     <li><a href="../../reference/index.html" title="Reference">Reference</a></li>
                     <li><a href="../../download/index.html" title="Download">Download</a></li>
@@ -110,7 +112,10 @@
   
   <h1 id="MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.TestHwaccels" class="text-break">Enum TestHwaccels
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Retained for backward compatibility with older plugin/tooling builds that still read
+this enum from serialized test results - not used by current server-side codec resolution, which
+works by exact codec id (see <a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.TestCodecInfo.html">TestCodecInfo</a>).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.html">MediaBrowser.Controller.MediaEncoding.Tests</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
@@ -141,6 +146,10 @@
         <td></td>
       </tr>
       <tr>
+        <td id="MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_Dx12Va">Dx12Va</td>
+        <td></td>
+      </tr>
+      <tr>
         <td id="MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_DxVa">DxVa</td>
         <td></td>
       </tr>
@@ -161,11 +170,27 @@
         <td></td>
       </tr>
       <tr>
+        <td id="MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_RkMpp">RkMpp</td>
+        <td></td>
+      </tr>
+      <tr>
         <td id="MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_Software">Software</td>
         <td></td>
       </tr>
       <tr>
+        <td id="MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_Unknown">Unknown</td>
+        <td></td>
+      </tr>
+      <tr>
         <td id="MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_VaApi">VaApi</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_VideoToolbox">VideoToolbox</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_Vulkan">Vulkan</td>
         <td></td>
       </tr>
     </tbody>
@@ -264,6 +289,9 @@
   <div>
       <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;TestHwaccels&gt;(IJsonSerializer)</a>
   </div>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_System_Type_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;TestHwaccels&gt;(Type, IJsonSerializer)</a>
+  </div>
 </div>
 </article>
           </div>
@@ -305,5 +333,6 @@
     <script type="text/javascript" src="../../styles/lunr.min.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
+    <script src="https://emby.media/resources/site-switcher.js" data-site-switcher=".site-title-link" data-current-site="betadev"></script>
   </body>
 </html>

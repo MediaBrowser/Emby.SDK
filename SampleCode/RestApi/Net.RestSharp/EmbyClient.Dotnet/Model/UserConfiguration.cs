@@ -43,10 +43,12 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="enableNextEpisodeAutoPlay">enableNextEpisodeAutoPlay.</param>
         /// <param name="resumeRewindSeconds">resumeRewindSeconds.</param>
         /// <param name="introSkipMode">introSkipMode.</param>
+        /// <param name="creditsSkipMode">creditsSkipMode.</param>
+        /// <param name="commercialsSkipMode">commercialsSkipMode.</param>
         /// <param name="enableLocalPassword">enableLocalPassword.</param>
         /// <param name="showSubtitlesOnSkipBack">showSubtitlesOnSkipBack.</param>
         /// <param name="showSubtitlesOnLowVolume">showSubtitlesOnLowVolume.</param>
-        public UserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), string profilePin = default(string), bool? displayMissingEpisodes = default(bool?), SubtitlePlaybackMode subtitleMode = default(SubtitlePlaybackMode), List<string> orderedViews = default(List<string>), List<string> latestItemsExcludes = default(List<string>), List<string> myMediaExcludes = default(List<string>), bool? hidePlayedInLatest = default(bool?), bool? hidePlayedInMoreLikeThis = default(bool?), bool? hidePlayedInSuggestions = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), int? resumeRewindSeconds = default(int?), SegmentSkipMode introSkipMode = default(SegmentSkipMode), bool? enableLocalPassword = default(bool?), bool? showSubtitlesOnSkipBack = default(bool?), bool? showSubtitlesOnLowVolume = default(bool?))
+        public UserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), string profilePin = default(string), bool? displayMissingEpisodes = default(bool?), SubtitlePlaybackMode subtitleMode = default(SubtitlePlaybackMode), List<string> orderedViews = default(List<string>), List<string> latestItemsExcludes = default(List<string>), List<string> myMediaExcludes = default(List<string>), bool? hidePlayedInLatest = default(bool?), bool? hidePlayedInMoreLikeThis = default(bool?), bool? hidePlayedInSuggestions = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), int? resumeRewindSeconds = default(int?), SegmentSkipMode introSkipMode = default(SegmentSkipMode), SegmentSkipMode creditsSkipMode = default(SegmentSkipMode), SegmentSkipMode commercialsSkipMode = default(SegmentSkipMode), bool? enableLocalPassword = default(bool?), bool? showSubtitlesOnSkipBack = default(bool?), bool? showSubtitlesOnLowVolume = default(bool?))
         {
             this.AudioLanguagePreference = audioLanguagePreference;
             this.PlayDefaultAudioTrack = playDefaultAudioTrack;
@@ -65,6 +67,8 @@ namespace EmbyClient.Dotnet.Model
             this.EnableNextEpisodeAutoPlay = enableNextEpisodeAutoPlay;
             this.ResumeRewindSeconds = resumeRewindSeconds;
             this.IntroSkipMode = introSkipMode;
+            this.CreditsSkipMode = creditsSkipMode;
+            this.CommercialsSkipMode = commercialsSkipMode;
             this.EnableLocalPassword = enableLocalPassword;
             this.ShowSubtitlesOnSkipBack = showSubtitlesOnSkipBack;
             this.ShowSubtitlesOnLowVolume = showSubtitlesOnLowVolume;
@@ -176,6 +180,18 @@ namespace EmbyClient.Dotnet.Model
         public SegmentSkipMode IntroSkipMode { get; set; }
 
         /// <summary>
+        /// Gets or Sets CreditsSkipMode
+        /// </summary>
+        [DataMember(Name="CreditsSkipMode", EmitDefaultValue=false)]
+        public SegmentSkipMode CreditsSkipMode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CommercialsSkipMode
+        /// </summary>
+        [DataMember(Name="CommercialsSkipMode", EmitDefaultValue=false)]
+        public SegmentSkipMode CommercialsSkipMode { get; set; }
+
+        /// <summary>
         /// Gets or Sets EnableLocalPassword
         /// </summary>
         [DataMember(Name="EnableLocalPassword", EmitDefaultValue=false)]
@@ -218,6 +234,8 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  EnableNextEpisodeAutoPlay: ").Append(EnableNextEpisodeAutoPlay).Append("\n");
             sb.Append("  ResumeRewindSeconds: ").Append(ResumeRewindSeconds).Append("\n");
             sb.Append("  IntroSkipMode: ").Append(IntroSkipMode).Append("\n");
+            sb.Append("  CreditsSkipMode: ").Append(CreditsSkipMode).Append("\n");
+            sb.Append("  CommercialsSkipMode: ").Append(CommercialsSkipMode).Append("\n");
             sb.Append("  EnableLocalPassword: ").Append(EnableLocalPassword).Append("\n");
             sb.Append("  ShowSubtitlesOnSkipBack: ").Append(ShowSubtitlesOnSkipBack).Append("\n");
             sb.Append("  ShowSubtitlesOnLowVolume: ").Append(ShowSubtitlesOnLowVolume).Append("\n");
@@ -344,6 +362,16 @@ namespace EmbyClient.Dotnet.Model
                     this.IntroSkipMode.Equals(input.IntroSkipMode))
                 ) && 
                 (
+                    this.CreditsSkipMode == input.CreditsSkipMode ||
+                    (this.CreditsSkipMode != null &&
+                    this.CreditsSkipMode.Equals(input.CreditsSkipMode))
+                ) && 
+                (
+                    this.CommercialsSkipMode == input.CommercialsSkipMode ||
+                    (this.CommercialsSkipMode != null &&
+                    this.CommercialsSkipMode.Equals(input.CommercialsSkipMode))
+                ) && 
+                (
                     this.EnableLocalPassword == input.EnableLocalPassword ||
                     (this.EnableLocalPassword != null &&
                     this.EnableLocalPassword.Equals(input.EnableLocalPassword))
@@ -403,6 +431,10 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.ResumeRewindSeconds.GetHashCode();
                 if (this.IntroSkipMode != null)
                     hashCode = hashCode * 59 + this.IntroSkipMode.GetHashCode();
+                if (this.CreditsSkipMode != null)
+                    hashCode = hashCode * 59 + this.CreditsSkipMode.GetHashCode();
+                if (this.CommercialsSkipMode != null)
+                    hashCode = hashCode * 59 + this.CommercialsSkipMode.GetHashCode();
                 if (this.EnableLocalPassword != null)
                     hashCode = hashCode * 59 + this.EnableLocalPassword.GetHashCode();
                 if (this.ShowSubtitlesOnSkipBack != null)

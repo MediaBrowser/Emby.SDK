@@ -29,6 +29,7 @@ class ApiConfigurationPageInfo(object):
         'menu_section': 'str',
         'menu_icon': 'str',
         'display_name': 'str',
+        'order': 'int',
         'configuration_page_type': 'PluginsConfigurationPageType',
         'plugin_id': 'str',
         'href': 'str',
@@ -45,6 +46,7 @@ class ApiConfigurationPageInfo(object):
         'menu_section': 'MenuSection',
         'menu_icon': 'MenuIcon',
         'display_name': 'DisplayName',
+        'order': 'Order',
         'configuration_page_type': 'ConfigurationPageType',
         'plugin_id': 'PluginId',
         'href': 'Href',
@@ -53,7 +55,7 @@ class ApiConfigurationPageInfo(object):
         'translations': 'Translations'
     }
 
-    def __init__(self, name=None, enable_in_main_menu=None, enable_in_user_menu=None, feature_id=None, menu_section=None, menu_icon=None, display_name=None, configuration_page_type=None, plugin_id=None, href=None, nav_menu_id=None, plugin=None, translations=None):  # noqa: E501
+    def __init__(self, name=None, enable_in_main_menu=None, enable_in_user_menu=None, feature_id=None, menu_section=None, menu_icon=None, display_name=None, order=None, configuration_page_type=None, plugin_id=None, href=None, nav_menu_id=None, plugin=None, translations=None):  # noqa: E501
         """ApiConfigurationPageInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._enable_in_main_menu = None
@@ -62,6 +64,7 @@ class ApiConfigurationPageInfo(object):
         self._menu_section = None
         self._menu_icon = None
         self._display_name = None
+        self._order = None
         self._configuration_page_type = None
         self._plugin_id = None
         self._href = None
@@ -83,6 +86,8 @@ class ApiConfigurationPageInfo(object):
             self.menu_icon = menu_icon
         if display_name is not None:
             self.display_name = display_name
+        if order is not None:
+            self.order = order
         if configuration_page_type is not None:
             self.configuration_page_type = configuration_page_type
         if plugin_id is not None:
@@ -242,6 +247,27 @@ class ApiConfigurationPageInfo(object):
         """
 
         self._display_name = display_name
+
+    @property
+    def order(self):
+        """Gets the order of this ApiConfigurationPageInfo.  # noqa: E501
+
+
+        :return: The order of this ApiConfigurationPageInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._order
+
+    @order.setter
+    def order(self, order):
+        """Sets the order of this ApiConfigurationPageInfo.
+
+
+        :param order: The order of this ApiConfigurationPageInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._order = order
 
     @property
     def configuration_page_type(self):

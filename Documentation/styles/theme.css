@@ -155,7 +155,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .site-header .nav {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
     height: var(--header-height);
 }
 
@@ -176,8 +176,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 
 .site-header .brand img {
     display: block;
-    height: 102px;
-    width: auto;
+    width: 128px;
+    height: auto;
     max-width: none;
 }
 
@@ -185,12 +185,65 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     display: none;
 }
 
+/* The section home link occupies the switcher's final slot before it loads. */
+.site-header .site-title-link,
+.site-header .site-title-link:hover,
+.site-header .site-title-link:focus {
+    color: var(--modern-text);
+    text-decoration: none;
+}
+
+.site-header .site-title {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.site-header .site-title strong {
+    color: inherit;
+    font-weight: 700;
+}
+
+.site-header .nav > .site-title-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    min-height: 40px;
+    margin-left: 12px;
+    padding: 8px 44px 8px 12px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.site-header .nav > .site-title-link::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    width: 1px;
+    height: 24px;
+    background: var(--modern-line);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+@media (hover: none), (any-pointer: coarse) {
+    .site-header .nav > .site-title-link {
+        min-height: 44px;
+        padding-right: 56px;
+    }
+}
+
 .site-header .nav-links {
     display: flex;
     align-items: center;
     gap: 30px;
     margin-left: auto;
-    margin-right: 3px;
 }
 
 .site-header .nav-links-list {
@@ -246,6 +299,23 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     }
     .site-header .nav-links.open { display: flex; }
     .site-header .nav-links a { padding: 12px; }
+}
+
+/* Keep the initial header geometry equal to the shared switcher's compact layout. */
+@media (max-width: 480px) {
+    .site-header .nav { gap: 8px; }
+    .site-header .nav > .site-title-link { margin-left: 4px; }
+    .site-header .nav > .site-title-link::before { left: -4px; }
+}
+
+@media (max-width: 419px) {
+    .site-header .brand img { width: 80px; }
+}
+
+/* Retain the full BetaDev label and both controls on the narrowest phones. */
+@media (max-width: 359px) {
+    .site-header .nav { gap: 6px; }
+    .site-header > nav.nav.container > a.brand > img { width: 60px; }
 }
 
 /* -------------------------------------------------------------------------

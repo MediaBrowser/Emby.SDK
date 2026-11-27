@@ -34,7 +34,7 @@ var (
 	xmlCheck  = regexp.MustCompile("(?i:[application|text]/xml)")
 )
 
-// APIClient manages communication with the Emby Server REST API (BETA) API v4.11.0.13
+// APIClient manages communication with the Emby Server REST API (BETA) API v4.11.0.19
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration
@@ -56,8 +56,6 @@ type APIClient struct {
 
 	ChannelServiceApi *ChannelServiceApiService
 
-	CodecParameterServiceApi *CodecParameterServiceApiService
-
 	CollectionServiceApi *CollectionServiceApiService
 
 	ConfigurationServiceApi *ConfigurationServiceApiService
@@ -76,8 +74,6 @@ type APIClient struct {
 
 	DynamicHlsServiceApi *DynamicHlsServiceApiService
 
-	EncodingInfoServiceApi *EncodingInfoServiceApiService
-
 	EnvironmentServiceApi *EnvironmentServiceApiService
 
 	FeatureServiceApi *FeatureServiceApiService
@@ -91,6 +87,10 @@ type APIClient struct {
 	GenresServiceApi *GenresServiceApiService
 
 	HlsSegmentServiceApi *HlsSegmentServiceApiService
+
+	HwaConfigServiceApi *HwaConfigServiceApiService
+
+	ImageExtractionConfigServiceApi *ImageExtractionConfigServiceApiService
 
 	ImageServiceApi *ImageServiceApiService
 
@@ -113,6 +113,8 @@ type APIClient struct {
 	LiveTvServiceApi *LiveTvServiceApiService
 
 	LocalizationServiceApi *LocalizationServiceApiService
+
+	LogDownloadServiceApi *LogDownloadServiceApiService
 
 	MediaInfoServiceApi *MediaInfoServiceApiService
 
@@ -157,8 +159,6 @@ type APIClient struct {
 	SystemServiceApi *SystemServiceApiService
 
 	TagServiceApi *TagServiceApiService
-
-	ToneMapOptionsServiceApi *ToneMapOptionsServiceApiService
 
 	TrailersServiceApi *TrailersServiceApiService
 
@@ -206,7 +206,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.BifServiceApi = (*BifServiceApiService)(&c.common)
 	c.BrandingServiceApi = (*BrandingServiceApiService)(&c.common)
 	c.ChannelServiceApi = (*ChannelServiceApiService)(&c.common)
-	c.CodecParameterServiceApi = (*CodecParameterServiceApiService)(&c.common)
 	c.CollectionServiceApi = (*CollectionServiceApiService)(&c.common)
 	c.ConfigurationServiceApi = (*ConfigurationServiceApiService)(&c.common)
 	c.ConnectServiceApi = (*ConnectServiceApiService)(&c.common)
@@ -216,7 +215,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.DlnaServerServiceApi = (*DlnaServerServiceApiService)(&c.common)
 	c.DlnaServiceApi = (*DlnaServiceApiService)(&c.common)
 	c.DynamicHlsServiceApi = (*DynamicHlsServiceApiService)(&c.common)
-	c.EncodingInfoServiceApi = (*EncodingInfoServiceApiService)(&c.common)
 	c.EnvironmentServiceApi = (*EnvironmentServiceApiService)(&c.common)
 	c.FeatureServiceApi = (*FeatureServiceApiService)(&c.common)
 	c.FfmpegOptionsServiceApi = (*FfmpegOptionsServiceApiService)(&c.common)
@@ -224,6 +222,8 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.GenericUIApiServiceApi = (*GenericUIApiServiceApiService)(&c.common)
 	c.GenresServiceApi = (*GenresServiceApiService)(&c.common)
 	c.HlsSegmentServiceApi = (*HlsSegmentServiceApiService)(&c.common)
+	c.HwaConfigServiceApi = (*HwaConfigServiceApiService)(&c.common)
+	c.ImageExtractionConfigServiceApi = (*ImageExtractionConfigServiceApiService)(&c.common)
 	c.ImageServiceApi = (*ImageServiceApiService)(&c.common)
 	c.InstantMixServiceApi = (*InstantMixServiceApiService)(&c.common)
 	c.ItemLookupServiceApi = (*ItemLookupServiceApiService)(&c.common)
@@ -235,6 +235,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.LiveStreamServiceApi = (*LiveStreamServiceApiService)(&c.common)
 	c.LiveTvServiceApi = (*LiveTvServiceApiService)(&c.common)
 	c.LocalizationServiceApi = (*LocalizationServiceApiService)(&c.common)
+	c.LogDownloadServiceApi = (*LogDownloadServiceApiService)(&c.common)
 	c.MediaInfoServiceApi = (*MediaInfoServiceApiService)(&c.common)
 	c.MoviesServiceApi = (*MoviesServiceApiService)(&c.common)
 	c.MusicGenresServiceApi = (*MusicGenresServiceApiService)(&c.common)
@@ -257,7 +258,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.SyncServiceApi = (*SyncServiceApiService)(&c.common)
 	c.SystemServiceApi = (*SystemServiceApiService)(&c.common)
 	c.TagServiceApi = (*TagServiceApiService)(&c.common)
-	c.ToneMapOptionsServiceApi = (*ToneMapOptionsServiceApiService)(&c.common)
 	c.TrailersServiceApi = (*TrailersServiceApiService)(&c.common)
 	c.TvShowsServiceApi = (*TvShowsServiceApiService)(&c.common)
 	c.UniversalAudioServiceApi = (*UniversalAudioServiceApiService)(&c.common)

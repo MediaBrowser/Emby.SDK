@@ -30,4 +30,5 @@ public enum TranscodingVpStepTypes: String, Codable {
     case stripStyles = "StripStyles"
     case connectTo = "ConnectTo"
     case rotate = "Rotate"
+    case textSub2GraphicSub = "TextSub2GraphicSub"
 }

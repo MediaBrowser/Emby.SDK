@@ -136,6 +136,12 @@ export default class TranscodingVpStepTypes {
          */
         Rotate = "Rotate";
 
+        /**
+         * value: "TextSub2GraphicSub"
+         * @const
+         */
+        TextSub2GraphicSub = "TextSub2GraphicSub";
+
 
     /**
     * Returns a <code>TranscodingVpStepTypes</code> enum value from a Javascript object name.

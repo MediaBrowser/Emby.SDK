@@ -39,7 +39,8 @@ public enum TranscodingVpStepTypes {
   SHOWSPEAKER("ShowSpeaker"),
   STRIPSTYLES("StripStyles"),
   CONNECTTO("ConnectTo"),
-  ROTATE("Rotate");
+  ROTATE("Rotate"),
+  TEXTSUB2GRAPHICSUB("TextSub2GraphicSub");
 
   private String value;
 

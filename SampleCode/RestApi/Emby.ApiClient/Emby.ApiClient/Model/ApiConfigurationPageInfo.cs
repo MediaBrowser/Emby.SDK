@@ -69,6 +69,12 @@ namespace Emby.ApiClient.Model
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// Gets or Sets Order
+        /// </summary>
+        /// <value>The Order.</value>
+        public int? Order { get; set; }
+
+        /// <summary>
         /// Gets or Sets ConfigurationPageType
         /// </summary>
         /// <value>The ConfigurationPageType.</value>
@@ -119,6 +125,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  MenuSection: ").Append(MenuSection).Append("\n");
             sb.Append("  MenuIcon: ").Append(MenuIcon).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  ConfigurationPageType: ").Append(ConfigurationPageType).Append("\n");
             sb.Append("  PluginId: ").Append(PluginId).Append("\n");
             sb.Append("  Href: ").Append(Href).Append("\n");
@@ -186,6 +193,11 @@ namespace Emby.ApiClient.Model
                     this.DisplayName.Equals(input.DisplayName))
                 ) && 
                 (
+                    this.Order == input.Order ||
+                    (this.Order != null &&
+                    this.Order.Equals(input.Order))
+                ) && 
+                (
                     this.ConfigurationPageType == input.ConfigurationPageType ||
                     (this.ConfigurationPageType != null &&
                     this.ConfigurationPageType.Equals(input.ConfigurationPageType))
@@ -241,6 +253,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.MenuIcon.GetHashCode();
                 if (this.DisplayName != null)
                     hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
+                if (this.Order != null)
+                    hashCode = hashCode * 59 + this.Order.GetHashCode();
                 if (this.ConfigurationPageType != null)
                     hashCode = hashCode * 59 + this.ConfigurationPageType.GetHashCode();
                 if (this.PluginId != null)

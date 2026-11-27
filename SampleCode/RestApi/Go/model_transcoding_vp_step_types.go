@@ -30,4 +30,5 @@ const (
 	STRIP_STYLES_TranscodingVpStepTypes TranscodingVpStepTypes = "StripStyles"
 	CONNECT_TO_TranscodingVpStepTypes TranscodingVpStepTypes = "ConnectTo"
 	ROTATE_TranscodingVpStepTypes TranscodingVpStepTypes = "Rotate"
+	TEXT_SUB2_GRAPHIC_SUB_TranscodingVpStepTypes TranscodingVpStepTypes = "TextSub2GraphicSub"
 )

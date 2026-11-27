@@ -40,6 +40,24 @@ export default class MarkerType {
          */
         CreditsStart = "CreditsStart";
 
+        /**
+         * value: "CreditsEnd"
+         * @const
+         */
+        CreditsEnd = "CreditsEnd";
+
+        /**
+         * value: "CommercialsStart"
+         * @const
+         */
+        CommercialsStart = "CommercialsStart";
+
+        /**
+         * value: "CommercialsEnd"
+         * @const
+         */
+        CommercialsEnd = "CommercialsEnd";
+
 
     /**
     * Returns a <code>MarkerType</code> enum value from a Javascript object name.

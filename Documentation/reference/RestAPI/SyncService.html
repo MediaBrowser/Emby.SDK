@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>SyncService </title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="SyncService ">
     <meta name="generator" content="docfx 2.59.2.0">
     <meta name="theme-color" content="#090d0f">
@@ -34,16 +34,18 @@
       
       <header class="site-header">
         <nav class="nav container" aria-label="Primary navigation">
-          <a class="brand" href="../../index.html" aria-label="Emby Developer home">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
             
-      <img class="logo-on-dark" src="../../images/emby_dev_logo_beta.png" alt="Emby Developer">
-      <img class="logo-on-light" src="../../images/emby_dev_logo_black.png" alt="Emby Developer">
+            <img class="logo-on-dark" src="../../images/emby-logo-dark-beta.png" alt="Emby">
+            <img class="logo-on-light" src="../../images/emby-logo-beta.png" alt="Emby">
           </a>
+          <a class="site-title-link" href="../../index.html"><span class="site-title">Emby <strong>BetaDev</strong></span></a>
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
           <div class="nav-links" id="navbar">
             <ul class="nav-links-list">
                 
-                    <li><a href="../../index.html" title="DEV Home">DEV Home</a></li>
+                    <li><a href="https://emby.media/" title="Emby Home">Emby Home</a></li>
+                    <li><a href="../../index.html" title="Dev Home">Dev Home</a></li>
                     <li><a href="../../doc/index.html" title="Documentation">Documentation</a></li>
                     <li><a href="../../reference/index.html" title="Reference">Reference</a></li>
                     <li><a href="../../download/index.html" title="Download">Download</a></li>
@@ -111,151 +113,151 @@
 <a href="https://betadev.emby.media/doc/restapi/Sync.html" class=""><p>API Documentation: Sync</p>
 </a>
 
- <a class="xref" href="SyncService/deleteSyncByTargetidItems.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/deleteSyncByTargetidItems/operationlistitem" class="text-capitalize">deleteSyncByTargetidItems</h3></a>
+ <a class="xref" href="SyncService/deleteSyncByTargetidItems.html"><h3 id="emby_restapi_deleteSyncByTargetidItems_operationlistitem" data-uid="emby.restapi/deleteSyncByTargetidItems/operationlistitem" class="text-capitalize">deleteSyncByTargetidItems</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /Sync/{TargetId}/Items</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Cancels items from a sync target</p>
 </div>
- <a class="xref" href="SyncService/deleteSyncJobitemsById.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/deleteSyncJobitemsById/operationlistitem" class="text-capitalize">deleteSyncJobitemsById</h3></a>
+ <a class="xref" href="SyncService/deleteSyncJobitemsById.html"><h3 id="emby_restapi_deleteSyncJobitemsById_operationlistitem" data-uid="emby.restapi/deleteSyncJobitemsById/operationlistitem" class="text-capitalize">deleteSyncJobitemsById</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /Sync/JobItems/{Id}</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Cancels a sync job item</p>
 </div>
- <a class="xref" href="SyncService/deleteSyncJobsById.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/deleteSyncJobsById/operationlistitem" class="text-capitalize">deleteSyncJobsById</h3></a>
+ <a class="xref" href="SyncService/deleteSyncJobsById.html"><h3 id="emby_restapi_deleteSyncJobsById_operationlistitem" data-uid="emby.restapi/deleteSyncJobsById/operationlistitem" class="text-capitalize">deleteSyncJobsById</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-delete">delete</span> /Sync/Jobs/{Id}</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Cancels a sync job.</p>
 </div>
- <a class="xref" href="SyncService/getSyncItemsReady.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/getSyncItemsReady/operationlistitem" class="text-capitalize">getSyncItemsReady</h3></a>
+ <a class="xref" href="SyncService/getSyncItemsReady.html"><h3 id="emby_restapi_getSyncItemsReady_operationlistitem" data-uid="emby.restapi/getSyncItemsReady/operationlistitem" class="text-capitalize">getSyncItemsReady</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Sync/Items/Ready</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Gets ready to download sync items.</p>
 </div>
- <a class="xref" href="SyncService/getSyncJobitems.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/getSyncJobitems/operationlistitem" class="text-capitalize">getSyncJobitems</h3></a>
+ <a class="xref" href="SyncService/getSyncJobitems.html"><h3 id="emby_restapi_getSyncJobitems_operationlistitem" data-uid="emby.restapi/getSyncJobitems/operationlistitem" class="text-capitalize">getSyncJobitems</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Sync/JobItems</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Gets sync job items.</p>
 </div>
- <a class="xref" href="SyncService/getSyncJobitemsByIdAdditionalfiles.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/getSyncJobitemsByIdAdditionalfiles/operationlistitem" class="text-capitalize">getSyncJobitemsByIdAdditionalfiles</h3></a>
+ <a class="xref" href="SyncService/getSyncJobitemsByIdAdditionalfiles.html"><h3 id="emby_restapi_getSyncJobitemsByIdAdditionalfiles_operationlistitem" data-uid="emby.restapi/getSyncJobitemsByIdAdditionalfiles/operationlistitem" class="text-capitalize">getSyncJobitemsByIdAdditionalfiles</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Sync/JobItems/{Id}/AdditionalFiles</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Gets a sync job item file</p>
 </div>
- <a class="xref" href="SyncService/getSyncJobitemsByIdFile.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/getSyncJobitemsByIdFile/operationlistitem" class="text-capitalize">getSyncJobitemsByIdFile</h3></a>
+ <a class="xref" href="SyncService/getSyncJobitemsByIdFile.html"><h3 id="emby_restapi_getSyncJobitemsByIdFile_operationlistitem" data-uid="emby.restapi/getSyncJobitemsByIdFile/operationlistitem" class="text-capitalize">getSyncJobitemsByIdFile</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Sync/JobItems/{Id}/File</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Gets a sync job item file</p>
 </div>
- <a class="xref" href="SyncService/getSyncJobs.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/getSyncJobs/operationlistitem" class="text-capitalize">getSyncJobs</h3></a>
+ <a class="xref" href="SyncService/getSyncJobs.html"><h3 id="emby_restapi_getSyncJobs_operationlistitem" data-uid="emby.restapi/getSyncJobs/operationlistitem" class="text-capitalize">getSyncJobs</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Sync/Jobs</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Gets sync jobs.</p>
 </div>
- <a class="xref" href="SyncService/getSyncJobsById.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/getSyncJobsById/operationlistitem" class="text-capitalize">getSyncJobsById</h3></a>
+ <a class="xref" href="SyncService/getSyncJobsById.html"><h3 id="emby_restapi_getSyncJobsById_operationlistitem" data-uid="emby.restapi/getSyncJobsById/operationlistitem" class="text-capitalize">getSyncJobsById</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Sync/Jobs/{Id}</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Gets a sync job.</p>
 </div>
- <a class="xref" href="SyncService/getSyncOptions.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/getSyncOptions/operationlistitem" class="text-capitalize">getSyncOptions</h3></a>
+ <a class="xref" href="SyncService/getSyncOptions.html"><h3 id="emby_restapi_getSyncOptions_operationlistitem" data-uid="emby.restapi/getSyncOptions/operationlistitem" class="text-capitalize">getSyncOptions</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Sync/Options</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Gets a list of available sync targets.</p>
 </div>
- <a class="xref" href="SyncService/getSyncTargets.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/getSyncTargets/operationlistitem" class="text-capitalize">getSyncTargets</h3></a>
+ <a class="xref" href="SyncService/getSyncTargets.html"><h3 id="emby_restapi_getSyncTargets_operationlistitem" data-uid="emby.restapi/getSyncTargets/operationlistitem" class="text-capitalize">getSyncTargets</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Sync/Targets</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Gets a list of available sync targets.</p>
 </div>
- <a class="xref" href="SyncService/headSyncJobitemsByIdFile.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/headSyncJobitemsByIdFile/operationlistitem" class="text-capitalize">headSyncJobitemsByIdFile</h3></a>
+ <a class="xref" href="SyncService/headSyncJobitemsByIdFile.html"><h3 id="emby_restapi_headSyncJobitemsByIdFile_operationlistitem" data-uid="emby.restapi/headSyncJobitemsByIdFile/operationlistitem" class="text-capitalize">headSyncJobitemsByIdFile</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /Sync/JobItems/{Id}/File</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Gets a sync job item file</p>
 </div>
- <a class="xref" href="SyncService/postSyncByItemidStatus.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/postSyncByItemidStatus/operationlistitem" class="text-capitalize">postSyncByItemidStatus</h3></a>
+ <a class="xref" href="SyncService/postSyncByItemidStatus.html"><h3 id="emby_restapi_postSyncByItemidStatus_operationlistitem" data-uid="emby.restapi/postSyncByItemidStatus/operationlistitem" class="text-capitalize">postSyncByItemidStatus</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Sync/{ItemId}/Status</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Gets sync status for an item.</p>
 </div>
- <a class="xref" href="SyncService/postSyncByTargetidItemsDelete.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/postSyncByTargetidItemsDelete/operationlistitem" class="text-capitalize">postSyncByTargetidItemsDelete</h3></a>
+ <a class="xref" href="SyncService/postSyncByTargetidItemsDelete.html"><h3 id="emby_restapi_postSyncByTargetidItemsDelete_operationlistitem" data-uid="emby.restapi/postSyncByTargetidItemsDelete/operationlistitem" class="text-capitalize">postSyncByTargetidItemsDelete</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Sync/{TargetId}/Items/Delete</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Cancels items from a sync target</p>
 </div>
- <a class="xref" href="SyncService/postSyncData.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/postSyncData/operationlistitem" class="text-capitalize">postSyncData</h3></a>
+ <a class="xref" href="SyncService/postSyncData.html"><h3 id="emby_restapi_postSyncData_operationlistitem" data-uid="emby.restapi/postSyncData/operationlistitem" class="text-capitalize">postSyncData</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Sync/Data</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Syncs data between device and server</p>
 </div>
- <a class="xref" href="SyncService/postSyncItemsCancel.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/postSyncItemsCancel/operationlistitem" class="text-capitalize">postSyncItemsCancel</h3></a>
+ <a class="xref" href="SyncService/postSyncItemsCancel.html"><h3 id="emby_restapi_postSyncItemsCancel_operationlistitem" data-uid="emby.restapi/postSyncItemsCancel/operationlistitem" class="text-capitalize">postSyncItemsCancel</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Sync/Items/Cancel</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Cancels items from a sync target</p>
 </div>
- <a class="xref" href="SyncService/postSyncJobitemsByIdDelete.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/postSyncJobitemsByIdDelete/operationlistitem" class="text-capitalize">postSyncJobitemsByIdDelete</h3></a>
+ <a class="xref" href="SyncService/postSyncJobitemsByIdDelete.html"><h3 id="emby_restapi_postSyncJobitemsByIdDelete_operationlistitem" data-uid="emby.restapi/postSyncJobitemsByIdDelete/operationlistitem" class="text-capitalize">postSyncJobitemsByIdDelete</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Sync/JobItems/{Id}/Delete</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Cancels a sync job item</p>
 </div>
- <a class="xref" href="SyncService/postSyncJobitemsByIdEnable.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/postSyncJobitemsByIdEnable/operationlistitem" class="text-capitalize">postSyncJobitemsByIdEnable</h3></a>
+ <a class="xref" href="SyncService/postSyncJobitemsByIdEnable.html"><h3 id="emby_restapi_postSyncJobitemsByIdEnable_operationlistitem" data-uid="emby.restapi/postSyncJobitemsByIdEnable/operationlistitem" class="text-capitalize">postSyncJobitemsByIdEnable</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Sync/JobItems/{Id}/Enable</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Enables a cancelled or queued sync job item</p>
 </div>
- <a class="xref" href="SyncService/postSyncJobitemsByIdMarkforremoval.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/postSyncJobitemsByIdMarkforremoval/operationlistitem" class="text-capitalize">postSyncJobitemsByIdMarkforremoval</h3></a>
+ <a class="xref" href="SyncService/postSyncJobitemsByIdMarkforremoval.html"><h3 id="emby_restapi_postSyncJobitemsByIdMarkforremoval_operationlistitem" data-uid="emby.restapi/postSyncJobitemsByIdMarkforremoval/operationlistitem" class="text-capitalize">postSyncJobitemsByIdMarkforremoval</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Sync/JobItems/{Id}/MarkForRemoval</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Marks a job item for removal</p>
 </div>
- <a class="xref" href="SyncService/postSyncJobitemsByIdTransferred.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/postSyncJobitemsByIdTransferred/operationlistitem" class="text-capitalize">postSyncJobitemsByIdTransferred</h3></a>
+ <a class="xref" href="SyncService/postSyncJobitemsByIdTransferred.html"><h3 id="emby_restapi_postSyncJobitemsByIdTransferred_operationlistitem" data-uid="emby.restapi/postSyncJobitemsByIdTransferred/operationlistitem" class="text-capitalize">postSyncJobitemsByIdTransferred</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Sync/JobItems/{Id}/Transferred</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Reports that a sync job item has successfully been transferred.</p>
 </div>
- <a class="xref" href="SyncService/postSyncJobitemsByIdUnmarkforremoval.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/postSyncJobitemsByIdUnmarkforremoval/operationlistitem" class="text-capitalize">postSyncJobitemsByIdUnmarkforremoval</h3></a>
+ <a class="xref" href="SyncService/postSyncJobitemsByIdUnmarkforremoval.html"><h3 id="emby_restapi_postSyncJobitemsByIdUnmarkforremoval_operationlistitem" data-uid="emby.restapi/postSyncJobitemsByIdUnmarkforremoval/operationlistitem" class="text-capitalize">postSyncJobitemsByIdUnmarkforremoval</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Sync/JobItems/{Id}/UnmarkForRemoval</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Unmarks a job item for removal</p>
 </div>
- <a class="xref" href="SyncService/postSyncJobs.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/postSyncJobs/operationlistitem" class="text-capitalize">postSyncJobs</h3></a>
+ <a class="xref" href="SyncService/postSyncJobs.html"><h3 id="emby_restapi_postSyncJobs_operationlistitem" data-uid="emby.restapi/postSyncJobs/operationlistitem" class="text-capitalize">postSyncJobs</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Sync/Jobs</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Gets sync jobs.</p>
 </div>
- <a class="xref" href="SyncService/postSyncJobsById.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/postSyncJobsById/operationlistitem" class="text-capitalize">postSyncJobsById</h3></a>
+ <a class="xref" href="SyncService/postSyncJobsById.html"><h3 id="emby_restapi_postSyncJobsById_operationlistitem" data-uid="emby.restapi/postSyncJobsById/operationlistitem" class="text-capitalize">postSyncJobsById</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Sync/Jobs/{Id}</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Updates a sync job.</p>
 </div>
- <a class="xref" href="SyncService/postSyncJobsByIdDelete.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/postSyncJobsByIdDelete/operationlistitem" class="text-capitalize">postSyncJobsByIdDelete</h3></a>
+ <a class="xref" href="SyncService/postSyncJobsByIdDelete.html"><h3 id="emby_restapi_postSyncJobsByIdDelete_operationlistitem" data-uid="emby.restapi/postSyncJobsByIdDelete/operationlistitem" class="text-capitalize">postSyncJobsByIdDelete</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Sync/Jobs/{Id}/Delete</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Cancels a sync job.</p>
 </div>
- <a class="xref" href="SyncService/postSyncOfflineactions.html"><h3 id="emby_restapi_tag_SyncService" data-uid="emby.restapi/postSyncOfflineactions/operationlistitem" class="text-capitalize">postSyncOfflineactions</h3></a>
+ <a class="xref" href="SyncService/postSyncOfflineactions.html"><h3 id="emby_restapi_postSyncOfflineactions_operationlistitem" data-uid="emby.restapi/postSyncOfflineactions/operationlistitem" class="text-capitalize">postSyncOfflineactions</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Sync/OfflineActions</code></pre>
 </div>
@@ -303,5 +305,6 @@
     <script type="text/javascript" src="../../styles/lunr.min.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
+    <script src="https://emby.media/resources/site-switcher.js" data-site-switcher=".site-title-link" data-current-site="betadev"></script>
   </body>
 </html>

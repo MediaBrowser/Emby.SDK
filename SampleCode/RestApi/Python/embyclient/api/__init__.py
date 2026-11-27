@@ -10,7 +10,6 @@ from embyclient.api.backup_api_api import BackupApiApi
 from embyclient.api.bif_service_api import BifServiceApi
 from embyclient.api.branding_service_api import BrandingServiceApi
 from embyclient.api.channel_service_api import ChannelServiceApi
-from embyclient.api.codec_parameter_service_api import CodecParameterServiceApi
 from embyclient.api.collection_service_api import CollectionServiceApi
 from embyclient.api.configuration_service_api import ConfigurationServiceApi
 from embyclient.api.connect_service_api import ConnectServiceApi
@@ -20,7 +19,6 @@ from embyclient.api.display_preferences_service_api import DisplayPreferencesSer
 from embyclient.api.dlna_server_service_api import DlnaServerServiceApi
 from embyclient.api.dlna_service_api import DlnaServiceApi
 from embyclient.api.dynamic_hls_service_api import DynamicHlsServiceApi
-from embyclient.api.encoding_info_service_api import EncodingInfoServiceApi
 from embyclient.api.environment_service_api import EnvironmentServiceApi
 from embyclient.api.feature_service_api import FeatureServiceApi
 from embyclient.api.ffmpeg_options_service_api import FfmpegOptionsServiceApi
@@ -28,6 +26,8 @@ from embyclient.api.game_genres_service_api import GameGenresServiceApi
 from embyclient.api.generic_ui_api_service_api import GenericUIApiServiceApi
 from embyclient.api.genres_service_api import GenresServiceApi
 from embyclient.api.hls_segment_service_api import HlsSegmentServiceApi
+from embyclient.api.hwa_config_service_api import HwaConfigServiceApi
+from embyclient.api.image_extraction_config_service_api import ImageExtractionConfigServiceApi
 from embyclient.api.image_service_api import ImageServiceApi
 from embyclient.api.instant_mix_service_api import InstantMixServiceApi
 from embyclient.api.item_lookup_service_api import ItemLookupServiceApi
@@ -39,6 +39,7 @@ from embyclient.api.library_structure_service_api import LibraryStructureService
 from embyclient.api.live_stream_service_api import LiveStreamServiceApi
 from embyclient.api.live_tv_service_api import LiveTvServiceApi
 from embyclient.api.localization_service_api import LocalizationServiceApi
+from embyclient.api.log_download_service_api import LogDownloadServiceApi
 from embyclient.api.media_info_service_api import MediaInfoServiceApi
 from embyclient.api.movies_service_api import MoviesServiceApi
 from embyclient.api.music_genres_service_api import MusicGenresServiceApi
@@ -61,7 +62,6 @@ from embyclient.api.suggestions_service_api import SuggestionsServiceApi
 from embyclient.api.sync_service_api import SyncServiceApi
 from embyclient.api.system_service_api import SystemServiceApi
 from embyclient.api.tag_service_api import TagServiceApi
-from embyclient.api.tone_map_options_service_api import ToneMapOptionsServiceApi
 from embyclient.api.trailers_service_api import TrailersServiceApi
 from embyclient.api.tv_shows_service_api import TvShowsServiceApi
 from embyclient.api.universal_audio_service_api import UniversalAudioServiceApi

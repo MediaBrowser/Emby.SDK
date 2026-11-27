@@ -18,6 +18,7 @@ public struct ApiConfigurationPageInfo: Codable {
     public var menuSection: String?
     public var menuIcon: String?
     public var displayName: String?
+    public var order: Int?
     public var configurationPageType: PluginsConfigurationPageType?
     public var pluginId: String?
     public var href: String?
@@ -25,7 +26,7 @@ public struct ApiConfigurationPageInfo: Codable {
     public var plugin: CommonPluginsIPlugin?
     public var translations: [String]?
 
-    public init(name: String? = nil, enableInMainMenu: Bool? = nil, enableInUserMenu: Bool? = nil, featureId: String? = nil, menuSection: String? = nil, menuIcon: String? = nil, displayName: String? = nil, configurationPageType: PluginsConfigurationPageType? = nil, pluginId: String? = nil, href: String? = nil, navMenuId: String? = nil, plugin: CommonPluginsIPlugin? = nil, translations: [String]? = nil) {
+    public init(name: String? = nil, enableInMainMenu: Bool? = nil, enableInUserMenu: Bool? = nil, featureId: String? = nil, menuSection: String? = nil, menuIcon: String? = nil, displayName: String? = nil, order: Int? = nil, configurationPageType: PluginsConfigurationPageType? = nil, pluginId: String? = nil, href: String? = nil, navMenuId: String? = nil, plugin: CommonPluginsIPlugin? = nil, translations: [String]? = nil) {
         self.name = name
         self.enableInMainMenu = enableInMainMenu
         self.enableInUserMenu = enableInUserMenu
@@ -33,6 +34,7 @@ public struct ApiConfigurationPageInfo: Codable {
         self.menuSection = menuSection
         self.menuIcon = menuIcon
         self.displayName = displayName
+        self.order = order
         self.configurationPageType = configurationPageType
         self.pluginId = pluginId
         self.href = href
@@ -49,6 +51,7 @@ public struct ApiConfigurationPageInfo: Codable {
         case menuSection = "MenuSection"
         case menuIcon = "MenuIcon"
         case displayName = "DisplayName"
+        case order = "Order"
         case configurationPageType = "ConfigurationPageType"
         case pluginId = "PluginId"
         case href = "Href"

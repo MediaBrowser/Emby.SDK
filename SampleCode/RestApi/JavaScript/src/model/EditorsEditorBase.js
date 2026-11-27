@@ -16,7 +16,7 @@ import EditorsEditorButtonItem from './EditorsEditorButtonItem';
 /**
 * The EditorsEditorBase model module.
 * @module model/EditorsEditorBase
-* @version 4.11.0.13
+* @version 4.11.0.19
 */
 export default class EditorsEditorBase {
     /**

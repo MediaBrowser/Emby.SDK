@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The MediaUrl model module.
 * @module model/MediaUrl
-* @version 4.11.0.13
+* @version 4.11.0.19
 */
 export default class MediaUrl {
     /**

@@ -13,6 +13,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import embyclient.model.DeviceProfile;
+import embyclient.model.SecurityAttestationReply;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -49,6 +50,12 @@ public class ClientCapabilities {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("AttestationProvider")
+  private String attestationProvider = null;
+
+  @SerializedName("AttestationReply")
+  private SecurityAttestationReply attestationReply = null;
 
   public ClientCapabilities playableMediaTypes(List<String> playableMediaTypes) {
     this.playableMediaTypes = playableMediaTypes;
@@ -228,6 +235,42 @@ public class ClientCapabilities {
     this.appId = appId;
   }
 
+  public ClientCapabilities attestationProvider(String attestationProvider) {
+    this.attestationProvider = attestationProvider;
+    return this;
+  }
+
+   /**
+   * Get attestationProvider
+   * @return attestationProvider
+  **/
+  @Schema(description = "")
+  public String getAttestationProvider() {
+    return attestationProvider;
+  }
+
+  public void setAttestationProvider(String attestationProvider) {
+    this.attestationProvider = attestationProvider;
+  }
+
+  public ClientCapabilities attestationReply(SecurityAttestationReply attestationReply) {
+    this.attestationReply = attestationReply;
+    return this;
+  }
+
+   /**
+   * Get attestationReply
+   * @return attestationReply
+  **/
+  @Schema(description = "")
+  public SecurityAttestationReply getAttestationReply() {
+    return attestationReply;
+  }
+
+  public void setAttestationReply(SecurityAttestationReply attestationReply) {
+    this.attestationReply = attestationReply;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -246,12 +289,14 @@ public class ClientCapabilities {
         Objects.equals(this.supportsSync, clientCapabilities.supportsSync) &&
         Objects.equals(this.deviceProfile, clientCapabilities.deviceProfile) &&
         Objects.equals(this.iconUrl, clientCapabilities.iconUrl) &&
-        Objects.equals(this.appId, clientCapabilities.appId);
+        Objects.equals(this.appId, clientCapabilities.appId) &&
+        Objects.equals(this.attestationProvider, clientCapabilities.attestationProvider) &&
+        Objects.equals(this.attestationReply, clientCapabilities.attestationReply);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(playableMediaTypes, supportedCommands, supportsMediaControl, pushToken, pushTokenType, supportsSync, deviceProfile, iconUrl, appId);
+    return Objects.hash(playableMediaTypes, supportedCommands, supportsMediaControl, pushToken, pushTokenType, supportsSync, deviceProfile, iconUrl, appId, attestationProvider, attestationReply);
   }
 
 
@@ -269,6 +314,8 @@ public class ClientCapabilities {
     sb.append("    deviceProfile: ").append(toIndentedString(deviceProfile)).append("\n");
     sb.append("    iconUrl: ").append(toIndentedString(iconUrl)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    attestationProvider: ").append(toIndentedString(attestationProvider)).append("\n");
+    sb.append("    attestationReply: ").append(toIndentedString(attestationReply)).append("\n");
     sb.append("}");
     return sb.toString();
   }

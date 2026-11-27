@@ -38,6 +38,7 @@ class TranscodingVpStepTypes(object):
     STRIPSTYLES = "StripStyles"
     CONNECTTO = "ConnectTo"
     ROTATE = "Rotate"
+    TEXTSUB2GRAPHICSUB = "TextSub2GraphicSub"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

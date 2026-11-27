@@ -39,6 +39,8 @@ class UserConfiguration(object):
         'enable_next_episode_auto_play': 'bool',
         'resume_rewind_seconds': 'int',
         'intro_skip_mode': 'SegmentSkipMode',
+        'credits_skip_mode': 'SegmentSkipMode',
+        'commercials_skip_mode': 'SegmentSkipMode',
         'enable_local_password': 'bool',
         'show_subtitles_on_skip_back': 'bool',
         'show_subtitles_on_low_volume': 'bool'
@@ -62,12 +64,14 @@ class UserConfiguration(object):
         'enable_next_episode_auto_play': 'EnableNextEpisodeAutoPlay',
         'resume_rewind_seconds': 'ResumeRewindSeconds',
         'intro_skip_mode': 'IntroSkipMode',
+        'credits_skip_mode': 'CreditsSkipMode',
+        'commercials_skip_mode': 'CommercialsSkipMode',
         'enable_local_password': 'EnableLocalPassword',
         'show_subtitles_on_skip_back': 'ShowSubtitlesOnSkipBack',
         'show_subtitles_on_low_volume': 'ShowSubtitlesOnLowVolume'
     }
 
-    def __init__(self, audio_language_preference=None, play_default_audio_track=None, subtitle_language_preference=None, profile_pin=None, display_missing_episodes=None, subtitle_mode=None, ordered_views=None, latest_items_excludes=None, my_media_excludes=None, hide_played_in_latest=None, hide_played_in_more_like_this=None, hide_played_in_suggestions=None, remember_audio_selections=None, remember_subtitle_selections=None, enable_next_episode_auto_play=None, resume_rewind_seconds=None, intro_skip_mode=None, enable_local_password=None, show_subtitles_on_skip_back=None, show_subtitles_on_low_volume=None):  # noqa: E501
+    def __init__(self, audio_language_preference=None, play_default_audio_track=None, subtitle_language_preference=None, profile_pin=None, display_missing_episodes=None, subtitle_mode=None, ordered_views=None, latest_items_excludes=None, my_media_excludes=None, hide_played_in_latest=None, hide_played_in_more_like_this=None, hide_played_in_suggestions=None, remember_audio_selections=None, remember_subtitle_selections=None, enable_next_episode_auto_play=None, resume_rewind_seconds=None, intro_skip_mode=None, credits_skip_mode=None, commercials_skip_mode=None, enable_local_password=None, show_subtitles_on_skip_back=None, show_subtitles_on_low_volume=None):  # noqa: E501
         """UserConfiguration - a model defined in Swagger"""  # noqa: E501
         self._audio_language_preference = None
         self._play_default_audio_track = None
@@ -86,6 +90,8 @@ class UserConfiguration(object):
         self._enable_next_episode_auto_play = None
         self._resume_rewind_seconds = None
         self._intro_skip_mode = None
+        self._credits_skip_mode = None
+        self._commercials_skip_mode = None
         self._enable_local_password = None
         self._show_subtitles_on_skip_back = None
         self._show_subtitles_on_low_volume = None
@@ -124,6 +130,10 @@ class UserConfiguration(object):
             self.resume_rewind_seconds = resume_rewind_seconds
         if intro_skip_mode is not None:
             self.intro_skip_mode = intro_skip_mode
+        if credits_skip_mode is not None:
+            self.credits_skip_mode = credits_skip_mode
+        if commercials_skip_mode is not None:
+            self.commercials_skip_mode = commercials_skip_mode
         if enable_local_password is not None:
             self.enable_local_password = enable_local_password
         if show_subtitles_on_skip_back is not None:
@@ -493,6 +503,48 @@ class UserConfiguration(object):
         """
 
         self._intro_skip_mode = intro_skip_mode
+
+    @property
+    def credits_skip_mode(self):
+        """Gets the credits_skip_mode of this UserConfiguration.  # noqa: E501
+
+
+        :return: The credits_skip_mode of this UserConfiguration.  # noqa: E501
+        :rtype: SegmentSkipMode
+        """
+        return self._credits_skip_mode
+
+    @credits_skip_mode.setter
+    def credits_skip_mode(self, credits_skip_mode):
+        """Sets the credits_skip_mode of this UserConfiguration.
+
+
+        :param credits_skip_mode: The credits_skip_mode of this UserConfiguration.  # noqa: E501
+        :type: SegmentSkipMode
+        """
+
+        self._credits_skip_mode = credits_skip_mode
+
+    @property
+    def commercials_skip_mode(self):
+        """Gets the commercials_skip_mode of this UserConfiguration.  # noqa: E501
+
+
+        :return: The commercials_skip_mode of this UserConfiguration.  # noqa: E501
+        :rtype: SegmentSkipMode
+        """
+        return self._commercials_skip_mode
+
+    @commercials_skip_mode.setter
+    def commercials_skip_mode(self, commercials_skip_mode):
+        """Sets the commercials_skip_mode of this UserConfiguration.
+
+
+        :param commercials_skip_mode: The commercials_skip_mode of this UserConfiguration.  # noqa: E501
+        :type: SegmentSkipMode
+        """
+
+        self._commercials_skip_mode = commercials_skip_mode
 
     @property
     def enable_local_password(self):

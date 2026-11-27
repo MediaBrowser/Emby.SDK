@@ -16,7 +16,7 @@ import PluginsConfigurationPageType from './PluginsConfigurationPageType';
 /**
 * The ApiConfigurationPageInfo model module.
 * @module model/ApiConfigurationPageInfo
-* @version 4.11.0.13
+* @version 4.11.0.19
 */
 export default class ApiConfigurationPageInfo {
     /**
@@ -63,6 +63,9 @@ export default class ApiConfigurationPageInfo {
             }
             if (data.hasOwnProperty('DisplayName')) {
                 obj['DisplayName'] = ApiClient.convertToType(data['DisplayName'], 'String');
+            }
+            if (data.hasOwnProperty('Order')) {
+                obj['Order'] = ApiClient.convertToType(data['Order'], 'Number');
             }
             if (data.hasOwnProperty('ConfigurationPageType')) {
                 obj['ConfigurationPageType'] = PluginsConfigurationPageType.constructFromObject(data['ConfigurationPageType']);
@@ -114,6 +117,10 @@ export default class ApiConfigurationPageInfo {
     * @member {String} DisplayName
     */
     'DisplayName' = undefined;
+    /**
+    * @member {Number} Order
+    */
+    'Order' = undefined;
     /**
     * @member {module:model/PluginsConfigurationPageType} ConfigurationPageType
     */

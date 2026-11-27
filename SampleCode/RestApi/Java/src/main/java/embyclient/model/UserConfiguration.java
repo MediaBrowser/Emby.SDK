@@ -75,6 +75,12 @@ public class UserConfiguration {
   @SerializedName("IntroSkipMode")
   private SegmentSkipMode introSkipMode = null;
 
+  @SerializedName("CreditsSkipMode")
+  private SegmentSkipMode creditsSkipMode = null;
+
+  @SerializedName("CommercialsSkipMode")
+  private SegmentSkipMode commercialsSkipMode = null;
+
   @SerializedName("EnableLocalPassword")
   private Boolean enableLocalPassword = null;
 
@@ -414,6 +420,42 @@ public class UserConfiguration {
     this.introSkipMode = introSkipMode;
   }
 
+  public UserConfiguration creditsSkipMode(SegmentSkipMode creditsSkipMode) {
+    this.creditsSkipMode = creditsSkipMode;
+    return this;
+  }
+
+   /**
+   * Get creditsSkipMode
+   * @return creditsSkipMode
+  **/
+  @Schema(description = "")
+  public SegmentSkipMode getCreditsSkipMode() {
+    return creditsSkipMode;
+  }
+
+  public void setCreditsSkipMode(SegmentSkipMode creditsSkipMode) {
+    this.creditsSkipMode = creditsSkipMode;
+  }
+
+  public UserConfiguration commercialsSkipMode(SegmentSkipMode commercialsSkipMode) {
+    this.commercialsSkipMode = commercialsSkipMode;
+    return this;
+  }
+
+   /**
+   * Get commercialsSkipMode
+   * @return commercialsSkipMode
+  **/
+  @Schema(description = "")
+  public SegmentSkipMode getCommercialsSkipMode() {
+    return commercialsSkipMode;
+  }
+
+  public void setCommercialsSkipMode(SegmentSkipMode commercialsSkipMode) {
+    this.commercialsSkipMode = commercialsSkipMode;
+  }
+
   public UserConfiguration enableLocalPassword(Boolean enableLocalPassword) {
     this.enableLocalPassword = enableLocalPassword;
     return this;
@@ -495,6 +537,8 @@ public class UserConfiguration {
         Objects.equals(this.enableNextEpisodeAutoPlay, userConfiguration.enableNextEpisodeAutoPlay) &&
         Objects.equals(this.resumeRewindSeconds, userConfiguration.resumeRewindSeconds) &&
         Objects.equals(this.introSkipMode, userConfiguration.introSkipMode) &&
+        Objects.equals(this.creditsSkipMode, userConfiguration.creditsSkipMode) &&
+        Objects.equals(this.commercialsSkipMode, userConfiguration.commercialsSkipMode) &&
         Objects.equals(this.enableLocalPassword, userConfiguration.enableLocalPassword) &&
         Objects.equals(this.showSubtitlesOnSkipBack, userConfiguration.showSubtitlesOnSkipBack) &&
         Objects.equals(this.showSubtitlesOnLowVolume, userConfiguration.showSubtitlesOnLowVolume);
@@ -502,7 +546,7 @@ public class UserConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(audioLanguagePreference, playDefaultAudioTrack, subtitleLanguagePreference, profilePin, displayMissingEpisodes, subtitleMode, orderedViews, latestItemsExcludes, myMediaExcludes, hidePlayedInLatest, hidePlayedInMoreLikeThis, hidePlayedInSuggestions, rememberAudioSelections, rememberSubtitleSelections, enableNextEpisodeAutoPlay, resumeRewindSeconds, introSkipMode, enableLocalPassword, showSubtitlesOnSkipBack, showSubtitlesOnLowVolume);
+    return Objects.hash(audioLanguagePreference, playDefaultAudioTrack, subtitleLanguagePreference, profilePin, displayMissingEpisodes, subtitleMode, orderedViews, latestItemsExcludes, myMediaExcludes, hidePlayedInLatest, hidePlayedInMoreLikeThis, hidePlayedInSuggestions, rememberAudioSelections, rememberSubtitleSelections, enableNextEpisodeAutoPlay, resumeRewindSeconds, introSkipMode, creditsSkipMode, commercialsSkipMode, enableLocalPassword, showSubtitlesOnSkipBack, showSubtitlesOnLowVolume);
   }
 
 
@@ -528,6 +572,8 @@ public class UserConfiguration {
     sb.append("    enableNextEpisodeAutoPlay: ").append(toIndentedString(enableNextEpisodeAutoPlay)).append("\n");
     sb.append("    resumeRewindSeconds: ").append(toIndentedString(resumeRewindSeconds)).append("\n");
     sb.append("    introSkipMode: ").append(toIndentedString(introSkipMode)).append("\n");
+    sb.append("    creditsSkipMode: ").append(toIndentedString(creditsSkipMode)).append("\n");
+    sb.append("    commercialsSkipMode: ").append(toIndentedString(commercialsSkipMode)).append("\n");
     sb.append("    enableLocalPassword: ").append(toIndentedString(enableLocalPassword)).append("\n");
     sb.append("    showSubtitlesOnSkipBack: ").append(toIndentedString(showSubtitlesOnSkipBack)).append("\n");
     sb.append("    showSubtitlesOnLowVolume: ").append(toIndentedString(showSubtitlesOnLowVolume)).append("\n");

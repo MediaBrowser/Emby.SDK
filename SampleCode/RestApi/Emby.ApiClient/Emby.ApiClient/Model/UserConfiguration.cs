@@ -129,6 +129,18 @@ namespace Emby.ApiClient.Model
         public SegmentSkipMode IntroSkipMode { get; set; }
 
         /// <summary>
+        /// Gets or Sets CreditsSkipMode
+        /// </summary>
+        /// <value>The CreditsSkipMode.</value>
+        public SegmentSkipMode CreditsSkipMode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CommercialsSkipMode
+        /// </summary>
+        /// <value>The CommercialsSkipMode.</value>
+        public SegmentSkipMode CommercialsSkipMode { get; set; }
+
+        /// <summary>
         /// Gets or Sets EnableLocalPassword
         /// </summary>
         /// <value>The EnableLocalPassword.</value>
@@ -171,6 +183,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  EnableNextEpisodeAutoPlay: ").Append(EnableNextEpisodeAutoPlay).Append("\n");
             sb.Append("  ResumeRewindSeconds: ").Append(ResumeRewindSeconds).Append("\n");
             sb.Append("  IntroSkipMode: ").Append(IntroSkipMode).Append("\n");
+            sb.Append("  CreditsSkipMode: ").Append(CreditsSkipMode).Append("\n");
+            sb.Append("  CommercialsSkipMode: ").Append(CommercialsSkipMode).Append("\n");
             sb.Append("  EnableLocalPassword: ").Append(EnableLocalPassword).Append("\n");
             sb.Append("  ShowSubtitlesOnSkipBack: ").Append(ShowSubtitlesOnSkipBack).Append("\n");
             sb.Append("  ShowSubtitlesOnLowVolume: ").Append(ShowSubtitlesOnLowVolume).Append("\n");
@@ -288,6 +302,16 @@ namespace Emby.ApiClient.Model
                     this.IntroSkipMode.Equals(input.IntroSkipMode))
                 ) && 
                 (
+                    this.CreditsSkipMode == input.CreditsSkipMode ||
+                    (this.CreditsSkipMode != null &&
+                    this.CreditsSkipMode.Equals(input.CreditsSkipMode))
+                ) && 
+                (
+                    this.CommercialsSkipMode == input.CommercialsSkipMode ||
+                    (this.CommercialsSkipMode != null &&
+                    this.CommercialsSkipMode.Equals(input.CommercialsSkipMode))
+                ) && 
+                (
                     this.EnableLocalPassword == input.EnableLocalPassword ||
                     (this.EnableLocalPassword != null &&
                     this.EnableLocalPassword.Equals(input.EnableLocalPassword))
@@ -347,6 +371,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.ResumeRewindSeconds.GetHashCode();
                 if (this.IntroSkipMode != null)
                     hashCode = hashCode * 59 + this.IntroSkipMode.GetHashCode();
+                if (this.CreditsSkipMode != null)
+                    hashCode = hashCode * 59 + this.CreditsSkipMode.GetHashCode();
+                if (this.CommercialsSkipMode != null)
+                    hashCode = hashCode * 59 + this.CommercialsSkipMode.GetHashCode();
                 if (this.EnableLocalPassword != null)
                     hashCode = hashCode * 59 + this.EnableLocalPassword.GetHashCode();
                 if (this.ShowSubtitlesOnSkipBack != null)

@@ -11,11 +11,12 @@
 
 import ApiClient from '../ApiClient';
 import DeviceProfile from './DeviceProfile';
+import SecurityAttestationReply from './SecurityAttestationReply';
 
 /**
 * The ClientCapabilities model module.
 * @module model/ClientCapabilities
-* @version 4.11.0.13
+* @version 4.11.0.19
 */
 export default class ClientCapabilities {
     /**
@@ -69,6 +70,12 @@ export default class ClientCapabilities {
             if (data.hasOwnProperty('AppId')) {
                 obj['AppId'] = ApiClient.convertToType(data['AppId'], 'String');
             }
+            if (data.hasOwnProperty('AttestationProvider')) {
+                obj['AttestationProvider'] = ApiClient.convertToType(data['AttestationProvider'], 'String');
+            }
+            if (data.hasOwnProperty('AttestationReply')) {
+                obj['AttestationReply'] = SecurityAttestationReply.constructFromObject(data['AttestationReply']);
+            }
         }
         return obj;
     }
@@ -109,6 +116,14 @@ export default class ClientCapabilities {
     * @member {String} AppId
     */
     'AppId' = undefined;
+    /**
+    * @member {String} AttestationProvider
+    */
+    'AttestationProvider' = undefined;
+    /**
+    * @member {module:model/SecurityAttestationReply} AttestationReply
+    */
+    'AttestationReply' = undefined;
 
 
 

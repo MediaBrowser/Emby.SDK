@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.11.0.13
+ * OpenAPI spec version: 4.11.0.19
  * 
  *
  * NOTE: This file is auto generated.
@@ -578,25 +578,6 @@ describe("ChannelServiceApi", () => {
     const NameStartsWith: string = "NameStartsWith_example"
     const NameLessThan: string = "NameLessThan_example"
     return expect(instance.getChannels(ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, {})).resolves.toBe(null)
-  })
-})
-
-describe("CodecParameterServiceApi", () => {
-  let instance: api.CodecParameterServiceApi
-  beforeEach(function() {
-    instance = new api.CodecParameterServiceApi(config)
-  });
-
-  test("getEncodingCodecparameters", () => {
-    const CodecId: string = "CodecId_example"
-    const ParameterContext: MediaEncodingCodecParameterContext = undefined
-    return expect(instance.getEncodingCodecparameters(CodecId, ParameterContext, {})).resolves.toBe(null)
-  })
-  test("postEncodingCodecparameters", () => {
-    const body: Object = undefined
-    const CodecId: string = "CodecId_example"
-    const ParameterContext: MediaEncodingCodecParameterContext = undefined
-    return expect(instance.postEncodingCodecparameters(body, CodecId, ParameterContext, {})).resolves.toBe(null)
   })
 })
 
@@ -1470,23 +1451,6 @@ describe("DynamicHlsServiceApi", () => {
   })
 })
 
-describe("EncodingInfoServiceApi", () => {
-  let instance: api.EncodingInfoServiceApi
-  beforeEach(function() {
-    instance = new api.EncodingInfoServiceApi(config)
-  });
-
-  test("getEncodingCodecconfigurationDefaults", () => {
-    return expect(instance.getEncodingCodecconfigurationDefaults({})).resolves.toBe(null)
-  })
-  test("getEncodingCodecinformationVideo", () => {
-    return expect(instance.getEncodingCodecinformationVideo({})).resolves.toBe(null)
-  })
-  test("getEncodingTonemapoptions", () => {
-    return expect(instance.getEncodingTonemapoptions({})).resolves.toBe(null)
-  })
-})
-
 describe("EnvironmentServiceApi", () => {
   let instance: api.EnvironmentServiceApi
   beforeEach(function() {
@@ -1818,6 +1782,89 @@ describe("HlsSegmentServiceApi", () => {
     const DeviceId: string = "DeviceId_example"
     const PlaySessionId: string = "PlaySessionId_example"
     return expect(instance.postVideosActiveencodingsDelete(DeviceId, PlaySessionId, {})).resolves.toBe(null)
+  })
+})
+
+describe("HwaConfigServiceApi", () => {
+  let instance: api.HwaConfigServiceApi
+  beforeEach(function() {
+    instance = new api.HwaConfigServiceApi(config)
+  });
+
+  test("getEncodingHwaconfig", () => {
+    return expect(instance.getEncodingHwaconfig({})).resolves.toBe(null)
+  })
+  test("getEncodingHwaconfighaschanges", () => {
+    return expect(instance.getEncodingHwaconfighaschanges({})).resolves.toBe(null)
+  })
+  test("getEncodingHwanodeoptions", () => {
+    const NodeId: string = "NodeId_example"
+    const EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType = undefined
+    return expect(instance.getEncodingHwanodeoptions(NodeId, EditorType, {})).resolves.toBe(null)
+  })
+  test("postEncodingHwabasicdevice", () => {
+    const body: api.MediaEncodingSettingsApiHwaSelectHwaBasicDevice = undefined
+    return expect(instance.postEncodingHwabasicdevice(body, {})).resolves.toBe(null)
+  })
+  test("postEncodingHwaconfigcommand", () => {
+    const body: api.MediaEncodingSettingsApiHwaExecuteHwaConfigCommand = undefined
+    return expect(instance.postEncodingHwaconfigcommand(body, {})).resolves.toBe(null)
+  })
+  test("postEncodingHwaconfigdiscardchanges", () => {
+    return expect(instance.postEncodingHwaconfigdiscardchanges({})).resolves.toBe(null)
+  })
+  test("postEncodingHwaconfigsave", () => {
+    const body: api.MediaEncodingSettingsApiHwaSaveHwaConfig = undefined
+    return expect(instance.postEncodingHwaconfigsave(body, {})).resolves.toBe(null)
+  })
+  test("postEncodingHwanodeoptions", () => {
+    const body: Object = undefined
+    const NodeId: string = "NodeId_example"
+    const EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType = undefined
+    return expect(instance.postEncodingHwanodeoptions(body, NodeId, EditorType, {})).resolves.toBe(null)
+  })
+  test("postEncodingHwanodeoptionscancel", () => {
+    const body: api.MediaEncodingSettingsApiHwaCancelHwaNodeOptions = undefined
+    return expect(instance.postEncodingHwanodeoptionscancel(body, {})).resolves.toBe(null)
+  })
+  test("postEncodingHwanodeoptionscommand", () => {
+    const body: Object = undefined
+    const NodeId: string = "NodeId_example"
+    const EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType = undefined
+    const CommandId: string = "CommandId_example"
+    const ItemId: string = "ItemId_example"
+    const Data: string = "Data_example"
+    return expect(instance.postEncodingHwanodeoptionscommand(body, NodeId, EditorType, CommandId, ItemId, Data, {})).resolves.toBe(null)
+  })
+  test("postEncodingHwanodesuboptions", () => {
+    const body: Object = undefined
+    const NodeId: string = "NodeId_example"
+    const EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType = undefined
+    const IsAccepted: boolean = true
+    return expect(instance.postEncodingHwanodesuboptions(body, NodeId, EditorType, IsAccepted, {})).resolves.toBe(null)
+  })
+})
+
+describe("ImageExtractionConfigServiceApi", () => {
+  let instance: api.ImageExtractionConfigServiceApi
+  beforeEach(function() {
+    instance = new api.ImageExtractionConfigServiceApi(config)
+  });
+
+  test("getEncodingImageextractiontonemapparameters", () => {
+    return expect(instance.getEncodingImageextractiontonemapparameters({})).resolves.toBe(null)
+  })
+  test("postEncodingImageextractiontonemapparameters", () => {
+    const body: Object = undefined
+    return expect(instance.postEncodingImageextractiontonemapparameters(body, {})).resolves.toBe(null)
+  })
+  test("postEncodingImageextractiontonemapparametersCommand", () => {
+    const body: Object = undefined
+    return expect(instance.postEncodingImageextractiontonemapparametersCommand(body, {})).resolves.toBe(null)
+  })
+  test("postEncodingImageextractiontonemapparametersSuboptions", () => {
+    const body: Object = undefined
+    return expect(instance.postEncodingImageextractiontonemapparametersSuboptions(body, {})).resolves.toBe(null)
   })
 })
 
@@ -6141,6 +6188,18 @@ describe("LocalizationServiceApi", () => {
   })
 })
 
+describe("LogDownloadServiceApi", () => {
+  let instance: api.LogDownloadServiceApi
+  beforeEach(function() {
+    instance = new api.LogDownloadServiceApi(config)
+  });
+
+  test("getEncodingLogsDownload", () => {
+    const Ticket: string = "Ticket_example"
+    return expect(instance.getEncodingLogsDownload(Ticket, {})).resolves.toBe(null)
+  })
+})
+
 describe("MediaInfoServiceApi", () => {
   let instance: api.MediaInfoServiceApi
   beforeEach(function() {
@@ -8801,28 +8860,6 @@ describe("TagServiceApi", () => {
     const body: api.UserLibraryRemoveTags = undefined
     const Id: string = "Id_example"
     return expect(instance.postItemsByIdTagsDelete(body, Id, {})).resolves.toBe(null)
-  })
-})
-
-describe("ToneMapOptionsServiceApi", () => {
-  let instance: api.ToneMapOptionsServiceApi
-  beforeEach(function() {
-    instance = new api.ToneMapOptionsServiceApi(config)
-  });
-
-  test("getEncodingFulltonemapoptions", () => {
-    return expect(instance.getEncodingFulltonemapoptions({})).resolves.toBe(null)
-  })
-  test("getEncodingPublictonemapoptions", () => {
-    return expect(instance.getEncodingPublictonemapoptions({})).resolves.toBe(null)
-  })
-  test("postEncodingFulltonemapoptions", () => {
-    const body: Object = undefined
-    return expect(instance.postEncodingFulltonemapoptions(body, {})).resolves.toBe(null)
-  })
-  test("postEncodingPublictonemapoptions", () => {
-    const body: Object = undefined
-    return expect(instance.postEncodingPublictonemapoptions(body, {})).resolves.toBe(null)
   })
 })
 

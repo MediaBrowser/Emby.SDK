@@ -1,0 +1,3281 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>getEncodingHwaconfig </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="getEncodingHwaconfig ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="theme-color" content="#090d0f">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <script type="text/javascript" src="../../../styles/theme-config.js"></script>
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link rel="stylesheet" href="../../../styles/version.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../styles/theme.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="emby.restapi/getEncodingHwaconfig">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary navigation">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
+            
+            <img class="logo-on-dark" src="../../../images/emby-logo-dark-beta.png" alt="Emby">
+            <img class="logo-on-light" src="../../../images/emby-logo-beta.png" alt="Emby">
+          </a>
+          <a class="site-title-link" href="../../../index.html"><span class="site-title">Emby <strong>BetaDev</strong></span></a>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
+          <div class="nav-links" id="navbar">
+            <ul class="nav-links-list">
+                
+                    <li><a href="https://emby.media/" title="Emby Home">Emby Home</a></li>
+                    <li><a href="../../../index.html" title="Dev Home">Dev Home</a></li>
+                    <li><a href="../../../doc/index.html" title="Documentation">Documentation</a></li>
+                    <li><a href="../../../reference/index.html" title="Reference">Reference</a></li>
+                    <li><a href="../../../download/index.html" title="Download">Download</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script>
+        (function () {
+          var button = document.querySelector('.site-header .menu-button');
+          var links = document.querySelector('.site-header .nav-links');
+          if (!button || !links) { return; }
+          button.addEventListener('click', function () {
+            var isOpen = links.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }());
+      </script>
+      
+      <div class="subnav navbar navbar-default">
+        <div class="container">
+          <div class="hide-when-search" id="breadcrumb">
+      	  <ul class="breadcrumb">
+      		<li></li>
+      	  </ul>
+      	</div>
+      
+      	<div class="breadcrumpsearch">
+      	  <form class="navbar-form navbar-right" role="search" id="search">
+      		<div class="form-group">
+      		  <i class="fa fa-search" aria-hidden="true"></i>
+      		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+      		</div>
+      	  </form>
+      	</div>
+        </div>
+      </div>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/getEncodingHwaconfig">
+<div class="refdoc">
+
+<h1 id="emby_restapi_getEncodingHwaconfig" data-uid="emby.restapi/getEncodingHwaconfig" class="text-capitalize text-break">getEncodingHwaconfig</h1>
+<div class="markdown level0 summary"><p>Gets the transcoding configuration graph</p>
+</div>
+<div class="markdown level0 description"><p>Requires authentication as administrator</p>
+</div>
+
+
+
+
+  
+  
+  
+   <h3 id="emby_restapi_getEncodingHwaconfig_operation" data-uid="emby.restapi/getEncodingHwaconfig/operation" style="display:none;" class="text-capitalize">getEncodingHwaconfig</h3>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Encoding/HwaConfig</code></pre>
+  </div>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td>
+  
+              <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_HwaConfigView" class="typelink">HwaConfigView</a>
+              
+        </td>
+        <td><p>Operation successful. Returning a HwaConfigView object.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Bad Request. Server cannot process request.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">401</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Unauthorized. Client needs to authenticate.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">403</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Forbidden. No permission for the reqested operation.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Resource not found or unavailable.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">500</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Server error.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+<h2 id="definitions">Definitions</h2>
+  
+  <h3 id="Emby_MediaEncoding_Settings_Hwa_Projection_HwaConfigView" class="text-capitalize">HwaConfigView</h3>
+  <div>
+      <span class="xref">Emby.MediaEncoding.Settings.Hwa.Projection.HwaConfigView</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">IsInitialized</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ConfigMode</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Hwa_Enums_HwaConfigMode" class="typelink">HwaConfigMode</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Root</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_Nodes_UiNodeRoot" class="typelink">UiNodeRoot[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">FocusNodeId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ConfigName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ConfigSavedOn</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ConfigSavedBy</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ConfigRevision</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HasUnsavedChanges</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BasicModeOptions</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_BasicModeOption" class="typelink">BasicModeOption[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BasicSelectedNodeId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ModeLegend</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ChangeConfigWizardUrl</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HelpUrl</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ShowDeviceSelector</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ShowSavedConfigInfo</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_MediaEncoding_Hwa_Enums_HwaConfigMode" class="text-capitalize">HwaConfigMode</h3>
+  <div>
+      <span class="xref">Emby.MediaEncoding.Hwa.Enums.HwaConfigMode</span>
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Basic</li>
+  <li>Advanced</li>
+  <li>Expert</li>
+  </ul>
+  
+  <h3 id="Emby_MediaEncoding_Settings_Hwa_Projection_Nodes_UiNodeRoot" class="text-capitalize">UiNodeRoot</h3>
+  <div>
+      <span class="xref">Emby.MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeRoot</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">NodeType</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_Enums_UiNodeType" class="typelink">UiNodeType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Direction</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_Enums_UiGraphDirection" class="typelink">UiGraphDirection</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Nodes</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_Nodes_Base_UiNodeBase" class="typelink">UiNodeBase[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">OperationConditions</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Hwa_Conditions_ConfigOperationConditions" class="typelink">ConfigOperationConditions[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AdvancedConditions</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Hwa_Conditions_ConfigAdvancedConditions" class="typelink">ConfigAdvancedConditions[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ConditionsSummary</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DisplayId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PrimaryText</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SecondaryText</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Icon</span></td>
+              <td>
+  
+                      <a href="#Emby_Web_GenericEdit_Elements_IconNames" class="typelink">IconNames</a>
+                  
+              </td>
+              <td><p>Enum for icons in <code>Emby.Web.GenericEdit.Elements.List.GenericListItem</code>, <code>Emby.Web.GenericEdit.Elements.ButtonItem</code>, <code>Emby.Web.GenericEdit.Elements.CaptionItem</code>, <code>Emby.Web.GenericEdit.Elements.LabelItem</code>  and <code>Emby.Web.GenericEdit.Elements.TagItem</code> elements.</p>
+<p><code>Emby.Web.GenericEdit.Elements.List.GenericListItem</code></p>
+<p><code>Emby.Web.GenericEdit.Elements.ButtonItem</code></p>
+<p><code>Emby.Web.GenericEdit.Elements.CaptionItem</code></p>
+<p><code>Emby.Web.GenericEdit.Elements.LabelItem</code></p>
+<p><code>Emby.Web.GenericEdit.Elements.TagItem</code></p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">State</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_Enums_UiNodeState" class="typelink">UiNodeState</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsFocusable</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">StateReason</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CanMove</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_Nodes_UiNodeMoveTargets" class="typelink">UiNodeMoveTargets[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">InsertAt</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Commands</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_Nodes_UiNodeCommand" class="typelink">UiNodeCommand[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_MediaEncoding_Settings_Hwa_Projection_Enums_UiNodeType" class="text-capitalize">UiNodeType</h3>
+  <div>
+      <span class="xref">Emby.MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeType</span>
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Unknown</li>
+  <li>Root</li>
+  <li>Graph</li>
+  <li>LoadBalancer</li>
+  <li>GpuConfig</li>
+  <li>ErrorOut</li>
+  <li>UiHint</li>
+  <li>Divider</li>
+  </ul>
+  
+  <h3 id="Emby_MediaEncoding_Settings_Hwa_Projection_Enums_UiGraphDirection" class="text-capitalize">UiGraphDirection</h3>
+  <div>
+      <span class="xref">Emby.MediaEncoding.Settings.Hwa.Projection.Enums.UiGraphDirection</span>
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>TopDown</li>
+  <li>LeftRight</li>
+  <li>UnorderedHorizontal</li>
+  </ul>
+  
+  <h3 id="Emby_MediaEncoding_Settings_Hwa_Projection_Nodes_Base_UiNodeBase" class="text-capitalize">UiNodeBase</h3>
+  <div>
+      <span class="xref">Emby.MediaEncoding.Settings.Hwa.Projection.Nodes.Base.UiNodeBase</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">NodeType</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_Enums_UiNodeType" class="typelink">UiNodeType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DisplayId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PrimaryText</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SecondaryText</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Icon</span></td>
+              <td>
+  
+                      <a href="#Emby_Web_GenericEdit_Elements_IconNames" class="typelink">IconNames</a>
+                  
+              </td>
+              <td><p>Enum for icons in <code>Emby.Web.GenericEdit.Elements.List.GenericListItem</code>, <code>Emby.Web.GenericEdit.Elements.ButtonItem</code>, <code>Emby.Web.GenericEdit.Elements.CaptionItem</code>, <code>Emby.Web.GenericEdit.Elements.LabelItem</code>  and <code>Emby.Web.GenericEdit.Elements.TagItem</code> elements.</p>
+<p><code>Emby.Web.GenericEdit.Elements.List.GenericListItem</code></p>
+<p><code>Emby.Web.GenericEdit.Elements.ButtonItem</code></p>
+<p><code>Emby.Web.GenericEdit.Elements.CaptionItem</code></p>
+<p><code>Emby.Web.GenericEdit.Elements.LabelItem</code></p>
+<p><code>Emby.Web.GenericEdit.Elements.TagItem</code></p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">State</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_Enums_UiNodeState" class="typelink">UiNodeState</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsFocusable</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">StateReason</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CanMove</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_Nodes_UiNodeMoveTargets" class="typelink">UiNodeMoveTargets[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">InsertAt</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Commands</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_Nodes_UiNodeCommand" class="typelink">UiNodeCommand[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_Web_GenericEdit_Elements_IconNames" class="text-capitalize">IconNames</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/Emby.Web.GenericEdit.Elements.IconNames.html">Emby.Web.GenericEdit.Elements.IconNames</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Loading</li>
+  <li>_3d_rotation</li>
+  <li>ac_unit</li>
+  <li>access_alarm</li>
+  <li>access_alarms</li>
+  <li>access_time</li>
+  <li>accessibility</li>
+  <li>accessible</li>
+  <li>account_balance</li>
+  <li>account_balance_wallet</li>
+  <li>account_box</li>
+  <li>account_circle</li>
+  <li>account_tree</li>
+  <li>adb</li>
+  <li>add</li>
+  <li>add_a_photo</li>
+  <li>add_alarm</li>
+  <li>add_alert</li>
+  <li>add_box</li>
+  <li>add_circle</li>
+  <li>add_circle_outline</li>
+  <li>add_location</li>
+  <li>add_shopping_cart</li>
+  <li>add_to_photos</li>
+  <li>add_to_queue</li>
+  <li>adjust</li>
+  <li>airline_seat_flat</li>
+  <li>airline_seat_flat_angled</li>
+  <li>airline_seat_individual_suite</li>
+  <li>airline_seat_legroom_extra</li>
+  <li>airline_seat_legroom_normal</li>
+  <li>airline_seat_legroom_reduced</li>
+  <li>airline_seat_recline_extra</li>
+  <li>airline_seat_recline_normal</li>
+  <li>airplanemode_active</li>
+  <li>airplanemode_inactive</li>
+  <li>airplay</li>
+  <li>airport_shuttle</li>
+  <li>alarm</li>
+  <li>alarm_add</li>
+  <li>alarm_off</li>
+  <li>alarm_on</li>
+  <li>album</li>
+  <li>all_inclusive</li>
+  <li>all_out</li>
+  <li>android</li>
+  <li>announcement</li>
+  <li>apps</li>
+  <li>archive</li>
+  <li>arrow_back</li>
+  <li>arrow_downward</li>
+  <li>arrow_drop_down</li>
+  <li>arrow_drop_down_circle</li>
+  <li>arrow_drop_up</li>
+  <li>arrow_forward</li>
+  <li>arrow_upward</li>
+  <li>art_track</li>
+  <li>aspect_ratio</li>
+  <li>assessment</li>
+  <li>assignment</li>
+  <li>assignment_ind</li>
+  <li>assignment_late</li>
+  <li>assignment_return</li>
+  <li>assignment_returned</li>
+  <li>assignment_turned_in</li>
+  <li>assistant</li>
+  <li>assistant_photo</li>
+  <li>attach_file</li>
+  <li>attach_money</li>
+  <li>attachment</li>
+  <li>audiotrack</li>
+  <li>autorenew</li>
+  <li>av_timer</li>
+  <li>backspace</li>
+  <li>backup</li>
+  <li>battery_alert</li>
+  <li>battery_charging_full</li>
+  <li>battery_full</li>
+  <li>battery_std</li>
+  <li>battery_unknown</li>
+  <li>beach_access</li>
+  <li>beenhere</li>
+  <li>block</li>
+  <li>bluetooth</li>
+  <li>bluetooth_audio</li>
+  <li>bluetooth_connected</li>
+  <li>bluetooth_disabled</li>
+  <li>bluetooth_searching</li>
+  <li>blur_circular</li>
+  <li>blur_linear</li>
+  <li>blur_off</li>
+  <li>blur_on</li>
+  <li>book</li>
+  <li>bookmark</li>
+  <li>bookmark_border</li>
+  <li>bookmarks</li>
+  <li>border_all</li>
+  <li>border_bottom</li>
+  <li>border_clear</li>
+  <li>border_color</li>
+  <li>border_horizontal</li>
+  <li>border_inner</li>
+  <li>border_left</li>
+  <li>border_outer</li>
+  <li>border_right</li>
+  <li>border_style</li>
+  <li>border_top</li>
+  <li>border_vertical</li>
+  <li>branding_watermark</li>
+  <li>brightness_1</li>
+  <li>brightness_2</li>
+  <li>brightness_3</li>
+  <li>brightness_4</li>
+  <li>brightness_5</li>
+  <li>brightness_6</li>
+  <li>brightness_7</li>
+  <li>brightness_auto</li>
+  <li>brightness_high</li>
+  <li>brightness_low</li>
+  <li>brightness_medium</li>
+  <li>broken_image</li>
+  <li>brush</li>
+  <li>bubble_chart</li>
+  <li>bug_report</li>
+  <li>build</li>
+  <li>burst_mode</li>
+  <li>business</li>
+  <li>business_center</li>
+  <li>cached</li>
+  <li>cake</li>
+  <li>calendar_today</li>
+  <li>call</li>
+  <li>call_end</li>
+  <li>call_made</li>
+  <li>call_merge</li>
+  <li>call_missed</li>
+  <li>call_missed_outgoing</li>
+  <li>call_received</li>
+  <li>call_split</li>
+  <li>call_to_action</li>
+  <li>camera</li>
+  <li>camera_alt</li>
+  <li>camera_enhance</li>
+  <li>camera_front</li>
+  <li>camera_rear</li>
+  <li>camera_roll</li>
+  <li>cancel</li>
+  <li>card_giftcard</li>
+  <li>card_membership</li>
+  <li>card_travel</li>
+  <li>casino</li>
+  <li>cast</li>
+  <li>cast_connected</li>
+  <li>center_focus_strong</li>
+  <li>center_focus_weak</li>
+  <li>change_history</li>
+  <li>chat</li>
+  <li>chat_bubble</li>
+  <li>chat_bubble_outline</li>
+  <li>check</li>
+  <li>check_box</li>
+  <li>check_box_outline_blank</li>
+  <li>check_circle</li>
+  <li>check_circle_outline</li>
+  <li>chevron_left</li>
+  <li>chevron_right</li>
+  <li>child_care</li>
+  <li>child_friendly</li>
+  <li>chrome_reader_mode</li>
+  <li>class</li>
+  <li>clear</li>
+  <li>clear_all</li>
+  <li>close</li>
+  <li>closed_caption</li>
+  <li>cloud</li>
+  <li>cloud_circle</li>
+  <li>cloud_done</li>
+  <li>cloud_download</li>
+  <li>cloud_off</li>
+  <li>cloud_queue</li>
+  <li>cloud_upload</li>
+  <li>code</li>
+  <li>collections</li>
+  <li>collections_bookmark</li>
+  <li>color_lens</li>
+  <li>colorize</li>
+  <li>comment</li>
+  <li>compare</li>
+  <li>compare_arrows</li>
+  <li>computer</li>
+  <li>confirmation_number</li>
+  <li>contact_mail</li>
+  <li>contact_phone</li>
+  <li>contacts</li>
+  <li>content_copy</li>
+  <li>content_cut</li>
+  <li>content_paste</li>
+  <li>control_point</li>
+  <li>control_point_duplicate</li>
+  <li>copyright</li>
+  <li>create</li>
+  <li>create_new_folder</li>
+  <li>credit_card</li>
+  <li>crop</li>
+  <li>crop_16_9</li>
+  <li>crop_3_2</li>
+  <li>crop_5_4</li>
+  <li>crop_7_5</li>
+  <li>crop_din</li>
+  <li>crop_free</li>
+  <li>crop_landscape</li>
+  <li>crop_original</li>
+  <li>crop_portrait</li>
+  <li>crop_rotate</li>
+  <li>crop_square</li>
+  <li>dashboard</li>
+  <li>data_usage</li>
+  <li>date_range</li>
+  <li>dehaze</li>
+  <li>delete</li>
+  <li>delete_forever</li>
+  <li>delete_outline</li>
+  <li>delete_sweep</li>
+  <li>description</li>
+  <li>desktop_mac</li>
+  <li>desktop_windows</li>
+  <li>details</li>
+  <li>developer_board</li>
+  <li>developer_mode</li>
+  <li>device_hub</li>
+  <li>devices</li>
+  <li>devices_other</li>
+  <li>dialer_sip</li>
+  <li>dialpad</li>
+  <li>directions</li>
+  <li>directions_bike</li>
+  <li>directions_boat</li>
+  <li>directions_bus</li>
+  <li>directions_car</li>
+  <li>directions_railway</li>
+  <li>directions_run</li>
+  <li>directions_subway</li>
+  <li>directions_transit</li>
+  <li>directions_walk</li>
+  <li>disc_full</li>
+  <li>dns</li>
+  <li>do_not_disturb</li>
+  <li>do_not_disturb_alt</li>
+  <li>do_not_disturb_off</li>
+  <li>do_not_disturb_on</li>
+  <li>dock</li>
+  <li>domain</li>
+  <li>done</li>
+  <li>done_all</li>
+  <li>donut_large</li>
+  <li>donut_small</li>
+  <li>drafts</li>
+  <li>drag_handle</li>
+  <li>drive_eta</li>
+  <li>dvr</li>
+  <li>edit</li>
+  <li>edit_location</li>
+  <li>eject</li>
+  <li>email</li>
+  <li>enhanced_encryption</li>
+  <li>equalizer</li>
+  <li>error</li>
+  <li>error_outline</li>
+  <li>euro_symbol</li>
+  <li>ev_station</li>
+  <li>event</li>
+  <li>event_available</li>
+  <li>event_busy</li>
+  <li>event_note</li>
+  <li>event_seat</li>
+  <li>exit_to_app</li>
+  <li>expand_less</li>
+  <li>expand_more</li>
+  <li>explicit</li>
+  <li>explore</li>
+  <li>exposure</li>
+  <li>exposure_neg_1</li>
+  <li>exposure_neg_2</li>
+  <li>exposure_plus_1</li>
+  <li>exposure_plus_2</li>
+  <li>exposure_zero</li>
+  <li>extension</li>
+  <li>face</li>
+  <li>fast_forward</li>
+  <li>fast_rewind</li>
+  <li>favorite</li>
+  <li>favorite_border</li>
+  <li>featured_play_list</li>
+  <li>featured_video</li>
+  <li>feedback</li>
+  <li>fiber_dvr</li>
+  <li>fiber_manual_record</li>
+  <li>fiber_new</li>
+  <li>fiber_pin</li>
+  <li>fiber_smart_record</li>
+  <li>file_download</li>
+  <li>file_upload</li>
+  <li>filter</li>
+  <li>filter_1</li>
+  <li>filter_2</li>
+  <li>filter_3</li>
+  <li>filter_4</li>
+  <li>filter_5</li>
+  <li>filter_6</li>
+  <li>filter_7</li>
+  <li>filter_8</li>
+  <li>filter_9</li>
+  <li>filter_9_plus</li>
+  <li>filter_b_and_w</li>
+  <li>filter_center_focus</li>
+  <li>filter_drama</li>
+  <li>filter_frames</li>
+  <li>filter_hdr</li>
+  <li>filter_list</li>
+  <li>filter_none</li>
+  <li>filter_tilt_shift</li>
+  <li>filter_vintage</li>
+  <li>find_in_page</li>
+  <li>find_replace</li>
+  <li>fingerprint</li>
+  <li>first_page</li>
+  <li>fitness_center</li>
+  <li>flag</li>
+  <li>flare</li>
+  <li>flash_auto</li>
+  <li>flash_off</li>
+  <li>flash_on</li>
+  <li>flight</li>
+  <li>flight_land</li>
+  <li>flight_takeoff</li>
+  <li>flip</li>
+  <li>flip_to_back</li>
+  <li>flip_to_front</li>
+  <li>folder</li>
+  <li>folder_open</li>
+  <li>folder_shared</li>
+  <li>folder_special</li>
+  <li>font_download</li>
+  <li>format_align_center</li>
+  <li>format_align_justify</li>
+  <li>format_align_left</li>
+  <li>format_align_right</li>
+  <li>format_bold</li>
+  <li>format_clear</li>
+  <li>format_color_fill</li>
+  <li>format_color_reset</li>
+  <li>format_color_text</li>
+  <li>format_indent_decrease</li>
+  <li>format_indent_increase</li>
+  <li>format_italic</li>
+  <li>format_line_spacing</li>
+  <li>format_list_bulleted</li>
+  <li>format_list_numbered</li>
+  <li>format_paint</li>
+  <li>format_quote</li>
+  <li>format_shapes</li>
+  <li>format_size</li>
+  <li>format_strikethrough</li>
+  <li>format_textdirection_l_to_r</li>
+  <li>format_textdirection_r_to_l</li>
+  <li>format_underlined</li>
+  <li>forum</li>
+  <li>forward</li>
+  <li>forward_10</li>
+  <li>forward_30</li>
+  <li>forward_5</li>
+  <li>free_breakfast</li>
+  <li>fullscreen</li>
+  <li>fullscreen_exit</li>
+  <li>functions</li>
+  <li>g_translate</li>
+  <li>gamepad</li>
+  <li>games</li>
+  <li>gavel</li>
+  <li>gesture</li>
+  <li>get_app</li>
+  <li>gif</li>
+  <li>golf_course</li>
+  <li>gps_fixed</li>
+  <li>gps_not_fixed</li>
+  <li>gps_off</li>
+  <li>grade</li>
+  <li>gradient</li>
+  <li>grain</li>
+  <li>graphic_eq</li>
+  <li>grid_off</li>
+  <li>grid_on</li>
+  <li>group</li>
+  <li>group_add</li>
+  <li>group_work</li>
+  <li>hd</li>
+  <li>hdr_off</li>
+  <li>hdr_on</li>
+  <li>hdr_strong</li>
+  <li>hdr_weak</li>
+  <li>headset</li>
+  <li>headset_mic</li>
+  <li>healing</li>
+  <li>hearing</li>
+  <li>help</li>
+  <li>help_outline</li>
+  <li>high_quality</li>
+  <li>highlight</li>
+  <li>highlight_off</li>
+  <li>history</li>
+  <li>history_toggle_off</li>
+  <li>home</li>
+  <li>hot_tub</li>
+  <li>hotel</li>
+  <li>hourglass_empty</li>
+  <li>hourglass_full</li>
+  <li>http</li>
+  <li>https</li>
+  <li>image</li>
+  <li>image_aspect_ratio</li>
+  <li>import_contacts</li>
+  <li>import_export</li>
+  <li>important_devices</li>
+  <li>inbox</li>
+  <li>indeterminate_check_box</li>
+  <li>info</li>
+  <li>info_outline</li>
+  <li>input</li>
+  <li>insert_chart</li>
+  <li>insert_comment</li>
+  <li>insert_drive_file</li>
+  <li>insert_emoticon</li>
+  <li>insert_invitation</li>
+  <li>insert_link</li>
+  <li>insert_photo</li>
+  <li>invert_colors</li>
+  <li>invert_colors_off</li>
+  <li>iso</li>
+  <li>keyboard</li>
+  <li>keyboard_arrow_down</li>
+  <li>keyboard_arrow_left</li>
+  <li>keyboard_arrow_right</li>
+  <li>keyboard_arrow_up</li>
+  <li>keyboard_backspace</li>
+  <li>keyboard_capslock</li>
+  <li>keyboard_hide</li>
+  <li>keyboard_return</li>
+  <li>keyboard_tab</li>
+  <li>keyboard_voice</li>
+  <li>kitchen</li>
+  <li>label</li>
+  <li>label_outline</li>
+  <li>landscape</li>
+  <li>language</li>
+  <li>laptop</li>
+  <li>laptop_chromebook</li>
+  <li>laptop_mac</li>
+  <li>laptop_windows</li>
+  <li>last_page</li>
+  <li>launch</li>
+  <li>layers</li>
+  <li>layers_clear</li>
+  <li>leak_add</li>
+  <li>leak_remove</li>
+  <li>lens</li>
+  <li>library_add</li>
+  <li>library_books</li>
+  <li>library_music</li>
+  <li>lightbulb_outline</li>
+  <li>line_style</li>
+  <li>line_weight</li>
+  <li>linear_scale</li>
+  <li>link</li>
+  <li>linked_camera</li>
+  <li>list</li>
+  <li>list_alt</li>
+  <li>live_help</li>
+  <li>live_tv</li>
+  <li>login</li>
+  <li>local_activity</li>
+  <li>local_airport</li>
+  <li>local_atm</li>
+  <li>local_bar</li>
+  <li>local_cafe</li>
+  <li>local_car_wash</li>
+  <li>local_convenience_store</li>
+  <li>local_dining</li>
+  <li>local_drink</li>
+  <li>local_florist</li>
+  <li>local_gas_station</li>
+  <li>local_grocery_store</li>
+  <li>local_hospital</li>
+  <li>local_hotel</li>
+  <li>local_laundry_service</li>
+  <li>local_library</li>
+  <li>local_mall</li>
+  <li>local_movies</li>
+  <li>local_offer</li>
+  <li>local_parking</li>
+  <li>local_pharmacy</li>
+  <li>local_phone</li>
+  <li>local_pizza</li>
+  <li>local_play</li>
+  <li>local_post_office</li>
+  <li>local_printshop</li>
+  <li>local_see</li>
+  <li>local_shipping</li>
+  <li>local_taxi</li>
+  <li>location_city</li>
+  <li>location_disabled</li>
+  <li>location_off</li>
+  <li>location_on</li>
+  <li>location_searching</li>
+  <li>lock</li>
+  <li>lock_open</li>
+  <li>lock_outline</li>
+  <li>looks</li>
+  <li>looks_3</li>
+  <li>looks_4</li>
+  <li>looks_5</li>
+  <li>looks_6</li>
+  <li>looks_one</li>
+  <li>looks_two</li>
+  <li>loop</li>
+  <li>loupe</li>
+  <li>low_priority</li>
+  <li>loyalty</li>
+  <li>mail</li>
+  <li>mail_outline</li>
+  <li>map</li>
+  <li>markunread</li>
+  <li>markunread_mailbox</li>
+  <li>memory</li>
+  <li>menu</li>
+  <li>merge_type</li>
+  <li>message</li>
+  <li>mic</li>
+  <li>mic_none</li>
+  <li>mic_off</li>
+  <li>mms</li>
+  <li>mode_comment</li>
+  <li>mode_edit</li>
+  <li>monetization_on</li>
+  <li>money_off</li>
+  <li>monochrome_photos</li>
+  <li>mood</li>
+  <li>mood_bad</li>
+  <li>more</li>
+  <li>more_horiz</li>
+  <li>more_vert</li>
+  <li>motorcycle</li>
+  <li>mouse</li>
+  <li>move_to_inbox</li>
+  <li>movie</li>
+  <li>movie_creation</li>
+  <li>movie_filter</li>
+  <li>multiline_chart</li>
+  <li>music_note</li>
+  <li>music_video</li>
+  <li>my_location</li>
+  <li>nature</li>
+  <li>nature_people</li>
+  <li>navigate_before</li>
+  <li>navigate_next</li>
+  <li>navigation</li>
+  <li>near_me</li>
+  <li>network_cell</li>
+  <li>network_check</li>
+  <li>network_locked</li>
+  <li>network_wifi</li>
+  <li>new_releases</li>
+  <li>next_week</li>
+  <li>nfc</li>
+  <li>no_encryption</li>
+  <li>no_sim</li>
+  <li>not_interested</li>
+  <li>note</li>
+  <li>note_add</li>
+  <li>notifications</li>
+  <li>notifications_active</li>
+  <li>notifications_none</li>
+  <li>notifications_off</li>
+  <li>notifications_paused</li>
+  <li>offline_pin</li>
+  <li>ondemand_video</li>
+  <li>opacity</li>
+  <li>open_in_browser</li>
+  <li>open_in_new</li>
+  <li>open_with</li>
+  <li>pages</li>
+  <li>pageview</li>
+  <li>palette</li>
+  <li>pan_tool</li>
+  <li>panorama</li>
+  <li>panorama_fish_eye</li>
+  <li>panorama_horizontal</li>
+  <li>panorama_vertical</li>
+  <li>panorama_wide_angle</li>
+  <li>party_mode</li>
+  <li>pause</li>
+  <li>pause_circle_filled</li>
+  <li>pause_circle_outline</li>
+  <li>payment</li>
+  <li>people</li>
+  <li>people_outline</li>
+  <li>perm_camera_mic</li>
+  <li>perm_contact_calendar</li>
+  <li>perm_data_setting</li>
+  <li>perm_device_information</li>
+  <li>perm_identity</li>
+  <li>perm_media</li>
+  <li>perm_phone_msg</li>
+  <li>perm_scan_wifi</li>
+  <li>person</li>
+  <li>person_add</li>
+  <li>person_outline</li>
+  <li>person_pin</li>
+  <li>person_pin_circle</li>
+  <li>personal_video</li>
+  <li>pets</li>
+  <li>phone</li>
+  <li>phone_android</li>
+  <li>phone_bluetooth_speaker</li>
+  <li>phone_forwarded</li>
+  <li>phone_in_talk</li>
+  <li>phone_iphone</li>
+  <li>phone_locked</li>
+  <li>phone_missed</li>
+  <li>phone_paused</li>
+  <li>phonelink</li>
+  <li>phonelink_erase</li>
+  <li>phonelink_lock</li>
+  <li>phonelink_off</li>
+  <li>phonelink_ring</li>
+  <li>phonelink_setup</li>
+  <li>photo</li>
+  <li>photo_album</li>
+  <li>photo_camera</li>
+  <li>photo_filter</li>
+  <li>photo_library</li>
+  <li>photo_size_select_actual</li>
+  <li>photo_size_select_large</li>
+  <li>photo_size_select_small</li>
+  <li>picture_as_pdf</li>
+  <li>picture_in_picture</li>
+  <li>picture_in_picture_alt</li>
+  <li>pie_chart</li>
+  <li>pie_chart_outlined</li>
+  <li>pin_drop</li>
+  <li>place</li>
+  <li>play_arrow</li>
+  <li>play_circle_filled</li>
+  <li>play_circle_outline</li>
+  <li>play_for_work</li>
+  <li>playlist_add</li>
+  <li>playlist_add_check</li>
+  <li>playlist_play</li>
+  <li>plus_one</li>
+  <li>poll</li>
+  <li>polymer</li>
+  <li>pool</li>
+  <li>portable_wifi_off</li>
+  <li>portrait</li>
+  <li>power</li>
+  <li>power_input</li>
+  <li>power_settings_new</li>
+  <li>pregnant_woman</li>
+  <li>present_to_all</li>
+  <li>print</li>
+  <li>priority_high</li>
+  <li>public</li>
+  <li>publish</li>
+  <li>query_builder</li>
+  <li>question_answer</li>
+  <li>queue</li>
+  <li>queue_music</li>
+  <li>queue_play_next</li>
+  <li>radio</li>
+  <li>radio_button_checked</li>
+  <li>radio_button_unchecked</li>
+  <li>rate_review</li>
+  <li>receipt</li>
+  <li>recent_actors</li>
+  <li>record_voice_over</li>
+  <li>redeem</li>
+  <li>redo</li>
+  <li>refresh</li>
+  <li>remove</li>
+  <li>remove_circle</li>
+  <li>remove_circle_outline</li>
+  <li>remove_from_queue</li>
+  <li>remove_red_eye</li>
+  <li>remove_shopping_cart</li>
+  <li>reorder</li>
+  <li>repeat</li>
+  <li>repeat_one</li>
+  <li>replay</li>
+  <li>replay_10</li>
+  <li>replay_30</li>
+  <li>replay_5</li>
+  <li>reply</li>
+  <li>reply_all</li>
+  <li>report</li>
+  <li>report_problem</li>
+  <li>restaurant</li>
+  <li>restaurant_menu</li>
+  <li>restore</li>
+  <li>restore_page</li>
+  <li>ring_volume</li>
+  <li>room</li>
+  <li>room_service</li>
+  <li>rotate_90_degrees_ccw</li>
+  <li>rotate_left</li>
+  <li>rotate_right</li>
+  <li>rounded_corner</li>
+  <li>router</li>
+  <li>rowing</li>
+  <li>rss_feed</li>
+  <li>rv_hookup</li>
+  <li>satellite</li>
+  <li>save</li>
+  <li>scanner</li>
+  <li>schedule</li>
+  <li>school</li>
+  <li>screen_lock_landscape</li>
+  <li>screen_lock_portrait</li>
+  <li>screen_lock_rotation</li>
+  <li>screen_rotation</li>
+  <li>screen_share</li>
+  <li>sd_card</li>
+  <li>sd_storage</li>
+  <li>search</li>
+  <li>security</li>
+  <li>select_all</li>
+  <li>send</li>
+  <li>sentiment_dissatisfied</li>
+  <li>sentiment_neutral</li>
+  <li>sentiment_satisfied</li>
+  <li>sentiment_very_dissatisfied</li>
+  <li>sentiment_very_satisfied</li>
+  <li>settings</li>
+  <li>settings_applications</li>
+  <li>settings_backup_restore</li>
+  <li>settings_bluetooth</li>
+  <li>settings_brightness</li>
+  <li>settings_cell</li>
+  <li>settings_ethernet</li>
+  <li>settings_input_antenna</li>
+  <li>settings_input_component</li>
+  <li>settings_input_composite</li>
+  <li>settings_input_hdmi</li>
+  <li>settings_input_svideo</li>
+  <li>settings_overscan</li>
+  <li>settings_phone</li>
+  <li>settings_power</li>
+  <li>settings_remote</li>
+  <li>settings_system_daydream</li>
+  <li>settings_voice</li>
+  <li>share</li>
+  <li>shop</li>
+  <li>shop_two</li>
+  <li>shopping_basket</li>
+  <li>shopping_cart</li>
+  <li>short_text</li>
+  <li>show_chart</li>
+  <li>shuffle</li>
+  <li>signal_cellular_4_bar</li>
+  <li>signal_cellular_connected_no_internet_4_bar</li>
+  <li>signal_cellular_no_sim</li>
+  <li>signal_cellular_null</li>
+  <li>signal_cellular_off</li>
+  <li>signal_wifi_4_bar</li>
+  <li>signal_wifi_4_bar_lock</li>
+  <li>signal_wifi_off</li>
+  <li>sim_card</li>
+  <li>sim_card_alert</li>
+  <li>skip_next</li>
+  <li>skip_previous</li>
+  <li>slideshow</li>
+  <li>slow_motion_video</li>
+  <li>smartphone</li>
+  <li>smoke_free</li>
+  <li>smoking_rooms</li>
+  <li>sms</li>
+  <li>sms_failed</li>
+  <li>snooze</li>
+  <li>sort</li>
+  <li>sort_by_alpha</li>
+  <li>spa</li>
+  <li>space_bar</li>
+  <li>speaker</li>
+  <li>speaker_group</li>
+  <li>speaker_notes</li>
+  <li>speaker_notes_off</li>
+  <li>speaker_phone</li>
+  <li>spellcheck</li>
+  <li>star</li>
+  <li>star_border</li>
+  <li>star_half</li>
+  <li>stars</li>
+  <li>stay_current_landscape</li>
+  <li>stay_current_portrait</li>
+  <li>stay_primary_landscape</li>
+  <li>stay_primary_portrait</li>
+  <li>stop</li>
+  <li>stop_screen_share</li>
+  <li>storage</li>
+  <li>store</li>
+  <li>store_mall_directory</li>
+  <li>straighten</li>
+  <li>streetview</li>
+  <li>strikethrough_s</li>
+  <li>style</li>
+  <li>subdirectory_arrow_left</li>
+  <li>subdirectory_arrow_right</li>
+  <li>subject</li>
+  <li>subscriptions</li>
+  <li>subtitles</li>
+  <li>subway</li>
+  <li>supervisor_account</li>
+  <li>surround_sound</li>
+  <li>swap_calls</li>
+  <li>swap_horiz</li>
+  <li>swap_vert</li>
+  <li>swap_vertical_circle</li>
+  <li>switch_camera</li>
+  <li>switch_video</li>
+  <li>sync</li>
+  <li>sync_alt</li>
+  <li>sync_disabled</li>
+  <li>sync_problem</li>
+  <li>system_update</li>
+  <li>system_update_alt</li>
+  <li>tab</li>
+  <li>tab_unselected</li>
+  <li>tablet</li>
+  <li>tablet_android</li>
+  <li>tablet_mac</li>
+  <li>tag_faces</li>
+  <li>tap_and_play</li>
+  <li>terrain</li>
+  <li>text_fields</li>
+  <li>text_format</li>
+  <li>textsms</li>
+  <li>texture</li>
+  <li>theaters</li>
+  <li>thumb_down</li>
+  <li>thumb_up</li>
+  <li>thumbs_up_down</li>
+  <li>time_to_leave</li>
+  <li>timelapse</li>
+  <li>timeline</li>
+  <li>timer</li>
+  <li>timer_10</li>
+  <li>timer_3</li>
+  <li>timer_off</li>
+  <li>title</li>
+  <li>toc</li>
+  <li>today</li>
+  <li>toll</li>
+  <li>tonality</li>
+  <li>touch_app</li>
+  <li>toys</li>
+  <li>track_changes</li>
+  <li>traffic</li>
+  <li>train</li>
+  <li>tram</li>
+  <li>transfer_within_a_station</li>
+  <li>transform</li>
+  <li>translate</li>
+  <li>trending_down</li>
+  <li>trending_flat</li>
+  <li>trending_up</li>
+  <li>trip_origin</li>
+  <li>tune</li>
+  <li>turned_in</li>
+  <li>turned_in_not</li>
+  <li>tv</li>
+  <li>unarchive</li>
+  <li>undo</li>
+  <li>unfold_less</li>
+  <li>unfold_more</li>
+  <li>update</li>
+  <li>usb</li>
+  <li>verified_user</li>
+  <li>vertical_align_bottom</li>
+  <li>vertical_align_center</li>
+  <li>vertical_align_top</li>
+  <li>vibration</li>
+  <li>video_call</li>
+  <li>video_label</li>
+  <li>video_library</li>
+  <li>videocam</li>
+  <li>videocam_off</li>
+  <li>videogame_asset</li>
+  <li>view_agenda</li>
+  <li>view_array</li>
+  <li>view_carousel</li>
+  <li>view_column</li>
+  <li>view_comfy</li>
+  <li>view_compact</li>
+  <li>view_day</li>
+  <li>view_headline</li>
+  <li>view_list</li>
+  <li>view_module</li>
+  <li>view_quilt</li>
+  <li>view_stream</li>
+  <li>view_week</li>
+  <li>vignette</li>
+  <li>visibility</li>
+  <li>visibility_off</li>
+  <li>voice_chat</li>
+  <li>voicemail</li>
+  <li>volume_down</li>
+  <li>volume_mute</li>
+  <li>volume_off</li>
+  <li>volume_up</li>
+  <li>vpn_key</li>
+  <li>vpn_lock</li>
+  <li>wallpaper</li>
+  <li>warning</li>
+  <li>watch</li>
+  <li>watch_later</li>
+  <li>wb_auto</li>
+  <li>wb_cloudy</li>
+  <li>wb_incandescent</li>
+  <li>wb_iridescent</li>
+  <li>wb_sunny</li>
+  <li>wc</li>
+  <li>web</li>
+  <li>web_asset</li>
+  <li>weekend</li>
+  <li>whatshot</li>
+  <li>widgets</li>
+  <li>wifi</li>
+  <li>wifi_lock</li>
+  <li>wifi_tethering</li>
+  <li>work</li>
+  <li>work_history</li>
+  <li>wrap_text</li>
+  <li>youtube_searched_for</li>
+  <li>zoom_in</li>
+  <li>zoom_out</li>
+  <li>zoom_out_map</li>
+  <li>_10k</li>
+  <li>_10mp</li>
+  <li>_11mp</li>
+  <li>_123</li>
+  <li>_12mp</li>
+  <li>_13mp</li>
+  <li>_14mp</li>
+  <li>_15mp</li>
+  <li>_16mp</li>
+  <li>_17mp</li>
+  <li>_18_up_rating</li>
+  <li>_18mp</li>
+  <li>_19mp</li>
+  <li>_1k</li>
+  <li>_1k_plus</li>
+  <li>_1x_mobiledata</li>
+  <li>_20mp</li>
+  <li>_21mp</li>
+  <li>_22mp</li>
+  <li>_23mp</li>
+  <li>_24mp</li>
+  <li>_2k</li>
+  <li>_2k_plus</li>
+  <li>_2mp</li>
+  <li>_30fps</li>
+  <li>_30fps_select</li>
+  <li>_360</li>
+  <li>_3g_mobiledata</li>
+  <li>_3k</li>
+  <li>_3k_plus</li>
+  <li>_3mp</li>
+  <li>_3p</li>
+  <li>_4g_mobiledata</li>
+  <li>_4g_plus_mobiledata</li>
+  <li>_4k</li>
+  <li>_4k_plus</li>
+  <li>_4mp</li>
+  <li>_5g</li>
+  <li>_5k</li>
+  <li>_5k_plus</li>
+  <li>_5mp</li>
+  <li>_60fps</li>
+  <li>_60fps_select</li>
+  <li>_6_ft_apart</li>
+  <li>_6k</li>
+  <li>_6k_plus</li>
+  <li>_6mp</li>
+  <li>_7k</li>
+  <li>_7k_plus</li>
+  <li>_7mp</li>
+  <li>_8k</li>
+  <li>_8k_plus</li>
+  <li>_8mp</li>
+  <li>_9k</li>
+  <li>_9k_plus</li>
+  <li>_9mp</li>
+  <li>abc</li>
+  <li>access_time_filled</li>
+  <li>accessibility_new</li>
+  <li>accessible_forward</li>
+  <li>ad_units</li>
+  <li>add_business</li>
+  <li>add_card</li>
+  <li>add_chart</li>
+  <li>add_comment</li>
+  <li>add_home</li>
+  <li>add_home_work</li>
+  <li>add_ic_call</li>
+  <li>add_link</li>
+  <li>add_location_alt</li>
+  <li>add_moderator</li>
+  <li>add_photo_alternate</li>
+  <li>add_reaction</li>
+  <li>add_road</li>
+  <li>add_task</li>
+  <li>add_to_drive</li>
+  <li>add_to_home_screen</li>
+  <li>addchart</li>
+  <li>adf_scanner</li>
+  <li>admin_panel_settings</li>
+  <li>adobe</li>
+  <li>ads_click</li>
+  <li>agriculture</li>
+  <li>air</li>
+  <li>airline_stops</li>
+  <li>airlines</li>
+  <li>airplane_ticket</li>
+  <li>airplanemode_off</li>
+  <li>airplanemode_on</li>
+  <li>align_horizontal_center</li>
+  <li>align_horizontal_left</li>
+  <li>align_horizontal_right</li>
+  <li>align_vertical_bottom</li>
+  <li>align_vertical_center</li>
+  <li>align_vertical_top</li>
+  <li>all_inbox</li>
+  <li>alt_route</li>
+  <li>alternate_email</li>
+  <li>amp_stories</li>
+  <li>analytics</li>
+  <li>anchor</li>
+  <li>animation</li>
+  <li>aod</li>
+  <li>apartment</li>
+  <li>api</li>
+  <li>app_blocking</li>
+  <li>app_registration</li>
+  <li>app_settings_alt</li>
+  <li>app_shortcut</li>
+  <li>apple</li>
+  <li>approval</li>
+  <li>apps_outage</li>
+  <li>architecture</li>
+  <li>area_chart</li>
+  <li>arrow_back_ios</li>
+  <li>arrow_back_ios_new</li>
+  <li>arrow_circle_down</li>
+  <li>arrow_circle_left</li>
+  <li>arrow_circle_right</li>
+  <li>arrow_circle_up</li>
+  <li>arrow_forward_ios</li>
+  <li>arrow_left</li>
+  <li>arrow_outward</li>
+  <li>arrow_right</li>
+  <li>arrow_right_alt</li>
+  <li>article</li>
+  <li>assist_walker</li>
+  <li>assistant_direction</li>
+  <li>assured_workload</li>
+  <li>atm</li>
+  <li>attach_email</li>
+  <li>attractions</li>
+  <li>attribution</li>
+  <li>audio_file</li>
+  <li>auto_awesome</li>
+  <li>auto_awesome_mosaic</li>
+  <li>auto_awesome_motion</li>
+  <li>auto_delete</li>
+  <li>auto_fix_high</li>
+  <li>auto_fix_normal</li>
+  <li>auto_fix_off</li>
+  <li>auto_graph</li>
+  <li>auto_mode</li>
+  <li>auto_stories</li>
+  <li>autofps_select</li>
+  <li>baby_changing_station</li>
+  <li>back_hand</li>
+  <li>backpack</li>
+  <li>backup_table</li>
+  <li>badge</li>
+  <li>bakery_dining</li>
+  <li>balance</li>
+  <li>balcony</li>
+  <li>ballot</li>
+  <li>bar_chart</li>
+  <li>batch_prediction</li>
+  <li>bathroom</li>
+  <li>bathtub</li>
+  <li>battery_0_bar</li>
+  <li>battery_1_bar</li>
+  <li>battery_2_bar</li>
+  <li>battery_3_bar</li>
+  <li>battery_4_bar</li>
+  <li>battery_5_bar</li>
+  <li>battery_6_bar</li>
+  <li>battery_saver</li>
+  <li>bed</li>
+  <li>bedroom_baby</li>
+  <li>bedroom_child</li>
+  <li>bedroom_parent</li>
+  <li>bedtime</li>
+  <li>bedtime_off</li>
+  <li>bento</li>
+  <li>bike_scooter</li>
+  <li>biotech</li>
+  <li>blender</li>
+  <li>blind</li>
+  <li>blinds</li>
+  <li>blinds_closed</li>
+  <li>bloodtype</li>
+  <li>bluetooth_drive</li>
+  <li>bolt</li>
+  <li>book_online</li>
+  <li>bookmark_add</li>
+  <li>bookmark_added</li>
+  <li>bookmark_outline</li>
+  <li>bookmark_remove</li>
+  <li>boy</li>
+  <li>breakfast_dining</li>
+  <li>broadcast_on_home</li>
+  <li>broadcast_on_personal</li>
+  <li>browse_gallery</li>
+  <li>browser_not_supported</li>
+  <li>browser_updated</li>
+  <li>brunch_dining</li>
+  <li>build_circle</li>
+  <li>bungalow</li>
+  <li>bus_alert</li>
+  <li>cabin</li>
+  <li>cable</li>
+  <li>calculate</li>
+  <li>calendar_month</li>
+  <li>calendar_view_day</li>
+  <li>calendar_view_month</li>
+  <li>calendar_view_week</li>
+  <li>camera_indoor</li>
+  <li>camera_outdoor</li>
+  <li>cameraswitch</li>
+  <li>campaign</li>
+  <li>cancel_presentation</li>
+  <li>cancel_schedule_send</li>
+  <li>candlestick_chart</li>
+  <li>car_crash</li>
+  <li>car_rental</li>
+  <li>car_repair</li>
+  <li>carpenter</li>
+  <li>cases</li>
+  <li>cast_for_education</li>
+  <li>castle</li>
+  <li>catching_pokemon</li>
+  <li>category</li>
+  <li>celebration</li>
+  <li>cell_tower</li>
+  <li>cell_wifi</li>
+  <li>chair</li>
+  <li>chair_alt</li>
+  <li>chalet</li>
+  <li>change_circle</li>
+  <li>charging_station</li>
+  <li>checklist</li>
+  <li>checklist_rtl</li>
+  <li>checkroom</li>
+  <li>church</li>
+  <li>circle</li>
+  <li>circle_notifications</li>
+  <li>clean_hands</li>
+  <li>cleaning_services</li>
+  <li>close_fullscreen</li>
+  <li>closed_caption_disabled</li>
+  <li>closed_caption_off</li>
+  <li>cloud_sync</li>
+  <li>co2</li>
+  <li>co_present</li>
+  <li>code_off</li>
+  <li>coffee</li>
+  <li>coffee_maker</li>
+  <li>comment_bank</li>
+  <li>comments_disabled</li>
+  <li>commit</li>
+  <li>commute</li>
+  <li>compass_calibration</li>
+  <li>compost</li>
+  <li>compress</li>
+  <li>confirmation_num</li>
+  <li>connect_without_contact</li>
+  <li>connected_tv</li>
+  <li>connecting_airports</li>
+  <li>construction</li>
+  <li>contact_emergency</li>
+  <li>contact_page</li>
+  <li>contact_support</li>
+  <li>contactless</li>
+  <li>content_paste_go</li>
+  <li>content_paste_off</li>
+  <li>content_paste_search</li>
+  <li>contrast</li>
+  <li>control_camera</li>
+  <li>cookie</li>
+  <li>copy</li>
+  <li>copy_all</li>
+  <li>coronavirus</li>
+  <li>corporate_fare</li>
+  <li>cottage</li>
+  <li>countertops</li>
+  <li>credit_card_off</li>
+  <li>credit_score</li>
+  <li>crib</li>
+  <li>crisis_alert</li>
+  <li>cruelty_free</li>
+  <li>css</li>
+  <li>currency_bitcoin</li>
+  <li>currency_exchange</li>
+  <li>currency_franc</li>
+  <li>currency_lira</li>
+  <li>currency_pound</li>
+  <li>currency_ruble</li>
+  <li>currency_rupee</li>
+  <li>currency_yen</li>
+  <li>currency_yuan</li>
+  <li>curtains</li>
+  <li>curtains_closed</li>
+  <li>cut</li>
+  <li>cyclone</li>
+  <li>dangerous</li>
+  <li>dark_mode</li>
+  <li>dashboard_customize</li>
+  <li>data_array</li>
+  <li>data_exploration</li>
+  <li>data_object</li>
+  <li>data_saver_off</li>
+  <li>data_saver_on</li>
+  <li>data_thresholding</li>
+  <li>dataset</li>
+  <li>dataset_linked</li>
+  <li>deblur</li>
+  <li>deck</li>
+  <li>delivery_dining</li>
+  <li>density_large</li>
+  <li>density_medium</li>
+  <li>density_small</li>
+  <li>departure_board</li>
+  <li>deselect</li>
+  <li>design_services</li>
+  <li>desk</li>
+  <li>desktop_access_disabled</li>
+  <li>developer_board_off</li>
+  <li>device_thermostat</li>
+  <li>device_unknown</li>
+  <li>devices_fold</li>
+  <li>diamond</li>
+  <li>difference</li>
+  <li>dining</li>
+  <li>dinner_dining</li>
+  <li>directions_boat_filled</li>
+  <li>directions_bus_filled</li>
+  <li>directions_car_filled</li>
+  <li>directions_ferry</li>
+  <li>directions_off</li>
+  <li>directions_railway_filled</li>
+  <li>directions_subway_filled</li>
+  <li>directions_train</li>
+  <li>directions_transit_filled</li>
+  <li>dirty_lens</li>
+  <li>disabled_by_default</li>
+  <li>disabled_visible</li>
+  <li>discord</li>
+  <li>discount</li>
+  <li>display_settings</li>
+  <li>diversity_1</li>
+  <li>diversity_2</li>
+  <li>diversity_3</li>
+  <li>dnd_forwardslash</li>
+  <li>do_disturb</li>
+  <li>do_disturb_alt</li>
+  <li>do_disturb_off</li>
+  <li>do_disturb_on</li>
+  <li>do_not_disturb_on_total_silence</li>
+  <li>do_not_step</li>
+  <li>do_not_touch</li>
+  <li>document_scanner</li>
+  <li>domain_add</li>
+  <li>domain_disabled</li>
+  <li>domain_verification</li>
+  <li>done_outline</li>
+  <li>door_back</li>
+  <li>door_front</li>
+  <li>door_sliding</li>
+  <li>doorbell</li>
+  <li>double_arrow</li>
+  <li>downhill_skiing</li>
+  <li>download</li>
+  <li>download_done</li>
+  <li>download_for_offline</li>
+  <li>downloading</li>
+  <li>drag_indicator</li>
+  <li>draw</li>
+  <li>drive_file_move</li>
+  <li>drive_file_move_rtl</li>
+  <li>drive_file_rename_outline</li>
+  <li>drive_folder_upload</li>
+  <li>dry</li>
+  <li>dry_cleaning</li>
+  <li>duo</li>
+  <li>dynamic_feed</li>
+  <li>dynamic_form</li>
+  <li>e_mobiledata</li>
+  <li>earbuds</li>
+  <li>earbuds_battery</li>
+  <li>east</li>
+  <li>eco</li>
+  <li>edgesensor_high</li>
+  <li>edgesensor_low</li>
+  <li>edit_attributes</li>
+  <li>edit_calendar</li>
+  <li>edit_location_alt</li>
+  <li>edit_note</li>
+  <li>edit_notifications</li>
+  <li>edit_off</li>
+  <li>edit_road</li>
+  <li>egg</li>
+  <li>egg_alt</li>
+  <li>elderly</li>
+  <li>elderly_woman</li>
+  <li>electric_bike</li>
+  <li>electric_bolt</li>
+  <li>electric_car</li>
+  <li>electric_meter</li>
+  <li>electric_moped</li>
+  <li>electric_rickshaw</li>
+  <li>electric_scooter</li>
+  <li>electrical_services</li>
+  <li>elevator</li>
+  <li>emergency</li>
+  <li>emergency_recording</li>
+  <li>emergency_share</li>
+  <li>emoji_emotions</li>
+  <li>emoji_events</li>
+  <li>emoji_flags</li>
+  <li>emoji_food_beverage</li>
+  <li>emoji_nature</li>
+  <li>emoji_objects</li>
+  <li>emoji_people</li>
+  <li>emoji_symbols</li>
+  <li>emoji_transportation</li>
+  <li>energy_savings_leaf</li>
+  <li>engineering</li>
+  <li>enhance_photo_translate</li>
+  <li>escalator</li>
+  <li>escalator_warning</li>
+  <li>euro</li>
+  <li>event_repeat</li>
+  <li>expand</li>
+  <li>expand_circle_down</li>
+  <li>explore_off</li>
+  <li>exposure_minus_1</li>
+  <li>exposure_minus_2</li>
+  <li>extension_off</li>
+  <li>face_2</li>
+  <li>face_3</li>
+  <li>face_4</li>
+  <li>face_5</li>
+  <li>face_6</li>
+  <li>face_retouching_natural</li>
+  <li>face_retouching_off</li>
+  <li>face_unlock</li>
+  <li>facebook</li>
+  <li>fact_check</li>
+  <li>factory</li>
+  <li>family_restroom</li>
+  <li>fastfood</li>
+  <li>favorite_outline</li>
+  <li>fax</li>
+  <li>feed</li>
+  <li>female</li>
+  <li>fence</li>
+  <li>festival</li>
+  <li>file_copy</li>
+  <li>file_download_done</li>
+  <li>file_download_off</li>
+  <li>file_open</li>
+  <li>file_present</li>
+  <li>filter_alt</li>
+  <li>filter_alt_off</li>
+  <li>filter_list_off</li>
+  <li>fire_extinguisher</li>
+  <li>fire_hydrant_alt</li>
+  <li>fire_truck</li>
+  <li>fireplace</li>
+  <li>fit_screen</li>
+  <li>fitbit</li>
+  <li>flag_circle</li>
+  <li>flaky</li>
+  <li>flashlight_off</li>
+  <li>flashlight_on</li>
+  <li>flatware</li>
+  <li>flight_class</li>
+  <li>flip_camera_android</li>
+  <li>flip_camera_ios</li>
+  <li>flood</li>
+  <li>flourescent</li>
+  <li>fluorescent</li>
+  <li>flutter_dash</li>
+  <li>fmd_bad</li>
+  <li>fmd_good</li>
+  <li>folder_copy</li>
+  <li>folder_delete</li>
+  <li>folder_off</li>
+  <li>folder_zip</li>
+  <li>follow_the_signs</li>
+  <li>font_download_off</li>
+  <li>food_bank</li>
+  <li>forest</li>
+  <li>fork_left</li>
+  <li>fork_right</li>
+  <li>format_list_numbered_rtl</li>
+  <li>format_overline</li>
+  <li>format_underline</li>
+  <li>fort</li>
+  <li>forward_to_inbox</li>
+  <li>foundation</li>
+  <li>free_cancellation</li>
+  <li>front_hand</li>
+  <li>g_mobiledata</li>
+  <li>garage</li>
+  <li>gas_meter</li>
+  <li>generating_tokens</li>
+  <li>gif_box</li>
+  <li>girl</li>
+  <li>gite</li>
+  <li>gpp_bad</li>
+  <li>gpp_good</li>
+  <li>gpp_maybe</li>
+  <li>grading</li>
+  <li>grass</li>
+  <li>grid_3x3</li>
+  <li>grid_4x4</li>
+  <li>grid_goldenratio</li>
+  <li>grid_view</li>
+  <li>group_off</li>
+  <li>group_remove</li>
+  <li>groups</li>
+  <li>groups_2</li>
+  <li>groups_3</li>
+  <li>h_mobiledata</li>
+  <li>h_plus_mobiledata</li>
+  <li>hail</li>
+  <li>handshake</li>
+  <li>handyman</li>
+  <li>hardware</li>
+  <li>hdr_auto</li>
+  <li>hdr_auto_select</li>
+  <li>hdr_enhanced_select</li>
+  <li>hdr_off_select</li>
+  <li>hdr_on_select</li>
+  <li>hdr_plus</li>
+  <li>headphones</li>
+  <li>headphones_battery</li>
+  <li>headset_off</li>
+  <li>health_and_safety</li>
+  <li>hearing_disabled</li>
+  <li>heart_broken</li>
+  <li>heat_pump</li>
+  <li>height</li>
+  <li>help_center</li>
+  <li>hevc</li>
+  <li>hexagon</li>
+  <li>hide_image</li>
+  <li>hide_source</li>
+  <li>highlight_alt</li>
+  <li>highlight_remove</li>
+  <li>hiking</li>
+  <li>history_edu</li>
+  <li>hive</li>
+  <li>hls</li>
+  <li>hls_off</li>
+  <li>holiday_village</li>
+  <li>home_max</li>
+  <li>home_mini</li>
+  <li>home_repair_service</li>
+  <li>home_work</li>
+  <li>horizontal_distribute</li>
+  <li>horizontal_rule</li>
+  <li>horizontal_split</li>
+  <li>hotel_class</li>
+  <li>hourglass_bottom</li>
+  <li>hourglass_disabled</li>
+  <li>hourglass_top</li>
+  <li>house</li>
+  <li>house_siding</li>
+  <li>houseboat</li>
+  <li>how_to_reg</li>
+  <li>how_to_vote</li>
+  <li>html</li>
+  <li>hub</li>
+  <li>hvac</li>
+  <li>ice_skating</li>
+  <li>icecream</li>
+  <li>image_not_supported</li>
+  <li>image_search</li>
+  <li>imagesearch_roller</li>
+  <li>incomplete_circle</li>
+  <li>insert_chart_outlined</li>
+  <li>insert_page_break</li>
+  <li>insights</li>
+  <li>install_desktop</li>
+  <li>install_mobile</li>
+  <li>integration_instructions</li>
+  <li>interests</li>
+  <li>interpreter_mode</li>
+  <li>inventory</li>
+  <li>inventory_2</li>
+  <li>invert_colors_on</li>
+  <li>ios_share</li>
+  <li>iron</li>
+  <li>javascript</li>
+  <li>join_full</li>
+  <li>join_inner</li>
+  <li>join_left</li>
+  <li>join_right</li>
+  <li>kayaking</li>
+  <li>kebab_dining</li>
+  <li>key</li>
+  <li>key_off</li>
+  <li>keyboard_alt</li>
+  <li>keyboard_command_key</li>
+  <li>keyboard_control</li>
+  <li>keyboard_control_key</li>
+  <li>keyboard_double_arrow_down</li>
+  <li>keyboard_double_arrow_left</li>
+  <li>keyboard_double_arrow_right</li>
+  <li>keyboard_double_arrow_up</li>
+  <li>keyboard_option_key</li>
+  <li>king_bed</li>
+  <li>kitesurfing</li>
+  <li>label_important</li>
+  <li>label_important_outline</li>
+  <li>label_off</li>
+  <li>lan</li>
+  <li>landslide</li>
+  <li>leaderboard</li>
+  <li>leave_bags_at_home</li>
+  <li>legend_toggle</li>
+  <li>lens_blur</li>
+  <li>library_add_check</li>
+  <li>light</li>
+  <li>light_mode</li>
+  <li>lightbulb</li>
+  <li>lightbulb_circle</li>
+  <li>line_axis</li>
+  <li>link_off</li>
+  <li>liquor</li>
+  <li>living</li>
+  <li>local_attraction</li>
+  <li>local_fire_department</li>
+  <li>local_police</li>
+  <li>local_print_shop</li>
+  <li>local_restaurant</li>
+  <li>location_history</li>
+  <li>lock_clock</li>
+  <li>lock_person</li>
+  <li>lock_reset</li>
+  <li>logo_dev</li>
+  <li>logout</li>
+  <li>lte_mobiledata</li>
+  <li>lte_plus_mobiledata</li>
+  <li>luggage</li>
+  <li>lunch_dining</li>
+  <li>lyrics</li>
+  <li>macro_off</li>
+  <li>mail_lock</li>
+  <li>male</li>
+  <li>man</li>
+  <li>man_2</li>
+  <li>man_3</li>
+  <li>man_4</li>
+  <li>manage_accounts</li>
+  <li>manage_history</li>
+  <li>manage_search</li>
+  <li>maps_home_work</li>
+  <li>maps_ugc</li>
+  <li>margin</li>
+  <li>mark_as_unread</li>
+  <li>mark_chat_read</li>
+  <li>mark_chat_unread</li>
+  <li>mark_email_read</li>
+  <li>mark_email_unread</li>
+  <li>mark_unread_chat_alt</li>
+  <li>masks</li>
+  <li>maximize</li>
+  <li>media_bluetooth_off</li>
+  <li>media_bluetooth_on</li>
+  <li>mediation</li>
+  <li>medical_information</li>
+  <li>medical_services</li>
+  <li>medication</li>
+  <li>medication_liquid</li>
+  <li>meeting_room</li>
+  <li>menu_book</li>
+  <li>menu_open</li>
+  <li>merge</li>
+  <li>messenger</li>
+  <li>messenger_outline</li>
+  <li>mic_external_off</li>
+  <li>mic_external_on</li>
+  <li>microwave</li>
+  <li>military_tech</li>
+  <li>minimize</li>
+  <li>minor_crash</li>
+  <li>miscellaneous_services</li>
+  <li>missed_video_call</li>
+  <li>mobile_friendly</li>
+  <li>mobile_off</li>
+  <li>mobile_screen_share</li>
+  <li>mobiledata_off</li>
+  <li>mode</li>
+  <li>mode_edit_outline</li>
+  <li>mode_fan_off</li>
+  <li>mode_night</li>
+  <li>mode_of_travel</li>
+  <li>mode_standby</li>
+  <li>model_training</li>
+  <li>money</li>
+  <li>money_off_csred</li>
+  <li>monitor</li>
+  <li>monitor_heart</li>
+  <li>monitor_weight</li>
+  <li>moped</li>
+  <li>more_time</li>
+  <li>mosque</li>
+  <li>motion_photos_auto</li>
+  <li>motion_photos_off</li>
+  <li>motion_photos_on</li>
+  <li>motion_photos_pause</li>
+  <li>motion_photos_paused</li>
+  <li>move_down</li>
+  <li>move_up</li>
+  <li>moving</li>
+  <li>mp</li>
+  <li>multiple_stop</li>
+  <li>multitrack_audio</li>
+  <li>museum</li>
+  <li>music_off</li>
+  <li>my_library_add</li>
+  <li>my_library_books</li>
+  <li>my_library_music</li>
+  <li>nat</li>
+  <li>near_me_disabled</li>
+  <li>nearby_error</li>
+  <li>nearby_off</li>
+  <li>nest_cam_wired_stand</li>
+  <li>network_ping</li>
+  <li>network_wifi_1_bar</li>
+  <li>network_wifi_2_bar</li>
+  <li>network_wifi_3_bar</li>
+  <li>new_label</li>
+  <li>newspaper</li>
+  <li>next_plan</li>
+  <li>night_shelter</li>
+  <li>nightlife</li>
+  <li>nightlight</li>
+  <li>nightlight_round</li>
+  <li>nights_stay</li>
+  <li>no_accounts</li>
+  <li>no_adult_content</li>
+  <li>no_backpack</li>
+  <li>no_cell</li>
+  <li>no_crash</li>
+  <li>no_drinks</li>
+  <li>no_encryption_gmailerrorred</li>
+  <li>no_flash</li>
+  <li>no_food</li>
+  <li>no_luggage</li>
+  <li>no_meals</li>
+  <li>no_meeting_room</li>
+  <li>no_photography</li>
+  <li>no_stroller</li>
+  <li>no_transfer</li>
+  <li>noise_aware</li>
+  <li>noise_control_off</li>
+  <li>nordic_walking</li>
+  <li>north</li>
+  <li>north_east</li>
+  <li>north_west</li>
+  <li>not_accessible</li>
+  <li>not_listed_location</li>
+  <li>not_started</li>
+  <li>note_alt</li>
+  <li>notes</li>
+  <li>notification_add</li>
+  <li>notification_important</li>
+  <li>notifications_on</li>
+  <li>now_wallpaper</li>
+  <li>now_widgets</li>
+  <li>numbers</li>
+  <li>offline_bolt</li>
+  <li>offline_share</li>
+  <li>oil_barrel</li>
+  <li>on_device_training</li>
+  <li>online_prediction</li>
+  <li>open_in_full</li>
+  <li>open_in_new_off</li>
+  <li>other_houses</li>
+  <li>outbond</li>
+  <li>outbound</li>
+  <li>outbox</li>
+  <li>outdoor_grill</li>
+  <li>outlet</li>
+  <li>outlined_flag</li>
+  <li>output</li>
+  <li>padding</li>
+  <li>paid</li>
+  <li>pan_tool_alt</li>
+  <li>panorama_fisheye</li>
+  <li>panorama_horizontal_select</li>
+  <li>panorama_photosphere</li>
+  <li>panorama_photosphere_select</li>
+  <li>panorama_vertical_select</li>
+  <li>panorama_wide_angle_select</li>
+  <li>paragliding</li>
+  <li>park</li>
+  <li>password</li>
+  <li>paste</li>
+  <li>pattern</li>
+  <li>pause_circle</li>
+  <li>pause_presentation</li>
+  <li>payments</li>
+  <li>paypal</li>
+  <li>pedal_bike</li>
+  <li>pending</li>
+  <li>pending_actions</li>
+  <li>pentagon</li>
+  <li>people_alt</li>
+  <li>percent</li>
+  <li>perm_contact_cal</li>
+  <li>perm_device_info</li>
+  <li>person_2</li>
+  <li>person_3</li>
+  <li>person_4</li>
+  <li>person_add_alt</li>
+  <li>person_add_alt_1</li>
+  <li>person_add_disabled</li>
+  <li>person_off</li>
+  <li>person_remove</li>
+  <li>person_remove_alt_1</li>
+  <li>person_search</li>
+  <li>personal_injury</li>
+  <li>pest_control</li>
+  <li>pest_control_rodent</li>
+  <li>phishing</li>
+  <li>phone_callback</li>
+  <li>phone_disabled</li>
+  <li>phone_enabled</li>
+  <li>photo_camera_back</li>
+  <li>photo_camera_front</li>
+  <li>php</li>
+  <li>piano</li>
+  <li>piano_off</li>
+  <li>pie_chart_outline</li>
+  <li>pin</li>
+  <li>pin_end</li>
+  <li>pin_invoke</li>
+  <li>pinch</li>
+  <li>pivot_table_chart</li>
+  <li>pix</li>
+  <li>plagiarism</li>
+  <li>play_circle</li>
+  <li>play_circle_fill</li>
+  <li>play_disabled</li>
+  <li>play_lesson</li>
+  <li>playlist_add_check_circle</li>
+  <li>playlist_add_circle</li>
+  <li>playlist_remove</li>
+  <li>plumbing</li>
+  <li>podcasts</li>
+  <li>point_of_sale</li>
+  <li>policy</li>
+  <li>polyline</li>
+  <li>post_add</li>
+  <li>power_off</li>
+  <li>precision_manufacturing</li>
+  <li>preview</li>
+  <li>price_change</li>
+  <li>price_check</li>
+  <li>print_disabled</li>
+  <li>privacy_tip</li>
+  <li>private_connectivity</li>
+  <li>production_quantity_limits</li>
+  <li>propane</li>
+  <li>propane_tank</li>
+  <li>psychology</li>
+  <li>psychology_alt</li>
+  <li>public_off</li>
+  <li>published_with_changes</li>
+  <li>punch_clock</li>
+  <li>push_pin</li>
+  <li>qr_code</li>
+  <li>qr_code_2</li>
+  <li>qr_code_scanner</li>
+  <li>query_stats</li>
+  <li>question_mark</li>
+  <li>quick_contacts_dialer</li>
+  <li>quick_contacts_mail</li>
+  <li>quickreply</li>
+  <li>quiz</li>
+  <li>quora</li>
+  <li>r_mobiledata</li>
+  <li>radar</li>
+  <li>radio_button_off</li>
+  <li>radio_button_on</li>
+  <li>railway_alert</li>
+  <li>ramen_dining</li>
+  <li>ramp_left</li>
+  <li>ramp_right</li>
+  <li>raw_off</li>
+  <li>raw_on</li>
+  <li>read_more</li>
+  <li>real_estate_agent</li>
+  <li>receipt_long</li>
+  <li>recommend</li>
+  <li>rectangle</li>
+  <li>recycling</li>
+  <li>reddit</li>
+  <li>reduce_capacity</li>
+  <li>remember_me</li>
+  <li>remove_done</li>
+  <li>remove_moderator</li>
+  <li>remove_road</li>
+  <li>repartition</li>
+  <li>repeat_on</li>
+  <li>repeat_one_on</li>
+  <li>replay_circle_filled</li>
+  <li>report_gmailerrorred</li>
+  <li>report_off</li>
+  <li>request_page</li>
+  <li>request_quote</li>
+  <li>reset_tv</li>
+  <li>restart_alt</li>
+  <li>restore_from_trash</li>
+  <li>reviews</li>
+  <li>rice_bowl</li>
+  <li>rocket</li>
+  <li>rocket_launch</li>
+  <li>roller_shades</li>
+  <li>roller_shades_closed</li>
+  <li>roller_skating</li>
+  <li>roofing</li>
+  <li>room_preferences</li>
+  <li>rotate_90_degrees_cw</li>
+  <li>roundabout_left</li>
+  <li>roundabout_right</li>
+  <li>route</li>
+  <li>rsvp</li>
+  <li>rtt</li>
+  <li>rule</li>
+  <li>rule_folder</li>
+  <li>run_circle</li>
+  <li>running_with_errors</li>
+  <li>safety_check</li>
+  <li>safety_divider</li>
+  <li>sailing</li>
+  <li>sanitizer</li>
+  <li>satellite_alt</li>
+  <li>save_alt</li>
+  <li>save_as</li>
+  <li>saved_search</li>
+  <li>savings</li>
+  <li>scale</li>
+  <li>scatter_plot</li>
+  <li>schedule_send</li>
+  <li>schema</li>
+  <li>science</li>
+  <li>score</li>
+  <li>scoreboard</li>
+  <li>screen_rotation_alt</li>
+  <li>screen_search_desktop</li>
+  <li>screenshot</li>
+  <li>screenshot_monitor</li>
+  <li>scuba_diving</li>
+  <li>sd</li>
+  <li>sd_card_alert</li>
+  <li>search_off</li>
+  <li>security_update</li>
+  <li>security_update_good</li>
+  <li>security_update_warning</li>
+  <li>segment</li>
+  <li>self_improvement</li>
+  <li>sell</li>
+  <li>send_and_archive</li>
+  <li>send_time_extension</li>
+  <li>send_to_mobile</li>
+  <li>sensor_door</li>
+  <li>sensor_occupied</li>
+  <li>sensor_window</li>
+  <li>sensors</li>
+  <li>sensors_off</li>
+  <li>sentiment_satisfied_alt</li>
+  <li>set_meal</li>
+  <li>settings_accessibility</li>
+  <li>settings_display</li>
+  <li>settings_suggest</li>
+  <li>severe_cold</li>
+  <li>shape_line</li>
+  <li>share_arrival_time</li>
+  <li>share_location</li>
+  <li>shield</li>
+  <li>shield_moon</li>
+  <li>shop_2</li>
+  <li>shopify</li>
+  <li>shopping_bag</li>
+  <li>shopping_cart_checkout</li>
+  <li>shortcut</li>
+  <li>shower</li>
+  <li>shuffle_on</li>
+  <li>shutter_speed</li>
+  <li>sick</li>
+  <li>sign_language</li>
+  <li>signal_cellular_0_bar</li>
+  <li>signal_cellular_alt</li>
+  <li>signal_cellular_alt_1_bar</li>
+  <li>signal_cellular_alt_2_bar</li>
+  <li>signal_cellular_connected_no_internet_0_bar</li>
+  <li>signal_cellular_nodata</li>
+  <li>signal_wifi_0_bar</li>
+  <li>signal_wifi_bad</li>
+  <li>signal_wifi_connected_no_internet_4</li>
+  <li>signal_wifi_statusbar_4_bar</li>
+  <li>signal_wifi_statusbar_null</li>
+  <li>signpost</li>
+  <li>sim_card_download</li>
+  <li>single_bed</li>
+  <li>sip</li>
+  <li>skateboarding</li>
+  <li>sledding</li>
+  <li>smart_button</li>
+  <li>smart_display</li>
+  <li>smart_screen</li>
+  <li>smart_toy</li>
+  <li>snapchat</li>
+  <li>snippet_folder</li>
+  <li>snowboarding</li>
+  <li>snowmobile</li>
+  <li>snowshoeing</li>
+  <li>soap</li>
+  <li>social_distance</li>
+  <li>solar_power</li>
+  <li>sos</li>
+  <li>soup_kitchen</li>
+  <li>source</li>
+  <li>south</li>
+  <li>south_america</li>
+  <li>south_east</li>
+  <li>south_west</li>
+  <li>space_dashboard</li>
+  <li>spatial_audio</li>
+  <li>spatial_audio_off</li>
+  <li>spatial_tracking</li>
+  <li>speed</li>
+  <li>splitscreen</li>
+  <li>spoke</li>
+  <li>sports</li>
+  <li>sports_bar</li>
+  <li>sports_baseball</li>
+  <li>sports_basketball</li>
+  <li>sports_cricket</li>
+  <li>sports_esports</li>
+  <li>sports_football</li>
+  <li>sports_golf</li>
+  <li>sports_gymnastics</li>
+  <li>sports_handball</li>
+  <li>sports_hockey</li>
+  <li>sports_kabaddi</li>
+  <li>sports_martial_arts</li>
+  <li>sports_mma</li>
+  <li>sports_motorsports</li>
+  <li>sports_rugby</li>
+  <li>sports_score</li>
+  <li>sports_soccer</li>
+  <li>sports_tennis</li>
+  <li>sports_volleyball</li>
+  <li>square</li>
+  <li>square_foot</li>
+  <li>ssid_chart</li>
+  <li>stacked_bar_chart</li>
+  <li>stacked_line_chart</li>
+  <li>stadium</li>
+  <li>stairs</li>
+  <li>star_border_purple500</li>
+  <li>star_outline</li>
+  <li>star_purple500</li>
+  <li>star_rate</li>
+  <li>start</li>
+  <li>sticky_note_2</li>
+  <li>stop_circle</li>
+  <li>storefront</li>
+  <li>storm</li>
+  <li>straight</li>
+  <li>stream</li>
+  <li>stroller</li>
+  <li>subscript</li>
+  <li>subtitles_off</li>
+  <li>summarize</li>
+  <li>superscript</li>
+  <li>supervised_user_circle</li>
+  <li>support</li>
+  <li>support_agent</li>
+  <li>surfing</li>
+  <li>swap_horizontal_circle</li>
+  <li>swap_vert_circle</li>
+  <li>swipe</li>
+  <li>swipe_down</li>
+  <li>swipe_down_alt</li>
+  <li>swipe_left</li>
+  <li>swipe_left_alt</li>
+  <li>swipe_right</li>
+  <li>swipe_right_alt</li>
+  <li>swipe_up</li>
+  <li>swipe_up_alt</li>
+  <li>swipe_vertical</li>
+  <li>switch_access_shortcut</li>
+  <li>switch_access_shortcut_add</li>
+  <li>switch_account</li>
+  <li>switch_left</li>
+  <li>switch_right</li>
+  <li>synagogue</li>
+  <li>sync_lock</li>
+  <li>system_security_update</li>
+  <li>system_security_update_good</li>
+  <li>system_security_update_warning</li>
+  <li>system_update_tv</li>
+  <li>table_bar</li>
+  <li>table_chart</li>
+  <li>table_restaurant</li>
+  <li>table_rows</li>
+  <li>table_view</li>
+  <li>tag</li>
+  <li>takeout_dining</li>
+  <li>tapas</li>
+  <li>task</li>
+  <li>task_alt</li>
+  <li>taxi_alert</li>
+  <li>telegram</li>
+  <li>temple_buddhist</li>
+  <li>temple_hindu</li>
+  <li>terminal</li>
+  <li>text_decrease</li>
+  <li>text_increase</li>
+  <li>text_rotate_up</li>
+  <li>text_rotate_vertical</li>
+  <li>text_rotation_angledown</li>
+  <li>text_rotation_angleup</li>
+  <li>text_rotation_down</li>
+  <li>text_rotation_none</li>
+  <li>text_snippet</li>
+  <li>theater_comedy</li>
+  <li>thermostat</li>
+  <li>thermostat_auto</li>
+  <li>thumb_down_alt</li>
+  <li>thumb_down_off_alt</li>
+  <li>thumb_up_alt</li>
+  <li>thumb_up_off_alt</li>
+  <li>thunderstorm</li>
+  <li>tiktok</li>
+  <li>timer_10_select</li>
+  <li>timer_3_select</li>
+  <li>tips_and_updates</li>
+  <li>tire_repair</li>
+  <li>toggle_off</li>
+  <li>toggle_on</li>
+  <li>token</li>
+  <li>topic</li>
+  <li>tornado</li>
+  <li>tour</li>
+  <li>transcribe</li>
+  <li>transgender</li>
+  <li>transit_enterexit</li>
+  <li>travel_explore</li>
+  <li>trending_neutral</li>
+  <li>troubleshoot</li>
+  <li>try</li>
+  <li>tsunami</li>
+  <li>tty</li>
+  <li>tungsten</li>
+  <li>turn_left</li>
+  <li>turn_right</li>
+  <li>turn_sharp_left</li>
+  <li>turn_sharp_right</li>
+  <li>turn_slight_left</li>
+  <li>turn_slight_right</li>
+  <li>tv_off</li>
+  <li>two_wheeler</li>
+  <li>type_specimen</li>
+  <li>u_turn_left</li>
+  <li>u_turn_right</li>
+  <li>umbrella</li>
+  <li>unfold_less_double</li>
+  <li>unfold_more_double</li>
+  <li>unpublished</li>
+  <li>unsubscribe</li>
+  <li>upcoming</li>
+  <li>update_disabled</li>
+  <li>upgrade</li>
+  <li>upload</li>
+  <li>upload_file</li>
+  <li>usb_off</li>
+  <li>vaccines</li>
+  <li>vape_free</li>
+  <li>vaping_rooms</li>
+  <li>verified</li>
+  <li>vertical_distribute</li>
+  <li>vertical_shades</li>
+  <li>vertical_shades_closed</li>
+  <li>vertical_split</li>
+  <li>video_camera_back</li>
+  <li>video_camera_front</li>
+  <li>video_chat</li>
+  <li>video_collection</li>
+  <li>video_file</li>
+  <li>video_settings</li>
+  <li>video_stable</li>
+  <li>videogame_asset_off</li>
+  <li>view_comfortable</li>
+  <li>view_comfy_alt</li>
+  <li>view_compact_alt</li>
+  <li>view_cozy</li>
+  <li>view_in_ar</li>
+  <li>view_kanban</li>
+  <li>view_sidebar</li>
+  <li>view_timeline</li>
+  <li>villa</li>
+  <li>voice_over_off</li>
+  <li>volcano</li>
+  <li>volunteer_activism</li>
+  <li>vpn_key_off</li>
+  <li>vrpano</li>
+  <li>wallet</li>
+  <li>wallet_giftcard</li>
+  <li>wallet_membership</li>
+  <li>wallet_travel</li>
+  <li>warehouse</li>
+  <li>warning_amber</li>
+  <li>wash</li>
+  <li>watch_off</li>
+  <li>water</li>
+  <li>water_damage</li>
+  <li>water_drop</li>
+  <li>waterfall_chart</li>
+  <li>waves</li>
+  <li>waving_hand</li>
+  <li>wb_shade</li>
+  <li>wb_twilight</li>
+  <li>web_asset_off</li>
+  <li>web_stories</li>
+  <li>webhook</li>
+  <li>wechat</li>
+  <li>west</li>
+  <li>wheelchair_pickup</li>
+  <li>where_to_vote</li>
+  <li>width_full</li>
+  <li>width_normal</li>
+  <li>width_wide</li>
+  <li>wifi_1_bar</li>
+  <li>wifi_2_bar</li>
+  <li>wifi_calling</li>
+  <li>wifi_calling_3</li>
+  <li>wifi_channel</li>
+  <li>wifi_find</li>
+  <li>wifi_off</li>
+  <li>wifi_password</li>
+  <li>wifi_protected_setup</li>
+  <li>wifi_tethering_error</li>
+  <li>wifi_tethering_error_rounded</li>
+  <li>wifi_tethering_off</li>
+  <li>wind_power</li>
+  <li>window</li>
+  <li>wine_bar</li>
+  <li>woman</li>
+  <li>woman_2</li>
+  <li>woo_commerce</li>
+  <li>wordpress</li>
+  <li>work_off</li>
+  <li>work_outline</li>
+  <li>workspace_premium</li>
+  <li>workspaces</li>
+  <li>wrong_location</li>
+  <li>wysiwyg</li>
+  <li>yard</li>
+  <li>zoom_in_map</li>
+  </ul>
+  
+  <h3 id="Emby_MediaEncoding_Settings_Hwa_Projection_Enums_UiNodeState" class="text-capitalize">UiNodeState</h3>
+  <div>
+      <span class="xref">Emby.MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeState</span>
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Normal</li>
+  <li>Disabled</li>
+  <li>Unavailable</li>
+  <li>Error</li>
+  <li>Fallback</li>
+  </ul>
+  
+  <h3 id="Emby_MediaEncoding_Settings_Hwa_Projection_Nodes_UiNodeMoveTargets" class="text-capitalize">UiNodeMoveTargets</h3>
+  <div>
+      <span class="xref">Emby.MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeMoveTargets</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Up</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Down</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Left</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Right</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HasAny</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_MediaEncoding_Settings_Hwa_Projection_Nodes_UiNodeCommand" class="text-capitalize">UiNodeCommand</h3>
+  <div>
+      <span class="xref">Emby.MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeCommand</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">CommandType</span></td>
+              <td>
+  
+                      <a href="#Emby_MediaEncoding_Settings_Hwa_Projection_Enums_UiNodeCommandType" class="typelink">UiNodeCommandType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Caption</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Icon</span></td>
+              <td>
+  
+                      <a href="#Emby_Web_GenericEdit_Elements_IconNames" class="typelink">IconNames</a>
+                  
+              </td>
+              <td><p>Enum for icons in <code>Emby.Web.GenericEdit.Elements.List.GenericListItem</code>, <code>Emby.Web.GenericEdit.Elements.ButtonItem</code>, <code>Emby.Web.GenericEdit.Elements.CaptionItem</code>, <code>Emby.Web.GenericEdit.Elements.LabelItem</code>  and <code>Emby.Web.GenericEdit.Elements.TagItem</code> elements.</p>
+<p><code>Emby.Web.GenericEdit.Elements.List.GenericListItem</code></p>
+<p><code>Emby.Web.GenericEdit.Elements.ButtonItem</code></p>
+<p><code>Emby.Web.GenericEdit.Elements.CaptionItem</code></p>
+<p><code>Emby.Web.GenericEdit.Elements.LabelItem</code></p>
+<p><code>Emby.Web.GenericEdit.Elements.TagItem</code></p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsRemote</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CommandData</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">OpensForm</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ConfirmationPrompt</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_MediaEncoding_Settings_Hwa_Projection_Enums_UiNodeCommandType" class="text-capitalize">UiNodeCommandType</h3>
+  <div>
+      <span class="xref">Emby.MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeCommandType</span>
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Configure</li>
+  <li>Conditions</li>
+  <li>LoadLimits</li>
+  <li>LoadBalancing</li>
+  <li>ToggleEnabled</li>
+  <li>Move</li>
+  <li>Insert</li>
+  <li>Delete</li>
+  <li>InsertGpuConfig</li>
+  <li>InsertGraph</li>
+  <li>InsertLoadBalancer</li>
+  <li>InsertErrorOut</li>
+  </ul>
+  
+  <h3 id="Emby_MediaEncoding_Hwa_Conditions_ConfigOperationConditions" class="text-capitalize">ConfigOperationConditions</h3>
+  <div>
+      <span class="xref">Emby.MediaEncoding.Hwa.Conditions.ConfigOperationConditions</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Conversions</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>Offline conversions which are not related to an active playback session</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LiveTV</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>Transcoding of Live TV</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Playback</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>Transcoding for an active playback session</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HlsPlayback</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>HLS Transcoding for an active playback session</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LiveStream</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>Transcoding of a live stream for an active playback session</p>
+</td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_MediaEncoding_Hwa_Conditions_ConfigAdvancedConditions" class="text-capitalize">ConfigAdvancedConditions</h3>
+  <div>
+      <span class="xref">Emby.MediaEncoding.Hwa.Conditions.ConfigAdvancedConditions</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">FilterString</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DataFilterString</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_MediaEncoding_Settings_Hwa_Projection_BasicModeOption" class="text-capitalize">BasicModeOption</h3>
+  <div>
+      <span class="xref">Emby.MediaEncoding.Settings.Hwa.Projection.BasicModeOption</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">NodeId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Text</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Beta">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script src="https://emby.media/resources/site-switcher.js" data-site-switcher=".site-title-link" data-current-site="betadev"></script>
+  </body>
+</html>

@@ -14,6 +14,7 @@ type ApiConfigurationPageInfo struct {
 	MenuSection string `json:"MenuSection,omitempty"`
 	MenuIcon string `json:"MenuIcon,omitempty"`
 	DisplayName string `json:"DisplayName,omitempty"`
+	Order int32 `json:"Order,omitempty"`
 	ConfigurationPageType *PluginsConfigurationPageType `json:"ConfigurationPageType,omitempty"`
 	PluginId string `json:"PluginId,omitempty"`
 	Href string `json:"Href,omitempty"`

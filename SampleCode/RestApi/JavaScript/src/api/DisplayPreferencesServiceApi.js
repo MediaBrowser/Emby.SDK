@@ -15,7 +15,7 @@ import DisplayPreferences from '../model/DisplayPreferences';
 /**
 * DisplayPreferencesService service.
 * @module api/DisplayPreferencesServiceApi
-* @version 4.11.0.13
+* @version 4.11.0.19
 */
 export default class DisplayPreferencesServiceApi {
 

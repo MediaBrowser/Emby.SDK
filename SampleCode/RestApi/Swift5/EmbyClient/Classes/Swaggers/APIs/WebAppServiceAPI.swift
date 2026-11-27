@@ -70,6 +70,7 @@ open class WebAppServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example=[ {
   "MenuIcon" : "MenuIcon",
+  "Order" : 0,
   "EnableInMainMenu" : true,
   "ConfigurationPageType" : "PluginConfiguration",
   "Href" : "Href",
@@ -84,12 +85,12 @@ open class WebAppServiceAPI {
   "Plugin" : {
     "Description" : "Description",
     "Version" : {
-      "Major" : 0,
+      "Major" : 6,
       "Revision" : 5,
-      "Build" : 1,
-      "Minor" : 6,
-      "MinorRevision" : 2,
-      "MajorRevision" : 5
+      "Build" : 5,
+      "Minor" : 1,
+      "MinorRevision" : 7,
+      "MajorRevision" : 2
     },
     "AssemblyFilePath" : "AssemblyFilePath",
     "DataFolderPath" : "DataFolderPath",
@@ -98,6 +99,7 @@ open class WebAppServiceAPI {
   }
 }, {
   "MenuIcon" : "MenuIcon",
+  "Order" : 0,
   "EnableInMainMenu" : true,
   "ConfigurationPageType" : "PluginConfiguration",
   "Href" : "Href",
@@ -112,12 +114,12 @@ open class WebAppServiceAPI {
   "Plugin" : {
     "Description" : "Description",
     "Version" : {
-      "Major" : 0,
+      "Major" : 6,
       "Revision" : 5,
-      "Build" : 1,
-      "Minor" : 6,
-      "MinorRevision" : 2,
-      "MajorRevision" : 5
+      "Build" : 5,
+      "Minor" : 1,
+      "MinorRevision" : 7,
+      "MajorRevision" : 2
     },
     "AssemblyFilePath" : "AssemblyFilePath",
     "DataFolderPath" : "DataFolderPath",

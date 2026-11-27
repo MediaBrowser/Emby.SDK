@@ -33,6 +33,12 @@ public class LibraryOptions {
   @SerializedName("EnableRealtimeMonitor")
   private Boolean enableRealtimeMonitor = null;
 
+  @SerializedName("EnableCreditsDetection")
+  private Boolean enableCreditsDetection = null;
+
+  @SerializedName("EnableCreditsDetectionDuringLibraryScan")
+  private Boolean enableCreditsDetectionDuringLibraryScan = null;
+
   @SerializedName("EnableMarkerDetection")
   private Boolean enableMarkerDetection = null;
 
@@ -274,6 +280,42 @@ public class LibraryOptions {
 
   public void setEnableRealtimeMonitor(Boolean enableRealtimeMonitor) {
     this.enableRealtimeMonitor = enableRealtimeMonitor;
+  }
+
+  public LibraryOptions enableCreditsDetection(Boolean enableCreditsDetection) {
+    this.enableCreditsDetection = enableCreditsDetection;
+    return this;
+  }
+
+   /**
+   * Get enableCreditsDetection
+   * @return enableCreditsDetection
+  **/
+  @Schema(description = "")
+  public Boolean isEnableCreditsDetection() {
+    return enableCreditsDetection;
+  }
+
+  public void setEnableCreditsDetection(Boolean enableCreditsDetection) {
+    this.enableCreditsDetection = enableCreditsDetection;
+  }
+
+  public LibraryOptions enableCreditsDetectionDuringLibraryScan(Boolean enableCreditsDetectionDuringLibraryScan) {
+    this.enableCreditsDetectionDuringLibraryScan = enableCreditsDetectionDuringLibraryScan;
+    return this;
+  }
+
+   /**
+   * Get enableCreditsDetectionDuringLibraryScan
+   * @return enableCreditsDetectionDuringLibraryScan
+  **/
+  @Schema(description = "")
+  public Boolean isEnableCreditsDetectionDuringLibraryScan() {
+    return enableCreditsDetectionDuringLibraryScan;
+  }
+
+  public void setEnableCreditsDetectionDuringLibraryScan(Boolean enableCreditsDetectionDuringLibraryScan) {
+    this.enableCreditsDetectionDuringLibraryScan = enableCreditsDetectionDuringLibraryScan;
   }
 
   public LibraryOptions enableMarkerDetection(Boolean enableMarkerDetection) {
@@ -1519,6 +1561,8 @@ public class LibraryOptions {
     return Objects.equals(this.enableArchiveMediaFiles, libraryOptions.enableArchiveMediaFiles) &&
         Objects.equals(this.enablePhotos, libraryOptions.enablePhotos) &&
         Objects.equals(this.enableRealtimeMonitor, libraryOptions.enableRealtimeMonitor) &&
+        Objects.equals(this.enableCreditsDetection, libraryOptions.enableCreditsDetection) &&
+        Objects.equals(this.enableCreditsDetectionDuringLibraryScan, libraryOptions.enableCreditsDetectionDuringLibraryScan) &&
         Objects.equals(this.enableMarkerDetection, libraryOptions.enableMarkerDetection) &&
         Objects.equals(this.enableMarkerDetectionDuringLibraryScan, libraryOptions.enableMarkerDetectionDuringLibraryScan) &&
         Objects.equals(this.introDetectionFingerprintLength, libraryOptions.introDetectionFingerprintLength) &&
@@ -1586,7 +1630,7 @@ public class LibraryOptions {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, cacheImages, excludeFromSearch, enablePlexIgnore, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importPlaylists, enableAutomaticSeriesGrouping, shareEmbeddedMusicAlbumImages, enableEmbeddedTitles, enableAudioResume, autoGenerateChapters, mergeTopLevelFolders, enableEpisodeDetectionWithCombinedNumbers, autoGenerateChapterIntervalMinutes, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, hearingImpairedSubtitlesOnly, typeOptions, collapseSingleItemFolders, forceCollapseSingleItemFolders, enableAdultMetadata, importCollections, enableMultiVersionByFiles, enableMultiVersionByMetadata, enableMultiPartItems, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
+    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableCreditsDetection, enableCreditsDetectionDuringLibraryScan, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, cacheImages, excludeFromSearch, enablePlexIgnore, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importPlaylists, enableAutomaticSeriesGrouping, shareEmbeddedMusicAlbumImages, enableEmbeddedTitles, enableAudioResume, autoGenerateChapters, mergeTopLevelFolders, enableEpisodeDetectionWithCombinedNumbers, autoGenerateChapterIntervalMinutes, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, hearingImpairedSubtitlesOnly, typeOptions, collapseSingleItemFolders, forceCollapseSingleItemFolders, enableAdultMetadata, importCollections, enableMultiVersionByFiles, enableMultiVersionByMetadata, enableMultiPartItems, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
   }
 
 
@@ -1598,6 +1642,8 @@ public class LibraryOptions {
     sb.append("    enableArchiveMediaFiles: ").append(toIndentedString(enableArchiveMediaFiles)).append("\n");
     sb.append("    enablePhotos: ").append(toIndentedString(enablePhotos)).append("\n");
     sb.append("    enableRealtimeMonitor: ").append(toIndentedString(enableRealtimeMonitor)).append("\n");
+    sb.append("    enableCreditsDetection: ").append(toIndentedString(enableCreditsDetection)).append("\n");
+    sb.append("    enableCreditsDetectionDuringLibraryScan: ").append(toIndentedString(enableCreditsDetectionDuringLibraryScan)).append("\n");
     sb.append("    enableMarkerDetection: ").append(toIndentedString(enableMarkerDetection)).append("\n");
     sb.append("    enableMarkerDetectionDuringLibraryScan: ").append(toIndentedString(enableMarkerDetectionDuringLibraryScan)).append("\n");
     sb.append("    introDetectionFingerprintLength: ").append(toIndentedString(introDetectionFingerprintLength)).append("\n");

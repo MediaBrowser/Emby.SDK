@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.11.0.13
+ * OpenAPI spec version: 4.11.0.19
  * 
  *
  * NOTE: This file is auto generated.
@@ -642,6 +642,12 @@ export interface ApiConfigurationPageInfo {
      * @memberof ApiConfigurationPageInfo
      */
     DisplayName?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof ApiConfigurationPageInfo
+     */
+    Order?: number;
     /**
      * 
      * @type {PluginsConfigurationPageType}
@@ -2056,31 +2062,6 @@ export interface BaseRefreshRequest {
     ReplaceThumbnailImages?: boolean;
 }
 /**
- * A type for handling bit rates.      The purpose of this type is to avoid manual calculations and conversions in code,             unified handling and conversion as well as presentation through its various To\\*\\*\\*String methods.      `System.IComparable`      `System.IEquatable`1`  
- * @export
- * @interface BitRate
- */
-export interface BitRate {
-    /**
-     * 
-     * @type {number}
-     * @memberof BitRate
-     */
-    bps?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof BitRate
-     */
-    kbps?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof BitRate
-     */
-    Mbps?: number;
-}
-/**
  * 
  * @export
  * @interface BookInfo
@@ -2300,50 +2281,18 @@ export interface ClientCapabilities {
      * @memberof ClientCapabilities
      */
     AppId?: string;
-}
-/**
- * 
- * @export
- * @interface CodecConfiguration
- */
-export interface CodecConfiguration {
     /**
-     * A value indicating whether the codec is enabled.
-     * @type {boolean}
-     * @memberof CodecConfiguration
-     */
-    IsEnabled?: boolean;
-    /**
-     * The selection priority for the codec.    Higher values mean higher priority.
-     * @type {number}
-     * @memberof CodecConfiguration
-     */
-    Priority?: number;
-    /**
-     * The codec identifier.
+     * 
      * @type {string}
-     * @memberof CodecConfiguration
+     * @memberof ClientCapabilities
      */
-    CodecId?: string;
-}
-/**
- * Enum for indicating the processing direction of a codec.  
- * @export
- * @enum {string}
- */
-export enum CodecDirections {
-    Encoder = <any> 'Encoder',
-    Decoder = <any> 'Decoder'
-}
-/**
- * Enum defining the kind of media a codec is processing.  
- * @export
- * @enum {string}
- */
-export enum CodecKinds {
-    Audio = <any> 'Audio',
-    Video = <any> 'Video',
-    SubTitles = <any> 'SubTitles'
+    AttestationProvider?: string;
+    /**
+     * 
+     * @type {SecurityAttestationReply}
+     * @memberof ClientCapabilities
+     */
+    AttestationReply?: SecurityAttestationReply;
 }
 /**
  * 
@@ -2412,187 +2361,6 @@ export interface CollectionsCollectionCreationResult {
     Name?: string;
 }
 /**
- * Enum listing color formats.      The enum member names are matching those that are used by ffmpeg. (execute 'ffmpeg \\-pix\\_fmts' to list them) Exception: Items that are starting with a number are prefixed with an underscore here. In ffmpeg code these are prefixed with 'AV\\_PIX\\_FMT\\_' and all\\-caps.  
- * @export
- * @enum {string}
- */
-export enum ColorFormats {
-    Unknown = <any> 'Unknown',
-    Yuv420p = <any> 'yuv420p',
-    Yuyv422 = <any> 'yuyv422',
-    Rgb24 = <any> 'rgb24',
-    Bgr24 = <any> 'bgr24',
-    Yuv422p = <any> 'yuv422p',
-    Yuv444p = <any> 'yuv444p',
-    Yuv410p = <any> 'yuv410p',
-    Yuv411p = <any> 'yuv411p',
-    Gray = <any> 'gray',
-    Monow = <any> 'monow',
-    Monob = <any> 'monob',
-    Pal8 = <any> 'pal8',
-    Yuvj420p = <any> 'yuvj420p',
-    Yuvj422p = <any> 'yuvj422p',
-    Yuvj444p = <any> 'yuvj444p',
-    Uyvy422 = <any> 'uyvy422',
-    Uyyvyy411 = <any> 'uyyvyy411',
-    Bgr8 = <any> 'bgr8',
-    Bgr4 = <any> 'bgr4',
-    Bgr4Byte = <any> 'bgr4_byte',
-    Rgb8 = <any> 'rgb8',
-    Rgb4 = <any> 'rgb4',
-    Rgb4Byte = <any> 'rgb4_byte',
-    Nv12 = <any> 'nv12',
-    Nv21 = <any> 'nv21',
-    Argb = <any> 'argb',
-    Rgba = <any> 'rgba',
-    Abgr = <any> 'abgr',
-    Bgra = <any> 'bgra',
-    Gray16 = <any> 'gray16',
-    Yuv440p = <any> 'yuv440p',
-    Yuvj440p = <any> 'yuvj440p',
-    Yuva420p = <any> 'yuva420p',
-    Rgb48 = <any> 'rgb48',
-    Rgb565 = <any> 'rgb565',
-    Rgb555 = <any> 'rgb555',
-    Bgr565 = <any> 'bgr565',
-    Bgr555 = <any> 'bgr555',
-    VaapiMoco = <any> 'vaapi_moco',
-    VaapiIdct = <any> 'vaapi_idct',
-    VaapiVld = <any> 'vaapi_vld',
-    Yuv420p16 = <any> 'yuv420p16',
-    Yuv422p16 = <any> 'yuv422p16',
-    Yuv444p16 = <any> 'yuv444p16',
-    Dxva2Vld = <any> 'dxva2_vld',
-    Rgb444 = <any> 'rgb444',
-    Bgr444 = <any> 'bgr444',
-    Ya8 = <any> 'ya8',
-    Bgr48 = <any> 'bgr48',
-    Yuv420p9 = <any> 'yuv420p9',
-    Yuv420p10 = <any> 'yuv420p10',
-    Yuv422p10 = <any> 'yuv422p10',
-    Yuv444p9 = <any> 'yuv444p9',
-    Yuv444p10 = <any> 'yuv444p10',
-    Yuv422p9 = <any> 'yuv422p9',
-    Gbrp = <any> 'gbrp',
-    Gbrp9 = <any> 'gbrp9',
-    Gbrp10 = <any> 'gbrp10',
-    Gbrp16 = <any> 'gbrp16',
-    Yuva422p = <any> 'yuva422p',
-    Yuva444p = <any> 'yuva444p',
-    Yuva420p9 = <any> 'yuva420p9',
-    Yuva422p9 = <any> 'yuva422p9',
-    Yuva444p9 = <any> 'yuva444p9',
-    Yuva420p10 = <any> 'yuva420p10',
-    Yuva422p10 = <any> 'yuva422p10',
-    Yuva444p10 = <any> 'yuva444p10',
-    Yuva420p16 = <any> 'yuva420p16',
-    Yuva422p16 = <any> 'yuva422p16',
-    Yuva444p16 = <any> 'yuva444p16',
-    Vdpau = <any> 'vdpau',
-    Xyz12 = <any> 'xyz12',
-    Nv16 = <any> 'nv16',
-    Nv20 = <any> 'nv20',
-    Rgba64 = <any> 'rgba64',
-    Bgra64 = <any> 'bgra64',
-    Yvyu422 = <any> 'yvyu422',
-    Ya16 = <any> 'ya16',
-    Gbrap = <any> 'gbrap',
-    Gbrap16 = <any> 'gbrap16',
-    Qsv = <any> 'qsv',
-    Mmal = <any> 'mmal',
-    D3d11vaVld = <any> 'd3d11va_vld',
-    Cuda = <any> 'cuda',
-    _0rgb = <any> '_0rgb',
-    Rgb0 = <any> 'rgb0',
-    _0bgr = <any> '_0bgr',
-    Bgr0 = <any> 'bgr0',
-    Yuv420p12 = <any> 'yuv420p12',
-    Yuv420p14 = <any> 'yuv420p14',
-    Yuv422p12 = <any> 'yuv422p12',
-    Yuv422p14 = <any> 'yuv422p14',
-    Yuv444p12 = <any> 'yuv444p12',
-    Yuv444p14 = <any> 'yuv444p14',
-    Gbrp12 = <any> 'gbrp12',
-    Gbrp14 = <any> 'gbrp14',
-    Yuvj411p = <any> 'yuvj411p',
-    BayerBggr8 = <any> 'bayer_bggr8',
-    BayerRggb8 = <any> 'bayer_rggb8',
-    BayerGbrg8 = <any> 'bayer_gbrg8',
-    BayerGrbg8 = <any> 'bayer_grbg8',
-    BayerBggr16 = <any> 'bayer_bggr16',
-    BayerRggb16 = <any> 'bayer_rggb16',
-    BayerGbrg16 = <any> 'bayer_gbrg16',
-    BayerGrbg16 = <any> 'bayer_grbg16',
-    Xvmc = <any> 'xvmc',
-    Yuv440p10 = <any> 'yuv440p10',
-    Yuv440p12 = <any> 'yuv440p12',
-    Ayuv64 = <any> 'ayuv64',
-    VideotoolboxVld = <any> 'videotoolbox_vld',
-    P010 = <any> 'p010',
-    Gbrap12 = <any> 'gbrap12',
-    Gbrap10 = <any> 'gbrap10',
-    Mediacodec = <any> 'mediacodec',
-    Gray12 = <any> 'gray12',
-    Gray10 = <any> 'gray10',
-    Gray14 = <any> 'gray14',
-    P016 = <any> 'p016',
-    D3d11 = <any> 'd3d11',
-    Gray9 = <any> 'gray9',
-    Gbrpf32 = <any> 'gbrpf32',
-    Gbrapf32 = <any> 'gbrapf32',
-    DrmPrime = <any> 'drm_prime',
-    Opencl = <any> 'opencl',
-    Grayf32 = <any> 'grayf32',
-    Yuva422p12 = <any> 'yuva422p12',
-    Yuva444p12 = <any> 'yuva444p12',
-    Nv24 = <any> 'nv24',
-    Nv42 = <any> 'nv42',
-    Vulkan = <any> 'vulkan',
-    Y210 = <any> 'y210',
-    X2rgb10 = <any> 'x2rgb10',
-    X2bgr10 = <any> 'x2bgr10',
-    P210 = <any> 'p210',
-    P410 = <any> 'p410',
-    P216 = <any> 'p216',
-    P416 = <any> 'p416',
-    Vuya = <any> 'vuya',
-    Rgbaf16 = <any> 'rgbaf16',
-    Vuyx = <any> 'vuyx',
-    P012 = <any> 'p012',
-    Y212 = <any> 'y212',
-    Xv30 = <any> 'xv30',
-    Xv36 = <any> 'xv36',
-    Rgbf32 = <any> 'rgbf32',
-    Rgbaf32 = <any> 'rgbaf32',
-    P212 = <any> 'p212',
-    P412 = <any> 'p412',
-    Gbrap14 = <any> 'gbrap14',
-    D3d12 = <any> 'd3d12',
-    Ayuv = <any> 'ayuv',
-    Uyva = <any> 'uyva',
-    Vyu444 = <any> 'vyu444',
-    V30x = <any> 'v30x',
-    Rgbf16 = <any> 'rgbf16',
-    Rgba128 = <any> 'rgba128',
-    Rgb96 = <any> 'rgb96',
-    Y216 = <any> 'y216',
-    Xv48 = <any> 'xv48',
-    Gbrpf16 = <any> 'gbrpf16',
-    Gbrapf16 = <any> 'gbrapf16',
-    Grayf16 = <any> 'grayf16',
-    AmfSurface = <any> 'amf_surface',
-    Gray32 = <any> 'gray32',
-    Yaf32 = <any> 'yaf32',
-    Yaf16 = <any> 'yaf16',
-    Gbrap32 = <any> 'gbrap32',
-    Yuv444p10msb = <any> 'yuv444p10msb',
-    Yuv444p12msb = <any> 'yuv444p12msb',
-    Gbrp10msb = <any> 'gbrp10msb',
-    Gbrp12msb = <any> 'gbrp12msb',
-    Ohcodec = <any> 'ohcodec',
-    Nv15 = <any> 'nv15'
-}
-/**
  * 
  * @export
  * @enum {string}
@@ -2618,140 +2386,6 @@ export enum CommonEditorTypes {
     DxDataGrid = <any> 'DxDataGrid',
     DxPivotGrid = <any> 'DxPivotGrid',
     SpacerItem = <any> 'SpacerItem'
-}
-/**
- * 
- * @export
- * @interface CommonInterfacesICodecDeviceCapabilities
- */
-export interface CommonInterfacesICodecDeviceCapabilities {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof CommonInterfacesICodecDeviceCapabilities
-     */
-    SupportsHwUpload?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof CommonInterfacesICodecDeviceCapabilities
-     */
-    SupportsHwDownload?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof CommonInterfacesICodecDeviceCapabilities
-     */
-    SupportsStandaloneDeviceInit?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof CommonInterfacesICodecDeviceCapabilities
-     */
-    Supports10BitProcessing?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof CommonInterfacesICodecDeviceCapabilities
-     */
-    SupportsNativeToneMapping?: boolean;
-}
-/**
- * 
- * @export
- * @interface CommonInterfacesICodecDeviceInfo
- */
-export interface CommonInterfacesICodecDeviceInfo {
-    /**
-     * 
-     * @type {CommonInterfacesICodecDeviceCapabilities}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    Capabilities?: CommonInterfacesICodecDeviceCapabilities;
-    /**
-     * 
-     * @type {number}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    Adapter?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    Name?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    Desription?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    Driver?: string;
-    /**
-     * 
-     * @type {Version}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    DriverVersion?: Version;
-    /**
-     * 
-     * @type {Version}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    ApiVersion?: Version;
-    /**
-     * 
-     * @type {number}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    VendorId?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    DeviceId?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    DeviceIdentifier?: string;
-    /**
-     * 
-     * @type {SecondaryFrameworks}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    HardwareContextFramework?: SecondaryFrameworks;
-    /**
-     * 
-     * @type {string}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    DevPath?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    DrmNode?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    VendorName?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CommonInterfacesICodecDeviceInfo
-     */
-    DeviceName?: string;
 }
 /**
  * Interface IPlugin  
@@ -2847,79 +2481,6 @@ export interface ConditionsPropertyCondition {
 export enum ConditionsPropertyConditionType {
     Visible = <any> 'Visible',
     Enabled = <any> 'Enabled'
-}
-/**
- * 
- * @export
- * @interface ConfigurationToneMappingToneMapOptionsVisibility
- */
-export interface ConfigurationToneMappingToneMapOptionsVisibility {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ConfigurationToneMappingToneMapOptionsVisibility
-     */
-    ShowAdvanced?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ConfigurationToneMappingToneMapOptionsVisibility
-     */
-    IsSoftwareToneMappingAvailable?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ConfigurationToneMappingToneMapOptionsVisibility
-     */
-    IsAnyHardwareToneMappingAvailable?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ConfigurationToneMappingToneMapOptionsVisibility
-     */
-    ShowNvidiaOptions?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ConfigurationToneMappingToneMapOptionsVisibility
-     */
-    ShowQuickSyncOptions?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ConfigurationToneMappingToneMapOptionsVisibility
-     */
-    ShowVaapiOptions?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ConfigurationToneMappingToneMapOptionsVisibility
-     */
-    IsOpenClAvailable?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ConfigurationToneMappingToneMapOptionsVisibility
-     */
-    IsOpenClSuperTAvailable?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ConfigurationToneMappingToneMapOptionsVisibility
-     */
-    IsVaapiNativeAvailable?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ConfigurationToneMappingToneMapOptionsVisibility
-     */
-    IsQuickSyncNativeAvailable?: boolean;
-    /**
-     * 
-     * @type {OperatingSystem}
-     * @memberof ConfigurationToneMappingToneMapOptionsVisibility
-     */
-    OperatingSystem?: OperatingSystem;
 }
 /**
  * 
@@ -4240,6 +3801,2214 @@ export interface EditorsEditorRoot {
     DescriptionSourceId?: string;
 }
 /**
+ * Enum for icons in `Emby.Web.GenericEdit.Elements.List.GenericListItem`, `Emby.Web.GenericEdit.Elements.ButtonItem`, `Emby.Web.GenericEdit.Elements.CaptionItem`, `Emby.Web.GenericEdit.Elements.LabelItem`  and `Emby.Web.GenericEdit.Elements.TagItem` elements.      `Emby.Web.GenericEdit.Elements.List.GenericListItem`      `Emby.Web.GenericEdit.Elements.ButtonItem`      `Emby.Web.GenericEdit.Elements.CaptionItem`      `Emby.Web.GenericEdit.Elements.LabelItem`      `Emby.Web.GenericEdit.Elements.TagItem`  
+ * @export
+ * @enum {string}
+ */
+export enum ElementsIconNames {
+    Loading = <any> 'Loading',
+    _3dRotation = <any> '_3d_rotation',
+    AcUnit = <any> 'ac_unit',
+    AccessAlarm = <any> 'access_alarm',
+    AccessAlarms = <any> 'access_alarms',
+    AccessTime = <any> 'access_time',
+    Accessibility = <any> 'accessibility',
+    Accessible = <any> 'accessible',
+    AccountBalance = <any> 'account_balance',
+    AccountBalanceWallet = <any> 'account_balance_wallet',
+    AccountBox = <any> 'account_box',
+    AccountCircle = <any> 'account_circle',
+    AccountTree = <any> 'account_tree',
+    Adb = <any> 'adb',
+    Add = <any> 'add',
+    AddAPhoto = <any> 'add_a_photo',
+    AddAlarm = <any> 'add_alarm',
+    AddAlert = <any> 'add_alert',
+    AddBox = <any> 'add_box',
+    AddCircle = <any> 'add_circle',
+    AddCircleOutline = <any> 'add_circle_outline',
+    AddLocation = <any> 'add_location',
+    AddShoppingCart = <any> 'add_shopping_cart',
+    AddToPhotos = <any> 'add_to_photos',
+    AddToQueue = <any> 'add_to_queue',
+    Adjust = <any> 'adjust',
+    AirlineSeatFlat = <any> 'airline_seat_flat',
+    AirlineSeatFlatAngled = <any> 'airline_seat_flat_angled',
+    AirlineSeatIndividualSuite = <any> 'airline_seat_individual_suite',
+    AirlineSeatLegroomExtra = <any> 'airline_seat_legroom_extra',
+    AirlineSeatLegroomNormal = <any> 'airline_seat_legroom_normal',
+    AirlineSeatLegroomReduced = <any> 'airline_seat_legroom_reduced',
+    AirlineSeatReclineExtra = <any> 'airline_seat_recline_extra',
+    AirlineSeatReclineNormal = <any> 'airline_seat_recline_normal',
+    AirplanemodeActive = <any> 'airplanemode_active',
+    AirplanemodeInactive = <any> 'airplanemode_inactive',
+    Airplay = <any> 'airplay',
+    AirportShuttle = <any> 'airport_shuttle',
+    Alarm = <any> 'alarm',
+    AlarmAdd = <any> 'alarm_add',
+    AlarmOff = <any> 'alarm_off',
+    AlarmOn = <any> 'alarm_on',
+    Album = <any> 'album',
+    AllInclusive = <any> 'all_inclusive',
+    AllOut = <any> 'all_out',
+    Android = <any> 'android',
+    Announcement = <any> 'announcement',
+    Apps = <any> 'apps',
+    Archive = <any> 'archive',
+    ArrowBack = <any> 'arrow_back',
+    ArrowDownward = <any> 'arrow_downward',
+    ArrowDropDown = <any> 'arrow_drop_down',
+    ArrowDropDownCircle = <any> 'arrow_drop_down_circle',
+    ArrowDropUp = <any> 'arrow_drop_up',
+    ArrowForward = <any> 'arrow_forward',
+    ArrowUpward = <any> 'arrow_upward',
+    ArtTrack = <any> 'art_track',
+    AspectRatio = <any> 'aspect_ratio',
+    Assessment = <any> 'assessment',
+    Assignment = <any> 'assignment',
+    AssignmentInd = <any> 'assignment_ind',
+    AssignmentLate = <any> 'assignment_late',
+    AssignmentReturn = <any> 'assignment_return',
+    AssignmentReturned = <any> 'assignment_returned',
+    AssignmentTurnedIn = <any> 'assignment_turned_in',
+    Assistant = <any> 'assistant',
+    AssistantPhoto = <any> 'assistant_photo',
+    AttachFile = <any> 'attach_file',
+    AttachMoney = <any> 'attach_money',
+    Attachment = <any> 'attachment',
+    Audiotrack = <any> 'audiotrack',
+    Autorenew = <any> 'autorenew',
+    AvTimer = <any> 'av_timer',
+    Backspace = <any> 'backspace',
+    Backup = <any> 'backup',
+    BatteryAlert = <any> 'battery_alert',
+    BatteryChargingFull = <any> 'battery_charging_full',
+    BatteryFull = <any> 'battery_full',
+    BatteryStd = <any> 'battery_std',
+    BatteryUnknown = <any> 'battery_unknown',
+    BeachAccess = <any> 'beach_access',
+    Beenhere = <any> 'beenhere',
+    Block = <any> 'block',
+    Bluetooth = <any> 'bluetooth',
+    BluetoothAudio = <any> 'bluetooth_audio',
+    BluetoothConnected = <any> 'bluetooth_connected',
+    BluetoothDisabled = <any> 'bluetooth_disabled',
+    BluetoothSearching = <any> 'bluetooth_searching',
+    BlurCircular = <any> 'blur_circular',
+    BlurLinear = <any> 'blur_linear',
+    BlurOff = <any> 'blur_off',
+    BlurOn = <any> 'blur_on',
+    Book = <any> 'book',
+    Bookmark = <any> 'bookmark',
+    BookmarkBorder = <any> 'bookmark_border',
+    Bookmarks = <any> 'bookmarks',
+    BorderAll = <any> 'border_all',
+    BorderBottom = <any> 'border_bottom',
+    BorderClear = <any> 'border_clear',
+    BorderColor = <any> 'border_color',
+    BorderHorizontal = <any> 'border_horizontal',
+    BorderInner = <any> 'border_inner',
+    BorderLeft = <any> 'border_left',
+    BorderOuter = <any> 'border_outer',
+    BorderRight = <any> 'border_right',
+    BorderStyle = <any> 'border_style',
+    BorderTop = <any> 'border_top',
+    BorderVertical = <any> 'border_vertical',
+    BrandingWatermark = <any> 'branding_watermark',
+    Brightness1 = <any> 'brightness_1',
+    Brightness2 = <any> 'brightness_2',
+    Brightness3 = <any> 'brightness_3',
+    Brightness4 = <any> 'brightness_4',
+    Brightness5 = <any> 'brightness_5',
+    Brightness6 = <any> 'brightness_6',
+    Brightness7 = <any> 'brightness_7',
+    BrightnessAuto = <any> 'brightness_auto',
+    BrightnessHigh = <any> 'brightness_high',
+    BrightnessLow = <any> 'brightness_low',
+    BrightnessMedium = <any> 'brightness_medium',
+    BrokenImage = <any> 'broken_image',
+    Brush = <any> 'brush',
+    BubbleChart = <any> 'bubble_chart',
+    BugReport = <any> 'bug_report',
+    Build = <any> 'build',
+    BurstMode = <any> 'burst_mode',
+    Business = <any> 'business',
+    BusinessCenter = <any> 'business_center',
+    Cached = <any> 'cached',
+    Cake = <any> 'cake',
+    CalendarToday = <any> 'calendar_today',
+    Call = <any> 'call',
+    CallEnd = <any> 'call_end',
+    CallMade = <any> 'call_made',
+    CallMerge = <any> 'call_merge',
+    CallMissed = <any> 'call_missed',
+    CallMissedOutgoing = <any> 'call_missed_outgoing',
+    CallReceived = <any> 'call_received',
+    CallSplit = <any> 'call_split',
+    CallToAction = <any> 'call_to_action',
+    Camera = <any> 'camera',
+    CameraAlt = <any> 'camera_alt',
+    CameraEnhance = <any> 'camera_enhance',
+    CameraFront = <any> 'camera_front',
+    CameraRear = <any> 'camera_rear',
+    CameraRoll = <any> 'camera_roll',
+    Cancel = <any> 'cancel',
+    CardGiftcard = <any> 'card_giftcard',
+    CardMembership = <any> 'card_membership',
+    CardTravel = <any> 'card_travel',
+    Casino = <any> 'casino',
+    Cast = <any> 'cast',
+    CastConnected = <any> 'cast_connected',
+    CenterFocusStrong = <any> 'center_focus_strong',
+    CenterFocusWeak = <any> 'center_focus_weak',
+    ChangeHistory = <any> 'change_history',
+    Chat = <any> 'chat',
+    ChatBubble = <any> 'chat_bubble',
+    ChatBubbleOutline = <any> 'chat_bubble_outline',
+    Check = <any> 'check',
+    CheckBox = <any> 'check_box',
+    CheckBoxOutlineBlank = <any> 'check_box_outline_blank',
+    CheckCircle = <any> 'check_circle',
+    CheckCircleOutline = <any> 'check_circle_outline',
+    ChevronLeft = <any> 'chevron_left',
+    ChevronRight = <any> 'chevron_right',
+    ChildCare = <any> 'child_care',
+    ChildFriendly = <any> 'child_friendly',
+    ChromeReaderMode = <any> 'chrome_reader_mode',
+    Class = <any> 'class',
+    Clear = <any> 'clear',
+    ClearAll = <any> 'clear_all',
+    Close = <any> 'close',
+    ClosedCaption = <any> 'closed_caption',
+    Cloud = <any> 'cloud',
+    CloudCircle = <any> 'cloud_circle',
+    CloudDone = <any> 'cloud_done',
+    CloudDownload = <any> 'cloud_download',
+    CloudOff = <any> 'cloud_off',
+    CloudQueue = <any> 'cloud_queue',
+    CloudUpload = <any> 'cloud_upload',
+    Code = <any> 'code',
+    Collections = <any> 'collections',
+    CollectionsBookmark = <any> 'collections_bookmark',
+    ColorLens = <any> 'color_lens',
+    Colorize = <any> 'colorize',
+    Comment = <any> 'comment',
+    Compare = <any> 'compare',
+    CompareArrows = <any> 'compare_arrows',
+    Computer = <any> 'computer',
+    ConfirmationNumber = <any> 'confirmation_number',
+    ContactMail = <any> 'contact_mail',
+    ContactPhone = <any> 'contact_phone',
+    Contacts = <any> 'contacts',
+    ContentCopy = <any> 'content_copy',
+    ContentCut = <any> 'content_cut',
+    ContentPaste = <any> 'content_paste',
+    ControlPoint = <any> 'control_point',
+    ControlPointDuplicate = <any> 'control_point_duplicate',
+    Copyright = <any> 'copyright',
+    Create = <any> 'create',
+    CreateNewFolder = <any> 'create_new_folder',
+    CreditCard = <any> 'credit_card',
+    Crop = <any> 'crop',
+    Crop169 = <any> 'crop_16_9',
+    Crop32 = <any> 'crop_3_2',
+    Crop54 = <any> 'crop_5_4',
+    Crop75 = <any> 'crop_7_5',
+    CropDin = <any> 'crop_din',
+    CropFree = <any> 'crop_free',
+    CropLandscape = <any> 'crop_landscape',
+    CropOriginal = <any> 'crop_original',
+    CropPortrait = <any> 'crop_portrait',
+    CropRotate = <any> 'crop_rotate',
+    CropSquare = <any> 'crop_square',
+    Dashboard = <any> 'dashboard',
+    DataUsage = <any> 'data_usage',
+    DateRange = <any> 'date_range',
+    Dehaze = <any> 'dehaze',
+    Delete = <any> 'delete',
+    DeleteForever = <any> 'delete_forever',
+    DeleteOutline = <any> 'delete_outline',
+    DeleteSweep = <any> 'delete_sweep',
+    Description = <any> 'description',
+    DesktopMac = <any> 'desktop_mac',
+    DesktopWindows = <any> 'desktop_windows',
+    Details = <any> 'details',
+    DeveloperBoard = <any> 'developer_board',
+    DeveloperMode = <any> 'developer_mode',
+    DeviceHub = <any> 'device_hub',
+    Devices = <any> 'devices',
+    DevicesOther = <any> 'devices_other',
+    DialerSip = <any> 'dialer_sip',
+    Dialpad = <any> 'dialpad',
+    Directions = <any> 'directions',
+    DirectionsBike = <any> 'directions_bike',
+    DirectionsBoat = <any> 'directions_boat',
+    DirectionsBus = <any> 'directions_bus',
+    DirectionsCar = <any> 'directions_car',
+    DirectionsRailway = <any> 'directions_railway',
+    DirectionsRun = <any> 'directions_run',
+    DirectionsSubway = <any> 'directions_subway',
+    DirectionsTransit = <any> 'directions_transit',
+    DirectionsWalk = <any> 'directions_walk',
+    DiscFull = <any> 'disc_full',
+    Dns = <any> 'dns',
+    DoNotDisturb = <any> 'do_not_disturb',
+    DoNotDisturbAlt = <any> 'do_not_disturb_alt',
+    DoNotDisturbOff = <any> 'do_not_disturb_off',
+    DoNotDisturbOn = <any> 'do_not_disturb_on',
+    Dock = <any> 'dock',
+    Domain = <any> 'domain',
+    Done = <any> 'done',
+    DoneAll = <any> 'done_all',
+    DonutLarge = <any> 'donut_large',
+    DonutSmall = <any> 'donut_small',
+    Drafts = <any> 'drafts',
+    DragHandle = <any> 'drag_handle',
+    DriveEta = <any> 'drive_eta',
+    Dvr = <any> 'dvr',
+    Edit = <any> 'edit',
+    EditLocation = <any> 'edit_location',
+    Eject = <any> 'eject',
+    Email = <any> 'email',
+    EnhancedEncryption = <any> 'enhanced_encryption',
+    Equalizer = <any> 'equalizer',
+    Error = <any> 'error',
+    ErrorOutline = <any> 'error_outline',
+    EuroSymbol = <any> 'euro_symbol',
+    EvStation = <any> 'ev_station',
+    Event = <any> 'event',
+    EventAvailable = <any> 'event_available',
+    EventBusy = <any> 'event_busy',
+    EventNote = <any> 'event_note',
+    EventSeat = <any> 'event_seat',
+    ExitToApp = <any> 'exit_to_app',
+    ExpandLess = <any> 'expand_less',
+    ExpandMore = <any> 'expand_more',
+    Explicit = <any> 'explicit',
+    Explore = <any> 'explore',
+    Exposure = <any> 'exposure',
+    ExposureNeg1 = <any> 'exposure_neg_1',
+    ExposureNeg2 = <any> 'exposure_neg_2',
+    ExposurePlus1 = <any> 'exposure_plus_1',
+    ExposurePlus2 = <any> 'exposure_plus_2',
+    ExposureZero = <any> 'exposure_zero',
+    Extension = <any> 'extension',
+    Face = <any> 'face',
+    FastForward = <any> 'fast_forward',
+    FastRewind = <any> 'fast_rewind',
+    Favorite = <any> 'favorite',
+    FavoriteBorder = <any> 'favorite_border',
+    FeaturedPlayList = <any> 'featured_play_list',
+    FeaturedVideo = <any> 'featured_video',
+    Feedback = <any> 'feedback',
+    FiberDvr = <any> 'fiber_dvr',
+    FiberManualRecord = <any> 'fiber_manual_record',
+    FiberNew = <any> 'fiber_new',
+    FiberPin = <any> 'fiber_pin',
+    FiberSmartRecord = <any> 'fiber_smart_record',
+    FileDownload = <any> 'file_download',
+    FileUpload = <any> 'file_upload',
+    Filter = <any> 'filter',
+    Filter1 = <any> 'filter_1',
+    Filter2 = <any> 'filter_2',
+    Filter3 = <any> 'filter_3',
+    Filter4 = <any> 'filter_4',
+    Filter5 = <any> 'filter_5',
+    Filter6 = <any> 'filter_6',
+    Filter7 = <any> 'filter_7',
+    Filter8 = <any> 'filter_8',
+    Filter9 = <any> 'filter_9',
+    Filter9Plus = <any> 'filter_9_plus',
+    FilterBAndW = <any> 'filter_b_and_w',
+    FilterCenterFocus = <any> 'filter_center_focus',
+    FilterDrama = <any> 'filter_drama',
+    FilterFrames = <any> 'filter_frames',
+    FilterHdr = <any> 'filter_hdr',
+    FilterList = <any> 'filter_list',
+    FilterNone = <any> 'filter_none',
+    FilterTiltShift = <any> 'filter_tilt_shift',
+    FilterVintage = <any> 'filter_vintage',
+    FindInPage = <any> 'find_in_page',
+    FindReplace = <any> 'find_replace',
+    Fingerprint = <any> 'fingerprint',
+    FirstPage = <any> 'first_page',
+    FitnessCenter = <any> 'fitness_center',
+    Flag = <any> 'flag',
+    Flare = <any> 'flare',
+    FlashAuto = <any> 'flash_auto',
+    FlashOff = <any> 'flash_off',
+    FlashOn = <any> 'flash_on',
+    Flight = <any> 'flight',
+    FlightLand = <any> 'flight_land',
+    FlightTakeoff = <any> 'flight_takeoff',
+    Flip = <any> 'flip',
+    FlipToBack = <any> 'flip_to_back',
+    FlipToFront = <any> 'flip_to_front',
+    Folder = <any> 'folder',
+    FolderOpen = <any> 'folder_open',
+    FolderShared = <any> 'folder_shared',
+    FolderSpecial = <any> 'folder_special',
+    FontDownload = <any> 'font_download',
+    FormatAlignCenter = <any> 'format_align_center',
+    FormatAlignJustify = <any> 'format_align_justify',
+    FormatAlignLeft = <any> 'format_align_left',
+    FormatAlignRight = <any> 'format_align_right',
+    FormatBold = <any> 'format_bold',
+    FormatClear = <any> 'format_clear',
+    FormatColorFill = <any> 'format_color_fill',
+    FormatColorReset = <any> 'format_color_reset',
+    FormatColorText = <any> 'format_color_text',
+    FormatIndentDecrease = <any> 'format_indent_decrease',
+    FormatIndentIncrease = <any> 'format_indent_increase',
+    FormatItalic = <any> 'format_italic',
+    FormatLineSpacing = <any> 'format_line_spacing',
+    FormatListBulleted = <any> 'format_list_bulleted',
+    FormatListNumbered = <any> 'format_list_numbered',
+    FormatPaint = <any> 'format_paint',
+    FormatQuote = <any> 'format_quote',
+    FormatShapes = <any> 'format_shapes',
+    FormatSize = <any> 'format_size',
+    FormatStrikethrough = <any> 'format_strikethrough',
+    FormatTextdirectionLToR = <any> 'format_textdirection_l_to_r',
+    FormatTextdirectionRToL = <any> 'format_textdirection_r_to_l',
+    FormatUnderlined = <any> 'format_underlined',
+    Forum = <any> 'forum',
+    Forward = <any> 'forward',
+    Forward10 = <any> 'forward_10',
+    Forward30 = <any> 'forward_30',
+    Forward5 = <any> 'forward_5',
+    FreeBreakfast = <any> 'free_breakfast',
+    Fullscreen = <any> 'fullscreen',
+    FullscreenExit = <any> 'fullscreen_exit',
+    Functions = <any> 'functions',
+    GTranslate = <any> 'g_translate',
+    Gamepad = <any> 'gamepad',
+    Games = <any> 'games',
+    Gavel = <any> 'gavel',
+    Gesture = <any> 'gesture',
+    GetApp = <any> 'get_app',
+    Gif = <any> 'gif',
+    GolfCourse = <any> 'golf_course',
+    GpsFixed = <any> 'gps_fixed',
+    GpsNotFixed = <any> 'gps_not_fixed',
+    GpsOff = <any> 'gps_off',
+    Grade = <any> 'grade',
+    Gradient = <any> 'gradient',
+    Grain = <any> 'grain',
+    GraphicEq = <any> 'graphic_eq',
+    GridOff = <any> 'grid_off',
+    GridOn = <any> 'grid_on',
+    Group = <any> 'group',
+    GroupAdd = <any> 'group_add',
+    GroupWork = <any> 'group_work',
+    Hd = <any> 'hd',
+    HdrOff = <any> 'hdr_off',
+    HdrOn = <any> 'hdr_on',
+    HdrStrong = <any> 'hdr_strong',
+    HdrWeak = <any> 'hdr_weak',
+    Headset = <any> 'headset',
+    HeadsetMic = <any> 'headset_mic',
+    Healing = <any> 'healing',
+    Hearing = <any> 'hearing',
+    Help = <any> 'help',
+    HelpOutline = <any> 'help_outline',
+    HighQuality = <any> 'high_quality',
+    Highlight = <any> 'highlight',
+    HighlightOff = <any> 'highlight_off',
+    History = <any> 'history',
+    HistoryToggleOff = <any> 'history_toggle_off',
+    Home = <any> 'home',
+    HotTub = <any> 'hot_tub',
+    Hotel = <any> 'hotel',
+    HourglassEmpty = <any> 'hourglass_empty',
+    HourglassFull = <any> 'hourglass_full',
+    Http = <any> 'http',
+    Https = <any> 'https',
+    Image = <any> 'image',
+    ImageAspectRatio = <any> 'image_aspect_ratio',
+    ImportContacts = <any> 'import_contacts',
+    ImportExport = <any> 'import_export',
+    ImportantDevices = <any> 'important_devices',
+    Inbox = <any> 'inbox',
+    IndeterminateCheckBox = <any> 'indeterminate_check_box',
+    Info = <any> 'info',
+    InfoOutline = <any> 'info_outline',
+    Input = <any> 'input',
+    InsertChart = <any> 'insert_chart',
+    InsertComment = <any> 'insert_comment',
+    InsertDriveFile = <any> 'insert_drive_file',
+    InsertEmoticon = <any> 'insert_emoticon',
+    InsertInvitation = <any> 'insert_invitation',
+    InsertLink = <any> 'insert_link',
+    InsertPhoto = <any> 'insert_photo',
+    InvertColors = <any> 'invert_colors',
+    InvertColorsOff = <any> 'invert_colors_off',
+    Iso = <any> 'iso',
+    Keyboard = <any> 'keyboard',
+    KeyboardArrowDown = <any> 'keyboard_arrow_down',
+    KeyboardArrowLeft = <any> 'keyboard_arrow_left',
+    KeyboardArrowRight = <any> 'keyboard_arrow_right',
+    KeyboardArrowUp = <any> 'keyboard_arrow_up',
+    KeyboardBackspace = <any> 'keyboard_backspace',
+    KeyboardCapslock = <any> 'keyboard_capslock',
+    KeyboardHide = <any> 'keyboard_hide',
+    KeyboardReturn = <any> 'keyboard_return',
+    KeyboardTab = <any> 'keyboard_tab',
+    KeyboardVoice = <any> 'keyboard_voice',
+    Kitchen = <any> 'kitchen',
+    Label = <any> 'label',
+    LabelOutline = <any> 'label_outline',
+    Landscape = <any> 'landscape',
+    Language = <any> 'language',
+    Laptop = <any> 'laptop',
+    LaptopChromebook = <any> 'laptop_chromebook',
+    LaptopMac = <any> 'laptop_mac',
+    LaptopWindows = <any> 'laptop_windows',
+    LastPage = <any> 'last_page',
+    Launch = <any> 'launch',
+    Layers = <any> 'layers',
+    LayersClear = <any> 'layers_clear',
+    LeakAdd = <any> 'leak_add',
+    LeakRemove = <any> 'leak_remove',
+    Lens = <any> 'lens',
+    LibraryAdd = <any> 'library_add',
+    LibraryBooks = <any> 'library_books',
+    LibraryMusic = <any> 'library_music',
+    LightbulbOutline = <any> 'lightbulb_outline',
+    LineStyle = <any> 'line_style',
+    LineWeight = <any> 'line_weight',
+    LinearScale = <any> 'linear_scale',
+    Link = <any> 'link',
+    LinkedCamera = <any> 'linked_camera',
+    List = <any> 'list',
+    ListAlt = <any> 'list_alt',
+    LiveHelp = <any> 'live_help',
+    LiveTv = <any> 'live_tv',
+    Login = <any> 'login',
+    LocalActivity = <any> 'local_activity',
+    LocalAirport = <any> 'local_airport',
+    LocalAtm = <any> 'local_atm',
+    LocalBar = <any> 'local_bar',
+    LocalCafe = <any> 'local_cafe',
+    LocalCarWash = <any> 'local_car_wash',
+    LocalConvenienceStore = <any> 'local_convenience_store',
+    LocalDining = <any> 'local_dining',
+    LocalDrink = <any> 'local_drink',
+    LocalFlorist = <any> 'local_florist',
+    LocalGasStation = <any> 'local_gas_station',
+    LocalGroceryStore = <any> 'local_grocery_store',
+    LocalHospital = <any> 'local_hospital',
+    LocalHotel = <any> 'local_hotel',
+    LocalLaundryService = <any> 'local_laundry_service',
+    LocalLibrary = <any> 'local_library',
+    LocalMall = <any> 'local_mall',
+    LocalMovies = <any> 'local_movies',
+    LocalOffer = <any> 'local_offer',
+    LocalParking = <any> 'local_parking',
+    LocalPharmacy = <any> 'local_pharmacy',
+    LocalPhone = <any> 'local_phone',
+    LocalPizza = <any> 'local_pizza',
+    LocalPlay = <any> 'local_play',
+    LocalPostOffice = <any> 'local_post_office',
+    LocalPrintshop = <any> 'local_printshop',
+    LocalSee = <any> 'local_see',
+    LocalShipping = <any> 'local_shipping',
+    LocalTaxi = <any> 'local_taxi',
+    LocationCity = <any> 'location_city',
+    LocationDisabled = <any> 'location_disabled',
+    LocationOff = <any> 'location_off',
+    LocationOn = <any> 'location_on',
+    LocationSearching = <any> 'location_searching',
+    Lock = <any> 'lock',
+    LockOpen = <any> 'lock_open',
+    LockOutline = <any> 'lock_outline',
+    Looks = <any> 'looks',
+    Looks3 = <any> 'looks_3',
+    Looks4 = <any> 'looks_4',
+    Looks5 = <any> 'looks_5',
+    Looks6 = <any> 'looks_6',
+    LooksOne = <any> 'looks_one',
+    LooksTwo = <any> 'looks_two',
+    Loop = <any> 'loop',
+    Loupe = <any> 'loupe',
+    LowPriority = <any> 'low_priority',
+    Loyalty = <any> 'loyalty',
+    Mail = <any> 'mail',
+    MailOutline = <any> 'mail_outline',
+    Map = <any> 'map',
+    Markunread = <any> 'markunread',
+    MarkunreadMailbox = <any> 'markunread_mailbox',
+    Memory = <any> 'memory',
+    Menu = <any> 'menu',
+    MergeType = <any> 'merge_type',
+    Message = <any> 'message',
+    Mic = <any> 'mic',
+    MicNone = <any> 'mic_none',
+    MicOff = <any> 'mic_off',
+    Mms = <any> 'mms',
+    ModeComment = <any> 'mode_comment',
+    ModeEdit = <any> 'mode_edit',
+    MonetizationOn = <any> 'monetization_on',
+    MoneyOff = <any> 'money_off',
+    MonochromePhotos = <any> 'monochrome_photos',
+    Mood = <any> 'mood',
+    MoodBad = <any> 'mood_bad',
+    More = <any> 'more',
+    MoreHoriz = <any> 'more_horiz',
+    MoreVert = <any> 'more_vert',
+    Motorcycle = <any> 'motorcycle',
+    Mouse = <any> 'mouse',
+    MoveToInbox = <any> 'move_to_inbox',
+    Movie = <any> 'movie',
+    MovieCreation = <any> 'movie_creation',
+    MovieFilter = <any> 'movie_filter',
+    MultilineChart = <any> 'multiline_chart',
+    MusicNote = <any> 'music_note',
+    MusicVideo = <any> 'music_video',
+    MyLocation = <any> 'my_location',
+    Nature = <any> 'nature',
+    NaturePeople = <any> 'nature_people',
+    NavigateBefore = <any> 'navigate_before',
+    NavigateNext = <any> 'navigate_next',
+    Navigation = <any> 'navigation',
+    NearMe = <any> 'near_me',
+    NetworkCell = <any> 'network_cell',
+    NetworkCheck = <any> 'network_check',
+    NetworkLocked = <any> 'network_locked',
+    NetworkWifi = <any> 'network_wifi',
+    NewReleases = <any> 'new_releases',
+    NextWeek = <any> 'next_week',
+    Nfc = <any> 'nfc',
+    NoEncryption = <any> 'no_encryption',
+    NoSim = <any> 'no_sim',
+    NotInterested = <any> 'not_interested',
+    Note = <any> 'note',
+    NoteAdd = <any> 'note_add',
+    Notifications = <any> 'notifications',
+    NotificationsActive = <any> 'notifications_active',
+    NotificationsNone = <any> 'notifications_none',
+    NotificationsOff = <any> 'notifications_off',
+    NotificationsPaused = <any> 'notifications_paused',
+    OfflinePin = <any> 'offline_pin',
+    OndemandVideo = <any> 'ondemand_video',
+    Opacity = <any> 'opacity',
+    OpenInBrowser = <any> 'open_in_browser',
+    OpenInNew = <any> 'open_in_new',
+    OpenWith = <any> 'open_with',
+    Pages = <any> 'pages',
+    Pageview = <any> 'pageview',
+    Palette = <any> 'palette',
+    PanTool = <any> 'pan_tool',
+    Panorama = <any> 'panorama',
+    PanoramaFishEye = <any> 'panorama_fish_eye',
+    PanoramaHorizontal = <any> 'panorama_horizontal',
+    PanoramaVertical = <any> 'panorama_vertical',
+    PanoramaWideAngle = <any> 'panorama_wide_angle',
+    PartyMode = <any> 'party_mode',
+    Pause = <any> 'pause',
+    PauseCircleFilled = <any> 'pause_circle_filled',
+    PauseCircleOutline = <any> 'pause_circle_outline',
+    Payment = <any> 'payment',
+    People = <any> 'people',
+    PeopleOutline = <any> 'people_outline',
+    PermCameraMic = <any> 'perm_camera_mic',
+    PermContactCalendar = <any> 'perm_contact_calendar',
+    PermDataSetting = <any> 'perm_data_setting',
+    PermDeviceInformation = <any> 'perm_device_information',
+    PermIdentity = <any> 'perm_identity',
+    PermMedia = <any> 'perm_media',
+    PermPhoneMsg = <any> 'perm_phone_msg',
+    PermScanWifi = <any> 'perm_scan_wifi',
+    Person = <any> 'person',
+    PersonAdd = <any> 'person_add',
+    PersonOutline = <any> 'person_outline',
+    PersonPin = <any> 'person_pin',
+    PersonPinCircle = <any> 'person_pin_circle',
+    PersonalVideo = <any> 'personal_video',
+    Pets = <any> 'pets',
+    Phone = <any> 'phone',
+    PhoneAndroid = <any> 'phone_android',
+    PhoneBluetoothSpeaker = <any> 'phone_bluetooth_speaker',
+    PhoneForwarded = <any> 'phone_forwarded',
+    PhoneInTalk = <any> 'phone_in_talk',
+    PhoneIphone = <any> 'phone_iphone',
+    PhoneLocked = <any> 'phone_locked',
+    PhoneMissed = <any> 'phone_missed',
+    PhonePaused = <any> 'phone_paused',
+    Phonelink = <any> 'phonelink',
+    PhonelinkErase = <any> 'phonelink_erase',
+    PhonelinkLock = <any> 'phonelink_lock',
+    PhonelinkOff = <any> 'phonelink_off',
+    PhonelinkRing = <any> 'phonelink_ring',
+    PhonelinkSetup = <any> 'phonelink_setup',
+    Photo = <any> 'photo',
+    PhotoAlbum = <any> 'photo_album',
+    PhotoCamera = <any> 'photo_camera',
+    PhotoFilter = <any> 'photo_filter',
+    PhotoLibrary = <any> 'photo_library',
+    PhotoSizeSelectActual = <any> 'photo_size_select_actual',
+    PhotoSizeSelectLarge = <any> 'photo_size_select_large',
+    PhotoSizeSelectSmall = <any> 'photo_size_select_small',
+    PictureAsPdf = <any> 'picture_as_pdf',
+    PictureInPicture = <any> 'picture_in_picture',
+    PictureInPictureAlt = <any> 'picture_in_picture_alt',
+    PieChart = <any> 'pie_chart',
+    PieChartOutlined = <any> 'pie_chart_outlined',
+    PinDrop = <any> 'pin_drop',
+    Place = <any> 'place',
+    PlayArrow = <any> 'play_arrow',
+    PlayCircleFilled = <any> 'play_circle_filled',
+    PlayCircleOutline = <any> 'play_circle_outline',
+    PlayForWork = <any> 'play_for_work',
+    PlaylistAdd = <any> 'playlist_add',
+    PlaylistAddCheck = <any> 'playlist_add_check',
+    PlaylistPlay = <any> 'playlist_play',
+    PlusOne = <any> 'plus_one',
+    Poll = <any> 'poll',
+    Polymer = <any> 'polymer',
+    Pool = <any> 'pool',
+    PortableWifiOff = <any> 'portable_wifi_off',
+    Portrait = <any> 'portrait',
+    Power = <any> 'power',
+    PowerInput = <any> 'power_input',
+    PowerSettingsNew = <any> 'power_settings_new',
+    PregnantWoman = <any> 'pregnant_woman',
+    PresentToAll = <any> 'present_to_all',
+    Print = <any> 'print',
+    PriorityHigh = <any> 'priority_high',
+    Public = <any> 'public',
+    Publish = <any> 'publish',
+    QueryBuilder = <any> 'query_builder',
+    QuestionAnswer = <any> 'question_answer',
+    Queue = <any> 'queue',
+    QueueMusic = <any> 'queue_music',
+    QueuePlayNext = <any> 'queue_play_next',
+    Radio = <any> 'radio',
+    RadioButtonChecked = <any> 'radio_button_checked',
+    RadioButtonUnchecked = <any> 'radio_button_unchecked',
+    RateReview = <any> 'rate_review',
+    Receipt = <any> 'receipt',
+    RecentActors = <any> 'recent_actors',
+    RecordVoiceOver = <any> 'record_voice_over',
+    Redeem = <any> 'redeem',
+    Redo = <any> 'redo',
+    Refresh = <any> 'refresh',
+    Remove = <any> 'remove',
+    RemoveCircle = <any> 'remove_circle',
+    RemoveCircleOutline = <any> 'remove_circle_outline',
+    RemoveFromQueue = <any> 'remove_from_queue',
+    RemoveRedEye = <any> 'remove_red_eye',
+    RemoveShoppingCart = <any> 'remove_shopping_cart',
+    Reorder = <any> 'reorder',
+    Repeat = <any> 'repeat',
+    RepeatOne = <any> 'repeat_one',
+    Replay = <any> 'replay',
+    Replay10 = <any> 'replay_10',
+    Replay30 = <any> 'replay_30',
+    Replay5 = <any> 'replay_5',
+    Reply = <any> 'reply',
+    ReplyAll = <any> 'reply_all',
+    Report = <any> 'report',
+    ReportProblem = <any> 'report_problem',
+    Restaurant = <any> 'restaurant',
+    RestaurantMenu = <any> 'restaurant_menu',
+    Restore = <any> 'restore',
+    RestorePage = <any> 'restore_page',
+    RingVolume = <any> 'ring_volume',
+    Room = <any> 'room',
+    RoomService = <any> 'room_service',
+    Rotate90DegreesCcw = <any> 'rotate_90_degrees_ccw',
+    RotateLeft = <any> 'rotate_left',
+    RotateRight = <any> 'rotate_right',
+    RoundedCorner = <any> 'rounded_corner',
+    Router = <any> 'router',
+    Rowing = <any> 'rowing',
+    RssFeed = <any> 'rss_feed',
+    RvHookup = <any> 'rv_hookup',
+    Satellite = <any> 'satellite',
+    Save = <any> 'save',
+    Scanner = <any> 'scanner',
+    Schedule = <any> 'schedule',
+    School = <any> 'school',
+    ScreenLockLandscape = <any> 'screen_lock_landscape',
+    ScreenLockPortrait = <any> 'screen_lock_portrait',
+    ScreenLockRotation = <any> 'screen_lock_rotation',
+    ScreenRotation = <any> 'screen_rotation',
+    ScreenShare = <any> 'screen_share',
+    SdCard = <any> 'sd_card',
+    SdStorage = <any> 'sd_storage',
+    Search = <any> 'search',
+    Security = <any> 'security',
+    SelectAll = <any> 'select_all',
+    Send = <any> 'send',
+    SentimentDissatisfied = <any> 'sentiment_dissatisfied',
+    SentimentNeutral = <any> 'sentiment_neutral',
+    SentimentSatisfied = <any> 'sentiment_satisfied',
+    SentimentVeryDissatisfied = <any> 'sentiment_very_dissatisfied',
+    SentimentVerySatisfied = <any> 'sentiment_very_satisfied',
+    Settings = <any> 'settings',
+    SettingsApplications = <any> 'settings_applications',
+    SettingsBackupRestore = <any> 'settings_backup_restore',
+    SettingsBluetooth = <any> 'settings_bluetooth',
+    SettingsBrightness = <any> 'settings_brightness',
+    SettingsCell = <any> 'settings_cell',
+    SettingsEthernet = <any> 'settings_ethernet',
+    SettingsInputAntenna = <any> 'settings_input_antenna',
+    SettingsInputComponent = <any> 'settings_input_component',
+    SettingsInputComposite = <any> 'settings_input_composite',
+    SettingsInputHdmi = <any> 'settings_input_hdmi',
+    SettingsInputSvideo = <any> 'settings_input_svideo',
+    SettingsOverscan = <any> 'settings_overscan',
+    SettingsPhone = <any> 'settings_phone',
+    SettingsPower = <any> 'settings_power',
+    SettingsRemote = <any> 'settings_remote',
+    SettingsSystemDaydream = <any> 'settings_system_daydream',
+    SettingsVoice = <any> 'settings_voice',
+    Share = <any> 'share',
+    Shop = <any> 'shop',
+    ShopTwo = <any> 'shop_two',
+    ShoppingBasket = <any> 'shopping_basket',
+    ShoppingCart = <any> 'shopping_cart',
+    ShortText = <any> 'short_text',
+    ShowChart = <any> 'show_chart',
+    Shuffle = <any> 'shuffle',
+    SignalCellular4Bar = <any> 'signal_cellular_4_bar',
+    SignalCellularConnectedNoInternet4Bar = <any> 'signal_cellular_connected_no_internet_4_bar',
+    SignalCellularNoSim = <any> 'signal_cellular_no_sim',
+    SignalCellularNull = <any> 'signal_cellular_null',
+    SignalCellularOff = <any> 'signal_cellular_off',
+    SignalWifi4Bar = <any> 'signal_wifi_4_bar',
+    SignalWifi4BarLock = <any> 'signal_wifi_4_bar_lock',
+    SignalWifiOff = <any> 'signal_wifi_off',
+    SimCard = <any> 'sim_card',
+    SimCardAlert = <any> 'sim_card_alert',
+    SkipNext = <any> 'skip_next',
+    SkipPrevious = <any> 'skip_previous',
+    Slideshow = <any> 'slideshow',
+    SlowMotionVideo = <any> 'slow_motion_video',
+    Smartphone = <any> 'smartphone',
+    SmokeFree = <any> 'smoke_free',
+    SmokingRooms = <any> 'smoking_rooms',
+    Sms = <any> 'sms',
+    SmsFailed = <any> 'sms_failed',
+    Snooze = <any> 'snooze',
+    Sort = <any> 'sort',
+    SortByAlpha = <any> 'sort_by_alpha',
+    Spa = <any> 'spa',
+    SpaceBar = <any> 'space_bar',
+    Speaker = <any> 'speaker',
+    SpeakerGroup = <any> 'speaker_group',
+    SpeakerNotes = <any> 'speaker_notes',
+    SpeakerNotesOff = <any> 'speaker_notes_off',
+    SpeakerPhone = <any> 'speaker_phone',
+    Spellcheck = <any> 'spellcheck',
+    Star = <any> 'star',
+    StarBorder = <any> 'star_border',
+    StarHalf = <any> 'star_half',
+    Stars = <any> 'stars',
+    StayCurrentLandscape = <any> 'stay_current_landscape',
+    StayCurrentPortrait = <any> 'stay_current_portrait',
+    StayPrimaryLandscape = <any> 'stay_primary_landscape',
+    StayPrimaryPortrait = <any> 'stay_primary_portrait',
+    Stop = <any> 'stop',
+    StopScreenShare = <any> 'stop_screen_share',
+    Storage = <any> 'storage',
+    Store = <any> 'store',
+    StoreMallDirectory = <any> 'store_mall_directory',
+    Straighten = <any> 'straighten',
+    Streetview = <any> 'streetview',
+    StrikethroughS = <any> 'strikethrough_s',
+    Style = <any> 'style',
+    SubdirectoryArrowLeft = <any> 'subdirectory_arrow_left',
+    SubdirectoryArrowRight = <any> 'subdirectory_arrow_right',
+    Subject = <any> 'subject',
+    Subscriptions = <any> 'subscriptions',
+    Subtitles = <any> 'subtitles',
+    Subway = <any> 'subway',
+    SupervisorAccount = <any> 'supervisor_account',
+    SurroundSound = <any> 'surround_sound',
+    SwapCalls = <any> 'swap_calls',
+    SwapHoriz = <any> 'swap_horiz',
+    SwapVert = <any> 'swap_vert',
+    SwapVerticalCircle = <any> 'swap_vertical_circle',
+    SwitchCamera = <any> 'switch_camera',
+    SwitchVideo = <any> 'switch_video',
+    Sync = <any> 'sync',
+    SyncAlt = <any> 'sync_alt',
+    SyncDisabled = <any> 'sync_disabled',
+    SyncProblem = <any> 'sync_problem',
+    SystemUpdate = <any> 'system_update',
+    SystemUpdateAlt = <any> 'system_update_alt',
+    Tab = <any> 'tab',
+    TabUnselected = <any> 'tab_unselected',
+    Tablet = <any> 'tablet',
+    TabletAndroid = <any> 'tablet_android',
+    TabletMac = <any> 'tablet_mac',
+    TagFaces = <any> 'tag_faces',
+    TapAndPlay = <any> 'tap_and_play',
+    Terrain = <any> 'terrain',
+    TextFields = <any> 'text_fields',
+    TextFormat = <any> 'text_format',
+    Textsms = <any> 'textsms',
+    Texture = <any> 'texture',
+    Theaters = <any> 'theaters',
+    ThumbDown = <any> 'thumb_down',
+    ThumbUp = <any> 'thumb_up',
+    ThumbsUpDown = <any> 'thumbs_up_down',
+    TimeToLeave = <any> 'time_to_leave',
+    Timelapse = <any> 'timelapse',
+    Timeline = <any> 'timeline',
+    Timer = <any> 'timer',
+    Timer10 = <any> 'timer_10',
+    Timer3 = <any> 'timer_3',
+    TimerOff = <any> 'timer_off',
+    Title = <any> 'title',
+    Toc = <any> 'toc',
+    Today = <any> 'today',
+    Toll = <any> 'toll',
+    Tonality = <any> 'tonality',
+    TouchApp = <any> 'touch_app',
+    Toys = <any> 'toys',
+    TrackChanges = <any> 'track_changes',
+    Traffic = <any> 'traffic',
+    Train = <any> 'train',
+    Tram = <any> 'tram',
+    TransferWithinAStation = <any> 'transfer_within_a_station',
+    Transform = <any> 'transform',
+    Translate = <any> 'translate',
+    TrendingDown = <any> 'trending_down',
+    TrendingFlat = <any> 'trending_flat',
+    TrendingUp = <any> 'trending_up',
+    TripOrigin = <any> 'trip_origin',
+    Tune = <any> 'tune',
+    TurnedIn = <any> 'turned_in',
+    TurnedInNot = <any> 'turned_in_not',
+    Tv = <any> 'tv',
+    Unarchive = <any> 'unarchive',
+    Undo = <any> 'undo',
+    UnfoldLess = <any> 'unfold_less',
+    UnfoldMore = <any> 'unfold_more',
+    Update = <any> 'update',
+    Usb = <any> 'usb',
+    VerifiedUser = <any> 'verified_user',
+    VerticalAlignBottom = <any> 'vertical_align_bottom',
+    VerticalAlignCenter = <any> 'vertical_align_center',
+    VerticalAlignTop = <any> 'vertical_align_top',
+    Vibration = <any> 'vibration',
+    VideoCall = <any> 'video_call',
+    VideoLabel = <any> 'video_label',
+    VideoLibrary = <any> 'video_library',
+    Videocam = <any> 'videocam',
+    VideocamOff = <any> 'videocam_off',
+    VideogameAsset = <any> 'videogame_asset',
+    ViewAgenda = <any> 'view_agenda',
+    ViewArray = <any> 'view_array',
+    ViewCarousel = <any> 'view_carousel',
+    ViewColumn = <any> 'view_column',
+    ViewComfy = <any> 'view_comfy',
+    ViewCompact = <any> 'view_compact',
+    ViewDay = <any> 'view_day',
+    ViewHeadline = <any> 'view_headline',
+    ViewList = <any> 'view_list',
+    ViewModule = <any> 'view_module',
+    ViewQuilt = <any> 'view_quilt',
+    ViewStream = <any> 'view_stream',
+    ViewWeek = <any> 'view_week',
+    Vignette = <any> 'vignette',
+    Visibility = <any> 'visibility',
+    VisibilityOff = <any> 'visibility_off',
+    VoiceChat = <any> 'voice_chat',
+    Voicemail = <any> 'voicemail',
+    VolumeDown = <any> 'volume_down',
+    VolumeMute = <any> 'volume_mute',
+    VolumeOff = <any> 'volume_off',
+    VolumeUp = <any> 'volume_up',
+    VpnKey = <any> 'vpn_key',
+    VpnLock = <any> 'vpn_lock',
+    Wallpaper = <any> 'wallpaper',
+    Warning = <any> 'warning',
+    Watch = <any> 'watch',
+    WatchLater = <any> 'watch_later',
+    WbAuto = <any> 'wb_auto',
+    WbCloudy = <any> 'wb_cloudy',
+    WbIncandescent = <any> 'wb_incandescent',
+    WbIridescent = <any> 'wb_iridescent',
+    WbSunny = <any> 'wb_sunny',
+    Wc = <any> 'wc',
+    Web = <any> 'web',
+    WebAsset = <any> 'web_asset',
+    Weekend = <any> 'weekend',
+    Whatshot = <any> 'whatshot',
+    Widgets = <any> 'widgets',
+    Wifi = <any> 'wifi',
+    WifiLock = <any> 'wifi_lock',
+    WifiTethering = <any> 'wifi_tethering',
+    Work = <any> 'work',
+    WorkHistory = <any> 'work_history',
+    WrapText = <any> 'wrap_text',
+    YoutubeSearchedFor = <any> 'youtube_searched_for',
+    ZoomIn = <any> 'zoom_in',
+    ZoomOut = <any> 'zoom_out',
+    ZoomOutMap = <any> 'zoom_out_map',
+    _10k = <any> '_10k',
+    _10mp = <any> '_10mp',
+    _11mp = <any> '_11mp',
+    _123 = <any> '_123',
+    _12mp = <any> '_12mp',
+    _13mp = <any> '_13mp',
+    _14mp = <any> '_14mp',
+    _15mp = <any> '_15mp',
+    _16mp = <any> '_16mp',
+    _17mp = <any> '_17mp',
+    _18UpRating = <any> '_18_up_rating',
+    _18mp = <any> '_18mp',
+    _19mp = <any> '_19mp',
+    _1k = <any> '_1k',
+    _1kPlus = <any> '_1k_plus',
+    _1xMobiledata = <any> '_1x_mobiledata',
+    _20mp = <any> '_20mp',
+    _21mp = <any> '_21mp',
+    _22mp = <any> '_22mp',
+    _23mp = <any> '_23mp',
+    _24mp = <any> '_24mp',
+    _2k = <any> '_2k',
+    _2kPlus = <any> '_2k_plus',
+    _2mp = <any> '_2mp',
+    _30fps = <any> '_30fps',
+    _30fpsSelect = <any> '_30fps_select',
+    _360 = <any> '_360',
+    _3gMobiledata = <any> '_3g_mobiledata',
+    _3k = <any> '_3k',
+    _3kPlus = <any> '_3k_plus',
+    _3mp = <any> '_3mp',
+    _3p = <any> '_3p',
+    _4gMobiledata = <any> '_4g_mobiledata',
+    _4gPlusMobiledata = <any> '_4g_plus_mobiledata',
+    _4k = <any> '_4k',
+    _4kPlus = <any> '_4k_plus',
+    _4mp = <any> '_4mp',
+    _5g = <any> '_5g',
+    _5k = <any> '_5k',
+    _5kPlus = <any> '_5k_plus',
+    _5mp = <any> '_5mp',
+    _60fps = <any> '_60fps',
+    _60fpsSelect = <any> '_60fps_select',
+    _6FtApart = <any> '_6_ft_apart',
+    _6k = <any> '_6k',
+    _6kPlus = <any> '_6k_plus',
+    _6mp = <any> '_6mp',
+    _7k = <any> '_7k',
+    _7kPlus = <any> '_7k_plus',
+    _7mp = <any> '_7mp',
+    _8k = <any> '_8k',
+    _8kPlus = <any> '_8k_plus',
+    _8mp = <any> '_8mp',
+    _9k = <any> '_9k',
+    _9kPlus = <any> '_9k_plus',
+    _9mp = <any> '_9mp',
+    Abc = <any> 'abc',
+    AccessTimeFilled = <any> 'access_time_filled',
+    AccessibilityNew = <any> 'accessibility_new',
+    AccessibleForward = <any> 'accessible_forward',
+    AdUnits = <any> 'ad_units',
+    AddBusiness = <any> 'add_business',
+    AddCard = <any> 'add_card',
+    AddChart = <any> 'add_chart',
+    AddComment = <any> 'add_comment',
+    AddHome = <any> 'add_home',
+    AddHomeWork = <any> 'add_home_work',
+    AddIcCall = <any> 'add_ic_call',
+    AddLink = <any> 'add_link',
+    AddLocationAlt = <any> 'add_location_alt',
+    AddModerator = <any> 'add_moderator',
+    AddPhotoAlternate = <any> 'add_photo_alternate',
+    AddReaction = <any> 'add_reaction',
+    AddRoad = <any> 'add_road',
+    AddTask = <any> 'add_task',
+    AddToDrive = <any> 'add_to_drive',
+    AddToHomeScreen = <any> 'add_to_home_screen',
+    Addchart = <any> 'addchart',
+    AdfScanner = <any> 'adf_scanner',
+    AdminPanelSettings = <any> 'admin_panel_settings',
+    Adobe = <any> 'adobe',
+    AdsClick = <any> 'ads_click',
+    Agriculture = <any> 'agriculture',
+    Air = <any> 'air',
+    AirlineStops = <any> 'airline_stops',
+    Airlines = <any> 'airlines',
+    AirplaneTicket = <any> 'airplane_ticket',
+    AirplanemodeOff = <any> 'airplanemode_off',
+    AirplanemodeOn = <any> 'airplanemode_on',
+    AlignHorizontalCenter = <any> 'align_horizontal_center',
+    AlignHorizontalLeft = <any> 'align_horizontal_left',
+    AlignHorizontalRight = <any> 'align_horizontal_right',
+    AlignVerticalBottom = <any> 'align_vertical_bottom',
+    AlignVerticalCenter = <any> 'align_vertical_center',
+    AlignVerticalTop = <any> 'align_vertical_top',
+    AllInbox = <any> 'all_inbox',
+    AltRoute = <any> 'alt_route',
+    AlternateEmail = <any> 'alternate_email',
+    AmpStories = <any> 'amp_stories',
+    Analytics = <any> 'analytics',
+    Anchor = <any> 'anchor',
+    Animation = <any> 'animation',
+    Aod = <any> 'aod',
+    Apartment = <any> 'apartment',
+    Api = <any> 'api',
+    AppBlocking = <any> 'app_blocking',
+    AppRegistration = <any> 'app_registration',
+    AppSettingsAlt = <any> 'app_settings_alt',
+    AppShortcut = <any> 'app_shortcut',
+    Apple = <any> 'apple',
+    Approval = <any> 'approval',
+    AppsOutage = <any> 'apps_outage',
+    Architecture = <any> 'architecture',
+    AreaChart = <any> 'area_chart',
+    ArrowBackIos = <any> 'arrow_back_ios',
+    ArrowBackIosNew = <any> 'arrow_back_ios_new',
+    ArrowCircleDown = <any> 'arrow_circle_down',
+    ArrowCircleLeft = <any> 'arrow_circle_left',
+    ArrowCircleRight = <any> 'arrow_circle_right',
+    ArrowCircleUp = <any> 'arrow_circle_up',
+    ArrowForwardIos = <any> 'arrow_forward_ios',
+    ArrowLeft = <any> 'arrow_left',
+    ArrowOutward = <any> 'arrow_outward',
+    ArrowRight = <any> 'arrow_right',
+    ArrowRightAlt = <any> 'arrow_right_alt',
+    Article = <any> 'article',
+    AssistWalker = <any> 'assist_walker',
+    AssistantDirection = <any> 'assistant_direction',
+    AssuredWorkload = <any> 'assured_workload',
+    Atm = <any> 'atm',
+    AttachEmail = <any> 'attach_email',
+    Attractions = <any> 'attractions',
+    Attribution = <any> 'attribution',
+    AudioFile = <any> 'audio_file',
+    AutoAwesome = <any> 'auto_awesome',
+    AutoAwesomeMosaic = <any> 'auto_awesome_mosaic',
+    AutoAwesomeMotion = <any> 'auto_awesome_motion',
+    AutoDelete = <any> 'auto_delete',
+    AutoFixHigh = <any> 'auto_fix_high',
+    AutoFixNormal = <any> 'auto_fix_normal',
+    AutoFixOff = <any> 'auto_fix_off',
+    AutoGraph = <any> 'auto_graph',
+    AutoMode = <any> 'auto_mode',
+    AutoStories = <any> 'auto_stories',
+    AutofpsSelect = <any> 'autofps_select',
+    BabyChangingStation = <any> 'baby_changing_station',
+    BackHand = <any> 'back_hand',
+    Backpack = <any> 'backpack',
+    BackupTable = <any> 'backup_table',
+    Badge = <any> 'badge',
+    BakeryDining = <any> 'bakery_dining',
+    Balance = <any> 'balance',
+    Balcony = <any> 'balcony',
+    Ballot = <any> 'ballot',
+    BarChart = <any> 'bar_chart',
+    BatchPrediction = <any> 'batch_prediction',
+    Bathroom = <any> 'bathroom',
+    Bathtub = <any> 'bathtub',
+    Battery0Bar = <any> 'battery_0_bar',
+    Battery1Bar = <any> 'battery_1_bar',
+    Battery2Bar = <any> 'battery_2_bar',
+    Battery3Bar = <any> 'battery_3_bar',
+    Battery4Bar = <any> 'battery_4_bar',
+    Battery5Bar = <any> 'battery_5_bar',
+    Battery6Bar = <any> 'battery_6_bar',
+    BatterySaver = <any> 'battery_saver',
+    Bed = <any> 'bed',
+    BedroomBaby = <any> 'bedroom_baby',
+    BedroomChild = <any> 'bedroom_child',
+    BedroomParent = <any> 'bedroom_parent',
+    Bedtime = <any> 'bedtime',
+    BedtimeOff = <any> 'bedtime_off',
+    Bento = <any> 'bento',
+    BikeScooter = <any> 'bike_scooter',
+    Biotech = <any> 'biotech',
+    Blender = <any> 'blender',
+    Blind = <any> 'blind',
+    Blinds = <any> 'blinds',
+    BlindsClosed = <any> 'blinds_closed',
+    Bloodtype = <any> 'bloodtype',
+    BluetoothDrive = <any> 'bluetooth_drive',
+    Bolt = <any> 'bolt',
+    BookOnline = <any> 'book_online',
+    BookmarkAdd = <any> 'bookmark_add',
+    BookmarkAdded = <any> 'bookmark_added',
+    BookmarkOutline = <any> 'bookmark_outline',
+    BookmarkRemove = <any> 'bookmark_remove',
+    Boy = <any> 'boy',
+    BreakfastDining = <any> 'breakfast_dining',
+    BroadcastOnHome = <any> 'broadcast_on_home',
+    BroadcastOnPersonal = <any> 'broadcast_on_personal',
+    BrowseGallery = <any> 'browse_gallery',
+    BrowserNotSupported = <any> 'browser_not_supported',
+    BrowserUpdated = <any> 'browser_updated',
+    BrunchDining = <any> 'brunch_dining',
+    BuildCircle = <any> 'build_circle',
+    Bungalow = <any> 'bungalow',
+    BusAlert = <any> 'bus_alert',
+    Cabin = <any> 'cabin',
+    Cable = <any> 'cable',
+    Calculate = <any> 'calculate',
+    CalendarMonth = <any> 'calendar_month',
+    CalendarViewDay = <any> 'calendar_view_day',
+    CalendarViewMonth = <any> 'calendar_view_month',
+    CalendarViewWeek = <any> 'calendar_view_week',
+    CameraIndoor = <any> 'camera_indoor',
+    CameraOutdoor = <any> 'camera_outdoor',
+    Cameraswitch = <any> 'cameraswitch',
+    Campaign = <any> 'campaign',
+    CancelPresentation = <any> 'cancel_presentation',
+    CancelScheduleSend = <any> 'cancel_schedule_send',
+    CandlestickChart = <any> 'candlestick_chart',
+    CarCrash = <any> 'car_crash',
+    CarRental = <any> 'car_rental',
+    CarRepair = <any> 'car_repair',
+    Carpenter = <any> 'carpenter',
+    Cases = <any> 'cases',
+    CastForEducation = <any> 'cast_for_education',
+    Castle = <any> 'castle',
+    CatchingPokemon = <any> 'catching_pokemon',
+    Category = <any> 'category',
+    Celebration = <any> 'celebration',
+    CellTower = <any> 'cell_tower',
+    CellWifi = <any> 'cell_wifi',
+    Chair = <any> 'chair',
+    ChairAlt = <any> 'chair_alt',
+    Chalet = <any> 'chalet',
+    ChangeCircle = <any> 'change_circle',
+    ChargingStation = <any> 'charging_station',
+    Checklist = <any> 'checklist',
+    ChecklistRtl = <any> 'checklist_rtl',
+    Checkroom = <any> 'checkroom',
+    Church = <any> 'church',
+    Circle = <any> 'circle',
+    CircleNotifications = <any> 'circle_notifications',
+    CleanHands = <any> 'clean_hands',
+    CleaningServices = <any> 'cleaning_services',
+    CloseFullscreen = <any> 'close_fullscreen',
+    ClosedCaptionDisabled = <any> 'closed_caption_disabled',
+    ClosedCaptionOff = <any> 'closed_caption_off',
+    CloudSync = <any> 'cloud_sync',
+    Co2 = <any> 'co2',
+    CoPresent = <any> 'co_present',
+    CodeOff = <any> 'code_off',
+    Coffee = <any> 'coffee',
+    CoffeeMaker = <any> 'coffee_maker',
+    CommentBank = <any> 'comment_bank',
+    CommentsDisabled = <any> 'comments_disabled',
+    Commit = <any> 'commit',
+    Commute = <any> 'commute',
+    CompassCalibration = <any> 'compass_calibration',
+    Compost = <any> 'compost',
+    Compress = <any> 'compress',
+    ConfirmationNum = <any> 'confirmation_num',
+    ConnectWithoutContact = <any> 'connect_without_contact',
+    ConnectedTv = <any> 'connected_tv',
+    ConnectingAirports = <any> 'connecting_airports',
+    Construction = <any> 'construction',
+    ContactEmergency = <any> 'contact_emergency',
+    ContactPage = <any> 'contact_page',
+    ContactSupport = <any> 'contact_support',
+    Contactless = <any> 'contactless',
+    ContentPasteGo = <any> 'content_paste_go',
+    ContentPasteOff = <any> 'content_paste_off',
+    ContentPasteSearch = <any> 'content_paste_search',
+    Contrast = <any> 'contrast',
+    ControlCamera = <any> 'control_camera',
+    Cookie = <any> 'cookie',
+    Copy = <any> 'copy',
+    CopyAll = <any> 'copy_all',
+    Coronavirus = <any> 'coronavirus',
+    CorporateFare = <any> 'corporate_fare',
+    Cottage = <any> 'cottage',
+    Countertops = <any> 'countertops',
+    CreditCardOff = <any> 'credit_card_off',
+    CreditScore = <any> 'credit_score',
+    Crib = <any> 'crib',
+    CrisisAlert = <any> 'crisis_alert',
+    CrueltyFree = <any> 'cruelty_free',
+    Css = <any> 'css',
+    CurrencyBitcoin = <any> 'currency_bitcoin',
+    CurrencyExchange = <any> 'currency_exchange',
+    CurrencyFranc = <any> 'currency_franc',
+    CurrencyLira = <any> 'currency_lira',
+    CurrencyPound = <any> 'currency_pound',
+    CurrencyRuble = <any> 'currency_ruble',
+    CurrencyRupee = <any> 'currency_rupee',
+    CurrencyYen = <any> 'currency_yen',
+    CurrencyYuan = <any> 'currency_yuan',
+    Curtains = <any> 'curtains',
+    CurtainsClosed = <any> 'curtains_closed',
+    Cut = <any> 'cut',
+    Cyclone = <any> 'cyclone',
+    Dangerous = <any> 'dangerous',
+    DarkMode = <any> 'dark_mode',
+    DashboardCustomize = <any> 'dashboard_customize',
+    DataArray = <any> 'data_array',
+    DataExploration = <any> 'data_exploration',
+    DataObject = <any> 'data_object',
+    DataSaverOff = <any> 'data_saver_off',
+    DataSaverOn = <any> 'data_saver_on',
+    DataThresholding = <any> 'data_thresholding',
+    Dataset = <any> 'dataset',
+    DatasetLinked = <any> 'dataset_linked',
+    Deblur = <any> 'deblur',
+    Deck = <any> 'deck',
+    DeliveryDining = <any> 'delivery_dining',
+    DensityLarge = <any> 'density_large',
+    DensityMedium = <any> 'density_medium',
+    DensitySmall = <any> 'density_small',
+    DepartureBoard = <any> 'departure_board',
+    Deselect = <any> 'deselect',
+    DesignServices = <any> 'design_services',
+    Desk = <any> 'desk',
+    DesktopAccessDisabled = <any> 'desktop_access_disabled',
+    DeveloperBoardOff = <any> 'developer_board_off',
+    DeviceThermostat = <any> 'device_thermostat',
+    DeviceUnknown = <any> 'device_unknown',
+    DevicesFold = <any> 'devices_fold',
+    Diamond = <any> 'diamond',
+    Difference = <any> 'difference',
+    Dining = <any> 'dining',
+    DinnerDining = <any> 'dinner_dining',
+    DirectionsBoatFilled = <any> 'directions_boat_filled',
+    DirectionsBusFilled = <any> 'directions_bus_filled',
+    DirectionsCarFilled = <any> 'directions_car_filled',
+    DirectionsFerry = <any> 'directions_ferry',
+    DirectionsOff = <any> 'directions_off',
+    DirectionsRailwayFilled = <any> 'directions_railway_filled',
+    DirectionsSubwayFilled = <any> 'directions_subway_filled',
+    DirectionsTrain = <any> 'directions_train',
+    DirectionsTransitFilled = <any> 'directions_transit_filled',
+    DirtyLens = <any> 'dirty_lens',
+    DisabledByDefault = <any> 'disabled_by_default',
+    DisabledVisible = <any> 'disabled_visible',
+    Discord = <any> 'discord',
+    Discount = <any> 'discount',
+    DisplaySettings = <any> 'display_settings',
+    Diversity1 = <any> 'diversity_1',
+    Diversity2 = <any> 'diversity_2',
+    Diversity3 = <any> 'diversity_3',
+    DndForwardslash = <any> 'dnd_forwardslash',
+    DoDisturb = <any> 'do_disturb',
+    DoDisturbAlt = <any> 'do_disturb_alt',
+    DoDisturbOff = <any> 'do_disturb_off',
+    DoDisturbOn = <any> 'do_disturb_on',
+    DoNotDisturbOnTotalSilence = <any> 'do_not_disturb_on_total_silence',
+    DoNotStep = <any> 'do_not_step',
+    DoNotTouch = <any> 'do_not_touch',
+    DocumentScanner = <any> 'document_scanner',
+    DomainAdd = <any> 'domain_add',
+    DomainDisabled = <any> 'domain_disabled',
+    DomainVerification = <any> 'domain_verification',
+    DoneOutline = <any> 'done_outline',
+    DoorBack = <any> 'door_back',
+    DoorFront = <any> 'door_front',
+    DoorSliding = <any> 'door_sliding',
+    Doorbell = <any> 'doorbell',
+    DoubleArrow = <any> 'double_arrow',
+    DownhillSkiing = <any> 'downhill_skiing',
+    Download = <any> 'download',
+    DownloadDone = <any> 'download_done',
+    DownloadForOffline = <any> 'download_for_offline',
+    Downloading = <any> 'downloading',
+    DragIndicator = <any> 'drag_indicator',
+    Draw = <any> 'draw',
+    DriveFileMove = <any> 'drive_file_move',
+    DriveFileMoveRtl = <any> 'drive_file_move_rtl',
+    DriveFileRenameOutline = <any> 'drive_file_rename_outline',
+    DriveFolderUpload = <any> 'drive_folder_upload',
+    Dry = <any> 'dry',
+    DryCleaning = <any> 'dry_cleaning',
+    Duo = <any> 'duo',
+    DynamicFeed = <any> 'dynamic_feed',
+    DynamicForm = <any> 'dynamic_form',
+    EMobiledata = <any> 'e_mobiledata',
+    Earbuds = <any> 'earbuds',
+    EarbudsBattery = <any> 'earbuds_battery',
+    East = <any> 'east',
+    Eco = <any> 'eco',
+    EdgesensorHigh = <any> 'edgesensor_high',
+    EdgesensorLow = <any> 'edgesensor_low',
+    EditAttributes = <any> 'edit_attributes',
+    EditCalendar = <any> 'edit_calendar',
+    EditLocationAlt = <any> 'edit_location_alt',
+    EditNote = <any> 'edit_note',
+    EditNotifications = <any> 'edit_notifications',
+    EditOff = <any> 'edit_off',
+    EditRoad = <any> 'edit_road',
+    Egg = <any> 'egg',
+    EggAlt = <any> 'egg_alt',
+    Elderly = <any> 'elderly',
+    ElderlyWoman = <any> 'elderly_woman',
+    ElectricBike = <any> 'electric_bike',
+    ElectricBolt = <any> 'electric_bolt',
+    ElectricCar = <any> 'electric_car',
+    ElectricMeter = <any> 'electric_meter',
+    ElectricMoped = <any> 'electric_moped',
+    ElectricRickshaw = <any> 'electric_rickshaw',
+    ElectricScooter = <any> 'electric_scooter',
+    ElectricalServices = <any> 'electrical_services',
+    Elevator = <any> 'elevator',
+    Emergency = <any> 'emergency',
+    EmergencyRecording = <any> 'emergency_recording',
+    EmergencyShare = <any> 'emergency_share',
+    EmojiEmotions = <any> 'emoji_emotions',
+    EmojiEvents = <any> 'emoji_events',
+    EmojiFlags = <any> 'emoji_flags',
+    EmojiFoodBeverage = <any> 'emoji_food_beverage',
+    EmojiNature = <any> 'emoji_nature',
+    EmojiObjects = <any> 'emoji_objects',
+    EmojiPeople = <any> 'emoji_people',
+    EmojiSymbols = <any> 'emoji_symbols',
+    EmojiTransportation = <any> 'emoji_transportation',
+    EnergySavingsLeaf = <any> 'energy_savings_leaf',
+    Engineering = <any> 'engineering',
+    EnhancePhotoTranslate = <any> 'enhance_photo_translate',
+    Escalator = <any> 'escalator',
+    EscalatorWarning = <any> 'escalator_warning',
+    Euro = <any> 'euro',
+    EventRepeat = <any> 'event_repeat',
+    Expand = <any> 'expand',
+    ExpandCircleDown = <any> 'expand_circle_down',
+    ExploreOff = <any> 'explore_off',
+    ExposureMinus1 = <any> 'exposure_minus_1',
+    ExposureMinus2 = <any> 'exposure_minus_2',
+    ExtensionOff = <any> 'extension_off',
+    Face2 = <any> 'face_2',
+    Face3 = <any> 'face_3',
+    Face4 = <any> 'face_4',
+    Face5 = <any> 'face_5',
+    Face6 = <any> 'face_6',
+    FaceRetouchingNatural = <any> 'face_retouching_natural',
+    FaceRetouchingOff = <any> 'face_retouching_off',
+    FaceUnlock = <any> 'face_unlock',
+    Facebook = <any> 'facebook',
+    FactCheck = <any> 'fact_check',
+    Factory = <any> 'factory',
+    FamilyRestroom = <any> 'family_restroom',
+    Fastfood = <any> 'fastfood',
+    FavoriteOutline = <any> 'favorite_outline',
+    Fax = <any> 'fax',
+    Feed = <any> 'feed',
+    Female = <any> 'female',
+    Fence = <any> 'fence',
+    Festival = <any> 'festival',
+    FileCopy = <any> 'file_copy',
+    FileDownloadDone = <any> 'file_download_done',
+    FileDownloadOff = <any> 'file_download_off',
+    FileOpen = <any> 'file_open',
+    FilePresent = <any> 'file_present',
+    FilterAlt = <any> 'filter_alt',
+    FilterAltOff = <any> 'filter_alt_off',
+    FilterListOff = <any> 'filter_list_off',
+    FireExtinguisher = <any> 'fire_extinguisher',
+    FireHydrantAlt = <any> 'fire_hydrant_alt',
+    FireTruck = <any> 'fire_truck',
+    Fireplace = <any> 'fireplace',
+    FitScreen = <any> 'fit_screen',
+    Fitbit = <any> 'fitbit',
+    FlagCircle = <any> 'flag_circle',
+    Flaky = <any> 'flaky',
+    FlashlightOff = <any> 'flashlight_off',
+    FlashlightOn = <any> 'flashlight_on',
+    Flatware = <any> 'flatware',
+    FlightClass = <any> 'flight_class',
+    FlipCameraAndroid = <any> 'flip_camera_android',
+    FlipCameraIos = <any> 'flip_camera_ios',
+    Flood = <any> 'flood',
+    Flourescent = <any> 'flourescent',
+    Fluorescent = <any> 'fluorescent',
+    FlutterDash = <any> 'flutter_dash',
+    FmdBad = <any> 'fmd_bad',
+    FmdGood = <any> 'fmd_good',
+    FolderCopy = <any> 'folder_copy',
+    FolderDelete = <any> 'folder_delete',
+    FolderOff = <any> 'folder_off',
+    FolderZip = <any> 'folder_zip',
+    FollowTheSigns = <any> 'follow_the_signs',
+    FontDownloadOff = <any> 'font_download_off',
+    FoodBank = <any> 'food_bank',
+    Forest = <any> 'forest',
+    ForkLeft = <any> 'fork_left',
+    ForkRight = <any> 'fork_right',
+    FormatListNumberedRtl = <any> 'format_list_numbered_rtl',
+    FormatOverline = <any> 'format_overline',
+    FormatUnderline = <any> 'format_underline',
+    Fort = <any> 'fort',
+    ForwardToInbox = <any> 'forward_to_inbox',
+    Foundation = <any> 'foundation',
+    FreeCancellation = <any> 'free_cancellation',
+    FrontHand = <any> 'front_hand',
+    GMobiledata = <any> 'g_mobiledata',
+    Garage = <any> 'garage',
+    GasMeter = <any> 'gas_meter',
+    GeneratingTokens = <any> 'generating_tokens',
+    GifBox = <any> 'gif_box',
+    Girl = <any> 'girl',
+    Gite = <any> 'gite',
+    GppBad = <any> 'gpp_bad',
+    GppGood = <any> 'gpp_good',
+    GppMaybe = <any> 'gpp_maybe',
+    Grading = <any> 'grading',
+    Grass = <any> 'grass',
+    Grid3x3 = <any> 'grid_3x3',
+    Grid4x4 = <any> 'grid_4x4',
+    GridGoldenratio = <any> 'grid_goldenratio',
+    GridView = <any> 'grid_view',
+    GroupOff = <any> 'group_off',
+    GroupRemove = <any> 'group_remove',
+    Groups = <any> 'groups',
+    Groups2 = <any> 'groups_2',
+    Groups3 = <any> 'groups_3',
+    HMobiledata = <any> 'h_mobiledata',
+    HPlusMobiledata = <any> 'h_plus_mobiledata',
+    Hail = <any> 'hail',
+    Handshake = <any> 'handshake',
+    Handyman = <any> 'handyman',
+    Hardware = <any> 'hardware',
+    HdrAuto = <any> 'hdr_auto',
+    HdrAutoSelect = <any> 'hdr_auto_select',
+    HdrEnhancedSelect = <any> 'hdr_enhanced_select',
+    HdrOffSelect = <any> 'hdr_off_select',
+    HdrOnSelect = <any> 'hdr_on_select',
+    HdrPlus = <any> 'hdr_plus',
+    Headphones = <any> 'headphones',
+    HeadphonesBattery = <any> 'headphones_battery',
+    HeadsetOff = <any> 'headset_off',
+    HealthAndSafety = <any> 'health_and_safety',
+    HearingDisabled = <any> 'hearing_disabled',
+    HeartBroken = <any> 'heart_broken',
+    HeatPump = <any> 'heat_pump',
+    Height = <any> 'height',
+    HelpCenter = <any> 'help_center',
+    Hevc = <any> 'hevc',
+    Hexagon = <any> 'hexagon',
+    HideImage = <any> 'hide_image',
+    HideSource = <any> 'hide_source',
+    HighlightAlt = <any> 'highlight_alt',
+    HighlightRemove = <any> 'highlight_remove',
+    Hiking = <any> 'hiking',
+    HistoryEdu = <any> 'history_edu',
+    Hive = <any> 'hive',
+    Hls = <any> 'hls',
+    HlsOff = <any> 'hls_off',
+    HolidayVillage = <any> 'holiday_village',
+    HomeMax = <any> 'home_max',
+    HomeMini = <any> 'home_mini',
+    HomeRepairService = <any> 'home_repair_service',
+    HomeWork = <any> 'home_work',
+    HorizontalDistribute = <any> 'horizontal_distribute',
+    HorizontalRule = <any> 'horizontal_rule',
+    HorizontalSplit = <any> 'horizontal_split',
+    HotelClass = <any> 'hotel_class',
+    HourglassBottom = <any> 'hourglass_bottom',
+    HourglassDisabled = <any> 'hourglass_disabled',
+    HourglassTop = <any> 'hourglass_top',
+    House = <any> 'house',
+    HouseSiding = <any> 'house_siding',
+    Houseboat = <any> 'houseboat',
+    HowToReg = <any> 'how_to_reg',
+    HowToVote = <any> 'how_to_vote',
+    Html = <any> 'html',
+    Hub = <any> 'hub',
+    Hvac = <any> 'hvac',
+    IceSkating = <any> 'ice_skating',
+    Icecream = <any> 'icecream',
+    ImageNotSupported = <any> 'image_not_supported',
+    ImageSearch = <any> 'image_search',
+    ImagesearchRoller = <any> 'imagesearch_roller',
+    IncompleteCircle = <any> 'incomplete_circle',
+    InsertChartOutlined = <any> 'insert_chart_outlined',
+    InsertPageBreak = <any> 'insert_page_break',
+    Insights = <any> 'insights',
+    InstallDesktop = <any> 'install_desktop',
+    InstallMobile = <any> 'install_mobile',
+    IntegrationInstructions = <any> 'integration_instructions',
+    Interests = <any> 'interests',
+    InterpreterMode = <any> 'interpreter_mode',
+    Inventory = <any> 'inventory',
+    Inventory2 = <any> 'inventory_2',
+    InvertColorsOn = <any> 'invert_colors_on',
+    IosShare = <any> 'ios_share',
+    Iron = <any> 'iron',
+    Javascript = <any> 'javascript',
+    JoinFull = <any> 'join_full',
+    JoinInner = <any> 'join_inner',
+    JoinLeft = <any> 'join_left',
+    JoinRight = <any> 'join_right',
+    Kayaking = <any> 'kayaking',
+    KebabDining = <any> 'kebab_dining',
+    Key = <any> 'key',
+    KeyOff = <any> 'key_off',
+    KeyboardAlt = <any> 'keyboard_alt',
+    KeyboardCommandKey = <any> 'keyboard_command_key',
+    KeyboardControl = <any> 'keyboard_control',
+    KeyboardControlKey = <any> 'keyboard_control_key',
+    KeyboardDoubleArrowDown = <any> 'keyboard_double_arrow_down',
+    KeyboardDoubleArrowLeft = <any> 'keyboard_double_arrow_left',
+    KeyboardDoubleArrowRight = <any> 'keyboard_double_arrow_right',
+    KeyboardDoubleArrowUp = <any> 'keyboard_double_arrow_up',
+    KeyboardOptionKey = <any> 'keyboard_option_key',
+    KingBed = <any> 'king_bed',
+    Kitesurfing = <any> 'kitesurfing',
+    LabelImportant = <any> 'label_important',
+    LabelImportantOutline = <any> 'label_important_outline',
+    LabelOff = <any> 'label_off',
+    Lan = <any> 'lan',
+    Landslide = <any> 'landslide',
+    Leaderboard = <any> 'leaderboard',
+    LeaveBagsAtHome = <any> 'leave_bags_at_home',
+    LegendToggle = <any> 'legend_toggle',
+    LensBlur = <any> 'lens_blur',
+    LibraryAddCheck = <any> 'library_add_check',
+    Light = <any> 'light',
+    LightMode = <any> 'light_mode',
+    Lightbulb = <any> 'lightbulb',
+    LightbulbCircle = <any> 'lightbulb_circle',
+    LineAxis = <any> 'line_axis',
+    LinkOff = <any> 'link_off',
+    Liquor = <any> 'liquor',
+    Living = <any> 'living',
+    LocalAttraction = <any> 'local_attraction',
+    LocalFireDepartment = <any> 'local_fire_department',
+    LocalPolice = <any> 'local_police',
+    LocalPrintShop = <any> 'local_print_shop',
+    LocalRestaurant = <any> 'local_restaurant',
+    LocationHistory = <any> 'location_history',
+    LockClock = <any> 'lock_clock',
+    LockPerson = <any> 'lock_person',
+    LockReset = <any> 'lock_reset',
+    LogoDev = <any> 'logo_dev',
+    Logout = <any> 'logout',
+    LteMobiledata = <any> 'lte_mobiledata',
+    LtePlusMobiledata = <any> 'lte_plus_mobiledata',
+    Luggage = <any> 'luggage',
+    LunchDining = <any> 'lunch_dining',
+    Lyrics = <any> 'lyrics',
+    MacroOff = <any> 'macro_off',
+    MailLock = <any> 'mail_lock',
+    Male = <any> 'male',
+    Man = <any> 'man',
+    Man2 = <any> 'man_2',
+    Man3 = <any> 'man_3',
+    Man4 = <any> 'man_4',
+    ManageAccounts = <any> 'manage_accounts',
+    ManageHistory = <any> 'manage_history',
+    ManageSearch = <any> 'manage_search',
+    MapsHomeWork = <any> 'maps_home_work',
+    MapsUgc = <any> 'maps_ugc',
+    Margin = <any> 'margin',
+    MarkAsUnread = <any> 'mark_as_unread',
+    MarkChatRead = <any> 'mark_chat_read',
+    MarkChatUnread = <any> 'mark_chat_unread',
+    MarkEmailRead = <any> 'mark_email_read',
+    MarkEmailUnread = <any> 'mark_email_unread',
+    MarkUnreadChatAlt = <any> 'mark_unread_chat_alt',
+    Masks = <any> 'masks',
+    Maximize = <any> 'maximize',
+    MediaBluetoothOff = <any> 'media_bluetooth_off',
+    MediaBluetoothOn = <any> 'media_bluetooth_on',
+    Mediation = <any> 'mediation',
+    MedicalInformation = <any> 'medical_information',
+    MedicalServices = <any> 'medical_services',
+    Medication = <any> 'medication',
+    MedicationLiquid = <any> 'medication_liquid',
+    MeetingRoom = <any> 'meeting_room',
+    MenuBook = <any> 'menu_book',
+    MenuOpen = <any> 'menu_open',
+    Merge = <any> 'merge',
+    Messenger = <any> 'messenger',
+    MessengerOutline = <any> 'messenger_outline',
+    MicExternalOff = <any> 'mic_external_off',
+    MicExternalOn = <any> 'mic_external_on',
+    Microwave = <any> 'microwave',
+    MilitaryTech = <any> 'military_tech',
+    Minimize = <any> 'minimize',
+    MinorCrash = <any> 'minor_crash',
+    MiscellaneousServices = <any> 'miscellaneous_services',
+    MissedVideoCall = <any> 'missed_video_call',
+    MobileFriendly = <any> 'mobile_friendly',
+    MobileOff = <any> 'mobile_off',
+    MobileScreenShare = <any> 'mobile_screen_share',
+    MobiledataOff = <any> 'mobiledata_off',
+    Mode = <any> 'mode',
+    ModeEditOutline = <any> 'mode_edit_outline',
+    ModeFanOff = <any> 'mode_fan_off',
+    ModeNight = <any> 'mode_night',
+    ModeOfTravel = <any> 'mode_of_travel',
+    ModeStandby = <any> 'mode_standby',
+    ModelTraining = <any> 'model_training',
+    Money = <any> 'money',
+    MoneyOffCsred = <any> 'money_off_csred',
+    Monitor = <any> 'monitor',
+    MonitorHeart = <any> 'monitor_heart',
+    MonitorWeight = <any> 'monitor_weight',
+    Moped = <any> 'moped',
+    MoreTime = <any> 'more_time',
+    Mosque = <any> 'mosque',
+    MotionPhotosAuto = <any> 'motion_photos_auto',
+    MotionPhotosOff = <any> 'motion_photos_off',
+    MotionPhotosOn = <any> 'motion_photos_on',
+    MotionPhotosPause = <any> 'motion_photos_pause',
+    MotionPhotosPaused = <any> 'motion_photos_paused',
+    MoveDown = <any> 'move_down',
+    MoveUp = <any> 'move_up',
+    Moving = <any> 'moving',
+    Mp = <any> 'mp',
+    MultipleStop = <any> 'multiple_stop',
+    MultitrackAudio = <any> 'multitrack_audio',
+    Museum = <any> 'museum',
+    MusicOff = <any> 'music_off',
+    MyLibraryAdd = <any> 'my_library_add',
+    MyLibraryBooks = <any> 'my_library_books',
+    MyLibraryMusic = <any> 'my_library_music',
+    Nat = <any> 'nat',
+    NearMeDisabled = <any> 'near_me_disabled',
+    NearbyError = <any> 'nearby_error',
+    NearbyOff = <any> 'nearby_off',
+    NestCamWiredStand = <any> 'nest_cam_wired_stand',
+    NetworkPing = <any> 'network_ping',
+    NetworkWifi1Bar = <any> 'network_wifi_1_bar',
+    NetworkWifi2Bar = <any> 'network_wifi_2_bar',
+    NetworkWifi3Bar = <any> 'network_wifi_3_bar',
+    NewLabel = <any> 'new_label',
+    Newspaper = <any> 'newspaper',
+    NextPlan = <any> 'next_plan',
+    NightShelter = <any> 'night_shelter',
+    Nightlife = <any> 'nightlife',
+    Nightlight = <any> 'nightlight',
+    NightlightRound = <any> 'nightlight_round',
+    NightsStay = <any> 'nights_stay',
+    NoAccounts = <any> 'no_accounts',
+    NoAdultContent = <any> 'no_adult_content',
+    NoBackpack = <any> 'no_backpack',
+    NoCell = <any> 'no_cell',
+    NoCrash = <any> 'no_crash',
+    NoDrinks = <any> 'no_drinks',
+    NoEncryptionGmailerrorred = <any> 'no_encryption_gmailerrorred',
+    NoFlash = <any> 'no_flash',
+    NoFood = <any> 'no_food',
+    NoLuggage = <any> 'no_luggage',
+    NoMeals = <any> 'no_meals',
+    NoMeetingRoom = <any> 'no_meeting_room',
+    NoPhotography = <any> 'no_photography',
+    NoStroller = <any> 'no_stroller',
+    NoTransfer = <any> 'no_transfer',
+    NoiseAware = <any> 'noise_aware',
+    NoiseControlOff = <any> 'noise_control_off',
+    NordicWalking = <any> 'nordic_walking',
+    North = <any> 'north',
+    NorthEast = <any> 'north_east',
+    NorthWest = <any> 'north_west',
+    NotAccessible = <any> 'not_accessible',
+    NotListedLocation = <any> 'not_listed_location',
+    NotStarted = <any> 'not_started',
+    NoteAlt = <any> 'note_alt',
+    Notes = <any> 'notes',
+    NotificationAdd = <any> 'notification_add',
+    NotificationImportant = <any> 'notification_important',
+    NotificationsOn = <any> 'notifications_on',
+    NowWallpaper = <any> 'now_wallpaper',
+    NowWidgets = <any> 'now_widgets',
+    Numbers = <any> 'numbers',
+    OfflineBolt = <any> 'offline_bolt',
+    OfflineShare = <any> 'offline_share',
+    OilBarrel = <any> 'oil_barrel',
+    OnDeviceTraining = <any> 'on_device_training',
+    OnlinePrediction = <any> 'online_prediction',
+    OpenInFull = <any> 'open_in_full',
+    OpenInNewOff = <any> 'open_in_new_off',
+    OtherHouses = <any> 'other_houses',
+    Outbond = <any> 'outbond',
+    Outbound = <any> 'outbound',
+    Outbox = <any> 'outbox',
+    OutdoorGrill = <any> 'outdoor_grill',
+    Outlet = <any> 'outlet',
+    OutlinedFlag = <any> 'outlined_flag',
+    Output = <any> 'output',
+    Padding = <any> 'padding',
+    Paid = <any> 'paid',
+    PanToolAlt = <any> 'pan_tool_alt',
+    PanoramaFisheye = <any> 'panorama_fisheye',
+    PanoramaHorizontalSelect = <any> 'panorama_horizontal_select',
+    PanoramaPhotosphere = <any> 'panorama_photosphere',
+    PanoramaPhotosphereSelect = <any> 'panorama_photosphere_select',
+    PanoramaVerticalSelect = <any> 'panorama_vertical_select',
+    PanoramaWideAngleSelect = <any> 'panorama_wide_angle_select',
+    Paragliding = <any> 'paragliding',
+    Park = <any> 'park',
+    Password = <any> 'password',
+    Paste = <any> 'paste',
+    Pattern = <any> 'pattern',
+    PauseCircle = <any> 'pause_circle',
+    PausePresentation = <any> 'pause_presentation',
+    Payments = <any> 'payments',
+    Paypal = <any> 'paypal',
+    PedalBike = <any> 'pedal_bike',
+    Pending = <any> 'pending',
+    PendingActions = <any> 'pending_actions',
+    Pentagon = <any> 'pentagon',
+    PeopleAlt = <any> 'people_alt',
+    Percent = <any> 'percent',
+    PermContactCal = <any> 'perm_contact_cal',
+    PermDeviceInfo = <any> 'perm_device_info',
+    Person2 = <any> 'person_2',
+    Person3 = <any> 'person_3',
+    Person4 = <any> 'person_4',
+    PersonAddAlt = <any> 'person_add_alt',
+    PersonAddAlt1 = <any> 'person_add_alt_1',
+    PersonAddDisabled = <any> 'person_add_disabled',
+    PersonOff = <any> 'person_off',
+    PersonRemove = <any> 'person_remove',
+    PersonRemoveAlt1 = <any> 'person_remove_alt_1',
+    PersonSearch = <any> 'person_search',
+    PersonalInjury = <any> 'personal_injury',
+    PestControl = <any> 'pest_control',
+    PestControlRodent = <any> 'pest_control_rodent',
+    Phishing = <any> 'phishing',
+    PhoneCallback = <any> 'phone_callback',
+    PhoneDisabled = <any> 'phone_disabled',
+    PhoneEnabled = <any> 'phone_enabled',
+    PhotoCameraBack = <any> 'photo_camera_back',
+    PhotoCameraFront = <any> 'photo_camera_front',
+    Php = <any> 'php',
+    Piano = <any> 'piano',
+    PianoOff = <any> 'piano_off',
+    PieChartOutline = <any> 'pie_chart_outline',
+    Pin = <any> 'pin',
+    PinEnd = <any> 'pin_end',
+    PinInvoke = <any> 'pin_invoke',
+    Pinch = <any> 'pinch',
+    PivotTableChart = <any> 'pivot_table_chart',
+    Pix = <any> 'pix',
+    Plagiarism = <any> 'plagiarism',
+    PlayCircle = <any> 'play_circle',
+    PlayCircleFill = <any> 'play_circle_fill',
+    PlayDisabled = <any> 'play_disabled',
+    PlayLesson = <any> 'play_lesson',
+    PlaylistAddCheckCircle = <any> 'playlist_add_check_circle',
+    PlaylistAddCircle = <any> 'playlist_add_circle',
+    PlaylistRemove = <any> 'playlist_remove',
+    Plumbing = <any> 'plumbing',
+    Podcasts = <any> 'podcasts',
+    PointOfSale = <any> 'point_of_sale',
+    Policy = <any> 'policy',
+    Polyline = <any> 'polyline',
+    PostAdd = <any> 'post_add',
+    PowerOff = <any> 'power_off',
+    PrecisionManufacturing = <any> 'precision_manufacturing',
+    Preview = <any> 'preview',
+    PriceChange = <any> 'price_change',
+    PriceCheck = <any> 'price_check',
+    PrintDisabled = <any> 'print_disabled',
+    PrivacyTip = <any> 'privacy_tip',
+    PrivateConnectivity = <any> 'private_connectivity',
+    ProductionQuantityLimits = <any> 'production_quantity_limits',
+    Propane = <any> 'propane',
+    PropaneTank = <any> 'propane_tank',
+    Psychology = <any> 'psychology',
+    PsychologyAlt = <any> 'psychology_alt',
+    PublicOff = <any> 'public_off',
+    PublishedWithChanges = <any> 'published_with_changes',
+    PunchClock = <any> 'punch_clock',
+    PushPin = <any> 'push_pin',
+    QrCode = <any> 'qr_code',
+    QrCode2 = <any> 'qr_code_2',
+    QrCodeScanner = <any> 'qr_code_scanner',
+    QueryStats = <any> 'query_stats',
+    QuestionMark = <any> 'question_mark',
+    QuickContactsDialer = <any> 'quick_contacts_dialer',
+    QuickContactsMail = <any> 'quick_contacts_mail',
+    Quickreply = <any> 'quickreply',
+    Quiz = <any> 'quiz',
+    Quora = <any> 'quora',
+    RMobiledata = <any> 'r_mobiledata',
+    Radar = <any> 'radar',
+    RadioButtonOff = <any> 'radio_button_off',
+    RadioButtonOn = <any> 'radio_button_on',
+    RailwayAlert = <any> 'railway_alert',
+    RamenDining = <any> 'ramen_dining',
+    RampLeft = <any> 'ramp_left',
+    RampRight = <any> 'ramp_right',
+    RawOff = <any> 'raw_off',
+    RawOn = <any> 'raw_on',
+    ReadMore = <any> 'read_more',
+    RealEstateAgent = <any> 'real_estate_agent',
+    ReceiptLong = <any> 'receipt_long',
+    Recommend = <any> 'recommend',
+    Rectangle = <any> 'rectangle',
+    Recycling = <any> 'recycling',
+    Reddit = <any> 'reddit',
+    ReduceCapacity = <any> 'reduce_capacity',
+    RememberMe = <any> 'remember_me',
+    RemoveDone = <any> 'remove_done',
+    RemoveModerator = <any> 'remove_moderator',
+    RemoveRoad = <any> 'remove_road',
+    Repartition = <any> 'repartition',
+    RepeatOn = <any> 'repeat_on',
+    RepeatOneOn = <any> 'repeat_one_on',
+    ReplayCircleFilled = <any> 'replay_circle_filled',
+    ReportGmailerrorred = <any> 'report_gmailerrorred',
+    ReportOff = <any> 'report_off',
+    RequestPage = <any> 'request_page',
+    RequestQuote = <any> 'request_quote',
+    ResetTv = <any> 'reset_tv',
+    RestartAlt = <any> 'restart_alt',
+    RestoreFromTrash = <any> 'restore_from_trash',
+    Reviews = <any> 'reviews',
+    RiceBowl = <any> 'rice_bowl',
+    Rocket = <any> 'rocket',
+    RocketLaunch = <any> 'rocket_launch',
+    RollerShades = <any> 'roller_shades',
+    RollerShadesClosed = <any> 'roller_shades_closed',
+    RollerSkating = <any> 'roller_skating',
+    Roofing = <any> 'roofing',
+    RoomPreferences = <any> 'room_preferences',
+    Rotate90DegreesCw = <any> 'rotate_90_degrees_cw',
+    RoundaboutLeft = <any> 'roundabout_left',
+    RoundaboutRight = <any> 'roundabout_right',
+    Route = <any> 'route',
+    Rsvp = <any> 'rsvp',
+    Rtt = <any> 'rtt',
+    Rule = <any> 'rule',
+    RuleFolder = <any> 'rule_folder',
+    RunCircle = <any> 'run_circle',
+    RunningWithErrors = <any> 'running_with_errors',
+    SafetyCheck = <any> 'safety_check',
+    SafetyDivider = <any> 'safety_divider',
+    Sailing = <any> 'sailing',
+    Sanitizer = <any> 'sanitizer',
+    SatelliteAlt = <any> 'satellite_alt',
+    SaveAlt = <any> 'save_alt',
+    SaveAs = <any> 'save_as',
+    SavedSearch = <any> 'saved_search',
+    Savings = <any> 'savings',
+    Scale = <any> 'scale',
+    ScatterPlot = <any> 'scatter_plot',
+    ScheduleSend = <any> 'schedule_send',
+    Schema = <any> 'schema',
+    Science = <any> 'science',
+    Score = <any> 'score',
+    Scoreboard = <any> 'scoreboard',
+    ScreenRotationAlt = <any> 'screen_rotation_alt',
+    ScreenSearchDesktop = <any> 'screen_search_desktop',
+    Screenshot = <any> 'screenshot',
+    ScreenshotMonitor = <any> 'screenshot_monitor',
+    ScubaDiving = <any> 'scuba_diving',
+    Sd = <any> 'sd',
+    SdCardAlert = <any> 'sd_card_alert',
+    SearchOff = <any> 'search_off',
+    SecurityUpdate = <any> 'security_update',
+    SecurityUpdateGood = <any> 'security_update_good',
+    SecurityUpdateWarning = <any> 'security_update_warning',
+    Segment = <any> 'segment',
+    SelfImprovement = <any> 'self_improvement',
+    Sell = <any> 'sell',
+    SendAndArchive = <any> 'send_and_archive',
+    SendTimeExtension = <any> 'send_time_extension',
+    SendToMobile = <any> 'send_to_mobile',
+    SensorDoor = <any> 'sensor_door',
+    SensorOccupied = <any> 'sensor_occupied',
+    SensorWindow = <any> 'sensor_window',
+    Sensors = <any> 'sensors',
+    SensorsOff = <any> 'sensors_off',
+    SentimentSatisfiedAlt = <any> 'sentiment_satisfied_alt',
+    SetMeal = <any> 'set_meal',
+    SettingsAccessibility = <any> 'settings_accessibility',
+    SettingsDisplay = <any> 'settings_display',
+    SettingsSuggest = <any> 'settings_suggest',
+    SevereCold = <any> 'severe_cold',
+    ShapeLine = <any> 'shape_line',
+    ShareArrivalTime = <any> 'share_arrival_time',
+    ShareLocation = <any> 'share_location',
+    Shield = <any> 'shield',
+    ShieldMoon = <any> 'shield_moon',
+    Shop2 = <any> 'shop_2',
+    Shopify = <any> 'shopify',
+    ShoppingBag = <any> 'shopping_bag',
+    ShoppingCartCheckout = <any> 'shopping_cart_checkout',
+    Shortcut = <any> 'shortcut',
+    Shower = <any> 'shower',
+    ShuffleOn = <any> 'shuffle_on',
+    ShutterSpeed = <any> 'shutter_speed',
+    Sick = <any> 'sick',
+    SignLanguage = <any> 'sign_language',
+    SignalCellular0Bar = <any> 'signal_cellular_0_bar',
+    SignalCellularAlt = <any> 'signal_cellular_alt',
+    SignalCellularAlt1Bar = <any> 'signal_cellular_alt_1_bar',
+    SignalCellularAlt2Bar = <any> 'signal_cellular_alt_2_bar',
+    SignalCellularConnectedNoInternet0Bar = <any> 'signal_cellular_connected_no_internet_0_bar',
+    SignalCellularNodata = <any> 'signal_cellular_nodata',
+    SignalWifi0Bar = <any> 'signal_wifi_0_bar',
+    SignalWifiBad = <any> 'signal_wifi_bad',
+    SignalWifiConnectedNoInternet4 = <any> 'signal_wifi_connected_no_internet_4',
+    SignalWifiStatusbar4Bar = <any> 'signal_wifi_statusbar_4_bar',
+    SignalWifiStatusbarNull = <any> 'signal_wifi_statusbar_null',
+    Signpost = <any> 'signpost',
+    SimCardDownload = <any> 'sim_card_download',
+    SingleBed = <any> 'single_bed',
+    Sip = <any> 'sip',
+    Skateboarding = <any> 'skateboarding',
+    Sledding = <any> 'sledding',
+    SmartButton = <any> 'smart_button',
+    SmartDisplay = <any> 'smart_display',
+    SmartScreen = <any> 'smart_screen',
+    SmartToy = <any> 'smart_toy',
+    Snapchat = <any> 'snapchat',
+    SnippetFolder = <any> 'snippet_folder',
+    Snowboarding = <any> 'snowboarding',
+    Snowmobile = <any> 'snowmobile',
+    Snowshoeing = <any> 'snowshoeing',
+    Soap = <any> 'soap',
+    SocialDistance = <any> 'social_distance',
+    SolarPower = <any> 'solar_power',
+    Sos = <any> 'sos',
+    SoupKitchen = <any> 'soup_kitchen',
+    Source = <any> 'source',
+    South = <any> 'south',
+    SouthAmerica = <any> 'south_america',
+    SouthEast = <any> 'south_east',
+    SouthWest = <any> 'south_west',
+    SpaceDashboard = <any> 'space_dashboard',
+    SpatialAudio = <any> 'spatial_audio',
+    SpatialAudioOff = <any> 'spatial_audio_off',
+    SpatialTracking = <any> 'spatial_tracking',
+    Speed = <any> 'speed',
+    Splitscreen = <any> 'splitscreen',
+    Spoke = <any> 'spoke',
+    Sports = <any> 'sports',
+    SportsBar = <any> 'sports_bar',
+    SportsBaseball = <any> 'sports_baseball',
+    SportsBasketball = <any> 'sports_basketball',
+    SportsCricket = <any> 'sports_cricket',
+    SportsEsports = <any> 'sports_esports',
+    SportsFootball = <any> 'sports_football',
+    SportsGolf = <any> 'sports_golf',
+    SportsGymnastics = <any> 'sports_gymnastics',
+    SportsHandball = <any> 'sports_handball',
+    SportsHockey = <any> 'sports_hockey',
+    SportsKabaddi = <any> 'sports_kabaddi',
+    SportsMartialArts = <any> 'sports_martial_arts',
+    SportsMma = <any> 'sports_mma',
+    SportsMotorsports = <any> 'sports_motorsports',
+    SportsRugby = <any> 'sports_rugby',
+    SportsScore = <any> 'sports_score',
+    SportsSoccer = <any> 'sports_soccer',
+    SportsTennis = <any> 'sports_tennis',
+    SportsVolleyball = <any> 'sports_volleyball',
+    Square = <any> 'square',
+    SquareFoot = <any> 'square_foot',
+    SsidChart = <any> 'ssid_chart',
+    StackedBarChart = <any> 'stacked_bar_chart',
+    StackedLineChart = <any> 'stacked_line_chart',
+    Stadium = <any> 'stadium',
+    Stairs = <any> 'stairs',
+    StarBorderPurple500 = <any> 'star_border_purple500',
+    StarOutline = <any> 'star_outline',
+    StarPurple500 = <any> 'star_purple500',
+    StarRate = <any> 'star_rate',
+    Start = <any> 'start',
+    StickyNote2 = <any> 'sticky_note_2',
+    StopCircle = <any> 'stop_circle',
+    Storefront = <any> 'storefront',
+    Storm = <any> 'storm',
+    Straight = <any> 'straight',
+    Stream = <any> 'stream',
+    Stroller = <any> 'stroller',
+    Subscript = <any> 'subscript',
+    SubtitlesOff = <any> 'subtitles_off',
+    Summarize = <any> 'summarize',
+    Superscript = <any> 'superscript',
+    SupervisedUserCircle = <any> 'supervised_user_circle',
+    Support = <any> 'support',
+    SupportAgent = <any> 'support_agent',
+    Surfing = <any> 'surfing',
+    SwapHorizontalCircle = <any> 'swap_horizontal_circle',
+    SwapVertCircle = <any> 'swap_vert_circle',
+    Swipe = <any> 'swipe',
+    SwipeDown = <any> 'swipe_down',
+    SwipeDownAlt = <any> 'swipe_down_alt',
+    SwipeLeft = <any> 'swipe_left',
+    SwipeLeftAlt = <any> 'swipe_left_alt',
+    SwipeRight = <any> 'swipe_right',
+    SwipeRightAlt = <any> 'swipe_right_alt',
+    SwipeUp = <any> 'swipe_up',
+    SwipeUpAlt = <any> 'swipe_up_alt',
+    SwipeVertical = <any> 'swipe_vertical',
+    SwitchAccessShortcut = <any> 'switch_access_shortcut',
+    SwitchAccessShortcutAdd = <any> 'switch_access_shortcut_add',
+    SwitchAccount = <any> 'switch_account',
+    SwitchLeft = <any> 'switch_left',
+    SwitchRight = <any> 'switch_right',
+    Synagogue = <any> 'synagogue',
+    SyncLock = <any> 'sync_lock',
+    SystemSecurityUpdate = <any> 'system_security_update',
+    SystemSecurityUpdateGood = <any> 'system_security_update_good',
+    SystemSecurityUpdateWarning = <any> 'system_security_update_warning',
+    SystemUpdateTv = <any> 'system_update_tv',
+    TableBar = <any> 'table_bar',
+    TableChart = <any> 'table_chart',
+    TableRestaurant = <any> 'table_restaurant',
+    TableRows = <any> 'table_rows',
+    TableView = <any> 'table_view',
+    Tag = <any> 'tag',
+    TakeoutDining = <any> 'takeout_dining',
+    Tapas = <any> 'tapas',
+    Task = <any> 'task',
+    TaskAlt = <any> 'task_alt',
+    TaxiAlert = <any> 'taxi_alert',
+    Telegram = <any> 'telegram',
+    TempleBuddhist = <any> 'temple_buddhist',
+    TempleHindu = <any> 'temple_hindu',
+    Terminal = <any> 'terminal',
+    TextDecrease = <any> 'text_decrease',
+    TextIncrease = <any> 'text_increase',
+    TextRotateUp = <any> 'text_rotate_up',
+    TextRotateVertical = <any> 'text_rotate_vertical',
+    TextRotationAngledown = <any> 'text_rotation_angledown',
+    TextRotationAngleup = <any> 'text_rotation_angleup',
+    TextRotationDown = <any> 'text_rotation_down',
+    TextRotationNone = <any> 'text_rotation_none',
+    TextSnippet = <any> 'text_snippet',
+    TheaterComedy = <any> 'theater_comedy',
+    Thermostat = <any> 'thermostat',
+    ThermostatAuto = <any> 'thermostat_auto',
+    ThumbDownAlt = <any> 'thumb_down_alt',
+    ThumbDownOffAlt = <any> 'thumb_down_off_alt',
+    ThumbUpAlt = <any> 'thumb_up_alt',
+    ThumbUpOffAlt = <any> 'thumb_up_off_alt',
+    Thunderstorm = <any> 'thunderstorm',
+    Tiktok = <any> 'tiktok',
+    Timer10Select = <any> 'timer_10_select',
+    Timer3Select = <any> 'timer_3_select',
+    TipsAndUpdates = <any> 'tips_and_updates',
+    TireRepair = <any> 'tire_repair',
+    ToggleOff = <any> 'toggle_off',
+    ToggleOn = <any> 'toggle_on',
+    Token = <any> 'token',
+    Topic = <any> 'topic',
+    Tornado = <any> 'tornado',
+    Tour = <any> 'tour',
+    Transcribe = <any> 'transcribe',
+    Transgender = <any> 'transgender',
+    TransitEnterexit = <any> 'transit_enterexit',
+    TravelExplore = <any> 'travel_explore',
+    TrendingNeutral = <any> 'trending_neutral',
+    Troubleshoot = <any> 'troubleshoot',
+    Try = <any> 'try',
+    Tsunami = <any> 'tsunami',
+    Tty = <any> 'tty',
+    Tungsten = <any> 'tungsten',
+    TurnLeft = <any> 'turn_left',
+    TurnRight = <any> 'turn_right',
+    TurnSharpLeft = <any> 'turn_sharp_left',
+    TurnSharpRight = <any> 'turn_sharp_right',
+    TurnSlightLeft = <any> 'turn_slight_left',
+    TurnSlightRight = <any> 'turn_slight_right',
+    TvOff = <any> 'tv_off',
+    TwoWheeler = <any> 'two_wheeler',
+    TypeSpecimen = <any> 'type_specimen',
+    UTurnLeft = <any> 'u_turn_left',
+    UTurnRight = <any> 'u_turn_right',
+    Umbrella = <any> 'umbrella',
+    UnfoldLessDouble = <any> 'unfold_less_double',
+    UnfoldMoreDouble = <any> 'unfold_more_double',
+    Unpublished = <any> 'unpublished',
+    Unsubscribe = <any> 'unsubscribe',
+    Upcoming = <any> 'upcoming',
+    UpdateDisabled = <any> 'update_disabled',
+    Upgrade = <any> 'upgrade',
+    Upload = <any> 'upload',
+    UploadFile = <any> 'upload_file',
+    UsbOff = <any> 'usb_off',
+    Vaccines = <any> 'vaccines',
+    VapeFree = <any> 'vape_free',
+    VapingRooms = <any> 'vaping_rooms',
+    Verified = <any> 'verified',
+    VerticalDistribute = <any> 'vertical_distribute',
+    VerticalShades = <any> 'vertical_shades',
+    VerticalShadesClosed = <any> 'vertical_shades_closed',
+    VerticalSplit = <any> 'vertical_split',
+    VideoCameraBack = <any> 'video_camera_back',
+    VideoCameraFront = <any> 'video_camera_front',
+    VideoChat = <any> 'video_chat',
+    VideoCollection = <any> 'video_collection',
+    VideoFile = <any> 'video_file',
+    VideoSettings = <any> 'video_settings',
+    VideoStable = <any> 'video_stable',
+    VideogameAssetOff = <any> 'videogame_asset_off',
+    ViewComfortable = <any> 'view_comfortable',
+    ViewComfyAlt = <any> 'view_comfy_alt',
+    ViewCompactAlt = <any> 'view_compact_alt',
+    ViewCozy = <any> 'view_cozy',
+    ViewInAr = <any> 'view_in_ar',
+    ViewKanban = <any> 'view_kanban',
+    ViewSidebar = <any> 'view_sidebar',
+    ViewTimeline = <any> 'view_timeline',
+    Villa = <any> 'villa',
+    VoiceOverOff = <any> 'voice_over_off',
+    Volcano = <any> 'volcano',
+    VolunteerActivism = <any> 'volunteer_activism',
+    VpnKeyOff = <any> 'vpn_key_off',
+    Vrpano = <any> 'vrpano',
+    Wallet = <any> 'wallet',
+    WalletGiftcard = <any> 'wallet_giftcard',
+    WalletMembership = <any> 'wallet_membership',
+    WalletTravel = <any> 'wallet_travel',
+    Warehouse = <any> 'warehouse',
+    WarningAmber = <any> 'warning_amber',
+    Wash = <any> 'wash',
+    WatchOff = <any> 'watch_off',
+    Water = <any> 'water',
+    WaterDamage = <any> 'water_damage',
+    WaterDrop = <any> 'water_drop',
+    WaterfallChart = <any> 'waterfall_chart',
+    Waves = <any> 'waves',
+    WavingHand = <any> 'waving_hand',
+    WbShade = <any> 'wb_shade',
+    WbTwilight = <any> 'wb_twilight',
+    WebAssetOff = <any> 'web_asset_off',
+    WebStories = <any> 'web_stories',
+    Webhook = <any> 'webhook',
+    Wechat = <any> 'wechat',
+    West = <any> 'west',
+    WheelchairPickup = <any> 'wheelchair_pickup',
+    WhereToVote = <any> 'where_to_vote',
+    WidthFull = <any> 'width_full',
+    WidthNormal = <any> 'width_normal',
+    WidthWide = <any> 'width_wide',
+    Wifi1Bar = <any> 'wifi_1_bar',
+    Wifi2Bar = <any> 'wifi_2_bar',
+    WifiCalling = <any> 'wifi_calling',
+    WifiCalling3 = <any> 'wifi_calling_3',
+    WifiChannel = <any> 'wifi_channel',
+    WifiFind = <any> 'wifi_find',
+    WifiOff = <any> 'wifi_off',
+    WifiPassword = <any> 'wifi_password',
+    WifiProtectedSetup = <any> 'wifi_protected_setup',
+    WifiTetheringError = <any> 'wifi_tethering_error',
+    WifiTetheringErrorRounded = <any> 'wifi_tethering_error_rounded',
+    WifiTetheringOff = <any> 'wifi_tethering_off',
+    WindPower = <any> 'wind_power',
+    Window = <any> 'window',
+    WineBar = <any> 'wine_bar',
+    Woman = <any> 'woman',
+    Woman2 = <any> 'woman_2',
+    WooCommerce = <any> 'woo_commerce',
+    Wordpress = <any> 'wordpress',
+    WorkOff = <any> 'work_off',
+    WorkOutline = <any> 'work_outline',
+    WorkspacePremium = <any> 'workspace_premium',
+    Workspaces = <any> 'workspaces',
+    WrongLocation = <any> 'wrong_location',
+    Wysiwyg = <any> 'wysiwyg',
+    Yard = <any> 'yard',
+    ZoomInMap = <any> 'zoom_in_map'
+}
+/**
  * 
  * @export
  * @enum {string}
@@ -5478,6 +7247,18 @@ export interface LibraryOptions {
      * @memberof LibraryOptions
      */
     EnableRealtimeMonitor?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof LibraryOptions
+     */
+    EnableCreditsDetection?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof LibraryOptions
+     */
+    EnableCreditsDetectionDuringLibraryScan?: boolean;
     /**
      * 
      * @type {boolean}
@@ -7306,16 +9087,709 @@ export enum MarkerType {
     Chapter = <any> 'Chapter',
     IntroStart = <any> 'IntroStart',
     IntroEnd = <any> 'IntroEnd',
-    CreditsStart = <any> 'CreditsStart'
+    CreditsStart = <any> 'CreditsStart',
+    CreditsEnd = <any> 'CreditsEnd',
+    CommercialsStart = <any> 'CommercialsStart',
+    CommercialsEnd = <any> 'CommercialsEnd'
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingHwaConditionsConfigAdvancedConditions
+ */
+export interface MediaEncodingHwaConditionsConfigAdvancedConditions {
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingHwaConditionsConfigAdvancedConditions
+     */
+    FilterString?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingHwaConditionsConfigAdvancedConditions
+     */
+    DataFilterString?: string;
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingHwaConditionsConfigOperationConditions
+ */
+export interface MediaEncodingHwaConditionsConfigOperationConditions {
+    /**
+     * Offline conversions which are not related to an active playback session
+     * @type {boolean}
+     * @memberof MediaEncodingHwaConditionsConfigOperationConditions
+     */
+    Conversions?: boolean;
+    /**
+     * Transcoding of Live TV
+     * @type {boolean}
+     * @memberof MediaEncodingHwaConditionsConfigOperationConditions
+     */
+    LiveTV?: boolean;
+    /**
+     * Transcoding for an active playback session
+     * @type {boolean}
+     * @memberof MediaEncodingHwaConditionsConfigOperationConditions
+     */
+    Playback?: boolean;
+    /**
+     * HLS Transcoding for an active playback session
+     * @type {boolean}
+     * @memberof MediaEncodingHwaConditionsConfigOperationConditions
+     */
+    HlsPlayback?: boolean;
+    /**
+     * Transcoding of a live stream for an active playback session
+     * @type {boolean}
+     * @memberof MediaEncodingHwaConditionsConfigOperationConditions
+     */
+    LiveStream?: boolean;
 }
 /**
  * 
  * @export
  * @enum {string}
  */
-export enum MediaEncodingCodecParameterContext {
-    Playback = <any> 'Playback',
-    Conversion = <any> 'Conversion'
+export enum MediaEncodingHwaEnumsHwaConfigMode {
+    Basic = <any> 'Basic',
+    Advanced = <any> 'Advanced',
+    Expert = <any> 'Expert'
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingSettingsApiHwaCancelHwaNodeOptions
+ */
+export interface MediaEncodingSettingsApiHwaCancelHwaNodeOptions {
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsApiHwaCancelHwaNodeOptions
+     */
+    NodeId?: string;
+    /**
+     * 
+     * @type {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType}
+     * @memberof MediaEncodingSettingsApiHwaCancelHwaNodeOptions
+     */
+    EditorType?: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType;
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingSettingsApiHwaExecuteHwaConfigCommand
+ */
+export interface MediaEncodingSettingsApiHwaExecuteHwaConfigCommand {
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsApiHwaExecuteHwaConfigCommand
+     */
+    NodeId?: string;
+    /**
+     * 
+     * @type {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType}
+     * @memberof MediaEncodingSettingsApiHwaExecuteHwaConfigCommand
+     */
+    CommandType?: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsApiHwaExecuteHwaConfigCommand
+     */
+    TargetId?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsApiHwaExecuteHwaConfigCommand
+     */
+    Data?: string;
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingSettingsApiHwaSaveHwaConfig
+ */
+export interface MediaEncodingSettingsApiHwaSaveHwaConfig {
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsApiHwaSaveHwaConfig
+     */
+    Name?: string;
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingSettingsApiHwaSaveHwaConfigResult
+ */
+export interface MediaEncodingSettingsApiHwaSaveHwaConfigResult {
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsApiHwaSaveHwaConfigResult
+     */
+    WasSaved?: boolean;
+    /**
+     * 
+     * @type {MediaEncodingSettingsHwaProjectionHwaConfigView}
+     * @memberof MediaEncodingSettingsApiHwaSaveHwaConfigResult
+     */
+    GraphView?: MediaEncodingSettingsHwaProjectionHwaConfigView;
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingSettingsApiHwaSelectHwaBasicDevice
+ */
+export interface MediaEncodingSettingsApiHwaSelectHwaBasicDevice {
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsApiHwaSelectHwaBasicDevice
+     */
+    NodeId?: string;
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingSettingsHwaEditingNodeOptionsForm
+ */
+export interface MediaEncodingSettingsHwaEditingNodeOptionsForm {
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsHwaEditingNodeOptionsForm
+     */
+    IsSeparateForm?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsHwaEditingNodeOptionsForm
+     */
+    ShowResetToDefaults?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaEditingNodeOptionsForm
+     */
+    Caption?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaEditingNodeOptionsForm
+     */
+    HelpUrl?: string;
+    /**
+     * 
+     * @type {GenericEditIEditObjectContainer}
+     * @memberof MediaEncodingSettingsHwaEditingNodeOptionsForm
+     */
+    Form?: GenericEditIEditObjectContainer;
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingSettingsHwaProjectionBasicModeOption
+ */
+export interface MediaEncodingSettingsHwaProjectionBasicModeOption {
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionBasicModeOption
+     */
+    NodeId?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionBasicModeOption
+     */
+    Text?: string;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+export enum MediaEncodingSettingsHwaProjectionEnumsUiGraphDirection {
+    TopDown = <any> 'TopDown',
+    LeftRight = <any> 'LeftRight',
+    UnorderedHorizontal = <any> 'UnorderedHorizontal'
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+export enum MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType {
+    Configure = <any> 'Configure',
+    Conditions = <any> 'Conditions',
+    LoadLimits = <any> 'LoadLimits',
+    LoadBalancing = <any> 'LoadBalancing',
+    ToggleEnabled = <any> 'ToggleEnabled',
+    Move = <any> 'Move',
+    Insert = <any> 'Insert',
+    Delete = <any> 'Delete',
+    InsertGpuConfig = <any> 'InsertGpuConfig',
+    InsertGraph = <any> 'InsertGraph',
+    InsertLoadBalancer = <any> 'InsertLoadBalancer',
+    InsertErrorOut = <any> 'InsertErrorOut'
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+export enum MediaEncodingSettingsHwaProjectionEnumsUiNodeState {
+    Normal = <any> 'Normal',
+    Disabled = <any> 'Disabled',
+    Unavailable = <any> 'Unavailable',
+    Error = <any> 'Error',
+    Fallback = <any> 'Fallback'
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+export enum MediaEncodingSettingsHwaProjectionEnumsUiNodeType {
+    Unknown = <any> 'Unknown',
+    Root = <any> 'Root',
+    Graph = <any> 'Graph',
+    LoadBalancer = <any> 'LoadBalancer',
+    GpuConfig = <any> 'GpuConfig',
+    ErrorOut = <any> 'ErrorOut',
+    UiHint = <any> 'UiHint',
+    Divider = <any> 'Divider'
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingSettingsHwaProjectionHwaConfigView
+ */
+export interface MediaEncodingSettingsHwaProjectionHwaConfigView {
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    IsInitialized?: boolean;
+    /**
+     * 
+     * @type {MediaEncodingHwaEnumsHwaConfigMode}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    ConfigMode?: MediaEncodingHwaEnumsHwaConfigMode;
+    /**
+     * 
+     * @type {MediaEncodingSettingsHwaProjectionNodesUiNodeRoot}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    Root?: MediaEncodingSettingsHwaProjectionNodesUiNodeRoot;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    FocusNodeId?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    ConfigName?: string;
+    /**
+     * 
+     * @type {Date}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    ConfigSavedOn?: Date;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    ConfigSavedBy?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    ConfigRevision?: number;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    HasUnsavedChanges?: boolean;
+    /**
+     * 
+     * @type {Array<MediaEncodingSettingsHwaProjectionBasicModeOption>}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    BasicModeOptions?: Array<MediaEncodingSettingsHwaProjectionBasicModeOption>;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    BasicSelectedNodeId?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    ModeLegend?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    ChangeConfigWizardUrl?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    HelpUrl?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    ShowDeviceSelector?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsHwaProjectionHwaConfigView
+     */
+    ShowSavedConfigInfo?: boolean;
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase
+ */
+export interface MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase {
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase
+     */
+    Id?: string;
+    /**
+     * 
+     * @type {MediaEncodingSettingsHwaProjectionEnumsUiNodeType}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase
+     */
+    NodeType?: MediaEncodingSettingsHwaProjectionEnumsUiNodeType;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase
+     */
+    DisplayId?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase
+     */
+    PrimaryText?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase
+     */
+    SecondaryText?: string;
+    /**
+     * 
+     * @type {ElementsIconNames}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase
+     */
+    Icon?: ElementsIconNames;
+    /**
+     * 
+     * @type {MediaEncodingSettingsHwaProjectionEnumsUiNodeState}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase
+     */
+    State?: MediaEncodingSettingsHwaProjectionEnumsUiNodeState;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase
+     */
+    IsFocusable?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase
+     */
+    StateReason?: string;
+    /**
+     * 
+     * @type {MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase
+     */
+    CanMove?: MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase
+     */
+    InsertAt?: string;
+    /**
+     * 
+     * @type {Array<MediaEncodingSettingsHwaProjectionNodesUiNodeCommand>}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase
+     */
+    Commands?: Array<MediaEncodingSettingsHwaProjectionNodesUiNodeCommand>;
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingSettingsHwaProjectionNodesUiNodeCommand
+ */
+export interface MediaEncodingSettingsHwaProjectionNodesUiNodeCommand {
+    /**
+     * 
+     * @type {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeCommand
+     */
+    CommandType?: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeCommand
+     */
+    Caption?: string;
+    /**
+     * 
+     * @type {ElementsIconNames}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeCommand
+     */
+    Icon?: ElementsIconNames;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeCommand
+     */
+    IsRemote?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeCommand
+     */
+    CommandData?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeCommand
+     */
+    OpensForm?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeCommand
+     */
+    ConfirmationPrompt?: string;
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets
+ */
+export interface MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets {
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets
+     */
+    Up?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets
+     */
+    Down?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets
+     */
+    Left?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets
+     */
+    Right?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets
+     */
+    HasAny?: boolean;
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+ */
+export interface MediaEncodingSettingsHwaProjectionNodesUiNodeRoot {
+    /**
+     * 
+     * @type {MediaEncodingSettingsHwaProjectionEnumsUiNodeType}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    NodeType?: MediaEncodingSettingsHwaProjectionEnumsUiNodeType;
+    /**
+     * 
+     * @type {MediaEncodingSettingsHwaProjectionEnumsUiGraphDirection}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    Direction?: MediaEncodingSettingsHwaProjectionEnumsUiGraphDirection;
+    /**
+     * 
+     * @type {Array<MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase>}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    Nodes?: Array<MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase>;
+    /**
+     * 
+     * @type {MediaEncodingHwaConditionsConfigOperationConditions}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    OperationConditions?: MediaEncodingHwaConditionsConfigOperationConditions;
+    /**
+     * 
+     * @type {MediaEncodingHwaConditionsConfigAdvancedConditions}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    AdvancedConditions?: MediaEncodingHwaConditionsConfigAdvancedConditions;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    ConditionsSummary?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    Id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    DisplayId?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    PrimaryText?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    SecondaryText?: string;
+    /**
+     * 
+     * @type {ElementsIconNames}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    Icon?: ElementsIconNames;
+    /**
+     * 
+     * @type {MediaEncodingSettingsHwaProjectionEnumsUiNodeState}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    State?: MediaEncodingSettingsHwaProjectionEnumsUiNodeState;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    IsFocusable?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    StateReason?: string;
+    /**
+     * 
+     * @type {MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    CanMove?: MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    InsertAt?: string;
+    /**
+     * 
+     * @type {Array<MediaEncodingSettingsHwaProjectionNodesUiNodeCommand>}
+     * @memberof MediaEncodingSettingsHwaProjectionNodesUiNodeRoot
+     */
+    Commands?: Array<MediaEncodingSettingsHwaProjectionNodesUiNodeCommand>;
+}
+/**
+ * 
+ * @export
+ * @interface MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm
+ */
+export interface MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm {
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm
+     */
+    IsSeparateForm?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm
+     */
+    ShowResetToDefaults?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm
+     */
+    Caption?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm
+     */
+    HelpUrl?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm
+     */
+    Selection?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm
+     */
+    FilterId?: string;
+    /**
+     * 
+     * @type {GenericEditIEditObjectContainer}
+     * @memberof MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm
+     */
+    Form?: GenericEditIEditObjectContainer;
 }
 /**
  * 
@@ -8492,18 +10966,6 @@ export enum NotificationsNotificationLevel {
     Normal = <any> 'Normal',
     Warning = <any> 'Warning',
     Error = <any> 'Error'
-}
-/**
- * 
- * @export
- * @enum {string}
- */
-export enum OperatingSystem {
-    Windows = <any> 'Windows',
-    Linux = <any> 'Linux',
-    OSX = <any> 'OSX',
-    BSD = <any> 'BSD',
-    Android = <any> 'Android'
 }
 /**
  * Class PackageInfo  
@@ -10067,7 +12529,8 @@ export enum ProgressEvent {
     SubtitleOffsetChange = <any> 'SubtitleOffsetChange',
     PlaybackRateChange = <any> 'PlaybackRateChange',
     ShuffleChange = <any> 'ShuffleChange',
-    SleepTimerChange = <any> 'SleepTimerChange'
+    SleepTimerChange = <any> 'SleepTimerChange',
+    Seeked = <any> 'Seeked'
 }
 /**
  * 
@@ -11362,30 +13825,29 @@ export enum ScrollDirection {
     Vertical = <any> 'Vertical'
 }
 /**
- * Enum defining secondary frameworks for encoding and decoding.      While most of these are hardware acceleration frameworks, this is not a necessity             (e.g. Android MediaCodec offers software codecs as well).  
+ * 
  * @export
- * @enum {string}
+ * @interface SecurityAttestationReply
  */
-export enum SecondaryFrameworks {
-    Unknown = <any> 'Unknown',
-    None = <any> 'None',
-    AmdAmf = <any> 'AmdAmf',
-    MediaCodec = <any> 'MediaCodec',
-    NvEncDec = <any> 'NvEncDec',
-    OpenMax = <any> 'OpenMax',
-    QuickSync = <any> 'QuickSync',
-    VaApi = <any> 'VaApi',
-    V4L2 = <any> 'V4L2',
-    DxVa = <any> 'DxVa',
-    D3d11va = <any> 'D3d11va',
-    VideoToolbox = <any> 'VideoToolbox',
-    Mmal = <any> 'Mmal',
-    Vulkan = <any> 'Vulkan',
-    D3d12va = <any> 'D3d12va',
-    OhCodec = <any> 'OhCodec',
-    RkMpp = <any> 'RkMpp',
-    Drm = <any> 'Drm',
-    OpenCL = <any> 'OpenCL'
+export interface SecurityAttestationReply {
+    /**
+     * 
+     * @type {string}
+     * @memberof SecurityAttestationReply
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SecurityAttestationReply
+     */
+    requestId?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SecurityAttestationReply
+     */
+    appAttestation?: string;
 }
 /**
  * 
@@ -14174,7 +16636,8 @@ export enum TranscodingVpStepTypes {
     ShowSpeaker = <any> 'ShowSpeaker',
     StripStyles = <any> 'StripStyles',
     ConnectTo = <any> 'ConnectTo',
-    Rotate = <any> 'Rotate'
+    Rotate = <any> 'Rotate',
+    TextSub2GraphicSub = <any> 'TextSub2GraphicSub'
 }
 /**
  * 
@@ -14664,6 +17127,18 @@ export interface UserConfiguration {
      * @memberof UserConfiguration
      */
     IntroSkipMode?: SegmentSkipMode;
+    /**
+     * 
+     * @type {SegmentSkipMode}
+     * @memberof UserConfiguration
+     */
+    CreditsSkipMode?: SegmentSkipMode;
+    /**
+     * 
+     * @type {SegmentSkipMode}
+     * @memberof UserConfiguration
+     */
+    CommercialsSkipMode?: SegmentSkipMode;
     /**
      * 
      * @type {boolean}
@@ -15520,445 +17995,6 @@ export enum Video3DFormat {
     FullTopAndBottom = <any> 'FullTopAndBottom',
     HalfTopAndBottom = <any> 'HalfTopAndBottom',
     MVC = <any> 'MVC'
-}
-/**
- * 
- * @export
- * @interface VideoCodecBase
- */
-export interface VideoCodecBase {
-    /**
-     * 
-     * @type {CommonInterfacesICodecDeviceInfo}
-     * @memberof VideoCodecBase
-     */
-    CodecDeviceInfo?: CommonInterfacesICodecDeviceInfo;
-    /**
-     * 
-     * @type {CodecKinds}
-     * @memberof VideoCodecBase
-     */
-    CodecKind?: CodecKinds;
-    /**
-     * 
-     * @type {string}
-     * @memberof VideoCodecBase
-     */
-    MediaTypeName?: string;
-    /**
-     * 
-     * @type {VideoMediaTypes}
-     * @memberof VideoCodecBase
-     */
-    VideoMediaType?: VideoMediaTypes;
-    /**
-     * 
-     * @type {number}
-     * @memberof VideoCodecBase
-     */
-    MinWidth?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof VideoCodecBase
-     */
-    MaxWidth?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof VideoCodecBase
-     */
-    MinHeight?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof VideoCodecBase
-     */
-    MaxHeight?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof VideoCodecBase
-     */
-    WidthAlignment?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof VideoCodecBase
-     */
-    HeightAlignment?: number;
-    /**
-     * 
-     * @type {BitRate}
-     * @memberof VideoCodecBase
-     */
-    MaxBitRate?: BitRate;
-    /**
-     * 
-     * @type {Array<ColorFormats>}
-     * @memberof VideoCodecBase
-     */
-    SupportedColorFormats?: Array<ColorFormats>;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof VideoCodecBase
-     */
-    SupportedColorFormatStrings?: Array<string>;
-    /**
-     * 
-     * @type {string}
-     * @memberof VideoCodecBase
-     */
-    Id?: string;
-    /**
-     * 
-     * @type {CodecDirections}
-     * @memberof VideoCodecBase
-     */
-    Direction?: CodecDirections;
-    /**
-     * 
-     * @type {string}
-     * @memberof VideoCodecBase
-     */
-    Name?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof VideoCodecBase
-     */
-    Description?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof VideoCodecBase
-     */
-    FrameworkCodec?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof VideoCodecBase
-     */
-    IsHardwareCodec?: boolean;
-    /**
-     * 
-     * @type {SecondaryFrameworks}
-     * @memberof VideoCodecBase
-     */
-    SecondaryFramework?: SecondaryFrameworks;
-    /**
-     * 
-     * @type {string}
-     * @memberof VideoCodecBase
-     */
-    SecondaryFrameworkCodec?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof VideoCodecBase
-     */
-    MaxInstanceCount?: number;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof VideoCodecBase
-     */
-    IsEnabledByDefault?: boolean;
-    /**
-     * 
-     * @type {number}
-     * @memberof VideoCodecBase
-     */
-    DefaultPriority?: number;
-}
-/**
- * Enum listing video media types.      The enum member names are matching exactly those that are used by ffmpeg. Exception: Items that are starting with a number are prefixed with an underscore here.  
- * @export
- * @enum {string}
- */
-export enum VideoMediaTypes {
-    Unknown = <any> 'Unknown',
-    Copy = <any> 'copy',
-    Flv1 = <any> 'flv1',
-    H263 = <any> 'h263',
-    H263p = <any> 'h263p',
-    H264 = <any> 'h264',
-    Hevc = <any> 'hevc',
-    Mjpeg = <any> 'mjpeg',
-    Mpeg1video = <any> 'mpeg1video',
-    Mpeg2video = <any> 'mpeg2video',
-    Mpeg4 = <any> 'mpeg4',
-    Msvideo1 = <any> 'msvideo1',
-    Theora = <any> 'theora',
-    Vc1image = <any> 'vc1image',
-    Vc1 = <any> 'vc1',
-    Vp8 = <any> 'vp8',
-    Vp9 = <any> 'vp9',
-    Wmv1 = <any> 'wmv1',
-    Wmv2 = <any> 'wmv2',
-    Wmv3 = <any> 'wmv3',
-    _012v = <any> '_012v',
-    _4xm = <any> '_4xm',
-    _8bps = <any> '_8bps',
-    A64Multi = <any> 'a64_multi',
-    A64Multi5 = <any> 'a64_multi5',
-    Aasc = <any> 'aasc',
-    Aic = <any> 'aic',
-    AliasPix = <any> 'alias_pix',
-    Amv = <any> 'amv',
-    Anm = <any> 'anm',
-    Ansi = <any> 'ansi',
-    Apng = <any> 'apng',
-    Asv1 = <any> 'asv1',
-    Asv2 = <any> 'asv2',
-    Aura = <any> 'aura',
-    Aura2 = <any> 'aura2',
-    Av1 = <any> 'av1',
-    Avrn = <any> 'avrn',
-    Avrp = <any> 'avrp',
-    Avs = <any> 'avs',
-    Avui = <any> 'avui',
-    Ayuv = <any> 'ayuv',
-    Bethsoftvid = <any> 'bethsoftvid',
-    Bfi = <any> 'bfi',
-    Binkvideo = <any> 'binkvideo',
-    Bintext = <any> 'bintext',
-    Bitpacked = <any> 'bitpacked',
-    Bmp = <any> 'bmp',
-    BmvVideo = <any> 'bmv_video',
-    BrenderPix = <any> 'brender_pix',
-    C93 = <any> 'c93',
-    Cavs = <any> 'cavs',
-    Cdgraphics = <any> 'cdgraphics',
-    Cdxl = <any> 'cdxl',
-    Cfhd = <any> 'cfhd',
-    Cinepak = <any> 'cinepak',
-    Clearvideo = <any> 'clearvideo',
-    Cljr = <any> 'cljr',
-    Cllc = <any> 'cllc',
-    Cmv = <any> 'cmv',
-    Cpia = <any> 'cpia',
-    Cscd = <any> 'cscd',
-    Cyuv = <any> 'cyuv',
-    Daala = <any> 'daala',
-    Dds = <any> 'dds',
-    Dfa = <any> 'dfa',
-    Dirac = <any> 'dirac',
-    Dnxhd = <any> 'dnxhd',
-    Dpx = <any> 'dpx',
-    Dsicinvideo = <any> 'dsicinvideo',
-    Dvvideo = <any> 'dvvideo',
-    Dxa = <any> 'dxa',
-    Dxtory = <any> 'dxtory',
-    Dxv = <any> 'dxv',
-    Escape124 = <any> 'escape124',
-    Escape130 = <any> 'escape130',
-    Exr = <any> 'exr',
-    Ffv1 = <any> 'ffv1',
-    Ffvhuff = <any> 'ffvhuff',
-    Fic = <any> 'fic',
-    Fits = <any> 'fits',
-    Flashsv = <any> 'flashsv',
-    Flashsv2 = <any> 'flashsv2',
-    Flic = <any> 'flic',
-    Fmvc = <any> 'fmvc',
-    Fraps = <any> 'fraps',
-    Frwu = <any> 'frwu',
-    G2m = <any> 'g2m',
-    Gdv = <any> 'gdv',
-    Gif = <any> 'gif',
-    H261 = <any> 'h261',
-    H263i = <any> 'h263i',
-    Hap = <any> 'hap',
-    Hnm4video = <any> 'hnm4video',
-    HqHqa = <any> 'hq_hqa',
-    Hqx = <any> 'hqx',
-    Huffyuv = <any> 'huffyuv',
-    Idcin = <any> 'idcin',
-    Idf = <any> 'idf',
-    IffIlbm = <any> 'iff_ilbm',
-    Indeo2 = <any> 'indeo2',
-    Indeo3 = <any> 'indeo3',
-    Indeo4 = <any> 'indeo4',
-    Indeo5 = <any> 'indeo5',
-    Interplayvideo = <any> 'interplayvideo',
-    Jpeg2000 = <any> 'jpeg2000',
-    Jpegls = <any> 'jpegls',
-    Jv = <any> 'jv',
-    Kgv1 = <any> 'kgv1',
-    Kmvc = <any> 'kmvc',
-    Lagarith = <any> 'lagarith',
-    Ljpeg = <any> 'ljpeg',
-    Loco = <any> 'loco',
-    M101 = <any> 'm101',
-    Mad = <any> 'mad',
-    Magicyuv = <any> 'magicyuv',
-    Mdec = <any> 'mdec',
-    Mimic = <any> 'mimic',
-    Mjpegb = <any> 'mjpegb',
-    Mmvideo = <any> 'mmvideo',
-    Motionpixels = <any> 'motionpixels',
-    Msa1 = <any> 'msa1',
-    Mscc = <any> 'mscc',
-    Msmpeg4v1 = <any> 'msmpeg4v1',
-    Msmpeg4v2 = <any> 'msmpeg4v2',
-    Msmpeg4v3 = <any> 'msmpeg4v3',
-    Msrle = <any> 'msrle',
-    Mss1 = <any> 'mss1',
-    Mss2 = <any> 'mss2',
-    Mszh = <any> 'mszh',
-    Mts2 = <any> 'mts2',
-    Mvc1 = <any> 'mvc1',
-    Mvc2 = <any> 'mvc2',
-    Mxpeg = <any> 'mxpeg',
-    Nuv = <any> 'nuv',
-    PafVideo = <any> 'paf_video',
-    Pam = <any> 'pam',
-    Pbm = <any> 'pbm',
-    Pcx = <any> 'pcx',
-    Pgm = <any> 'pgm',
-    Pgmyuv = <any> 'pgmyuv',
-    Pictor = <any> 'pictor',
-    Pixlet = <any> 'pixlet',
-    Png = <any> 'png',
-    Ppm = <any> 'ppm',
-    Prores = <any> 'prores',
-    Psd = <any> 'psd',
-    Ptx = <any> 'ptx',
-    Qdraw = <any> 'qdraw',
-    Qpeg = <any> 'qpeg',
-    Qtrle = <any> 'qtrle',
-    R10k = <any> 'r10k',
-    R210 = <any> 'r210',
-    Rawvideo = <any> 'rawvideo',
-    Rl2 = <any> 'rl2',
-    Roq = <any> 'roq',
-    Rpza = <any> 'rpza',
-    Rscc = <any> 'rscc',
-    Rv10 = <any> 'rv10',
-    Rv20 = <any> 'rv20',
-    Rv30 = <any> 'rv30',
-    Rv40 = <any> 'rv40',
-    Sanm = <any> 'sanm',
-    Scpr = <any> 'scpr',
-    Screenpresso = <any> 'screenpresso',
-    Sgi = <any> 'sgi',
-    Sgirle = <any> 'sgirle',
-    Sheervideo = <any> 'sheervideo',
-    Smackvideo = <any> 'smackvideo',
-    Smc = <any> 'smc',
-    Smvjpeg = <any> 'smvjpeg',
-    Snow = <any> 'snow',
-    Sp5x = <any> 'sp5x',
-    Speedhq = <any> 'speedhq',
-    Srgc = <any> 'srgc',
-    Sunrast = <any> 'sunrast',
-    Svg = <any> 'svg',
-    Svq1 = <any> 'svq1',
-    Svq3 = <any> 'svq3',
-    Targa = <any> 'targa',
-    TargaY216 = <any> 'targa_y216',
-    Tdsc = <any> 'tdsc',
-    Tgq = <any> 'tgq',
-    Tgv = <any> 'tgv',
-    Thp = <any> 'thp',
-    Tiertexseqvideo = <any> 'tiertexseqvideo',
-    Tiff = <any> 'tiff',
-    Tmv = <any> 'tmv',
-    Tqi = <any> 'tqi',
-    Truemotion1 = <any> 'truemotion1',
-    Truemotion2 = <any> 'truemotion2',
-    Truemotion2rt = <any> 'truemotion2rt',
-    Tscc = <any> 'tscc',
-    Tscc2 = <any> 'tscc2',
-    Txd = <any> 'txd',
-    Ulti = <any> 'ulti',
-    Utvideo = <any> 'utvideo',
-    V210 = <any> 'v210',
-    V210x = <any> 'v210x',
-    V308 = <any> 'v308',
-    V408 = <any> 'v408',
-    V410 = <any> 'v410',
-    Vb = <any> 'vb',
-    Vble = <any> 'vble',
-    Vcr1 = <any> 'vcr1',
-    Vixl = <any> 'vixl',
-    Vmdvideo = <any> 'vmdvideo',
-    Vmnc = <any> 'vmnc',
-    Vp3 = <any> 'vp3',
-    Vp5 = <any> 'vp5',
-    Vp6 = <any> 'vp6',
-    Vp6a = <any> 'vp6a',
-    Vp6f = <any> 'vp6f',
-    Vp7 = <any> 'vp7',
-    Webp = <any> 'webp',
-    Wmv3image = <any> 'wmv3image',
-    Wnv1 = <any> 'wnv1',
-    WrappedAvframe = <any> 'wrapped_avframe',
-    WsVqa = <any> 'ws_vqa',
-    XanWc3 = <any> 'xan_wc3',
-    XanWc4 = <any> 'xan_wc4',
-    Xbin = <any> 'xbin',
-    Xbm = <any> 'xbm',
-    Xface = <any> 'xface',
-    Xpm = <any> 'xpm',
-    Xwd = <any> 'xwd',
-    Y41p = <any> 'y41p',
-    Ylc = <any> 'ylc',
-    Yop = <any> 'yop',
-    Yuv4 = <any> 'yuv4',
-    Zerocodec = <any> 'zerocodec',
-    Zlib = <any> 'zlib',
-    Zmbv = <any> 'zmbv',
-    Agm = <any> 'agm',
-    Apv = <any> 'apv',
-    Arbc = <any> 'arbc',
-    Argo = <any> 'argo',
-    Avs2 = <any> 'avs2',
-    Avs3 = <any> 'avs3',
-    Cdtoons = <any> 'cdtoons',
-    Cri = <any> 'cri',
-    Dnxuc = <any> 'dnxuc',
-    Evc = <any> 'evc',
-    Gem = <any> 'gem',
-    Hdr = <any> 'hdr',
-    Hymt = <any> 'hymt',
-    Imm4 = <any> 'imm4',
-    Imm5 = <any> 'imm5',
-    Ipu = <any> 'ipu',
-    Jpegxl = <any> 'jpegxl',
-    JpegxlAnim = <any> 'jpegxl_anim',
-    Lead = <any> 'lead',
-    Lscr = <any> 'lscr',
-    Media100 = <any> 'media100',
-    Mobiclip = <any> 'mobiclip',
-    Msp2 = <any> 'msp2',
-    Mv30 = <any> 'mv30',
-    Mvdv = <any> 'mvdv',
-    Mvha = <any> 'mvha',
-    Mwsc = <any> 'mwsc',
-    Notchlc = <any> 'notchlc',
-    Pdv = <any> 'pdv',
-    Pfm = <any> 'pfm',
-    Pgx = <any> 'pgx',
-    Phm = <any> 'phm',
-    Photocd = <any> 'photocd',
-    ProresRaw = <any> 'prores_raw',
-    Prosumer = <any> 'prosumer',
-    Qoi = <any> 'qoi',
-    Rasc = <any> 'rasc',
-    Rtv1 = <any> 'rtv1',
-    Rv60 = <any> 'rv60',
-    Sga = <any> 'sga',
-    SimbiosisImx = <any> 'simbiosis_imx',
-    Vbn = <any> 'vbn',
-    Vmix = <any> 'vmix',
-    Vp4 = <any> 'vp4',
-    Vqc = <any> 'vqc',
-    Vvc = <any> 'vvc',
-    Wbmp = <any> 'wbmp',
-    Wcmv = <any> 'wcmv'
 }
 /**
  * Used to hold information about a user's list of configured virtual folders  
@@ -21306,243 +23342,6 @@ export class ChannelServiceApi extends BaseAPI {
      */
     public getChannels(ArtistType?: string, MaxOfficialRating?: string, HasThemeSong?: boolean, HasThemeVideo?: boolean, HasSubtitles?: boolean, HasSpecialFeature?: boolean, HasTrailer?: boolean, IsSpecialSeason?: boolean, AdjacentTo?: string, StartItemId?: string, MinIndexNumber?: number, MinStartDate?: Date, MaxStartDate?: Date, MinEndDate?: Date, MaxEndDate?: Date, MinPlayers?: number, MaxPlayers?: number, ParentIndexNumber?: number, HasParentalRating?: boolean, IsHD?: boolean, IsUnaired?: boolean, MinCommunityRating?: number, MinCriticRating?: number, AiredDuringSeason?: number, MinPremiereDate?: Date, MinDateLastSaved?: Date, MinDateLastSavedForUser?: Date, MaxPremiereDate?: Date, HasOverview?: boolean, HasImdbId?: boolean, HasTmdbId?: boolean, HasTvdbId?: boolean, ExcludeItemIds?: string, StartIndex?: number, Limit?: number, Recursive?: boolean, SearchTerm?: string, SortOrder?: string, ParentId?: string, Fields?: string, ExcludeItemTypes?: string, IncludeItemTypes?: string, AnyProviderIdEquals?: string, Filters?: string, IsFavorite?: boolean, IsMovie?: boolean, IsSeries?: boolean, IsFolder?: boolean, IsNews?: boolean, IsKids?: boolean, IsSports?: boolean, IsNew?: boolean, IsPremiere?: boolean, IsNewOrPremiere?: boolean, IsRepeat?: boolean, ProjectToMedia?: boolean, MediaTypes?: string, ImageTypes?: string, SortBy?: string, IsPlayed?: boolean, Genres?: string, OfficialRatings?: string, Tags?: string, ExcludeTags?: string, Years?: string, EnableImages?: boolean, EnableUserData?: boolean, ImageTypeLimit?: number, EnableImageTypes?: string, Person?: string, PersonIds?: string, PersonTypes?: string, Studios?: string, StudioIds?: string, Artists?: string, ArtistIds?: string, Albums?: string, Ids?: string, VideoTypes?: string, Containers?: string, AudioCodecs?: string, AudioLayouts?: string, VideoCodecs?: string, ExtendedVideoTypes?: string, SubtitleCodecs?: string, Path?: string, UserId?: string, MinOfficialRating?: string, IsLocked?: boolean, IsPlaceHolder?: boolean, HasOfficialRating?: boolean, GroupItemsIntoCollections?: boolean, Is3D?: boolean, SeriesStatus?: string, NameStartsWithOrGreater?: string, ArtistStartsWithOrGreater?: string, AlbumArtistStartsWithOrGreater?: string, NameStartsWith?: string, NameLessThan?: string, options?: any) {
         return ChannelServiceApiFp(this.configuration).getChannels(ArtistType, MaxOfficialRating, HasThemeSong, HasThemeVideo, HasSubtitles, HasSpecialFeature, HasTrailer, IsSpecialSeason, AdjacentTo, StartItemId, MinIndexNumber, MinStartDate, MaxStartDate, MinEndDate, MaxEndDate, MinPlayers, MaxPlayers, ParentIndexNumber, HasParentalRating, IsHD, IsUnaired, MinCommunityRating, MinCriticRating, AiredDuringSeason, MinPremiereDate, MinDateLastSaved, MinDateLastSavedForUser, MaxPremiereDate, HasOverview, HasImdbId, HasTmdbId, HasTvdbId, ExcludeItemIds, StartIndex, Limit, Recursive, SearchTerm, SortOrder, ParentId, Fields, ExcludeItemTypes, IncludeItemTypes, AnyProviderIdEquals, Filters, IsFavorite, IsMovie, IsSeries, IsFolder, IsNews, IsKids, IsSports, IsNew, IsPremiere, IsNewOrPremiere, IsRepeat, ProjectToMedia, MediaTypes, ImageTypes, SortBy, IsPlayed, Genres, OfficialRatings, Tags, ExcludeTags, Years, EnableImages, EnableUserData, ImageTypeLimit, EnableImageTypes, Person, PersonIds, PersonTypes, Studios, StudioIds, Artists, ArtistIds, Albums, Ids, VideoTypes, Containers, AudioCodecs, AudioLayouts, VideoCodecs, ExtendedVideoTypes, SubtitleCodecs, Path, UserId, MinOfficialRating, IsLocked, IsPlaceHolder, HasOfficialRating, GroupItemsIntoCollections, Is3D, SeriesStatus, NameStartsWithOrGreater, ArtistStartsWithOrGreater, AlbumArtistStartsWithOrGreater, NameStartsWith, NameLessThan, options)(this.fetch, this.basePath);
-    }
-
-}
-/**
- * CodecParameterServiceApi - fetch parameter creator
- * @export
- */
-export const CodecParameterServiceApiFetchParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * Requires authentication as user
-         * @summary Gets the parameters for a specified codec.
-         * @param {string} CodecId Codec Id
-         * @param {MediaEncodingCodecParameterContext} ParameterContext Parameter Context
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingCodecparameters(CodecId: string, ParameterContext: MediaEncodingCodecParameterContext, options: any = {}): FetchArgs {
-            // verify required parameter 'CodecId' is not null or undefined
-            if (CodecId === null || CodecId === undefined) {
-                throw new RequiredError('CodecId','Required parameter CodecId was null or undefined when calling getEncodingCodecparameters.');
-            }
-            // verify required parameter 'ParameterContext' is not null or undefined
-            if (ParameterContext === null || ParameterContext === undefined) {
-                throw new RequiredError('ParameterContext','Required parameter ParameterContext was null or undefined when calling getEncodingCodecparameters.');
-            }
-            const localVarPath = `/Encoding/CodecParameters`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication apikeyauth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("api_key")
-					: configuration.apiKey;
-                localVarQueryParameter["api_key"] = localVarApiKeyValue;
-            }
-
-            // authentication embyauth required
-
-            if (CodecId !== undefined) {
-                localVarQueryParameter['CodecId'] = CodecId;
-            }
-
-            if (ParameterContext !== undefined) {
-                localVarQueryParameter['ParameterContext'] = ParameterContext;
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Updates the parameters for a specified codec.
-         * @param {Object} body Binary stream
-         * @param {string} CodecId Codec Id
-         * @param {MediaEncodingCodecParameterContext} ParameterContext Parameter Context
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postEncodingCodecparameters(body: Object, CodecId: string, ParameterContext: MediaEncodingCodecParameterContext, options: any = {}): FetchArgs {
-            // verify required parameter 'body' is not null or undefined
-            if (body === null || body === undefined) {
-                throw new RequiredError('body','Required parameter body was null or undefined when calling postEncodingCodecparameters.');
-            }
-            // verify required parameter 'CodecId' is not null or undefined
-            if (CodecId === null || CodecId === undefined) {
-                throw new RequiredError('CodecId','Required parameter CodecId was null or undefined when calling postEncodingCodecparameters.');
-            }
-            // verify required parameter 'ParameterContext' is not null or undefined
-            if (ParameterContext === null || ParameterContext === undefined) {
-                throw new RequiredError('ParameterContext','Required parameter ParameterContext was null or undefined when calling postEncodingCodecparameters.');
-            }
-            const localVarPath = `/Encoding/CodecParameters`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication apikeyauth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("api_key")
-					: configuration.apiKey;
-                localVarQueryParameter["api_key"] = localVarApiKeyValue;
-            }
-
-            // authentication embyauth required
-
-            if (CodecId !== undefined) {
-                localVarQueryParameter['CodecId'] = CodecId;
-            }
-
-            if (ParameterContext !== undefined) {
-                localVarQueryParameter['ParameterContext'] = ParameterContext;
-            }
-
-            localVarHeaderParameter['Content-Type'] = 'application/octet-stream';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"Object" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * CodecParameterServiceApi - functional programming interface
- * @export
- */
-export const CodecParameterServiceApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * Requires authentication as user
-         * @summary Gets the parameters for a specified codec.
-         * @param {string} CodecId Codec Id
-         * @param {MediaEncodingCodecParameterContext} ParameterContext Parameter Context
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingCodecparameters(CodecId: string, ParameterContext: MediaEncodingCodecParameterContext, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<EditObjectContainer> {
-            const localVarFetchArgs = CodecParameterServiceApiFetchParamCreator(configuration).getEncodingCodecparameters(CodecId, ParameterContext, options);
-            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    } else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Updates the parameters for a specified codec.
-         * @param {Object} body Binary stream
-         * @param {string} CodecId Codec Id
-         * @param {MediaEncodingCodecParameterContext} ParameterContext Parameter Context
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postEncodingCodecparameters(body: Object, CodecId: string, ParameterContext: MediaEncodingCodecParameterContext, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
-            const localVarFetchArgs = CodecParameterServiceApiFetchParamCreator(configuration).postEncodingCodecparameters(body, CodecId, ParameterContext, options);
-            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    } else {
-                        throw response;
-                    }
-                });
-            };
-        },
-    }
-};
-
-/**
- * CodecParameterServiceApi - factory interface
- * @export
- */
-export const CodecParameterServiceApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
-    return {
-        /**
-         * Requires authentication as user
-         * @summary Gets the parameters for a specified codec.
-         * @param {string} CodecId Codec Id
-         * @param {MediaEncodingCodecParameterContext} ParameterContext Parameter Context
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingCodecparameters(CodecId: string, ParameterContext: MediaEncodingCodecParameterContext, options?: any) {
-            return CodecParameterServiceApiFp(configuration).getEncodingCodecparameters(CodecId, ParameterContext, options)(fetch, basePath);
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Updates the parameters for a specified codec.
-         * @param {Object} body Binary stream
-         * @param {string} CodecId Codec Id
-         * @param {MediaEncodingCodecParameterContext} ParameterContext Parameter Context
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postEncodingCodecparameters(body: Object, CodecId: string, ParameterContext: MediaEncodingCodecParameterContext, options?: any) {
-            return CodecParameterServiceApiFp(configuration).postEncodingCodecparameters(body, CodecId, ParameterContext, options)(fetch, basePath);
-        },
-    };
-};
-
-/**
- * CodecParameterServiceApi - object-oriented interface
- * @export
- * @class CodecParameterServiceApi
- * @extends {BaseAPI}
- */
-export class CodecParameterServiceApi extends BaseAPI {
-    /**
-     * Requires authentication as user
-     * @summary Gets the parameters for a specified codec.
-     * @param {string} CodecId Codec Id
-     * @param {MediaEncodingCodecParameterContext} ParameterContext Parameter Context
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CodecParameterServiceApi
-     */
-    public getEncodingCodecparameters(CodecId: string, ParameterContext: MediaEncodingCodecParameterContext, options?: any) {
-        return CodecParameterServiceApiFp(this.configuration).getEncodingCodecparameters(CodecId, ParameterContext, options)(this.fetch, this.basePath);
-    }
-
-    /**
-     * Requires authentication as administrator
-     * @summary Updates the parameters for a specified codec.
-     * @param {Object} body Binary stream
-     * @param {string} CodecId Codec Id
-     * @param {MediaEncodingCodecParameterContext} ParameterContext Parameter Context
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CodecParameterServiceApi
-     */
-    public postEncodingCodecparameters(body: Object, CodecId: string, ParameterContext: MediaEncodingCodecParameterContext, options?: any) {
-        return CodecParameterServiceApiFp(this.configuration).postEncodingCodecparameters(body, CodecId, ParameterContext, options)(this.fetch, this.basePath);
     }
 
 }
@@ -31571,254 +33370,6 @@ export class DynamicHlsServiceApi extends BaseAPI {
 
 }
 /**
- * EncodingInfoServiceApi - fetch parameter creator
- * @export
- */
-export const EncodingInfoServiceApiFetchParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * Requires authentication as administrator
-         * @summary Gets default codec configurations
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingCodecconfigurationDefaults(options: any = {}): FetchArgs {
-            const localVarPath = `/Encoding/CodecConfiguration/Defaults`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication apikeyauth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("api_key")
-					: configuration.apiKey;
-                localVarQueryParameter["api_key"] = localVarApiKeyValue;
-            }
-
-            // authentication embyauth required
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Gets details about available video encoders and decoders
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingCodecinformationVideo(options: any = {}): FetchArgs {
-            const localVarPath = `/Encoding/CodecInformation/Video`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication apikeyauth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("api_key")
-					: configuration.apiKey;
-                localVarQueryParameter["api_key"] = localVarApiKeyValue;
-            }
-
-            // authentication embyauth required
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Gets available tone mapping options
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingTonemapoptions(options: any = {}): FetchArgs {
-            const localVarPath = `/Encoding/ToneMapOptions`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication apikeyauth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("api_key")
-					: configuration.apiKey;
-                localVarQueryParameter["api_key"] = localVarApiKeyValue;
-            }
-
-            // authentication embyauth required
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * EncodingInfoServiceApi - functional programming interface
- * @export
- */
-export const EncodingInfoServiceApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * Requires authentication as administrator
-         * @summary Gets default codec configurations
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingCodecconfigurationDefaults(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Array<CodecConfiguration>> {
-            const localVarFetchArgs = EncodingInfoServiceApiFetchParamCreator(configuration).getEncodingCodecconfigurationDefaults(options);
-            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    } else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Gets details about available video encoders and decoders
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingCodecinformationVideo(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Array<VideoCodecBase>> {
-            const localVarFetchArgs = EncodingInfoServiceApiFetchParamCreator(configuration).getEncodingCodecinformationVideo(options);
-            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    } else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Gets available tone mapping options
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingTonemapoptions(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ConfigurationToneMappingToneMapOptionsVisibility> {
-            const localVarFetchArgs = EncodingInfoServiceApiFetchParamCreator(configuration).getEncodingTonemapoptions(options);
-            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    } else {
-                        throw response;
-                    }
-                });
-            };
-        },
-    }
-};
-
-/**
- * EncodingInfoServiceApi - factory interface
- * @export
- */
-export const EncodingInfoServiceApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
-    return {
-        /**
-         * Requires authentication as administrator
-         * @summary Gets default codec configurations
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingCodecconfigurationDefaults(options?: any) {
-            return EncodingInfoServiceApiFp(configuration).getEncodingCodecconfigurationDefaults(options)(fetch, basePath);
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Gets details about available video encoders and decoders
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingCodecinformationVideo(options?: any) {
-            return EncodingInfoServiceApiFp(configuration).getEncodingCodecinformationVideo(options)(fetch, basePath);
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Gets available tone mapping options
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingTonemapoptions(options?: any) {
-            return EncodingInfoServiceApiFp(configuration).getEncodingTonemapoptions(options)(fetch, basePath);
-        },
-    };
-};
-
-/**
- * EncodingInfoServiceApi - object-oriented interface
- * @export
- * @class EncodingInfoServiceApi
- * @extends {BaseAPI}
- */
-export class EncodingInfoServiceApi extends BaseAPI {
-    /**
-     * Requires authentication as administrator
-     * @summary Gets default codec configurations
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof EncodingInfoServiceApi
-     */
-    public getEncodingCodecconfigurationDefaults(options?: any) {
-        return EncodingInfoServiceApiFp(this.configuration).getEncodingCodecconfigurationDefaults(options)(this.fetch, this.basePath);
-    }
-
-    /**
-     * Requires authentication as administrator
-     * @summary Gets details about available video encoders and decoders
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof EncodingInfoServiceApi
-     */
-    public getEncodingCodecinformationVideo(options?: any) {
-        return EncodingInfoServiceApiFp(this.configuration).getEncodingCodecinformationVideo(options)(this.fetch, this.basePath);
-    }
-
-    /**
-     * Requires authentication as administrator
-     * @summary Gets available tone mapping options
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof EncodingInfoServiceApi
-     */
-    public getEncodingTonemapoptions(options?: any) {
-        return EncodingInfoServiceApiFp(this.configuration).getEncodingTonemapoptions(options)(this.fetch, this.basePath);
-    }
-
-}
-/**
  * EnvironmentServiceApi - fetch parameter creator
  * @export
  */
@@ -35231,6 +36782,1393 @@ export class HlsSegmentServiceApi extends BaseAPI {
      */
     public postVideosActiveencodingsDelete(DeviceId: string, PlaySessionId: string, options?: any) {
         return HlsSegmentServiceApiFp(this.configuration).postVideosActiveencodingsDelete(DeviceId, PlaySessionId, options)(this.fetch, this.basePath);
+    }
+
+}
+/**
+ * HwaConfigServiceApi - fetch parameter creator
+ * @export
+ */
+export const HwaConfigServiceApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Requires authentication as administrator
+         * @summary Gets the transcoding configuration graph
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingHwaconfig(options: any = {}): FetchArgs {
+            const localVarPath = `/Encoding/HwaConfig`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Gets whether the active configuration has unsaved changes
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingHwaconfighaschanges(options: any = {}): FetchArgs {
+            const localVarPath = `/Encoding/HwaConfigHasChanges`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Gets an options form for a graph node
+         * @param {string} NodeId Id of the node
+         * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms is wanted
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingHwanodeoptions(NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, options: any = {}): FetchArgs {
+            // verify required parameter 'NodeId' is not null or undefined
+            if (NodeId === null || NodeId === undefined) {
+                throw new RequiredError('NodeId','Required parameter NodeId was null or undefined when calling getEncodingHwanodeoptions.');
+            }
+            // verify required parameter 'EditorType' is not null or undefined
+            if (EditorType === null || EditorType === undefined) {
+                throw new RequiredError('EditorType','Required parameter EditorType was null or undefined when calling getEncodingHwanodeoptions.');
+            }
+            const localVarPath = `/Encoding/HwaNodeOptions`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            if (NodeId !== undefined) {
+                localVarQueryParameter['NodeId'] = NodeId;
+            }
+
+            if (EditorType !== undefined) {
+                localVarQueryParameter['EditorType'] = EditorType;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Chooses the device Basic mode uses
+         * @param {MediaEncodingSettingsApiHwaSelectHwaBasicDevice} body SelectHwaBasicDevice
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwabasicdevice(body: MediaEncodingSettingsApiHwaSelectHwaBasicDevice, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postEncodingHwabasicdevice.');
+            }
+            const localVarPath = `/Encoding/HwaBasicDevice`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"MediaEncodingSettingsApiHwaSelectHwaBasicDevice" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Runs a command against the transcoding configuration graph
+         * @param {MediaEncodingSettingsApiHwaExecuteHwaConfigCommand} body ExecuteHwaConfigCommand
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwaconfigcommand(body: MediaEncodingSettingsApiHwaExecuteHwaConfigCommand, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postEncodingHwaconfigcommand.');
+            }
+            const localVarPath = `/Encoding/HwaConfigCommand`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"MediaEncodingSettingsApiHwaExecuteHwaConfigCommand" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Discards the in-progress edit and reloads the active transcoding configuration
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwaconfigdiscardchanges(options: any = {}): FetchArgs {
+            const localVarPath = `/Encoding/HwaConfigDiscardChanges`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Saves the transcoding configuration
+         * @param {MediaEncodingSettingsApiHwaSaveHwaConfig} body SaveHwaConfig
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwaconfigsave(body: MediaEncodingSettingsApiHwaSaveHwaConfig, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postEncodingHwaconfigsave.');
+            }
+            const localVarPath = `/Encoding/HwaConfigSave`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"MediaEncodingSettingsApiHwaSaveHwaConfig" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Stores an options form for a graph node
+         * @param {Object} body Binary stream
+         * @param {string} NodeId Id of the node
+         * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms was edited
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwanodeoptions(body: Object, NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postEncodingHwanodeoptions.');
+            }
+            // verify required parameter 'NodeId' is not null or undefined
+            if (NodeId === null || NodeId === undefined) {
+                throw new RequiredError('NodeId','Required parameter NodeId was null or undefined when calling postEncodingHwanodeoptions.');
+            }
+            // verify required parameter 'EditorType' is not null or undefined
+            if (EditorType === null || EditorType === undefined) {
+                throw new RequiredError('EditorType','Required parameter EditorType was null or undefined when calling postEncodingHwanodeoptions.');
+            }
+            const localVarPath = `/Encoding/HwaNodeOptions`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            if (NodeId !== undefined) {
+                localVarQueryParameter['NodeId'] = NodeId;
+            }
+
+            if (EditorType !== undefined) {
+                localVarQueryParameter['EditorType'] = EditorType;
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/octet-stream';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"Object" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Discards an open options form
+         * @param {MediaEncodingSettingsApiHwaCancelHwaNodeOptions} body CancelHwaNodeOptions
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwanodeoptionscancel(body: MediaEncodingSettingsApiHwaCancelHwaNodeOptions, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postEncodingHwanodeoptionscancel.');
+            }
+            const localVarPath = `/Encoding/HwaNodeOptionsCancel`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"MediaEncodingSettingsApiHwaCancelHwaNodeOptions" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Runs a postback within an open options form
+         * @param {Object} body Binary stream
+         * @param {string} NodeId Id of the node being edited
+         * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms is open
+         * @param {string} CommandId The postback command
+         * @param {string} [ItemId] The item the command came from
+         * @param {string} [Data] The command&#x27;s value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwanodeoptionscommand(body: Object, NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, CommandId: string, ItemId?: string, Data?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postEncodingHwanodeoptionscommand.');
+            }
+            // verify required parameter 'NodeId' is not null or undefined
+            if (NodeId === null || NodeId === undefined) {
+                throw new RequiredError('NodeId','Required parameter NodeId was null or undefined when calling postEncodingHwanodeoptionscommand.');
+            }
+            // verify required parameter 'EditorType' is not null or undefined
+            if (EditorType === null || EditorType === undefined) {
+                throw new RequiredError('EditorType','Required parameter EditorType was null or undefined when calling postEncodingHwanodeoptionscommand.');
+            }
+            // verify required parameter 'CommandId' is not null or undefined
+            if (CommandId === null || CommandId === undefined) {
+                throw new RequiredError('CommandId','Required parameter CommandId was null or undefined when calling postEncodingHwanodeoptionscommand.');
+            }
+            const localVarPath = `/Encoding/HwaNodeOptionsCommand`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            if (NodeId !== undefined) {
+                localVarQueryParameter['NodeId'] = NodeId;
+            }
+
+            if (EditorType !== undefined) {
+                localVarQueryParameter['EditorType'] = EditorType;
+            }
+
+            if (CommandId !== undefined) {
+                localVarQueryParameter['CommandId'] = CommandId;
+            }
+
+            if (ItemId !== undefined) {
+                localVarQueryParameter['ItemId'] = ItemId;
+            }
+
+            if (Data !== undefined) {
+                localVarQueryParameter['Data'] = Data;
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/octet-stream';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"Object" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Closes a form opened from within another one
+         * @param {Object} body Binary stream
+         * @param {string} NodeId Id of the node being edited
+         * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms it was opened from
+         * @param {boolean} [IsAccepted] Whether to keep what the form holds
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwanodesuboptions(body: Object, NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, IsAccepted?: boolean, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postEncodingHwanodesuboptions.');
+            }
+            // verify required parameter 'NodeId' is not null or undefined
+            if (NodeId === null || NodeId === undefined) {
+                throw new RequiredError('NodeId','Required parameter NodeId was null or undefined when calling postEncodingHwanodesuboptions.');
+            }
+            // verify required parameter 'EditorType' is not null or undefined
+            if (EditorType === null || EditorType === undefined) {
+                throw new RequiredError('EditorType','Required parameter EditorType was null or undefined when calling postEncodingHwanodesuboptions.');
+            }
+            const localVarPath = `/Encoding/HwaNodeSubOptions`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            if (NodeId !== undefined) {
+                localVarQueryParameter['NodeId'] = NodeId;
+            }
+
+            if (EditorType !== undefined) {
+                localVarQueryParameter['EditorType'] = EditorType;
+            }
+
+            if (IsAccepted !== undefined) {
+                localVarQueryParameter['IsAccepted'] = IsAccepted;
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/octet-stream';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"Object" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * HwaConfigServiceApi - functional programming interface
+ * @export
+ */
+export const HwaConfigServiceApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Requires authentication as administrator
+         * @summary Gets the transcoding configuration graph
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingHwaconfig(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<MediaEncodingSettingsHwaProjectionHwaConfigView> {
+            const localVarFetchArgs = HwaConfigServiceApiFetchParamCreator(configuration).getEncodingHwaconfig(options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Gets whether the active configuration has unsaved changes
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingHwaconfighaschanges(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<boolean> {
+            const localVarFetchArgs = HwaConfigServiceApiFetchParamCreator(configuration).getEncodingHwaconfighaschanges(options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Gets an options form for a graph node
+         * @param {string} NodeId Id of the node
+         * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms is wanted
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingHwanodeoptions(NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<MediaEncodingSettingsHwaEditingNodeOptionsForm> {
+            const localVarFetchArgs = HwaConfigServiceApiFetchParamCreator(configuration).getEncodingHwanodeoptions(NodeId, EditorType, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Chooses the device Basic mode uses
+         * @param {MediaEncodingSettingsApiHwaSelectHwaBasicDevice} body SelectHwaBasicDevice
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwabasicdevice(body: MediaEncodingSettingsApiHwaSelectHwaBasicDevice, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<MediaEncodingSettingsHwaProjectionHwaConfigView> {
+            const localVarFetchArgs = HwaConfigServiceApiFetchParamCreator(configuration).postEncodingHwabasicdevice(body, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Runs a command against the transcoding configuration graph
+         * @param {MediaEncodingSettingsApiHwaExecuteHwaConfigCommand} body ExecuteHwaConfigCommand
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwaconfigcommand(body: MediaEncodingSettingsApiHwaExecuteHwaConfigCommand, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<MediaEncodingSettingsHwaProjectionHwaConfigView> {
+            const localVarFetchArgs = HwaConfigServiceApiFetchParamCreator(configuration).postEncodingHwaconfigcommand(body, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Discards the in-progress edit and reloads the active transcoding configuration
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwaconfigdiscardchanges(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<MediaEncodingSettingsHwaProjectionHwaConfigView> {
+            const localVarFetchArgs = HwaConfigServiceApiFetchParamCreator(configuration).postEncodingHwaconfigdiscardchanges(options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Saves the transcoding configuration
+         * @param {MediaEncodingSettingsApiHwaSaveHwaConfig} body SaveHwaConfig
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwaconfigsave(body: MediaEncodingSettingsApiHwaSaveHwaConfig, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<MediaEncodingSettingsApiHwaSaveHwaConfigResult> {
+            const localVarFetchArgs = HwaConfigServiceApiFetchParamCreator(configuration).postEncodingHwaconfigsave(body, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Stores an options form for a graph node
+         * @param {Object} body Binary stream
+         * @param {string} NodeId Id of the node
+         * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms was edited
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwanodeoptions(body: Object, NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = HwaConfigServiceApiFetchParamCreator(configuration).postEncodingHwanodeoptions(body, NodeId, EditorType, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Discards an open options form
+         * @param {MediaEncodingSettingsApiHwaCancelHwaNodeOptions} body CancelHwaNodeOptions
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwanodeoptionscancel(body: MediaEncodingSettingsApiHwaCancelHwaNodeOptions, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = HwaConfigServiceApiFetchParamCreator(configuration).postEncodingHwanodeoptionscancel(body, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Runs a postback within an open options form
+         * @param {Object} body Binary stream
+         * @param {string} NodeId Id of the node being edited
+         * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms is open
+         * @param {string} CommandId The postback command
+         * @param {string} [ItemId] The item the command came from
+         * @param {string} [Data] The command&#x27;s value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwanodeoptionscommand(body: Object, NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, CommandId: string, ItemId?: string, Data?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<MediaEncodingSettingsHwaEditingNodeOptionsForm> {
+            const localVarFetchArgs = HwaConfigServiceApiFetchParamCreator(configuration).postEncodingHwanodeoptionscommand(body, NodeId, EditorType, CommandId, ItemId, Data, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Closes a form opened from within another one
+         * @param {Object} body Binary stream
+         * @param {string} NodeId Id of the node being edited
+         * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms it was opened from
+         * @param {boolean} [IsAccepted] Whether to keep what the form holds
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwanodesuboptions(body: Object, NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, IsAccepted?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<MediaEncodingSettingsHwaEditingNodeOptionsForm> {
+            const localVarFetchArgs = HwaConfigServiceApiFetchParamCreator(configuration).postEncodingHwanodesuboptions(body, NodeId, EditorType, IsAccepted, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * HwaConfigServiceApi - factory interface
+ * @export
+ */
+export const HwaConfigServiceApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * Requires authentication as administrator
+         * @summary Gets the transcoding configuration graph
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingHwaconfig(options?: any) {
+            return HwaConfigServiceApiFp(configuration).getEncodingHwaconfig(options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Gets whether the active configuration has unsaved changes
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingHwaconfighaschanges(options?: any) {
+            return HwaConfigServiceApiFp(configuration).getEncodingHwaconfighaschanges(options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Gets an options form for a graph node
+         * @param {string} NodeId Id of the node
+         * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms is wanted
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingHwanodeoptions(NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, options?: any) {
+            return HwaConfigServiceApiFp(configuration).getEncodingHwanodeoptions(NodeId, EditorType, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Chooses the device Basic mode uses
+         * @param {MediaEncodingSettingsApiHwaSelectHwaBasicDevice} body SelectHwaBasicDevice
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwabasicdevice(body: MediaEncodingSettingsApiHwaSelectHwaBasicDevice, options?: any) {
+            return HwaConfigServiceApiFp(configuration).postEncodingHwabasicdevice(body, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Runs a command against the transcoding configuration graph
+         * @param {MediaEncodingSettingsApiHwaExecuteHwaConfigCommand} body ExecuteHwaConfigCommand
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwaconfigcommand(body: MediaEncodingSettingsApiHwaExecuteHwaConfigCommand, options?: any) {
+            return HwaConfigServiceApiFp(configuration).postEncodingHwaconfigcommand(body, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Discards the in-progress edit and reloads the active transcoding configuration
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwaconfigdiscardchanges(options?: any) {
+            return HwaConfigServiceApiFp(configuration).postEncodingHwaconfigdiscardchanges(options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Saves the transcoding configuration
+         * @param {MediaEncodingSettingsApiHwaSaveHwaConfig} body SaveHwaConfig
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwaconfigsave(body: MediaEncodingSettingsApiHwaSaveHwaConfig, options?: any) {
+            return HwaConfigServiceApiFp(configuration).postEncodingHwaconfigsave(body, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Stores an options form for a graph node
+         * @param {Object} body Binary stream
+         * @param {string} NodeId Id of the node
+         * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms was edited
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwanodeoptions(body: Object, NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, options?: any) {
+            return HwaConfigServiceApiFp(configuration).postEncodingHwanodeoptions(body, NodeId, EditorType, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Discards an open options form
+         * @param {MediaEncodingSettingsApiHwaCancelHwaNodeOptions} body CancelHwaNodeOptions
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwanodeoptionscancel(body: MediaEncodingSettingsApiHwaCancelHwaNodeOptions, options?: any) {
+            return HwaConfigServiceApiFp(configuration).postEncodingHwanodeoptionscancel(body, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Runs a postback within an open options form
+         * @param {Object} body Binary stream
+         * @param {string} NodeId Id of the node being edited
+         * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms is open
+         * @param {string} CommandId The postback command
+         * @param {string} [ItemId] The item the command came from
+         * @param {string} [Data] The command&#x27;s value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwanodeoptionscommand(body: Object, NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, CommandId: string, ItemId?: string, Data?: string, options?: any) {
+            return HwaConfigServiceApiFp(configuration).postEncodingHwanodeoptionscommand(body, NodeId, EditorType, CommandId, ItemId, Data, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Closes a form opened from within another one
+         * @param {Object} body Binary stream
+         * @param {string} NodeId Id of the node being edited
+         * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms it was opened from
+         * @param {boolean} [IsAccepted] Whether to keep what the form holds
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingHwanodesuboptions(body: Object, NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, IsAccepted?: boolean, options?: any) {
+            return HwaConfigServiceApiFp(configuration).postEncodingHwanodesuboptions(body, NodeId, EditorType, IsAccepted, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * HwaConfigServiceApi - object-oriented interface
+ * @export
+ * @class HwaConfigServiceApi
+ * @extends {BaseAPI}
+ */
+export class HwaConfigServiceApi extends BaseAPI {
+    /**
+     * Requires authentication as administrator
+     * @summary Gets the transcoding configuration graph
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HwaConfigServiceApi
+     */
+    public getEncodingHwaconfig(options?: any) {
+        return HwaConfigServiceApiFp(this.configuration).getEncodingHwaconfig(options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Gets whether the active configuration has unsaved changes
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HwaConfigServiceApi
+     */
+    public getEncodingHwaconfighaschanges(options?: any) {
+        return HwaConfigServiceApiFp(this.configuration).getEncodingHwaconfighaschanges(options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Gets an options form for a graph node
+     * @param {string} NodeId Id of the node
+     * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms is wanted
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HwaConfigServiceApi
+     */
+    public getEncodingHwanodeoptions(NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, options?: any) {
+        return HwaConfigServiceApiFp(this.configuration).getEncodingHwanodeoptions(NodeId, EditorType, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Chooses the device Basic mode uses
+     * @param {MediaEncodingSettingsApiHwaSelectHwaBasicDevice} body SelectHwaBasicDevice
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HwaConfigServiceApi
+     */
+    public postEncodingHwabasicdevice(body: MediaEncodingSettingsApiHwaSelectHwaBasicDevice, options?: any) {
+        return HwaConfigServiceApiFp(this.configuration).postEncodingHwabasicdevice(body, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Runs a command against the transcoding configuration graph
+     * @param {MediaEncodingSettingsApiHwaExecuteHwaConfigCommand} body ExecuteHwaConfigCommand
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HwaConfigServiceApi
+     */
+    public postEncodingHwaconfigcommand(body: MediaEncodingSettingsApiHwaExecuteHwaConfigCommand, options?: any) {
+        return HwaConfigServiceApiFp(this.configuration).postEncodingHwaconfigcommand(body, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Discards the in-progress edit and reloads the active transcoding configuration
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HwaConfigServiceApi
+     */
+    public postEncodingHwaconfigdiscardchanges(options?: any) {
+        return HwaConfigServiceApiFp(this.configuration).postEncodingHwaconfigdiscardchanges(options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Saves the transcoding configuration
+     * @param {MediaEncodingSettingsApiHwaSaveHwaConfig} body SaveHwaConfig
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HwaConfigServiceApi
+     */
+    public postEncodingHwaconfigsave(body: MediaEncodingSettingsApiHwaSaveHwaConfig, options?: any) {
+        return HwaConfigServiceApiFp(this.configuration).postEncodingHwaconfigsave(body, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Stores an options form for a graph node
+     * @param {Object} body Binary stream
+     * @param {string} NodeId Id of the node
+     * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms was edited
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HwaConfigServiceApi
+     */
+    public postEncodingHwanodeoptions(body: Object, NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, options?: any) {
+        return HwaConfigServiceApiFp(this.configuration).postEncodingHwanodeoptions(body, NodeId, EditorType, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Discards an open options form
+     * @param {MediaEncodingSettingsApiHwaCancelHwaNodeOptions} body CancelHwaNodeOptions
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HwaConfigServiceApi
+     */
+    public postEncodingHwanodeoptionscancel(body: MediaEncodingSettingsApiHwaCancelHwaNodeOptions, options?: any) {
+        return HwaConfigServiceApiFp(this.configuration).postEncodingHwanodeoptionscancel(body, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Runs a postback within an open options form
+     * @param {Object} body Binary stream
+     * @param {string} NodeId Id of the node being edited
+     * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms is open
+     * @param {string} CommandId The postback command
+     * @param {string} [ItemId] The item the command came from
+     * @param {string} [Data] The command&#x27;s value
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HwaConfigServiceApi
+     */
+    public postEncodingHwanodeoptionscommand(body: Object, NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, CommandId: string, ItemId?: string, Data?: string, options?: any) {
+        return HwaConfigServiceApiFp(this.configuration).postEncodingHwanodeoptionscommand(body, NodeId, EditorType, CommandId, ItemId, Data, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Closes a form opened from within another one
+     * @param {Object} body Binary stream
+     * @param {string} NodeId Id of the node being edited
+     * @param {MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType} EditorType Which of the node&#x27;s forms it was opened from
+     * @param {boolean} [IsAccepted] Whether to keep what the form holds
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HwaConfigServiceApi
+     */
+    public postEncodingHwanodesuboptions(body: Object, NodeId: string, EditorType: MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType, IsAccepted?: boolean, options?: any) {
+        return HwaConfigServiceApiFp(this.configuration).postEncodingHwanodesuboptions(body, NodeId, EditorType, IsAccepted, options)(this.fetch, this.basePath);
+    }
+
+}
+/**
+ * ImageExtractionConfigServiceApi - fetch parameter creator
+ * @export
+ */
+export const ImageExtractionConfigServiceApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Requires authentication as administrator
+         * @summary Gets the image-extraction tone-mapping settings
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingImageextractiontonemapparameters(options: any = {}): FetchArgs {
+            const localVarPath = `/Encoding/ImageExtractionToneMapParameters`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Updates the image-extraction tone-mapping settings
+         * @param {Object} body Binary stream
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingImageextractiontonemapparameters(body: Object, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postEncodingImageextractiontonemapparameters.');
+            }
+            const localVarPath = `/Encoding/ImageExtractionToneMapParameters`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarHeaderParameter['Content-Type'] = 'application/octet-stream';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"Object" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Runs an image-extraction settings command
+         * @param {Object} body Binary stream
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingImageextractiontonemapparametersCommand(body: Object, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postEncodingImageextractiontonemapparametersCommand.');
+            }
+            const localVarPath = `/Encoding/ImageExtractionToneMapParameters/Command`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarHeaderParameter['Content-Type'] = 'application/octet-stream';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"Object" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Closes an image-extraction filter options dialog
+         * @param {Object} body Binary stream
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingImageextractiontonemapparametersSuboptions(body: Object, options: any = {}): FetchArgs {
+            // verify required parameter 'body' is not null or undefined
+            if (body === null || body === undefined) {
+                throw new RequiredError('body','Required parameter body was null or undefined when calling postEncodingImageextractiontonemapparametersSuboptions.');
+            }
+            const localVarPath = `/Encoding/ImageExtractionToneMapParameters/SubOptions`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            localVarHeaderParameter['Content-Type'] = 'application/octet-stream';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"Object" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ImageExtractionConfigServiceApi - functional programming interface
+ * @export
+ */
+export const ImageExtractionConfigServiceApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Requires authentication as administrator
+         * @summary Gets the image-extraction tone-mapping settings
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingImageextractiontonemapparameters(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm> {
+            const localVarFetchArgs = ImageExtractionConfigServiceApiFetchParamCreator(configuration).getEncodingImageextractiontonemapparameters(options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Updates the image-extraction tone-mapping settings
+         * @param {Object} body Binary stream
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingImageextractiontonemapparameters(body: Object, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = ImageExtractionConfigServiceApiFetchParamCreator(configuration).postEncodingImageextractiontonemapparameters(body, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Runs an image-extraction settings command
+         * @param {Object} body Binary stream
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingImageextractiontonemapparametersCommand(body: Object, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm> {
+            const localVarFetchArgs = ImageExtractionConfigServiceApiFetchParamCreator(configuration).postEncodingImageextractiontonemapparametersCommand(body, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Closes an image-extraction filter options dialog
+         * @param {Object} body Binary stream
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingImageextractiontonemapparametersSuboptions(body: Object, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm> {
+            const localVarFetchArgs = ImageExtractionConfigServiceApiFetchParamCreator(configuration).postEncodingImageextractiontonemapparametersSuboptions(body, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * ImageExtractionConfigServiceApi - factory interface
+ * @export
+ */
+export const ImageExtractionConfigServiceApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * Requires authentication as administrator
+         * @summary Gets the image-extraction tone-mapping settings
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingImageextractiontonemapparameters(options?: any) {
+            return ImageExtractionConfigServiceApiFp(configuration).getEncodingImageextractiontonemapparameters(options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Updates the image-extraction tone-mapping settings
+         * @param {Object} body Binary stream
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingImageextractiontonemapparameters(body: Object, options?: any) {
+            return ImageExtractionConfigServiceApiFp(configuration).postEncodingImageextractiontonemapparameters(body, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Runs an image-extraction settings command
+         * @param {Object} body Binary stream
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingImageextractiontonemapparametersCommand(body: Object, options?: any) {
+            return ImageExtractionConfigServiceApiFp(configuration).postEncodingImageextractiontonemapparametersCommand(body, options)(fetch, basePath);
+        },
+        /**
+         * Requires authentication as administrator
+         * @summary Closes an image-extraction filter options dialog
+         * @param {Object} body Binary stream
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postEncodingImageextractiontonemapparametersSuboptions(body: Object, options?: any) {
+            return ImageExtractionConfigServiceApiFp(configuration).postEncodingImageextractiontonemapparametersSuboptions(body, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * ImageExtractionConfigServiceApi - object-oriented interface
+ * @export
+ * @class ImageExtractionConfigServiceApi
+ * @extends {BaseAPI}
+ */
+export class ImageExtractionConfigServiceApi extends BaseAPI {
+    /**
+     * Requires authentication as administrator
+     * @summary Gets the image-extraction tone-mapping settings
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ImageExtractionConfigServiceApi
+     */
+    public getEncodingImageextractiontonemapparameters(options?: any) {
+        return ImageExtractionConfigServiceApiFp(this.configuration).getEncodingImageextractiontonemapparameters(options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Updates the image-extraction tone-mapping settings
+     * @param {Object} body Binary stream
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ImageExtractionConfigServiceApi
+     */
+    public postEncodingImageextractiontonemapparameters(body: Object, options?: any) {
+        return ImageExtractionConfigServiceApiFp(this.configuration).postEncodingImageextractiontonemapparameters(body, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Runs an image-extraction settings command
+     * @param {Object} body Binary stream
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ImageExtractionConfigServiceApi
+     */
+    public postEncodingImageextractiontonemapparametersCommand(body: Object, options?: any) {
+        return ImageExtractionConfigServiceApiFp(this.configuration).postEncodingImageextractiontonemapparametersCommand(body, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * Requires authentication as administrator
+     * @summary Closes an image-extraction filter options dialog
+     * @param {Object} body Binary stream
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ImageExtractionConfigServiceApi
+     */
+    public postEncodingImageextractiontonemapparametersSuboptions(body: Object, options?: any) {
+        return ImageExtractionConfigServiceApiFp(this.configuration).postEncodingImageextractiontonemapparametersSuboptions(body, options)(this.fetch, this.basePath);
     }
 
 }
@@ -78841,6 +81779,124 @@ export class LocalizationServiceApi extends BaseAPI {
 
 }
 /**
+ * LogDownloadServiceApi - fetch parameter creator
+ * @export
+ */
+export const LogDownloadServiceApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Requires authentication as user
+         * @summary Downloads logs for the ticket of a download link
+         * @param {string} Ticket The ticket of the download link
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingLogsDownload(Ticket: string, options: any = {}): FetchArgs {
+            // verify required parameter 'Ticket' is not null or undefined
+            if (Ticket === null || Ticket === undefined) {
+                throw new RequiredError('Ticket','Required parameter Ticket was null or undefined when calling getEncodingLogsDownload.');
+            }
+            const localVarPath = `/Encoding/Logs/Download`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication apikeyauth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+					? configuration.apiKey("api_key")
+					: configuration.apiKey;
+                localVarQueryParameter["api_key"] = localVarApiKeyValue;
+            }
+
+            // authentication embyauth required
+
+            if (Ticket !== undefined) {
+                localVarQueryParameter['Ticket'] = Ticket;
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * LogDownloadServiceApi - functional programming interface
+ * @export
+ */
+export const LogDownloadServiceApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Requires authentication as user
+         * @summary Downloads logs for the ticket of a download link
+         * @param {string} Ticket The ticket of the download link
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingLogsDownload(Ticket: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = LogDownloadServiceApiFetchParamCreator(configuration).getEncodingLogsDownload(Ticket, options);
+            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * LogDownloadServiceApi - factory interface
+ * @export
+ */
+export const LogDownloadServiceApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * Requires authentication as user
+         * @summary Downloads logs for the ticket of a download link
+         * @param {string} Ticket The ticket of the download link
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getEncodingLogsDownload(Ticket: string, options?: any) {
+            return LogDownloadServiceApiFp(configuration).getEncodingLogsDownload(Ticket, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * LogDownloadServiceApi - object-oriented interface
+ * @export
+ * @class LogDownloadServiceApi
+ * @extends {BaseAPI}
+ */
+export class LogDownloadServiceApi extends BaseAPI {
+    /**
+     * Requires authentication as user
+     * @summary Downloads logs for the ticket of a download link
+     * @param {string} Ticket The ticket of the download link
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LogDownloadServiceApi
+     */
+    public getEncodingLogsDownload(Ticket: string, options?: any) {
+        return LogDownloadServiceApiFp(this.configuration).getEncodingLogsDownload(Ticket, options)(this.fetch, this.basePath);
+    }
+
+}
+/**
  * MediaInfoServiceApi - fetch parameter creator
  * @export
  */
@@ -107385,349 +110441,6 @@ export class TagServiceApi extends BaseAPI {
      */
     public postItemsByIdTagsDelete(body: UserLibraryRemoveTags, Id: string, options?: any) {
         return TagServiceApiFp(this.configuration).postItemsByIdTagsDelete(body, Id, options)(this.fetch, this.basePath);
-    }
-
-}
-/**
- * ToneMapOptionsServiceApi - fetch parameter creator
- * @export
- */
-export const ToneMapOptionsServiceApiFetchParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * Requires authentication as user
-         * @summary Gets the tone mapping options
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingFulltonemapoptions(options: any = {}): FetchArgs {
-            const localVarPath = `/Encoding/FullToneMapOptions`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication apikeyauth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("api_key")
-					: configuration.apiKey;
-                localVarQueryParameter["api_key"] = localVarApiKeyValue;
-            }
-
-            // authentication embyauth required
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Requires authentication as user
-         * @summary Gets the tone mapping options
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingPublictonemapoptions(options: any = {}): FetchArgs {
-            const localVarPath = `/Encoding/PublicToneMapOptions`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication apikeyauth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("api_key")
-					: configuration.apiKey;
-                localVarQueryParameter["api_key"] = localVarApiKeyValue;
-            }
-
-            // authentication embyauth required
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Updates the tone mapping options
-         * @param {Object} body Binary stream
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postEncodingFulltonemapoptions(body: Object, options: any = {}): FetchArgs {
-            // verify required parameter 'body' is not null or undefined
-            if (body === null || body === undefined) {
-                throw new RequiredError('body','Required parameter body was null or undefined when calling postEncodingFulltonemapoptions.');
-            }
-            const localVarPath = `/Encoding/FullToneMapOptions`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication apikeyauth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("api_key")
-					: configuration.apiKey;
-                localVarQueryParameter["api_key"] = localVarApiKeyValue;
-            }
-
-            // authentication embyauth required
-
-            localVarHeaderParameter['Content-Type'] = 'application/octet-stream';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"Object" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Updates the tone mapping options
-         * @param {Object} body Binary stream
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postEncodingPublictonemapoptions(body: Object, options: any = {}): FetchArgs {
-            // verify required parameter 'body' is not null or undefined
-            if (body === null || body === undefined) {
-                throw new RequiredError('body','Required parameter body was null or undefined when calling postEncodingPublictonemapoptions.');
-            }
-            const localVarPath = `/Encoding/PublicToneMapOptions`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication apikeyauth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("api_key")
-					: configuration.apiKey;
-                localVarQueryParameter["api_key"] = localVarApiKeyValue;
-            }
-
-            // authentication embyauth required
-
-            localVarHeaderParameter['Content-Type'] = 'application/octet-stream';
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"Object" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(body || {}) : (body || "");
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * ToneMapOptionsServiceApi - functional programming interface
- * @export
- */
-export const ToneMapOptionsServiceApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * Requires authentication as user
-         * @summary Gets the tone mapping options
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingFulltonemapoptions(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<EditObjectContainer> {
-            const localVarFetchArgs = ToneMapOptionsServiceApiFetchParamCreator(configuration).getEncodingFulltonemapoptions(options);
-            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    } else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Requires authentication as user
-         * @summary Gets the tone mapping options
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingPublictonemapoptions(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<EditObjectContainer> {
-            const localVarFetchArgs = ToneMapOptionsServiceApiFetchParamCreator(configuration).getEncodingPublictonemapoptions(options);
-            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    } else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Updates the tone mapping options
-         * @param {Object} body Binary stream
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postEncodingFulltonemapoptions(body: Object, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
-            const localVarFetchArgs = ToneMapOptionsServiceApiFetchParamCreator(configuration).postEncodingFulltonemapoptions(body, options);
-            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    } else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Updates the tone mapping options
-         * @param {Object} body Binary stream
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postEncodingPublictonemapoptions(body: Object, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
-            const localVarFetchArgs = ToneMapOptionsServiceApiFetchParamCreator(configuration).postEncodingPublictonemapoptions(body, options);
-            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    } else {
-                        throw response;
-                    }
-                });
-            };
-        },
-    }
-};
-
-/**
- * ToneMapOptionsServiceApi - factory interface
- * @export
- */
-export const ToneMapOptionsServiceApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
-    return {
-        /**
-         * Requires authentication as user
-         * @summary Gets the tone mapping options
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingFulltonemapoptions(options?: any) {
-            return ToneMapOptionsServiceApiFp(configuration).getEncodingFulltonemapoptions(options)(fetch, basePath);
-        },
-        /**
-         * Requires authentication as user
-         * @summary Gets the tone mapping options
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getEncodingPublictonemapoptions(options?: any) {
-            return ToneMapOptionsServiceApiFp(configuration).getEncodingPublictonemapoptions(options)(fetch, basePath);
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Updates the tone mapping options
-         * @param {Object} body Binary stream
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postEncodingFulltonemapoptions(body: Object, options?: any) {
-            return ToneMapOptionsServiceApiFp(configuration).postEncodingFulltonemapoptions(body, options)(fetch, basePath);
-        },
-        /**
-         * Requires authentication as administrator
-         * @summary Updates the tone mapping options
-         * @param {Object} body Binary stream
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postEncodingPublictonemapoptions(body: Object, options?: any) {
-            return ToneMapOptionsServiceApiFp(configuration).postEncodingPublictonemapoptions(body, options)(fetch, basePath);
-        },
-    };
-};
-
-/**
- * ToneMapOptionsServiceApi - object-oriented interface
- * @export
- * @class ToneMapOptionsServiceApi
- * @extends {BaseAPI}
- */
-export class ToneMapOptionsServiceApi extends BaseAPI {
-    /**
-     * Requires authentication as user
-     * @summary Gets the tone mapping options
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ToneMapOptionsServiceApi
-     */
-    public getEncodingFulltonemapoptions(options?: any) {
-        return ToneMapOptionsServiceApiFp(this.configuration).getEncodingFulltonemapoptions(options)(this.fetch, this.basePath);
-    }
-
-    /**
-     * Requires authentication as user
-     * @summary Gets the tone mapping options
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ToneMapOptionsServiceApi
-     */
-    public getEncodingPublictonemapoptions(options?: any) {
-        return ToneMapOptionsServiceApiFp(this.configuration).getEncodingPublictonemapoptions(options)(this.fetch, this.basePath);
-    }
-
-    /**
-     * Requires authentication as administrator
-     * @summary Updates the tone mapping options
-     * @param {Object} body Binary stream
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ToneMapOptionsServiceApi
-     */
-    public postEncodingFulltonemapoptions(body: Object, options?: any) {
-        return ToneMapOptionsServiceApiFp(this.configuration).postEncodingFulltonemapoptions(body, options)(this.fetch, this.basePath);
-    }
-
-    /**
-     * Requires authentication as administrator
-     * @summary Updates the tone mapping options
-     * @param {Object} body Binary stream
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ToneMapOptionsServiceApi
-     */
-    public postEncodingPublictonemapoptions(body: Object, options?: any) {
-        return ToneMapOptionsServiceApiFp(this.configuration).postEncodingPublictonemapoptions(body, options)(this.fetch, this.basePath);
     }
 
 }

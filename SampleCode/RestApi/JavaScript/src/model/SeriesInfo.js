@@ -17,7 +17,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The SeriesInfo model module.
 * @module model/SeriesInfo
-* @version 4.11.0.13
+* @version 4.11.0.19
 */
 export default class SeriesInfo {
     /**

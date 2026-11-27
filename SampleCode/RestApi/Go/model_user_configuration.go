@@ -28,6 +28,8 @@ type UserConfiguration struct {
 	EnableNextEpisodeAutoPlay bool `json:"EnableNextEpisodeAutoPlay,omitempty"`
 	ResumeRewindSeconds int32 `json:"ResumeRewindSeconds,omitempty"`
 	IntroSkipMode *SegmentSkipMode `json:"IntroSkipMode,omitempty"`
+	CreditsSkipMode *SegmentSkipMode `json:"CreditsSkipMode,omitempty"`
+	CommercialsSkipMode *SegmentSkipMode `json:"CommercialsSkipMode,omitempty"`
 	EnableLocalPassword bool `json:"EnableLocalPassword,omitempty"`
 	ShowSubtitlesOnSkipBack bool `json:"ShowSubtitlesOnSkipBack,omitempty"`
 	ShowSubtitlesOnLowVolume bool `json:"ShowSubtitlesOnLowVolume,omitempty"`

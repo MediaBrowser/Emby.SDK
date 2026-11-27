@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.11.0.13"
+    "version": "4.11.0.19"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -17713,251 +17713,6 @@
       },
       "x-summary": "Creates a profile"
     },
-    "/Encoding/ToneMapOptions": {
-      "get": {
-        "tags": [
-          "EncodingInfoService"
-        ],
-        "summary": "Gets available tone mapping options",
-        "description": "Requires authentication as administrator",
-        "operationId": "getEncodingTonemapoptions",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a ToneMapOptionsVisibility object.",
-            "schema": {
-              "$ref": "#/definitions/Configuration.ToneMapping.ToneMapOptionsVisibility"
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
-      },
-      "x-summary": "Gets available tone mapping options"
-    },
-    "/Encoding/FullToneMapOptions": {
-      "get": {
-        "tags": [
-          "ToneMapOptionsService"
-        ],
-        "summary": "Gets the tone mapping options",
-        "description": "Requires authentication as user",
-        "operationId": "getEncodingFulltonemapoptions",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a EditObjectContainer object.",
-            "schema": {
-              "$ref": "#/definitions/EditObjectContainer"
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      },
-      "post": {
-        "tags": [
-          "ToneMapOptionsService"
-        ],
-        "summary": "Updates the tone mapping options",
-        "description": "Requires authentication as administrator",
-        "operationId": "postEncodingFulltonemapoptions",
-        "consumes": [
-          "application/octet-stream"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Binary stream",
-            "required": true,
-            "schema": {
-              "format": "binary",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Empty response."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
-      },
-      "x-summary": "Gets the tone mapping options"
-    },
-    "/Encoding/PublicToneMapOptions": {
-      "get": {
-        "tags": [
-          "ToneMapOptionsService"
-        ],
-        "summary": "Gets the tone mapping options",
-        "description": "Requires authentication as user",
-        "operationId": "getEncodingPublictonemapoptions",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a EditObjectContainer object.",
-            "schema": {
-              "$ref": "#/definitions/EditObjectContainer"
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      },
-      "post": {
-        "tags": [
-          "ToneMapOptionsService"
-        ],
-        "summary": "Updates the tone mapping options",
-        "description": "Requires authentication as administrator",
-        "operationId": "postEncodingPublictonemapoptions",
-        "consumes": [
-          "application/octet-stream"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Binary stream",
-            "required": true,
-            "schema": {
-              "format": "binary",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Empty response."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
-      },
-      "x-summary": "Gets the tone mapping options"
-    },
     "/Encoding/SubtitleOptions": {
       "get": {
         "tags": [
@@ -18057,6 +17812,789 @@
       },
       "x-summary": "Gets the subtitle options"
     },
+    "/Encoding/ImageExtractionToneMapParameters": {
+      "get": {
+        "tags": [
+          "ImageExtractionConfigService"
+        ],
+        "summary": "Gets the image-extraction tone-mapping settings",
+        "description": "Requires authentication as administrator",
+        "operationId": "getEncodingImageextractiontonemapparameters",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a ImageExtractionToneMappingForm object.",
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.UI.ImageExtraction.ImageExtractionToneMappingForm"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "post": {
+        "tags": [
+          "ImageExtractionConfigService"
+        ],
+        "summary": "Updates the image-extraction tone-mapping settings",
+        "description": "Requires authentication as administrator",
+        "operationId": "postEncodingImageextractiontonemapparameters",
+        "consumes": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Binary stream",
+            "required": true,
+            "schema": {
+              "format": "binary",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Gets the image-extraction tone-mapping settings"
+    },
+    "/Encoding/HwaNodeOptions": {
+      "get": {
+        "tags": [
+          "HwaConfigService"
+        ],
+        "summary": "Gets an options form for a graph node",
+        "description": "Requires authentication as administrator",
+        "operationId": "getEncodingHwanodeoptions",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "NodeId",
+            "description": "Id of the node",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EditorType",
+            "description": "Which of the node's forms is wanted",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a NodeOptionsForm object.",
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Editing.NodeOptionsForm"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "post": {
+        "tags": [
+          "HwaConfigService"
+        ],
+        "summary": "Stores an options form for a graph node",
+        "description": "Requires authentication as administrator",
+        "operationId": "postEncodingHwanodeoptions",
+        "consumes": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "NodeId",
+            "description": "Id of the node",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EditorType",
+            "description": "Which of the node's forms was edited",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Binary stream",
+            "required": true,
+            "schema": {
+              "format": "binary",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Gets an options form for a graph node"
+    },
+    "/Encoding/HwaNodeOptionsCommand": {
+      "post": {
+        "tags": [
+          "HwaConfigService"
+        ],
+        "summary": "Runs a postback within an open options form",
+        "description": "Requires authentication as administrator",
+        "operationId": "postEncodingHwanodeoptionscommand",
+        "consumes": [
+          "application/octet-stream"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "NodeId",
+            "description": "Id of the node being edited",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EditorType",
+            "description": "Which of the node's forms is open",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "CommandId",
+            "description": "The postback command",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ItemId",
+            "description": "The item the command came from",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Data",
+            "description": "The command's value",
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Binary stream",
+            "required": true,
+            "schema": {
+              "format": "binary",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a NodeOptionsForm object.",
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Editing.NodeOptionsForm"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Runs a postback within an open options form"
+    },
+    "/Encoding/HwaNodeSubOptions": {
+      "post": {
+        "tags": [
+          "HwaConfigService"
+        ],
+        "summary": "Closes a form opened from within another one",
+        "description": "Requires authentication as administrator",
+        "operationId": "postEncodingHwanodesuboptions",
+        "consumes": [
+          "application/octet-stream"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "NodeId",
+            "description": "Id of the node being edited",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EditorType",
+            "description": "Which of the node's forms it was opened from",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "IsAccepted",
+            "description": "Whether to keep what the form holds",
+            "type": "boolean"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Binary stream",
+            "required": true,
+            "schema": {
+              "format": "binary",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a NodeOptionsForm object.",
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Editing.NodeOptionsForm"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Closes a form opened from within another one"
+    },
+    "/Encoding/HwaNodeOptionsCancel": {
+      "post": {
+        "tags": [
+          "HwaConfigService"
+        ],
+        "summary": "Discards an open options form",
+        "description": "Requires authentication as administrator",
+        "operationId": "postEncodingHwanodeoptionscancel",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "CancelHwaNodeOptions",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.Api.Hwa.CancelHwaNodeOptions"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Discards an open options form"
+    },
+    "/Encoding/HwaConfig": {
+      "get": {
+        "tags": [
+          "HwaConfigService"
+        ],
+        "summary": "Gets the transcoding configuration graph",
+        "description": "Requires authentication as administrator",
+        "operationId": "getEncodingHwaconfig",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a HwaConfigView object.",
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.HwaConfigView"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Gets the transcoding configuration graph"
+    },
+    "/Encoding/HwaConfigCommand": {
+      "post": {
+        "tags": [
+          "HwaConfigService"
+        ],
+        "summary": "Runs a command against the transcoding configuration graph",
+        "description": "Requires authentication as administrator",
+        "operationId": "postEncodingHwaconfigcommand",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "ExecuteHwaConfigCommand",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.Api.Hwa.ExecuteHwaConfigCommand"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a HwaConfigView object.",
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.HwaConfigView"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Runs a command against the transcoding configuration graph"
+    },
+    "/Encoding/HwaConfigSave": {
+      "post": {
+        "tags": [
+          "HwaConfigService"
+        ],
+        "summary": "Saves the transcoding configuration",
+        "description": "Requires authentication as administrator",
+        "operationId": "postEncodingHwaconfigsave",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "SaveHwaConfig",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.Api.Hwa.SaveHwaConfig"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a SaveHwaConfigResult object.",
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.Api.Hwa.SaveHwaConfigResult"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Saves the transcoding configuration"
+    },
+    "/Encoding/HwaConfigHasChanges": {
+      "get": {
+        "tags": [
+          "HwaConfigService"
+        ],
+        "summary": "Gets whether the active configuration has unsaved changes",
+        "description": "Requires authentication as administrator",
+        "operationId": "getEncodingHwaconfighaschanges",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a Boolean object.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Gets whether the active configuration has unsaved changes"
+    },
+    "/Encoding/HwaConfigDiscardChanges": {
+      "post": {
+        "tags": [
+          "HwaConfigService"
+        ],
+        "summary": "Discards the in-progress edit and reloads the active transcoding configuration",
+        "description": "Requires authentication as administrator",
+        "operationId": "postEncodingHwaconfigdiscardchanges",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a HwaConfigView object.",
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.HwaConfigView"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Discards the in-progress edit and reloads the active transcoding configuration"
+    },
+    "/Encoding/HwaBasicDevice": {
+      "post": {
+        "tags": [
+          "HwaConfigService"
+        ],
+        "summary": "Chooses the device Basic mode uses",
+        "description": "Requires authentication as administrator",
+        "operationId": "postEncodingHwabasicdevice",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "SelectHwaBasicDevice",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.Api.Hwa.SelectHwaBasicDevice"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a HwaConfigView object.",
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.HwaConfigView"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Chooses the device Basic mode uses"
+    },
     "/Encoding/FfmpegOptions": {
       "get": {
         "tags": [
@@ -18155,133 +18693,6 @@
         "x-RequiredAuthentication": "Requires authentication as administrator"
       },
       "x-summary": "Gets the ffmpeg options"
-    },
-    "/Encoding/CodecParameters": {
-      "get": {
-        "tags": [
-          "CodecParameterService"
-        ],
-        "summary": "Gets the parameters for a specified codec.",
-        "description": "Requires authentication as user",
-        "operationId": "getEncodingCodecparameters",
-        "produces": [
-          "application/json",
-          "application/xml"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "CodecId",
-            "description": "Codec Id",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ParameterContext",
-            "description": "Parameter Context",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Returning a EditObjectContainer object.",
-            "schema": {
-              "$ref": "#/definitions/EditObjectContainer"
-            }
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      },
-      "post": {
-        "tags": [
-          "CodecParameterService"
-        ],
-        "summary": "Updates the parameters for a specified codec.",
-        "description": "Requires authentication as administrator",
-        "operationId": "postEncodingCodecparameters",
-        "consumes": [
-          "application/octet-stream"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "CodecId",
-            "description": "Codec Id",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "ParameterContext",
-            "description": "Parameter Context",
-            "required": true
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Binary stream",
-            "required": true,
-            "schema": {
-              "format": "binary",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Empty response."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
-      },
-      "x-summary": "Gets the parameters for a specified codec."
     },
     "/Environment/ValidatePath": {
       "post": {
@@ -37450,27 +37861,26 @@
       },
       "x-summary": "Gets the default profile"
     },
-    "/Encoding/CodecInformation/Video": {
+    "/Encoding/Logs/Download": {
       "get": {
         "tags": [
-          "EncodingInfoService"
+          "LogDownloadService"
         ],
-        "summary": "Gets details about available video encoders and decoders",
-        "description": "Requires authentication as administrator",
-        "operationId": "getEncodingCodecinformationVideo",
-        "produces": [
-          "application/json",
-          "application/xml"
+        "summary": "Downloads logs for the ticket of a download link",
+        "description": "Requires authentication as user",
+        "operationId": "getEncodingLogsDownload",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Ticket",
+            "description": "The ticket of the download link",
+            "required": true,
+            "type": "string"
+          }
         ],
         "responses": {
           "200": {
-            "description": "Operation successful. Returning a VideoCodecBase[] object.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/VideoCodecBase"
-              }
-            }
+            "description": "Operation successful. Response content unknown."
           },
           "400": {
             "$ref": "#/responses/400"
@@ -37496,30 +37906,42 @@
             "embyauth": [ ]
           }
         ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
-      "x-summary": "Gets details about available video encoders and decoders"
+      "x-summary": "Downloads logs for the ticket of a download link"
     },
-    "/Encoding/CodecConfiguration/Defaults": {
-      "get": {
+    "/Encoding/ImageExtractionToneMapParameters/Command": {
+      "post": {
         "tags": [
-          "EncodingInfoService"
+          "ImageExtractionConfigService"
         ],
-        "summary": "Gets default codec configurations",
+        "summary": "Runs an image-extraction settings command",
         "description": "Requires authentication as administrator",
-        "operationId": "getEncodingCodecconfigurationDefaults",
+        "operationId": "postEncodingImageextractiontonemapparametersCommand",
+        "consumes": [
+          "application/octet-stream"
+        ],
         "produces": [
           "application/json",
           "application/xml"
         ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Binary stream",
+            "required": true,
+            "schema": {
+              "format": "binary",
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Operation successful. Returning a CodecConfiguration[] object.",
+            "description": "Operation successful. Returning a ImageExtractionToneMappingForm object.",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/CodecConfiguration"
-              }
+              "$ref": "#/definitions/MediaEncoding.Settings.UI.ImageExtraction.ImageExtractionToneMappingForm"
             }
           },
           "400": {
@@ -37548,7 +37970,69 @@
         ],
         "x-RequiredAuthentication": "Requires authentication as administrator"
       },
-      "x-summary": "Gets default codec configurations"
+      "x-summary": "Runs an image-extraction settings command"
+    },
+    "/Encoding/ImageExtractionToneMapParameters/SubOptions": {
+      "post": {
+        "tags": [
+          "ImageExtractionConfigService"
+        ],
+        "summary": "Closes an image-extraction filter options dialog",
+        "description": "Requires authentication as administrator",
+        "operationId": "postEncodingImageextractiontonemapparametersSuboptions",
+        "consumes": [
+          "application/octet-stream"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Binary stream",
+            "required": true,
+            "schema": {
+              "format": "binary",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a ImageExtractionToneMappingForm object.",
+            "schema": {
+              "$ref": "#/definitions/MediaEncoding.Settings.UI.ImageExtraction.ImageExtractionToneMappingForm"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Closes an image-extraction filter options dialog"
     },
     "/Games/{Id}/Similar": {
       "get": {
@@ -74316,7 +74800,10 @@
         "Chapter",
         "IntroStart",
         "IntroEnd",
-        "CreditsStart"
+        "CreditsStart",
+        "CreditsEnd",
+        "CommercialsStart",
+        "CommercialsEnd"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Entities.MarkerType"
@@ -75781,7 +76268,8 @@
         "ShowSpeaker",
         "StripStyles",
         "ConnectTo",
-        "Rotate"
+        "Rotate",
+        "TextSub2GraphicSub"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Session.Transcoding.VpStepTypes"
@@ -75965,6 +76453,12 @@
           "type": "integer"
         },
         "IntroSkipMode": {
+          "$ref": "#/definitions/SegmentSkipMode"
+        },
+        "CreditsSkipMode": {
+          "$ref": "#/definitions/SegmentSkipMode"
+        },
+        "CommercialsSkipMode": {
           "$ref": "#/definitions/SegmentSkipMode"
         },
         "EnableLocalPassword": {
@@ -77220,56 +77714,6 @@
       },
       "x-internal-ref-name": "MediaBrowser.Model.Dlna.SubtitleProfile"
     },
-    "Configuration.ToneMapping.ToneMapOptionsVisibility": {
-      "type": "object",
-      "properties": {
-        "ShowAdvanced": {
-          "type": "boolean"
-        },
-        "IsSoftwareToneMappingAvailable": {
-          "type": "boolean"
-        },
-        "IsAnyHardwareToneMappingAvailable": {
-          "type": "boolean"
-        },
-        "ShowNvidiaOptions": {
-          "type": "boolean"
-        },
-        "ShowQuickSyncOptions": {
-          "type": "boolean"
-        },
-        "ShowVaapiOptions": {
-          "type": "boolean"
-        },
-        "IsOpenClAvailable": {
-          "type": "boolean"
-        },
-        "IsOpenClSuperTAvailable": {
-          "type": "boolean"
-        },
-        "IsVaapiNativeAvailable": {
-          "type": "boolean"
-        },
-        "IsQuickSyncNativeAvailable": {
-          "type": "boolean"
-        },
-        "OperatingSystem": {
-          "$ref": "#/definitions/OperatingSystem"
-        }
-      },
-      "x-internal-ref-name": "Emby.Server.MediaEncoding.Configuration.ToneMapping.ToneMapOptionsVisibility"
-    },
-    "OperatingSystem": {
-      "enum": [
-        "Windows",
-        "Linux",
-        "OSX",
-        "BSD",
-        "Android"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.System.OperatingSystem"
-    },
     "EditObjectContainer": {
       "type": "object",
       "properties": {
@@ -77549,13 +77993,2662 @@
       },
       "x-internal-ref-name": "Emby.Web.GenericEdit.Editors.EditorBase"
     },
-    "MediaEncoding.CodecParameterContext": {
+    "MediaEncoding.Settings.UI.ImageExtraction.ImageExtractionToneMappingForm": {
+      "type": "object",
+      "properties": {
+        "IsSeparateForm": {
+          "type": "boolean"
+        },
+        "ShowResetToDefaults": {
+          "type": "boolean"
+        },
+        "Caption": {
+          "type": "string"
+        },
+        "HelpUrl": {
+          "type": "string"
+        },
+        "Selection": {
+          "type": "string"
+        },
+        "FilterId": {
+          "type": "string"
+        },
+        "Form": {
+          "$ref": "#/definitions/GenericEdit.IEditObjectContainer"
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.UI.ImageExtraction.ImageExtractionToneMappingForm"
+    },
+    "GenericEdit.IEditObjectContainer": {
+      "type": "object",
+      "properties": {
+        "Object": {
+          "type": "object"
+        },
+        "DefaultObject": {
+          "type": "object"
+        },
+        "TypeName": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.GenericEdit.IEditObjectContainer"
+    },
+    "MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeCommandType": {
       "enum": [
-        "Playback",
-        "Conversion"
+        "Configure",
+        "Conditions",
+        "LoadLimits",
+        "LoadBalancing",
+        "ToggleEnabled",
+        "Move",
+        "Insert",
+        "Delete",
+        "InsertGpuConfig",
+        "InsertGraph",
+        "InsertLoadBalancer",
+        "InsertErrorOut"
       ],
       "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Controller.MediaEncoding.CodecParameterContext"
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeCommandType"
+    },
+    "MediaEncoding.Settings.Hwa.Editing.NodeOptionsForm": {
+      "type": "object",
+      "properties": {
+        "IsSeparateForm": {
+          "type": "boolean"
+        },
+        "ShowResetToDefaults": {
+          "type": "boolean"
+        },
+        "Caption": {
+          "type": "string"
+        },
+        "HelpUrl": {
+          "type": "string"
+        },
+        "Form": {
+          "$ref": "#/definitions/GenericEdit.IEditObjectContainer"
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Hwa.Editing.NodeOptionsForm"
+    },
+    "MediaEncoding.Settings.Api.Hwa.CancelHwaNodeOptions": {
+      "type": "object",
+      "properties": {
+        "NodeId": {
+          "type": "string"
+        },
+        "EditorType": {
+          "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeCommandType"
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Api.Hwa.CancelHwaNodeOptions"
+    },
+    "MediaEncoding.Settings.Hwa.Projection.HwaConfigView": {
+      "type": "object",
+      "properties": {
+        "IsInitialized": {
+          "type": "boolean"
+        },
+        "ConfigMode": {
+          "$ref": "#/definitions/MediaEncoding.Hwa.Enums.HwaConfigMode"
+        },
+        "Root": {
+          "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeRoot"
+        },
+        "FocusNodeId": {
+          "type": "string"
+        },
+        "ConfigName": {
+          "type": "string"
+        },
+        "ConfigSavedOn": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ConfigSavedBy": {
+          "type": "string"
+        },
+        "ConfigRevision": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "HasUnsavedChanges": {
+          "type": "boolean"
+        },
+        "BasicModeOptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.BasicModeOption"
+          }
+        },
+        "BasicSelectedNodeId": {
+          "type": "string"
+        },
+        "ModeLegend": {
+          "type": "string"
+        },
+        "ChangeConfigWizardUrl": {
+          "type": "string"
+        },
+        "HelpUrl": {
+          "type": "string"
+        },
+        "ShowDeviceSelector": {
+          "type": "boolean"
+        },
+        "ShowSavedConfigInfo": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Hwa.Projection.HwaConfigView"
+    },
+    "MediaEncoding.Hwa.Enums.HwaConfigMode": {
+      "enum": [
+        "Basic",
+        "Advanced",
+        "Expert"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "Emby.MediaEncoding.Hwa.Enums.HwaConfigMode"
+    },
+    "MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeRoot": {
+      "type": "object",
+      "properties": {
+        "NodeType": {
+          "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeType"
+        },
+        "Direction": {
+          "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Enums.UiGraphDirection"
+        },
+        "Nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Nodes.Base.UiNodeBase"
+          }
+        },
+        "OperationConditions": {
+          "$ref": "#/definitions/MediaEncoding.Hwa.Conditions.ConfigOperationConditions"
+        },
+        "AdvancedConditions": {
+          "$ref": "#/definitions/MediaEncoding.Hwa.Conditions.ConfigAdvancedConditions"
+        },
+        "ConditionsSummary": {
+          "type": "string"
+        },
+        "Id": {
+          "type": "string"
+        },
+        "DisplayId": {
+          "type": "string"
+        },
+        "PrimaryText": {
+          "type": "string"
+        },
+        "SecondaryText": {
+          "type": "string"
+        },
+        "Icon": {
+          "$ref": "#/definitions/Elements.IconNames"
+        },
+        "State": {
+          "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeState"
+        },
+        "IsFocusable": {
+          "type": "boolean"
+        },
+        "StateReason": {
+          "type": "string"
+        },
+        "CanMove": {
+          "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeMoveTargets"
+        },
+        "InsertAt": {
+          "type": "string"
+        },
+        "Commands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeCommand"
+          }
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeRoot"
+    },
+    "MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeType": {
+      "enum": [
+        "Unknown",
+        "Root",
+        "Graph",
+        "LoadBalancer",
+        "GpuConfig",
+        "ErrorOut",
+        "UiHint",
+        "Divider"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeType"
+    },
+    "MediaEncoding.Settings.Hwa.Projection.Enums.UiGraphDirection": {
+      "enum": [
+        "TopDown",
+        "LeftRight",
+        "UnorderedHorizontal"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Hwa.Projection.Enums.UiGraphDirection"
+    },
+    "MediaEncoding.Settings.Hwa.Projection.Nodes.Base.UiNodeBase": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "NodeType": {
+          "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeType"
+        },
+        "DisplayId": {
+          "type": "string"
+        },
+        "PrimaryText": {
+          "type": "string"
+        },
+        "SecondaryText": {
+          "type": "string"
+        },
+        "Icon": {
+          "$ref": "#/definitions/Elements.IconNames"
+        },
+        "State": {
+          "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeState"
+        },
+        "IsFocusable": {
+          "type": "boolean"
+        },
+        "StateReason": {
+          "type": "string"
+        },
+        "CanMove": {
+          "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeMoveTargets"
+        },
+        "InsertAt": {
+          "type": "string"
+        },
+        "Commands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeCommand"
+          }
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Hwa.Projection.Nodes.Base.UiNodeBase"
+    },
+    "Elements.IconNames": {
+      "description": "Enum for icons in `Emby.Web.GenericEdit.Elements.List.GenericListItem`, `Emby.Web.GenericEdit.Elements.ButtonItem`, `Emby.Web.GenericEdit.Elements.CaptionItem`, `Emby.Web.GenericEdit.Elements.LabelItem`  and `Emby.Web.GenericEdit.Elements.TagItem` elements.\r\n\r\n\r\n`Emby.Web.GenericEdit.Elements.List.GenericListItem`\r\n\r\n\r\n`Emby.Web.GenericEdit.Elements.ButtonItem`\r\n\r\n\r\n`Emby.Web.GenericEdit.Elements.CaptionItem`\r\n\r\n\r\n`Emby.Web.GenericEdit.Elements.LabelItem`\r\n\r\n\r\n`Emby.Web.GenericEdit.Elements.TagItem`\r\n",
+      "enum": [
+        "Loading",
+        "_3d_rotation",
+        "ac_unit",
+        "access_alarm",
+        "access_alarms",
+        "access_time",
+        "accessibility",
+        "accessible",
+        "account_balance",
+        "account_balance_wallet",
+        "account_box",
+        "account_circle",
+        "account_tree",
+        "adb",
+        "add",
+        "add_a_photo",
+        "add_alarm",
+        "add_alert",
+        "add_box",
+        "add_circle",
+        "add_circle_outline",
+        "add_location",
+        "add_shopping_cart",
+        "add_to_photos",
+        "add_to_queue",
+        "adjust",
+        "airline_seat_flat",
+        "airline_seat_flat_angled",
+        "airline_seat_individual_suite",
+        "airline_seat_legroom_extra",
+        "airline_seat_legroom_normal",
+        "airline_seat_legroom_reduced",
+        "airline_seat_recline_extra",
+        "airline_seat_recline_normal",
+        "airplanemode_active",
+        "airplanemode_inactive",
+        "airplay",
+        "airport_shuttle",
+        "alarm",
+        "alarm_add",
+        "alarm_off",
+        "alarm_on",
+        "album",
+        "all_inclusive",
+        "all_out",
+        "android",
+        "announcement",
+        "apps",
+        "archive",
+        "arrow_back",
+        "arrow_downward",
+        "arrow_drop_down",
+        "arrow_drop_down_circle",
+        "arrow_drop_up",
+        "arrow_forward",
+        "arrow_upward",
+        "art_track",
+        "aspect_ratio",
+        "assessment",
+        "assignment",
+        "assignment_ind",
+        "assignment_late",
+        "assignment_return",
+        "assignment_returned",
+        "assignment_turned_in",
+        "assistant",
+        "assistant_photo",
+        "attach_file",
+        "attach_money",
+        "attachment",
+        "audiotrack",
+        "autorenew",
+        "av_timer",
+        "backspace",
+        "backup",
+        "battery_alert",
+        "battery_charging_full",
+        "battery_full",
+        "battery_std",
+        "battery_unknown",
+        "beach_access",
+        "beenhere",
+        "block",
+        "bluetooth",
+        "bluetooth_audio",
+        "bluetooth_connected",
+        "bluetooth_disabled",
+        "bluetooth_searching",
+        "blur_circular",
+        "blur_linear",
+        "blur_off",
+        "blur_on",
+        "book",
+        "bookmark",
+        "bookmark_border",
+        "bookmarks",
+        "border_all",
+        "border_bottom",
+        "border_clear",
+        "border_color",
+        "border_horizontal",
+        "border_inner",
+        "border_left",
+        "border_outer",
+        "border_right",
+        "border_style",
+        "border_top",
+        "border_vertical",
+        "branding_watermark",
+        "brightness_1",
+        "brightness_2",
+        "brightness_3",
+        "brightness_4",
+        "brightness_5",
+        "brightness_6",
+        "brightness_7",
+        "brightness_auto",
+        "brightness_high",
+        "brightness_low",
+        "brightness_medium",
+        "broken_image",
+        "brush",
+        "bubble_chart",
+        "bug_report",
+        "build",
+        "burst_mode",
+        "business",
+        "business_center",
+        "cached",
+        "cake",
+        "calendar_today",
+        "call",
+        "call_end",
+        "call_made",
+        "call_merge",
+        "call_missed",
+        "call_missed_outgoing",
+        "call_received",
+        "call_split",
+        "call_to_action",
+        "camera",
+        "camera_alt",
+        "camera_enhance",
+        "camera_front",
+        "camera_rear",
+        "camera_roll",
+        "cancel",
+        "card_giftcard",
+        "card_membership",
+        "card_travel",
+        "casino",
+        "cast",
+        "cast_connected",
+        "center_focus_strong",
+        "center_focus_weak",
+        "change_history",
+        "chat",
+        "chat_bubble",
+        "chat_bubble_outline",
+        "check",
+        "check_box",
+        "check_box_outline_blank",
+        "check_circle",
+        "check_circle_outline",
+        "chevron_left",
+        "chevron_right",
+        "child_care",
+        "child_friendly",
+        "chrome_reader_mode",
+        "class",
+        "clear",
+        "clear_all",
+        "close",
+        "closed_caption",
+        "cloud",
+        "cloud_circle",
+        "cloud_done",
+        "cloud_download",
+        "cloud_off",
+        "cloud_queue",
+        "cloud_upload",
+        "code",
+        "collections",
+        "collections_bookmark",
+        "color_lens",
+        "colorize",
+        "comment",
+        "compare",
+        "compare_arrows",
+        "computer",
+        "confirmation_number",
+        "contact_mail",
+        "contact_phone",
+        "contacts",
+        "content_copy",
+        "content_cut",
+        "content_paste",
+        "control_point",
+        "control_point_duplicate",
+        "copyright",
+        "create",
+        "create_new_folder",
+        "credit_card",
+        "crop",
+        "crop_16_9",
+        "crop_3_2",
+        "crop_5_4",
+        "crop_7_5",
+        "crop_din",
+        "crop_free",
+        "crop_landscape",
+        "crop_original",
+        "crop_portrait",
+        "crop_rotate",
+        "crop_square",
+        "dashboard",
+        "data_usage",
+        "date_range",
+        "dehaze",
+        "delete",
+        "delete_forever",
+        "delete_outline",
+        "delete_sweep",
+        "description",
+        "desktop_mac",
+        "desktop_windows",
+        "details",
+        "developer_board",
+        "developer_mode",
+        "device_hub",
+        "devices",
+        "devices_other",
+        "dialer_sip",
+        "dialpad",
+        "directions",
+        "directions_bike",
+        "directions_boat",
+        "directions_bus",
+        "directions_car",
+        "directions_railway",
+        "directions_run",
+        "directions_subway",
+        "directions_transit",
+        "directions_walk",
+        "disc_full",
+        "dns",
+        "do_not_disturb",
+        "do_not_disturb_alt",
+        "do_not_disturb_off",
+        "do_not_disturb_on",
+        "dock",
+        "domain",
+        "done",
+        "done_all",
+        "donut_large",
+        "donut_small",
+        "drafts",
+        "drag_handle",
+        "drive_eta",
+        "dvr",
+        "edit",
+        "edit_location",
+        "eject",
+        "email",
+        "enhanced_encryption",
+        "equalizer",
+        "error",
+        "error_outline",
+        "euro_symbol",
+        "ev_station",
+        "event",
+        "event_available",
+        "event_busy",
+        "event_note",
+        "event_seat",
+        "exit_to_app",
+        "expand_less",
+        "expand_more",
+        "explicit",
+        "explore",
+        "exposure",
+        "exposure_neg_1",
+        "exposure_neg_2",
+        "exposure_plus_1",
+        "exposure_plus_2",
+        "exposure_zero",
+        "extension",
+        "face",
+        "fast_forward",
+        "fast_rewind",
+        "favorite",
+        "favorite_border",
+        "featured_play_list",
+        "featured_video",
+        "feedback",
+        "fiber_dvr",
+        "fiber_manual_record",
+        "fiber_new",
+        "fiber_pin",
+        "fiber_smart_record",
+        "file_download",
+        "file_upload",
+        "filter",
+        "filter_1",
+        "filter_2",
+        "filter_3",
+        "filter_4",
+        "filter_5",
+        "filter_6",
+        "filter_7",
+        "filter_8",
+        "filter_9",
+        "filter_9_plus",
+        "filter_b_and_w",
+        "filter_center_focus",
+        "filter_drama",
+        "filter_frames",
+        "filter_hdr",
+        "filter_list",
+        "filter_none",
+        "filter_tilt_shift",
+        "filter_vintage",
+        "find_in_page",
+        "find_replace",
+        "fingerprint",
+        "first_page",
+        "fitness_center",
+        "flag",
+        "flare",
+        "flash_auto",
+        "flash_off",
+        "flash_on",
+        "flight",
+        "flight_land",
+        "flight_takeoff",
+        "flip",
+        "flip_to_back",
+        "flip_to_front",
+        "folder",
+        "folder_open",
+        "folder_shared",
+        "folder_special",
+        "font_download",
+        "format_align_center",
+        "format_align_justify",
+        "format_align_left",
+        "format_align_right",
+        "format_bold",
+        "format_clear",
+        "format_color_fill",
+        "format_color_reset",
+        "format_color_text",
+        "format_indent_decrease",
+        "format_indent_increase",
+        "format_italic",
+        "format_line_spacing",
+        "format_list_bulleted",
+        "format_list_numbered",
+        "format_paint",
+        "format_quote",
+        "format_shapes",
+        "format_size",
+        "format_strikethrough",
+        "format_textdirection_l_to_r",
+        "format_textdirection_r_to_l",
+        "format_underlined",
+        "forum",
+        "forward",
+        "forward_10",
+        "forward_30",
+        "forward_5",
+        "free_breakfast",
+        "fullscreen",
+        "fullscreen_exit",
+        "functions",
+        "g_translate",
+        "gamepad",
+        "games",
+        "gavel",
+        "gesture",
+        "get_app",
+        "gif",
+        "golf_course",
+        "gps_fixed",
+        "gps_not_fixed",
+        "gps_off",
+        "grade",
+        "gradient",
+        "grain",
+        "graphic_eq",
+        "grid_off",
+        "grid_on",
+        "group",
+        "group_add",
+        "group_work",
+        "hd",
+        "hdr_off",
+        "hdr_on",
+        "hdr_strong",
+        "hdr_weak",
+        "headset",
+        "headset_mic",
+        "healing",
+        "hearing",
+        "help",
+        "help_outline",
+        "high_quality",
+        "highlight",
+        "highlight_off",
+        "history",
+        "history_toggle_off",
+        "home",
+        "hot_tub",
+        "hotel",
+        "hourglass_empty",
+        "hourglass_full",
+        "http",
+        "https",
+        "image",
+        "image_aspect_ratio",
+        "import_contacts",
+        "import_export",
+        "important_devices",
+        "inbox",
+        "indeterminate_check_box",
+        "info",
+        "info_outline",
+        "input",
+        "insert_chart",
+        "insert_comment",
+        "insert_drive_file",
+        "insert_emoticon",
+        "insert_invitation",
+        "insert_link",
+        "insert_photo",
+        "invert_colors",
+        "invert_colors_off",
+        "iso",
+        "keyboard",
+        "keyboard_arrow_down",
+        "keyboard_arrow_left",
+        "keyboard_arrow_right",
+        "keyboard_arrow_up",
+        "keyboard_backspace",
+        "keyboard_capslock",
+        "keyboard_hide",
+        "keyboard_return",
+        "keyboard_tab",
+        "keyboard_voice",
+        "kitchen",
+        "label",
+        "label_outline",
+        "landscape",
+        "language",
+        "laptop",
+        "laptop_chromebook",
+        "laptop_mac",
+        "laptop_windows",
+        "last_page",
+        "launch",
+        "layers",
+        "layers_clear",
+        "leak_add",
+        "leak_remove",
+        "lens",
+        "library_add",
+        "library_books",
+        "library_music",
+        "lightbulb_outline",
+        "line_style",
+        "line_weight",
+        "linear_scale",
+        "link",
+        "linked_camera",
+        "list",
+        "list_alt",
+        "live_help",
+        "live_tv",
+        "login",
+        "local_activity",
+        "local_airport",
+        "local_atm",
+        "local_bar",
+        "local_cafe",
+        "local_car_wash",
+        "local_convenience_store",
+        "local_dining",
+        "local_drink",
+        "local_florist",
+        "local_gas_station",
+        "local_grocery_store",
+        "local_hospital",
+        "local_hotel",
+        "local_laundry_service",
+        "local_library",
+        "local_mall",
+        "local_movies",
+        "local_offer",
+        "local_parking",
+        "local_pharmacy",
+        "local_phone",
+        "local_pizza",
+        "local_play",
+        "local_post_office",
+        "local_printshop",
+        "local_see",
+        "local_shipping",
+        "local_taxi",
+        "location_city",
+        "location_disabled",
+        "location_off",
+        "location_on",
+        "location_searching",
+        "lock",
+        "lock_open",
+        "lock_outline",
+        "looks",
+        "looks_3",
+        "looks_4",
+        "looks_5",
+        "looks_6",
+        "looks_one",
+        "looks_two",
+        "loop",
+        "loupe",
+        "low_priority",
+        "loyalty",
+        "mail",
+        "mail_outline",
+        "map",
+        "markunread",
+        "markunread_mailbox",
+        "memory",
+        "menu",
+        "merge_type",
+        "message",
+        "mic",
+        "mic_none",
+        "mic_off",
+        "mms",
+        "mode_comment",
+        "mode_edit",
+        "monetization_on",
+        "money_off",
+        "monochrome_photos",
+        "mood",
+        "mood_bad",
+        "more",
+        "more_horiz",
+        "more_vert",
+        "motorcycle",
+        "mouse",
+        "move_to_inbox",
+        "movie",
+        "movie_creation",
+        "movie_filter",
+        "multiline_chart",
+        "music_note",
+        "music_video",
+        "my_location",
+        "nature",
+        "nature_people",
+        "navigate_before",
+        "navigate_next",
+        "navigation",
+        "near_me",
+        "network_cell",
+        "network_check",
+        "network_locked",
+        "network_wifi",
+        "new_releases",
+        "next_week",
+        "nfc",
+        "no_encryption",
+        "no_sim",
+        "not_interested",
+        "note",
+        "note_add",
+        "notifications",
+        "notifications_active",
+        "notifications_none",
+        "notifications_off",
+        "notifications_paused",
+        "offline_pin",
+        "ondemand_video",
+        "opacity",
+        "open_in_browser",
+        "open_in_new",
+        "open_with",
+        "pages",
+        "pageview",
+        "palette",
+        "pan_tool",
+        "panorama",
+        "panorama_fish_eye",
+        "panorama_horizontal",
+        "panorama_vertical",
+        "panorama_wide_angle",
+        "party_mode",
+        "pause",
+        "pause_circle_filled",
+        "pause_circle_outline",
+        "payment",
+        "people",
+        "people_outline",
+        "perm_camera_mic",
+        "perm_contact_calendar",
+        "perm_data_setting",
+        "perm_device_information",
+        "perm_identity",
+        "perm_media",
+        "perm_phone_msg",
+        "perm_scan_wifi",
+        "person",
+        "person_add",
+        "person_outline",
+        "person_pin",
+        "person_pin_circle",
+        "personal_video",
+        "pets",
+        "phone",
+        "phone_android",
+        "phone_bluetooth_speaker",
+        "phone_forwarded",
+        "phone_in_talk",
+        "phone_iphone",
+        "phone_locked",
+        "phone_missed",
+        "phone_paused",
+        "phonelink",
+        "phonelink_erase",
+        "phonelink_lock",
+        "phonelink_off",
+        "phonelink_ring",
+        "phonelink_setup",
+        "photo",
+        "photo_album",
+        "photo_camera",
+        "photo_filter",
+        "photo_library",
+        "photo_size_select_actual",
+        "photo_size_select_large",
+        "photo_size_select_small",
+        "picture_as_pdf",
+        "picture_in_picture",
+        "picture_in_picture_alt",
+        "pie_chart",
+        "pie_chart_outlined",
+        "pin_drop",
+        "place",
+        "play_arrow",
+        "play_circle_filled",
+        "play_circle_outline",
+        "play_for_work",
+        "playlist_add",
+        "playlist_add_check",
+        "playlist_play",
+        "plus_one",
+        "poll",
+        "polymer",
+        "pool",
+        "portable_wifi_off",
+        "portrait",
+        "power",
+        "power_input",
+        "power_settings_new",
+        "pregnant_woman",
+        "present_to_all",
+        "print",
+        "priority_high",
+        "public",
+        "publish",
+        "query_builder",
+        "question_answer",
+        "queue",
+        "queue_music",
+        "queue_play_next",
+        "radio",
+        "radio_button_checked",
+        "radio_button_unchecked",
+        "rate_review",
+        "receipt",
+        "recent_actors",
+        "record_voice_over",
+        "redeem",
+        "redo",
+        "refresh",
+        "remove",
+        "remove_circle",
+        "remove_circle_outline",
+        "remove_from_queue",
+        "remove_red_eye",
+        "remove_shopping_cart",
+        "reorder",
+        "repeat",
+        "repeat_one",
+        "replay",
+        "replay_10",
+        "replay_30",
+        "replay_5",
+        "reply",
+        "reply_all",
+        "report",
+        "report_problem",
+        "restaurant",
+        "restaurant_menu",
+        "restore",
+        "restore_page",
+        "ring_volume",
+        "room",
+        "room_service",
+        "rotate_90_degrees_ccw",
+        "rotate_left",
+        "rotate_right",
+        "rounded_corner",
+        "router",
+        "rowing",
+        "rss_feed",
+        "rv_hookup",
+        "satellite",
+        "save",
+        "scanner",
+        "schedule",
+        "school",
+        "screen_lock_landscape",
+        "screen_lock_portrait",
+        "screen_lock_rotation",
+        "screen_rotation",
+        "screen_share",
+        "sd_card",
+        "sd_storage",
+        "search",
+        "security",
+        "select_all",
+        "send",
+        "sentiment_dissatisfied",
+        "sentiment_neutral",
+        "sentiment_satisfied",
+        "sentiment_very_dissatisfied",
+        "sentiment_very_satisfied",
+        "settings",
+        "settings_applications",
+        "settings_backup_restore",
+        "settings_bluetooth",
+        "settings_brightness",
+        "settings_cell",
+        "settings_ethernet",
+        "settings_input_antenna",
+        "settings_input_component",
+        "settings_input_composite",
+        "settings_input_hdmi",
+        "settings_input_svideo",
+        "settings_overscan",
+        "settings_phone",
+        "settings_power",
+        "settings_remote",
+        "settings_system_daydream",
+        "settings_voice",
+        "share",
+        "shop",
+        "shop_two",
+        "shopping_basket",
+        "shopping_cart",
+        "short_text",
+        "show_chart",
+        "shuffle",
+        "signal_cellular_4_bar",
+        "signal_cellular_connected_no_internet_4_bar",
+        "signal_cellular_no_sim",
+        "signal_cellular_null",
+        "signal_cellular_off",
+        "signal_wifi_4_bar",
+        "signal_wifi_4_bar_lock",
+        "signal_wifi_off",
+        "sim_card",
+        "sim_card_alert",
+        "skip_next",
+        "skip_previous",
+        "slideshow",
+        "slow_motion_video",
+        "smartphone",
+        "smoke_free",
+        "smoking_rooms",
+        "sms",
+        "sms_failed",
+        "snooze",
+        "sort",
+        "sort_by_alpha",
+        "spa",
+        "space_bar",
+        "speaker",
+        "speaker_group",
+        "speaker_notes",
+        "speaker_notes_off",
+        "speaker_phone",
+        "spellcheck",
+        "star",
+        "star_border",
+        "star_half",
+        "stars",
+        "stay_current_landscape",
+        "stay_current_portrait",
+        "stay_primary_landscape",
+        "stay_primary_portrait",
+        "stop",
+        "stop_screen_share",
+        "storage",
+        "store",
+        "store_mall_directory",
+        "straighten",
+        "streetview",
+        "strikethrough_s",
+        "style",
+        "subdirectory_arrow_left",
+        "subdirectory_arrow_right",
+        "subject",
+        "subscriptions",
+        "subtitles",
+        "subway",
+        "supervisor_account",
+        "surround_sound",
+        "swap_calls",
+        "swap_horiz",
+        "swap_vert",
+        "swap_vertical_circle",
+        "switch_camera",
+        "switch_video",
+        "sync",
+        "sync_alt",
+        "sync_disabled",
+        "sync_problem",
+        "system_update",
+        "system_update_alt",
+        "tab",
+        "tab_unselected",
+        "tablet",
+        "tablet_android",
+        "tablet_mac",
+        "tag_faces",
+        "tap_and_play",
+        "terrain",
+        "text_fields",
+        "text_format",
+        "textsms",
+        "texture",
+        "theaters",
+        "thumb_down",
+        "thumb_up",
+        "thumbs_up_down",
+        "time_to_leave",
+        "timelapse",
+        "timeline",
+        "timer",
+        "timer_10",
+        "timer_3",
+        "timer_off",
+        "title",
+        "toc",
+        "today",
+        "toll",
+        "tonality",
+        "touch_app",
+        "toys",
+        "track_changes",
+        "traffic",
+        "train",
+        "tram",
+        "transfer_within_a_station",
+        "transform",
+        "translate",
+        "trending_down",
+        "trending_flat",
+        "trending_up",
+        "trip_origin",
+        "tune",
+        "turned_in",
+        "turned_in_not",
+        "tv",
+        "unarchive",
+        "undo",
+        "unfold_less",
+        "unfold_more",
+        "update",
+        "usb",
+        "verified_user",
+        "vertical_align_bottom",
+        "vertical_align_center",
+        "vertical_align_top",
+        "vibration",
+        "video_call",
+        "video_label",
+        "video_library",
+        "videocam",
+        "videocam_off",
+        "videogame_asset",
+        "view_agenda",
+        "view_array",
+        "view_carousel",
+        "view_column",
+        "view_comfy",
+        "view_compact",
+        "view_day",
+        "view_headline",
+        "view_list",
+        "view_module",
+        "view_quilt",
+        "view_stream",
+        "view_week",
+        "vignette",
+        "visibility",
+        "visibility_off",
+        "voice_chat",
+        "voicemail",
+        "volume_down",
+        "volume_mute",
+        "volume_off",
+        "volume_up",
+        "vpn_key",
+        "vpn_lock",
+        "wallpaper",
+        "warning",
+        "watch",
+        "watch_later",
+        "wb_auto",
+        "wb_cloudy",
+        "wb_incandescent",
+        "wb_iridescent",
+        "wb_sunny",
+        "wc",
+        "web",
+        "web_asset",
+        "weekend",
+        "whatshot",
+        "widgets",
+        "wifi",
+        "wifi_lock",
+        "wifi_tethering",
+        "work",
+        "work_history",
+        "wrap_text",
+        "youtube_searched_for",
+        "zoom_in",
+        "zoom_out",
+        "zoom_out_map",
+        "_10k",
+        "_10mp",
+        "_11mp",
+        "_123",
+        "_12mp",
+        "_13mp",
+        "_14mp",
+        "_15mp",
+        "_16mp",
+        "_17mp",
+        "_18_up_rating",
+        "_18mp",
+        "_19mp",
+        "_1k",
+        "_1k_plus",
+        "_1x_mobiledata",
+        "_20mp",
+        "_21mp",
+        "_22mp",
+        "_23mp",
+        "_24mp",
+        "_2k",
+        "_2k_plus",
+        "_2mp",
+        "_30fps",
+        "_30fps_select",
+        "_360",
+        "_3g_mobiledata",
+        "_3k",
+        "_3k_plus",
+        "_3mp",
+        "_3p",
+        "_4g_mobiledata",
+        "_4g_plus_mobiledata",
+        "_4k",
+        "_4k_plus",
+        "_4mp",
+        "_5g",
+        "_5k",
+        "_5k_plus",
+        "_5mp",
+        "_60fps",
+        "_60fps_select",
+        "_6_ft_apart",
+        "_6k",
+        "_6k_plus",
+        "_6mp",
+        "_7k",
+        "_7k_plus",
+        "_7mp",
+        "_8k",
+        "_8k_plus",
+        "_8mp",
+        "_9k",
+        "_9k_plus",
+        "_9mp",
+        "abc",
+        "access_time_filled",
+        "accessibility_new",
+        "accessible_forward",
+        "ad_units",
+        "add_business",
+        "add_card",
+        "add_chart",
+        "add_comment",
+        "add_home",
+        "add_home_work",
+        "add_ic_call",
+        "add_link",
+        "add_location_alt",
+        "add_moderator",
+        "add_photo_alternate",
+        "add_reaction",
+        "add_road",
+        "add_task",
+        "add_to_drive",
+        "add_to_home_screen",
+        "addchart",
+        "adf_scanner",
+        "admin_panel_settings",
+        "adobe",
+        "ads_click",
+        "agriculture",
+        "air",
+        "airline_stops",
+        "airlines",
+        "airplane_ticket",
+        "airplanemode_off",
+        "airplanemode_on",
+        "align_horizontal_center",
+        "align_horizontal_left",
+        "align_horizontal_right",
+        "align_vertical_bottom",
+        "align_vertical_center",
+        "align_vertical_top",
+        "all_inbox",
+        "alt_route",
+        "alternate_email",
+        "amp_stories",
+        "analytics",
+        "anchor",
+        "animation",
+        "aod",
+        "apartment",
+        "api",
+        "app_blocking",
+        "app_registration",
+        "app_settings_alt",
+        "app_shortcut",
+        "apple",
+        "approval",
+        "apps_outage",
+        "architecture",
+        "area_chart",
+        "arrow_back_ios",
+        "arrow_back_ios_new",
+        "arrow_circle_down",
+        "arrow_circle_left",
+        "arrow_circle_right",
+        "arrow_circle_up",
+        "arrow_forward_ios",
+        "arrow_left",
+        "arrow_outward",
+        "arrow_right",
+        "arrow_right_alt",
+        "article",
+        "assist_walker",
+        "assistant_direction",
+        "assured_workload",
+        "atm",
+        "attach_email",
+        "attractions",
+        "attribution",
+        "audio_file",
+        "auto_awesome",
+        "auto_awesome_mosaic",
+        "auto_awesome_motion",
+        "auto_delete",
+        "auto_fix_high",
+        "auto_fix_normal",
+        "auto_fix_off",
+        "auto_graph",
+        "auto_mode",
+        "auto_stories",
+        "autofps_select",
+        "baby_changing_station",
+        "back_hand",
+        "backpack",
+        "backup_table",
+        "badge",
+        "bakery_dining",
+        "balance",
+        "balcony",
+        "ballot",
+        "bar_chart",
+        "batch_prediction",
+        "bathroom",
+        "bathtub",
+        "battery_0_bar",
+        "battery_1_bar",
+        "battery_2_bar",
+        "battery_3_bar",
+        "battery_4_bar",
+        "battery_5_bar",
+        "battery_6_bar",
+        "battery_saver",
+        "bed",
+        "bedroom_baby",
+        "bedroom_child",
+        "bedroom_parent",
+        "bedtime",
+        "bedtime_off",
+        "bento",
+        "bike_scooter",
+        "biotech",
+        "blender",
+        "blind",
+        "blinds",
+        "blinds_closed",
+        "bloodtype",
+        "bluetooth_drive",
+        "bolt",
+        "book_online",
+        "bookmark_add",
+        "bookmark_added",
+        "bookmark_outline",
+        "bookmark_remove",
+        "boy",
+        "breakfast_dining",
+        "broadcast_on_home",
+        "broadcast_on_personal",
+        "browse_gallery",
+        "browser_not_supported",
+        "browser_updated",
+        "brunch_dining",
+        "build_circle",
+        "bungalow",
+        "bus_alert",
+        "cabin",
+        "cable",
+        "calculate",
+        "calendar_month",
+        "calendar_view_day",
+        "calendar_view_month",
+        "calendar_view_week",
+        "camera_indoor",
+        "camera_outdoor",
+        "cameraswitch",
+        "campaign",
+        "cancel_presentation",
+        "cancel_schedule_send",
+        "candlestick_chart",
+        "car_crash",
+        "car_rental",
+        "car_repair",
+        "carpenter",
+        "cases",
+        "cast_for_education",
+        "castle",
+        "catching_pokemon",
+        "category",
+        "celebration",
+        "cell_tower",
+        "cell_wifi",
+        "chair",
+        "chair_alt",
+        "chalet",
+        "change_circle",
+        "charging_station",
+        "checklist",
+        "checklist_rtl",
+        "checkroom",
+        "church",
+        "circle",
+        "circle_notifications",
+        "clean_hands",
+        "cleaning_services",
+        "close_fullscreen",
+        "closed_caption_disabled",
+        "closed_caption_off",
+        "cloud_sync",
+        "co2",
+        "co_present",
+        "code_off",
+        "coffee",
+        "coffee_maker",
+        "comment_bank",
+        "comments_disabled",
+        "commit",
+        "commute",
+        "compass_calibration",
+        "compost",
+        "compress",
+        "confirmation_num",
+        "connect_without_contact",
+        "connected_tv",
+        "connecting_airports",
+        "construction",
+        "contact_emergency",
+        "contact_page",
+        "contact_support",
+        "contactless",
+        "content_paste_go",
+        "content_paste_off",
+        "content_paste_search",
+        "contrast",
+        "control_camera",
+        "cookie",
+        "copy",
+        "copy_all",
+        "coronavirus",
+        "corporate_fare",
+        "cottage",
+        "countertops",
+        "credit_card_off",
+        "credit_score",
+        "crib",
+        "crisis_alert",
+        "cruelty_free",
+        "css",
+        "currency_bitcoin",
+        "currency_exchange",
+        "currency_franc",
+        "currency_lira",
+        "currency_pound",
+        "currency_ruble",
+        "currency_rupee",
+        "currency_yen",
+        "currency_yuan",
+        "curtains",
+        "curtains_closed",
+        "cut",
+        "cyclone",
+        "dangerous",
+        "dark_mode",
+        "dashboard_customize",
+        "data_array",
+        "data_exploration",
+        "data_object",
+        "data_saver_off",
+        "data_saver_on",
+        "data_thresholding",
+        "dataset",
+        "dataset_linked",
+        "deblur",
+        "deck",
+        "delivery_dining",
+        "density_large",
+        "density_medium",
+        "density_small",
+        "departure_board",
+        "deselect",
+        "design_services",
+        "desk",
+        "desktop_access_disabled",
+        "developer_board_off",
+        "device_thermostat",
+        "device_unknown",
+        "devices_fold",
+        "diamond",
+        "difference",
+        "dining",
+        "dinner_dining",
+        "directions_boat_filled",
+        "directions_bus_filled",
+        "directions_car_filled",
+        "directions_ferry",
+        "directions_off",
+        "directions_railway_filled",
+        "directions_subway_filled",
+        "directions_train",
+        "directions_transit_filled",
+        "dirty_lens",
+        "disabled_by_default",
+        "disabled_visible",
+        "discord",
+        "discount",
+        "display_settings",
+        "diversity_1",
+        "diversity_2",
+        "diversity_3",
+        "dnd_forwardslash",
+        "do_disturb",
+        "do_disturb_alt",
+        "do_disturb_off",
+        "do_disturb_on",
+        "do_not_disturb_on_total_silence",
+        "do_not_step",
+        "do_not_touch",
+        "document_scanner",
+        "domain_add",
+        "domain_disabled",
+        "domain_verification",
+        "done_outline",
+        "door_back",
+        "door_front",
+        "door_sliding",
+        "doorbell",
+        "double_arrow",
+        "downhill_skiing",
+        "download",
+        "download_done",
+        "download_for_offline",
+        "downloading",
+        "drag_indicator",
+        "draw",
+        "drive_file_move",
+        "drive_file_move_rtl",
+        "drive_file_rename_outline",
+        "drive_folder_upload",
+        "dry",
+        "dry_cleaning",
+        "duo",
+        "dynamic_feed",
+        "dynamic_form",
+        "e_mobiledata",
+        "earbuds",
+        "earbuds_battery",
+        "east",
+        "eco",
+        "edgesensor_high",
+        "edgesensor_low",
+        "edit_attributes",
+        "edit_calendar",
+        "edit_location_alt",
+        "edit_note",
+        "edit_notifications",
+        "edit_off",
+        "edit_road",
+        "egg",
+        "egg_alt",
+        "elderly",
+        "elderly_woman",
+        "electric_bike",
+        "electric_bolt",
+        "electric_car",
+        "electric_meter",
+        "electric_moped",
+        "electric_rickshaw",
+        "electric_scooter",
+        "electrical_services",
+        "elevator",
+        "emergency",
+        "emergency_recording",
+        "emergency_share",
+        "emoji_emotions",
+        "emoji_events",
+        "emoji_flags",
+        "emoji_food_beverage",
+        "emoji_nature",
+        "emoji_objects",
+        "emoji_people",
+        "emoji_symbols",
+        "emoji_transportation",
+        "energy_savings_leaf",
+        "engineering",
+        "enhance_photo_translate",
+        "escalator",
+        "escalator_warning",
+        "euro",
+        "event_repeat",
+        "expand",
+        "expand_circle_down",
+        "explore_off",
+        "exposure_minus_1",
+        "exposure_minus_2",
+        "extension_off",
+        "face_2",
+        "face_3",
+        "face_4",
+        "face_5",
+        "face_6",
+        "face_retouching_natural",
+        "face_retouching_off",
+        "face_unlock",
+        "facebook",
+        "fact_check",
+        "factory",
+        "family_restroom",
+        "fastfood",
+        "favorite_outline",
+        "fax",
+        "feed",
+        "female",
+        "fence",
+        "festival",
+        "file_copy",
+        "file_download_done",
+        "file_download_off",
+        "file_open",
+        "file_present",
+        "filter_alt",
+        "filter_alt_off",
+        "filter_list_off",
+        "fire_extinguisher",
+        "fire_hydrant_alt",
+        "fire_truck",
+        "fireplace",
+        "fit_screen",
+        "fitbit",
+        "flag_circle",
+        "flaky",
+        "flashlight_off",
+        "flashlight_on",
+        "flatware",
+        "flight_class",
+        "flip_camera_android",
+        "flip_camera_ios",
+        "flood",
+        "flourescent",
+        "fluorescent",
+        "flutter_dash",
+        "fmd_bad",
+        "fmd_good",
+        "folder_copy",
+        "folder_delete",
+        "folder_off",
+        "folder_zip",
+        "follow_the_signs",
+        "font_download_off",
+        "food_bank",
+        "forest",
+        "fork_left",
+        "fork_right",
+        "format_list_numbered_rtl",
+        "format_overline",
+        "format_underline",
+        "fort",
+        "forward_to_inbox",
+        "foundation",
+        "free_cancellation",
+        "front_hand",
+        "g_mobiledata",
+        "garage",
+        "gas_meter",
+        "generating_tokens",
+        "gif_box",
+        "girl",
+        "gite",
+        "gpp_bad",
+        "gpp_good",
+        "gpp_maybe",
+        "grading",
+        "grass",
+        "grid_3x3",
+        "grid_4x4",
+        "grid_goldenratio",
+        "grid_view",
+        "group_off",
+        "group_remove",
+        "groups",
+        "groups_2",
+        "groups_3",
+        "h_mobiledata",
+        "h_plus_mobiledata",
+        "hail",
+        "handshake",
+        "handyman",
+        "hardware",
+        "hdr_auto",
+        "hdr_auto_select",
+        "hdr_enhanced_select",
+        "hdr_off_select",
+        "hdr_on_select",
+        "hdr_plus",
+        "headphones",
+        "headphones_battery",
+        "headset_off",
+        "health_and_safety",
+        "hearing_disabled",
+        "heart_broken",
+        "heat_pump",
+        "height",
+        "help_center",
+        "hevc",
+        "hexagon",
+        "hide_image",
+        "hide_source",
+        "highlight_alt",
+        "highlight_remove",
+        "hiking",
+        "history_edu",
+        "hive",
+        "hls",
+        "hls_off",
+        "holiday_village",
+        "home_max",
+        "home_mini",
+        "home_repair_service",
+        "home_work",
+        "horizontal_distribute",
+        "horizontal_rule",
+        "horizontal_split",
+        "hotel_class",
+        "hourglass_bottom",
+        "hourglass_disabled",
+        "hourglass_top",
+        "house",
+        "house_siding",
+        "houseboat",
+        "how_to_reg",
+        "how_to_vote",
+        "html",
+        "hub",
+        "hvac",
+        "ice_skating",
+        "icecream",
+        "image_not_supported",
+        "image_search",
+        "imagesearch_roller",
+        "incomplete_circle",
+        "insert_chart_outlined",
+        "insert_page_break",
+        "insights",
+        "install_desktop",
+        "install_mobile",
+        "integration_instructions",
+        "interests",
+        "interpreter_mode",
+        "inventory",
+        "inventory_2",
+        "invert_colors_on",
+        "ios_share",
+        "iron",
+        "javascript",
+        "join_full",
+        "join_inner",
+        "join_left",
+        "join_right",
+        "kayaking",
+        "kebab_dining",
+        "key",
+        "key_off",
+        "keyboard_alt",
+        "keyboard_command_key",
+        "keyboard_control",
+        "keyboard_control_key",
+        "keyboard_double_arrow_down",
+        "keyboard_double_arrow_left",
+        "keyboard_double_arrow_right",
+        "keyboard_double_arrow_up",
+        "keyboard_option_key",
+        "king_bed",
+        "kitesurfing",
+        "label_important",
+        "label_important_outline",
+        "label_off",
+        "lan",
+        "landslide",
+        "leaderboard",
+        "leave_bags_at_home",
+        "legend_toggle",
+        "lens_blur",
+        "library_add_check",
+        "light",
+        "light_mode",
+        "lightbulb",
+        "lightbulb_circle",
+        "line_axis",
+        "link_off",
+        "liquor",
+        "living",
+        "local_attraction",
+        "local_fire_department",
+        "local_police",
+        "local_print_shop",
+        "local_restaurant",
+        "location_history",
+        "lock_clock",
+        "lock_person",
+        "lock_reset",
+        "logo_dev",
+        "logout",
+        "lte_mobiledata",
+        "lte_plus_mobiledata",
+        "luggage",
+        "lunch_dining",
+        "lyrics",
+        "macro_off",
+        "mail_lock",
+        "male",
+        "man",
+        "man_2",
+        "man_3",
+        "man_4",
+        "manage_accounts",
+        "manage_history",
+        "manage_search",
+        "maps_home_work",
+        "maps_ugc",
+        "margin",
+        "mark_as_unread",
+        "mark_chat_read",
+        "mark_chat_unread",
+        "mark_email_read",
+        "mark_email_unread",
+        "mark_unread_chat_alt",
+        "masks",
+        "maximize",
+        "media_bluetooth_off",
+        "media_bluetooth_on",
+        "mediation",
+        "medical_information",
+        "medical_services",
+        "medication",
+        "medication_liquid",
+        "meeting_room",
+        "menu_book",
+        "menu_open",
+        "merge",
+        "messenger",
+        "messenger_outline",
+        "mic_external_off",
+        "mic_external_on",
+        "microwave",
+        "military_tech",
+        "minimize",
+        "minor_crash",
+        "miscellaneous_services",
+        "missed_video_call",
+        "mobile_friendly",
+        "mobile_off",
+        "mobile_screen_share",
+        "mobiledata_off",
+        "mode",
+        "mode_edit_outline",
+        "mode_fan_off",
+        "mode_night",
+        "mode_of_travel",
+        "mode_standby",
+        "model_training",
+        "money",
+        "money_off_csred",
+        "monitor",
+        "monitor_heart",
+        "monitor_weight",
+        "moped",
+        "more_time",
+        "mosque",
+        "motion_photos_auto",
+        "motion_photos_off",
+        "motion_photos_on",
+        "motion_photos_pause",
+        "motion_photos_paused",
+        "move_down",
+        "move_up",
+        "moving",
+        "mp",
+        "multiple_stop",
+        "multitrack_audio",
+        "museum",
+        "music_off",
+        "my_library_add",
+        "my_library_books",
+        "my_library_music",
+        "nat",
+        "near_me_disabled",
+        "nearby_error",
+        "nearby_off",
+        "nest_cam_wired_stand",
+        "network_ping",
+        "network_wifi_1_bar",
+        "network_wifi_2_bar",
+        "network_wifi_3_bar",
+        "new_label",
+        "newspaper",
+        "next_plan",
+        "night_shelter",
+        "nightlife",
+        "nightlight",
+        "nightlight_round",
+        "nights_stay",
+        "no_accounts",
+        "no_adult_content",
+        "no_backpack",
+        "no_cell",
+        "no_crash",
+        "no_drinks",
+        "no_encryption_gmailerrorred",
+        "no_flash",
+        "no_food",
+        "no_luggage",
+        "no_meals",
+        "no_meeting_room",
+        "no_photography",
+        "no_stroller",
+        "no_transfer",
+        "noise_aware",
+        "noise_control_off",
+        "nordic_walking",
+        "north",
+        "north_east",
+        "north_west",
+        "not_accessible",
+        "not_listed_location",
+        "not_started",
+        "note_alt",
+        "notes",
+        "notification_add",
+        "notification_important",
+        "notifications_on",
+        "now_wallpaper",
+        "now_widgets",
+        "numbers",
+        "offline_bolt",
+        "offline_share",
+        "oil_barrel",
+        "on_device_training",
+        "online_prediction",
+        "open_in_full",
+        "open_in_new_off",
+        "other_houses",
+        "outbond",
+        "outbound",
+        "outbox",
+        "outdoor_grill",
+        "outlet",
+        "outlined_flag",
+        "output",
+        "padding",
+        "paid",
+        "pan_tool_alt",
+        "panorama_fisheye",
+        "panorama_horizontal_select",
+        "panorama_photosphere",
+        "panorama_photosphere_select",
+        "panorama_vertical_select",
+        "panorama_wide_angle_select",
+        "paragliding",
+        "park",
+        "password",
+        "paste",
+        "pattern",
+        "pause_circle",
+        "pause_presentation",
+        "payments",
+        "paypal",
+        "pedal_bike",
+        "pending",
+        "pending_actions",
+        "pentagon",
+        "people_alt",
+        "percent",
+        "perm_contact_cal",
+        "perm_device_info",
+        "person_2",
+        "person_3",
+        "person_4",
+        "person_add_alt",
+        "person_add_alt_1",
+        "person_add_disabled",
+        "person_off",
+        "person_remove",
+        "person_remove_alt_1",
+        "person_search",
+        "personal_injury",
+        "pest_control",
+        "pest_control_rodent",
+        "phishing",
+        "phone_callback",
+        "phone_disabled",
+        "phone_enabled",
+        "photo_camera_back",
+        "photo_camera_front",
+        "php",
+        "piano",
+        "piano_off",
+        "pie_chart_outline",
+        "pin",
+        "pin_end",
+        "pin_invoke",
+        "pinch",
+        "pivot_table_chart",
+        "pix",
+        "plagiarism",
+        "play_circle",
+        "play_circle_fill",
+        "play_disabled",
+        "play_lesson",
+        "playlist_add_check_circle",
+        "playlist_add_circle",
+        "playlist_remove",
+        "plumbing",
+        "podcasts",
+        "point_of_sale",
+        "policy",
+        "polyline",
+        "post_add",
+        "power_off",
+        "precision_manufacturing",
+        "preview",
+        "price_change",
+        "price_check",
+        "print_disabled",
+        "privacy_tip",
+        "private_connectivity",
+        "production_quantity_limits",
+        "propane",
+        "propane_tank",
+        "psychology",
+        "psychology_alt",
+        "public_off",
+        "published_with_changes",
+        "punch_clock",
+        "push_pin",
+        "qr_code",
+        "qr_code_2",
+        "qr_code_scanner",
+        "query_stats",
+        "question_mark",
+        "quick_contacts_dialer",
+        "quick_contacts_mail",
+        "quickreply",
+        "quiz",
+        "quora",
+        "r_mobiledata",
+        "radar",
+        "radio_button_off",
+        "radio_button_on",
+        "railway_alert",
+        "ramen_dining",
+        "ramp_left",
+        "ramp_right",
+        "raw_off",
+        "raw_on",
+        "read_more",
+        "real_estate_agent",
+        "receipt_long",
+        "recommend",
+        "rectangle",
+        "recycling",
+        "reddit",
+        "reduce_capacity",
+        "remember_me",
+        "remove_done",
+        "remove_moderator",
+        "remove_road",
+        "repartition",
+        "repeat_on",
+        "repeat_one_on",
+        "replay_circle_filled",
+        "report_gmailerrorred",
+        "report_off",
+        "request_page",
+        "request_quote",
+        "reset_tv",
+        "restart_alt",
+        "restore_from_trash",
+        "reviews",
+        "rice_bowl",
+        "rocket",
+        "rocket_launch",
+        "roller_shades",
+        "roller_shades_closed",
+        "roller_skating",
+        "roofing",
+        "room_preferences",
+        "rotate_90_degrees_cw",
+        "roundabout_left",
+        "roundabout_right",
+        "route",
+        "rsvp",
+        "rtt",
+        "rule",
+        "rule_folder",
+        "run_circle",
+        "running_with_errors",
+        "safety_check",
+        "safety_divider",
+        "sailing",
+        "sanitizer",
+        "satellite_alt",
+        "save_alt",
+        "save_as",
+        "saved_search",
+        "savings",
+        "scale",
+        "scatter_plot",
+        "schedule_send",
+        "schema",
+        "science",
+        "score",
+        "scoreboard",
+        "screen_rotation_alt",
+        "screen_search_desktop",
+        "screenshot",
+        "screenshot_monitor",
+        "scuba_diving",
+        "sd",
+        "sd_card_alert",
+        "search_off",
+        "security_update",
+        "security_update_good",
+        "security_update_warning",
+        "segment",
+        "self_improvement",
+        "sell",
+        "send_and_archive",
+        "send_time_extension",
+        "send_to_mobile",
+        "sensor_door",
+        "sensor_occupied",
+        "sensor_window",
+        "sensors",
+        "sensors_off",
+        "sentiment_satisfied_alt",
+        "set_meal",
+        "settings_accessibility",
+        "settings_display",
+        "settings_suggest",
+        "severe_cold",
+        "shape_line",
+        "share_arrival_time",
+        "share_location",
+        "shield",
+        "shield_moon",
+        "shop_2",
+        "shopify",
+        "shopping_bag",
+        "shopping_cart_checkout",
+        "shortcut",
+        "shower",
+        "shuffle_on",
+        "shutter_speed",
+        "sick",
+        "sign_language",
+        "signal_cellular_0_bar",
+        "signal_cellular_alt",
+        "signal_cellular_alt_1_bar",
+        "signal_cellular_alt_2_bar",
+        "signal_cellular_connected_no_internet_0_bar",
+        "signal_cellular_nodata",
+        "signal_wifi_0_bar",
+        "signal_wifi_bad",
+        "signal_wifi_connected_no_internet_4",
+        "signal_wifi_statusbar_4_bar",
+        "signal_wifi_statusbar_null",
+        "signpost",
+        "sim_card_download",
+        "single_bed",
+        "sip",
+        "skateboarding",
+        "sledding",
+        "smart_button",
+        "smart_display",
+        "smart_screen",
+        "smart_toy",
+        "snapchat",
+        "snippet_folder",
+        "snowboarding",
+        "snowmobile",
+        "snowshoeing",
+        "soap",
+        "social_distance",
+        "solar_power",
+        "sos",
+        "soup_kitchen",
+        "source",
+        "south",
+        "south_america",
+        "south_east",
+        "south_west",
+        "space_dashboard",
+        "spatial_audio",
+        "spatial_audio_off",
+        "spatial_tracking",
+        "speed",
+        "splitscreen",
+        "spoke",
+        "sports",
+        "sports_bar",
+        "sports_baseball",
+        "sports_basketball",
+        "sports_cricket",
+        "sports_esports",
+        "sports_football",
+        "sports_golf",
+        "sports_gymnastics",
+        "sports_handball",
+        "sports_hockey",
+        "sports_kabaddi",
+        "sports_martial_arts",
+        "sports_mma",
+        "sports_motorsports",
+        "sports_rugby",
+        "sports_score",
+        "sports_soccer",
+        "sports_tennis",
+        "sports_volleyball",
+        "square",
+        "square_foot",
+        "ssid_chart",
+        "stacked_bar_chart",
+        "stacked_line_chart",
+        "stadium",
+        "stairs",
+        "star_border_purple500",
+        "star_outline",
+        "star_purple500",
+        "star_rate",
+        "start",
+        "sticky_note_2",
+        "stop_circle",
+        "storefront",
+        "storm",
+        "straight",
+        "stream",
+        "stroller",
+        "subscript",
+        "subtitles_off",
+        "summarize",
+        "superscript",
+        "supervised_user_circle",
+        "support",
+        "support_agent",
+        "surfing",
+        "swap_horizontal_circle",
+        "swap_vert_circle",
+        "swipe",
+        "swipe_down",
+        "swipe_down_alt",
+        "swipe_left",
+        "swipe_left_alt",
+        "swipe_right",
+        "swipe_right_alt",
+        "swipe_up",
+        "swipe_up_alt",
+        "swipe_vertical",
+        "switch_access_shortcut",
+        "switch_access_shortcut_add",
+        "switch_account",
+        "switch_left",
+        "switch_right",
+        "synagogue",
+        "sync_lock",
+        "system_security_update",
+        "system_security_update_good",
+        "system_security_update_warning",
+        "system_update_tv",
+        "table_bar",
+        "table_chart",
+        "table_restaurant",
+        "table_rows",
+        "table_view",
+        "tag",
+        "takeout_dining",
+        "tapas",
+        "task",
+        "task_alt",
+        "taxi_alert",
+        "telegram",
+        "temple_buddhist",
+        "temple_hindu",
+        "terminal",
+        "text_decrease",
+        "text_increase",
+        "text_rotate_up",
+        "text_rotate_vertical",
+        "text_rotation_angledown",
+        "text_rotation_angleup",
+        "text_rotation_down",
+        "text_rotation_none",
+        "text_snippet",
+        "theater_comedy",
+        "thermostat",
+        "thermostat_auto",
+        "thumb_down_alt",
+        "thumb_down_off_alt",
+        "thumb_up_alt",
+        "thumb_up_off_alt",
+        "thunderstorm",
+        "tiktok",
+        "timer_10_select",
+        "timer_3_select",
+        "tips_and_updates",
+        "tire_repair",
+        "toggle_off",
+        "toggle_on",
+        "token",
+        "topic",
+        "tornado",
+        "tour",
+        "transcribe",
+        "transgender",
+        "transit_enterexit",
+        "travel_explore",
+        "trending_neutral",
+        "troubleshoot",
+        "try",
+        "tsunami",
+        "tty",
+        "tungsten",
+        "turn_left",
+        "turn_right",
+        "turn_sharp_left",
+        "turn_sharp_right",
+        "turn_slight_left",
+        "turn_slight_right",
+        "tv_off",
+        "two_wheeler",
+        "type_specimen",
+        "u_turn_left",
+        "u_turn_right",
+        "umbrella",
+        "unfold_less_double",
+        "unfold_more_double",
+        "unpublished",
+        "unsubscribe",
+        "upcoming",
+        "update_disabled",
+        "upgrade",
+        "upload",
+        "upload_file",
+        "usb_off",
+        "vaccines",
+        "vape_free",
+        "vaping_rooms",
+        "verified",
+        "vertical_distribute",
+        "vertical_shades",
+        "vertical_shades_closed",
+        "vertical_split",
+        "video_camera_back",
+        "video_camera_front",
+        "video_chat",
+        "video_collection",
+        "video_file",
+        "video_settings",
+        "video_stable",
+        "videogame_asset_off",
+        "view_comfortable",
+        "view_comfy_alt",
+        "view_compact_alt",
+        "view_cozy",
+        "view_in_ar",
+        "view_kanban",
+        "view_sidebar",
+        "view_timeline",
+        "villa",
+        "voice_over_off",
+        "volcano",
+        "volunteer_activism",
+        "vpn_key_off",
+        "vrpano",
+        "wallet",
+        "wallet_giftcard",
+        "wallet_membership",
+        "wallet_travel",
+        "warehouse",
+        "warning_amber",
+        "wash",
+        "watch_off",
+        "water",
+        "water_damage",
+        "water_drop",
+        "waterfall_chart",
+        "waves",
+        "waving_hand",
+        "wb_shade",
+        "wb_twilight",
+        "web_asset_off",
+        "web_stories",
+        "webhook",
+        "wechat",
+        "west",
+        "wheelchair_pickup",
+        "where_to_vote",
+        "width_full",
+        "width_normal",
+        "width_wide",
+        "wifi_1_bar",
+        "wifi_2_bar",
+        "wifi_calling",
+        "wifi_calling_3",
+        "wifi_channel",
+        "wifi_find",
+        "wifi_off",
+        "wifi_password",
+        "wifi_protected_setup",
+        "wifi_tethering_error",
+        "wifi_tethering_error_rounded",
+        "wifi_tethering_off",
+        "wind_power",
+        "window",
+        "wine_bar",
+        "woman",
+        "woman_2",
+        "woo_commerce",
+        "wordpress",
+        "work_off",
+        "work_outline",
+        "workspace_premium",
+        "workspaces",
+        "wrong_location",
+        "wysiwyg",
+        "yard",
+        "zoom_in_map"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "Emby.Web.GenericEdit.Elements.IconNames"
+    },
+    "MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeState": {
+      "enum": [
+        "Normal",
+        "Disabled",
+        "Unavailable",
+        "Error",
+        "Fallback"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeState"
+    },
+    "MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeMoveTargets": {
+      "type": "object",
+      "properties": {
+        "Up": {
+          "type": "string"
+        },
+        "Down": {
+          "type": "string"
+        },
+        "Left": {
+          "type": "string"
+        },
+        "Right": {
+          "type": "string"
+        },
+        "HasAny": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeMoveTargets"
+    },
+    "MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeCommand": {
+      "type": "object",
+      "properties": {
+        "CommandType": {
+          "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeCommandType"
+        },
+        "Caption": {
+          "type": "string"
+        },
+        "Icon": {
+          "$ref": "#/definitions/Elements.IconNames"
+        },
+        "IsRemote": {
+          "type": "boolean"
+        },
+        "CommandData": {
+          "type": "string"
+        },
+        "OpensForm": {
+          "type": "boolean"
+        },
+        "ConfirmationPrompt": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Hwa.Projection.Nodes.UiNodeCommand"
+    },
+    "MediaEncoding.Hwa.Conditions.ConfigOperationConditions": {
+      "type": "object",
+      "properties": {
+        "Conversions": {
+          "description": "Offline conversions which are not related to an active playback session",
+          "type": "boolean"
+        },
+        "LiveTV": {
+          "description": "Transcoding of Live TV",
+          "type": "boolean"
+        },
+        "Playback": {
+          "description": "Transcoding for an active playback session",
+          "type": "boolean"
+        },
+        "HlsPlayback": {
+          "description": "HLS Transcoding for an active playback session",
+          "type": "boolean"
+        },
+        "LiveStream": {
+          "description": "Transcoding of a live stream for an active playback session",
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Hwa.Conditions.ConfigOperationConditions"
+    },
+    "MediaEncoding.Hwa.Conditions.ConfigAdvancedConditions": {
+      "type": "object",
+      "properties": {
+        "FilterString": {
+          "type": "string"
+        },
+        "DataFilterString": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Hwa.Conditions.ConfigAdvancedConditions"
+    },
+    "MediaEncoding.Settings.Hwa.Projection.BasicModeOption": {
+      "type": "object",
+      "properties": {
+        "NodeId": {
+          "type": "string"
+        },
+        "Text": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Hwa.Projection.BasicModeOption"
+    },
+    "MediaEncoding.Settings.Api.Hwa.ExecuteHwaConfigCommand": {
+      "type": "object",
+      "properties": {
+        "NodeId": {
+          "type": "string"
+        },
+        "CommandType": {
+          "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeCommandType"
+        },
+        "TargetId": {
+          "type": "string"
+        },
+        "Data": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Api.Hwa.ExecuteHwaConfigCommand"
+    },
+    "MediaEncoding.Settings.Api.Hwa.SaveHwaConfig": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Api.Hwa.SaveHwaConfig"
+    },
+    "MediaEncoding.Settings.Api.Hwa.SaveHwaConfigResult": {
+      "type": "object",
+      "properties": {
+        "WasSaved": {
+          "type": "boolean"
+        },
+        "GraphView": {
+          "$ref": "#/definitions/MediaEncoding.Settings.Hwa.Projection.HwaConfigView"
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Api.Hwa.SaveHwaConfigResult"
+    },
+    "MediaEncoding.Settings.Api.Hwa.SelectHwaBasicDevice": {
+      "type": "object",
+      "properties": {
+        "NodeId": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "Emby.MediaEncoding.Settings.Api.Hwa.SelectHwaBasicDevice"
     },
     "ValidatePath": {
       "type": "object",
@@ -77872,6 +80965,12 @@
           "type": "boolean"
         },
         "EnableRealtimeMonitor": {
+          "type": "boolean"
+        },
+        "EnableCreditsDetection": {
+          "type": "boolean"
+        },
+        "EnableCreditsDetectionDuringLibraryScan": {
           "type": "boolean"
         },
         "EnableMarkerDetection": {
@@ -79621,7 +82720,8 @@
         "SubtitleOffsetChange",
         "PlaybackRateChange",
         "ShuffleChange",
-        "SleepTimerChange"
+        "SleepTimerChange",
+        "Seeked"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Session.ProgressEvent"
@@ -80773,21 +83873,6 @@
       "type": "string",
       "x-internal-ref-name": "Emby.Web.GenericUI.Model.Enums.UiDialogSize"
     },
-    "GenericEdit.IEditObjectContainer": {
-      "type": "object",
-      "properties": {
-        "Object": {
-          "type": "object"
-        },
-        "DefaultObject": {
-          "type": "object"
-        },
-        "TypeName": {
-          "type": "string"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.GenericEdit.IEditObjectContainer"
-    },
     "UICommand": {
       "type": "object",
       "properties": {
@@ -81015,6 +84100,10 @@
         "DisplayName": {
           "type": "string"
         },
+        "Order": {
+          "format": "int32",
+          "type": "integer"
+        },
         "ConfigurationPageType": {
           "$ref": "#/definitions/Plugins.ConfigurationPageType"
         },
@@ -81108,725 +84197,6 @@
         }
       },
       "x-internal-ref-name": "System.Version"
-    },
-    "VideoCodecBase": {
-      "type": "object",
-      "properties": {
-        "CodecDeviceInfo": {
-          "$ref": "#/definitions/Common.Interfaces.ICodecDeviceInfo"
-        },
-        "CodecKind": {
-          "$ref": "#/definitions/CodecKinds"
-        },
-        "MediaTypeName": {
-          "type": "string"
-        },
-        "VideoMediaType": {
-          "$ref": "#/definitions/VideoMediaTypes"
-        },
-        "MinWidth": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "MaxWidth": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "MinHeight": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "MaxHeight": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "WidthAlignment": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "HeightAlignment": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "MaxBitRate": {
-          "$ref": "#/definitions/BitRate"
-        },
-        "SupportedColorFormats": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ColorFormats"
-          }
-        },
-        "SupportedColorFormatStrings": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "Id": {
-          "type": "string"
-        },
-        "Direction": {
-          "$ref": "#/definitions/CodecDirections"
-        },
-        "Name": {
-          "type": "string"
-        },
-        "Description": {
-          "type": "string"
-        },
-        "FrameworkCodec": {
-          "type": "string"
-        },
-        "IsHardwareCodec": {
-          "type": "boolean"
-        },
-        "SecondaryFramework": {
-          "$ref": "#/definitions/SecondaryFrameworks"
-        },
-        "SecondaryFrameworkCodec": {
-          "type": "string"
-        },
-        "MaxInstanceCount": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "IsEnabledByDefault": {
-          "type": "boolean"
-        },
-        "DefaultPriority": {
-          "format": "int32",
-          "type": "integer"
-        }
-      },
-      "x-internal-ref-name": "Emby.Server.MediaEncoding.Codecs.VideoCodecs.VideoCodecBase"
-    },
-    "Common.Interfaces.ICodecDeviceInfo": {
-      "type": "object",
-      "properties": {
-        "Capabilities": {
-          "$ref": "#/definitions/Common.Interfaces.ICodecDeviceCapabilities"
-        },
-        "Adapter": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "Name": {
-          "type": "string"
-        },
-        "Desription": {
-          "type": "string"
-        },
-        "Driver": {
-          "type": "string"
-        },
-        "DriverVersion": {
-          "$ref": "#/definitions/Version"
-        },
-        "ApiVersion": {
-          "$ref": "#/definitions/Version"
-        },
-        "VendorId": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "DeviceId": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "DeviceIdentifier": {
-          "type": "string"
-        },
-        "HardwareContextFramework": {
-          "$ref": "#/definitions/SecondaryFrameworks"
-        },
-        "DevPath": {
-          "type": "string"
-        },
-        "DrmNode": {
-          "type": "string"
-        },
-        "VendorName": {
-          "type": "string"
-        },
-        "DeviceName": {
-          "type": "string"
-        }
-      },
-      "x-internal-ref-name": "Emby.Server.MediaEncoding.Codecs.Common.Interfaces.ICodecDeviceInfo"
-    },
-    "Common.Interfaces.ICodecDeviceCapabilities": {
-      "type": "object",
-      "properties": {
-        "SupportsHwUpload": {
-          "type": "boolean"
-        },
-        "SupportsHwDownload": {
-          "type": "boolean"
-        },
-        "SupportsStandaloneDeviceInit": {
-          "type": "boolean"
-        },
-        "Supports10BitProcessing": {
-          "type": "boolean"
-        },
-        "SupportsNativeToneMapping": {
-          "type": "boolean"
-        }
-      },
-      "x-internal-ref-name": "Emby.Server.MediaEncoding.Codecs.Common.Interfaces.ICodecDeviceCapabilities"
-    },
-    "SecondaryFrameworks": {
-      "description": "Enum defining secondary frameworks for encoding and decoding.\r\n\r\n\r\nWhile most of these are hardware acceleration frameworks, this is not a necessity             (e.g. Android MediaCodec offers software codecs as well).\r\n",
-      "enum": [
-        "Unknown",
-        "None",
-        "AmdAmf",
-        "MediaCodec",
-        "NvEncDec",
-        "OpenMax",
-        "QuickSync",
-        "VaApi",
-        "V4L2",
-        "DxVa",
-        "D3d11va",
-        "VideoToolbox",
-        "Mmal",
-        "Vulkan",
-        "D3d12va",
-        "OhCodec",
-        "RkMpp",
-        "Drm",
-        "OpenCL"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "Emby.Media.Model.Enums.SecondaryFrameworks"
-    },
-    "CodecKinds": {
-      "description": "Enum defining the kind of media a codec is processing.\r\n",
-      "enum": [
-        "Audio",
-        "Video",
-        "SubTitles"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "Emby.Media.Model.Enums.CodecKinds"
-    },
-    "VideoMediaTypes": {
-      "description": "Enum listing video media types.\r\n\r\n\r\nThe enum member names are matching exactly those that are used by ffmpeg. Exception: Items that are starting with a number are prefixed with an underscore here.\r\n",
-      "enum": [
-        "Unknown",
-        "copy",
-        "flv1",
-        "h263",
-        "h263p",
-        "h264",
-        "hevc",
-        "mjpeg",
-        "mpeg1video",
-        "mpeg2video",
-        "mpeg4",
-        "msvideo1",
-        "theora",
-        "vc1image",
-        "vc1",
-        "vp8",
-        "vp9",
-        "wmv1",
-        "wmv2",
-        "wmv3",
-        "_012v",
-        "_4xm",
-        "_8bps",
-        "a64_multi",
-        "a64_multi5",
-        "aasc",
-        "aic",
-        "alias_pix",
-        "amv",
-        "anm",
-        "ansi",
-        "apng",
-        "asv1",
-        "asv2",
-        "aura",
-        "aura2",
-        "av1",
-        "avrn",
-        "avrp",
-        "avs",
-        "avui",
-        "ayuv",
-        "bethsoftvid",
-        "bfi",
-        "binkvideo",
-        "bintext",
-        "bitpacked",
-        "bmp",
-        "bmv_video",
-        "brender_pix",
-        "c93",
-        "cavs",
-        "cdgraphics",
-        "cdxl",
-        "cfhd",
-        "cinepak",
-        "clearvideo",
-        "cljr",
-        "cllc",
-        "cmv",
-        "cpia",
-        "cscd",
-        "cyuv",
-        "daala",
-        "dds",
-        "dfa",
-        "dirac",
-        "dnxhd",
-        "dpx",
-        "dsicinvideo",
-        "dvvideo",
-        "dxa",
-        "dxtory",
-        "dxv",
-        "escape124",
-        "escape130",
-        "exr",
-        "ffv1",
-        "ffvhuff",
-        "fic",
-        "fits",
-        "flashsv",
-        "flashsv2",
-        "flic",
-        "fmvc",
-        "fraps",
-        "frwu",
-        "g2m",
-        "gdv",
-        "gif",
-        "h261",
-        "h263i",
-        "hap",
-        "hnm4video",
-        "hq_hqa",
-        "hqx",
-        "huffyuv",
-        "idcin",
-        "idf",
-        "iff_ilbm",
-        "indeo2",
-        "indeo3",
-        "indeo4",
-        "indeo5",
-        "interplayvideo",
-        "jpeg2000",
-        "jpegls",
-        "jv",
-        "kgv1",
-        "kmvc",
-        "lagarith",
-        "ljpeg",
-        "loco",
-        "m101",
-        "mad",
-        "magicyuv",
-        "mdec",
-        "mimic",
-        "mjpegb",
-        "mmvideo",
-        "motionpixels",
-        "msa1",
-        "mscc",
-        "msmpeg4v1",
-        "msmpeg4v2",
-        "msmpeg4v3",
-        "msrle",
-        "mss1",
-        "mss2",
-        "mszh",
-        "mts2",
-        "mvc1",
-        "mvc2",
-        "mxpeg",
-        "nuv",
-        "paf_video",
-        "pam",
-        "pbm",
-        "pcx",
-        "pgm",
-        "pgmyuv",
-        "pictor",
-        "pixlet",
-        "png",
-        "ppm",
-        "prores",
-        "psd",
-        "ptx",
-        "qdraw",
-        "qpeg",
-        "qtrle",
-        "r10k",
-        "r210",
-        "rawvideo",
-        "rl2",
-        "roq",
-        "rpza",
-        "rscc",
-        "rv10",
-        "rv20",
-        "rv30",
-        "rv40",
-        "sanm",
-        "scpr",
-        "screenpresso",
-        "sgi",
-        "sgirle",
-        "sheervideo",
-        "smackvideo",
-        "smc",
-        "smvjpeg",
-        "snow",
-        "sp5x",
-        "speedhq",
-        "srgc",
-        "sunrast",
-        "svg",
-        "svq1",
-        "svq3",
-        "targa",
-        "targa_y216",
-        "tdsc",
-        "tgq",
-        "tgv",
-        "thp",
-        "tiertexseqvideo",
-        "tiff",
-        "tmv",
-        "tqi",
-        "truemotion1",
-        "truemotion2",
-        "truemotion2rt",
-        "tscc",
-        "tscc2",
-        "txd",
-        "ulti",
-        "utvideo",
-        "v210",
-        "v210x",
-        "v308",
-        "v408",
-        "v410",
-        "vb",
-        "vble",
-        "vcr1",
-        "vixl",
-        "vmdvideo",
-        "vmnc",
-        "vp3",
-        "vp5",
-        "vp6",
-        "vp6a",
-        "vp6f",
-        "vp7",
-        "webp",
-        "wmv3image",
-        "wnv1",
-        "wrapped_avframe",
-        "ws_vqa",
-        "xan_wc3",
-        "xan_wc4",
-        "xbin",
-        "xbm",
-        "xface",
-        "xpm",
-        "xwd",
-        "y41p",
-        "ylc",
-        "yop",
-        "yuv4",
-        "zerocodec",
-        "zlib",
-        "zmbv",
-        "agm",
-        "apv",
-        "arbc",
-        "argo",
-        "avs2",
-        "avs3",
-        "cdtoons",
-        "cri",
-        "dnxuc",
-        "evc",
-        "gem",
-        "hdr",
-        "hymt",
-        "imm4",
-        "imm5",
-        "ipu",
-        "jpegxl",
-        "jpegxl_anim",
-        "lead",
-        "lscr",
-        "media100",
-        "mobiclip",
-        "msp2",
-        "mv30",
-        "mvdv",
-        "mvha",
-        "mwsc",
-        "notchlc",
-        "pdv",
-        "pfm",
-        "pgx",
-        "phm",
-        "photocd",
-        "prores_raw",
-        "prosumer",
-        "qoi",
-        "rasc",
-        "rtv1",
-        "rv60",
-        "sga",
-        "simbiosis_imx",
-        "vbn",
-        "vmix",
-        "vp4",
-        "vqc",
-        "vvc",
-        "wbmp",
-        "wcmv"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "Emby.Media.Model.Enums.VideoMediaTypes"
-    },
-    "BitRate": {
-      "description": "A type for handling bit rates.\r\n\r\n\r\nThe purpose of this type is to avoid manual calculations and conversions in code,             unified handling and conversion as well as presentation through its various To\\*\\*\\*String methods.\r\n\r\n\r\n`System.IComparable`\r\n\r\n\r\n`System.IEquatable`1`\r\n",
-      "type": "object",
-      "properties": {
-        "bps": {
-          "format": "int64",
-          "type": "integer"
-        },
-        "kbps": {
-          "format": "double",
-          "type": "number"
-        },
-        "Mbps": {
-          "format": "double",
-          "type": "number"
-        }
-      },
-      "x-internal-ref-name": "Emby.Media.Model.Types.BitRate"
-    },
-    "ColorFormats": {
-      "description": "Enum listing color formats.\r\n\r\n\r\nThe enum member names are matching those that are used by ffmpeg. (execute 'ffmpeg \\-pix\\_fmts' to list them) Exception: Items that are starting with a number are prefixed with an underscore here. In ffmpeg code these are prefixed with 'AV\\_PIX\\_FMT\\_' and all\\-caps.\r\n",
-      "enum": [
-        "Unknown",
-        "yuv420p",
-        "yuyv422",
-        "rgb24",
-        "bgr24",
-        "yuv422p",
-        "yuv444p",
-        "yuv410p",
-        "yuv411p",
-        "gray",
-        "monow",
-        "monob",
-        "pal8",
-        "yuvj420p",
-        "yuvj422p",
-        "yuvj444p",
-        "uyvy422",
-        "uyyvyy411",
-        "bgr8",
-        "bgr4",
-        "bgr4_byte",
-        "rgb8",
-        "rgb4",
-        "rgb4_byte",
-        "nv12",
-        "nv21",
-        "argb",
-        "rgba",
-        "abgr",
-        "bgra",
-        "gray16",
-        "yuv440p",
-        "yuvj440p",
-        "yuva420p",
-        "rgb48",
-        "rgb565",
-        "rgb555",
-        "bgr565",
-        "bgr555",
-        "vaapi_moco",
-        "vaapi_idct",
-        "vaapi_vld",
-        "yuv420p16",
-        "yuv422p16",
-        "yuv444p16",
-        "dxva2_vld",
-        "rgb444",
-        "bgr444",
-        "ya8",
-        "bgr48",
-        "yuv420p9",
-        "yuv420p10",
-        "yuv422p10",
-        "yuv444p9",
-        "yuv444p10",
-        "yuv422p9",
-        "gbrp",
-        "gbrp9",
-        "gbrp10",
-        "gbrp16",
-        "yuva422p",
-        "yuva444p",
-        "yuva420p9",
-        "yuva422p9",
-        "yuva444p9",
-        "yuva420p10",
-        "yuva422p10",
-        "yuva444p10",
-        "yuva420p16",
-        "yuva422p16",
-        "yuva444p16",
-        "vdpau",
-        "xyz12",
-        "nv16",
-        "nv20",
-        "rgba64",
-        "bgra64",
-        "yvyu422",
-        "ya16",
-        "gbrap",
-        "gbrap16",
-        "qsv",
-        "mmal",
-        "d3d11va_vld",
-        "cuda",
-        "_0rgb",
-        "rgb0",
-        "_0bgr",
-        "bgr0",
-        "yuv420p12",
-        "yuv420p14",
-        "yuv422p12",
-        "yuv422p14",
-        "yuv444p12",
-        "yuv444p14",
-        "gbrp12",
-        "gbrp14",
-        "yuvj411p",
-        "bayer_bggr8",
-        "bayer_rggb8",
-        "bayer_gbrg8",
-        "bayer_grbg8",
-        "bayer_bggr16",
-        "bayer_rggb16",
-        "bayer_gbrg16",
-        "bayer_grbg16",
-        "xvmc",
-        "yuv440p10",
-        "yuv440p12",
-        "ayuv64",
-        "videotoolbox_vld",
-        "p010",
-        "gbrap12",
-        "gbrap10",
-        "mediacodec",
-        "gray12",
-        "gray10",
-        "gray14",
-        "p016",
-        "d3d11",
-        "gray9",
-        "gbrpf32",
-        "gbrapf32",
-        "drm_prime",
-        "opencl",
-        "grayf32",
-        "yuva422p12",
-        "yuva444p12",
-        "nv24",
-        "nv42",
-        "vulkan",
-        "y210",
-        "x2rgb10",
-        "x2bgr10",
-        "p210",
-        "p410",
-        "p216",
-        "p416",
-        "vuya",
-        "rgbaf16",
-        "vuyx",
-        "p012",
-        "y212",
-        "xv30",
-        "xv36",
-        "rgbf32",
-        "rgbaf32",
-        "p212",
-        "p412",
-        "gbrap14",
-        "d3d12",
-        "ayuv",
-        "uyva",
-        "vyu444",
-        "v30x",
-        "rgbf16",
-        "rgba128",
-        "rgb96",
-        "y216",
-        "xv48",
-        "gbrpf16",
-        "gbrapf16",
-        "grayf16",
-        "amf_surface",
-        "gray32",
-        "yaf32",
-        "yaf16",
-        "gbrap32",
-        "yuv444p10msb",
-        "yuv444p12msb",
-        "gbrp10msb",
-        "gbrp12msb",
-        "ohcodec",
-        "nv15"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "Emby.Media.Model.Enums.ColorFormats"
-    },
-    "CodecDirections": {
-      "description": "Enum for indicating the processing direction of a codec.\r\n",
-      "enum": [
-        "Encoder",
-        "Decoder"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "Emby.Media.Model.Enums.CodecDirections"
-    },
-    "CodecConfiguration": {
-      "type": "object",
-      "properties": {
-        "IsEnabled": {
-          "description": "A value indicating whether the codec is enabled.",
-          "type": "boolean"
-        },
-        "Priority": {
-          "format": "int32",
-          "description": "The selection priority for the codec.\r\n\r\nHigher values mean higher priority.",
-          "type": "integer"
-        },
-        "CodecId": {
-          "description": "The codec identifier.",
-          "type": "string"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.Configuration.CodecConfiguration"
     },
     "ExternalIdInfo": {
       "type": "object",
@@ -83567,9 +85937,30 @@
         },
         "AppId": {
           "type": "string"
+        },
+        "AttestationProvider": {
+          "type": "string"
+        },
+        "AttestationReply": {
+          "$ref": "#/definitions/Security.AttestationReply"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Session.ClientCapabilities"
+    },
+    "Security.AttestationReply": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "requestId": {
+          "type": "string"
+        },
+        "appAttestation": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.Security.AttestationReply"
     },
     "PlaybackProgressInfo": {
       "description": "Class PlaybackProgressInfo.\r\n",
@@ -84774,20 +87165,6 @@
       }
     },
     {
-      "name": "EncodingInfoService",
-      "externalDocs": {
-        "description": "API Reference: EncodingInfoService",
-        "url": "https://betadev.emby.media/reference/RestAPI/EncodingInfoService.html"
-      }
-    },
-    {
-      "name": "ToneMapOptionsService",
-      "externalDocs": {
-        "description": "API Reference: ToneMapOptionsService",
-        "url": "https://betadev.emby.media/reference/RestAPI/ToneMapOptionsService.html"
-      }
-    },
-    {
       "name": "SubtitleOptionsService",
       "externalDocs": {
         "description": "API Reference: SubtitleOptionsService",
@@ -84795,17 +87172,24 @@
       }
     },
     {
+      "name": "ImageExtractionConfigService",
+      "externalDocs": {
+        "description": "API Reference: ImageExtractionConfigService",
+        "url": "https://betadev.emby.media/reference/RestAPI/ImageExtractionConfigService.html"
+      }
+    },
+    {
+      "name": "HwaConfigService",
+      "externalDocs": {
+        "description": "API Reference: HwaConfigService",
+        "url": "https://betadev.emby.media/reference/RestAPI/HwaConfigService.html"
+      }
+    },
+    {
       "name": "FfmpegOptionsService",
       "externalDocs": {
         "description": "API Reference: FfmpegOptionsService",
         "url": "https://betadev.emby.media/reference/RestAPI/FfmpegOptionsService.html"
-      }
-    },
-    {
-      "name": "CodecParameterService",
-      "externalDocs": {
-        "description": "API Reference: CodecParameterService",
-        "url": "https://betadev.emby.media/reference/RestAPI/CodecParameterService.html"
       }
     },
     {
@@ -84981,6 +87365,13 @@
       "externalDocs": {
         "description": "API Reference: DlnaServerService",
         "url": "https://betadev.emby.media/reference/RestAPI/DlnaServerService.html"
+      }
+    },
+    {
+      "name": "LogDownloadService",
+      "externalDocs": {
+        "description": "API Reference: LogDownloadService",
+        "url": "https://betadev.emby.media/reference/RestAPI/LogDownloadService.html"
       }
     },
     {

@@ -34,7 +34,8 @@ public enum ProgressEvent {
   SUBTITLEOFFSETCHANGE("SubtitleOffsetChange"),
   PLAYBACKRATECHANGE("PlaybackRateChange"),
   SHUFFLECHANGE("ShuffleChange"),
-  SLEEPTIMERCHANGE("SleepTimerChange");
+  SLEEPTIMERCHANGE("SleepTimerChange"),
+  SEEKED("Seeked");
 
   private String value;
 

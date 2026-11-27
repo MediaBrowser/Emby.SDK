@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Interface IItemRepository
    </title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="Interface IItemRepository
    ">
     <meta name="generator" content="docfx 2.59.2.0">
@@ -36,16 +36,18 @@
       
       <header class="site-header">
         <nav class="nav container" aria-label="Primary navigation">
-          <a class="brand" href="../../index.html" aria-label="Emby Developer home">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
             
-      <img class="logo-on-dark" src="../../images/emby_dev_logo_beta.png" alt="Emby Developer">
-      <img class="logo-on-light" src="../../images/emby_dev_logo_black.png" alt="Emby Developer">
+            <img class="logo-on-dark" src="../../images/emby-logo-dark-beta.png" alt="Emby">
+            <img class="logo-on-light" src="../../images/emby-logo-beta.png" alt="Emby">
           </a>
+          <a class="site-title-link" href="../../index.html"><span class="site-title">Emby <strong>BetaDev</strong></span></a>
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
           <div class="nav-links" id="navbar">
             <ul class="nav-links-list">
                 
-                    <li><a href="../../index.html" title="DEV Home">DEV Home</a></li>
+                    <li><a href="https://emby.media/" title="Emby Home">Emby Home</a></li>
+                    <li><a href="../../index.html" title="Dev Home">Dev Home</a></li>
                     <li><a href="../../doc/index.html" title="Documentation">Documentation</a></li>
                     <li><a href="../../reference/index.html" title="Reference">Reference</a></li>
                     <li><a href="../../download/index.html" title="Download">Download</a></li>
@@ -844,6 +846,48 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Persistence_IItemRepository_GetCreditsDetectionFailureResult_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetCreditsDetectionFailureResult*"></a>
+  <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_GetCreditsDetectionFailureResult_System_Int64_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.GetCreditsDetectionFailureResult(System.Int64)">GetCreditsDetectionFailureResult(Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetCreditsDetectionFailureResult(long itemId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">itemId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -3163,6 +3207,43 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Persistence_IItemRepository_LogCreditsDetectionFailure_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.LogCreditsDetectionFailure*"></a>
+  <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_LogCreditsDetectionFailure_System_Int64_System_Int64_System_Int64_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.LogCreditsDetectionFailure(System.Int64,System.Int64,System.Int64)">LogCreditsDetectionFailure(Int64, Int64, Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void LogCreditsDetectionFailure(long itemId, long dateModifiedUnixTimeSeconds, long size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">itemId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">dateModifiedUnixTimeSeconds</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Persistence_IItemRepository_LogIntroDetectionFailureFailure_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.LogIntroDetectionFailureFailure*"></a>
   <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_LogIntroDetectionFailureFailure_System_Int64_System_Int64_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.LogIntroDetectionFailureFailure(System.Int64,System.Int64)">LogIntroDetectionFailureFailure(Int64, Int64)</h4>
   <div class="markdown level1 summary"></div>
@@ -3418,6 +3499,48 @@
       <tr>
         <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ChapterInfo.html">ChapterInfo</a>&gt;</td>
         <td><span class="parametername">chapters</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Persistence_IItemRepository_SaveChapters_" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.SaveChapters*"></a>
+  <h4 id="MediaBrowser_Controller_Persistence_IItemRepository_SaveChapters_System_Int64_System_Boolean_System_Collections_Generic_List_MediaBrowser_Model_Entities_ChapterInfo__MediaBrowser_Model_Entities_MarkerType___" data-uid="MediaBrowser.Controller.Persistence.IItemRepository.SaveChapters(System.Int64,System.Boolean,System.Collections.Generic.List{MediaBrowser.Model.Entities.ChapterInfo},MediaBrowser.Model.Entities.MarkerType[])">SaveChapters(Int64, Boolean, List&lt;ChapterInfo&gt;, MarkerType[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SaveChapters(long itemId, bool clearExtractionFailureResult, List&lt;ChapterInfo&gt; chapters, MarkerType[] updatedMarkerTypes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">itemId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">clearExtractionFailureResult</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ChapterInfo.html">ChapterInfo</a>&gt;</td>
+        <td><span class="parametername">chapters</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.MarkerType.html">MarkerType</a>[]</td>
+        <td><span class="parametername">updatedMarkerTypes</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -3925,6 +4048,9 @@
   <div>
       <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
   </div>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_System_Type_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, Type, IJsonSerializer)</a>
+  </div>
 </div>
 </article>
           </div>
@@ -3966,5 +4092,6 @@
     <script type="text/javascript" src="../../styles/lunr.min.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
+    <script src="https://emby.media/resources/site-switcher.js" data-site-switcher=".site-title-link" data-current-site="betadev"></script>
   </body>
 </html>

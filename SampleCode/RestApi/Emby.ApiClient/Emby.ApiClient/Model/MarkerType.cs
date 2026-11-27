@@ -38,5 +38,20 @@ namespace Emby.ApiClient.Model
         /// Enum CreditsStart for value: CreditsStart
         /// </summary>
         [EnumMember(Value = "CreditsStart")]
-        CreditsStart = 4    }
+        CreditsStart = 4,
+        /// <summary>
+        /// Enum CreditsEnd for value: CreditsEnd
+        /// </summary>
+        [EnumMember(Value = "CreditsEnd")]
+        CreditsEnd = 5,
+        /// <summary>
+        /// Enum CommercialsStart for value: CommercialsStart
+        /// </summary>
+        [EnumMember(Value = "CommercialsStart")]
+        CommercialsStart = 6,
+        /// <summary>
+        /// Enum CommercialsEnd for value: CommercialsEnd
+        /// </summary>
+        [EnumMember(Value = "CommercialsEnd")]
+        CommercialsEnd = 7    }
 }

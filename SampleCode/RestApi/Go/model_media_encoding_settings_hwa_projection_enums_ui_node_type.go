@@ -1,0 +1,21 @@
+/*
+ * Emby Server REST API (BETA)
+ *
+ * Explore the Emby Server API
+ *
+ */
+package embyclient
+
+type MediaEncodingSettingsHwaProjectionEnumsUiNodeType string
+
+// List of MediaEncoding.Settings.Hwa.Projection.Enums.UiNodeType
+const (
+	UNKNOWN_MediaEncodingSettingsHwaProjectionEnumsUiNodeType MediaEncodingSettingsHwaProjectionEnumsUiNodeType = "Unknown"
+	ROOT_MediaEncodingSettingsHwaProjectionEnumsUiNodeType MediaEncodingSettingsHwaProjectionEnumsUiNodeType = "Root"
+	GRAPH_MediaEncodingSettingsHwaProjectionEnumsUiNodeType MediaEncodingSettingsHwaProjectionEnumsUiNodeType = "Graph"
+	LOAD_BALANCER_MediaEncodingSettingsHwaProjectionEnumsUiNodeType MediaEncodingSettingsHwaProjectionEnumsUiNodeType = "LoadBalancer"
+	GPU_CONFIG_MediaEncodingSettingsHwaProjectionEnumsUiNodeType MediaEncodingSettingsHwaProjectionEnumsUiNodeType = "GpuConfig"
+	ERROR_OUT_MediaEncodingSettingsHwaProjectionEnumsUiNodeType MediaEncodingSettingsHwaProjectionEnumsUiNodeType = "ErrorOut"
+	UI_HINT_MediaEncodingSettingsHwaProjectionEnumsUiNodeType MediaEncodingSettingsHwaProjectionEnumsUiNodeType = "UiHint"
+	DIVIDER_MediaEncodingSettingsHwaProjectionEnumsUiNodeType MediaEncodingSettingsHwaProjectionEnumsUiNodeType = "Divider"
+)

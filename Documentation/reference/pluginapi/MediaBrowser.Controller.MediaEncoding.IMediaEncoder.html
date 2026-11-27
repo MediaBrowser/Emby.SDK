@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Interface IMediaEncoder
    </title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="Interface IMediaEncoder
    ">
     <meta name="generator" content="docfx 2.59.2.0">
@@ -36,16 +36,18 @@
       
       <header class="site-header">
         <nav class="nav container" aria-label="Primary navigation">
-          <a class="brand" href="../../index.html" aria-label="Emby Developer home">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
             
-      <img class="logo-on-dark" src="../../images/emby_dev_logo_beta.png" alt="Emby Developer">
-      <img class="logo-on-light" src="../../images/emby_dev_logo_black.png" alt="Emby Developer">
+            <img class="logo-on-dark" src="../../images/emby-logo-dark-beta.png" alt="Emby">
+            <img class="logo-on-light" src="../../images/emby-logo-beta.png" alt="Emby">
           </a>
+          <a class="site-title-link" href="../../index.html"><span class="site-title">Emby <strong>BetaDev</strong></span></a>
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
           <div class="nav-links" id="navbar">
             <ul class="nav-links-list">
                 
-                    <li><a href="../../index.html" title="DEV Home">DEV Home</a></li>
+                    <li><a href="https://emby.media/" title="Emby Home">Emby Home</a></li>
+                    <li><a href="../../index.html" title="Dev Home">Dev Home</a></li>
                     <li><a href="../../doc/index.html" title="Documentation">Documentation</a></li>
                     <li><a href="../../reference/index.html" title="Reference">Reference</a></li>
                     <li><a href="../../download/index.html" title="Download">Download</a></li>
@@ -311,7 +313,7 @@ bool SupportsSkipList { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use IFfmpegManager.FfmpegCapabilities.SupportsTempSegmentWriting instead.&quot;, true)]
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use IFfmpegManager.FfmpegCapabilities.SupportsTempSegmentWriting instead.&quot;)]
 bool SupportsTempSegmentWriting { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -357,49 +359,6 @@ bool SupportsThrottling { get; }</code></pre>
   </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
-  <a id="MediaBrowser_Controller_MediaEncoding_IMediaEncoder_AllowHardwareAcceleration_" data-uid="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.AllowHardwareAcceleration*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_IMediaEncoder_AllowHardwareAcceleration_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.AllowHardwareAcceleration(System.Threading.CancellationToken)">AllowHardwareAcceleration(CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use ICodecManager.AllowHardwareAcceleration() instead.&quot;, true)]
-Task&lt;bool&gt; AllowHardwareAcceleration(CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_IMediaEncoder_EncodeAudio_" data-uid="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.EncodeAudio*"></a>
@@ -523,8 +482,7 @@ Task&lt;bool&gt; AllowHardwareAcceleration(CancellationToken cancellationToken)<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use static method EncodingHelpers.EscapeSubtitleFilterPath() instead.&quot;, true)]
-string EscapeSubtitleFilterPath(ReadOnlySpan&lt;char&gt; path)</code></pre>
+    <pre><code class="lang-csharp hljs">string EscapeSubtitleFilterPath(ReadOnlySpan&lt;char&gt; path)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -568,8 +526,7 @@ string EscapeSubtitleFilterPath(ReadOnlySpan&lt;char&gt; path)</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use EncodingHelpers.GetAnalyzeDurationMs instead.&quot;, true)]
-int GetAnalyzeDurationMs(MediaSourceInfo mediaSource)</code></pre>
+    <pre><code class="lang-csharp hljs">int GetAnalyzeDurationMs(MediaSourceInfo mediaSource)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -607,8 +564,7 @@ int GetAnalyzeDurationMs(MediaSourceInfo mediaSource)</code></pre>
   
   <a id="MediaBrowser_Controller_MediaEncoding_IMediaEncoder_GetInputArgument_" data-uid="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.GetInputArgument*"></a>
   <h4 id="MediaBrowser_Controller_MediaEncoding_IMediaEncoder_GetInputArgument_System_ReadOnlySpan_System_Char__MediaBrowser_Model_MediaInfo_MediaProtocol_" data-uid="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.GetInputArgument(System.ReadOnlySpan{System.Char},MediaBrowser.Model.MediaInfo.MediaProtocol)">GetInputArgument(ReadOnlySpan&lt;Char&gt;, MediaProtocol)</h4>
-  <div class="markdown level1 summary"><p>Gets the input argument.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -627,14 +583,12 @@ int GetAnalyzeDurationMs(MediaSourceInfo mediaSource)</code></pre>
       <tr>
         <td><span class="xref">System.ReadOnlySpan</span>&lt;<span class="xref">System.Char</span>&gt;</td>
         <td><span class="parametername">inputPath</span></td>
-        <td><p>The input path.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.MediaInfo.MediaProtocol.html">MediaProtocol</a></td>
         <td><span class="parametername">protocol</span></td>
-        <td><p>The protocol.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -649,8 +603,7 @@ int GetAnalyzeDurationMs(MediaSourceInfo mediaSource)</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>System.String.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -658,8 +611,7 @@ int GetAnalyzeDurationMs(MediaSourceInfo mediaSource)</code></pre>
   
   <a id="MediaBrowser_Controller_MediaEncoding_IMediaEncoder_GetTimeParameter_" data-uid="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.GetTimeParameter*"></a>
   <h4 id="MediaBrowser_Controller_MediaEncoding_IMediaEncoder_GetTimeParameter_System_Int64_" data-uid="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.GetTimeParameter(System.Int64)">GetTimeParameter(Int64)</h4>
-  <div class="markdown level1 summary"><p>Gets the time parameter.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -678,8 +630,7 @@ int GetAnalyzeDurationMs(MediaSourceInfo mediaSource)</code></pre>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">ticks</span></td>
-        <td><p>The ticks.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -694,14 +645,16 @@ int GetAnalyzeDurationMs(MediaSourceInfo mediaSource)</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>System.String.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_System_Type_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, Type, IJsonSerializer)</a>
   </div>
 </div>
 </article>
@@ -744,5 +697,6 @@ int GetAnalyzeDurationMs(MediaSourceInfo mediaSource)</code></pre>
     <script type="text/javascript" src="../../styles/lunr.min.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
+    <script src="https://emby.media/resources/site-switcher.js" data-site-switcher=".site-title-link" data-current-site="betadev"></script>
   </body>
 </html>

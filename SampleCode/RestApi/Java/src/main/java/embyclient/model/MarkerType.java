@@ -22,7 +22,10 @@ public enum MarkerType {
   CHAPTER("Chapter"),
   INTROSTART("IntroStart"),
   INTROEND("IntroEnd"),
-  CREDITSSTART("CreditsStart");
+  CREDITSSTART("CreditsStart"),
+  CREDITSEND("CreditsEnd"),
+  COMMERCIALSSTART("CommercialsStart"),
+  COMMERCIALSEND("CommercialsEnd");
 
   private String value;
 

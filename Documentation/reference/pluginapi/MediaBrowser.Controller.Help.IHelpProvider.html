@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Interface IHelpProvider
    </title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="Interface IHelpProvider
    ">
     <meta name="generator" content="docfx 2.59.2.0">
@@ -36,16 +36,18 @@
       
       <header class="site-header">
         <nav class="nav container" aria-label="Primary navigation">
-          <a class="brand" href="../../index.html" aria-label="Emby Developer home">
+          <a class="brand" href="https://emby.media/" aria-label="Emby home">
             
-      <img class="logo-on-dark" src="../../images/emby_dev_logo_beta.png" alt="Emby Developer">
-      <img class="logo-on-light" src="../../images/emby_dev_logo_black.png" alt="Emby Developer">
+            <img class="logo-on-dark" src="../../images/emby-logo-dark-beta.png" alt="Emby">
+            <img class="logo-on-light" src="../../images/emby-logo-beta.png" alt="Emby">
           </a>
+          <a class="site-title-link" href="../../index.html"><span class="site-title">Emby <strong>BetaDev</strong></span></a>
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="navbar" aria-label="Open menu">&#9776;</button>
           <div class="nav-links" id="navbar">
             <ul class="nav-links-list">
                 
-                    <li><a href="../../index.html" title="DEV Home">DEV Home</a></li>
+                    <li><a href="https://emby.media/" title="Emby Home">Emby Home</a></li>
+                    <li><a href="../../index.html" title="Dev Home">Dev Home</a></li>
                     <li><a href="../../doc/index.html" title="Documentation">Documentation</a></li>
                     <li><a href="../../reference/index.html" title="Reference">Reference</a></li>
                     <li><a href="../../download/index.html" title="Download">Download</a></li>
@@ -150,7 +152,8 @@ the beta documentation, a release server to the stable one.</p>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">url</span></td>
         <td><p>The uid of a documentation article, either bare (<code>Server-Transcoding</code>) or with
-the <code>uid:</code> scheme (<code>uid:Server-Transcoding</code>), or an absolute <code>https</code> URL.</p>
+the <code>uid:</code> scheme (<code>uid:Server-Transcoding</code>), or an absolute <code>https</code> URL. A uid may be
+followed by a section anchor (<code>uid:Server-Transcoding#settings</code>).</p>
 </td>
       </tr>
     </tbody>
@@ -166,7 +169,8 @@ the <code>uid:</code> scheme (<code>uid:Server-Transcoding</code>), or an absolu
     <tbody>
       <tr>
         <td><span class="xref">System.Uri</span></td>
-        <td><p>For a uid, the URL of the documentation forwarder for that article. For a URL, the URL
+        <td><p>For a uid, the URL of the documentation forwarder for that article, carrying the anchor if
+there is one. For a URL, the URL
 itself, pointed at the beta documentation on a beta server where it is an article of the stable
 documentation. <code>null</code> when <code data-dev-comment-type="paramref" class="paramref">url</code> is <code>null</code> or empty.</p>
 </td>
@@ -197,8 +201,8 @@ documentation. <code>null</code> when <code data-dev-comment-type="paramref" cla
       <tr>
         <td><span class="xref">System.Uri</span></td>
         <td><span class="parametername">url</span></td>
-        <td><p>A <code>uid:</code> URI naming a documentation article (<code>uid:Server-Transcoding</code>), or
-an absolute URL.</p>
+        <td><p>A <code>uid:</code> URI naming a documentation article (<code>uid:Server-Transcoding</code>),
+optionally with a section anchor (<code>uid:Server-Transcoding#settings</code>), or an absolute URL.</p>
 </td>
       </tr>
     </tbody>
@@ -214,7 +218,8 @@ an absolute URL.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Uri</span></td>
-        <td><p>For a <code>uid:</code> URI, the URL of the documentation forwarder for that article. For any other
+        <td><p>For a <code>uid:</code> URI, the URL of the documentation forwarder for that article, carrying the
+anchor if there is one. For any other
 URL, the URL itself, pointed at the beta documentation on a beta server where it is an article of the
 stable documentation. <code>null</code> when <code data-dev-comment-type="paramref" class="paramref">url</code> is <code>null</code>.</p>
 </td>
@@ -224,6 +229,9 @@ stable documentation. <code>null</code> when <code data-dev-comment-type="paramr
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_System_Type_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, Type, IJsonSerializer)</a>
   </div>
 </div>
 </article>
@@ -266,5 +274,6 @@ stable documentation. <code>null</code> when <code data-dev-comment-type="paramr
     <script type="text/javascript" src="../../styles/lunr.min.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
+    <script src="https://emby.media/resources/site-switcher.js" data-site-switcher=".site-title-link" data-current-site="betadev"></script>
   </body>
 </html>

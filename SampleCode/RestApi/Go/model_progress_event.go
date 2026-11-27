@@ -26,4 +26,5 @@ const (
 	PLAYBACK_RATE_CHANGE_ProgressEvent ProgressEvent = "PlaybackRateChange"
 	SHUFFLE_CHANGE_ProgressEvent ProgressEvent = "ShuffleChange"
 	SLEEP_TIMER_CHANGE_ProgressEvent ProgressEvent = "SleepTimerChange"
+	SEEKED_ProgressEvent ProgressEvent = "Seeked"
 )

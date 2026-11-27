@@ -10,6 +10,8 @@ type LibraryOptions struct {
 	EnableArchiveMediaFiles bool `json:"EnableArchiveMediaFiles,omitempty"`
 	EnablePhotos bool `json:"EnablePhotos,omitempty"`
 	EnableRealtimeMonitor bool `json:"EnableRealtimeMonitor,omitempty"`
+	EnableCreditsDetection bool `json:"EnableCreditsDetection,omitempty"`
+	EnableCreditsDetectionDuringLibraryScan bool `json:"EnableCreditsDetectionDuringLibraryScan,omitempty"`
 	EnableMarkerDetection bool `json:"EnableMarkerDetection,omitempty"`
 	EnableMarkerDetectionDuringLibraryScan bool `json:"EnableMarkerDetectionDuringLibraryScan,omitempty"`
 	IntroDetectionFingerprintLength int32 `json:"IntroDetectionFingerprintLength,omitempty"`

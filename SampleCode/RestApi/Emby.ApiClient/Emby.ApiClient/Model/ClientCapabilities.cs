@@ -81,6 +81,18 @@ namespace Emby.ApiClient.Model
         public string AppId { get; set; }
 
         /// <summary>
+        /// Gets or Sets AttestationProvider
+        /// </summary>
+        /// <value>The AttestationProvider.</value>
+        public string AttestationProvider { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AttestationReply
+        /// </summary>
+        /// <value>The AttestationReply.</value>
+        public SecurityAttestationReply AttestationReply { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -97,6 +109,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  DeviceProfile: ").Append(DeviceProfile).Append("\n");
             sb.Append("  IconUrl: ").Append(IconUrl).Append("\n");
             sb.Append("  AppId: ").Append(AppId).Append("\n");
+            sb.Append("  AttestationProvider: ").Append(AttestationProvider).Append("\n");
+            sb.Append("  AttestationReply: ").Append(AttestationReply).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -168,6 +182,16 @@ namespace Emby.ApiClient.Model
                     this.AppId == input.AppId ||
                     (this.AppId != null &&
                     this.AppId.Equals(input.AppId))
+                ) && 
+                (
+                    this.AttestationProvider == input.AttestationProvider ||
+                    (this.AttestationProvider != null &&
+                    this.AttestationProvider.Equals(input.AttestationProvider))
+                ) && 
+                (
+                    this.AttestationReply == input.AttestationReply ||
+                    (this.AttestationReply != null &&
+                    this.AttestationReply.Equals(input.AttestationReply))
                 );
         }
 
@@ -198,6 +222,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.IconUrl.GetHashCode();
                 if (this.AppId != null)
                     hashCode = hashCode * 59 + this.AppId.GetHashCode();
+                if (this.AttestationProvider != null)
+                    hashCode = hashCode * 59 + this.AttestationProvider.GetHashCode();
+                if (this.AttestationReply != null)
+                    hashCode = hashCode * 59 + this.AttestationReply.GetHashCode();
                 return hashCode;
             }
         }

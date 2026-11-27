@@ -32,11 +32,13 @@ public struct UserConfiguration: Codable {
     public var enableNextEpisodeAutoPlay: Bool?
     public var resumeRewindSeconds: Int?
     public var introSkipMode: SegmentSkipMode?
+    public var creditsSkipMode: SegmentSkipMode?
+    public var commercialsSkipMode: SegmentSkipMode?
     public var enableLocalPassword: Bool?
     public var showSubtitlesOnSkipBack: Bool?
     public var showSubtitlesOnLowVolume: Bool?
 
-    public init(audioLanguagePreference: String? = nil, playDefaultAudioTrack: Bool? = nil, subtitleLanguagePreference: String? = nil, profilePin: String? = nil, displayMissingEpisodes: Bool? = nil, subtitleMode: SubtitlePlaybackMode? = nil, orderedViews: [String]? = nil, latestItemsExcludes: [String]? = nil, myMediaExcludes: [String]? = nil, hidePlayedInLatest: Bool? = nil, hidePlayedInMoreLikeThis: Bool? = nil, hidePlayedInSuggestions: Bool? = nil, rememberAudioSelections: Bool? = nil, rememberSubtitleSelections: Bool? = nil, enableNextEpisodeAutoPlay: Bool? = nil, resumeRewindSeconds: Int? = nil, introSkipMode: SegmentSkipMode? = nil, enableLocalPassword: Bool? = nil, showSubtitlesOnSkipBack: Bool? = nil, showSubtitlesOnLowVolume: Bool? = nil) {
+    public init(audioLanguagePreference: String? = nil, playDefaultAudioTrack: Bool? = nil, subtitleLanguagePreference: String? = nil, profilePin: String? = nil, displayMissingEpisodes: Bool? = nil, subtitleMode: SubtitlePlaybackMode? = nil, orderedViews: [String]? = nil, latestItemsExcludes: [String]? = nil, myMediaExcludes: [String]? = nil, hidePlayedInLatest: Bool? = nil, hidePlayedInMoreLikeThis: Bool? = nil, hidePlayedInSuggestions: Bool? = nil, rememberAudioSelections: Bool? = nil, rememberSubtitleSelections: Bool? = nil, enableNextEpisodeAutoPlay: Bool? = nil, resumeRewindSeconds: Int? = nil, introSkipMode: SegmentSkipMode? = nil, creditsSkipMode: SegmentSkipMode? = nil, commercialsSkipMode: SegmentSkipMode? = nil, enableLocalPassword: Bool? = nil, showSubtitlesOnSkipBack: Bool? = nil, showSubtitlesOnLowVolume: Bool? = nil) {
         self.audioLanguagePreference = audioLanguagePreference
         self.playDefaultAudioTrack = playDefaultAudioTrack
         self.subtitleLanguagePreference = subtitleLanguagePreference
@@ -54,6 +56,8 @@ public struct UserConfiguration: Codable {
         self.enableNextEpisodeAutoPlay = enableNextEpisodeAutoPlay
         self.resumeRewindSeconds = resumeRewindSeconds
         self.introSkipMode = introSkipMode
+        self.creditsSkipMode = creditsSkipMode
+        self.commercialsSkipMode = commercialsSkipMode
         self.enableLocalPassword = enableLocalPassword
         self.showSubtitlesOnSkipBack = showSubtitlesOnSkipBack
         self.showSubtitlesOnLowVolume = showSubtitlesOnLowVolume
@@ -77,6 +81,8 @@ public struct UserConfiguration: Codable {
         case enableNextEpisodeAutoPlay = "EnableNextEpisodeAutoPlay"
         case resumeRewindSeconds = "ResumeRewindSeconds"
         case introSkipMode = "IntroSkipMode"
+        case creditsSkipMode = "CreditsSkipMode"
+        case commercialsSkipMode = "CommercialsSkipMode"
         case enableLocalPassword = "EnableLocalPassword"
         case showSubtitlesOnSkipBack = "ShowSubtitlesOnSkipBack"
         case showSubtitlesOnLowVolume = "ShowSubtitlesOnLowVolume"

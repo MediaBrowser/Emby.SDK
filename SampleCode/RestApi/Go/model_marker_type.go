@@ -14,4 +14,7 @@ const (
 	INTRO_START_MarkerType MarkerType = "IntroStart"
 	INTRO_END_MarkerType MarkerType = "IntroEnd"
 	CREDITS_START_MarkerType MarkerType = "CreditsStart"
+	CREDITS_END_MarkerType MarkerType = "CreditsEnd"
+	COMMERCIALS_START_MarkerType MarkerType = "CommercialsStart"
+	COMMERCIALS_END_MarkerType MarkerType = "CommercialsEnd"
 )

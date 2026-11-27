@@ -13,4 +13,7 @@ public enum MarkerType: String, Codable {
     case introStart = "IntroStart"
     case introEnd = "IntroEnd"
     case creditsStart = "CreditsStart"
+    case creditsEnd = "CreditsEnd"
+    case commercialsStart = "CommercialsStart"
+    case commercialsEnd = "CommercialsEnd"
 }

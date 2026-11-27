@@ -45,6 +45,9 @@ public class ApiConfigurationPageInfo {
   @SerializedName("DisplayName")
   private String displayName = null;
 
+  @SerializedName("Order")
+  private Integer order = null;
+
   @SerializedName("ConfigurationPageType")
   private PluginsConfigurationPageType configurationPageType = null;
 
@@ -189,6 +192,24 @@ public class ApiConfigurationPageInfo {
     this.displayName = displayName;
   }
 
+  public ApiConfigurationPageInfo order(Integer order) {
+    this.order = order;
+    return this;
+  }
+
+   /**
+   * Get order
+   * @return order
+  **/
+  @Schema(description = "")
+  public Integer getOrder() {
+    return order;
+  }
+
+  public void setOrder(Integer order) {
+    this.order = order;
+  }
+
   public ApiConfigurationPageInfo configurationPageType(PluginsConfigurationPageType configurationPageType) {
     this.configurationPageType = configurationPageType;
     return this;
@@ -322,6 +343,7 @@ public class ApiConfigurationPageInfo {
         Objects.equals(this.menuSection, apiConfigurationPageInfo.menuSection) &&
         Objects.equals(this.menuIcon, apiConfigurationPageInfo.menuIcon) &&
         Objects.equals(this.displayName, apiConfigurationPageInfo.displayName) &&
+        Objects.equals(this.order, apiConfigurationPageInfo.order) &&
         Objects.equals(this.configurationPageType, apiConfigurationPageInfo.configurationPageType) &&
         Objects.equals(this.pluginId, apiConfigurationPageInfo.pluginId) &&
         Objects.equals(this.href, apiConfigurationPageInfo.href) &&
@@ -332,7 +354,7 @@ public class ApiConfigurationPageInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, enableInMainMenu, enableInUserMenu, featureId, menuSection, menuIcon, displayName, configurationPageType, pluginId, href, navMenuId, plugin, translations);
+    return Objects.hash(name, enableInMainMenu, enableInUserMenu, featureId, menuSection, menuIcon, displayName, order, configurationPageType, pluginId, href, navMenuId, plugin, translations);
   }
 
 
@@ -348,6 +370,7 @@ public class ApiConfigurationPageInfo {
     sb.append("    menuSection: ").append(toIndentedString(menuSection)).append("\n");
     sb.append("    menuIcon: ").append(toIndentedString(menuIcon)).append("\n");
     sb.append("    displayName: ").append(toIndentedString(displayName)).append("\n");
+    sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    configurationPageType: ").append(toIndentedString(configurationPageType)).append("\n");
     sb.append("    pluginId: ").append(toIndentedString(pluginId)).append("\n");
     sb.append("    href: ").append(toIndentedString(href)).append("\n");

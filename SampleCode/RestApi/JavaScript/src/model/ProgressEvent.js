@@ -112,6 +112,12 @@ export default class ProgressEvent {
          */
         SleepTimerChange = "SleepTimerChange";
 
+        /**
+         * value: "Seeked"
+         * @const
+         */
+        Seeked = "Seeked";
+
 
     /**
     * Returns a <code>ProgressEvent</code> enum value from a Javascript object name.

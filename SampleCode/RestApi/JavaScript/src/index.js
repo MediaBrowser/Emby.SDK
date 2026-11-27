@@ -35,26 +35,18 @@ import AuthenticationAuthenticationResult from './model/AuthenticationAuthentica
 import BaseItemDto from './model/BaseItemDto';
 import BaseItemPerson from './model/BaseItemPerson';
 import BaseRefreshRequest from './model/BaseRefreshRequest';
-import BitRate from './model/BitRate';
 import BookInfo from './model/BookInfo';
 import BrandingBrandingOptions from './model/BrandingBrandingOptions';
 import ChannelManagementInfo from './model/ChannelManagementInfo';
 import ChapterInfo from './model/ChapterInfo';
 import ClientCapabilities from './model/ClientCapabilities';
-import CodecConfiguration from './model/CodecConfiguration';
-import CodecDirections from './model/CodecDirections';
-import CodecKinds from './model/CodecKinds';
 import CodecProfile from './model/CodecProfile';
 import CodecType from './model/CodecType';
 import CollectionsCollectionCreationResult from './model/CollectionsCollectionCreationResult';
-import ColorFormats from './model/ColorFormats';
 import CommonEditorTypes from './model/CommonEditorTypes';
-import CommonInterfacesICodecDeviceCapabilities from './model/CommonInterfacesICodecDeviceCapabilities';
-import CommonInterfacesICodecDeviceInfo from './model/CommonInterfacesICodecDeviceInfo';
 import CommonPluginsIPlugin from './model/CommonPluginsIPlugin';
 import ConditionsPropertyCondition from './model/ConditionsPropertyCondition';
 import ConditionsPropertyConditionType from './model/ConditionsPropertyConditionType';
-import ConfigurationToneMappingToneMapOptionsVisibility from './model/ConfigurationToneMappingToneMapOptionsVisibility';
 import ConnectConnectAuthenticationExchangeResult from './model/ConnectConnectAuthenticationExchangeResult';
 import ConnectUserLinkResult from './model/ConnectUserLinkResult';
 import ConnectUserLinkType from './model/ConnectUserLinkType';
@@ -84,6 +76,7 @@ import EditObjectContainer from './model/EditObjectContainer';
 import EditorsEditorBase from './model/EditorsEditorBase';
 import EditorsEditorButtonItem from './model/EditorsEditorButtonItem';
 import EditorsEditorRoot from './model/EditorsEditorRoot';
+import ElementsIconNames from './model/ElementsIconNames';
 import EncodingContext from './model/EncodingContext';
 import EntitiesTVSeriesOrderInfo from './model/EntitiesTVSeriesOrderInfo';
 import EnumsUICommandType from './model/EnumsUICommandType';
@@ -162,7 +155,26 @@ import MBBackupApiRestoreOptions from './model/MBBackupApiRestoreOptions';
 import MBBackupApiUserRestoreInfo from './model/MBBackupApiUserRestoreInfo';
 import MBBackupBackupInfo from './model/MBBackupBackupInfo';
 import MarkerType from './model/MarkerType';
-import MediaEncodingCodecParameterContext from './model/MediaEncodingCodecParameterContext';
+import MediaEncodingHwaConditionsConfigAdvancedConditions from './model/MediaEncodingHwaConditionsConfigAdvancedConditions';
+import MediaEncodingHwaConditionsConfigOperationConditions from './model/MediaEncodingHwaConditionsConfigOperationConditions';
+import MediaEncodingHwaEnumsHwaConfigMode from './model/MediaEncodingHwaEnumsHwaConfigMode';
+import MediaEncodingSettingsApiHwaCancelHwaNodeOptions from './model/MediaEncodingSettingsApiHwaCancelHwaNodeOptions';
+import MediaEncodingSettingsApiHwaExecuteHwaConfigCommand from './model/MediaEncodingSettingsApiHwaExecuteHwaConfigCommand';
+import MediaEncodingSettingsApiHwaSaveHwaConfig from './model/MediaEncodingSettingsApiHwaSaveHwaConfig';
+import MediaEncodingSettingsApiHwaSaveHwaConfigResult from './model/MediaEncodingSettingsApiHwaSaveHwaConfigResult';
+import MediaEncodingSettingsApiHwaSelectHwaBasicDevice from './model/MediaEncodingSettingsApiHwaSelectHwaBasicDevice';
+import MediaEncodingSettingsHwaEditingNodeOptionsForm from './model/MediaEncodingSettingsHwaEditingNodeOptionsForm';
+import MediaEncodingSettingsHwaProjectionBasicModeOption from './model/MediaEncodingSettingsHwaProjectionBasicModeOption';
+import MediaEncodingSettingsHwaProjectionEnumsUiGraphDirection from './model/MediaEncodingSettingsHwaProjectionEnumsUiGraphDirection';
+import MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType from './model/MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType';
+import MediaEncodingSettingsHwaProjectionEnumsUiNodeState from './model/MediaEncodingSettingsHwaProjectionEnumsUiNodeState';
+import MediaEncodingSettingsHwaProjectionEnumsUiNodeType from './model/MediaEncodingSettingsHwaProjectionEnumsUiNodeType';
+import MediaEncodingSettingsHwaProjectionHwaConfigView from './model/MediaEncodingSettingsHwaProjectionHwaConfigView';
+import MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase from './model/MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase';
+import MediaEncodingSettingsHwaProjectionNodesUiNodeCommand from './model/MediaEncodingSettingsHwaProjectionNodesUiNodeCommand';
+import MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets from './model/MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets';
+import MediaEncodingSettingsHwaProjectionNodesUiNodeRoot from './model/MediaEncodingSettingsHwaProjectionNodesUiNodeRoot';
+import MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm from './model/MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm';
 import MediaPathInfo from './model/MediaPathInfo';
 import MediaProtocol from './model/MediaProtocol';
 import MediaSourceInfo from './model/MediaSourceInfo';
@@ -184,7 +196,6 @@ import NetSocketsAddressFamily from './model/NetSocketsAddressFamily';
 import NotificationCategoryInfo from './model/NotificationCategoryInfo';
 import NotificationTypeInfo from './model/NotificationTypeInfo';
 import NotificationsNotificationLevel from './model/NotificationsNotificationLevel';
-import OperatingSystem from './model/OperatingSystem';
 import PackageInfo from './model/PackageInfo';
 import PackageTargetSystem from './model/PackageTargetSystem';
 import PackageVersionClass from './model/PackageVersionClass';
@@ -261,7 +272,7 @@ import RokuMetadataApiThumbnailInfo from './model/RokuMetadataApiThumbnailInfo';
 import RokuMetadataApiThumbnailSetInfo from './model/RokuMetadataApiThumbnailSetInfo';
 import RunUICommand from './model/RunUICommand';
 import ScrollDirection from './model/ScrollDirection';
-import SecondaryFrameworks from './model/SecondaryFrameworks';
+import SecurityAttestationReply from './model/SecurityAttestationReply';
 import SegmentSkipMode from './model/SegmentSkipMode';
 import SeriesInfo from './model/SeriesInfo';
 import ServerConfiguration from './model/ServerConfiguration';
@@ -341,8 +352,6 @@ import UserPolicy from './model/UserPolicy';
 import ValidatePath from './model/ValidatePath';
 import Version from './model/Version';
 import Video3DFormat from './model/Video3DFormat';
-import VideoCodecBase from './model/VideoCodecBase';
-import VideoMediaTypes from './model/VideoMediaTypes';
 import VirtualFolderInfo from './model/VirtualFolderInfo';
 import WakeOnLanInfo from './model/WakeOnLanInfo';
 import ActivityLogServiceApi from './api/ActivityLogServiceApi';
@@ -352,7 +361,6 @@ import BackupApiApi from './api/BackupApiApi';
 import BifServiceApi from './api/BifServiceApi';
 import BrandingServiceApi from './api/BrandingServiceApi';
 import ChannelServiceApi from './api/ChannelServiceApi';
-import CodecParameterServiceApi from './api/CodecParameterServiceApi';
 import CollectionServiceApi from './api/CollectionServiceApi';
 import ConfigurationServiceApi from './api/ConfigurationServiceApi';
 import ConnectServiceApi from './api/ConnectServiceApi';
@@ -362,7 +370,6 @@ import DisplayPreferencesServiceApi from './api/DisplayPreferencesServiceApi';
 import DlnaServerServiceApi from './api/DlnaServerServiceApi';
 import DlnaServiceApi from './api/DlnaServiceApi';
 import DynamicHlsServiceApi from './api/DynamicHlsServiceApi';
-import EncodingInfoServiceApi from './api/EncodingInfoServiceApi';
 import EnvironmentServiceApi from './api/EnvironmentServiceApi';
 import FeatureServiceApi from './api/FeatureServiceApi';
 import FfmpegOptionsServiceApi from './api/FfmpegOptionsServiceApi';
@@ -370,6 +377,8 @@ import GameGenresServiceApi from './api/GameGenresServiceApi';
 import GenericUIApiServiceApi from './api/GenericUIApiServiceApi';
 import GenresServiceApi from './api/GenresServiceApi';
 import HlsSegmentServiceApi from './api/HlsSegmentServiceApi';
+import HwaConfigServiceApi from './api/HwaConfigServiceApi';
+import ImageExtractionConfigServiceApi from './api/ImageExtractionConfigServiceApi';
 import ImageServiceApi from './api/ImageServiceApi';
 import InstantMixServiceApi from './api/InstantMixServiceApi';
 import ItemLookupServiceApi from './api/ItemLookupServiceApi';
@@ -381,6 +390,7 @@ import LibraryStructureServiceApi from './api/LibraryStructureServiceApi';
 import LiveStreamServiceApi from './api/LiveStreamServiceApi';
 import LiveTvServiceApi from './api/LiveTvServiceApi';
 import LocalizationServiceApi from './api/LocalizationServiceApi';
+import LogDownloadServiceApi from './api/LogDownloadServiceApi';
 import MediaInfoServiceApi from './api/MediaInfoServiceApi';
 import MoviesServiceApi from './api/MoviesServiceApi';
 import MusicGenresServiceApi from './api/MusicGenresServiceApi';
@@ -403,7 +413,6 @@ import SuggestionsServiceApi from './api/SuggestionsServiceApi';
 import SyncServiceApi from './api/SyncServiceApi';
 import SystemServiceApi from './api/SystemServiceApi';
 import TagServiceApi from './api/TagServiceApi';
-import ToneMapOptionsServiceApi from './api/ToneMapOptionsServiceApi';
 import TrailersServiceApi from './api/TrailersServiceApi';
 import TvShowsServiceApi from './api/TvShowsServiceApi';
 import UniversalAudioServiceApi from './api/UniversalAudioServiceApi';
@@ -445,7 +454,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.11.0.13
+* @version 4.11.0.19
 */
 export {
     /**
@@ -605,12 +614,6 @@ export {
     BaseRefreshRequest,
 
     /**
-     * The BitRate model constructor.
-     * @property {module:model/BitRate}
-     */
-    BitRate,
-
-    /**
      * The BookInfo model constructor.
      * @property {module:model/BookInfo}
      */
@@ -641,24 +644,6 @@ export {
     ClientCapabilities,
 
     /**
-     * The CodecConfiguration model constructor.
-     * @property {module:model/CodecConfiguration}
-     */
-    CodecConfiguration,
-
-    /**
-     * The CodecDirections model constructor.
-     * @property {module:model/CodecDirections}
-     */
-    CodecDirections,
-
-    /**
-     * The CodecKinds model constructor.
-     * @property {module:model/CodecKinds}
-     */
-    CodecKinds,
-
-    /**
      * The CodecProfile model constructor.
      * @property {module:model/CodecProfile}
      */
@@ -677,28 +662,10 @@ export {
     CollectionsCollectionCreationResult,
 
     /**
-     * The ColorFormats model constructor.
-     * @property {module:model/ColorFormats}
-     */
-    ColorFormats,
-
-    /**
      * The CommonEditorTypes model constructor.
      * @property {module:model/CommonEditorTypes}
      */
     CommonEditorTypes,
-
-    /**
-     * The CommonInterfacesICodecDeviceCapabilities model constructor.
-     * @property {module:model/CommonInterfacesICodecDeviceCapabilities}
-     */
-    CommonInterfacesICodecDeviceCapabilities,
-
-    /**
-     * The CommonInterfacesICodecDeviceInfo model constructor.
-     * @property {module:model/CommonInterfacesICodecDeviceInfo}
-     */
-    CommonInterfacesICodecDeviceInfo,
 
     /**
      * The CommonPluginsIPlugin model constructor.
@@ -717,12 +684,6 @@ export {
      * @property {module:model/ConditionsPropertyConditionType}
      */
     ConditionsPropertyConditionType,
-
-    /**
-     * The ConfigurationToneMappingToneMapOptionsVisibility model constructor.
-     * @property {module:model/ConfigurationToneMappingToneMapOptionsVisibility}
-     */
-    ConfigurationToneMappingToneMapOptionsVisibility,
 
     /**
      * The ConnectConnectAuthenticationExchangeResult model constructor.
@@ -897,6 +858,12 @@ export {
      * @property {module:model/EditorsEditorRoot}
      */
     EditorsEditorRoot,
+
+    /**
+     * The ElementsIconNames model constructor.
+     * @property {module:model/ElementsIconNames}
+     */
+    ElementsIconNames,
 
     /**
      * The EncodingContext model constructor.
@@ -1367,10 +1334,124 @@ export {
     MarkerType,
 
     /**
-     * The MediaEncodingCodecParameterContext model constructor.
-     * @property {module:model/MediaEncodingCodecParameterContext}
+     * The MediaEncodingHwaConditionsConfigAdvancedConditions model constructor.
+     * @property {module:model/MediaEncodingHwaConditionsConfigAdvancedConditions}
      */
-    MediaEncodingCodecParameterContext,
+    MediaEncodingHwaConditionsConfigAdvancedConditions,
+
+    /**
+     * The MediaEncodingHwaConditionsConfigOperationConditions model constructor.
+     * @property {module:model/MediaEncodingHwaConditionsConfigOperationConditions}
+     */
+    MediaEncodingHwaConditionsConfigOperationConditions,
+
+    /**
+     * The MediaEncodingHwaEnumsHwaConfigMode model constructor.
+     * @property {module:model/MediaEncodingHwaEnumsHwaConfigMode}
+     */
+    MediaEncodingHwaEnumsHwaConfigMode,
+
+    /**
+     * The MediaEncodingSettingsApiHwaCancelHwaNodeOptions model constructor.
+     * @property {module:model/MediaEncodingSettingsApiHwaCancelHwaNodeOptions}
+     */
+    MediaEncodingSettingsApiHwaCancelHwaNodeOptions,
+
+    /**
+     * The MediaEncodingSettingsApiHwaExecuteHwaConfigCommand model constructor.
+     * @property {module:model/MediaEncodingSettingsApiHwaExecuteHwaConfigCommand}
+     */
+    MediaEncodingSettingsApiHwaExecuteHwaConfigCommand,
+
+    /**
+     * The MediaEncodingSettingsApiHwaSaveHwaConfig model constructor.
+     * @property {module:model/MediaEncodingSettingsApiHwaSaveHwaConfig}
+     */
+    MediaEncodingSettingsApiHwaSaveHwaConfig,
+
+    /**
+     * The MediaEncodingSettingsApiHwaSaveHwaConfigResult model constructor.
+     * @property {module:model/MediaEncodingSettingsApiHwaSaveHwaConfigResult}
+     */
+    MediaEncodingSettingsApiHwaSaveHwaConfigResult,
+
+    /**
+     * The MediaEncodingSettingsApiHwaSelectHwaBasicDevice model constructor.
+     * @property {module:model/MediaEncodingSettingsApiHwaSelectHwaBasicDevice}
+     */
+    MediaEncodingSettingsApiHwaSelectHwaBasicDevice,
+
+    /**
+     * The MediaEncodingSettingsHwaEditingNodeOptionsForm model constructor.
+     * @property {module:model/MediaEncodingSettingsHwaEditingNodeOptionsForm}
+     */
+    MediaEncodingSettingsHwaEditingNodeOptionsForm,
+
+    /**
+     * The MediaEncodingSettingsHwaProjectionBasicModeOption model constructor.
+     * @property {module:model/MediaEncodingSettingsHwaProjectionBasicModeOption}
+     */
+    MediaEncodingSettingsHwaProjectionBasicModeOption,
+
+    /**
+     * The MediaEncodingSettingsHwaProjectionEnumsUiGraphDirection model constructor.
+     * @property {module:model/MediaEncodingSettingsHwaProjectionEnumsUiGraphDirection}
+     */
+    MediaEncodingSettingsHwaProjectionEnumsUiGraphDirection,
+
+    /**
+     * The MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType model constructor.
+     * @property {module:model/MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType}
+     */
+    MediaEncodingSettingsHwaProjectionEnumsUiNodeCommandType,
+
+    /**
+     * The MediaEncodingSettingsHwaProjectionEnumsUiNodeState model constructor.
+     * @property {module:model/MediaEncodingSettingsHwaProjectionEnumsUiNodeState}
+     */
+    MediaEncodingSettingsHwaProjectionEnumsUiNodeState,
+
+    /**
+     * The MediaEncodingSettingsHwaProjectionEnumsUiNodeType model constructor.
+     * @property {module:model/MediaEncodingSettingsHwaProjectionEnumsUiNodeType}
+     */
+    MediaEncodingSettingsHwaProjectionEnumsUiNodeType,
+
+    /**
+     * The MediaEncodingSettingsHwaProjectionHwaConfigView model constructor.
+     * @property {module:model/MediaEncodingSettingsHwaProjectionHwaConfigView}
+     */
+    MediaEncodingSettingsHwaProjectionHwaConfigView,
+
+    /**
+     * The MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase model constructor.
+     * @property {module:model/MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase}
+     */
+    MediaEncodingSettingsHwaProjectionNodesBaseUiNodeBase,
+
+    /**
+     * The MediaEncodingSettingsHwaProjectionNodesUiNodeCommand model constructor.
+     * @property {module:model/MediaEncodingSettingsHwaProjectionNodesUiNodeCommand}
+     */
+    MediaEncodingSettingsHwaProjectionNodesUiNodeCommand,
+
+    /**
+     * The MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets model constructor.
+     * @property {module:model/MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets}
+     */
+    MediaEncodingSettingsHwaProjectionNodesUiNodeMoveTargets,
+
+    /**
+     * The MediaEncodingSettingsHwaProjectionNodesUiNodeRoot model constructor.
+     * @property {module:model/MediaEncodingSettingsHwaProjectionNodesUiNodeRoot}
+     */
+    MediaEncodingSettingsHwaProjectionNodesUiNodeRoot,
+
+    /**
+     * The MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm model constructor.
+     * @property {module:model/MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm}
+     */
+    MediaEncodingSettingsUIImageExtractionImageExtractionToneMappingForm,
 
     /**
      * The MediaPathInfo model constructor.
@@ -1497,12 +1578,6 @@ export {
      * @property {module:model/NotificationsNotificationLevel}
      */
     NotificationsNotificationLevel,
-
-    /**
-     * The OperatingSystem model constructor.
-     * @property {module:model/OperatingSystem}
-     */
-    OperatingSystem,
 
     /**
      * The PackageInfo model constructor.
@@ -1961,10 +2036,10 @@ export {
     ScrollDirection,
 
     /**
-     * The SecondaryFrameworks model constructor.
-     * @property {module:model/SecondaryFrameworks}
+     * The SecurityAttestationReply model constructor.
+     * @property {module:model/SecurityAttestationReply}
      */
-    SecondaryFrameworks,
+    SecurityAttestationReply,
 
     /**
      * The SegmentSkipMode model constructor.
@@ -2441,18 +2516,6 @@ export {
     Video3DFormat,
 
     /**
-     * The VideoCodecBase model constructor.
-     * @property {module:model/VideoCodecBase}
-     */
-    VideoCodecBase,
-
-    /**
-     * The VideoMediaTypes model constructor.
-     * @property {module:model/VideoMediaTypes}
-     */
-    VideoMediaTypes,
-
-    /**
      * The VirtualFolderInfo model constructor.
      * @property {module:model/VirtualFolderInfo}
      */
@@ -2505,12 +2568,6 @@ export {
     * @property {module:api/ChannelServiceApi}
     */
     ChannelServiceApi,
-
-    /**
-    * The CodecParameterServiceApi service constructor.
-    * @property {module:api/CodecParameterServiceApi}
-    */
-    CodecParameterServiceApi,
 
     /**
     * The CollectionServiceApi service constructor.
@@ -2567,12 +2624,6 @@ export {
     DynamicHlsServiceApi,
 
     /**
-    * The EncodingInfoServiceApi service constructor.
-    * @property {module:api/EncodingInfoServiceApi}
-    */
-    EncodingInfoServiceApi,
-
-    /**
     * The EnvironmentServiceApi service constructor.
     * @property {module:api/EnvironmentServiceApi}
     */
@@ -2613,6 +2664,18 @@ export {
     * @property {module:api/HlsSegmentServiceApi}
     */
     HlsSegmentServiceApi,
+
+    /**
+    * The HwaConfigServiceApi service constructor.
+    * @property {module:api/HwaConfigServiceApi}
+    */
+    HwaConfigServiceApi,
+
+    /**
+    * The ImageExtractionConfigServiceApi service constructor.
+    * @property {module:api/ImageExtractionConfigServiceApi}
+    */
+    ImageExtractionConfigServiceApi,
 
     /**
     * The ImageServiceApi service constructor.
@@ -2679,6 +2742,12 @@ export {
     * @property {module:api/LocalizationServiceApi}
     */
     LocalizationServiceApi,
+
+    /**
+    * The LogDownloadServiceApi service constructor.
+    * @property {module:api/LogDownloadServiceApi}
+    */
+    LogDownloadServiceApi,
 
     /**
     * The MediaInfoServiceApi service constructor.
@@ -2811,12 +2880,6 @@ export {
     * @property {module:api/TagServiceApi}
     */
     TagServiceApi,
-
-    /**
-    * The ToneMapOptionsServiceApi service constructor.
-    * @property {module:api/ToneMapOptionsServiceApi}
-    */
-    ToneMapOptionsServiceApi,
 
     /**
     * The TrailersServiceApi service constructor.

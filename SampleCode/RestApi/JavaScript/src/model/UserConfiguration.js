@@ -16,7 +16,7 @@ import SubtitlePlaybackMode from './SubtitlePlaybackMode';
 /**
 * The UserConfiguration model module.
 * @module model/UserConfiguration
-* @version 4.11.0.13
+* @version 4.11.0.19
 */
 export default class UserConfiguration {
     /**
@@ -94,6 +94,12 @@ export default class UserConfiguration {
             }
             if (data.hasOwnProperty('IntroSkipMode')) {
                 obj['IntroSkipMode'] = SegmentSkipMode.constructFromObject(data['IntroSkipMode']);
+            }
+            if (data.hasOwnProperty('CreditsSkipMode')) {
+                obj['CreditsSkipMode'] = SegmentSkipMode.constructFromObject(data['CreditsSkipMode']);
+            }
+            if (data.hasOwnProperty('CommercialsSkipMode')) {
+                obj['CommercialsSkipMode'] = SegmentSkipMode.constructFromObject(data['CommercialsSkipMode']);
             }
             if (data.hasOwnProperty('EnableLocalPassword')) {
                 obj['EnableLocalPassword'] = ApiClient.convertToType(data['EnableLocalPassword'], 'Boolean');
@@ -179,6 +185,14 @@ export default class UserConfiguration {
     * @member {module:model/SegmentSkipMode} IntroSkipMode
     */
     'IntroSkipMode' = undefined;
+    /**
+    * @member {module:model/SegmentSkipMode} CreditsSkipMode
+    */
+    'CreditsSkipMode' = undefined;
+    /**
+    * @member {module:model/SegmentSkipMode} CommercialsSkipMode
+    */
+    'CommercialsSkipMode' = undefined;
     /**
     * @member {Boolean} EnableLocalPassword
     */

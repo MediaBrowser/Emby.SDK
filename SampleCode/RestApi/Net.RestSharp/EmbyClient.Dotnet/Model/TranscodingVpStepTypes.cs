@@ -123,5 +123,10 @@ namespace EmbyClient.Dotnet.Model
         /// Enum Rotate for value: Rotate
         /// </summary>
         [EnumMember(Value = "Rotate")]
-        Rotate = 20    }
+        Rotate = 20,
+        /// <summary>
+        /// Enum TextSub2GraphicSub for value: TextSub2GraphicSub
+        /// </summary>
+        [EnumMember(Value = "TextSub2GraphicSub")]
+        TextSub2GraphicSub = 21    }
 }

@@ -33,13 +33,14 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="menuSection">menuSection.</param>
         /// <param name="menuIcon">menuIcon.</param>
         /// <param name="displayName">displayName.</param>
+        /// <param name="order">order.</param>
         /// <param name="configurationPageType">configurationPageType.</param>
         /// <param name="pluginId">pluginId.</param>
         /// <param name="href">href.</param>
         /// <param name="navMenuId">navMenuId.</param>
         /// <param name="plugin">plugin.</param>
         /// <param name="translations">translations.</param>
-        public ApiConfigurationPageInfo(string name = default(string), bool? enableInMainMenu = default(bool?), bool? enableInUserMenu = default(bool?), string featureId = default(string), string menuSection = default(string), string menuIcon = default(string), string displayName = default(string), PluginsConfigurationPageType configurationPageType = default(PluginsConfigurationPageType), string pluginId = default(string), string href = default(string), string navMenuId = default(string), CommonPluginsIPlugin plugin = default(CommonPluginsIPlugin), List<string> translations = default(List<string>))
+        public ApiConfigurationPageInfo(string name = default(string), bool? enableInMainMenu = default(bool?), bool? enableInUserMenu = default(bool?), string featureId = default(string), string menuSection = default(string), string menuIcon = default(string), string displayName = default(string), int? order = default(int?), PluginsConfigurationPageType configurationPageType = default(PluginsConfigurationPageType), string pluginId = default(string), string href = default(string), string navMenuId = default(string), CommonPluginsIPlugin plugin = default(CommonPluginsIPlugin), List<string> translations = default(List<string>))
         {
             this.Name = name;
             this.EnableInMainMenu = enableInMainMenu;
@@ -48,6 +49,7 @@ namespace EmbyClient.Dotnet.Model
             this.MenuSection = menuSection;
             this.MenuIcon = menuIcon;
             this.DisplayName = displayName;
+            this.Order = order;
             this.ConfigurationPageType = configurationPageType;
             this.PluginId = pluginId;
             this.Href = href;
@@ -97,6 +99,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="DisplayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Order
+        /// </summary>
+        [DataMember(Name="Order", EmitDefaultValue=false)]
+        public int? Order { get; set; }
 
         /// <summary>
         /// Gets or Sets ConfigurationPageType
@@ -149,6 +157,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  MenuSection: ").Append(MenuSection).Append("\n");
             sb.Append("  MenuIcon: ").Append(MenuIcon).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  ConfigurationPageType: ").Append(ConfigurationPageType).Append("\n");
             sb.Append("  PluginId: ").Append(PluginId).Append("\n");
             sb.Append("  Href: ").Append(Href).Append("\n");
@@ -225,6 +234,11 @@ namespace EmbyClient.Dotnet.Model
                     this.DisplayName.Equals(input.DisplayName))
                 ) && 
                 (
+                    this.Order == input.Order ||
+                    (this.Order != null &&
+                    this.Order.Equals(input.Order))
+                ) && 
+                (
                     this.ConfigurationPageType == input.ConfigurationPageType ||
                     (this.ConfigurationPageType != null &&
                     this.ConfigurationPageType.Equals(input.ConfigurationPageType))
@@ -280,6 +294,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.MenuIcon.GetHashCode();
                 if (this.DisplayName != null)
                     hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
+                if (this.Order != null)
+                    hashCode = hashCode * 59 + this.Order.GetHashCode();
                 if (this.ConfigurationPageType != null)
                     hashCode = hashCode * 59 + this.ConfigurationPageType.GetHashCode();
                 if (this.PluginId != null)

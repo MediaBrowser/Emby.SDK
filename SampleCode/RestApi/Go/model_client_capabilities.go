@@ -16,4 +16,6 @@ type ClientCapabilities struct {
 	DeviceProfile *DeviceProfile `json:"DeviceProfile,omitempty"`
 	IconUrl string `json:"IconUrl,omitempty"`
 	AppId string `json:"AppId,omitempty"`
+	AttestationProvider string `json:"AttestationProvider,omitempty"`
+	AttestationReply *SecurityAttestationReply `json:"AttestationReply,omitempty"`
 }

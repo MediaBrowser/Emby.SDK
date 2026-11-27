@@ -16,7 +16,7 @@ import TypeOptions from './TypeOptions';
 /**
 * The LibraryOptions model module.
 * @module model/LibraryOptions
-* @version 4.11.0.13
+* @version 4.11.0.19
 */
 export default class LibraryOptions {
     /**
@@ -51,6 +51,12 @@ export default class LibraryOptions {
             }
             if (data.hasOwnProperty('EnableRealtimeMonitor')) {
                 obj['EnableRealtimeMonitor'] = ApiClient.convertToType(data['EnableRealtimeMonitor'], 'Boolean');
+            }
+            if (data.hasOwnProperty('EnableCreditsDetection')) {
+                obj['EnableCreditsDetection'] = ApiClient.convertToType(data['EnableCreditsDetection'], 'Boolean');
+            }
+            if (data.hasOwnProperty('EnableCreditsDetectionDuringLibraryScan')) {
+                obj['EnableCreditsDetectionDuringLibraryScan'] = ApiClient.convertToType(data['EnableCreditsDetectionDuringLibraryScan'], 'Boolean');
             }
             if (data.hasOwnProperty('EnableMarkerDetection')) {
                 obj['EnableMarkerDetection'] = ApiClient.convertToType(data['EnableMarkerDetection'], 'Boolean');
@@ -257,6 +263,14 @@ export default class LibraryOptions {
     * @member {Boolean} EnableRealtimeMonitor
     */
     'EnableRealtimeMonitor' = undefined;
+    /**
+    * @member {Boolean} EnableCreditsDetection
+    */
+    'EnableCreditsDetection' = undefined;
+    /**
+    * @member {Boolean} EnableCreditsDetectionDuringLibraryScan
+    */
+    'EnableCreditsDetectionDuringLibraryScan' = undefined;
     /**
     * @member {Boolean} EnableMarkerDetection
     */

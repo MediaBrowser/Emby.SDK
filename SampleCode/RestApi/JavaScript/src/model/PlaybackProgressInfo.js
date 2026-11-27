@@ -21,7 +21,7 @@ import SubtitleEnableReason from './SubtitleEnableReason';
 /**
 * The PlaybackProgressInfo model module.
 * @module model/PlaybackProgressInfo
-* @version 4.11.0.13
+* @version 4.11.0.19
 */
 export default class PlaybackProgressInfo {
     /**

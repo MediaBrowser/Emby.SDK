@@ -20,8 +20,10 @@ public struct ClientCapabilities: Codable {
     public var deviceProfile: DeviceProfile?
     public var iconUrl: String?
     public var appId: String?
+    public var attestationProvider: String?
+    public var attestationReply: SecurityAttestationReply?
 
-    public init(playableMediaTypes: [String]? = nil, supportedCommands: [String]? = nil, supportsMediaControl: Bool? = nil, pushToken: String? = nil, pushTokenType: String? = nil, supportsSync: Bool? = nil, deviceProfile: DeviceProfile? = nil, iconUrl: String? = nil, appId: String? = nil) {
+    public init(playableMediaTypes: [String]? = nil, supportedCommands: [String]? = nil, supportsMediaControl: Bool? = nil, pushToken: String? = nil, pushTokenType: String? = nil, supportsSync: Bool? = nil, deviceProfile: DeviceProfile? = nil, iconUrl: String? = nil, appId: String? = nil, attestationProvider: String? = nil, attestationReply: SecurityAttestationReply? = nil) {
         self.playableMediaTypes = playableMediaTypes
         self.supportedCommands = supportedCommands
         self.supportsMediaControl = supportsMediaControl
@@ -31,6 +33,8 @@ public struct ClientCapabilities: Codable {
         self.deviceProfile = deviceProfile
         self.iconUrl = iconUrl
         self.appId = appId
+        self.attestationProvider = attestationProvider
+        self.attestationReply = attestationReply
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -43,6 +47,8 @@ public struct ClientCapabilities: Codable {
         case deviceProfile = "DeviceProfile"
         case iconUrl = "IconUrl"
         case appId = "AppId"
+        case attestationProvider = "AttestationProvider"
+        case attestationReply = "AttestationReply"
     }
 
 }
